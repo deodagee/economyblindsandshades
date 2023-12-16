@@ -1,0 +1,45 @@
+/* header.module.css */
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    position:fixed;
+    background-color: white;
+
+  }
+  
+  .headercomponent {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 0;
+    
+  }
+  
+  .link_top_prt1 {margin-left: 20px;
+    order: 1; /* Set the order to 1 to move it to the start */
+  }
+  
+  .header_logo {
+    order: 2; /* Set the order to 2 to keep it in the center */
+  }
+  
+  .link_top_prt2 {
+    margin-right: 70px;
+    align-content: flex-end;
+    order: 3; /* Set the order to 3 to move it to the end */
+  }
+  
+  .header_link {
+    /* Add any additional styles for your links */
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    margin: 0 5px; /* Add spacing between links, adjust as needed */
+  }
+  
