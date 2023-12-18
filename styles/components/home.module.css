@@ -21,7 +21,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 
-.intro_image{ 
+.intro_piece{ 
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -45,7 +48,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 
-.indexcomponent2 { 
+.intro_piece_image { 
   width: 500px;
 }
 .getaquote { 
@@ -78,13 +81,43 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   padding-right: 15px;
 }
 
-.what_type_of_blinds { 
+.middle_social { 
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.socials_div { 
+  display: inline-flex;
+  margin: 25px;
+  gap: 25px;
+}
+
+
+.social_icons { 
+  width: 30px;
+  height: auto;
+}
+
+.add { 
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+
+}
+
+.two_section_div { 
   display: flex;
   flex-direction: row;
   height: 500px;
   align-items: center;
   justify-content: center;
 }
+
 
   .whattypeofblindspng {
     width: 500px;
@@ -101,19 +134,16 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     align-items: center;
     justify-content: center;
     margin: 5px;
-  
-
-
   }
   
-  .WhatTypeOfBlindsDoYouInstall {
+  .title {
     white-space: nowrap;
     color: black;
     font-size: 18px;
     font-weight: 600;
   }
   
-  .AtEconomyBlindsShadesIncWeOfferAWideRangeOfBlindsToSuitYourUniqueStyleAndNeedsOurExpertInstallationTeamCanInstallTheFollowingTypesOfBlinds {
+  .description{
     margin-top: 10px;
     width: 450px;
     color: black;
@@ -122,7 +152,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     font-weight: 400;
   }
 
-  .ZebraBlindsShangrilaBlindsRomanBlindsRollerBlindsHoneycombBlinds {
+  .links{
     margin-top: 10px;
     color: black;
     font-size: 11px;
@@ -133,19 +163,33 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     cursor: pointer;
   }
 
+  .linkitem { 
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
   .linkitem:hover{ 
     color: rgb(142, 142, 142);
     transition: 0.2s;
   }
-  
-  .EachTypeOfBlindOffersItsOwnSetOfBenefitsAndAestheticsAllowingYouToChooseThePerfectWindowTreatmentThatComplementsYourInteriorDecorAndLifestyleOurTeamIsHereToHelpYouMakeAnInformedDecisionAndEnsureASeamlessInstallationProcessSeeAFullDescriptionOfOurBlindsBelow {
-    margin-top: 10px;
-    width: 450px;
-    color: black;
-    font-size: 11px;
-    font-family: Inter;
-    font-weight: 400;
-  }
+
+    .are_you_priced_png {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      height: auto;
+      margin: 5px;
+    }
+
+    .are_you_priced_text { 
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+    }
+    
 
 
   @media (min-width: 200px) and (max-width: 600px) and (orientation: portrait) {
@@ -154,7 +198,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
         flex-direction: column;
     }
 
-    .WhatTypeOfBlindsDoYouInstall {
+    .title {
         font-size: 17px;
         display: flex;
         

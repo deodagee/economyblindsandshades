@@ -22,16 +22,21 @@
     
   }
   
-  .link_top_prt1 {margin-left: 20px;
+  .link_top_prt1 {
+    font-size: 15px;
+    margin-left: 20px;
+    width: 30vw;
     order: 1; /* Set the order to 1 to move it to the start */
   }
   
   .header_logo {
+    width: 30vw;
     order: 2; /* Set the order to 2 to keep it in the center */
   }
   
   .link_top_prt2 {
-    margin-right: 70px;
+    font-size: 15px;
+    width: 30vw;
     align-content: flex-end;
     order: 3; /* Set the order to 3 to move it to the end */
   }
