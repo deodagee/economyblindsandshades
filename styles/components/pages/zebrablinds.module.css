@@ -1181,6 +1181,7 @@ left: 100px;
   top: 672px;
 }
 
+
 .polygon_1 {
   width: 10.39px;
   height: 9.36px;
@@ -1326,6 +1327,14 @@ left: 100px;
   left: 1185px;
   top: 673px;
 }
+
+.height_scroll_number { 
+  position: absolute;
+  left: 1143px;
+  top: 672px;
+}
+
+
 .polygon_5 {
   width: 10.39px;
   height: 9.36px;
