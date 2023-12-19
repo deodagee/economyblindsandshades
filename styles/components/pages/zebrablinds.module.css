@@ -1175,12 +1175,13 @@ left: 100px;
   top: 673px;
 }
 
-.width_scroll_number { 
+
+
+.width_scroll_number_fractions { 
   position: absolute;
-  left: 923px;
+  left: 968px;
   top: 672px;
 }
-
 
 .polygon_1 {
   width: 10.39px;
@@ -1328,9 +1329,15 @@ left: 100px;
   top: 673px;
 }
 
-.height_scroll_number { 
+.height_scroll_number_inches  { 
   position: absolute;
-  left: 1143px;
+  left: 114px;
+  top: 672px;
+}
+
+.width_scroll_number_inches  { 
+  position: absolute;
+  left: 915px;
   top: 672px;
 }
 
