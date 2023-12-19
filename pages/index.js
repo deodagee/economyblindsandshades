@@ -116,40 +116,54 @@ export default function HomePage() {
           <div className={styles.description}>
             Each type of blind offers its own set of benefits and aesthetics, allowing you to choose the perfect window treatment that complements your interior decor and lifestyle. Our team is here to help you make an informed decision and ensure a seamless installation process. See a full description of our blinds below.
           </div>
+          
+
+
+
           <div className={styles.links}>
+          <div className={styles.rectangle_1}>
           <Link href={"/zebrablinds"}>
           <span className={styles.linkitem}>
             1.Zebra Blinds
             <br/>
             </span>
             </Link>
+            </div>
+            <div className={styles.rectangle_2}>
             <Link href={"/shangrilablinds"}>
             <span className={styles.linkitem}>
             2.Shangrila Blinds
             <br/>
             </span>
             </Link>
+            </div>
+            <div className={styles.rectangle_3}>
             <Link href={"/romanblinds"}>
             <span className={styles.linkitem}>
             3.Roman Blinds
             <br/>
             </span>
             </Link>
+            </div>
+            <div className={styles.rectangle_4}>
             <Link href={"/rollerblinds"}>
             <span className={styles.linkitem}>
             4.Roller Blinds
             <br/>
             </span>
             </Link>
+            </div>
+            <div className={styles.rectangle_5}>
             <Link href={"/honeycombblinds"}>
             <span className={styles.linkitem}>
             5.Honeycomb Blinds
             </span>
             </Link>
+            </div>
           </div>
-        </div>
-        </div>
 
+        </div>
+        </div>
 
       </div>
       </div>
