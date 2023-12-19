@@ -34,7 +34,7 @@ function ZebraBlinds() {
     };
 
 
-    //2. // increase width and heigh count
+    //2. // LOGIC FOR ENTER WIDTH
     const [number, setNumber] = useState(1);
  
 
@@ -67,6 +67,40 @@ function ZebraBlinds() {
         setFractionIndex((prevIndex) => prevIndex + 1);
       }
     };
+
+      //2. // LOGIC FOR ENTER HEIGHT
+      const [heightnumber, Setheightnumber] = useState(1);
+ 
+
+      const handle_polygon_decrease_height_inches = () => {
+          // Increase the number, but not beyond 100
+          if (heightnumber < 100) {
+            Setheightnumber((prevNumber) => prevNumber + 1);
+          }
+      };
+      const handle_polygon_increase_height_inches = () => {
+          // Decrease the number, but not below 1
+          if (heightnumber > 1) {
+            Setheightnumber((prevNumber) => prevNumber - 1);
+          }
+      };
+  
+      const fractionsheight = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
+      const [heightfractionIndex, SetheightfractionIndex] = useState(0);
+    
+      const handle_polygon_increase_height_fractions = () => {
+        // Decrease the index, but not below 0
+        if (heightfractionIndex > 0) {
+            SetheightfractionIndex((prevIndex) => prevIndex - 1);
+        }
+      };
+    
+      const handle_polygon_decrease_height_fractions = () => {
+        // Increase the index, but not beyond the length of the array - 1
+        if (heightfractionIndex < fractionsheight.length - 1) {
+            SetheightfractionIndex((prevIndex) => prevIndex + 1);
+        }
+      };
   
   
 
@@ -246,8 +280,10 @@ function ZebraBlinds() {
                         <div className={styles.height}>Height</div>
                         <div className={styles.rectangle_11}></div>
                         <div className={styles.rectangle_12}></div>
-                        <div className={styles.height_scroll_number}> 2</div>
 
+                        <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
+
+        
                         <svg
                             className={styles.polygon_5}
                             width="10"
@@ -255,7 +291,7 @@ function ZebraBlinds() {
                             viewBox="0 0 10 8"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                        >
+                            onClick={handle_polygon_increase_height_inches}>
                             <path
                                 d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                 fill="#D9D9D9"
@@ -269,12 +305,23 @@ function ZebraBlinds() {
                             viewBox="0 0 10 8"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
+                            onClick={handle_polygon_decrease_height_inches}>                            <path
                                 d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
                                 fill="#D9D9D9"
                             />
                         </svg>
+
+
+                        <div className={styles.height_scroll_number_fractions}>
+        {fractionsheight[heightfractionIndex].includes('/') ? (
+          <span>
+            {fractionsheight[heightfractionIndex].split('/')[0]}
+            <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
+          </span>
+        ) : (
+            fractionsheight[heightfractionIndex]
+        )}
+      </div>
 
                         <svg
                             className={styles.polygon_7}
@@ -283,7 +330,7 @@ function ZebraBlinds() {
                             viewBox="0 0 10 8"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                        >
+                            onClick={handle_polygon_increase_height_fractions}>       
                             <path
                                 d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
                                 fill="#D9D9D9"
@@ -297,8 +344,7 @@ function ZebraBlinds() {
                             viewBox="0 0 10 8"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
+                            onClick={handle_polygon_decrease_height_fractions}>                                           <path
                                 d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
                                 fill="#D9D9D9"
                             />
