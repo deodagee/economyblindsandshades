@@ -3,35 +3,40 @@ import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState } from "react";
 
+
 function ZebraBlinds() {
 
-    
-    const [activeEllipse1, setActiveEllipse1] = useState(null);
-    const [activeEllipse2, setActiveEllipse2] = useState(null);
-    const [activeEllipse3, setActiveEllipse3] = useState(null);
-    const [activeEllipse4, setActiveEllipse4] = useState(null);
+    const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
+    const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
+    const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
+    const [active_skip_head_rail_ellipse, Setactive_skip_head_rail_ellipse] = useState(null);
+    const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
-    
+
 
 
 
     const handleEllipseClick1 = (ellipseNumber) => {
-        setActiveEllipse1(ellipseNumber);
+        Setactive_inside_outside_ellipse(ellipseNumber);
     };
 
     const handleEllipseClick2 = (ellipseNumber) => {
-        setActiveEllipse2((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+        Setactive_wand_cordlift_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
     };
 
 
     const handleEllipseClick3 = (ellipseNumber) => {
-        setActiveEllipse3(ellipseNumber);
+        Setactive_cassette_round1(ellipseNumber);
     };
-
 
     const handleEllipseClick4 = () => {
         console.log('Ellipse Clicked');
-        setActiveEllipse4((prevActive) => !prevActive);
+        Setactive_skip_head_rail_ellipse((prevActive) => !prevActive);
+    };
+
+
+    const handleEllipseClick5 = (ellipseNumber) => {
+        Setactive_cassette_round2(ellipseNumber);
     };
 
     return (
@@ -104,11 +109,11 @@ function ZebraBlinds() {
                         will be made in the exact size you specify.
                     </div>
                     <div
-                        className={`${styles.ellipse_16} ${activeEllipse1 === 1 ? styles.activeEllipse1 : ''}`}
+                        className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
                         onClick={() => handleEllipseClick1(1)}
                     ></div>
                     <div
-                        className={`${styles.ellipse_17} ${activeEllipse1 === 2 ? styles.activeEllipse1 : ''}`}
+                        className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
                         onClick={() => handleEllipseClick1(2)}
                     ></div>
                     <div
@@ -202,24 +207,29 @@ function ZebraBlinds() {
 
 
                     <div className={styles.add_lift_feature}>Add Lift Feature</div>
-                    <div className={styles.wand}>Wand</div>
-                    <div className={styles.motorized}>Motorized</div>
-                    <div className={styles.cord_lift}>Cord Lift</div>
-                    <div className={styles.free}>Free</div>
-                    <div className={styles.motorized_price_value}>$100.00</div>
                     <div
-                        className={`${styles.ellipse_3} ${activeEllipse2 === 1 ? styles.activeEllipse2 : ''}`}
+                        className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
                         onClick={() => handleEllipseClick2(1)}
                     ></div>
+                    <div className={styles.wand}>Wand</div>
+                    <div className={styles.free}>Free</div>
+
+
                     <div
-                        className={`${styles.ellipse_4} ${activeEllipse2 === 2 ? styles.activeEllipse2 : ''}`}
-                        onClick={() => handleEllipseClick2(2)}
-                    ></div>
-                    <div
-                        className={`${styles.ellipse_5} ${activeEllipse2 === 3 ? styles.activeEllipse2 : ''}`}
+                        className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
                         onClick={() => handleEllipseClick2(3)}
                     ></div>
+                    <div className={styles.cord_lift}>Cord Lift</div>
                     <div className={styles.cordlift_price_value}>$60.00</div>
+
+                    <div
+                        className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
+                        onClick={() => handleEllipseClick2(2)}
+                    ></div>
+
+                    <div className={styles.motorized}>Motorized</div>
+                    <div className={styles.motorized_price_value}>$100.00</div>
+
 
                     <div className={styles.ema_26_01}>EMA26-01</div>
 
@@ -265,8 +275,12 @@ function ZebraBlinds() {
 
 
 
+
+
+
+                    <div className={styles.select_lift_type_seperator_line}></div>
                     <svg
-                        className={styles.rectangle_13}
+                        className={styles.select_lift_type_seperator_line_long_rectangle}
                         width="482"
                         height="32"
                         viewBox="0 0 482 32"
@@ -280,7 +294,7 @@ function ZebraBlinds() {
                     </svg>
 
                     <svg
-                        className={styles.rectangle_14}
+                        className={styles.select_lift_type_seperator_line_short_rectangle}
                         width="155"
                         height="32"
                         viewBox="0 0 155 32"
@@ -292,52 +306,20 @@ function ZebraBlinds() {
                             fill="#3C3C3C"
                         />
                     </svg>
-
-                    <div className={styles.rectangle_15}></div>
                     <div className={styles.select_lift_type}>Select Lift Type</div>
                     <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
 
-                    <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
-
-                    <div className={styles.fabric_types}>FABRIC TYPES</div>
-
-                    <div className={styles.color}>Color:</div>
 
 
-                    <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
-                    
-                    <div
-                        className={`${styles.ellipse_regular_cassette_selected} ${activeEllipse3 === 1 ? styles.activeEllipse3 : ''}`}
-                        onClick={() => handleEllipseClick3(1)}
-                    ></div>
-
-                    
-                    <div className={styles.cassette}>Cassette</div>
-                    <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
 
 
-                    <div
-                        className={`${styles.ellipse_round_cassette_selected} ${activeEllipse3 === 2 ? styles.activeEllipse3 : ''}`}
-                        onClick={() => handleEllipseClick3(2)}
-                    ></div>
-
-                    <div className={styles.round}>Round</div>
-                    <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
-
-                    <div
-    className={`${styles.skip_head_rail_ellipse} ${activeEllipse4 ? styles.activeEllipse4 : ''}`}
-    onClick={handleEllipseClick4}
-></div>
-
-                    <div className={styles.skip_head_rail_ellipse}></div>
 
 
-                    <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
-                    <div className={styles.note_skipping_color}>
-                        *Note: Skipping Color will result with steel material
-                    </div>
+
+
+                    <div className={styles.select_head_rail_seperator_line}></div>
                     <svg
-                        className={styles.rectangle_16}
+                        className={styles.select_cassette_head_rail_long_rectangle}
                         width="482"
                         height="32"
                         viewBox="0 0 482 32"
@@ -351,7 +333,7 @@ function ZebraBlinds() {
                     </svg>
 
                     <svg
-                        className={styles.rectangle_17}
+                        className={styles.select_cassette_head_rail_short_rectangle}
                         width="155"
                         height="32"
                         viewBox="0 0 155 32"
@@ -363,9 +345,70 @@ function ZebraBlinds() {
                             fill="#3C3C3C"
                         />
                     </svg>
+                    <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
 
-                    <div className={styles.rectangle_18}></div>
-                    <div className={styles.rectangle_21}></div>
+                    <div
+                        className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
+                        onClick={() => handleEllipseClick3(1)}
+                    ></div>
+                    <div className={styles.cassette}>Cassette</div>
+                    <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
+
+
+                    <div
+                        className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
+                        onClick={() => handleEllipseClick3(2)}
+                    ></div>
+                    <div className={styles.round}>Round</div>
+                    <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
+
+
+
+
+                    <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
+                    <div className={styles.fabric_types}>FABRIC TYPES</div>
+
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
+                    <div className={styles.oval_black}>Oval Black</div>
+
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
+                    <div className={styles.oval_brown}>Oval Brown</div>
+
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
+                    <div className={styles.oval_beige}>Oval Beige</div>
+
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
+                    <div className={styles.oval_grey}>Oval Grey</div>
+
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
+                    <div className={styles.oval_white}>Oval White</div>
+
+
+                    <div
+                        className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                        onClick={handleEllipseClick4}
+                    ></div>
+                    <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
+                    <div className={styles.note_skipping_color}>
+                        *Note: Skipping Color will result with steel material
+                    </div>
+
+
+
+
+                    <div className={styles.quantity_seperator_line}></div>
+                    <div className={styles.quantity}>Quantity</div>
+                    <div className={styles.rectangle_29}></div>
+                    <div className={styles.rectangle_30}></div>
+                    <div className={styles.question_mark_ellipse}></div>
+                    <div className={styles.question_mark}>?</div>
+                    <div className={styles.qty}>Qty</div>
+                    <div className={styles.qty_number}>1</div>
+                    <div className={styles.quantity_is_always_1_box}></div>
+                    <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+
+
+
                     <div className={styles.select_head_rail}>Select Head Rail</div>
                     <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
                     <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
@@ -374,27 +417,14 @@ function ZebraBlinds() {
                     <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
                     <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
 
-                    <div className={styles.oval_black}>Oval Black</div>
-                    <div className={styles.oval_brown}>Oval Brown</div>
-                    <div className={styles.oval_beige}>Oval Beige</div>
-                    <div className={styles.oval_white}>Oval White</div>
-                    <div className={styles.oval_grey}>Oval Grey</div>
-                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
-                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
-                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
-                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
-                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
 
 
 
-                    <div className={styles.quantity}>Quantity</div>
+
                     <div className={styles.inches2}>Inches</div>
                     <div className={styles.eighths2}>Eighths</div>
 
-                    <div className={styles.rectangle_29}></div>
-                    <div className={styles.rectangle_30}></div>
-                    <div className={styles.qty}>Qty</div>
-                    <div className={styles.qty_number}>1</div>
+
 
 
                     <div className={styles.rectangle_11}></div>
@@ -455,48 +485,42 @@ function ZebraBlinds() {
                         />
                     </svg>
 
-
+                    <div
+                        className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                        onClick={() => handleEllipseClick5(1)}
+                    ></div>
+                    <div
+                        className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                        onClick={() => handleEllipseClick5(2)}
+                    ></div>
 
                     <div className={styles.cassette2}>Cassette</div>
                     <div className={styles.product_price}>$65.00</div>
-                    <div className={styles.ellipse_20}></div>
+                    <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+
+
+
                     <div className={styles.round2}>Round</div>
                     <div className={styles.product_price_2}>$60.00</div>
-                    <div className={styles.ellipse_21}></div>
-                    <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
-                    <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
                     <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                    <div className={styles.ellipse_23}></div>
-                    <div className={styles.question_mark}>?</div>
-                    <div className={styles.rectangle_31}></div>
-                    <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                    <div className={styles.rectangle_34}></div>
-                    <div className={styles.rectangle_47}></div>
-                    <div className={styles.rectangle_48}></div>
-                    <div className={styles.rectangle_49}></div>
-                    <div className={styles.review_your_order}>Review Your Order</div>
-                    <div className={styles.shipping_details}>Shipping Details</div>
-                    <div className={styles.total_price_tile}>Total Price</div>
-                    <div className={styles.total_price}>$65.34</div>
-                    <div className={styles.qty_1}>Qty 1</div>
-                    <div className={styles.shipping_price}>$12.34</div>
-                    <div className={styles.shipping}>Shipping</div>
-                    <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                    <div className={styles.order_number}>Order Number: 345969654</div>
-                    <div className={styles.date}>12/07/2024</div>
-                    <div className={styles.rectangle_35}></div>
-                    <div className={styles.window_type}>Window Type</div>
-                    <div className={styles.width2}>Width</div>
-                    <div className={styles.height2}>Height</div>
-                    <div className={styles.mount}>Mount</div>
-                    <div className={styles.materials}>Materials</div>
-                    <div className={styles.lift_type}>Lift Type</div>
-                    <div className={styles.casette_head_rail_type}>Casette Head Rail Type</div>
+
+
+                    <div className={styles.color}>Color:</div>
+                    <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
                     <div className={styles.rectangle_32}></div>
                     <div className={styles.steel}>Steel</div>
-                    <div className={styles.rectangle_33}></div>
+
+
+
+
+
+                    <div className={styles.review_your_order_seperator_line}></div>
+                    <div className={styles.review_your_order}>Review Your Order</div>
+
+                    <div className={styles.review_your_order_bg}></div>
+
                     <svg
-                        className={styles.rectangle_36}
+                        className={styles.rectangle_45}
                         width="483"
                         height="2"
                         viewBox="0 0 483 2"
@@ -523,9 +547,8 @@ function ZebraBlinds() {
                         />
                     </svg>
 
-                    <div className={styles.window_name}>Window Name</div>
                     <svg
-                        className={styles.rectangle_45}
+                        className={styles.rectangle_36}
                         width="483"
                         height="2"
                         viewBox="0 0 483 2"
@@ -537,6 +560,7 @@ function ZebraBlinds() {
                             fill="black"
                         />
                     </svg>
+
 
                     <svg
                         className={styles.rectangle_37}
@@ -622,16 +646,6 @@ function ZebraBlinds() {
                         />
                     </svg>
 
-                    <div className={styles.order_item_review_1}>Bottom Rail Type</div>
-                    <div className={styles.order_item_review_2}>Room Darkening</div>
-                    <div className={styles.order_item_review_3}>Zebra Blinds</div>
-                    <div className={styles.order_item_review_4}>34”</div>
-                    <div className={styles.order_item_review_5}>78”</div>
-                    <div className={styles.order_item_review_6}>Inside Mount</div>
-                    <div className={styles.order_item_review_7}>EMA26-01</div>
-                    <div className={styles.order_item_review_8}>Lift Type</div>
-                    <div className={styles.order_item_review_9}>Black With Fabric</div>
-                    <div className={styles.order_item_review_10}>Oval Black</div>
                     <svg
                         className={styles.rectangle_44}
                         width="483"
@@ -660,9 +674,59 @@ function ZebraBlinds() {
                         />
                     </svg>
 
+
+                    <div className={styles.window_name}>Window Name</div>
+                    <div className={styles.window_type}>Window Type</div>
+                    <div className={styles.width2}>Width</div>
+                    <div className={styles.height2}>Height</div>
+                    <div className={styles.mount}>Mount</div>
+                    <div className={styles.materials}>Materials</div>
+                    <div className={styles.lift_type}>Lift Type</div>
+                    <div className={styles.casette_head_rail_type}>Casette Head Rail Type</div>
+                    <div className={styles.order_item_review_1}>Bottom Rail Type</div>
+
+
+                    <div className={styles.order_item_review_3}>Zebra Blinds</div>
+                    <div className={styles.order_item_review_2}>Room Darkening</div>
+                    <div className={styles.order_item_review_4}>34”</div>
+                    <div className={styles.order_item_review_5}>78”</div>
+                    <div className={styles.order_item_review_6}>Inside Mount</div>
+                    <div className={styles.order_item_review_7}>EMA26-01</div>
+                    <div className={styles.order_item_review_8}>Lift Type</div>
+                    <div className={styles.order_item_review_9}>Black With Fabric</div>
+                    <div className={styles.order_item_review_10}>Oval Black</div>
+
+
+                    <div className={styles.rectangle_47}></div>
+                    <div className={styles.rectangle_48}></div>
+                    <div className={styles.rectangle_49}></div>
+                    <div className={styles.shipping_details}>Shipping Details</div>
+                    <div className={styles.total_price_tile}>Total Price</div>
+                    <div className={styles.total_price}>$65.34</div>
+                    <div className={styles.qty_1}>Qty 1</div>
+                    <div className={styles.shipping_price}>$12.34</div>
+                    <div className={styles.shipping}>Shipping</div>
+                    <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
+                    <div className={styles.order_number}>Order Number: 345969654</div>
+                    <div className={styles.date}>12/07/2024</div>
+
+
+
+
+                    <div className={styles.rectangle_33}></div>
+
+
+
+
+
+
+
                     <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
                     <div class={styles.add_to_cart}>ADD TO CART</div>
-                    <Image alt="image" width={100} height={100} className={styles.paymenticon} />
+
+                    <Image alt="image" width={100} height={100} className={styles.paymenticon}
+                        src="/interact.png" />
+
                     <Image alt="image" width={100} height={100}
                         className={styles.paypalicon}
                         src="/paymenticon.png"
