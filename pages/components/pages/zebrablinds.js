@@ -5,14 +5,35 @@ import { useState } from "react";
 
 function ZebraBlinds() {
 
+    
+    const [activeEllipse1, setActiveEllipse1] = useState(null);
+    const [activeEllipse2, setActiveEllipse2] = useState(null);
+    const [activeEllipse3, setActiveEllipse3] = useState(null);
+    const [activeEllipse4, setActiveEllipse4] = useState(null);
 
-        const [activeEllipse, setActiveEllipse] = useState(null);
-      
-        const handleEllipseClick = (ellipseNumber) => {
-          setActiveEllipse(ellipseNumber);
-        };
+    
 
-  
+
+
+    const handleEllipseClick1 = (ellipseNumber) => {
+        setActiveEllipse1(ellipseNumber);
+    };
+
+    const handleEllipseClick2 = (ellipseNumber) => {
+        setActiveEllipse2((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+    };
+
+
+    const handleEllipseClick3 = (ellipseNumber) => {
+        setActiveEllipse3(ellipseNumber);
+    };
+
+
+    const handleEllipseClick4 = () => {
+        console.log('Ellipse Clicked');
+        setActiveEllipse4((prevActive) => !prevActive);
+    };
+
     return (
         <>
             <div className={styles.page}>
@@ -23,19 +44,19 @@ function ZebraBlinds() {
 
 
 
-<div className={styles.sliding_gallery}>
+                        <div className={styles.sliding_gallery}>
 
-                        <Image alt="zebrablinds_7" width={100} height={100} className={styles.zebrablinds_7} src="/indexcomponent2.png" />
-                        
-                        <Image alt="chevronleft" className={styles.chevron_left} width={100} height={100} src="/chevronleft.png" />
-                        <Image alt="product_image" width={100} height={100} className={styles.product_image} src="/indexcomponent2.png" />
-                        <Image alt="zebrablinds_8" width={100} height={100} className={styles.zebrablinds_8} src="/indexcomponent2.png" />
-                        <Image alt="zebrablinds_9" width={100} height={100} className={styles.zebrablinds_9} src="/indexcomponent2.png" />
-                        <Image alt="zebrablinds_10" width={100} height={100} className={styles.zebrablinds_10} src="/indexcomponent2.png" />
-                        <Image alt="zebrablinds_11" width={100} height={100} className={styles.zebrablinds_11} src="/indexcomponent2.png" />
-                        <Image alt="zebrablinds_12" width={100} height={100} className={styles.zebrablinds_12} src="/indexcomponent2.png" />
-                        <Image alt="chevronright" className={styles.chevron_left} width={100} height={100} src="/chevronright.png" />
-                    </div>
+                            <Image alt="zebrablinds_8" width={600} height={600} className={styles.zebrablinds_8} src="/indexcomponentmain.png" />
+
+                            <Image alt="chevronleft" className={styles.chevron_left} width={100} height={100} src="/chevronleft.png" />
+                            <Image alt="product_image" width={100} height={100} className={styles.product_image} src="/indexcomponent2.png" />
+
+                            <Image alt="zebrablinds_9" width={100} height={100} className={styles.zebrablinds_9} src="/indexcomponent2.png" />
+                            <Image alt="zebrablinds_10" width={100} height={100} className={styles.zebrablinds_10} src="/indexcomponent2.png" />
+                            <Image alt="zebrablinds_11" width={100} height={100} className={styles.zebrablinds_11} src="/indexcomponent2.png" />
+                            <Image alt="zebrablinds_12" width={100} height={100} className={styles.zebrablinds_12} src="/indexcomponent2.png" />
+                            <Image alt="chevronright" className={styles.chevron_right} width={100} height={100} src="/chevronright.png" />
+                        </div>
                     </div>
 
 
@@ -53,7 +74,7 @@ function ZebraBlinds() {
                     <div
                         className={styles.a_distinctive_look_that}
                     >
-                        A distinctive look that makes a statement, this revolutionary sheer shade
+                        A distinctive look that makes a statement, this revolutionary     sheer shade
                         adds personality to any room. These zebra shades are made with two pieces
                         of fabric, which both have alternating panels/bands:
                     </div>
@@ -66,8 +87,8 @@ function ZebraBlinds() {
                         Choose Inside or Outside Mount
                     </div>
                     <div className={styles.inside_mount}>Inside Mount</div>
-                    <Image alt="image" width={100} height={100} className={styles.outsidemount_1} src="/OutsideMount.png" />
-                    <Image alt="image" width={100} height={100} class={styles.insidemount_1} src="/InsideMount.png" />
+                    <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
+                    <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/InsideMount.png" />
                     <div className={styles.outside_mount}>Outside Mount</div>
                     <div
                         className={styles.inside_mount_blinds_fit_within_your}
@@ -83,50 +104,125 @@ function ZebraBlinds() {
                         will be made in the exact size you specify.
                     </div>
                     <div
-        className={`${styles.ellipse_16} ${activeEllipse === 1 ? styles.activeEllipse : ''}`}
-        onClick={() => handleEllipseClick(1)}
-      ></div>
-      <div
-        className={`${styles.ellipse_17} ${activeEllipse === 2 ? styles.activeEllipse : ''}`}
-        onClick={() => handleEllipseClick(2)}
-      ></div>
-
-                    <div className={styles.rectangle_22}></div>
-                    <div className={styles.rectangle_66}></div>
-                    <div className={styles.outsidemount_10003_1}></div>
-
-                    <div className={styles.outsidemount_10003_1}></div>
-                    <div className={styles.select_material}>Select Material</div>
-                    <div className={styles.enter_size}>Enter Size</div>
-                    <div className={styles.width}>Width</div>
+                        className={`${styles.ellipse_16} ${activeEllipse1 === 1 ? styles.activeEllipse1 : ''}`}
+                        onClick={() => handleEllipseClick1(1)}
+                    ></div>
+                    <div
+                        className={`${styles.ellipse_17} ${activeEllipse1 === 2 ? styles.activeEllipse1 : ''}`}
+                        onClick={() => handleEllipseClick1(2)}
+                    ></div>
                     <div
                         className={styles.measure_the_top_of}
                     >
                         Measure the top of the window frame and order the exact size making NO
                         deductions.
                     </div>
-                    <div className={styles.take_the_shortest}>
+                    <div className={styles.take_the_shortest2}>
                         Take the shortest width measurement.
                     </div>
                     <div className={styles.measure_the_left_center}>
                         Measure the left, center and right portions of the inside frame.
                     </div>
-                    <div className={styles.take_the_shortest}>
+                    <div className={styles.take_the_shortest1}>
                         Take the shortest height measurement.
                     </div>
+                    <div className={styles.width}>Width</div>
+                    <div className={styles.rectangle_9}></div>
+                    <div className={styles.width_scroll_number}> 1</div>
+
+                    <svg
+                        className={styles.polygon_1}
+                        width="10"
+                        height="8"
+                        viewBox="0 0 10 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z"
+                            fill="#D9D9D9"
+                        />
+                    </svg>
+
+                    <svg
+                        className={styles.polygon_2}
+                        width="10"
+                        height="8"
+                        viewBox="0 0 10 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z"
+                            fill="#D9D9D9"
+                        />
+                    </svg>
+                    <div className={styles.inches}>Inches</div>
+
+                    <div className={styles.rectangle_10}>
+                    </div>
+
+                    <svg
+                        className={styles.polygon_3}
+                        width="10"
+                        height="8"
+                        viewBox="0 0 10 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
+                            fill="#D9D9D9"
+                        />
+                    </svg>
+                    <svg
+                        className={styles.polygon_4}
+                        width="10"
+                        height="8"
+                        viewBox="0 0 10 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
+                            fill="#D9D9D9"
+                        />
+                    </svg>
+                    <div className={styles.eighths}>Eighths</div>
+
+
+                    <div className={styles.height}>Height</div>
+                    <div className={styles.seperator_22}></div>
+                    <div className={styles.rectangle_66}></div>
+                    <div className={styles.outsidemount_10003_1}></div>
+
+                    <div className={styles.outsidemount_10003_1}></div>
+                    <div className={styles.select_material}>Select Material</div>
+                    <div className={styles.enter_size}>Enter Size:</div>
+
+
                     <div className={styles.add_lift_feature}>Add Lift Feature</div>
                     <div className={styles.wand}>Wand</div>
                     <div className={styles.motorized}>Motorized</div>
+                    <div className={styles.cord_lift}>Cord Lift</div>
                     <div className={styles.free}>Free</div>
                     <div className={styles.motorized_price_value}>$100.00</div>
-                    <div className={styles.ellipse_3}></div>
-                    <div className={styles.ellipse_4}></div>
-                    <div className={styles.cord_lift}>Cord Lift</div>
+                    <div
+                        className={`${styles.ellipse_3} ${activeEllipse2 === 1 ? styles.activeEllipse2 : ''}`}
+                        onClick={() => handleEllipseClick2(1)}
+                    ></div>
+                    <div
+                        className={`${styles.ellipse_4} ${activeEllipse2 === 2 ? styles.activeEllipse2 : ''}`}
+                        onClick={() => handleEllipseClick2(2)}
+                    ></div>
+                    <div
+                        className={`${styles.ellipse_5} ${activeEllipse2 === 3 ? styles.activeEllipse2 : ''}`}
+                        onClick={() => handleEllipseClick2(3)}
+                    ></div>
                     <div className={styles.cordlift_price_value}>$60.00</div>
-                    <div className={styles.ellipse_5}></div>
+
                     <div className={styles.ema_26_01}>EMA26-01</div>
-                    <div className={styles.inches}>Inches</div>
-                    <div className={styles.eighths}>Eighths</div>
+
                     <div className={styles.ema_26_012}>EMA26-01</div>
                     <div className={styles.ema_26_013}>EMA26-01</div>
                     <div className={styles.ema_26_014}>EMA26-01</div>
@@ -160,38 +256,15 @@ function ZebraBlinds() {
                     </svg>
 
                     <div className={styles.select_color}>Select Color</div>
+
                     <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
-                    <svg
-                        className={styles.rectangle_6}
-                        width="482"
-                        height="32"
-                        viewBox="0 0 482 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M0.667969 15.616C0.667969 7.08966 7.5799 0.177734 16.1062 0.177734H465.856C474.382 0.177734 481.294 7.08966 481.294 15.616V15.616C481.294 24.1423 474.382 31.0542 465.856 31.0542H16.1062C7.57992 31.0542 0.667969 24.1423 0.667969 15.616V15.616Z"
-                            fill="#E3E3E3"
-                        />
-                    </svg>
-
-                    <svg
-                        className={styles.rectangle_7}
-                        width="135"
-                        height="32"
-                        viewBox="0 0 135 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M0.667969 15.616C0.667969 7.08966 7.5799 0.177734 16.1062 0.177734H119.314C127.84 0.177734 134.752 7.08966 134.752 15.616V15.616C134.752 24.1423 127.84 31.0542 119.314 31.0542H16.1062C7.57989 31.0542 0.667969 24.1423 0.667969 15.616V15.616Z"
-                            fill="#3C3C3C"
-                        />
-                    </svg>
-
-                    <div className={styles.rectangle_8}></div>
-                    <div className={styles.select_size}>Select Size</div>
                     <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
+
+
+                    <div className={styles.seperatorline}></div>
+
+
+
                     <svg
                         className={styles.rectangle_13}
                         width="482"
@@ -223,19 +296,46 @@ function ZebraBlinds() {
                     <div className={styles.rectangle_15}></div>
                     <div className={styles.select_lift_type}>Select Lift Type</div>
                     <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
-                    <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
+
                     <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
-                    <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
+
                     <div className={styles.fabric_types}>FABRIC TYPES</div>
+
+                    <div className={styles.color}>Color:</div>
+
+
+                    <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
+                    
+                    <div
+                        className={`${styles.ellipse_regular_cassette_selected} ${activeEllipse3 === 1 ? styles.activeEllipse3 : ''}`}
+                        onClick={() => handleEllipseClick3(1)}
+                    ></div>
+
+                    
+                    <div className={styles.cassette}>Cassette</div>
+                    <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
+
+
+                    <div
+                        className={`${styles.ellipse_round_cassette_selected} ${activeEllipse3 === 2 ? styles.activeEllipse3 : ''}`}
+                        onClick={() => handleEllipseClick3(2)}
+                    ></div>
+
+                    <div className={styles.round}>Round</div>
+                    <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
+
+                    <div
+    className={`${styles.skip_head_rail_ellipse} ${activeEllipse4 ? styles.activeEllipse4 : ''}`}
+    onClick={handleEllipseClick4}
+></div>
+
+                    <div className={styles.skip_head_rail_ellipse}></div>
+
+
+                    <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
                     <div className={styles.note_skipping_color}>
                         *Note: Skipping Color will result with steel material
                     </div>
-                    <div className={styles.color}>Color:</div>
-                    <div className={styles.cassette}>Cassette</div>
-                    <div className={styles.ellipse_6}></div>
-                    <div className={styles.round}>Round</div>
-                    <div className={styles.ellipse_8}></div>
-                    <div className={styles.ellipse_22}></div>
                     <svg
                         className={styles.rectangle_16}
                         width="482"
@@ -269,87 +369,34 @@ function ZebraBlinds() {
                     <div className={styles.select_head_rail}>Select Head Rail</div>
                     <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
                     <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
-                    <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.png" />
+                    <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
                     <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
-                    <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.png" />
+                    <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
                     <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
-                    <div className={styles.oval_black}>OVAL BLACK</div>
-                    <div className={styles.navy_blue}>NAVY BLUE</div>
-                    <div className={styles.maroon}>MAROON</div>
-                    <div className={styles.sky_blue}>SKY BLUE</div>
-                    <div className={styles.green_olive}>GREEN OLIVE</div>
-                    <Image alt="image" width={100} height={100} className={styles.fabric_type_image1} src="/fabric_type_image.jpg.png" />
-                    <Image alt="image" width={100} height={100} className={styles.fabric_type_image2} src="/fabric_type_image.jpg" />
-                    <Image alt="image" width={100} height={100} className={styles.fabric_type_image3} src="/fabric_type_image.jpg" />
-                    <Image alt="image" width={100} height={100} className={styles.fabric_type_image4} src="/fabric_type_image.jpg" />
-                    <Image alt="image" width={100} height={100} className={styles.fabric_type_image5} src="/fabric_type_image.jpg" />
-                    <div className={styles.rectangle_9}></div>
-                    <div className={styles.rectangle_10}></div>
-                    <svg
-                        className={styles.polygon_1}
-                        width="10"
-                        height="8"
-                        viewBox="0 0 10 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z"
-                            fill="#D9D9D9"
-                        />
-                    </svg>
 
-                    <svg
-                        className={styles.polygon_2}
-                        width="10"
-                        height="8"
-                        viewBox="0 0 10 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z"
-                            fill="#D9D9D9"
-                        />
-                    </svg>
+                    <div className={styles.oval_black}>Oval Black</div>
+                    <div className={styles.oval_brown}>Oval Brown</div>
+                    <div className={styles.oval_beige}>Oval Beige</div>
+                    <div className={styles.oval_white}>Oval White</div>
+                    <div className={styles.oval_grey}>Oval Grey</div>
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
 
-                    <svg
-                        className={styles.polygon_3}
-                        width="10"
-                        height="8"
-                        viewBox="0 0 10 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
-                            fill="#D9D9D9"
-                        />
-                    </svg>
 
-                    <svg
-                        className={styles.polygon_4}
-                        width="10"
-                        height="8"
-                        viewBox="0 0 10 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
-                            fill="#D9D9D9"
-                        />
-                    </svg>
-                    <div className={styles.height}>Height</div>
+
                     <div className={styles.quantity}>Quantity</div>
-
+                    <div className={styles.inches2}>Inches</div>
+                    <div className={styles.eighths2}>Eighths</div>
 
                     <div className={styles.rectangle_29}></div>
                     <div className={styles.rectangle_30}></div>
                     <div className={styles.qty}>Qty</div>
                     <div className={styles.qty_number}>1</div>
-                    <div className={styles.inches2}>Inches</div>
-                    <div className={styles.eighths2}>Eighths</div>
+
+
                     <div className={styles.rectangle_11}></div>
                     <div className={styles.rectangle_12}></div>
                     <svg
@@ -408,20 +455,17 @@ function ZebraBlinds() {
                         />
                     </svg>
 
-                    <Image alt="image" width={100} height={100} className={styles.windowvertical_1} src="/windowvertical.png" />
-                    <Image alt="image" width={100} height={100} className={styles.windowvertical_2} src="/windowvertical.png" />
-                    <Image alt="image" width={100} height={100} class={styles.cassette_image} src="/cassette.png" />
-                    <Image alt="image" width={100} height={100} className={styles.chosen_image} src="/cassette.png" />
-                    <Image alt="image" width={100} height={100} className={styles.cassette_round_image} src="/cassetteround.png" />
+
+
                     <div className={styles.cassette2}>Cassette</div>
                     <div className={styles.product_price}>$65.00</div>
                     <div className={styles.ellipse_20}></div>
                     <div className={styles.round2}>Round</div>
                     <div className={styles.product_price_2}>$60.00</div>
                     <div className={styles.ellipse_21}></div>
-                    <Image alt="image" width={100} height={100} className={styles.cassette_image_2} src="/cassette.png" />
-                    <Image alt="image" width={100} height={100} className={styles.chosen_headrail_image} src="/cassette.png" />
-                    <Image alt="image" width={100} height={100} className={styles.cassette_image3} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
+                    <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
                     <div className={styles.ellipse_23}></div>
                     <div className={styles.question_mark}>?</div>
                     <div className={styles.rectangle_31}></div>
