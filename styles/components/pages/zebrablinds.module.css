@@ -60,6 +60,8 @@
   position: absolute;
   top: 25px;
 }
+
+
 .rectangle_1 {
   background: #d9d9d9;
   border-radius: 25px;
@@ -69,7 +71,6 @@
   left: 1043px;
   top: 4px;
 }
-
 
 .room_darkening {
   color: #000000;
@@ -509,7 +510,7 @@
   width: 252.12px;
   height: 36.49px;
 }
-.ellipse_3 {
+.wand_ellipse {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -521,7 +522,7 @@
   left: 750.5px;
   top: 1524.99px;
 }
-.ellipse_4 {
+.motorized_ellipse {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -533,7 +534,7 @@
   left: 750.5px;
   top: 1642.88px;
 }
-.ellipse_5{
+.cord_lift_ellipse{
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -713,7 +714,7 @@
   transform: rotate(0deg) scale(1, -1);
 }
 
-.rectangle_13 {
+.select_lift_type_seperator_line_long_rectangle {
   border-radius: 0px;
   width: 480.63px;
   height: 30.88px;
@@ -723,7 +724,7 @@
   overflow: visible;
 }
 
-.rectangle_14 {
+.select_lift_type_seperator_line_short_rectangle {
   border-radius: 0px;
   width: 154px;
   height: 31px;
@@ -733,7 +734,7 @@
   overflow: visible;
 }
 
-.rectangle_15 {
+.select_lift_type_seperator_line {
   background: #d4d4d4;
   width: 480.63px;
   height: 0.94px;
@@ -854,7 +855,7 @@
   width: 73.65px;
   height: 14.97px;
 }
-.ellipse_round_cassette_selected {
+.select_round_ellipse1 {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -868,7 +869,7 @@
 }
 
 
-.ellipse_regular_cassette_selected {
+.select_cassette_ellipse1 {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -913,7 +914,7 @@
 }
 
 
-.rectangle_16 {
+.select_cassette_head_rail_long_rectangle {
   border-radius: 0px;
   width: 480.63px;
   height: 30.88px;
@@ -922,7 +923,7 @@
   top: 1744.87px;
   overflow: visible;
 }
-.rectangle_17 {
+.select_cassette_head_rail_short_rectangle {
   border-radius: 0px;
   width: 154px;
   height: 31px;
@@ -931,7 +932,7 @@
   top: 1744.85px;
   overflow: visible;
 }
-.rectangle_18 {
+.select_head_rail_seperator_line {
   background: #d4d4d4;
   width: 480.63px;
   height: 0.94px;
@@ -941,7 +942,8 @@
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
-.rectangle_21 {
+
+.quantity_seperator_line {
   background: #d4d4d4;
   width: 480.63px;
   height: 0.94px;
@@ -951,6 +953,7 @@
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
+
 .select_head_rail {
   color: #f2f2f2;
   text-align: left;
@@ -965,7 +968,7 @@
 }
 
 
-.activeEllipse4 {
+.active_skip_head_rail_ellipse {
   background: #59c56a; /* Set the active color (green in this case) */
 }
 
@@ -1421,7 +1424,22 @@
   width: 43.44px;
   height: 15.91px;
 }
-.ellipse_21 {
+
+.select_cassette_ellipse2 { 
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
+  position: absolute;
+  left: 751.87px;
+  top: 2247.49px;
+}
+
+
+.select_round_ellipse2 {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -1460,7 +1478,7 @@
   top: 2297.85px;
   box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.ellipse_23 {
+.question_mark_ellipse {
   background: rgba(217, 217, 217, 0);
   border-radius: 50%;
   border-style: solid;
@@ -1484,7 +1502,7 @@
   width: 5px;
   height: 8px;
 }
-.rectangle_31 {
+.quantity_is_always_1_box {
   background: #ffffff;
   border-radius: 25px;
   border-style: solid;
@@ -1508,7 +1526,7 @@
   width: 92px;
   height: 11px;
 }
-.rectangle_34 {
+.review_your_order_seperator_line {
   background: #d4d4d4;
   width: 480.63px;
   height: 0.94px;
@@ -1663,13 +1681,13 @@
   top: 2933.85px;
   width: 35px;
 }
-.rectangle_35 {
+.review_your_order_bg {
   background: #ededed;
   width: 482px;
-  height: 241px;
+  height: 250px;
   position: absolute;
   left: 748px;
-  top: 2550.85px;
+  top: 2545.85px;
 }
 .window_type {
   color: #000000;
@@ -2023,17 +2041,17 @@
   height: 10px;
 }
 .paymenticon {
-  width: 11px;
-  height: 8px;
+  width: 35px;
+  height: auto;
   position: absolute;
-  left: 1178.87px;
-  top: 2964.85px;
+  left: 1167px;
+  top: 2958px;
 }
 .paypalicon {
   width: 68px;
   height: 11px;
   position: absolute;
-  left: 1113.87px;
+  left: 1095px;
   top: 2963.85px;
 }
 .outsidemount_1 {
@@ -2051,12 +2069,18 @@
   top: 227px;
 }
 
-.activeEllipse1 {
+.active_inside_outside_ellipse {
   background: #59c56a; /* Set the active color (green in this case) */
 }
-.activeEllipse2 {
+
+.active_wand_cordlift_motorized {
   background: #59c56a; /* Set the active color (green in this case) */
 }
-.activeEllipse3 {
+
+.active_cassette_round1 {
+  background: #59c56a; /* Set the active color (green in this case) */
+}
+
+.active_cassette_round2 {
   background: #59c56a; /* Set the active color (green in this case) */
 }
