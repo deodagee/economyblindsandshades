@@ -46,9 +46,6 @@ function ZebraBlinds() {
 
                     <div className={styles.left_half}>
 
-
-
-
                         <div className={styles.sliding_gallery}>
 
                             <Image alt="zebrablinds_8" width={600} height={600} className={styles.zebrablinds_8} src="/indexcomponentmain.png" />
@@ -64,7 +61,7 @@ function ZebraBlinds() {
                         </div>
                     </div>
 
-
+                    <div className={styles.right_half}>
                     <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
 
                     <div className={styles.rectangle_1}></div>
@@ -733,6 +730,7 @@ function ZebraBlinds() {
                     />
 
                 </div>
+            </div>
             </div>
         </>
     )
