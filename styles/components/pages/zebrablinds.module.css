@@ -16,13 +16,31 @@
   width: 1366px;
   height: 3224px;
   position: relative;
+  top: 200px;
+
 }
 .page_wrapper {
   flex-shrink: 0;
   width: 1367.15px;
   height: 2974.85px;
-  position: static;
+  position: relative;
 }
+
+.left_half { 
+  width: 50vw;
+display: flex;
+position: relative;
+left: 50px;
+}
+
+.right_half{ 
+  width: 50vw;
+  display: flex;
+  position: relative;
+left: 100px;
+}
+
+
 .product_image {
   border-radius: 5px;
   width: 84.04px;
