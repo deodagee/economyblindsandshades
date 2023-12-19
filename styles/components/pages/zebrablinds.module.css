@@ -676,7 +676,7 @@ left: 100px;
   width: 51.93px;
   height: 12.16px;
 }
-.rectangle_3 {
+.select_color_long_rectangle {
   border-radius: 0px;
   width: 480.63px;
   height: 30.88px;
@@ -685,7 +685,7 @@ left: 100px;
   top: 728.76px;
   overflow: visible;
 }
-.rectangle_5 {
+.select_color_short_rectangle {
   border-radius: 0px;
   width: 134.08px;
   height: 30.88px;
@@ -712,7 +712,6 @@ left: 100px;
   position: absolute;
   left: 767.5px;
   top: 737.18px;
-  box-shadow: 0px 4px 5px 0px rgba(255, 255, 255, 0.2);
 }
 
 
@@ -1830,7 +1829,7 @@ left: 100px;
   width: 38px;
   height: 12px;
 }
-.rectangle_33 {
+.skip_head_rail_color_divider_line {
   background: #d9d9d9;
   width: 1px;
   height: 52px;
@@ -2107,17 +2106,24 @@ left: 100px;
 }
 
 .active_inside_outside_ellipse {
+  transition: 0.3s;
   background: #59c56a; /* Set the active color (green in this case) */
 }
 
 .active_wand_cordlift_motorized {
+  transition: 0.3s;
+
   background: #59c56a; /* Set the active color (green in this case) */
 }
 
 .active_cassette_round1 {
+  transition: 0.3s;
+
   background: #59c56a; /* Set the active color (green in this case) */
 }
 
 .active_cassette_round2 {
+  transition: 0.3s;
+
   background: #59c56a; /* Set the active color (green in this case) */
 }
