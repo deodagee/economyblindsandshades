@@ -2,6 +2,8 @@
   display: flex;
   width: 100vw;
   box-sizing: border-box;
+  position: absolute;
+z-index: -1;
 }
 
 .page {
@@ -13,8 +15,7 @@
   justify-content: flex-start;
   width: 1366px;
   height: 3224px;
-  position: relative;
-  top: 200px;
+  top: 20px;
 }
 
 .page_wrapper {
@@ -22,13 +23,14 @@
   width: 1367.15px;
   height: 2974.85px;
   position: relative;
+  top: 100px;
 }
 
 .left_half {
   width: 50vw;
   display: flex;
-  position: relative;
   left: 100px;
+  position: relative;
 }
 
 .sliding_gallery {
@@ -246,10 +248,6 @@
 }
 
 
-
-
-
-
 .inside_mount {
   color: #0a0808;
   text-align: left;
@@ -261,6 +259,22 @@
   top: 224px;
   width: 126.53px;
   height: 14.97px;
+}
+
+.outsidemount_1 {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  left: 990.43px;
+  top: 500px;
+}
+
+.insidemount_1 {
+  width: 420px;
+  height: auto;
+  position: absolute;
+  left: 900px;
+  top: 230px;
 }
 
 .outside_mount {
@@ -301,6 +315,9 @@
   width: 185px;
   height: 27px;
 }
+
+
+
 
 .ellipse_16 {
   background: #cdcdcd;
@@ -354,6 +371,11 @@
   height: 15px;
 }
 
+.active_inside_outside_ellipse {
+  transition: 0.3s;
+  background: #59c56a;
+  /* Set the active color (green in this case) */
+}
 
 
 .measure_the_top_of {
@@ -716,6 +738,18 @@
   height: 12.16px;
 }
 
+.eighths {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  position: absolute;
+  left: 986px;
+  top: 697px;
+  width: 32.1px;
+  height: 12.16px;
+}
 
 .inches {
   color: #000000;
@@ -730,18 +764,139 @@
   height: 7.49px;
 }
 
-.eighths {
+
+.enter_height_window_trigger {
+  position: absolute;
+}
+
+.height {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  left: 1080px;
+  top: 675px;
+  width: 56.66px;
+  height: 14.97px;
+}
+
+.rectangle_11 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1132px;
+  top: 673px;
+}
+
+.rectangle_12 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1185px;
+  top: 673px;
+}
+
+.height_scroll_number_inches {
+  position: absolute;
+  left: 1137px;
+  top: 672px;
+}
+
+
+.polygon_5 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1161px;
+  top: 685px;
+  overflow: visible;
+}
+
+.polygon_6 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1170.5px;
+  top: 682px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+.height_scroll_number_fractions {
+  position: absolute;
+  left: 1190px;
+  top: 672px;
+}
+
+.polygon_7 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1224px;
+  top: 692px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+.polygon_8 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1224px;
+  top: 682px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+
+.inches2 {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 5px;
   font-weight: 400;
   position: absolute;
-  left: 986px;
+  left: 1159px;
+  top: 697px;
+  width: 23.61px;
+  height: 7.49px;
+}
+
+.eighths2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  position: absolute;
+  left: 1210px;
   top: 697px;
   width: 32.1px;
   height: 12.16px;
 }
+
+.rectangle_66 {
+  background: #d4d4d4;
+  width: 478px;
+  height: 1px;
+  position: absolute;
+  left: 750.43px;
+  top: 149px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, -1);
+}
+
+
 
 
 
@@ -846,8 +1001,6 @@
 }
 
 
-
-
 .wand {
   color: #000000;
   text-align: left;
@@ -888,10 +1041,30 @@
   top: 1583px;
 }
 
+.cord_lift {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  left: 777.88px;
+  top: 1582.07px;
+  width: 126.53px;
+  height: 14.97px;
+}
 
-.active_wand_cordlift_motorized {
-  transition: 0.3s;
-  background: #59c56a;
+.cordlift_price_value { 
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  position: absolute;
+  left: 777.88px;
+  top: 1610.96px;
+  width: 252.12px;
+  height: 36.49px;
 }
 
 
@@ -932,6 +1105,11 @@
   top: 1670.96px;
   width: 252.12px;
   height: 36.49px;
+}
+
+.active_wand_cordlift_motorized {
+  transition: 0.3s;
+  background: #59c56a;
 }
 
 .select_head_rail_group {
@@ -1013,8 +1191,6 @@
 }
 
 
-
-
 .cassette {
   color: #000000;
   text-align: left;
@@ -1070,34 +1246,6 @@
 }
 
 
-
-.cord_lift {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  position: absolute;
-  left: 777.88px;
-  top: 1582.07px;
-  width: 126.53px;
-  height: 14.97px;
-}
-
-.cordlift_price_value { 
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  position: absolute;
-  left: 777.88px;
-  top: 1610.96px;
-  width: 252.12px;
-  height: 36.49px;
-}
-
-
 .cassette_round_image {
   border-radius: 8px;
   width: 40px;
@@ -1138,12 +1286,10 @@
   height: 14px;
 }
 
-
-
 .fabric_type_image1 {
   width: 70px;
   height: auto;
-  position: absolute;
+  position: relative;
   left: 751.44px;
   top: 2082.64px;
 }
@@ -1160,7 +1306,6 @@
   width: 64px;
   height: 12px;
 }
-
 
 .fabric_type_image2 {
   width: 70px;
@@ -2151,178 +2296,6 @@
 
 
 
-
-
-.enter_height_window_trigger {
-  position: absolute;
-
-}
-
-.height {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 1080px;
-  top: 675px;
-  width: 56.66px;
-  height: 14.97px;
-}
-
-.rectangle_11 {
-  background: #f5f5f5;
-  border-style: solid;
-  border-color: #dddddd;
-  border-width: 1px;
-  width: 47.21px;
-  height: 23.39px;
-  position: absolute;
-  left: 1132px;
-  top: 673px;
-}
-
-.rectangle_12 {
-  background: #f5f5f5;
-  border-style: solid;
-  border-color: #dddddd;
-  border-width: 1px;
-  width: 47.21px;
-  height: 23.39px;
-  position: absolute;
-  left: 1185px;
-  top: 673px;
-}
-
-.height_scroll_number_inches {
-  position: absolute;
-  left: 1137px;
-  top: 672px;
-}
-
-
-.polygon_5 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1161px;
-  top: 685px;
-  overflow: visible;
-}
-
-.polygon_6 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1170.5px;
-  top: 682px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
-
-.height_scroll_number_fractions {
-  position: absolute;
-  left: 1190px;
-  top: 672px;
-}
-
-.polygon_7 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1224px;
-  top: 692px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
-
-.polygon_8 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1224px;
-  top: 682px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
-
-
-.inches2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 5px;
-  font-weight: 400;
-  position: absolute;
-  left: 1159px;
-  top: 697px;
-  width: 23.61px;
-  height: 7.49px;
-}
-
-.eighths2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 5px;
-  font-weight: 400;
-  position: absolute;
-  left: 1210px;
-  top: 697px;
-  width: 32.1px;
-  height: 12.16px;
-}
-
-.rectangle_66 {
-  background: #d4d4d4;
-  width: 478px;
-  height: 1px;
-  position: absolute;
-  left: 750.43px;
-  top: 149px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, -1);
-}
-
-
-
-.ellipse-20 {
-  background: #59c56a;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #e0e0e0;
-  border-width: 1px;
-  width: 15.11px;
-  height: 14.97px;
-  position: absolute;
-  left: 751.87px;
-  top: 2243.49px;
-}
-
-
-.insidemount_1 {
-  width: 420px;
-  height: auto;
-  position: absolute;
-  left: 900px;
-  top: 230px;
-}
-
-.outsidemount_1 {
-  width: 250px;
-  height: auto;
-  position: absolute;
-  left: 990.43px;
-  top: 500px;
-}
-
-
-.active_inside_outside_ellipse {
-  transition: 0.3s;
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
 
 
 
