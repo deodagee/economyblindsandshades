@@ -195,394 +195,389 @@ function ZebraBlinds() {
                         </div>
 
 
-                         <div className={styles.enter_size_group}>
-                        <div className={styles.enter_size}>Enter Size:</div>
-                        <div className={styles.width}>Width</div>
-                        <div className={styles.rectangle_9}></div>
-                        <div className={styles.rectangle_10}>
-                        </div>
-                        <div>
-                            <div className={styles.width_scroll_number_inches}>{number}</div>
+                        <div className={styles.enter_size_group}>
+                            <div className={styles.enter_size}>Enter Window Size:</div>
 
-                            <svg
-                                className={styles.polygon_1}
-                                width="10"
-                                height="8"
-                                viewBox="0 0 10 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                onClick={handle_polygon_increase_width_inches}
-                            >
-                                <path d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z" fill="#D9D9D9" />
-                            </svg>
+                            <div className={styles.enter_width_window_trigger}>
+                                <div className={styles.width}>Width</div>
+                                <div className={styles.rectangle_9}></div>
+                                <div className={styles.rectangle_10}>
+                                </div>
+                                <div>
+                                    <div className={styles.width_scroll_number_inches}>{number}</div>
 
-                            <svg
-                                className={styles.polygon_2}
-                                width="10"
-                                height="8"
-                                viewBox="0 0 10 8"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                onClick={handle_polygon_decrease_width_inches}
-                            >
-                                <path d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z" fill="#D9D9D9" />
-                            </svg>
-                        </div>
+                                    <svg
+                                        className={styles.polygon_1}
+                                        width="10"
+                                        height="8"
+                                        viewBox="0 0 10 8"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onClick={handle_polygon_increase_width_inches}
+                                    >
+                                        <path d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z" fill="#D9D9D9" />
+                                    </svg>
 
-                        <div>
+                                    <svg
+                                        className={styles.polygon_2}
+                                        width="10"
+                                        height="8"
+                                        viewBox="0 0 10 8"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onClick={handle_polygon_decrease_width_inches}
+                                    >
+                                        <path d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z" fill="#D9D9D9" />
+                                    </svg>
+                                </div>
 
-                            <div className={styles.width_scroll_number_fractions}>
-                                {fractions[fractionIndex].includes('/') ? (
-                                    <span>
-                                        {fractions[fractionIndex].split('/')[0]}
-                                        <sup>{fractions[fractionIndex].split('/')[1]}</sup>
-                                    </span>
-                                ) : (
-                                    fractions[fractionIndex]
-                                )}
+                                <div>
+
+                                    <div className={styles.width_scroll_number_fractions}>
+                                        {fractions[fractionIndex].includes('/') ? (
+                                            <span>
+                                                {fractions[fractionIndex].split('/')[0]}
+                                                <sup>{fractions[fractionIndex].split('/')[1]}</sup>
+                                            </span>
+                                        ) : (
+                                            fractions[fractionIndex]
+                                        )}
+                                    </div>
+
+                                    <svg
+                                        className={styles.polygon_3}
+                                        width="10"
+                                        height="8"
+                                        viewBox="0 0 10 8"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onClick={handle_polygon_increase_width_fractions}
+                                    >
+                                        <path
+                                            d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
+                                            fill="#D9D9D9"
+                                        />
+                                    </svg>
+                                    <svg
+                                        className={styles.polygon_4}
+                                        width="10"
+                                        height="8"
+                                        viewBox="0 0 10 8"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onClick={handle_polygon_decrease_width_fractions}>
+                                        <path
+                                            d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
+                                            fill="#D9D9D9"
+                                        />
+                                    </svg>
+                                    <div className={styles.eighths}>Eighths</div>
+                                    <div className={styles.inches}>Inches</div>
+
+                                </div>
                             </div>
 
+
+
+                            <div className={styles.enter_height_window_trigger}>
+
+                                <div className={styles.height}>Height</div>
+                                
+                                <div className={styles.rectangle_11}></div>
+                                <div className={styles.rectangle_12}></div>
+
+                                <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
+
+
+                                <svg
+                                    className={styles.polygon_5}
+                                    width="10"
+                                    height="8"
+                                    viewBox="0 0 10 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    onClick={handle_polygon_increase_height_inches}>
+                                    <path
+                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                        fill="#D9D9D9"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.polygon_6}
+                                    width="10"
+                                    height="8"
+                                    viewBox="0 0 10 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    onClick={handle_polygon_decrease_height_inches}>                            <path
+                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
+                                        fill="#D9D9D9"
+                                    />
+                                </svg>
+
+
+                                <div className={styles.height_scroll_number_fractions}>
+                                    {fractionsheight[heightfractionIndex].includes('/') ? (
+                                        <span>
+                                            {fractionsheight[heightfractionIndex].split('/')[0]}
+                                            <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
+                                        </span>
+                                    ) : (
+                                        fractionsheight[heightfractionIndex]
+                                    )}
+                                </div>
+
+                                <svg
+                                    className={styles.polygon_7}
+                                    width="10"
+                                    height="8"
+                                    viewBox="0 0 10 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    onClick={handle_polygon_increase_height_fractions}>
+                                    <path
+                                        d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
+                                        fill="#D9D9D9"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.polygon_8}
+                                    width="10"
+                                    height="8"
+                                    viewBox="0 0 10 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    onClick={handle_polygon_decrease_height_fractions}>                                           <path
+                                        d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
+                                        fill="#D9D9D9"
+                                    />
+                                </svg>
+
+
+                                <div className={styles.inches2}>Inches</div>
+                                <div className={styles.eighths2}>Eighths</div>
+                            </div>
+                        </div>
+
+     
+                        <div className={styles.rectangle_66}></div>
+
+                        <div className={styles.select_color_group}>
+
                             <svg
-                                className={styles.polygon_3}
-                                width="10"
-                                height="8"
-                                viewBox="0 0 10 8"
+                                className={styles.select_color_long_rectangle}
+                                width="482"
+                                height="32"
+                                viewBox="0 0 482 32"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                onClick={handle_polygon_increase_width_fractions}
                             >
                                 <path
-                                    d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
-                                    fill="#D9D9D9"
+                                    d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H465.856C474.382 0.755859 481.294 7.66779 481.294 16.1941V16.1941C481.294 24.7204 474.382 31.6323 465.856 31.6323H16.1062C7.57992 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
+                                    fill="#E3E3E3"
                                 />
                             </svg>
+
                             <svg
-                                className={styles.polygon_4}
-                                width="10"
-                                height="8"
-                                viewBox="0 0 10 8"
+                                className={styles.select_color_short_rectangle}
+                                width="135"
+                                height="32"
+                                viewBox="0 0 135 32"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                onClick={handle_polygon_decrease_width_fractions}>
+                            >
                                 <path
-                                    d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
-                                    fill="#D9D9D9"
+                                    d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H119.314C127.84 0.755859 134.752 7.66779 134.752 16.1941V16.1941C134.752 24.7204 127.84 31.6323 119.314 31.6323H16.1062C7.57989 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
+                                    fill="#3C3C3C"
                                 />
                             </svg>
-                            <div className={styles.eighths}>Eighths</div>
-                            <div className={styles.inches}>Inches</div>
+   
+                            <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
+                            <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
 
+                            <div className={styles.select_color}>Select Color</div>
+
+                            <div className={styles.select_material}>Select Material</div>
+                            <div className={styles.ema_26_01}>EMA26-01</div>
+                            <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
+                            <div className={styles.ema_26_012}>EMA26-01</div>
+                            <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
+                            <div className={styles.ema_26_013}>EMA26-01</div>
+                            <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
+                            <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
+                            <div className={styles.ema_26_015}>EMA26-01</div>
+                            <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
+                            <div className={styles.ema_26_014}>EMA26-01</div>
                         </div>
 
 
 
+                        <div className={styles.select_lift_type_group}>
+                            <div className={styles.select_lift_type_seperator_line}></div>
 
-                        <div className={styles.height}>Height</div>
-                        <div className={styles.rectangle_11}></div>
-                        <div className={styles.rectangle_12}></div>
+                            <svg
+                                className={styles.select_lift_type_long_rectangle}
+                                width="482"
+                                height="32"
+                                viewBox="0 0 482 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.496094 16.0847C0.496094 7.55841 7.40802 0.646484 15.9343 0.646484H465.684C474.21 0.646484 481.122 7.55841 481.122 16.0847V16.0847C481.122 24.611 474.21 31.5229 465.684 31.5229H15.9343C7.40804 31.5229 0.496094 24.611 0.496094 16.0847V16.0847Z"
+                                    fill="#E3E3E3"
+                                />
+                            </svg>
 
-                        <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
-
-
-                        <svg
-                            className={styles.polygon_5}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_increase_height_inches}>
-                            <path
-                                d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.polygon_6}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_decrease_height_inches}>                            <path
-                                d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
-
-
-                        <div className={styles.height_scroll_number_fractions}>
-                            {fractionsheight[heightfractionIndex].includes('/') ? (
-                                <span>
-                                    {fractionsheight[heightfractionIndex].split('/')[0]}
-                                    <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
-                                </span>
-                            ) : (
-                                fractionsheight[heightfractionIndex]
-                            )}
-                        </div>
-
-                        <svg
-                            className={styles.polygon_7}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_increase_height_fractions}>
-                            <path
-                                d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.polygon_8}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_decrease_height_fractions}>                                           <path
-                                d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
+                            <svg
+                                className={styles.select_lift_type_short_rectangle}
+                                width="155"
+                                height="32"
+                                viewBox="0 0 155 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 16.3535C0.871094 7.7931 7.81068 0.853516 16.3711 0.853516H139.371C147.932 0.853516 154.871 7.7931 154.871 16.3535V16.3535C154.871 24.9139 147.932 31.8535 139.371 31.8535H16.3711C7.81068 31.8535 0.871094 24.9139 0.871094 16.3535V16.3535Z"
+                                    fill="#3C3C3C"
+                                />
+                            </svg>
+                            <div className={styles.select_lift_type_title}>Select Lift Type</div>
+                            
+                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
 
-                        <div className={styles.inches2}>Inches</div>
-                        <div className={styles.eighths2}>Eighths</div>
+                            <div className={styles.add_lift_feature}>Add Lift Feature</div>
+                            <div
+                                className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
+                                onClick={() => handleEllipseClick2(1)}
+                            ></div>
+                            <div className={styles.wand}>Wand</div>
+                            <div className={styles.free}>Free</div>
+
+
+                            <div
+                                className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
+                                onClick={() => handleEllipseClick2(3)}
+                            ></div>
+                            <div className={styles.cord_lift}>Cord Lift</div>
+                            <div className={styles.cordlift_price_value}>$60.00</div>
+
+                            <div
+                                className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
+                                onClick={() => handleEllipseClick2(2)}
+                            ></div>
+
+                            <div className={styles.motorized}>Motorized</div>
+                            <div className={styles.motorized_price_value}>$100.00</div>
                         </div>
 
 
+                        <div className={styles.select_head_rail_group}>
+                            <div className={styles.select_head_rail_seperator_line}></div>
+                            <svg
+                                className={styles.select_cassette_head_rail_long_rectangle}
+                                width="482"
+                                height="32"
+                                viewBox="0 0 482 32"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.496094 16.3113C0.496094 7.78497 7.40802 0.873047 15.9343 0.873047H465.684C474.21 0.873047 481.122 7.78497 481.122 16.3113V16.3113C481.122 24.8376 474.21 31.7495 465.684 31.7495H15.9343C7.40804 31.7495 0.496094 24.8376 0.496094 16.3113V16.3113Z"
+                                    fill="#E3E3E3"
+                                />
+                            </svg>
+
+                            <svg
+                                className={styles.select_cassette_head_rail_short_rectangle} width="200"
+                                height="31"
+                                viewBox="0 0 200 31"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0 15.5C0 6.93959 6.93959 0 15.5 0H312.5C321.06 0 328 6.93959 328 15.5V15.5C328 24.0604 321.06 31 312.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
+                                    fill="#3C3C3C"
+                                />
+                            </svg>
 
 
-                        <div className={styles.seperator_22}></div>
-                        <div className={styles.rectangle_66}></div>
-                        <div className={styles.outsidemount_10003_1}></div>
+                            <div className={styles.select_head_rail}>Select Head Rail And Bottom Rail</div>
+                            <div className={styles.select_cassette_head_rail}>Select Head Rail</div>
+
+                            <div
+                                className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
+                                onClick={() => handleEllipseClick3(1)}
+                            ></div>
+                            <div className={styles.cassette}>Cassette</div>
+                            <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
 
 
-                        <div className={styles.outsidemount_10003_1}></div>
-
-
-<div  className={styles.select_color_group}>
-    
-<svg
-                            className={styles.select_color_long_rectangle}
-                            width="482"
-                            height="32"
-                            viewBox="0 0 482 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H465.856C474.382 0.755859 481.294 7.66779 481.294 16.1941V16.1941C481.294 24.7204 474.382 31.6323 465.856 31.6323H16.1062C7.57992 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
-                                fill="#E3E3E3"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.select_color_short_rectangle}
-                            width="135"
-                            height="32"
-                            viewBox="0 0 135 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H119.314C127.84 0.755859 134.752 7.66779 134.752 16.1941V16.1941C134.752 24.7204 127.84 31.6323 119.314 31.6323H16.1062C7.57989 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
-                                fill="#3C3C3C"
-                            />
-                        </svg>
-                        <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
-                        <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
-
-                        <div className={styles.select_color}>Select Color</div>
-
-                        <div className={styles.select_material}>Select Material</div>
-
-
-                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
-                        <div className={styles.ema_26_01}>EMA26-01</div>
-                        <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
-                        <div className={styles.ema_26_012}>EMA26-01</div>
-                        <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
-                        <div className={styles.ema_26_013}>EMA26-01</div>
-                        <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
-                        <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
-                        <div className={styles.ema_26_015}>EMA26-01</div>
-                        <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
-                        <div className={styles.ema_26_014}>EMA26-01</div>
-
-
-
-</div>
+                            <div
+                                className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
+                                onClick={() => handleEllipseClick3(2)}
+                            ></div>
+                            <div className={styles.round}>Round</div>
+                            <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
 
 
 
 
+                            <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
+                            <div className={styles.fabric_types}>FABRIC TYPES</div>
+
+                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
+                            <div className={styles.oval_black}>Oval Black</div>
+
+                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
+                            <div className={styles.oval_brown}>Oval Brown</div>
+
+                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
+                            <div className={styles.oval_beige}>Oval Beige</div>
+
+                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
+                            <div className={styles.oval_grey}>Oval Grey</div>
+
+                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
+                            <div className={styles.oval_white}>Oval White</div>
 
 
-                        <div className={styles.select_lift_type_seperator_line}></div>
+                            <div
+                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                onClick={handleEllipseClick4}
+                            ></div>
+                            <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
+                            <div className={styles.note_skipping_color}>
+                                *Note: Skipping Color will result with steel material
+                            </div>
 
-                        <svg
-                            className={styles.select_lift_type_seperator_line_long_rectangle}
-                            width="482"
-                            height="32"
-                            viewBox="0 0 482 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.496094 16.0847C0.496094 7.55841 7.40802 0.646484 15.9343 0.646484H465.684C474.21 0.646484 481.122 7.55841 481.122 16.0847V16.0847C481.122 24.611 474.21 31.5229 465.684 31.5229H15.9343C7.40804 31.5229 0.496094 24.611 0.496094 16.0847V16.0847Z"
-                                fill="#E3E3E3"
-                            />
-                        </svg>
+                            <div
+                                className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                                onClick={() => handleEllipseClick5(1)}
+                            ></div>
+                            <div
+                                className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                                onClick={() => handleEllipseClick5(2)}
+                            ></div>
 
-                        <svg
-                            className={styles.select_lift_type_seperator_line_short_rectangle}
-                            width="155"
-                            height="32"
-                            viewBox="0 0 155 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 16.3535C0.871094 7.7931 7.81068 0.853516 16.3711 0.853516H139.371C147.932 0.853516 154.871 7.7931 154.871 16.3535V16.3535C154.871 24.9139 147.932 31.8535 139.371 31.8535H16.3711C7.81068 31.8535 0.871094 24.9139 0.871094 16.3535V16.3535Z"
-                                fill="#3C3C3C"
-                            />
-                        </svg>
-                        <div className={styles.select_lift_type}>Select Lift Type</div>
-                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
-
-                        <div className={styles.add_lift_feature}>Add Lift Feature</div>
-                        <div
-                            className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(1)}
-                        ></div>
-                        <div className={styles.wand}>Wand</div>
-                        <div className={styles.free}>Free</div>
-
-
-                        <div
-                            className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(3)}
-                        ></div>
-                        <div className={styles.cord_lift}>Cord Lift</div>
-                        <div className={styles.cordlift_price_value}>$60.00</div>
-
-                        <div
-                            className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(2)}
-                        ></div>
-
-                        <div className={styles.motorized}>Motorized</div>
-                        <div className={styles.motorized_price_value}>$100.00</div>
+                            <div className={styles.cassette2}>Cassette</div>
+                            <div className={styles.product_price}>$65.00</div>
+                            <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
 
 
 
-
-                        <div className={styles.select_head_rail_seperator_line}></div>
-                        <svg
-                            className={styles.select_cassette_head_rail_long_rectangle}
-                            width="482"
-                            height="32"
-                            viewBox="0 0 482 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.496094 16.3113C0.496094 7.78497 7.40802 0.873047 15.9343 0.873047H465.684C474.21 0.873047 481.122 7.78497 481.122 16.3113V16.3113C481.122 24.8376 474.21 31.7495 465.684 31.7495H15.9343C7.40804 31.7495 0.496094 24.8376 0.496094 16.3113V16.3113Z"
-                                fill="#E3E3E3"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.select_cassette_head_rail_short_rectangle}
-                            width="155"
-                            height="32"
-                            viewBox="0 0 155 32"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 16.3535C0.871094 7.7931 7.81068 0.853516 16.3711 0.853516H139.371C147.932 0.853516 154.871 7.7931 154.871 16.3535V16.3535C154.871 24.9139 147.932 31.8535 139.371 31.8535H16.3711C7.81068 31.8535 0.871094 24.9139 0.871094 16.3535V16.3535Z"
-                                fill="#3C3C3C"
-                            />
-                        </svg>
-                        <div className={styles.select_head_rail}>Select Head Rail</div>
-                        <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
-
-                        <div
-                            className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
-                            onClick={() => handleEllipseClick3(1)}
-                        ></div>
-                        <div className={styles.cassette}>Cassette</div>
-                        <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
-
-
-                        <div
-                            className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
-                            onClick={() => handleEllipseClick3(2)}
-                        ></div>
-                        <div className={styles.round}>Round</div>
-                        <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
-
-
-
-
-                        <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
-                        <div className={styles.fabric_types}>FABRIC TYPES</div>
-
-                        <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
-                        <div className={styles.oval_black}>Oval Black</div>
-
-                        <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
-                        <div className={styles.oval_brown}>Oval Brown</div>
-
-                        <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
-                        <div className={styles.oval_beige}>Oval Beige</div>
-
-                        <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
-                        <div className={styles.oval_grey}>Oval Grey</div>
-
-                        <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
-                        <div className={styles.oval_white}>Oval White</div>
-
-
-                        <div
-                            className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                            onClick={handleEllipseClick4}
-                        ></div>
-                        <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
-                        <div className={styles.note_skipping_color}>
-                            *Note: Skipping Color will result with steel material
+                            <div className={styles.round2}>Round</div>
+                            <div className={styles.product_price_2}>$60.00</div>
+                            <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
+                            <div className={styles.skip_head_rail_color_divider_line}></div>
+                            <div className={styles.color}>Color:</div>
+                            <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
+                            <div className={styles.rectangle_32}></div>
+                            <div className={styles.steel}>Steel</div>
                         </div>
-
-                        <div
-                            className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
-                            onClick={() => handleEllipseClick5(1)}
-                        ></div>
-                        <div
-                            className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
-                            onClick={() => handleEllipseClick5(2)}
-                        ></div>
-
-                        <div className={styles.cassette2}>Cassette</div>
-                        <div className={styles.product_price}>$65.00</div>
-                        <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
-
-
-
-                        <div className={styles.round2}>Round</div>
-                        <div className={styles.product_price_2}>$60.00</div>
-                        <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                        <div className={styles.skip_head_rail_color_divider_line}></div>
-                        <div className={styles.color}>Color:</div>
-                        <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
-                        <div className={styles.rectangle_32}></div>
-                        <div className={styles.steel}>Steel</div>
 
 
                         <div className={styles.quantity_seperator_line}></div>
@@ -796,15 +791,6 @@ function ZebraBlinds() {
                         <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
                         <div className={styles.order_number}>Order Number: 345969654</div>
                         <div className={styles.date}>12/07/2024</div>
-
-
-
-
-
-
-
-
-
 
 
                         <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
