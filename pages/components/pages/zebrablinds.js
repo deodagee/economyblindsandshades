@@ -36,7 +36,7 @@ function ZebraBlinds() {
 
     //2. // LOGIC FOR ENTER WIDTH
     const [number, setNumber] = useState(1);
- 
+
 
     const handle_polygon_decrease_width_inches = () => {
         // Increase the number, but not beyond 100
@@ -53,56 +53,56 @@ function ZebraBlinds() {
 
     const fractions = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
     const [fractionIndex, setFractionIndex] = useState(0);
-  
+
     const handle_polygon_increase_width_fractions = () => {
-      // Decrease the index, but not below 0
-      if (fractionIndex > 0) {
-        setFractionIndex((prevIndex) => prevIndex - 1);
-      }
+        // Decrease the index, but not below 0
+        if (fractionIndex > 0) {
+            setFractionIndex((prevIndex) => prevIndex - 1);
+        }
     };
-  
+
     const handle_polygon_decrease_width_fractions = () => {
-      // Increase the index, but not beyond the length of the array - 1
-      if (fractionIndex < fractions.length - 1) {
-        setFractionIndex((prevIndex) => prevIndex + 1);
-      }
+        // Increase the index, but not beyond the length of the array - 1
+        if (fractionIndex < fractions.length - 1) {
+            setFractionIndex((prevIndex) => prevIndex + 1);
+        }
     };
 
-      //2. // LOGIC FOR ENTER HEIGHT
-      const [heightnumber, Setheightnumber] = useState(1);
- 
+    //2. // LOGIC FOR ENTER HEIGHT
+    const [heightnumber, Setheightnumber] = useState(1);
 
-      const handle_polygon_decrease_height_inches = () => {
-          // Increase the number, but not beyond 100
-          if (heightnumber < 100) {
+
+    const handle_polygon_decrease_height_inches = () => {
+        // Increase the number, but not beyond 100
+        if (heightnumber < 100) {
             Setheightnumber((prevNumber) => prevNumber + 1);
-          }
-      };
-      const handle_polygon_increase_height_inches = () => {
-          // Decrease the number, but not below 1
-          if (heightnumber > 1) {
+        }
+    };
+    const handle_polygon_increase_height_inches = () => {
+        // Decrease the number, but not below 1
+        if (heightnumber > 1) {
             Setheightnumber((prevNumber) => prevNumber - 1);
-          }
-      };
-  
-      const fractionsheight = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-      const [heightfractionIndex, SetheightfractionIndex] = useState(0);
-    
-      const handle_polygon_increase_height_fractions = () => {
+        }
+    };
+
+    const fractionsheight = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
+    const [heightfractionIndex, SetheightfractionIndex] = useState(0);
+
+    const handle_polygon_increase_height_fractions = () => {
         // Decrease the index, but not below 0
         if (heightfractionIndex > 0) {
             SetheightfractionIndex((prevIndex) => prevIndex - 1);
         }
-      };
-    
-      const handle_polygon_decrease_height_fractions = () => {
+    };
+
+    const handle_polygon_decrease_height_fractions = () => {
         // Increase the index, but not beyond the length of the array - 1
         if (heightfractionIndex < fractionsheight.length - 1) {
             SetheightfractionIndex((prevIndex) => prevIndex + 1);
         }
-      };
-  
-  
+    };
+
+
 
     return (
         <>
@@ -231,46 +231,46 @@ function ZebraBlinds() {
 
                         <div>
 
-                        <div className={styles.width_scroll_number_fractions}>
-        {fractions[fractionIndex].includes('/') ? (
-          <span>
-            {fractions[fractionIndex].split('/')[0]}
-            <sup>{fractions[fractionIndex].split('/')[1]}</sup>
-          </span>
-        ) : (
-          fractions[fractionIndex]
-        )}
-      </div>
+                            <div className={styles.width_scroll_number_fractions}>
+                                {fractions[fractionIndex].includes('/') ? (
+                                    <span>
+                                        {fractions[fractionIndex].split('/')[0]}
+                                        <sup>{fractions[fractionIndex].split('/')[1]}</sup>
+                                    </span>
+                                ) : (
+                                    fractions[fractionIndex]
+                                )}
+                            </div>
 
-                        <svg
-                            className={styles.polygon_3}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_increase_width_fractions}
+                            <svg
+                                className={styles.polygon_3}
+                                width="10"
+                                height="8"
+                                viewBox="0 0 10 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                onClick={handle_polygon_increase_width_fractions}
                             >
-                            <path
-                                d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
-                        <svg
-                            className={styles.polygon_4}
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_decrease_width_fractions}>
-                            <path
-                                d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
-                                fill="#D9D9D9"
-                            />
-                        </svg>
-                        <div className={styles.eighths}>Eighths</div>
-                        <div className={styles.inches}>Inches</div>
+                                <path
+                                    d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
+                                    fill="#D9D9D9"
+                                />
+                            </svg>
+                            <svg
+                                className={styles.polygon_4}
+                                width="10"
+                                height="8"
+                                viewBox="0 0 10 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                onClick={handle_polygon_decrease_width_fractions}>
+                                <path
+                                    d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
+                                    fill="#D9D9D9"
+                                />
+                            </svg>
+                            <div className={styles.eighths}>Eighths</div>
+                            <div className={styles.inches}>Inches</div>
 
                         </div>
 
@@ -283,7 +283,7 @@ function ZebraBlinds() {
 
                         <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
 
-        
+
                         <svg
                             className={styles.polygon_5}
                             width="10"
@@ -313,15 +313,15 @@ function ZebraBlinds() {
 
 
                         <div className={styles.height_scroll_number_fractions}>
-        {fractionsheight[heightfractionIndex].includes('/') ? (
-          <span>
-            {fractionsheight[heightfractionIndex].split('/')[0]}
-            <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
-          </span>
-        ) : (
-            fractionsheight[heightfractionIndex]
-        )}
-      </div>
+                            {fractionsheight[heightfractionIndex].includes('/') ? (
+                                <span>
+                                    {fractionsheight[heightfractionIndex].split('/')[0]}
+                                    <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
+                                </span>
+                            ) : (
+                                fractionsheight[heightfractionIndex]
+                            )}
+                        </div>
 
                         <svg
                             className={styles.polygon_7}
@@ -330,7 +330,7 @@ function ZebraBlinds() {
                             viewBox="0 0 10 8"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            onClick={handle_polygon_increase_height_fractions}>       
+                            onClick={handle_polygon_increase_height_fractions}>
                             <path
                                 d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
                                 fill="#D9D9D9"
@@ -364,43 +364,16 @@ function ZebraBlinds() {
 
 
                         <div className={styles.outsidemount_10003_1}></div>
-                        <div className={styles.select_material}>Select Material</div>
 
 
 
-                        <div className={styles.add_lift_feature}>Add Lift Feature</div>
-                        <div
-                            className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(1)}
-                        ></div>
-                        <div className={styles.wand}>Wand</div>
-                        <div className={styles.free}>Free</div>
 
 
-                        <div
-                            className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(3)}
-                        ></div>
-                        <div className={styles.cord_lift}>Cord Lift</div>
-                        <div className={styles.cordlift_price_value}>$60.00</div>
-
-                        <div
-                            className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
-                            onClick={() => handleEllipseClick2(2)}
-                        ></div>
-
-                        <div className={styles.motorized}>Motorized</div>
-                        <div className={styles.motorized_price_value}>$100.00</div>
 
 
-                        <div className={styles.ema_26_01}>EMA26-01</div>
 
-                        <div className={styles.ema_26_012}>EMA26-01</div>
-                        <div className={styles.ema_26_013}>EMA26-01</div>
-                        <div className={styles.ema_26_014}>EMA26-01</div>
-                        <div className={styles.ema_26_015}>EMA26-01</div>
                         <svg
-                            className={styles.rectangle_3}
+                            className={styles.select_color_long_rectangle}
                             width="482"
                             height="32"
                             viewBox="0 0 482 32"
@@ -414,7 +387,7 @@ function ZebraBlinds() {
                         </svg>
 
                         <svg
-                            className={styles.rectangle_5}
+                            className={styles.select_color_short_rectangle}
                             width="135"
                             height="32"
                             viewBox="0 0 135 32"
@@ -426,21 +399,29 @@ function ZebraBlinds() {
                                 fill="#3C3C3C"
                             />
                         </svg>
-
-                        <div className={styles.select_color}>Select Color</div>
-
                         <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
                         <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
 
+                        <div className={styles.select_color}>Select Color</div>
 
-                        <div className={styles.seperatorline}></div>
+                        <div className={styles.select_material}>Select Material</div>
 
 
-
-
+                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
+                        <div className={styles.ema_26_01}>EMA26-01</div>
+                        <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
+                        <div className={styles.ema_26_012}>EMA26-01</div>
+                        <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
+                        <div className={styles.ema_26_013}>EMA26-01</div>
+                        <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
+                        <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
+                        <div className={styles.ema_26_015}>EMA26-01</div>
+                        <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
+                        <div className={styles.ema_26_014}>EMA26-01</div>
 
 
                         <div className={styles.select_lift_type_seperator_line}></div>
+
                         <svg
                             className={styles.select_lift_type_seperator_line_long_rectangle}
                             width="482"
@@ -471,10 +452,29 @@ function ZebraBlinds() {
                         <div className={styles.select_lift_type}>Select Lift Type</div>
                         <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
 
+                        <div className={styles.add_lift_feature}>Add Lift Feature</div>
+                        <div
+                            className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
+                            onClick={() => handleEllipseClick2(1)}
+                        ></div>
+                        <div className={styles.wand}>Wand</div>
+                        <div className={styles.free}>Free</div>
 
 
+                        <div
+                            className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
+                            onClick={() => handleEllipseClick2(3)}
+                        ></div>
+                        <div className={styles.cord_lift}>Cord Lift</div>
+                        <div className={styles.cordlift_price_value}>$60.00</div>
 
+                        <div
+                            className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
+                            onClick={() => handleEllipseClick2(2)}
+                        ></div>
 
+                        <div className={styles.motorized}>Motorized</div>
+                        <div className={styles.motorized_price_value}>$100.00</div>
 
 
 
@@ -507,6 +507,7 @@ function ZebraBlinds() {
                                 fill="#3C3C3C"
                             />
                         </svg>
+                        <div className={styles.select_head_rail}>Select Head Rail</div>
                         <div className={styles.select_cassette_head_rail}>Select Cassette Head Rail</div>
 
                         <div
@@ -555,31 +556,6 @@ function ZebraBlinds() {
                             *Note: Skipping Color will result with steel material
                         </div>
 
-
-
-
-                        <div className={styles.quantity_seperator_line}></div>
-                        <div className={styles.quantity}>Quantity</div>
-                        <div className={styles.rectangle_29}></div>
-                        <div className={styles.rectangle_30}></div>
-                        <div className={styles.question_mark_ellipse}></div>
-                        <div className={styles.question_mark}>?</div>
-                        <div className={styles.qty}>Qty</div>
-                        <div className={styles.qty_number}>1</div>
-                        <div className={styles.quantity_is_always_1_box}></div>
-                        <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-
-
-
-                        <div className={styles.select_head_rail}>Select Head Rail</div>
-                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon} src="/lift_typeicon.png" />
-                        <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
-                        <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
-                        <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
-                        <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
-                        <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
-
-
                         <div
                             className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
                             onClick={() => handleEllipseClick5(1)}
@@ -598,18 +574,30 @@ function ZebraBlinds() {
                         <div className={styles.round2}>Round</div>
                         <div className={styles.product_price_2}>$60.00</div>
                         <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-
-
+                        <div className={styles.skip_head_rail_color_divider_line}></div>
                         <div className={styles.color}>Color:</div>
                         <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
                         <div className={styles.rectangle_32}></div>
                         <div className={styles.steel}>Steel</div>
 
 
+                        <div className={styles.quantity_seperator_line}></div>
+
+                        <div className={styles.quantity}>Quantity</div>
+                        <div className={styles.rectangle_29}></div>
+                        <div className={styles.rectangle_30}></div>
+                        <div className={styles.question_mark_ellipse}></div>
+                        <div className={styles.question_mark}>?</div>
+                        <div className={styles.qty}>Qty</div>
+                        <div className={styles.qty_number}>1</div>
+                        <div className={styles.quantity_is_always_1_box}></div>
+                        <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
 
 
 
                         <div className={styles.review_your_order_seperator_line}></div>
+
+
                         <div className={styles.review_your_order}>Review Your Order</div>
 
                         <div className={styles.review_your_order_bg}></div>
@@ -808,7 +796,6 @@ function ZebraBlinds() {
 
 
 
-                        <div className={styles.rectangle_33}></div>
 
 
 
