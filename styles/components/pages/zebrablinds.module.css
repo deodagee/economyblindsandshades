@@ -241,18 +241,23 @@ left: 120px;
   height: 14.97px;
 }
 
-.enter_size { 
+.enter_size_group { 
+
+  position: relative;
+  top: 50px;
+}
+
+.enter_size {
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   position: absolute;
-  left: 758.43px;
-  top: 680px;
-  width: 331.43px;
+  left: 757.11px;
+  top: 676px;
+  width: 308.77px;
   height: 14.97px;
-
 }
 
 .inside_mount {
@@ -373,18 +378,7 @@ left: 120px;
   width: 191px;
   height: 15px;
 }
-.enter_size {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 757.11px;
-  top: 676px;
-  width: 308.77px;
-  height: 14.97px;
-}
+
 
 .width {
   color: #000000;
@@ -675,6 +669,13 @@ left: 120px;
   width: 51.93px;
   height: 12.16px;
 }
+
+.select_color_group { 
+  position: relative;
+  top: 100px;
+}
+
+
 .select_color_long_rectangle {
   border-radius: 0px;
   width: 480.63px;
@@ -996,7 +997,7 @@ left: 120px;
 .etb_3004_1 {
   width: 90.65px;
   height: 66.43px;
-  position: absolute;
+  position: relative;
   left: 751.44px;
   top: 786.77px;
 }
@@ -1017,27 +1018,11 @@ left: 120px;
   top: 786.77px;
 }
 
-.ema_2601_1 {
-  width: 91.59px;
-  height: 66.43px;
-  position: absolute;
-  left: 846.81px;
-  top: 786.77px;
-}
-
 .etb_3004_2 {
   width: 90.65px;
   height: 66.43px;
   position: absolute;
   left: 943.13px;
-  top: 786.77px;
-}
-
-.etb_3004_3 {
-  width: 90.65px;
-  height: 66.43px;
-  position: absolute;
-  left: 1134.81px;
   top: 786.77px;
 }
 
