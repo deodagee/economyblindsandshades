@@ -1,7 +1,6 @@
 .page
 {  
     display: flex;
-    
     width: 100vw;
     box-sizing: border-box;
 }
@@ -30,14 +29,14 @@
   width: 50vw;
 display: flex;
 position: relative;
-left: 50px;
+left: 100px;
 }
 
 .right_half{ 
   width: 50vw;
   display: flex;
   position: relative;
-left: 100px;
+left: 120px;
 }
 
 
@@ -2090,20 +2089,23 @@ left: 100px;
   left: 1095px;
   top: 2963.85px;
 }
-.outsidemount_1 {
-  width: 150px;
-  height: 137px;
-  position: absolute;
-  left: 990.43px;
-  top: 499px;
-}
+
 .insidemount_1 {
-  width: 150px;
+  width: 420px;
   height: auto;
   position: absolute;
-  left: 993.43px;
-  top: 227px;
+  left: 900px;
+  top: 230px;
 }
+
+.outsidemount_1 {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  left: 990.43px;
+  top: 500px;
+}
+
 
 .active_inside_outside_ellipse {
   transition: 0.3s;
