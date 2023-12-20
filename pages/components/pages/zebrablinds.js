@@ -448,7 +448,6 @@ function ZebraBlinds() {
                             
                         <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
-
                             <div className={styles.add_lift_feature}>Add Lift Feature</div>
                             <div
                                 className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
@@ -457,12 +456,13 @@ function ZebraBlinds() {
                             <div className={styles.wand}>Wand</div>
                             <div className={styles.free}>Free</div>
 
-
                             <div
                                 className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
                                 onClick={() => handleEllipseClick2(3)}
                             ></div>
+
                             <div className={styles.cord_lift}>Cord Lift</div>
+
                             <div className={styles.cordlift_price_value}>$60.00</div>
 
                             <div
@@ -574,7 +574,7 @@ function ZebraBlinds() {
                             <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
                             <div className={styles.skip_head_rail_color_divider_line}></div>
                             <div className={styles.color}>Color:</div>
-                            <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassette.png" />
+                            <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
                             <div className={styles.rectangle_32}></div>
                             <div className={styles.steel}>Steel</div>
                         </div>
