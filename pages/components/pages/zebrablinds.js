@@ -195,7 +195,7 @@ function ZebraBlinds() {
                         </div>
 
 
-
+                         <div className={styles.enter_size_group}>
                         <div className={styles.enter_size}>Enter Size:</div>
                         <div className={styles.width}>Width</div>
                         <div className={styles.rectangle_9}></div>
@@ -353,7 +353,7 @@ function ZebraBlinds() {
 
                         <div className={styles.inches2}>Inches</div>
                         <div className={styles.eighths2}>Eighths</div>
-
+                        </div>
 
 
 
@@ -366,13 +366,9 @@ function ZebraBlinds() {
                         <div className={styles.outsidemount_10003_1}></div>
 
 
-
-
-
-
-
-
-                        <svg
+<div  className={styles.select_color_group}>
+    
+<svg
                             className={styles.select_color_long_rectangle}
                             width="482"
                             height="32"
@@ -418,6 +414,14 @@ function ZebraBlinds() {
                         <div className={styles.ema_26_015}>EMA26-01</div>
                         <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
                         <div className={styles.ema_26_014}>EMA26-01</div>
+
+
+
+</div>
+
+
+
+
 
 
                         <div className={styles.select_lift_type_seperator_line}></div>
