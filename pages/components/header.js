@@ -26,7 +26,9 @@ function HeaderPiece() {
         <Link className={styles.header_link} href={"/"} > Home </Link></li>
 
         <li className={styles.header_logo}>
-      <Image src={"/logo.jpg"} width={100} height={100} alt="economyblindsandshades_logo" />
+          <Link href={'/'}>
+      <Image className={styles.logo_image} src={"/logo.jpg"} width={400} height={400} alt="economyblindsandshades_logo" />
+      </Link>
     </li>
 
     <li className={styles.link_top_prt2}> 
