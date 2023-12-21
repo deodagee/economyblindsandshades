@@ -1265,6 +1265,20 @@ z-index: -1;
   top: 1690px;
   width: 32.1px;
   height: 12.16px;
+  transition: 0.3s;
+
+}
+
+.next_item:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.3s; 
+
+}
+
+.next_button1:hover, .next_button2:hover, .next_button3:hover { 
+  background-color: rgb(214, 214, 214);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .active_wand_cordlift_motorized {
