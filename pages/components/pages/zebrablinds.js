@@ -3,7 +3,7 @@ import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-
+import { imagesData } from '../materials/materials.js'; // Adjust the path accordingly
 
 function ZebraBlinds() {
 
@@ -225,9 +225,19 @@ function ZebraBlinds() {
                             <div className={styles.picture_frame}>
                             </div>
 
-                            <Image alt="chevronleft" className={styles.chevron_left} width={100} height={100} src="/chevronleft.png" />
-
-
+                            <svg
+                                className={styles.chevron_left} width="10"
+                                height="14"
+                                viewBox="0 0 10 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9 1.83221L2.75676 7.01342L9 12.2483L8.2973 13L1 7.01342L8.2973 1L9 1.83221Z"
+                                    fill="#3E3E3E"
+                                    stroke="black"
+                                />
+                            </svg>
 
                             <div className={styles.product_image1}>
                             </div>
@@ -244,8 +254,20 @@ function ZebraBlinds() {
                             <div className={styles.product_image5}>
                             </div>
 
-
-                            <Image alt="chevronright" className={styles.chevron_right} width={100} height={100} src="/chevronright.png" />
+                            <svg
+                                className={styles.chevron_right}
+                                width="10"
+                                height="14"
+                                viewBox="0 0 10 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 12.1678L7.24324 6.98658L1 1.75168L1.7027 1L9 6.98658L1.7027 13L1 12.1678Z"
+                                    fill="#3E3E3E"
+                                    stroke="black"
+                                />
+                            </svg>
 
 
                         </div>
@@ -536,59 +558,25 @@ function ZebraBlinds() {
                                 <div className={styles.select_material}>2. Select Material</div>
 
 
+
                                 <div className={styles.materials_list}>
-                                    <Image
-                                        alt="image"
-                                        width={100}
-                                        height={100}
-                                        className={getImageClassNameImageRender('etb_3004_1')}
-                                        src="/etb3004.jpg"
-                                        onClick={() => handleClickCHangeMaterialsImage('etb_3004_1')}
-                                    />
-                                    <div className={styles.ema_26_01}>ETB300-41</div>
-
-                                    <Image
-                                        alt="image"
-                                        width={100}
-                                        height={100}
-                                        className={getImageClassNameImageRender('ema_601_1')}
-                                        src="/etb3004.jpg"
-                                        onClick={() => handleClickCHangeMaterialsImage('ema_601_1')}
-                                    />
-                                    <div className={styles.ema_26_012}>EMA26-01</div>
-
-
-                                    <Image
-                                        alt="image"
-                                        width={100}
-                                        height={100}
-                                        className={getImageClassNameImageRender('etb_3004_2')}
-                                        src="/etb3004.jpg"
-                                        onClick={() => handleClickCHangeMaterialsImage('etb_3004_2')}
-                                    />
-                                    <div className={styles.ema_26_013}>ETB300-41</div>
-
-
-                                    <Image
-                                        alt="image"
-                                        width={100}
-                                        height={100}
-                                        className={getImageClassNameImageRender('ema_601_2')}
-                                        src="/etb3004.jpg"
-                                        onClick={() => handleClickCHangeMaterialsImage('ema_601_2')}
-                                    />
-                                    <div className={styles.ema_26_015}>EMA26-01</div>
-
-                                    <Image
-                                        alt="image"
-                                        width={100}
-                                        height={100}
-                                        className={getImageClassNameImageRender('ema_2601_2')}
-                                        src="/etb3004.jpg"
-                                        onClick={() => handleClickCHangeMaterialsImage('ema_2601_2')}
-                                    />
-                                    <div className={styles.ema_26_014}>ETB300-41</div>
-                                </div>
+  {imagesData.map((imageData) => (
+    <div key={imageData.key} className={styles.imageAndLabelContainer}>
+      <Image
+        alt="image"
+        width={100}
+        height={100}
+        className={getImageClassNameImageRender(imageData.key)}
+        src={imageData.src}
+        onClick={() => {
+          console.log(`Click handler for ${imageData.key}`);
+          handleClickCHangeMaterialsImage(imageData.key);
+        }}
+      />
+      <div className={styles.descriptionLabel}>{imageData.label}</div>
+    </div>
+  ))}
+</div>
 
 
                                 <button className={styles.next_item} onClick={handleNextButton2Click}><div className={styles.next_button2}>Next                                </div>
@@ -669,9 +657,9 @@ function ZebraBlinds() {
 
                                 <div className={styles.motorized}>Motorized</div>
                                 <div className={styles.motorized_price_value}>$100.00</div>
-                                
-                                    <button className={styles.next_item} onClick={handleNextButton3Click}><div className={styles.next_button3}>Next</div></button>
-                                
+
+                                <button className={styles.next_item} onClick={handleNextButton3Click}><div className={styles.next_button3}>Next</div></button>
+
                             </div>
                         )}
 
@@ -893,237 +881,237 @@ function ZebraBlinds() {
 
 
 
-{quantity_and_add_to_cart_group_Visible && (
+                        {quantity_and_add_to_cart_group_Visible && (
 
-<div className={styles.quantity_and_add_to_cart_group}>
-                        <div className={styles.quantity_seperator_line}></div>
+                            <div className={styles.quantity_and_add_to_cart_group}>
+                                <div className={styles.quantity_seperator_line}></div>
 
-                        <div className={styles.quantity}>Quantity</div>
-                        <div className={styles.rectangle_29}></div>
-                        <div className={styles.rectangle_30}></div>
-                        <div className={styles.question_mark_ellipse}></div>
-                        <div className={styles.question_mark}>?</div>
-                        <div className={styles.qty}>Qty</div>
-                        <div className={styles.qty_number}>1</div>
-                        <div className={styles.quantity_is_always_1_box}></div>
-                        <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-
-
-
-                        <div className={styles.review_your_order_seperator_line}></div>
+                                <div className={styles.quantity}>Quantity</div>
+                                <div className={styles.rectangle_29}></div>
+                                <div className={styles.rectangle_30}></div>
+                                <div className={styles.question_mark_ellipse}></div>
+                                <div className={styles.question_mark}>?</div>
+                                <div className={styles.qty}>Qty</div>
+                                <div className={styles.qty_number}>1</div>
+                                <div className={styles.quantity_is_always_1_box}></div>
+                                <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
 
 
-                        <div className={styles.review_your_order}>Review Your Order</div>
 
-                        <div className={styles.review_your_order_bg}></div>
-
-                        <svg
-                            className={styles.rectangle_45}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.rectangle_43}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.rectangle_36}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <div className={styles.review_your_order_seperator_line}></div>
 
 
-                        <svg
-                            className={styles.rectangle_37}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <div className={styles.review_your_order}>Review Your Order</div>
 
-                        <svg
-                            className={styles.rectangle_38}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <div className={styles.review_your_order_bg}></div>
 
-                        <svg
-                            className={styles.rectangle_39}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <svg
+                                    className={styles.rectangle_45}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
 
-                        <svg
-                            className={styles.rectangle_40}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <svg
+                                    className={styles.rectangle_43}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
 
-                        <svg
-                            className={styles.rectangle_41}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.rectangle_42}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.rectangle_44}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
-
-                        <svg
-                            className={styles.rectangle_46}
-                            width="483"
-                            height="2"
-                            viewBox="0 0 483 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                fill="black"
-                            />
-                        </svg>
+                                <svg
+                                    className={styles.rectangle_36}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
 
 
-                        <div className={styles.window_name}>Window Name</div>
-                        <div className={styles.window_type}>Window Type</div>
-                        <div className={styles.width2}>Width</div>
-                        <div className={styles.height2}>Height</div>
-                        <div className={styles.mount}>Mount</div>
-                        <div className={styles.materials}>Materials</div>
-                        <div className={styles.lift_type}>Lift Type</div>
-                        <div className={styles.casette_head_rail_type}>Casette Head Rail Type</div>
-                        <div className={styles.order_item_review_1}>Bottom Rail Type</div>
+                                <svg
+                                    className={styles.rectangle_37}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_38}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_39}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_40}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_41}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_42}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_44}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.rectangle_46}
+                                    width="483"
+                                    height="2"
+                                    viewBox="0 0 483 2"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                        fill="black"
+                                    />
+                                </svg>
 
 
-                        <div className={styles.order_item_review_3}>Zebra Blinds</div>
-                        <div className={styles.order_item_review_2}>Room Darkening</div>
-                        <div className={styles.order_item_review_4}>34”</div>
-                        <div className={styles.order_item_review_5}>78”</div>
-                        <div className={styles.order_item_review_6}>Inside Mount</div>
-                        <div className={styles.order_item_review_7}>EMA26-01</div>
-                        <div className={styles.order_item_review_8}>Lift Type</div>
-                        <div className={styles.order_item_review_9}>Black With Fabric</div>
-                        <div className={styles.order_item_review_10}>Oval Black</div>
+                                <div className={styles.window_name}>Window Name</div>
+                                <div className={styles.window_type}>Window Type</div>
+                                <div className={styles.width2}>Width</div>
+                                <div className={styles.height2}>Height</div>
+                                <div className={styles.mount}>Mount</div>
+                                <div className={styles.materials}>Materials</div>
+                                <div className={styles.lift_type}>Lift Type</div>
+                                <div className={styles.casette_head_rail_type}>Casette Head Rail Type</div>
+                                <div className={styles.order_item_review_1}>Bottom Rail Type</div>
 
 
-                        <div className={styles.rectangle_47}></div>
-                        <div className={styles.rectangle_48}></div>
-                        <div className={styles.rectangle_49}></div>
-                        <div className={styles.shipping_details}>Shipping Details</div>
-                        <div className={styles.total_price_tile}>Total Price</div>
-                        <div className={styles.total_price}>$65.34</div>
-                        <div className={styles.qty_1}>Qty 1</div>
-                        <div className={styles.shipping_price}>$12.34</div>
-                        <div className={styles.shipping}>Shipping</div>
-                        <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                        <div className={styles.order_number}>Order Number: 345969654</div>
-                        <div className={styles.date}>12/07/2024</div>
+                                <div className={styles.order_item_review_3}>Zebra Blinds</div>
+                                <div className={styles.order_item_review_2}>Room Darkening</div>
+                                <div className={styles.order_item_review_4}>34”</div>
+                                <div className={styles.order_item_review_5}>78”</div>
+                                <div className={styles.order_item_review_6}>Inside Mount</div>
+                                <div className={styles.order_item_review_7}>EMA26-01</div>
+                                <div className={styles.order_item_review_8}>Lift Type</div>
+                                <div className={styles.order_item_review_9}>Black With Fabric</div>
+                                <div className={styles.order_item_review_10}>Oval Black</div>
 
 
-                        <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
+                                <div className={styles.rectangle_47}></div>
+                                <div className={styles.rectangle_48}></div>
+                                <div className={styles.rectangle_49}></div>
+                                <div className={styles.shipping_details}>Shipping Details</div>
+                                <div className={styles.total_price_tile}>Total Price</div>
+                                <div className={styles.total_price}>$65.34</div>
+                                <div className={styles.qty_1}>Qty 1</div>
+                                <div className={styles.shipping_price}>$12.34</div>
+                                <div className={styles.shipping}>Shipping</div>
+                                <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
+                                <div className={styles.order_number}>Order Number: 345969654</div>
+                                <div className={styles.date}>12/07/2024</div>
 
-                        <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
-                        <div class={styles.add_to_cart}>ADD TO CART</div>
-                        </Link>
 
-                        <Image alt="image" width={100} height={100} className={styles.paymenticon}
-                            src="/interact.png" />
+                                <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
 
-                        <Image alt="image" width={100} height={100}
-                            className={styles.paypalicon}
-                            src="/paymenticon.png"
-                        />
-                    </div>
-                                            )}
+                                <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
+                                    <div class={styles.add_to_cart}>ADD TO CART</div>
+                                </Link>
+
+                                <Image alt="image" width={100} height={100} className={styles.paymenticon}
+                                    src="/interact.png" />
+
+                                <Image alt="image" width={100} height={100}
+                                    className={styles.paypalicon}
+                                    src="/paymenticon.png"
+                                />
+                            </div>
+                        )}
 
 
 
