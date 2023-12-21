@@ -9,9 +9,6 @@
   }
   
   .headercomponent {
-    font-weight: 500;
-    font-size: 16px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100vw;
     list-style: none;
     display: flex;
@@ -23,8 +20,10 @@
   }
   
   .link_top_prt1 {
-    font-size: 15px;
-    margin-left: 20px;
+    color: #808080;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    margin-left: 20px;
     width: 30vw;
     order: 1; /* Set the order to 1 to move it to the start */
   }
@@ -34,9 +33,19 @@
     order: 2; /* Set the order to 2 to keep it in the center */
   }
   
+  .logo_image { 
+    height: 90px;
+    width: auto;
+  
+
+  }
+
+
   .link_top_prt2 {
-    font-size: 15px;
-    width: 30vw;
+    color: #808080;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    width: 30vw;
     align-content: flex-end;
     order: 3; /* Set the order to 3 to move it to the end */
   }
@@ -45,6 +54,6 @@
     /* Add any additional styles for your links */
     text-decoration: none;
     color: #333; /* Adjust the color as needed */
-    margin: 0 5px; /* Add spacing between links, adjust as needed */
+    margin: 0 20px; /* Add spacing between links, adjust as needed */
   }
   
