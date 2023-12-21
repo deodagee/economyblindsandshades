@@ -2,6 +2,7 @@ import React from "react";
 import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 
 function ZebraBlinds() {
@@ -11,11 +12,15 @@ function ZebraBlinds() {
     const [Color_Group_Visible, Set_Color_Group_Visible] = useState(false);
     const [Lift_Group_Visible, Set_Lift_Group_Visible] = useState(false);
     const [Rails_Group_Visible, Set_Rails_Group_Visible] = useState(false);
+    const [quantity_and_add_to_cart_group_Visible, Set_quantity_and_add_to_cart_group_Visible] = useState(false);
+
+
+
 
     const [Was_Next_Button_Clicked1, Set_Was_Next_Button_Clicked1] = useState(false);
     const [Was_Next_Button_Clicked2, Set_Was_Next_Button_Clicked2] = useState(false);
     const [Was_Next_Button_Clicked3, Set_Was_Next_Button_Clicked3] = useState(false);
-
+    const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
 
     const handleNextButton1Click = () => {
         if (!Was_Next_Button_Clicked1) {
@@ -45,6 +50,16 @@ function ZebraBlinds() {
 
             // Set the flag to true to indicate that the action has been performed
             Set_Was_Next_Button_Clicked3(true);
+        }
+    };
+
+    const handleNextButton4Click = () => {
+        if (!Was_Next_Button_Clicked4) {
+            // Your existing functionality
+            Set_quantity_and_add_to_cart_group_Visible(!quantity_and_add_to_cart_group_Visible);
+
+            // Set the flag to true to indicate that the action has been performed
+            Set_Was_Next_Button_Clicked4(true);
         }
     };
 
@@ -872,11 +887,15 @@ function ZebraBlinds() {
                                     <div className={styles.rectangle_32}></div>
                                     <div className={styles.steel}>Steel</div>
                                 </div>
+                                <button className={styles.next_item} onClick={handleNextButton4Click}><div className={styles.next_button4}>Next</div></button>
                             </div>
                         )}
 
 
 
+{quantity_and_add_to_cart_group_Visible && (
+
+<div className={styles.quantity_and_add_to_cart_group}>
                         <div className={styles.quantity_seperator_line}></div>
 
                         <div className={styles.quantity}>Quantity</div>
@@ -1091,7 +1110,10 @@ function ZebraBlinds() {
 
 
                         <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
+
+                        <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
                         <div class={styles.add_to_cart}>ADD TO CART</div>
+                        </Link>
 
                         <Image alt="image" width={100} height={100} className={styles.paymenticon}
                             src="/interact.png" />
@@ -1100,6 +1122,11 @@ function ZebraBlinds() {
                             className={styles.paypalicon}
                             src="/paymenticon.png"
                         />
+                    </div>
+                                            )}
+
+
+
 
                     </div>
                 </div>
