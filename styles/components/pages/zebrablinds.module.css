@@ -643,7 +643,7 @@ z-index: -1;
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   position: absolute;
   left: 758.43px;
@@ -1010,7 +1010,7 @@ z-index: -1;
 
 .select_lift_type_group {
   position: absolute;
-  top: -300px;
+  top: -240px;
 }
 
 .select_lift_type_seperator_line {
@@ -1288,7 +1288,7 @@ z-index: -1;
 
 .select_head_rail_group {
   position: absolute;
-  top: -300px;
+  top: -230px;
 }
 
 .select_head_rail_seperator_line {
