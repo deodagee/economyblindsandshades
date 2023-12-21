@@ -62,7 +62,11 @@ z-index: -1;
   left: 60px;
 }
 
-.product_image {
+.product_image1 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 5px;
   width: 84.04px;
   height: 45.85px;
@@ -71,36 +75,52 @@ z-index: -1;
   top: 371.09px;
 }
 
-.zebrablinds_9 {
+.product_image2 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 5px;
-  width: 83.09px;
+    width: 83.09px;
   height: 45.85px;
   position: absolute;
   left: 194.41px;
   top: 371.09px;
 }
 
-.zebrablinds_10 {
+.product_image3 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 5px;
-  width: 84.04px;
+    width: 84.04px;
   height: 45.85px;
   position: absolute;
   left: 292.62px;
   top: 371.09px;
 }
 
-.zebrablinds_11 {
+.product_image4 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 5px;
-  width: 84.04px;
+    width: 84.04px;
   height: 45.85px;
   position: absolute;
   left: 392.71px;
   top: 371.09px;
 }
 
-.zebrablinds_12 {
+.product_image5 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 5px;
-  width: 84.04px;
+    width: 84.04px;
   height: 45.85px;
   position: absolute;
   left: 492.8px;
