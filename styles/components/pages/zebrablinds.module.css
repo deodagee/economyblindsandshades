@@ -911,7 +911,11 @@ z-index: -1;
   transform: rotate(0deg) scale(1, -1);
 }
 
-
+.selectedImage { 
+  transform: scale(1.0.5);
+  border-width: 3px;
+  border-color: black;
+}
 
 
 
@@ -1262,7 +1266,7 @@ z-index: -1;
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   position: absolute;
   left: 747.87px;
@@ -1442,6 +1446,203 @@ z-index: -1;
   top: 2202.85px;
   width: 203px;
   height: 14px;
+}
+
+.pick_bottom_rail_color_wrapper { 
+  position: relative;
+  top: 150px;
+
+}
+
+.pick_bottom_rail_color {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  left: 747.87px;
+  top: 2033.85px;
+  width: 200px;
+  height: 15px;
+  white-space: nowrap;
+}
+
+
+.fabric_types_for_bottom_rail {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: absolute;
+  left: 747.87px;
+  top: 2061.85px;
+  width: 114px;
+  height: 14px;
+}
+
+.fabric_type_image1_for_bottom_rail {
+  width: 70px;
+  height: auto;
+  position: relative;
+  left: 751.44px;
+  top: 2082.64px;
+}
+
+.oval_black_for_bottom_rail {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  position: absolute;
+  left: 769.87px;
+  top: 2156.85px;
+  width: 64px;
+  height: 12px;
+}
+
+.fabric_type_image2_for_bottom_rail {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  left: 846.44px;
+  top: 2082.64px;
+}
+
+
+.oval_brown_for_bottom_rail {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  position: absolute;
+  left: 866.64px;
+  top: 2156.56px;
+  width: 51.93px;
+  height: 12.16px;
+}
+
+
+.fabric_type_image3_for_bottom_rail {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  left: 943.44px;
+  top: 2082.64px;
+}
+
+.oval_beige_for_bottom_rail {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  position: absolute;
+  left: 962.01px;
+  top: 2156.56px;
+  width: 51.93px;
+  height: 12.16px;
+}
+
+
+.fabric_type_image4_for_bottom_rail {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  left: 1134.44px;
+  top: 2082.64px;
+}
+
+.oval_grey_for_bottom_rail {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  position: absolute;
+  left: 1049.83px;
+  top: 2156.56px;
+  width: 68.93px;
+  height: 12.16px;
+}
+
+
+.fabric_type_image5_for_bottom_rail {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  left: 1038.44px;
+  top: 2082.64px;
+}
+
+
+.oval_white_for_bottom_rail {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  position: absolute;
+  left: 1162.19px;
+  top: 2156.56px;
+  width: 51.93px;
+  height: 12.16px;
+}
+
+
+.skip_head_rail_ellipse_for_bottom_rail {
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
+  position: absolute;
+  left: 750.87px;
+  top: 2190.85px;
+}
+
+.active_skip_head_rail_ellipse_for_bottom_rail {
+  background: #59c56a;
+  /* Set the active color (green in this case) */
+}
+
+
+.skip_head_rail_color_for_bottom_rail {
+  color: #e40000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: absolute;
+  left: 775.87px;
+  top: 2183.85px;
+  width: 114px;
+  height: 14px;
+}
+
+.note_skipping_color_for_bottom_rail {
+  color: #929292;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  position: absolute;
+  left: 775.87px;
+  top: 2202.85px;
+  width: 203px;
+  height: 14px;
+}
+
+.chosen_cassette_chosen_round { 
+  position: relative;
+  top: 200px;
 }
 
 .select_cassette_ellipse2 {
