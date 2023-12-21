@@ -5,11 +5,25 @@ import { useState } from "react";
 
 
 function ZebraBlinds() {
+
+
+    // Logic for image clicking render
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleClick = (imageName) => {
+        setSelectedImage(imageName === selectedImage ? null : imageName);
+    };
+
+    const getImageClassName = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selectedImage ? styles.selectedImage : ''}`;
+    };
+
     //1. //  ellipse logic
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-    const [active_skip_head_rail_ellipse, Setactive_skip_head_rail_ellipse] = useState(null);
+    const [active_skip_head_rail_ellipse_for_bottom_rail, Setactive_skip_head_rail_ellipse_for_bottom_rail] = useState(null);
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
     const handleEllipseClick1 = (ellipseNumber) => {
@@ -26,7 +40,7 @@ function ZebraBlinds() {
 
     const handleEllipseClick4 = () => {
         console.log('Ellipse Clicked');
-        Setactive_skip_head_rail_ellipse((prevActive) => !prevActive);
+        Setactive_skip_head_rail_ellipse_for_bottom_rail((prevActive) => !prevActive);
     };
 
     const handleEllipseClick5 = (ellipseNumber) => {
@@ -155,7 +169,7 @@ function ZebraBlinds() {
                         </div>
                         <div className={styles.inside_mount}>Inside Mount</div>
                         <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
-                        <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/InsideMount.png" />
+                        <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
                         <div className={styles.outside_mount}>Outside Mount</div>
                         <div
                             className={styles.inside_mount_blinds_fit_within_your}
@@ -282,7 +296,7 @@ function ZebraBlinds() {
                             <div className={styles.enter_height_window_trigger}>
 
                                 <div className={styles.height}>Height</div>
-                                
+
                                 <div className={styles.rectangle_11}></div>
                                 <div className={styles.rectangle_12}></div>
 
@@ -361,7 +375,7 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
-     
+
                         <div className={styles.rectangle_66}></div>
 
                         <div className={styles.select_color_group}>
@@ -393,25 +407,69 @@ function ZebraBlinds() {
                                     fill="#3C3C3C"
                                 />
                             </svg>
-   
+
                             <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
                             <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
 
                             <div className={styles.select_color}>Select Color</div>
 
                             <div className={styles.select_material}>Select Material</div>
-                            <div className={styles.ema_26_01}>EMA26-01</div>
-                            <Image alt="image" width={100} height={100} className={styles.etb_3004_1} src="/etb3004.jpg" />
-                            <div className={styles.ema_26_012}>EMA26-01</div>
-                            <Image alt="image" width={100} height={100} className={styles.ema_601_1} src="/ema2601.jpg" />
-                            <div className={styles.ema_26_013}>EMA26-01</div>
-                            <Image alt="image" width={100} height={100} className={styles.etb_3004_2} src="/etb3004.jpg" />
-                            <Image alt="image" width={100} height={100} className={styles.ema_601_2} src="/ema2601.jpg" />
-                            <div className={styles.ema_26_015}>EMA26-01</div>
-                            <Image alt="image" width={100} height={100} className={styles.ema_2601_2} src="/etb3004.jpg" />
-                            <div className={styles.ema_26_014}>EMA26-01</div>
-                        </div>
 
+
+                            <div className={styles.materials_list}>
+                                <Image
+                                    alt="image"
+                                    width={100}
+                                    height={100}
+                                    className={getImageClassName('etb_3004_1')}
+                                    src="/etb3004.jpg"
+                                    onClick={() => handleClick('etb_3004_1')}
+                                />
+                                <div className={styles.ema_26_01}>ETB300-41</div>
+
+                                <Image
+                                    alt="image"
+                                    width={100}
+                                    height={100}
+                                    className={getImageClassName('ema_601_1')}
+                                    src="/etb3004.jpg"
+                                    onClick={() => handleClick('ema_601_1')}
+                                />
+                                <div className={styles.ema_26_012}>EMA26-01</div>
+
+
+                                <Image
+                                    alt="image"
+                                    width={100}
+                                    height={100}
+                                    className={getImageClassName('etb_3004_2')}
+                                    src="/etb3004.jpg"
+                                    onClick={() => handleClick('etb_3004_2')}
+                                />
+                                <div className={styles.ema_26_013}>ETB300-41</div>
+
+
+                                <Image
+                                    alt="image"
+                                    width={100}
+                                    height={100}
+                                    className={getImageClassName('ema_601_2')}
+                                    src="/etb3004.jpg"
+                                    onClick={() => handleClick('ema_601_2')}
+                                />
+                                <div className={styles.ema_26_015}>EMA26-01</div>
+
+                                <Image
+                                    alt="image"
+                                    width={100}
+                                    height={100}
+                                    className={getImageClassName('ema_2601_2')}
+                                    src="/etb3004.jpg"
+                                    onClick={() => handleClick('ema_2601_2')}
+                                />
+                                <div className={styles.ema_26_014}>ETB300-41</div>
+                            </div>
+                        </div>
 
 
                         <div className={styles.select_lift_type_group}>
@@ -445,8 +503,8 @@ function ZebraBlinds() {
                                 />
                             </svg>
                             <div className={styles.select_lift_type_title}>Select Lift Type</div>
-                            
-                        <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
+
+                            <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
                             <div className={styles.add_lift_feature}>Add Lift Feature</div>
                             <div
@@ -546,7 +604,7 @@ function ZebraBlinds() {
 
 
                             <div
-                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
                                 onClick={handleEllipseClick4}
                             ></div>
                             <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
@@ -554,29 +612,64 @@ function ZebraBlinds() {
                                 *Note: Skipping Color will result with steel material
                             </div>
 
-                            <div
-                                className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
-                                onClick={() => handleEllipseClick5(1)}
-                            ></div>
-                            <div
-                                className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
-                                onClick={() => handleEllipseClick5(2)}
-                            ></div>
+                            <div className={styles.pick_bottom_rail_color_wrapper}>
+                                <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
 
-                            <div className={styles.cassette2}>Cassette</div>
-                            <div className={styles.product_price}>$65.00</div>
-                            <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image1_for_bottom_rail} src="/cassette.png" />
+                                <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
+
+                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image2_for_bottom_rail} src="/cassette.png" />
+                                <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
+
+                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image3_for_bottom_rail} src="/cassette.png" />
+                                <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
+
+                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image4_for_bottom_rail} src="/cassette.png" />
+                                <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
+
+                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image5_for_bottom_rail} src="/cassette.png" />
+                                <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
+
+
+                                <div
+                                    className={`${styles.skip_head_rail_ellipse_for_bottom_rail} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
+                                    onClick={handleEllipseClick4}
+                                ></div>
+                                <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                <div className={styles.note_skipping_color_for_bottom_rail}>
+                                    *Note: Skipping Color will result with steel material
+                                </div>
+                            </div>
 
 
 
-                            <div className={styles.round2}>Round</div>
-                            <div className={styles.product_price_2}>$60.00</div>
-                            <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                            <div className={styles.skip_head_rail_color_divider_line}></div>
-                            <div className={styles.color}>Color:</div>
-                            <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                            <div className={styles.rectangle_32}></div>
-                            <div className={styles.steel}>Steel</div>
+                            <div className={styles.chosen_cassette_chosen_round}>
+
+                                <div
+                                    className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                                    onClick={() => handleEllipseClick5(1)}
+                                ></div>
+                                <div
+                                    className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                                    onClick={() => handleEllipseClick5(2)}
+                                ></div>
+
+                                <div className={styles.cassette2}>Cassette</div>
+                                <div className={styles.product_price}>$65.00</div>
+                                <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+
+
+
+                                <div className={styles.round2}>Round</div>
+                                <div className={styles.product_price_2}>$60.00</div>
+                                <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
+                                <div className={styles.skip_head_rail_color_divider_line}></div>
+                                <div className={styles.color}>Color:</div>
+                                <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
+                                <div className={styles.rectangle_32}></div>
+                                <div className={styles.steel}>Steel</div>
+                            </div>
                         </div>
 
 
