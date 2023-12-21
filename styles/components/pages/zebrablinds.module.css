@@ -949,6 +949,30 @@ z-index: -1;
   border-color: black;
 }
 
+.next_button2 { 
+  color: #7b7b7b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0.2rem;
+  border-width: 2px;
+  border-color: rgb(201, 201, 201);
+  position: absolute;
+  left: 940px;
+  top: 890px;
+  width: 32.1px;
+  height: 12.16px;
+}
+
+
 .select_lift_type_group {
   position: absolute;
   top: -300px;
@@ -1138,6 +1162,29 @@ z-index: -1;
   top: 1670.96px;
   width: 252.12px;
   height: 36.49px;
+}
+
+.next_button3 { 
+  color: #7b7b7b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0.2rem;
+  border-width: 2px;
+  border-color: rgb(201, 201, 201);
+  position: absolute;
+  left: 940px;
+  top: 1720px;
+  width: 32.1px;
+  height: 12.16px;
 }
 
 .active_wand_cordlift_motorized {
