@@ -230,10 +230,6 @@ function ZebraBlinds() {
                             </div>
 
 
-
-                            <Image alt="zebrablinds_12" width={100} height={100} className={styles.zebrablinds_12} src="/indexcomponent2.png" />
-
-
                             <Image alt="chevronright" className={styles.chevron_right} width={100} height={100} src="/chevronright.png" />
 
 
