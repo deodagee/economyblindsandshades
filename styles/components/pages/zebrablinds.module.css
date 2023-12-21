@@ -568,7 +568,7 @@ z-index: -1;
 
 .select_color_group {
   position: absolute;
-  top: 100px;
+  top: 140px;
 }
 
 .select_color_long_rectangle {
@@ -633,7 +633,7 @@ z-index: -1;
   font-family: "Inter-Regular", sans-serif;
   font-size: 9px;
   font-weight: 400;
-  position: absolute;
+  position: relative;
   left: 776.94px;
   top: 860.68px;
   width: 51.93px;
@@ -669,7 +669,7 @@ z-index: -1;
   height: 66.43px;
   position: relative;
   left: 943.13px;
-  top: 786.77px;
+  top: 775.77px;
 }
 
 
@@ -885,8 +885,31 @@ z-index: -1;
   height: 12.16px;
 }
 
-.rectangle_66 {
-  background: #d4d4d4;
+.next_button1 { 
+  color: #7b7b7b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0.2rem;
+  border-width: 2px;
+  border-color: rgb(201, 201, 201);
+  position: absolute;
+  left: 940px;
+  top: 755px;
+  width: 32.1px;
+  height: 12.16px;
+}
+
+.top_divider_line {
+  background: #630000;
   width: 478px;
   height: 1px;
   position: absolute;
@@ -928,7 +951,7 @@ z-index: -1;
 
 .select_lift_type_group {
   position: absolute;
-  top: -340px;
+  top: -300px;
 }
 
 .select_lift_type_seperator_line {
@@ -1124,7 +1147,7 @@ z-index: -1;
 
 .select_head_rail_group {
   position: absolute;
-  top: -350px;
+  top: -300px;
 }
 
 .select_head_rail_seperator_line {
@@ -1239,8 +1262,11 @@ z-index: -1;
 .active_cassette_round1 {
   transition: 0.3s;
   background: #59c56a;
+  position: absolute;
+
   /* Set the active color (green in this case) */
 }
+
 
 .round {
   color: #000000;
@@ -1296,6 +1322,11 @@ z-index: -1;
   height: 14px;
 }
 
+.materials_list { 
+
+  position: relative;
+}
+
 .fabric_type_image1 {
   width: 70px;
   height: auto;
@@ -1310,7 +1341,7 @@ z-index: -1;
   font-family: "Inter-Regular", sans-serif;
   font-size: 9px;
   font-weight: 400;
-  position: absolute;
+  position: relative;
   left: 769.87px;
   top: 2156.85px;
   width: 64px;
@@ -1392,7 +1423,6 @@ z-index: -1;
   top: 2082.64px;
 }
 
-
 .oval_white {
   color: #000000;
   text-align: left;
@@ -1404,6 +1434,33 @@ z-index: -1;
   top: 2156.56px;
   width: 51.93px;
   height: 12.16px;
+}
+
+.skip_head_rail_color_for_head_rail_title {
+  color: #e40000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+  position: absolute;
+  left: 775.87px;
+  top: 2183.85px;
+  width: 114px;
+  height: 14px;
+}
+
+.note_skipping_color_for_head_rail {
+  color: #929292;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  position: relative;
+  left: 775.87px;
+  top: 2133.85px;
+  width: max-content;
+  height: 14px;
 }
 
 
@@ -1440,7 +1497,6 @@ z-index: -1;
   height: 14px;
 }
 
-
 .note_skipping_color {
   color: #929292;
   text-align: left;
@@ -1454,11 +1510,12 @@ z-index: -1;
   height: 14px;
 }
 
+
 .pick_bottom_rail_color_wrapper { 
   position: relative;
   top: 150px;
-
 }
+
 
 .pick_bottom_rail_color {
   color: #000000;
@@ -1576,7 +1633,6 @@ z-index: -1;
   height: 12.16px;
 }
 
-
 .fabric_type_image5_for_bottom_rail {
   width: 70px;
   height: auto;
@@ -1584,7 +1640,6 @@ z-index: -1;
   left: 1038.44px;
   top: 2082.64px;
 }
-
 
 .oval_white_for_bottom_rail {
   color: #000000;
@@ -1599,24 +1654,6 @@ z-index: -1;
   height: 12.16px;
 }
 
-
-.skip_head_rail_ellipse_for_bottom_rail {
-  background: #cdcdcd;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #e2e2e2;
-  border-width: 1px;
-  width: 15.11px;
-  height: 14.97px;
-  position: absolute;
-  left: 750.87px;
-  top: 2190.85px;
-}
-
-.active_skip_head_rail_ellipse_for_bottom_rail {
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
 
 
 .skip_head_rail_color_for_bottom_rail {
@@ -1646,9 +1683,29 @@ z-index: -1;
   height: 14px;
 }
 
-.chosen_cassette_chosen_round { 
-  position: relative;
-  top: 200px;
+
+.skip_bottom_rail_ellipse { 
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
+  position: absolute;
+  left: 750.87px;
+  top: 2190.85px;
+}
+
+.active_skip_bottom_rail_ellipse {
+  background: #59c56a;
+  /* Set the active color (green in this case) */
+}
+
+
+.chosen_cassette_or_chosen_round_wrapper { 
+  position: absolute;
+  top: 250px;
 }
 
 .select_cassette_ellipse2 {
