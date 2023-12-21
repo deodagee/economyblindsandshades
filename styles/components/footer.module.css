@@ -1,0 +1,15 @@
+.footer_wrapper { 
+    display: flex;
+
+}
+
+
+.footer_box { 
+    background: #f0f0f0;
+    border-style: solid;
+    border-color: #dddddd;
+    border-width: 1px;
+    width: 100vw;
+    height: 100px;  
+
+}

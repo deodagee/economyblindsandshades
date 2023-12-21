@@ -1,3 +1,10 @@
+.main_page { 
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  
+}
+
 .page {
   display: flex;
   width: 100vw;
@@ -14,16 +21,15 @@ z-index: -1;
   align-items: center;
   justify-content: flex-start;
   width: 1366px;
-  height: 100vh;
-  top: 100px;
+  
 }
 
 .page_wrapper {
   flex-shrink: 0;
   width: 1367.15px;
-  height: 2974.85px;
   position: relative;
-  top: 100px;
+  top: 200px;
+
 }
 
 .left_half {
@@ -55,11 +61,21 @@ z-index: -1;
 
 
 .chevron_left {
-  width: 7.55px;
-  height: 12.16px;
+  width: 8px;
+  height: 12px;
+  position: relative;
+  transform: translate(-0.79px, -0.7px);
+  overflow: visible;
   top: 390px;
-  position: absolute;
   left: 60px;
+  transition: 0.3s;
+
+}
+
+
+.chevron_left:hover { 
+  transform: translate(-0.79px, -0.7px) scale(1.25);
+transition: 0.3s;
 }
 
 .product_image1 {
@@ -129,18 +145,30 @@ z-index: -1;
 
 
 .chevron_right {
-  width: 7.55px;
-  height: 12.16px;
-  top: 390px;
-  position: absolute;
+  width: 8px;
+  height: 12px;
+  position: relative;
+  transform: translate(-8.73px, -12.68px);
+  overflow: visible;
+  top: 400px;
   left: 600px;
+  transition: 0.3s;
+
 }
+
+.chevron_right:hover { 
+  transform: translate(-8.73px, -12.68px) scale(1.25);
+transition: 0.3s;
+}
+
+
 
 .right_half {
   width: 50vw;
   display: flex;
   position: relative;
   left: 120px;
+
 }
 
 .product_title {
@@ -380,20 +408,6 @@ z-index: -1;
   top: 700px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
-}
-
-
-.select-material {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  position: absolute;
-  left: 747.87px;
-  top: 689.85px;
-  width: 191px;
-  height: 15px;
 }
 
 .active_inside_outside_ellipse {
@@ -652,116 +666,42 @@ z-index: -1;
   height: 14.97px;
 }
 
-.ema_26_01 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: relative;
+/* YourComponent.module.css */
+.materials_list {
+  border-width: 1px;
+  border-color: black;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute; /* Adjust as needed */
   left: 776.94px;
   top: 860.68px;
-  width: 51.93px;
-  height: 12.16px;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
+.imageAndLabelContainer {
+  width: 70px;
+  display: flex;
+  flex-direction: column; /* Make sure each image and description are in a column */
+  align-items: center; /* Center the items horizontally within each column */
+  margin: 10px; /* Adjust as needed */
+  text-align: center; /* Center the image and label */
+}
+
+.descriptionLabel {
+  font-size: 10px;
+  margin-top: 5px; /* Adjust as needed */
 }
 
 
-.etb_3004_1 {
-  width: 90.65px;
-  height: 66.43px;
-  position: absolute;
-  left: 751.44px;
-  top: 786.77px;
+.materials_selectedImage { 
+  transform: scale(1.0.5);
+  border-width: 3px;
+  border-color: black;
 }
 
-
-.ema_26_012 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 873.25px;
-  top: 860.68px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.etb_3004_2 {
-  width: 90.65px;
-  height: 66.43px;
-  position: relative;
-  left: 943.13px;
-  top: 775.77px;
-}
-
-
-.ema_601_2 {
-  width: 91.59px;
-  height: 66.43px;
-  position: absolute;
-  left: 1138.5px;
-  top: 786.77px;
-}
-
-.ema_26_015 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1065.88px;
-  top: 860.68px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.ema_2601_2 {
-  width: 91.59px;
-  height: 66.43px;
-  position: absolute;
-  left: 1038.5px;
-  top: 786.77px;
-}
-
-.ema_26_014 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1162.19px;
-  top: 860.68px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.ema_601_1 {
-  width: 90.65px;
-  height: 66.43px;
-  position: absolute;
-  left: 851.44px;
-  top: 786.77px;
-}
-
-.ema_26_013 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 969.57px;
-  top: 860.68px;
-  width: 51.93px;
-  height: 12.16px;
-}
 
 .eighths {
   color: #000000;
@@ -966,11 +906,6 @@ z-index: -1;
   transform: rotate(0deg) scale(1, -1);
 }
 
-.materials_selectedImage { 
-  transform: scale(1.0.5);
-  border-width: 3px;
-  border-color: black;
-}
 
 .selected_head_rail_color{ 
   transform: scale(1.0.5);
@@ -1490,10 +1425,6 @@ z-index: -1;
   height: 14px;
 }
 
-.materials_list { 
-
-  position: relative;
-}
 
 .fabric_type_image1 {
   width: 70px;
