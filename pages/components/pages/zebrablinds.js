@@ -207,7 +207,8 @@ function ZebraBlinds() {
 
                         <div className={styles.sliding_gallery}>
 
-                            <Image alt="zebrablinds_8" width={600} height={600} className={styles.zebrablinds_8} src="/indexcomponentmain.png" />
+                            <div className={styles.picture_frame}>
+                            </div>
 
                             <Image alt="chevronleft" className={styles.chevron_left} width={100} height={100} src="/chevronleft.png" />
                             <Image alt="product_image" width={100} height={100} className={styles.product_image} src="/indexcomponent2.png" />
