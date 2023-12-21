@@ -897,9 +897,6 @@ z-index: -1;
 }
 
 
-
-
-
 .rectangle_8 {
   background: #d4d4d4;
   width: 480.63px;
@@ -911,19 +908,28 @@ z-index: -1;
   transform: rotate(0deg) scale(1, -1);
 }
 
-.selectedImage { 
+.materials_selectedImage { 
   transform: scale(1.0.5);
   border-width: 3px;
   border-color: black;
 }
 
+.selected_head_rail_color{ 
+  transform: scale(1.0.5);
+  border-width: 3px;
+  border-color: black;
+}
 
+.selected_bottom_rail_color{ 
+  transform: scale(1.0.5);
+  border-width: 3px;
+  border-color: black;
+}
 
 .select_lift_type_group {
   position: absolute;
   top: -340px;
 }
-
 
 .select_lift_type_seperator_line {
   background: #d4d4d4;
