@@ -39,7 +39,11 @@ z-index: -1;
 }
 
 
-.zebrablinds_8 {
+.picture_frame {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
   border-radius: 25px;
   width: 672.31px;
   height: 329.55px;
@@ -47,6 +51,7 @@ z-index: -1;
   left: -0.57px;
   top: 8.5px;
 }
+
 
 
 .chevron_left {
