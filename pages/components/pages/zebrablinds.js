@@ -12,16 +12,41 @@ function ZebraBlinds() {
     const [Lift_Group_Visible, Set_Lift_Group_Visible] = useState(false);
     const [Rails_Group_Visible, Set_Rails_Group_Visible] = useState(false);
 
+    const [Was_Next_Button_Clicked1, Set_Was_Next_Button_Clicked1] = useState(false);
+    const [Was_Next_Button_Clicked2, Set_Was_Next_Button_Clicked2] = useState(false);
+    const [Was_Next_Button_Clicked3, Set_Was_Next_Button_Clicked3] = useState(false);
+
 
     const handleNextButton1Click = () => {
-        Set_Color_Group_Visible(!Color_Group_Visible);
-    };
-    const handleNextButton2Click = () => {
-        Set_Lift_Group_Visible(!Lift_Group_Visible);
-    };
-    const handleNextButton3Click = () => {
-        Set_Rails_Group_Visible(!Rails_Group_Visible);
-    };
+        if (!Was_Next_Button_Clicked1) {
+          // Your existing functionality
+          Set_Color_Group_Visible(!Color_Group_Visible);
+    
+          // Set the flag to true to indicate that the action has been performed
+          Set_Was_Next_Button_Clicked1(true);
+        }
+      };
+
+
+      const handleNextButton2Click = () => {
+        if (!Was_Next_Button_Clicked2) {
+          // Your existing functionality
+          Set_Lift_Group_Visible(!Lift_Group_Visible);
+    
+          // Set the flag to true to indicate that the action has been performed
+          Set_Was_Next_Button_Clicked2(true);
+        }
+      };
+
+      const handleNextButton3Click = () => {
+        if (!Was_Next_Button_Clicked3) {
+          // Your existing functionality
+          Set_Rails_Group_Visible(!Rails_Group_Visible);
+    
+          // Set the flag to true to indicate that the action has been performed
+          Set_Was_Next_Button_Clicked3(true);
+        }
+      };
 
 
     // Logic for materials image render
@@ -222,6 +247,7 @@ function ZebraBlinds() {
 
                         <div className={styles.top_divider_line}></div>
 
+                        <div className={styles.select_mount_group}> 
                         <div className={styles.choose_inside_or_outside_mount}>
                             Choose Inside or Outside Mount
                         </div>
@@ -230,11 +256,19 @@ function ZebraBlinds() {
                         <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
                         <div className={styles.outside_mount}>Outside Mount</div>
                         <div
+                            className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                            onClick={() => handleEllipseClick1(1)}
+                        ></div>
+                        <div
                             className={styles.inside_mount_blinds_fit_within_your}
                         >
                             Inside mount blinds fit within your window opening and is by far the most
                             popular choice. Your product will be made with a ½ inch deduction.
                         </div>
+                        <div
+                            className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                            onClick={() => handleEllipseClick1(2)}
+                        ></div>
                         <div
                             className={styles.outside_mount_blinds_are_installed}
                         >
@@ -242,14 +276,8 @@ function ZebraBlinds() {
                             or drywall). Use with a shallow window opening or on doors. Your product
                             will be made in the exact size you specify.
                         </div>
-                        <div
-                            className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                            onClick={() => handleEllipseClick1(1)}
-                        ></div>
-                        <div
-                            className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                            onClick={() => handleEllipseClick1(2)}
-                        ></div>
+
+
                         <div
                             className={styles.measure_the_top_of}
                         >
@@ -436,6 +464,7 @@ function ZebraBlinds() {
                                 </div>
                             </div>
                         </div>
+                        </div>
 
                         {Color_Group_Visible && (
                             <div className={styles.select_color_group}>
@@ -529,9 +558,11 @@ function ZebraBlinds() {
                                     />
                                     <div className={styles.ema_26_014}>ETB300-41</div>
                                 </div>
+
                                 <div className={styles.next_button2}>
                                     <button onClick={handleNextButton2Click}>Next</button>
                                 </div>
+
                             </div>
                         )}
 
@@ -579,6 +610,17 @@ function ZebraBlinds() {
                                 ></div>
                                 <div className={styles.wand}>Wand</div>
                                 <div className={styles.free}>Free</div>
+
+                                <div className={styles.select_chain_side_wrapper}>
+                                    <div className={styles.select_chain_side_wrapper_title}>
+                                        Select Chain Side
+                                    </div>
+                                    <div className={styles.select_chain_left_box}>Left</div>
+                                    <div className={styles.select_chain_right_box}>
+                                        Right
+                                    </div>
+
+                                </div>
 
                                 <div
                                     className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
