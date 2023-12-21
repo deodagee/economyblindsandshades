@@ -19,34 +19,34 @@ function ZebraBlinds() {
 
     const handleNextButton1Click = () => {
         if (!Was_Next_Button_Clicked1) {
-          // Your existing functionality
-          Set_Color_Group_Visible(!Color_Group_Visible);
-    
-          // Set the flag to true to indicate that the action has been performed
-          Set_Was_Next_Button_Clicked1(true);
+            // Your existing functionality
+            Set_Color_Group_Visible(!Color_Group_Visible);
+
+            // Set the flag to true to indicate that the action has been performed
+            Set_Was_Next_Button_Clicked1(true);
         }
-      };
+    };
 
 
-      const handleNextButton2Click = () => {
+    const handleNextButton2Click = () => {
         if (!Was_Next_Button_Clicked2) {
-          // Your existing functionality
-          Set_Lift_Group_Visible(!Lift_Group_Visible);
-    
-          // Set the flag to true to indicate that the action has been performed
-          Set_Was_Next_Button_Clicked2(true);
-        }
-      };
+            // Your existing functionality
+            Set_Lift_Group_Visible(!Lift_Group_Visible);
 
-      const handleNextButton3Click = () => {
-        if (!Was_Next_Button_Clicked3) {
-          // Your existing functionality
-          Set_Rails_Group_Visible(!Rails_Group_Visible);
-    
-          // Set the flag to true to indicate that the action has been performed
-          Set_Was_Next_Button_Clicked3(true);
+            // Set the flag to true to indicate that the action has been performed
+            Set_Was_Next_Button_Clicked2(true);
         }
-      };
+    };
+
+    const handleNextButton3Click = () => {
+        if (!Was_Next_Button_Clicked3) {
+            // Your existing functionality
+            Set_Rails_Group_Visible(!Rails_Group_Visible);
+
+            // Set the flag to true to indicate that the action has been performed
+            Set_Was_Next_Button_Clicked3(true);
+        }
+    };
 
 
     // Logic for materials image render
@@ -216,7 +216,7 @@ function ZebraBlinds() {
 
                             <div className={styles.product_image1}>
                             </div>
-                            
+
                             <div className={styles.product_image2}>
                             </div>
 
@@ -263,223 +263,223 @@ function ZebraBlinds() {
 
                         <div className={styles.top_divider_line}></div>
 
-                        <div className={styles.select_mount_group}> 
-                        <div className={styles.choose_inside_or_outside_mount}>
-                            Choose Inside or Outside Mount
-                        </div>
-                        <div className={styles.inside_mount}>Inside Mount</div>
-                        <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
-                        <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
-                        <div className={styles.outside_mount}>Outside Mount</div>
-                        <div
-                            className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                            onClick={() => handleEllipseClick1(1)}
-                        ></div>
-                        <div
-                            className={styles.inside_mount_blinds_fit_within_your}
-                        >
-                            Inside mount blinds fit within your window opening and is by far the most
-                            popular choice. Your product will be made with a ½ inch deduction.
-                        </div>
-                        <div
-                            className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                            onClick={() => handleEllipseClick1(2)}
-                        ></div>
-                        <div
-                            className={styles.outside_mount_blinds_are_installed}
-                        >
-                            Outside mount blinds are installed above the window opening (on the trim
-                            or drywall). Use with a shallow window opening or on doors. Your product
-                            will be made in the exact size you specify.
-                        </div>
+                        <div className={styles.select_mount_group}>
+                            <div className={styles.choose_inside_or_outside_mount}>
+                                Choose Inside or Outside Mount
+                            </div>
+                            <div className={styles.inside_mount}>Inside Mount</div>
+                            <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
+                            <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
+                            <div className={styles.outside_mount}>Outside Mount</div>
+                            <div
+                                className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                                onClick={() => handleEllipseClick1(1)}
+                            ></div>
+                            <div
+                                className={styles.inside_mount_blinds_fit_within_your}
+                            >
+                                Inside mount blinds fit within your window opening and is by far the most
+                                popular choice. Your product will be made with a ½ inch deduction.
+                            </div>
+                            <div
+                                className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                                onClick={() => handleEllipseClick1(2)}
+                            ></div>
+                            <div
+                                className={styles.outside_mount_blinds_are_installed}
+                            >
+                                Outside mount blinds are installed above the window opening (on the trim
+                                or drywall). Use with a shallow window opening or on doors. Your product
+                                will be made in the exact size you specify.
+                            </div>
 
 
-                        <div
-                            className={styles.measure_the_top_of}
-                        >
-                            Measure the top of the window frame and order the exact size making NO
-                            deductions.
-                        </div>
-                        <div className={styles.take_the_shortest2}>
-                            Take the shortest width measurement.
-                        </div>
-                        <div className={styles.measure_the_left_center}>
-                            Measure the left, center and right portions of the inside frame.
-                        </div>
-                        <div className={styles.take_the_shortest1}>
-                            Take the shortest height measurement.
-                        </div>
+                            <div
+                                className={styles.measure_the_top_of}
+                            >
+                                Measure the top of the window frame and order the exact size making NO
+                                deductions.
+                            </div>
+                            <div className={styles.take_the_shortest2}>
+                                Take the shortest width measurement.
+                            </div>
+                            <div className={styles.measure_the_left_center}>
+                                Measure the left, center and right portions of the inside frame.
+                            </div>
+                            <div className={styles.take_the_shortest1}>
+                                Take the shortest height measurement.
+                            </div>
 
 
-                        <div className={styles.enter_size_group}>
-                            <div className={styles.enter_size}>Enter Window Size:</div>
+                            <div className={styles.enter_size_group}>
+                                <div className={styles.enter_size}>Enter Window Size:</div>
 
-                            <div className={styles.enter_width_window_trigger}>
-                                <div className={styles.width}>Width</div>
-                                <div className={styles.rectangle_9}></div>
-                                <div className={styles.rectangle_10}>
+                                <div className={styles.enter_width_window_trigger}>
+                                    <div className={styles.width}>Width</div>
+                                    <div className={styles.rectangle_9}></div>
+                                    <div className={styles.rectangle_10}>
+                                    </div>
+                                    <div>
+                                        <div className={styles.width_scroll_number_inches}>{number}</div>
+
+                                        <svg
+                                            className={styles.polygon_1}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_increase_width_inches}
+                                        >
+                                            <path d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z" fill="#D9D9D9" />
+                                        </svg>
+
+                                        <svg
+                                            className={styles.polygon_2}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_decrease_width_inches}
+                                        >
+                                            <path d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z" fill="#D9D9D9" />
+                                        </svg>
+                                    </div>
+
+                                    <div>
+
+                                        <div className={styles.width_scroll_number_fractions}>
+                                            {fractions[fractionIndex].includes('/') ? (
+                                                <span>
+                                                    {fractions[fractionIndex].split('/')[0]}
+                                                    <sup>{fractions[fractionIndex].split('/')[1]}</sup>
+                                                </span>
+                                            ) : (
+                                                fractions[fractionIndex]
+                                            )}
+                                        </div>
+
+                                        <svg
+                                            className={styles.polygon_3}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_increase_width_fractions}
+                                        >
+                                            <path
+                                                d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+                                        <svg
+                                            className={styles.polygon_4}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_decrease_width_fractions}>
+                                            <path
+                                                d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+                                        <div className={styles.eighths}>Eighths</div>
+                                        <div className={styles.inches}>Inches</div>
+
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className={styles.width_scroll_number_inches}>{number}</div>
+
+
+
+                                <div className={styles.enter_height_window_trigger}>
+
+                                    <div className={styles.height}>Height</div>
+
+                                    <div className={styles.rectangle_11}></div>
+                                    <div className={styles.rectangle_12}></div>
+
+                                    <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
+
 
                                     <svg
-                                        className={styles.polygon_1}
+                                        className={styles.polygon_5}
                                         width="10"
                                         height="8"
                                         viewBox="0 0 10 8"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_increase_width_inches}
-                                    >
-                                        <path d="M5.11137 0.976562L9.60899 7.99394H0.613753L5.11137 0.976562Z" fill="#D9D9D9" />
+                                        onClick={handle_polygon_increase_height_inches}>
+                                        <path
+                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                            fill="#D9D9D9"
+                                        />
                                     </svg>
 
                                     <svg
-                                        className={styles.polygon_2}
+                                        className={styles.polygon_6}
                                         width="10"
                                         height="8"
                                         viewBox="0 0 10 8"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_decrease_width_inches}
-                                    >
-                                        <path d="M5.11519 7.88281L0.617569 0.865438L9.61281 0.865438L5.11519 7.88281Z" fill="#D9D9D9" />
+                                        onClick={handle_polygon_decrease_height_inches}>                            <path
+                                            d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
+                                            fill="#D9D9D9"
+                                        />
                                     </svg>
-                                </div>
 
-                                <div>
 
-                                    <div className={styles.width_scroll_number_fractions}>
-                                        {fractions[fractionIndex].includes('/') ? (
+                                    <div className={styles.height_scroll_number_fractions}>
+                                        {fractionsheight[heightfractionIndex].includes('/') ? (
                                             <span>
-                                                {fractions[fractionIndex].split('/')[0]}
-                                                <sup>{fractions[fractionIndex].split('/')[1]}</sup>
+                                                {fractionsheight[heightfractionIndex].split('/')[0]}
+                                                <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
                                             </span>
                                         ) : (
-                                            fractions[fractionIndex]
+                                            fractionsheight[heightfractionIndex]
                                         )}
                                     </div>
 
                                     <svg
-                                        className={styles.polygon_3}
+                                        className={styles.polygon_7}
                                         width="10"
                                         height="8"
                                         viewBox="0 0 10 8"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_increase_width_fractions}
-                                    >
+                                        onClick={handle_polygon_increase_height_fractions}>
                                         <path
-                                            d="M5.43559 0.976562L9.93321 7.99394H0.937972L5.43559 0.976562Z"
+                                            d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
                                             fill="#D9D9D9"
                                         />
                                     </svg>
+
                                     <svg
-                                        className={styles.polygon_4}
+                                        className={styles.polygon_8}
                                         width="10"
                                         height="8"
                                         viewBox="0 0 10 8"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_decrease_width_fractions}>
-                                        <path
-                                            d="M5.4355 7.88281L0.937881 0.865438L9.93312 0.865438L5.4355 7.88281Z"
+                                        onClick={handle_polygon_decrease_height_fractions}>                                           <path
+                                            d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
                                             fill="#D9D9D9"
                                         />
                                     </svg>
-                                    <div className={styles.eighths}>Eighths</div>
-                                    <div className={styles.inches}>Inches</div>
+
+
+                                    <div className={styles.inches2}>Inches</div>
+                                    <div className={styles.eighths2}>Eighths</div>
+
+
+                                    <button className={styles.next_item} onClick={handleNextButton1Click}><div className={styles.next_button1}>Next </div></button>
 
                                 </div>
                             </div>
-
-
-
-                            <div className={styles.enter_height_window_trigger}>
-
-                                <div className={styles.height}>Height</div>
-
-                                <div className={styles.rectangle_11}></div>
-                                <div className={styles.rectangle_12}></div>
-
-                                <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
-
-
-                                <svg
-                                    className={styles.polygon_5}
-                                    width="10"
-                                    height="8"
-                                    viewBox="0 0 10 8"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onClick={handle_polygon_increase_height_inches}>
-                                    <path
-                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                        fill="#D9D9D9"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.polygon_6}
-                                    width="10"
-                                    height="8"
-                                    viewBox="0 0 10 8"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onClick={handle_polygon_decrease_height_inches}>                            <path
-                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                        fill="#D9D9D9"
-                                    />
-                                </svg>
-
-
-                                <div className={styles.height_scroll_number_fractions}>
-                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                        <span>
-                                            {fractionsheight[heightfractionIndex].split('/')[0]}
-                                            <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
-                                        </span>
-                                    ) : (
-                                        fractionsheight[heightfractionIndex]
-                                    )}
-                                </div>
-
-                                <svg
-                                    className={styles.polygon_7}
-                                    width="10"
-                                    height="8"
-                                    viewBox="0 0 10 8"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onClick={handle_polygon_increase_height_fractions}>
-                                    <path
-                                        d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                        fill="#D9D9D9"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.polygon_8}
-                                    width="10"
-                                    height="8"
-                                    viewBox="0 0 10 8"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    onClick={handle_polygon_decrease_height_fractions}>                                           <path
-                                        d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                        fill="#D9D9D9"
-                                    />
-                                </svg>
-
-
-                                <div className={styles.inches2}>Inches</div>
-                                <div className={styles.eighths2}>Eighths</div>
-
-                                <div className={styles.next_button1}>
-                                    <button onClick={handleNextButton1Click}>Next</button>
-                                </div>
-                            </div>
-                        </div>
                         </div>
 
                         {Color_Group_Visible && (
@@ -575,9 +575,9 @@ function ZebraBlinds() {
                                     <div className={styles.ema_26_014}>ETB300-41</div>
                                 </div>
 
-                                <div className={styles.next_button2}>
-                                    <button onClick={handleNextButton2Click}>Next</button>
-                                </div>
+
+                                <button className={styles.next_item} onClick={handleNextButton2Click}><div className={styles.next_button2}>Next                                </div>
+                                </button>
 
                             </div>
                         )}
@@ -654,228 +654,225 @@ function ZebraBlinds() {
 
                                 <div className={styles.motorized}>Motorized</div>
                                 <div className={styles.motorized_price_value}>$100.00</div>
-
-                                <div className={styles.next_button3}>
-                                    <button onClick={handleNextButton3Click}>Next</button>
-                                </div>
+                                
+                                    <button className={styles.next_item} onClick={handleNextButton3Click}><div className={styles.next_button3}>Next</div></button>
+                                
                             </div>
                         )}
 
-                        
+
+                        {Rails_Group_Visible && (
+                            <div className={styles.select_head_rail_group}>
+                                <div className={styles.select_head_rail_seperator_line}></div>
+                                <svg
+                                    className={styles.select_cassette_head_rail_long_rectangle}
+                                    width="482"
+                                    height="32"
+                                    viewBox="0 0 482 32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.496094 16.3113C0.496094 7.78497 7.40802 0.873047 15.9343 0.873047H465.684C474.21 0.873047 481.122 7.78497 481.122 16.3113V16.3113C481.122 24.8376 474.21 31.7495 465.684 31.7495H15.9343C7.40804 31.7495 0.496094 24.8376 0.496094 16.3113V16.3113Z"
+                                        fill="#E3E3E3"
+                                    />
+                                </svg>
+
+                                <svg
+                                    className={styles.select_cassette_head_rail_short_rectangle} width="200"
+                                    height="31"
+                                    viewBox="0 0 200 31"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0 15.5C0 6.93959 6.93959 0 15.5 0H312.5C321.06 0 328 6.93959 328 15.5V15.5C328 24.0604 321.06 31 312.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
+                                        fill="#3C3C3C"
+                                    />
+                                </svg>
 
 
-{Rails_Group_Visible && (
-                        <div className={styles.select_head_rail_group}>
-                            <div className={styles.select_head_rail_seperator_line}></div>
-                            <svg
-                                className={styles.select_cassette_head_rail_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.496094 16.3113C0.496094 7.78497 7.40802 0.873047 15.9343 0.873047H465.684C474.21 0.873047 481.122 7.78497 481.122 16.3113V16.3113C481.122 24.8376 474.21 31.7495 465.684 31.7495H15.9343C7.40804 31.7495 0.496094 24.8376 0.496094 16.3113V16.3113Z"
-                                    fill="#E3E3E3"
-                                />
-                            </svg>
-
-                            <svg
-                                className={styles.select_cassette_head_rail_short_rectangle} width="200"
-                                height="31"
-                                viewBox="0 0 200 31"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0 15.5C0 6.93959 6.93959 0 15.5 0H312.5C321.06 0 328 6.93959 328 15.5V15.5C328 24.0604 321.06 31 312.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
-                                    fill="#3C3C3C"
-                                />
-                            </svg>
-
-
-                            <div className={styles.select_head_rail}>Select Head Rail And Bottom Rail</div>
-                            <div className={styles.select_cassette_head_rail}>Select Head Rail</div>
-
-                            <div
-                                className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
-                                onClick={() => handleEllipseClick3(1)}
-                            ></div>
-                            <div className={styles.cassette}>Cassette</div>
-                            <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
-
-
-                            <div
-                                className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
-                                onClick={() => handleEllipseClick3(2)}
-                            ></div>
-                            <div className={styles.round}>Round</div>
-                            <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
-
-
-
-
-                            <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
-                            <div className={styles.fabric_types}>FABRIC TYPES</div>
-
-                            <div className={styles.materials_list}>
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorHeadRail('fabric_type_image1')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image1')}
-                                />
-                                <div className={styles.oval_black}>Oval Black</div>
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorHeadRail('fabric_type_image2')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image2')}
-                                />
-                                <div className={styles.oval_brown}>Oval Brown</div>
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorHeadRail('fabric_type_image3')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image3')}
-                                />
-                                <div className={styles.oval_beige}>Oval Beige</div>
-
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorHeadRail('fabric_type_image4')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image4')}
-                                />
-                                <div className={styles.oval_grey}>Oval Grey</div>
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorHeadRail('fabric_type_image5')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image5')}
-                                />
-                                <div className={styles.oval_white}>Oval White</div>
+                                <div className={styles.select_head_rail}>Select Head Rail And Bottom Rail</div>
+                                <div className={styles.select_cassette_head_rail}>Select Head Rail</div>
 
                                 <div
-                                    className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                    onClick={handleEllipseClickSkipHeadRailColor}
+                                    className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
+                                    onClick={() => handleEllipseClick3(1)}
                                 ></div>
-                                <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
-                                <div className={styles.note_skipping_color}>
-                                    *Note: Skipping Color will result with steel material
-                                </div>
+                                <div className={styles.cassette}>Cassette</div>
+                                <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
 
-                                <div className={styles.pick_bottom_rail_color_wrapper}>
-                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+
+                                <div
+                                    className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
+                                    onClick={() => handleEllipseClick3(2)}
+                                ></div>
+                                <div className={styles.round}>Round</div>
+                                <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
+
+
+
+
+                                <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
+                                <div className={styles.fabric_types}>FABRIC TYPES</div>
+
+                                <div className={styles.materials_list}>
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorHeadRail('fabric_type_image1')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseHeadRailColor('fabric_type_image1')}
+                                    />
+                                    <div className={styles.oval_black}>Oval Black</div>
 
                                     <Image
                                         alt="image"
                                         width={400}
                                         height={400}
-                                        className={getImageClassNameColorBottomRail('fabric_type_image1_for_bottom_rail')}
+                                        className={getImageClassNameColorHeadRail('fabric_type_image2')}
                                         src="/cassette.png"
-                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image1_for_bottom_rail')}
+                                        onClick={() => handleClickChooseHeadRailColor('fabric_type_image2')}
                                     />
-                                    <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
+                                    <div className={styles.oval_brown}>Oval Brown</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorHeadRail('fabric_type_image3')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseHeadRailColor('fabric_type_image3')}
+                                    />
+                                    <div className={styles.oval_beige}>Oval Beige</div>
 
 
                                     <Image
                                         alt="image"
                                         width={400}
                                         height={400}
-                                        className={getImageClassNameColorBottomRail('fabric_type_image2_for_bottom_rail')}
+                                        className={getImageClassNameColorHeadRail('fabric_type_image4')}
                                         src="/cassette.png"
-                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image2_for_bottom_rail')}
+                                        onClick={() => handleClickChooseHeadRailColor('fabric_type_image4')}
                                     />
-                                    <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
+                                    <div className={styles.oval_grey}>Oval Grey</div>
 
                                     <Image
                                         alt="image"
                                         width={400}
                                         height={400}
-                                        className={getImageClassNameColorBottomRail('fabric_type_image3_for_bottom_rail')}
+                                        className={getImageClassNameColorHeadRail('fabric_type_image5')}
                                         src="/cassette.png"
-                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image3_for_bottom_rail')}
+                                        onClick={() => handleClickChooseHeadRailColor('fabric_type_image5')}
                                     />
-                                    <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
-
-
-                                    <Image
-                                        alt="image"
-                                        width={400}
-                                        height={400}
-                                        className={getImageClassNameColorBottomRail('fabric_type_image4_for_bottom_rail')}
-                                        src="/cassette.png"
-                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image4_for_bottom_rail')}
-                                    />
-                                    <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
-
-
-
-                                    <Image
-                                        alt="image"
-                                        width={400}
-                                        height={400}
-                                        className={getImageClassNameColorBottomRail('fabric_type_image5_for_bottom_rail')}
-                                        src="/cassette.png"
-                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image5_for_bottom_rail')}
-                                    />
-                                    <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
+                                    <div className={styles.oval_white}>Oval White</div>
 
                                     <div
-                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                        onClick={handleEllipseClickSkipBottomRailColor}
+                                        className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                        onClick={handleEllipseClickSkipHeadRailColor}
                                     ></div>
-                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-                                    <div className={styles.note_skipping_color_for_bottom_rail}>
+                                    <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
+                                    <div className={styles.note_skipping_color}>
                                         *Note: Skipping Color will result with steel material
                                     </div>
+
+                                    <div className={styles.pick_bottom_rail_color_wrapper}>
+                                        <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                        <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+
+                                        <Image
+                                            alt="image"
+                                            width={400}
+                                            height={400}
+                                            className={getImageClassNameColorBottomRail('fabric_type_image1_for_bottom_rail')}
+                                            src="/cassette.png"
+                                            onClick={() => handleClickChooseBottomRailColor('fabric_type_image1_for_bottom_rail')}
+                                        />
+                                        <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
+
+
+                                        <Image
+                                            alt="image"
+                                            width={400}
+                                            height={400}
+                                            className={getImageClassNameColorBottomRail('fabric_type_image2_for_bottom_rail')}
+                                            src="/cassette.png"
+                                            onClick={() => handleClickChooseBottomRailColor('fabric_type_image2_for_bottom_rail')}
+                                        />
+                                        <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
+
+                                        <Image
+                                            alt="image"
+                                            width={400}
+                                            height={400}
+                                            className={getImageClassNameColorBottomRail('fabric_type_image3_for_bottom_rail')}
+                                            src="/cassette.png"
+                                            onClick={() => handleClickChooseBottomRailColor('fabric_type_image3_for_bottom_rail')}
+                                        />
+                                        <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
+
+
+                                        <Image
+                                            alt="image"
+                                            width={400}
+                                            height={400}
+                                            className={getImageClassNameColorBottomRail('fabric_type_image4_for_bottom_rail')}
+                                            src="/cassette.png"
+                                            onClick={() => handleClickChooseBottomRailColor('fabric_type_image4_for_bottom_rail')}
+                                        />
+                                        <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
+
+
+
+                                        <Image
+                                            alt="image"
+                                            width={400}
+                                            height={400}
+                                            className={getImageClassNameColorBottomRail('fabric_type_image5_for_bottom_rail')}
+                                            src="/cassette.png"
+                                            onClick={() => handleClickChooseBottomRailColor('fabric_type_image5_for_bottom_rail')}
+                                        />
+                                        <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
+
+                                        <div
+                                            className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                            onClick={handleEllipseClickSkipBottomRailColor}
+                                        ></div>
+                                        <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                        <div className={styles.note_skipping_color_for_bottom_rail}>
+                                            *Note: Skipping Color will result with steel material
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
+                                    <div
+                                        className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                                        onClick={() => handleEllipseClick5(1)}
+                                    ></div>
+                                    <div
+                                        className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                                        onClick={() => handleEllipseClick5(2)}
+                                    ></div>
+
+                                    <div className={styles.cassette2}>Cassette</div>
+                                    <div className={styles.product_price}>$65.00</div>
+                                    <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+
+
+
+                                    <div className={styles.round2}>Round</div>
+                                    <div className={styles.product_price_2}>$60.00</div>
+                                    <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
+                                    <div className={styles.skip_head_rail_color_divider_line}></div>
+                                    <div className={styles.color}>Color:</div>
+                                    <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
+                                    <div className={styles.rectangle_32}></div>
+                                    <div className={styles.steel}>Steel</div>
                                 </div>
                             </div>
-
-
-                            <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
-                                <div
-                                    className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
-                                    onClick={() => handleEllipseClick5(1)}
-                                ></div>
-                                <div
-                                    className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
-                                    onClick={() => handleEllipseClick5(2)}
-                                ></div>
-
-                                <div className={styles.cassette2}>Cassette</div>
-                                <div className={styles.product_price}>$65.00</div>
-                                <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
-
-
-
-                                <div className={styles.round2}>Round</div>
-                                <div className={styles.product_price_2}>$60.00</div>
-                                <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                                <div className={styles.skip_head_rail_color_divider_line}></div>
-                                <div className={styles.color}>Color:</div>
-                                <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                                <div className={styles.rectangle_32}></div>
-                                <div className={styles.steel}>Steel</div>
-                            </div>
-                        </div>
                         )}
 
 
