@@ -49,7 +49,14 @@ function ZebraBlinds() {
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-    const [active_skip_head_rail_ellipse_for_bottom_rail, Setactive_skip_head_rail_ellipse_for_bottom_rail] = useState(null);
+
+
+    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
+
+    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
+
+
+
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
     const handleEllipseClick1 = (ellipseNumber) => {
@@ -64,9 +71,14 @@ function ZebraBlinds() {
         Setactive_cassette_round1(ellipseNumber);
     };
 
-    const handleEllipseClick4 = () => {
+    const handleEllipseClickSkipHeadRailColor = () => {
         console.log('Ellipse Clicked');
-        Setactive_skip_head_rail_ellipse_for_bottom_rail((prevActive) => !prevActive);
+        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
+    };
+
+    const handleEllipseClickSkipBottomRailColor  = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
     };
 
     const handleEllipseClick5 = (ellipseNumber) => {
@@ -190,6 +202,9 @@ function ZebraBlinds() {
                         <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+
+                        <div className={styles.top_divider_line}></div>
+
                         <div className={styles.choose_inside_or_outside_mount}>
                             Choose Inside or Outside Mount
                         </div>
@@ -398,11 +413,14 @@ function ZebraBlinds() {
 
                                 <div className={styles.inches2}>Inches</div>
                                 <div className={styles.eighths2}>Eighths</div>
+
+                                <div className={styles.next_button1}>
+                                    <button>
+                                    Next 
+                                    </button></div>
                             </div>
                         </div>
 
-
-                        <div className={styles.rectangle_66}></div>
 
                         <div className={styles.select_color_group}>
 
@@ -614,7 +632,6 @@ function ZebraBlinds() {
                             <div className={styles.fabric_types}>FABRIC TYPES</div>
 
                             <div className={styles.materials_list}>
-
                                 <Image
                                     alt="image"
                                     width={400}
@@ -667,10 +684,10 @@ function ZebraBlinds() {
                                 <div className={styles.oval_white}>Oval White</div>
 
                             <div
-                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
-                                onClick={handleEllipseClick4}
+                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                onClick={handleEllipseClickSkipHeadRailColor}
                             ></div>
-                            <div className={styles.skip_head_rail_color}>Skip Head Rail Color</div>
+                            <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
                             <div className={styles.note_skipping_color}>
                                 *Note: Skipping Color will result with steel material
                             </div>
@@ -734,8 +751,8 @@ function ZebraBlinds() {
                                 <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
 
                                 <div
-                                    className={`${styles.skip_head_rail_ellipse_for_bottom_rail} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
-                                    onClick={handleEllipseClick4}
+                                    className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse  ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                    onClick={handleEllipseClickSkipBottomRailColor}
                                 ></div>
                                 <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
                                 <div className={styles.note_skipping_color_for_bottom_rail}>
@@ -745,7 +762,7 @@ function ZebraBlinds() {
                             </div>
 
 
-                            <div className={styles.chosen_cassette_chosen_round}>
+                            <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
                                 <div
                                     className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
                                     onClick={() => handleEllipseClick5(1)}
