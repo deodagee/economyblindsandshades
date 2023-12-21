@@ -7,17 +7,43 @@ import { useState } from "react";
 function ZebraBlinds() {
 
 
-    // Logic for image clicking render
-    const [selectedImage, setSelectedImage] = useState(null);
+    // Logic for materials image render
+    const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
 
-    const handleClick = (imageName) => {
-        setSelectedImage(imageName === selectedImage ? null : imageName);
+    const handleClickCHangeMaterialsImage = (imageName) => {
+        Set_materials_selectedImage(imageName === materials_selectedImage ? null : imageName);
     };
 
-    const getImageClassName = (imageName) => {
+    const getImageClassNameImageRender = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selectedImage ? styles.selectedImage : ''}`;
+        return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
     };
+
+        // Logic for color render head rails
+        const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
+
+        const handleClickChooseHeadRailColor = (imageName) => {
+            Set_selected_head_rail_color(imageName === selected_head_rail_color ? null : imageName);
+        };
+    
+        const getImageClassNameColorHeadRail = (imageName) => {
+            const baseClassName = styles[imageName];
+            return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+        };
+
+
+                // Logic for color render bottom rails
+                const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
+
+                const handleClickChooseBottomRailColor = (imageName) => {
+                    Set_selected_bottom_rail_color(imageName === selected_bottom_rail_color ? null : imageName);
+                };
+            
+                const getImageClassNameColorBottomRail = (imageName) => {
+                    const baseClassName = styles[imageName];
+                    return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+                };
+        
 
     //1. //  ellipse logic
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
@@ -421,9 +447,9 @@ function ZebraBlinds() {
                                     alt="image"
                                     width={100}
                                     height={100}
-                                    className={getImageClassName('etb_3004_1')}
+                                    className={getImageClassNameImageRender('etb_3004_1')}
                                     src="/etb3004.jpg"
-                                    onClick={() => handleClick('etb_3004_1')}
+                                    onClick={() => handleClickCHangeMaterialsImage('etb_3004_1')}
                                 />
                                 <div className={styles.ema_26_01}>ETB300-41</div>
 
@@ -431,9 +457,9 @@ function ZebraBlinds() {
                                     alt="image"
                                     width={100}
                                     height={100}
-                                    className={getImageClassName('ema_601_1')}
+                                    className={getImageClassNameImageRender('ema_601_1')}
                                     src="/etb3004.jpg"
-                                    onClick={() => handleClick('ema_601_1')}
+                                    onClick={() => handleClickCHangeMaterialsImage('ema_601_1')}
                                 />
                                 <div className={styles.ema_26_012}>EMA26-01</div>
 
@@ -442,9 +468,9 @@ function ZebraBlinds() {
                                     alt="image"
                                     width={100}
                                     height={100}
-                                    className={getImageClassName('etb_3004_2')}
+                                    className={getImageClassNameImageRender('etb_3004_2')}
                                     src="/etb3004.jpg"
-                                    onClick={() => handleClick('etb_3004_2')}
+                                    onClick={() => handleClickCHangeMaterialsImage('etb_3004_2')}
                                 />
                                 <div className={styles.ema_26_013}>ETB300-41</div>
 
@@ -453,9 +479,9 @@ function ZebraBlinds() {
                                     alt="image"
                                     width={100}
                                     height={100}
-                                    className={getImageClassName('ema_601_2')}
+                                    className={getImageClassNameImageRender('ema_601_2')}
                                     src="/etb3004.jpg"
-                                    onClick={() => handleClick('ema_601_2')}
+                                    onClick={() => handleClickCHangeMaterialsImage('ema_601_2')}
                                 />
                                 <div className={styles.ema_26_015}>EMA26-01</div>
 
@@ -463,9 +489,9 @@ function ZebraBlinds() {
                                     alt="image"
                                     width={100}
                                     height={100}
-                                    className={getImageClassName('ema_2601_2')}
+                                    className={getImageClassNameImageRender('ema_2601_2')}
                                     src="/etb3004.jpg"
-                                    onClick={() => handleClick('ema_2601_2')}
+                                    onClick={() => handleClickCHangeMaterialsImage('ema_2601_2')}
                                 />
                                 <div className={styles.ema_26_014}>ETB300-41</div>
                             </div>
@@ -587,21 +613,58 @@ function ZebraBlinds() {
                             <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
                             <div className={styles.fabric_types}>FABRIC TYPES</div>
 
-                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image1} src="/cassette.png" />
-                            <div className={styles.oval_black}>Oval Black</div>
+                            <div className={styles.materials_list}>
 
-                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image2} src="/cassette.png" />
-                            <div className={styles.oval_brown}>Oval Brown</div>
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorHeadRail('fabric_type_image1')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image1')}
+                                />
+                                <div className={styles.oval_black}>Oval Black</div>
 
-                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image3} src="/cassette.png" />
-                            <div className={styles.oval_beige}>Oval Beige</div>
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorHeadRail('fabric_type_image2')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image2')}
+                                />
+                                <div className={styles.oval_brown}>Oval Brown</div>
 
-                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image4} src="/cassette.png" />
-                            <div className={styles.oval_grey}>Oval Grey</div>
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorHeadRail('fabric_type_image3')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image3')}
+                                />
+                                <div className={styles.oval_beige}>Oval Beige</div>
 
-                            <Image alt="image" width={400} height={400} className={styles.fabric_type_image5} src="/cassette.png" />
-                            <div className={styles.oval_white}>Oval White</div>
 
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorHeadRail('fabric_type_image4')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image4')}
+                                />
+                                <div className={styles.oval_grey}>Oval Grey</div>
+
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorHeadRail('fabric_type_image5')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseHeadRailColor('fabric_type_image5')}
+                                />
+                                <div className={styles.oval_white}>Oval White</div>
 
                             <div
                                 className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
@@ -616,21 +679,59 @@ function ZebraBlinds() {
                                 <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
                                 <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
 
-                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image1_for_bottom_rail} src="/cassette.png" />
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorBottomRail('fabric_type_image1_for_bottom_rail')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image1_for_bottom_rail')}
+                                />
                                 <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
 
-                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image2_for_bottom_rail} src="/cassette.png" />
+
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorBottomRail('fabric_type_image2_for_bottom_rail')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image2_for_bottom_rail')}
+                                />
                                 <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
 
-                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image3_for_bottom_rail} src="/cassette.png" />
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorBottomRail('fabric_type_image3_for_bottom_rail')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image3_for_bottom_rail')}
+                                />
                                 <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
 
-                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image4_for_bottom_rail} src="/cassette.png" />
+
+                                <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorBottomRail('fabric_type_image4_for_bottom_rail')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image4_for_bottom_rail')}
+                                />
                                 <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
 
-                                <Image alt="image" width={400} height={400} className={styles.fabric_type_image5_for_bottom_rail} src="/cassette.png" />
-                                <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
 
+
+                                     <Image
+                                    alt="image"
+                                    width={400}
+                                    height={400}
+                                    className={getImageClassNameColorBottomRail('fabric_type_image5_for_bottom_rail')}
+                                    src="/cassette.png"
+                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image5_for_bottom_rail')}
+                                />
+                                <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
 
                                 <div
                                     className={`${styles.skip_head_rail_ellipse_for_bottom_rail} ${active_skip_head_rail_ellipse_for_bottom_rail ? styles.active_skip_head_rail_ellipse_for_bottom_rail : ''}`}
@@ -641,11 +742,10 @@ function ZebraBlinds() {
                                     *Note: Skipping Color will result with steel material
                                 </div>
                             </div>
-
+                            </div>
 
 
                             <div className={styles.chosen_cassette_chosen_round}>
-
                                 <div
                                     className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
                                     onClick={() => handleEllipseClick5(1)}
