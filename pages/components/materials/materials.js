@@ -1,4 +1,3 @@
-import styles from "../../../styles/components/pages/zebrablinds.module.css"
 
 
 // materials.js
