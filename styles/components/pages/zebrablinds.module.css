@@ -14,7 +14,7 @@ z-index: -1;
   align-items: center;
   justify-content: flex-start;
   width: 1366px;
-  height: 3224px;
+  height: 100vh;
   top: 100px;
 }
 
@@ -1002,7 +1002,7 @@ z-index: -1;
   border-color: rgb(201, 201, 201);
   position: absolute;
   left: 1150px;
-  top: 890px;
+  top: 950px;
   width: 32.1px;
   height: 12.16px;
 }
@@ -1262,7 +1262,7 @@ z-index: -1;
   border-color: rgb(201, 201, 201);
   position: absolute;
   left: 1150px;
-  top: 1690px;
+  top: 1698px;
   width: 32.1px;
   height: 12.16px;
   transition: 0.3s;
@@ -1275,10 +1275,37 @@ z-index: -1;
 
 }
 
-.next_button1:hover, .next_button2:hover, .next_button3:hover { 
+
+.next_button1:hover, .next_button2:hover, .next_button3:hover, 
+.next_button4:hover{ 
   background-color: rgb(214, 214, 214);
   transition: 0.3s;
   cursor: pointer;
+}
+
+
+.next_button4 { 
+  color: #7b7b7b;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0.2rem;
+  border-width: 2px;
+  border-color: rgb(201, 201, 201);
+  position: absolute;
+  left: 1150px;
+  top: 2580px;
+  width: 32.1px;
+  height: 12.16px;
+  transition: 0.3s;
 }
 
 .active_wand_cordlift_motorized {
