@@ -7,6 +7,23 @@ import { useState } from "react";
 function ZebraBlinds() {
 
 
+    //make div appear when next button is clicked #1
+    const [Color_Group_Visible, Set_Color_Group_Visible] = useState(false);
+    const [Lift_Group_Visible, Set_Lift_Group_Visible] = useState(false);
+    const [Rails_Group_Visible, Set_Rails_Group_Visible] = useState(false);
+
+
+    const handleNextButton1Click = () => {
+        Set_Color_Group_Visible(!Color_Group_Visible);
+    };
+    const handleNextButton2Click = () => {
+        Set_Lift_Group_Visible(!Lift_Group_Visible);
+    };
+    const handleNextButton3Click = () => {
+        Set_Rails_Group_Visible(!Rails_Group_Visible);
+    };
+
+
     // Logic for materials image render
     const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
 
@@ -19,31 +36,31 @@ function ZebraBlinds() {
         return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
     };
 
-        // Logic for color render head rails
-        const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
+    // Logic for color render head rails
+    const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
 
-        const handleClickChooseHeadRailColor = (imageName) => {
-            Set_selected_head_rail_color(imageName === selected_head_rail_color ? null : imageName);
-        };
-    
-        const getImageClassNameColorHeadRail = (imageName) => {
-            const baseClassName = styles[imageName];
-            return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
-        };
+    const handleClickChooseHeadRailColor = (imageName) => {
+        Set_selected_head_rail_color(imageName === selected_head_rail_color ? null : imageName);
+    };
+
+    const getImageClassNameColorHeadRail = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+    };
 
 
-                // Logic for color render bottom rails
-                const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
+    // Logic for color render bottom rails
+    const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
 
-                const handleClickChooseBottomRailColor = (imageName) => {
-                    Set_selected_bottom_rail_color(imageName === selected_bottom_rail_color ? null : imageName);
-                };
-            
-                const getImageClassNameColorBottomRail = (imageName) => {
-                    const baseClassName = styles[imageName];
-                    return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
-                };
-        
+    const handleClickChooseBottomRailColor = (imageName) => {
+        Set_selected_bottom_rail_color(imageName === selected_bottom_rail_color ? null : imageName);
+    };
+
+    const getImageClassNameColorBottomRail = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+    };
+
 
     //1. //  ellipse logic
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
@@ -76,7 +93,7 @@ function ZebraBlinds() {
         Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
     };
 
-    const handleEllipseClickSkipBottomRailColor  = () => {
+    const handleEllipseClickSkipBottomRailColor = () => {
         console.log('Ellipse Clicked');
         Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
     };
@@ -415,168 +432,181 @@ function ZebraBlinds() {
                                 <div className={styles.eighths2}>Eighths</div>
 
                                 <div className={styles.next_button1}>
-                                    <button>
-                                    Next 
-                                    </button></div>
+                                    <button onClick={handleNextButton1Click}>Next</button>
+                                </div>
                             </div>
                         </div>
 
+                        {Color_Group_Visible && (
+                            <div className={styles.select_color_group}>
 
-                        <div className={styles.select_color_group}>
+                                <svg
+                                    className={styles.select_color_long_rectangle}
+                                    width="482"
+                                    height="32"
+                                    viewBox="0 0 482 32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H465.856C474.382 0.755859 481.294 7.66779 481.294 16.1941V16.1941C481.294 24.7204 474.382 31.6323 465.856 31.6323H16.1062C7.57992 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
+                                        fill="#E3E3E3"
+                                    />
+                                </svg>
 
-                            <svg
-                                className={styles.select_color_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H465.856C474.382 0.755859 481.294 7.66779 481.294 16.1941V16.1941C481.294 24.7204 474.382 31.6323 465.856 31.6323H16.1062C7.57992 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
-                                    fill="#E3E3E3"
-                                />
-                            </svg>
+                                <svg
+                                    className={styles.select_color_short_rectangle}
+                                    width="135"
+                                    height="32"
+                                    viewBox="0 0 135 32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H119.314C127.84 0.755859 134.752 7.66779 134.752 16.1941V16.1941C134.752 24.7204 127.84 31.6323 119.314 31.6323H16.1062C7.57989 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
+                                        fill="#3C3C3C"
+                                    />
+                                </svg>
 
-                            <svg
-                                className={styles.select_color_short_rectangle}
-                                width="135"
-                                height="32"
-                                viewBox="0 0 135 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H119.314C127.84 0.755859 134.752 7.66779 134.752 16.1941V16.1941C134.752 24.7204 127.84 31.6323 119.314 31.6323H16.1062C7.57989 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
-                                    fill="#3C3C3C"
-                                />
-                            </svg>
+                                <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
+                                <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
 
-                            <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/indexcomponent2.png" />
-                            <Image alt="pickcolor" width={100} height={100} className={styles.pickcolor} src="/pickcolor.png" />
+                                <div className={styles.select_color}>Select Color</div>
 
-                            <div className={styles.select_color}>Select Color</div>
-
-                            <div className={styles.select_material}>Select Material</div>
-
-
-                            <div className={styles.materials_list}>
-                                <Image
-                                    alt="image"
-                                    width={100}
-                                    height={100}
-                                    className={getImageClassNameImageRender('etb_3004_1')}
-                                    src="/etb3004.jpg"
-                                    onClick={() => handleClickCHangeMaterialsImage('etb_3004_1')}
-                                />
-                                <div className={styles.ema_26_01}>ETB300-41</div>
-
-                                <Image
-                                    alt="image"
-                                    width={100}
-                                    height={100}
-                                    className={getImageClassNameImageRender('ema_601_1')}
-                                    src="/etb3004.jpg"
-                                    onClick={() => handleClickCHangeMaterialsImage('ema_601_1')}
-                                />
-                                <div className={styles.ema_26_012}>EMA26-01</div>
+                                <div className={styles.select_material}>Select Material</div>
 
 
-                                <Image
-                                    alt="image"
-                                    width={100}
-                                    height={100}
-                                    className={getImageClassNameImageRender('etb_3004_2')}
-                                    src="/etb3004.jpg"
-                                    onClick={() => handleClickCHangeMaterialsImage('etb_3004_2')}
-                                />
-                                <div className={styles.ema_26_013}>ETB300-41</div>
+                                <div className={styles.materials_list}>
+                                    <Image
+                                        alt="image"
+                                        width={100}
+                                        height={100}
+                                        className={getImageClassNameImageRender('etb_3004_1')}
+                                        src="/etb3004.jpg"
+                                        onClick={() => handleClickCHangeMaterialsImage('etb_3004_1')}
+                                    />
+                                    <div className={styles.ema_26_01}>ETB300-41</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={100}
+                                        height={100}
+                                        className={getImageClassNameImageRender('ema_601_1')}
+                                        src="/etb3004.jpg"
+                                        onClick={() => handleClickCHangeMaterialsImage('ema_601_1')}
+                                    />
+                                    <div className={styles.ema_26_012}>EMA26-01</div>
 
 
-                                <Image
-                                    alt="image"
-                                    width={100}
-                                    height={100}
-                                    className={getImageClassNameImageRender('ema_601_2')}
-                                    src="/etb3004.jpg"
-                                    onClick={() => handleClickCHangeMaterialsImage('ema_601_2')}
-                                />
-                                <div className={styles.ema_26_015}>EMA26-01</div>
+                                    <Image
+                                        alt="image"
+                                        width={100}
+                                        height={100}
+                                        className={getImageClassNameImageRender('etb_3004_2')}
+                                        src="/etb3004.jpg"
+                                        onClick={() => handleClickCHangeMaterialsImage('etb_3004_2')}
+                                    />
+                                    <div className={styles.ema_26_013}>ETB300-41</div>
 
-                                <Image
-                                    alt="image"
-                                    width={100}
-                                    height={100}
-                                    className={getImageClassNameImageRender('ema_2601_2')}
-                                    src="/etb3004.jpg"
-                                    onClick={() => handleClickCHangeMaterialsImage('ema_2601_2')}
-                                />
-                                <div className={styles.ema_26_014}>ETB300-41</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={100}
+                                        height={100}
+                                        className={getImageClassNameImageRender('ema_601_2')}
+                                        src="/etb3004.jpg"
+                                        onClick={() => handleClickCHangeMaterialsImage('ema_601_2')}
+                                    />
+                                    <div className={styles.ema_26_015}>EMA26-01</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={100}
+                                        height={100}
+                                        className={getImageClassNameImageRender('ema_2601_2')}
+                                        src="/etb3004.jpg"
+                                        onClick={() => handleClickCHangeMaterialsImage('ema_2601_2')}
+                                    />
+                                    <div className={styles.ema_26_014}>ETB300-41</div>
+                                </div>
+                                <div className={styles.next_button2}>
+                                    <button onClick={handleNextButton2Click}>Next</button>
+                                </div>
                             </div>
-                        </div>
+                        )}
 
 
-                        <div className={styles.select_lift_type_group}>
-                            <div className={styles.select_lift_type_seperator_line}></div>
+                        {Lift_Group_Visible && (
 
-                            <svg
-                                className={styles.select_lift_type_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.496094 16.0847C0.496094 7.55841 7.40802 0.646484 15.9343 0.646484H465.684C474.21 0.646484 481.122 7.55841 481.122 16.0847V16.0847C481.122 24.611 474.21 31.5229 465.684 31.5229H15.9343C7.40804 31.5229 0.496094 24.611 0.496094 16.0847V16.0847Z"
-                                    fill="#E3E3E3"
-                                />
-                            </svg>
+                            <div className={styles.select_lift_type_group}>
+                                <div className={styles.select_lift_type_seperator_line}></div>
 
-                            <svg
-                                className={styles.select_lift_type_short_rectangle}
-                                width="155"
-                                height="32"
-                                viewBox="0 0 155 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 16.3535C0.871094 7.7931 7.81068 0.853516 16.3711 0.853516H139.371C147.932 0.853516 154.871 7.7931 154.871 16.3535V16.3535C154.871 24.9139 147.932 31.8535 139.371 31.8535H16.3711C7.81068 31.8535 0.871094 24.9139 0.871094 16.3535V16.3535Z"
-                                    fill="#3C3C3C"
-                                />
-                            </svg>
-                            <div className={styles.select_lift_type_title}>Select Lift Type</div>
+                                <svg
+                                    className={styles.select_lift_type_long_rectangle}
+                                    width="482"
+                                    height="32"
+                                    viewBox="0 0 482 32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.496094 16.0847C0.496094 7.55841 7.40802 0.646484 15.9343 0.646484H465.684C474.21 0.646484 481.122 7.55841 481.122 16.0847V16.0847C481.122 24.611 474.21 31.5229 465.684 31.5229H15.9343C7.40804 31.5229 0.496094 24.611 0.496094 16.0847V16.0847Z"
+                                        fill="#E3E3E3"
+                                    />
+                                </svg>
 
-                            <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
+                                <svg
+                                    className={styles.select_lift_type_short_rectangle}
+                                    width="155"
+                                    height="32"
+                                    viewBox="0 0 155 32"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M0.871094 16.3535C0.871094 7.7931 7.81068 0.853516 16.3711 0.853516H139.371C147.932 0.853516 154.871 7.7931 154.871 16.3535V16.3535C154.871 24.9139 147.932 31.8535 139.371 31.8535H16.3711C7.81068 31.8535 0.871094 24.9139 0.871094 16.3535V16.3535Z"
+                                        fill="#3C3C3C"
+                                    />
+                                </svg>
+                                <div className={styles.select_lift_type_title}>Select Lift Type</div>
 
-                            <div className={styles.add_lift_feature}>Add Lift Feature</div>
-                            <div
-                                className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleEllipseClick2(1)}
-                            ></div>
-                            <div className={styles.wand}>Wand</div>
-                            <div className={styles.free}>Free</div>
+                                <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
-                            <div
-                                className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleEllipseClick2(3)}
-                            ></div>
+                                <div className={styles.add_lift_feature}>Add Lift Feature</div>
+                                <div
+                                    className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
+                                    onClick={() => handleEllipseClick2(1)}
+                                ></div>
+                                <div className={styles.wand}>Wand</div>
+                                <div className={styles.free}>Free</div>
 
-                            <div className={styles.cord_lift}>Cord Lift</div>
+                                <div
+                                    className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
+                                    onClick={() => handleEllipseClick2(3)}
+                                ></div>
 
-                            <div className={styles.cordlift_price_value}>$60.00</div>
+                                <div className={styles.cord_lift}>Cord Lift</div>
 
-                            <div
-                                className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleEllipseClick2(2)}
-                            ></div>
+                                <div className={styles.cordlift_price_value}>$60.00</div>
 
-                            <div className={styles.motorized}>Motorized</div>
-                            <div className={styles.motorized_price_value}>$100.00</div>
-                        </div>
+                                <div
+                                    className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
+                                    onClick={() => handleEllipseClick2(2)}
+                                ></div>
+
+                                <div className={styles.motorized}>Motorized</div>
+                                <div className={styles.motorized_price_value}>$100.00</div>
+
+                                <div className={styles.next_button3}>
+                                    <button onClick={handleNextButton3Click}>Next</button>
+                                </div>
+                            </div>
+                        )}
+
+                        
 
 
+{Rails_Group_Visible && (
                         <div className={styles.select_head_rail_group}>
                             <div className={styles.select_head_rail_seperator_line}></div>
                             <svg
@@ -683,82 +713,82 @@ function ZebraBlinds() {
                                 />
                                 <div className={styles.oval_white}>Oval White</div>
 
-                            <div
-                                className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                onClick={handleEllipseClickSkipHeadRailColor}
-                            ></div>
-                            <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
-                            <div className={styles.note_skipping_color}>
-                                *Note: Skipping Color will result with steel material
-                            </div>
-
-                            <div className={styles.pick_bottom_rail_color_wrapper}>
-                                <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-                                <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorBottomRail('fabric_type_image1_for_bottom_rail')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image1_for_bottom_rail')}
-                                />
-                                <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
-
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorBottomRail('fabric_type_image2_for_bottom_rail')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image2_for_bottom_rail')}
-                                />
-                                <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorBottomRail('fabric_type_image3_for_bottom_rail')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image3_for_bottom_rail')}
-                                />
-                                <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
-
-
-                                <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorBottomRail('fabric_type_image4_for_bottom_rail')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image4_for_bottom_rail')}
-                                />
-                                <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
-
-
-
-                                     <Image
-                                    alt="image"
-                                    width={400}
-                                    height={400}
-                                    className={getImageClassNameColorBottomRail('fabric_type_image5_for_bottom_rail')}
-                                    src="/cassette.png"
-                                    onClick={() => handleClickChooseBottomRailColor('fabric_type_image5_for_bottom_rail')}
-                                />
-                                <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
-
                                 <div
-                                    className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse  ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                    onClick={handleEllipseClickSkipBottomRailColor}
+                                    className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                    onClick={handleEllipseClickSkipHeadRailColor}
                                 ></div>
-                                <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-                                <div className={styles.note_skipping_color_for_bottom_rail}>
+                                <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
+                                <div className={styles.note_skipping_color}>
                                     *Note: Skipping Color will result with steel material
                                 </div>
-                            </div>
+
+                                <div className={styles.pick_bottom_rail_color_wrapper}>
+                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorBottomRail('fabric_type_image1_for_bottom_rail')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image1_for_bottom_rail')}
+                                    />
+                                    <div className={styles.oval_black_for_bottom_rail}>Oval Black</div>
+
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorBottomRail('fabric_type_image2_for_bottom_rail')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image2_for_bottom_rail')}
+                                    />
+                                    <div className={styles.oval_brown_for_bottom_rail}>Oval Brown</div>
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorBottomRail('fabric_type_image3_for_bottom_rail')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image3_for_bottom_rail')}
+                                    />
+                                    <div className={styles.oval_beige_for_bottom_rail}>Oval Beige</div>
+
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorBottomRail('fabric_type_image4_for_bottom_rail')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image4_for_bottom_rail')}
+                                    />
+                                    <div className={styles.oval_grey_for_bottom_rail}>Oval Grey</div>
+
+
+
+                                    <Image
+                                        alt="image"
+                                        width={400}
+                                        height={400}
+                                        className={getImageClassNameColorBottomRail('fabric_type_image5_for_bottom_rail')}
+                                        src="/cassette.png"
+                                        onClick={() => handleClickChooseBottomRailColor('fabric_type_image5_for_bottom_rail')}
+                                    />
+                                    <div className={styles.oval_white_for_bottom_rail}>Oval White</div>
+
+                                    <div
+                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                        onClick={handleEllipseClickSkipBottomRailColor}
+                                    ></div>
+                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                    <div className={styles.note_skipping_color_for_bottom_rail}>
+                                        *Note: Skipping Color will result with steel material
+                                    </div>
+                                </div>
                             </div>
 
 
@@ -788,6 +818,8 @@ function ZebraBlinds() {
                                 <div className={styles.steel}>Steel</div>
                             </div>
                         </div>
+                        )}
+
 
 
                         <div className={styles.quantity_seperator_line}></div>
