@@ -265,7 +265,7 @@ function ZebraBlinds() {
 
                         <div className={styles.select_mount_group}>
                             <div className={styles.choose_inside_or_outside_mount}>
-                                Choose Inside or Outside Mount
+                                1. Choose Inside or Outside Mount
                             </div>
                             <div className={styles.inside_mount}>Inside Mount</div>
                             <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
@@ -518,7 +518,7 @@ function ZebraBlinds() {
 
                                 <div className={styles.select_color}>Select Color</div>
 
-                                <div className={styles.select_material}>Select Material</div>
+                                <div className={styles.select_material}>2. Select Material</div>
 
 
                                 <div className={styles.materials_list}>
@@ -619,7 +619,7 @@ function ZebraBlinds() {
 
                                 <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
-                                <div className={styles.add_lift_feature}>Add Lift Feature</div>
+                                <div className={styles.add_lift_feature}>3. Add Lift Feature</div>
                                 <div
                                     className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
                                     onClick={() => handleEllipseClick2(1)}
@@ -693,7 +693,7 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.select_head_rail}>Select Head Rail And Bottom Rail</div>
-                                <div className={styles.select_cassette_head_rail}>Select Head Rail</div>
+                                <div className={styles.select_cassette_head_rail}>4. Select Head Rail</div>
 
                                 <div
                                     className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
