@@ -5,9 +5,9 @@ import { useState } from "react";
 import Link from "next/link";
 import MaterialsPage from '../materials/materials.js'; // Adjust the path accordingly
 import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
+import LeftSidePage from "../leftside/leftside.js";
 
 function ZebraBlinds() {
-
 
     //make div appear when next button is clicked #1
     const [Color_Group_Visible, Set_Color_Group_Visible] = useState(false);
@@ -189,65 +189,12 @@ function ZebraBlinds() {
             <div className={styles.page}>
                 <div className={styles.page_wrapper}>
 
-                    <div className={styles.left_half}>
-
-                        <div className={styles.sliding_gallery}>
-
-                            <div className={styles.picture_frame}>
-                            </div>
-
-                            <svg
-                                className={styles.chevron_left} width="10"
-                                height="14"
-                                viewBox="0 0 10 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 1.83221L2.75676 7.01342L9 12.2483L8.2973 13L1 7.01342L8.2973 1L9 1.83221Z"
-                                    fill="#3E3E3E"
-                                    stroke="black"
-                                />
-                            </svg>
-
-                            <div className={styles.product_image1}>
-                            </div>
-
-                            <div className={styles.product_image2}>
-                            </div>
-
-                            <div className={styles.product_image3}>
-                            </div>
-
-                            <div className={styles.product_image4}>
-                            </div>
-
-                            <div className={styles.product_image5}>
-                            </div>
-
-                            <svg
-                                className={styles.chevron_right}
-                                width="10"
-                                height="14"
-                                viewBox="0 0 10 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M1 12.1678L7.24324 6.98658L1 1.75168L1.7027 1L9 6.98658L1.7027 13L1 12.1678Z"
-                                    fill="#3E3E3E"
-                                    stroke="black"
-                                />
-                            </svg>
-
-
-                        </div>
-                    </div>
+<LeftSidePage></LeftSidePage>
 
                     <div className={styles.right_half}>
                         <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
 
-                        <div className={styles.rectangle_1}></div>
+                        <div className={styles.room_darkening_rectangle}></div>
 
                         <div>   <div className={styles.room_darkening}>Room Darkening
                             <div className={styles.top_prices}> <p className={styles.price_regular}>$ 325.00 </p>
