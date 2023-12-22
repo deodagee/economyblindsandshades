@@ -1,0 +1,6 @@
+.main_wrapper{ 
+    display: flex;
+justify-content: space-between;
+    position: absolute;
+    flex-direction: column;
+}
