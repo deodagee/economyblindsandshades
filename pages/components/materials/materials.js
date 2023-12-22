@@ -20,6 +20,78 @@ const MaterialsPage = () => {
 
 
   const imagesData = [
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'FIRST1-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
+    { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
     { key: 'ema_26_01', src: '/etb3004.jpg', label: 'ETB300-41' },
     { key: 'ema_601_2', src: '/etb3004.jpg', label: 'ETB300-41' },
     { key: 'ema_601_1', src: '/etb3004.jpg', label: 'ETB300-41' },
@@ -40,7 +112,7 @@ const MaterialsPage = () => {
       <div className={styles.materials_list}>
 
   {imagesData.map((imageData) => (
-    <div key={imageData.key} className={styles.imageAndLabelContainer}>
+    <div key={imageData.key} className={styles.imageAndLabelContainerMaterials}>
       <Image
         alt="image"
         width={100}
@@ -52,8 +124,13 @@ const MaterialsPage = () => {
           handleClickCHangeMaterialsImage(imageData.key);
         }}
       />
-      <div className={styles.descriptionLabel}>{imageData.label}</div>
+
+      <div className={styles.descriptionLabel}>
+      <div>{imageData.label}</div>
+      </div>
+
     </div>
+    
   ))}
     </div>
     </div>
