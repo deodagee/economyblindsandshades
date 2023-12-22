@@ -937,7 +937,6 @@ function ZebraBlinds() {
 
                                 <div className={styles.rectangle_47}></div>
                                 <div className={styles.rectangle_48}></div>
-                                <div className={styles.rectangle_49}></div>
                                 <div className={styles.shipping_details}>Shipping Details</div>
                                 <div className={styles.total_price_tile}>Total Price</div>
                                 <div className={styles.total_price}>$65.34</div>
@@ -950,7 +949,7 @@ function ZebraBlinds() {
 
 
                                 <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
-
+                                <div className={styles.add_to_cart_rectangle}></div>
                                 <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
                                     <div class={styles.add_to_cart}>ADD TO CART</div>
                                 </Link>

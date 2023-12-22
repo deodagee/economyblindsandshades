@@ -10,8 +10,9 @@ function Footer ( ) {
 
         <>
         <div className={styles.Footer_wrapper} >
+            sfsdfsdf
 
-            <div className={styles.footer_box }>
+            <div className={styles.footer }>
 
             </div>
 
