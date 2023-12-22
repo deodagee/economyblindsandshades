@@ -37,15 +37,23 @@ const FabricsPage = () => {
     { key: 'fabric_type_image5', src: '/cassette.png', label: 'Oval White' },
     // Add more image data as needed
   ];
+  const imagesDataBottomRail = [
+    { key: 'fabric_type_image1', src: '/cassette.png', label: 'Oval Black' },
+    { key: 'fabric_type_image2', src: '/cassette.png', label: 'Oval Brown' },
+    { key: 'fabric_type_image3', src: '/cassette.png', label: 'Oval Beige' },
+    { key: 'fabric_type_image4', src: '/cassette.png', label: 'Oval Grey' },
+    { key: 'fabric_type_image5', src: '/cassette.png', label: 'Oval White' },
+    // Add more image data as needed
+  ];
 
 
   return (
     <div>
 
-        <div className={styles.fabric_list}>
+        <div className={styles.fabric_list_header}>
 
 {imagesDataHeadRail.map((imageData) => (
-  <div key={imageData.key} className={styles.imageAndLabelContainerFabrics}>
+  <div key={imageData.key} className={styles.imageAndLabelContainerFabricsHeader}>
     <Image
       alt="image"
       width={100}
@@ -66,8 +74,39 @@ const FabricsPage = () => {
 
 ))}
 </div>
+
+<div>
+
+<div className={styles.fabric_list_bottom}>
+
+{imagesDataBottomRail.map((imageData) => (
+<div key={imageData.key} className={styles.imageAndLabelContainerFabricsBottom}>
+<Image
+alt="image"
+width={100}
+height={100}
+className={getImageClassNameColorBottomRail(imageData.key)}
+src={imageData.src}
+onClick={() => {
+console.log(`Click handler for ${imageData.key}`);
+Set_selected_bottom_rail_color(imageData.key);
+}}
+/>
+
+<div className={styles.descriptionLabelFabrics}>
+<div>{imageData.label}</div>
+</div>
+
+</div>
+
+))}
+</div>
+
+</div>
         
       </div>
+
+      
   );
 };
 
