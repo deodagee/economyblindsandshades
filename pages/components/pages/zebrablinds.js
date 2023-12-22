@@ -3,18 +3,15 @@ import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import { imagesData } from '../materials/materials.js'; // Adjust the path accordingly
+import MaterialsPage from '../materials/materials.js'; // Adjust the path accordingly
 
 function ZebraBlinds() {
-
 
     //make div appear when next button is clicked #1
     const [Color_Group_Visible, Set_Color_Group_Visible] = useState(false);
     const [Lift_Group_Visible, Set_Lift_Group_Visible] = useState(false);
     const [Rails_Group_Visible, Set_Rails_Group_Visible] = useState(false);
     const [quantity_and_add_to_cart_group_Visible, Set_quantity_and_add_to_cart_group_Visible] = useState(false);
-
-
 
 
     const [Was_Next_Button_Clicked1, Set_Was_Next_Button_Clicked1] = useState(false);
@@ -558,25 +555,9 @@ function ZebraBlinds() {
                                 <div className={styles.select_material}>2. Select Material</div>
 
 
+                                <MaterialsPage></MaterialsPage>
 
-                                <div className={styles.materials_list}>
-  {imagesData.map((imageData) => (
-    <div key={imageData.key} className={styles.imageAndLabelContainer}>
-      <Image
-        alt="image"
-        width={100}
-        height={100}
-        className={getImageClassNameImageRender(imageData.key)}
-        src={imageData.src}
-        onClick={() => {
-          console.log(`Click handler for ${imageData.key}`);
-          handleClickCHangeMaterialsImage(imageData.key);
-        }}
-      />
-      <div className={styles.descriptionLabel}>{imageData.label}</div>
-    </div>
-  ))}
-</div>
+                                
 
 
                                 <button className={styles.next_item} onClick={handleNextButton2Click}><div className={styles.next_button2}>Next                                </div>
