@@ -683,21 +683,11 @@ transition: 0.3s;
   left: 776.94px;
   top: 820.68px;
 }
-.fabric_list_wrapper {
-  display: flex;
-    justify-content: flex-start;
-    position: absolute;
-    scroll-behavior: smooth;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 450px;
-    padding-left: 80px;
-    left: 747.87px;
-    top: 2001.85px;
-  }
 
-  
-  .imageAndLabelContainer {
+
+
+
+  .imageAndLabelContainerMaterials {
     width: 70px;
     display: flex;
     flex-direction: column; /* Make sure each image and description are in a column */
@@ -706,17 +696,7 @@ transition: 0.3s;
     text-align: center; /* Center the image and label */
   }
 
-
-.imageAndLabelContainerFabrics {
-  width: 70px;
-  display: flex;
-  flex-direction: column; /* Make sure each image and description are in a column */
-  align-items: center; /* Center the items horizontally within each column */
-  margin: 10px; /* Adjust as needed */
-  text-align: center; /* Center the image and label */
-}
-
-.descriptionLabel {
+.descriptionLabelMaterials {
   position: relative;
   display: flex;
   align-items: center;
@@ -1184,31 +1164,7 @@ transition: 0.3s;
   top: 1642.88px;
 }
 
-.motorized {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  position: absolute;
-  left: 777.88px;
-  top: 1641.95px;
-  width: 126.53px;
-  height: 14.97px;
-}
 
-.motorized_price_value {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  position: absolute;
-  left: 777.88px;
-  top: 1670.96px;
-  width: 252.12px;
-  height: 36.49px;
-}
 
 .next_button3 { 
   color: #7b7b7b;
@@ -1235,11 +1191,6 @@ transition: 0.3s;
 
 }
 
-.next_item:hover {
-  color: rgb(255, 255, 255);
-  transition: 0.3s; 
-
-}
 
 
 .next_button1:hover, .next_button2:hover, .next_button3:hover, 
@@ -1279,10 +1230,85 @@ transition: 0.3s;
   background: #59c56a;
 }
 
+
+
+
+
+
+.active_cassette_round1 {
+  transition: 0.3s;
+  background: #59c56a;
+  position: absolute;
+
+  /* Set the active color (green in this case) */
+}
+
+
+
+
+.fabric_list_head_rail { 
+  display: flex;
+  position: relative;
+  border-width: 1px;
+  border-color: rgb(255, 0, 0);
+  border-radius: 0.24rem;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.skip_head_rail_ellipse {
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
+  position: absolute;
+  left: 750.87px;
+  top: 2090px;
+}
+
+
+.motorized {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  position: absolute;
+  left: 777.88px;
+  top: 1641.95px;
+  width: 126.53px;
+  height: 14.97px;
+}
+
+.motorized_price_value {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  position: absolute;
+  left: 777.88px;
+  top: 1670.96px;
+  width: 252.12px;
+  height: 36.49px;
+}
+
+
+.next_item:hover {
+  color: rgb(255, 255, 255);
+  transition: 0.3s; 
+}
+
 .select_head_rail_group {
   position: absolute;
   top: -230px;
 }
+
 
 .select_head_rail_seperator_line {
   background: #d4d4d4;
@@ -1295,6 +1321,7 @@ transition: 0.3s;
   transform: rotate(0deg) scale(1, -1);
 }
 
+
 .select_cassette_head_rail_long_rectangle {
   border-radius: 0px;
   width: 480.63px;
@@ -1305,6 +1332,7 @@ transition: 0.3s;
   overflow: visible;
 }
 
+
 .select_cassette_head_rail_short_rectangle {
   border-radius: 0px;
   width: 200px;
@@ -1314,6 +1342,7 @@ transition: 0.3s;
   top: 1744.85px;
   overflow: visible;
 }
+
 
 
 .select_head_rail {
@@ -1330,6 +1359,7 @@ transition: 0.3s;
   white-space: nowrap;
 }
 
+
 .select_cassette_head_rail {
   color: #000000;
   text-align: left;
@@ -1342,7 +1372,6 @@ transition: 0.3s;
   width: 283px;
   height: 15px;
 }
-
 
 .select_cassette_ellipse1 {
   background: #cdcdcd;
@@ -1371,6 +1400,7 @@ transition: 0.3s;
   height: 14.97px;
 }
 
+
 .chosen_image {
   border-radius: 8px;
   width: 40px;
@@ -1393,14 +1423,6 @@ transition: 0.3s;
   left: 750.5px;
   top: 1943.23px;
 }
-.active_cassette_round1 {
-  transition: 0.3s;
-  background: #59c56a;
-  position: absolute;
-
-  /* Set the active color (green in this case) */
-}
-
 
 .round {
   color: #000000;
@@ -1439,6 +1461,8 @@ transition: 0.3s;
   height: 15px;
 }
 
+
+
 .fabric_types {
   color: #000000;
   text-align: left;
@@ -1454,124 +1478,10 @@ transition: 0.3s;
 }
 
 
-.fabric_list_head_rail { 
-  display: flex;
-  position: relative;
-  border-width: 1px;
-  border-color: rgb(255, 0, 0);
-  border-radius: 0.24rem;
-  display: flex;
-  flex-direction: row;
-}
 
-
-.fabric_type_image1 {
-  width: 70px;
-  height: auto;
-  position: relative;
-  left: 751.44px;
-  top: 2082.64px;
-}
-
-.oval_black {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: relative;
-  left: 769.87px;
-  top: 2156.85px;
-  width: 64px;
-  height: 12px;
-}
-
-.fabric_type_image2 {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 846.44px;
-  top: 2082.64px;
-}
-
-
-.oval_brown {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 866.64px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.fabric_type_image3 {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 943.44px;
-  top: 2082.64px;
-}
-
-.oval_beige {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 962.01px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.fabric_type_image4 {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 1134.44px;
-  top: 2082.64px;
-}
-
-.oval_grey {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1049.83px;
-  top: 2156.56px;
-  width: 68.93px;
-  height: 12.16px;
-}
-
-
-.fabric_type_image5 {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 1038.44px;
-  top: 2082.64px;
-}
-
-.oval_white {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1162.19px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
+.active_skip_head_rail_ellipse {
+  background: #59c56a;
+  /* Set the active color (green in this case) */
 }
 
 .skip_head_rail_color_for_head_rail_title {
@@ -1594,65 +1504,55 @@ transition: 0.3s;
   font-family: "Inter-Bold", sans-serif;
   font-size: 8px;
   font-weight: 700;
-  position: relative;
-  left: 775.87px;
-  top: 2133.85px;
-  width: max-content;
-  height: 14px;
-}
-
-
-.skip_head_rail_ellipse {
-  background: #cdcdcd;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #e2e2e2;
-  border-width: 1px;
-  width: 15.11px;
-  height: 14.97px;
-  position: absolute;
-  left: 750.87px;
-  top: 2090px;
-}
-
-
-.active_skip_head_rail_ellipse {
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
-
-
-.skip_head_rail_color {
-  color: #e40000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  text-decoration: underline;
   position: absolute;
   left: 775.87px;
-  top: 2183.85px;
-  width: 114px;
-  height: 14px;
-}
-
-.note_skipping_color {
-  color: #929292;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  position: absolute;
-  left: 775.87px;
-  top: 2202.85px;
+  top: 2110px;
   width: 203px;
   height: 14px;
 }
 
 
+
+
+.fabric_list { 
+  border-width: 1px;
+  border-color: black;
+  border-radius: 0.24rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: absolute; /* Adjust as needed */
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 450px;
+  left: 747.87px;
+  top: 2130px; 
+ }
+
+ .imageAndLabelContainerFabrics {
+  width: 70px;
+  display: flex;
+  flex-direction: column; /* Make sure each image and description are in a column */
+  align-items: center; /* Center the items horizontally within each column */
+  margin: 10px; /* Adjust as needed */
+  text-align: center; /* Center the image and label */
+}
+
+.descriptionLabelFabrics { 
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  height: 15px;
+  width: 50px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+
 .pick_bottom_rail_color_wrapper { 
   position: relative;
-  top: 250px;
+  top: 300px;
 }
 
 
@@ -1685,119 +1585,18 @@ transition: 0.3s;
   height: 14px;
 }
 
-.fabric_list_bottom_rail { 
-  display: flex;
-  position: relative;
-}
-
-.fabric_type_image1_for_bottom_rail {
-  width: 70px;
-  height: auto;
-  position: relative;
-  left: 751.44px;
-  top: 2082.64px;
-}
-
-.oval_black_for_bottom_rail {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
+.skip_bottom_rail_ellipse { 
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
   position: absolute;
-  left: 769.87px;
-  top: 2156.85px;
-  width: 64px;
-  height: 12px;
+  left: 750.87px;
+  top: 2090px;
 }
-
-.fabric_type_image2_for_bottom_rail {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 846.44px;
-  top: 2082.64px;
-}
-
-
-.oval_brown_for_bottom_rail {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 866.64px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.fabric_type_image3_for_bottom_rail {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 943.44px;
-  top: 2082.64px;
-}
-
-.oval_beige_for_bottom_rail {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 962.01px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
-
-.fabric_type_image4_for_bottom_rail {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 1134.44px;
-  top: 2082.64px;
-}
-
-.oval_grey_for_bottom_rail {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1049.83px;
-  top: 2156.56px;
-  width: 68.93px;
-  height: 12.16px;
-}
-
-.fabric_type_image5_for_bottom_rail {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  left: 1038.44px;
-  top: 2082.64px;
-}
-
-.oval_white_for_bottom_rail {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 9px;
-  font-weight: 400;
-  position: absolute;
-  left: 1162.19px;
-  top: 2156.56px;
-  width: 51.93px;
-  height: 12.16px;
-}
-
 
 
 .skip_head_rail_color_for_bottom_rail {
@@ -1809,7 +1608,7 @@ transition: 0.3s;
   text-decoration: underline;
   position: absolute;
   left: 775.87px;
-  top: 2183.85px;
+  top: 2090px;
   width: 114px;
   height: 14px;
 }
@@ -1822,34 +1621,15 @@ transition: 0.3s;
   font-weight: 700;
   position: absolute;
   left: 775.87px;
-  top: 2202.85px;
+  top: 2110px;
   width: 203px;
   height: 14px;
 }
 
 
-.skip_bottom_rail_ellipse { 
-  background: #cdcdcd;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #e2e2e2;
-  border-width: 1px;
-  width: 15.11px;
-  height: 14.97px;
-  position: absolute;
-  left: 750.87px;
-  top: 2190.85px;
-}
-
-.active_skip_bottom_rail_ellipse {
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
-
-
 .chosen_cassette_or_chosen_round_wrapper { 
   position: absolute;
-  top: 250px;
+  top: 330px;
 }
 
 .select_cassette_ellipse2 {
@@ -1876,14 +1656,6 @@ transition: 0.3s;
   position: absolute;
   left: 751.87px;
   top: 2301.49px;
-}
-
-
-.active_cassette_round2 {
-  transition: 0.3s;
-
-  background: #59c56a;
-  /* Set the active color (green in this case) */
 }
 
 .cassette2 {
@@ -2014,6 +1786,28 @@ transition: 0.3s;
   width: 38px;
   height: 12px;
 }
+
+
+.active_skip_bottom_rail_ellipse {
+  background: #59c56a;
+  /* Set the active color (green in this case) */
+}
+
+
+.active_cassette_round2 {
+  transition: 0.3s;
+
+  background: #59c56a;
+  /* Set the active color (green in this case) */
+}
+
+.quantity_and_add_to_cart_group { 
+  display: flex;
+  position: absolute;
+  top: 150px;
+}
+
+
 
 .quantity_seperator_line {
   background: #d4d4d4;
