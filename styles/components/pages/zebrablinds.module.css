@@ -1219,7 +1219,7 @@ transition: 0.3s;
   border-color: rgb(201, 201, 201);
   position: absolute;
   left: 1150px;
-  top: 2580px;
+  top: 2730px;
   width: 32.1px;
   height: 12.16px;
   transition: 0.3s;
@@ -1231,10 +1231,6 @@ transition: 0.3s;
 }
 
 
-
-
-
-
 .active_cassette_round1 {
   transition: 0.3s;
   background: #59c56a;
@@ -1242,21 +1238,6 @@ transition: 0.3s;
 
   /* Set the active color (green in this case) */
 }
-
-
-
-
-.fabric_list_head_rail { 
-  display: flex;
-  position: relative;
-  border-width: 1px;
-  border-color: rgb(255, 0, 0);
-  border-radius: 0.24rem;
-  display: flex;
-  flex-direction: row;
-}
-
-
 
 .skip_head_rail_ellipse {
   background: #cdcdcd;
@@ -1513,8 +1494,24 @@ transition: 0.3s;
 
 
 
+.fabric_list_header { 
+  border-width: 1px;
+  border-color: black;
+  border-radius: 0.24rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: absolute; /* Adjust as needed */
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 450px;
+  left: 747.87px;
+  top: 2430px; 
+ }
 
-.fabric_list { 
+
+ .fabric_list_bottom { 
   border-width: 1px;
   border-color: black;
   border-radius: 0.24rem;
@@ -1530,7 +1527,17 @@ transition: 0.3s;
   top: 2130px; 
  }
 
- .imageAndLabelContainerFabrics {
+
+ .imageAndLabelContainerFabricsHeader {
+  width: 70px;
+  display: flex;
+  flex-direction: column; /* Make sure each image and description are in a column */
+  align-items: center; /* Center the items horizontally within each column */
+  margin: 10px; /* Adjust as needed */
+  text-align: center; /* Center the image and label */
+}
+
+ .imageAndLabelContainerFabricsBottom {
   width: 70px;
   display: flex;
   flex-direction: column; /* Make sure each image and description are in a column */
@@ -1629,7 +1636,7 @@ transition: 0.3s;
 
 .chosen_cassette_or_chosen_round_wrapper { 
   position: absolute;
-  top: 330px;
+  top: 350px;
 }
 
 .select_cassette_ellipse2 {
