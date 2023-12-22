@@ -125,7 +125,7 @@ const MaterialsPage = () => {
         }}
       />
 
-      <div className={styles.descriptionLabel}>
+      <div className={styles.descriptionLabelMaterials}>
       <div>{imageData.label}</div>
       </div>
 

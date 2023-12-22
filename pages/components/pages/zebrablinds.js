@@ -7,7 +7,7 @@ import MaterialsPage from '../materials/materials.js'; // Adjust the path accord
 import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
 
 function ZebraBlinds() {
-    
+
 
     //make div appear when next button is clicked #1
     const [Color_Group_Visible, Set_Color_Group_Visible] = useState(false);
@@ -76,17 +76,17 @@ function ZebraBlinds() {
     };
 
 
-  //1. //  ellipse logic
-  const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
-  const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
-  const handleEllipseClickSkipHeadRailColor = () => {
-    console.log('Ellipse Clicked');
-    Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
-  };
-  const handleEllipseClickSkipBottomRailColor = () => {
-    console.log('Ellipse Clicked');
-    Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
-  };
+    //1. //  ellipse logic
+    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
+    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
+    const handleEllipseClickSkipHeadRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
+    };
+    const handleEllipseClickSkipBottomRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
+    };
 
 
     //1. //  ellipse logic
@@ -674,11 +674,11 @@ function ZebraBlinds() {
                                     onClick={handleEllipseClickSkipHeadRailColor}
                                 ></div>
                                 <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
-                                <div className={styles.note_skipping_color}>
+                                <div className={styles.note_skipping_color_for_head_rail}>
                                     *Note: Skipping Color will result with steel material
                                 </div>
 
-            
+
                                 <FabricsPage></FabricsPage>
 
 
@@ -687,18 +687,19 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.pick_bottom_rail_color_wrapper}>
-          <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-          <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
 
-          <div
-            className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-            onClick={handleEllipseClickSkipBottomRailColor}
-          ></div>
-          <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-          <div className={styles.note_skipping_color_for_bottom_rail}>
-            *Note: Skipping Color will result with steel material
-          </div>
-        </div>
+                                    <div
+                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                        onClick={handleEllipseClickSkipBottomRailColor}
+                                    ></div>
+                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                    <div className={styles.note_skipping_color_for_bottom_rail}>
+                                        *Note: Skipping Color will result with steel material
+                                    </div>
+                                </div>
+
                                 <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
                                     <div
                                         className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
@@ -729,8 +730,10 @@ function ZebraBlinds() {
                         )}
 
 
-
                         {quantity_and_add_to_cart_group_Visible && (
+
+
+
 
                             <div className={styles.quantity_and_add_to_cart_group}>
                                 <div className={styles.quantity_seperator_line}></div>

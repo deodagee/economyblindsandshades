@@ -41,7 +41,6 @@ const FabricsPage = () => {
 
   return (
     <div>
-      <div className={styles.fabric_list_wrapper}>
 
         <div className={styles.fabric_list}>
 
@@ -59,7 +58,7 @@ const FabricsPage = () => {
       }}
     />
 
-    <div className={styles.descriptionLabel}>
+    <div className={styles.descriptionLabelFabrics}>
       <div>{imageData.label}</div>
     </div>
 
@@ -69,7 +68,6 @@ const FabricsPage = () => {
 </div>
         
       </div>
-    </div>
   );
 };
 
