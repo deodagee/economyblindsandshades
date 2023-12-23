@@ -32,7 +32,7 @@ z-index: -1;
 .left_half {
   width: 50vw;
   display: flex;
-  left: 100px;
+  left: -0px;
   position: relative;
 }
 
@@ -68,7 +68,7 @@ z-index: -1;
   overflow-y: hidden;
   width: 650px;
   height: 150px;
-  left: 0px;
+  left: 10px;
   top: 371.09px;
 }
 
@@ -129,13 +129,11 @@ transform: translate(-8.73px, -12.68px) scale(1.25);
 transition: 0.3s;
 }
 
-
 .right_half {
   width: 50vw;
   display: flex;
   position: relative;
-  left: 120px;
-
+  left: 30px;
 }
 
 .product_title {
