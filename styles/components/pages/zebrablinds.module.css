@@ -1,12 +1,13 @@
-.main_page { 
+.main_wrapper { 
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   list-style: none;
   position: absolute;
   height: 100vh;
-}
+  background-color: black;
 
+}
 
 
 .page {
@@ -15,17 +16,10 @@
   box-sizing: border-box;
   position: absolute;
 z-index: -1;
-}
-
-.page {
-  background: #ffffff;
-  display: flex;
   flex-direction: column;
   gap: 100px;
   align-items: center;
   justify-content: flex-start;
-  width: 1366px;
-  
 }
 
 .page_wrapper {
@@ -34,7 +28,6 @@ z-index: -1;
   position: relative;
   top: 200px;
 }
-
 
 .left_half {
   width: 50vw;
@@ -73,9 +66,9 @@ z-index: -1;
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 480px;
+  width: 650px;
   height: 150px;
-  left: 95.27px;
+  left: 0px;
   top: 371.09px;
 }
 
@@ -87,15 +80,17 @@ z-index: -1;
 .imageContainer { 
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 90px;
-  height: auto;
+  align-items: center;
+  flex-direction: row;
+  width: 100px;
+  height: max-content;
   margin: 5px;
 }
 
 
 .selectedImage { 
   border-width: 2px;
+  padding: 5px;
   border-color: #8a8a8a;
   margin: 0;
 }
@@ -636,8 +631,7 @@ transition: 0.3s;
 /* YourComponent.module.css */
 .materials_list {
   border-width: 1px;
-  border-color: black;
-  border-radius: 0.24rem;
+  border-radius: 0.25px;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -1057,6 +1051,15 @@ transition: 0.3s;
   position: absolute;
   left:1000px;
   top: 1520px;
+  transition: 0.3s;
+  border-radius: 0.24rem;
+}
+
+.select_chain_left_box:hover { 
+  background: rgb(237, 237, 237);
+  border-color: rgb(168, 168, 168);
+  transition: 0.3s;
+  border-radius: 0.24rem;
 }
 
 .select_chain_right_box {
@@ -1074,6 +1077,14 @@ transition: 0.3s;
   position: absolute;
   left:1060px;
   top: 1520px;
+  border-radius: 0.24rem;
+}
+
+.select_chain_right_box:hover { 
+  background: rgb(237, 237, 237);
+  border-color: rgb(168, 168, 168);
+  transition: 0.3s;
+  border-radius: 0.24rem;
 }
 
 
@@ -1197,13 +1208,7 @@ transition: 0.3s;
 }
 
 
-.active_cassette_round1 {
-  transition: 0.3s;
-  background: #59c56a;
-  position: absolute;
 
-  /* Set the active color (green in this case) */
-}
 
 .skip_head_rail_ellipse {
   background: #cdcdcd;
@@ -1280,9 +1285,10 @@ transition: 0.3s;
 }
 
 
+
 .select_cassette_head_rail_short_rectangle {
   border-radius: 0px;
-  width: 200px;
+  width: 225;
   height: 31px;
   position: absolute;
   left: 750.87px;
@@ -1299,8 +1305,8 @@ transition: 0.3s;
   font-size: 10px;
   font-weight: 700;
   position: absolute;
-  left: 802.87px;
-  top: 1754.85px;
+  left: 795px;
+  top: 1754px;
   width: 82px;
   height: 11px;
   white-space: nowrap;
@@ -1334,6 +1340,18 @@ transition: 0.3s;
 }
 
 
+.select_round_ellipse1 {
+  background: #cdcdcd;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #e0e0e0;
+  border-width: 1px;
+  width: 15.11px;
+  height: 14.97px;
+  position: absolute;
+  left: 750.5px;
+  top: 1943.23px;
+}
 .cassette {
   color: #000000;
   text-align: left;
@@ -1347,6 +1365,13 @@ transition: 0.3s;
   height: 14.97px;
 }
 
+.active_cassette_round1 {
+  transition: 0.3s;
+  background: #59c56a;
+  position: absolute;
+  /* Set the active color (green in this case) */
+}
+
 
 .chosen_image {
   border-radius: 8px;
@@ -1358,18 +1383,7 @@ transition: 0.3s;
   box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.select_round_ellipse1 {
-  background: #cdcdcd;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #e0e0e0;
-  border-width: 1px;
-  width: 15.11px;
-  height: 14.97px;
-  position: absolute;
-  left: 750.5px;
-  top: 1943.23px;
-}
+
 
 .round {
   color: #000000;
@@ -1461,8 +1475,7 @@ transition: 0.3s;
 
 .fabric_list_header { 
   border-width: 1px;
-  border-color: black;
-  border-radius: 0.24rem;
+  border-radius: 0.25px;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -1472,14 +1485,12 @@ transition: 0.3s;
   overflow-y: hidden;
   width: 450px;
   left: 747.87px;
-  top: 2430px; 
+  top: 2410px; 
  }
 
-
- .fabric_list_bottom { 
+.fabric_list_bottom { 
   border-width: 1px;
-  border-color: black;
-  border-radius: 0.24rem;
+  border-radius: 0.25px;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -1489,8 +1500,9 @@ transition: 0.3s;
   overflow-y: hidden;
   width: 450px;
   left: 747.87px;
-  top: 2130px; 
+  top: 2140px; 
  }
+
 
 
  .imageAndLabelContainerFabricsHeader {
@@ -1552,7 +1564,7 @@ transition: 0.3s;
   text-decoration: underline;
   position: absolute;
   left: 747.87px;
-  top: 2061.85px;
+  top: 2030px;
   width: 114px;
   height: 14px;
 }
@@ -1567,7 +1579,13 @@ transition: 0.3s;
   height: 14.97px;
   position: absolute;
   left: 750.87px;
-  top: 2090px;
+  top: 2060px;
+}
+
+
+.active_skip_bottom_rail_ellipse {
+  background: #59c56a;
+  /* Set the active color (green in this case) */
 }
 
 
@@ -1580,7 +1598,7 @@ transition: 0.3s;
   text-decoration: underline;
   position: absolute;
   left: 775.87px;
-  top: 2090px;
+  top: 2060px;
   width: 114px;
   height: 14px;
 }
@@ -1593,7 +1611,7 @@ transition: 0.3s;
   font-weight: 700;
   position: absolute;
   left: 775.87px;
-  top: 2110px;
+  top: 2080px;
   width: 203px;
   height: 14px;
 }
@@ -1603,6 +1621,9 @@ transition: 0.3s;
   position: absolute;
   top: 350px;
 }
+
+
+
 
 .select_cassette_ellipse2 {
   background: #cdcdcd;
@@ -1628,6 +1649,20 @@ transition: 0.3s;
   position: absolute;
   left: 751.87px;
   top: 2301.49px;
+}
+
+.select_cassette_bottom_rail { 
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  width: 283px;
+  height: 15px;
+  left: 751.87px;
+  top: 2201px;
+  overflow: visible;
 }
 
 .cassette2 {
@@ -1679,6 +1714,12 @@ transition: 0.3s;
   top: 2300.49px;
   width: 54.77px;
   height: 14.97px;
+}
+
+.active_cassette_round2 {
+  transition: 0.3s;
+  background: #59c56a;
+  /* Set the active color (green in this case) */
 }
 
 .product_price_2 {
@@ -1737,7 +1778,7 @@ transition: 0.3s;
   box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.rectangle_32 {
+.bottom_rail_color_rectangle {
   background: rgba(67, 67, 67, 0.85);
   width: 51px;
   height: 18px;
@@ -1759,27 +1800,11 @@ transition: 0.3s;
   height: 12px;
 }
 
-
-.active_skip_bottom_rail_ellipse {
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
-
-
-.active_cassette_round2 {
-  transition: 0.3s;
-
-  background: #59c56a;
-  /* Set the active color (green in this case) */
-}
-
 .quantity_and_add_to_cart_group { 
   display: flex;
   position: absolute;
   top: 150px;
 }
-
-
 
 .quantity_seperator_line {
   background: #d4d4d4;
@@ -2059,7 +2084,21 @@ transition: 0.3s;
   height: 11px;
 }
 
-.window_type {
+.window_name_answer { 
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2557px;
+  width: 96px;
+  height: 11px;
+  white-space: nowrap;
+}
+
+.window_type { 
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
@@ -2067,9 +2106,25 @@ transition: 0.3s;
   font-weight: 700;
   position: absolute;
   left: 753.87px;
-  top: 2582.85px;
+  top: 2581px;
   width: 121px;
   height: 11px;
+
+}
+
+
+.window_type_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2582.85px;
+  width: 96px;
+  height: 11px;
+  white-space: nowrap;
 }
 
 .width2 {
@@ -2085,6 +2140,21 @@ transition: 0.3s;
   height: 11px;
 }
 
+.width2_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2606.85px;
+  width: 36px;
+  height: 11px;
+  white-space: nowrap;
+
+}
+
 .height2 {
   color: #000000;
   text-align: left;
@@ -2098,6 +2168,23 @@ transition: 0.3s;
   height: 10px;
 }
 
+
+.height2_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2631.85px;
+  width: 42px;
+  height: 10px;
+  white-space: nowrap;
+
+}
+
+
 .mount {
   color: #000000;
   text-align: left;
@@ -2109,6 +2196,21 @@ transition: 0.3s;
   top: 2655.85px;
   width: 38px;
   height: 11px;
+}
+
+.mount_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2655.85px;
+  width: 80px;
+  height: 11px;
+  white-space: nowrap;
+
 }
 
 .materials {
@@ -2124,6 +2226,22 @@ transition: 0.3s;
   height: 10px;
 }
 
+.materials_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2680.85px;
+  width: 66px;
+  height: 10px;
+  white-space: nowrap;
+
+}
+
+
 .lift_type {
   color: #000000;
   text-align: left;
@@ -2135,6 +2253,21 @@ transition: 0.3s;
   top: 2704.85px;
   width: 51px;
   height: 11px;
+}
+
+.lift_type_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.87px;
+  top: 2704.85px;
+  width: 51px;
+  height: 11px;
+  white-space: nowrap;
+
 }
 
 .casette_head_rail_type {
@@ -2151,7 +2284,22 @@ transition: 0.3s;
 }
 
 
-.order_item_review_1 {
+.casette_head_rail_type_answer {
+  color: #838383;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 972.43px;
+  top: 2728.85px;
+  width: 93px;
+  height: 11px;
+  white-space: nowrap;
+
+}
+
+.bottom_rail_type {
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
@@ -2164,114 +2312,7 @@ transition: 0.3s;
   height: 11px;
 }
 
-
-.order_item_review_3 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2557.85px;
-  width: 78px;
-  height: 11px;
-}
-
-
-.order_item_review_2 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2582.85px;
-  width: 96px;
-  height: 11px;
-}
-
-
-.order_item_review_4 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2606.85px;
-  width: 36px;
-  height: 11px;
-}
-
-.order_item_review_5 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2631.85px;
-  width: 42px;
-  height: 10px;
-}
-
-.order_item_review_6 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2655.85px;
-  width: 80px;
-  height: 11px;
-}
-
-.order_item_review_7 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2680.85px;
-  width: 66px;
-  height: 10px;
-}
-
-.order_item_review_8 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.87px;
-  top: 2704.85px;
-  width: 51px;
-  height: 11px;
-}
-
-.order_item_review_9 {
-  color: #838383;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  position: absolute;
-  left: 972.43px;
-  top: 2728.85px;
-  width: 93px;
-  height: 11px;
-}
-
-.order_item_review_10 {
+.bottom_rail_type_answer {
   color: #838383;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
@@ -2285,7 +2326,11 @@ transition: 0.3s;
 }
 
 
-.rectangle_47 {
+
+
+
+
+.shipping_divider1 {
   background: #414141;
   width: 483px;
   height: 3px;
@@ -2296,7 +2341,7 @@ transition: 0.3s;
   transform: rotate(0deg) scale(1, -1);
 }
 
-.rectangle_48 {
+.shipping_divider2 {
   background: #414141;
   width: 483px;
   height: 3px;
