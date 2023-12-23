@@ -21,6 +21,27 @@ function ZebraBlinds() {
     const [Was_Next_Button_Clicked3, Set_Was_Next_Button_Clicked3] = useState(false);
     const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
 
+
+    //logic for turning next button's bg color 
+    const NextButton1buttonStyle = {
+        backgroundColor: Was_Next_Button_Clicked1 ? 'white' : '#313131',
+    };
+    const NextButton2buttonStyle = {
+        backgroundColor: Was_Next_Button_Clicked2 ? 'white' : '#313131',
+    };
+
+    const NextButton3buttonStyle = {
+        backgroundColor: Was_Next_Button_Clicked3 ? 'white' : '#313131',
+    };
+
+
+    const NextButton4buttonStyle = {
+        backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
+        
+    };
+
+
+    
     const handleNextButton1Click = () => {
         if (!Was_Next_Button_Clicked1) {
             // Your existing functionality
@@ -30,7 +51,6 @@ function ZebraBlinds() {
             Set_Was_Next_Button_Clicked1(true);
         }
     };
-
 
     const handleNextButton2Click = () => {
         if (!Was_Next_Button_Clicked2) {
@@ -419,18 +439,23 @@ function ZebraBlinds() {
                                         viewBox="0 0 10 8"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_decrease_height_fractions}>                                           <path
+                                        onClick={handle_polygon_decrease_height_fractions}>
+                                        <path
                                             d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
                                             fill="#D9D9D9"
                                         />
                                     </svg>
 
-
                                     <div className={styles.inches2}>Inches</div>
                                     <div className={styles.eighths2}>Eighths</div>
-
-
-                                    <button className={styles.next_item} onClick={handleNextButton1Click}><div className={styles.next_button1}>Next </div></button>
+                                    <button
+                                        className={styles.next_item1}
+                                        onClick={handleNextButton1Click}
+                                    >
+                                        <div
+                                            style={NextButton1buttonStyle}
+                                            className={styles.next_button1}>Next</div>
+                                    </button>
 
                                 </div>
                             </div>
@@ -475,10 +500,15 @@ function ZebraBlinds() {
                                 <div className={styles.select_material}>2. Select Material</div>
 
                                 <MaterialsPage></MaterialsPage>
+                                <button
+                                        className={styles.next_item2}
+                                        onClick={handleNextButton2Click}
+                                    >
+                                        <div
+                                            style={NextButton2buttonStyle}
+                                            className={styles.next_button2}>Next</div>
+                                    </button>
 
-
-                                <button className={styles.next_item} onClick={handleNextButton2Click}><div className={styles.next_button2}>Next                                </div>
-                                </button>
                             </div>
                         )}
 
@@ -486,7 +516,6 @@ function ZebraBlinds() {
                         {Lift_Group_Visible && (
 
                             <div className={styles.select_lift_type_group}>
-                                <div className={styles.select_lift_type_seperator_line}></div>
 
                                 <svg
                                     className={styles.select_lift_type_long_rectangle}
@@ -556,7 +585,16 @@ function ZebraBlinds() {
                                 <div className={styles.motorized}>Motorized</div>
                                 <div className={styles.motorized_price_value}>$100.00</div>
 
-                                <button className={styles.next_item} onClick={handleNextButton3Click}><div className={styles.next_button3}>Next</div></button>
+                                <button
+                                        className={styles.next_item3}
+                                        onClick={handleNextButton3Click}
+                                    >
+                                        <div
+                                            style={NextButton3buttonStyle}
+                                            className={styles.next_button3}>Next</div>
+                                    </button>
+                                    <div className={styles.select_lift_type_seperator_line}></div>
+
 
                             </div>
                         )}
@@ -658,26 +696,33 @@ function ZebraBlinds() {
 
                                     <div>
 
-                                    <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
+                                        <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
 
 
-                                    <div className={styles.cassette2}>Cassette</div>
-                                    <div className={styles.product_price}>$65.00</div>
-                                    <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+                                        <div className={styles.cassette2}>Cassette</div>
+                                        <div className={styles.product_price}>$65.00</div>
+                                        <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
 
 
 
-                                    <div className={styles.round2}>Round</div>
-                                    <div className={styles.product_price_2}>$60.00</div>
-                                    <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                                    <div className={styles.skip_head_rail_color_divider_line}></div>
-                                    <div className={styles.color}>Color:</div>
-                                    <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                                    <div className={styles.bottom_rail_color_rectangle}></div>
-                                    <div className={styles.steel}>Steel</div>
+                                        <div className={styles.round2}>Round</div>
+                                        <div className={styles.product_price_2}>$60.00</div>
+                                        <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
+                                        <div className={styles.skip_head_rail_color_divider_line}></div>
+                                        <div className={styles.color}>Color:</div>
+                                        <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
+                                        <div className={styles.bottom_rail_color_rectangle}></div>
+                                        <div className={styles.steel}>Steel</div>
+                                    </div>
                                 </div>
-                                <button className={styles.next_item} onClick={handleNextButton4Click}><div className={styles.next_button4}>Next</div></button>
-                            </div>
+                                <button
+                                        className={styles.next_item4}
+                                        onClick={handleNextButton4Click}
+                                    >
+                                        <div
+                                            style={NextButton4buttonStyle}
+                                            className={styles.next_button4}>See Bill</div>
+                                    </button>
                             </div>
                         )}
 
