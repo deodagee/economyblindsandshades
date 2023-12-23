@@ -1,7 +1,7 @@
 import React from "react";
 import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import MaterialsPage from '../materials/materials.js'; // Adjust the path accordingly
 import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
@@ -37,11 +37,11 @@ function ZebraBlinds() {
 
     const NextButton4buttonStyle = {
         backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
-        
+
     };
 
 
-    
+
     const handleNextButton1Click = () => {
         if (!Was_Next_Button_Clicked1) {
             // Your existing functionality
@@ -202,8 +202,74 @@ function ZebraBlinds() {
     };
 
 
+    //LOGIC FOR BOM
+
+    //Logic for product title 
+    const [product_title, setproduct_title] = useState("ZEBRA BLINDS SHADES");
+
+    //Logic for room darkening section
+    const [roomDarkeningContent, setRoomDarkeningContent] = useState('');
+
+    useEffect(() => {
+        // Fetch the contents of the room_darkening_element and set the state
+        const roomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
+        if (roomDarkeningElement) {
+            setRoomDarkeningContent(roomDarkeningElement.textContent || roomDarkeningElement.innerText);
+        }
+    }, []);
+
+
+
+    //Logic for room width rendering inches section
+    const [WidthRenderingContentInches, setWidthRenderingContentInches] = useState('');
+
+    useEffect(() => {
+        // Fetch the contents of the width_rendering_element_inches section and set the state
+        const widthRenderingElementInches = document.querySelector(`.${styles.width_rendering_element_inches}`);
+        if (widthRenderingElementInches) {
+            setWidthRenderingContentInches(widthRenderingElementInches.textContent || widthRenderingElementInches.innerText);
+        }
+    }, []);
+
+    //Logic for room width rendering fractions section
+    const [WidthRenderingContentFractions, setWidthRenderingContentFractions] = useState('');
+
+    useEffect(() => {
+        // Fetch the contents of the width_rendering_element_fractions section and set the state
+        const widthRenderingElementFractions = document.querySelector(`.${styles.width_rendering_element_fractions}`);
+        if (widthRenderingElementFractions) {
+            setWidthRenderingContentFractions(widthRenderingElementFractions.textContent || widthRenderingElementFractions.innerText);
+        }
+    }, []);
+
+
+    //Logic for room height rendering inches section
+    const [HeightRenderingContentInches, setHeightRenderingContentInches] = useState('');
+
+    useEffect(() => {
+        // Fetch the contents of the height_rendering_element_inches section and set the state
+        const heightRenderingElementInches = document.querySelector(`.${styles.height_rendering_element_inches}`);
+        if (heightRenderingElementInches) {
+            setHeightRenderingContentInches(heightRenderingElementInches.textContent || heightRenderingElementInches.innerText);
+        }
+    }, []);
+
+    //Logic for room height rendering fractions section
+    const [HeightRenderingContentFractions, setHeightRenderingContentFractions] = useState('');
+
+    useEffect(() => {
+        // Fetch the contents of the height_rendering_element_fractions section and set the state
+        const heightRenderingElementFractions = document.querySelector(`.${styles.height_rendering_element_fractions}`);
+        if (heightRenderingElementFractions) {
+            setHeightRenderingContentFractions(heightRenderingElementFractions.textContent || heightRenderingElementFractions.innerText);
+        }
+    }, []);
+
+
+
 
     return (
+
         <>
             <div className={styles.page}>
                 <div className={styles.page_wrapper}>
@@ -215,11 +281,17 @@ function ZebraBlinds() {
 
                         <div className={styles.room_darkening_rectangle}></div>
 
-                        <div>   <div className={styles.room_darkening}>Room Darkening
-                            <div className={styles.top_prices}> <p className={styles.price_regular}>$ 325.00 </p>
-                                <p className={styles.price_discount}>SAVE 25%</p></div>
-                        </div>
+                        <div>
+                            <div className={styles.room_darkening}>
 
+                                <p className={styles.room_darkening_element}>Room Darkening</p>
+
+                                <div className={styles.top_prices}>
+                                    <p className={styles.price_regular}>$ 325.00 </p>
+
+                                    <p className={styles.price_discount}>SAVE 25%</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div
@@ -294,7 +366,13 @@ function ZebraBlinds() {
                                     <div className={styles.rectangle_10}>
                                     </div>
                                     <div>
-                                        <div className={styles.width_scroll_number_inches}>{number}</div>
+
+                                        <div className={styles.width_scroll_number_inches}>
+
+                                            <p className={styles.width_rendering_element_inches}>
+                                                {number}</p>
+
+                                        </div>
 
                                         <svg
                                             className={styles.polygon_1}
@@ -323,15 +401,26 @@ function ZebraBlinds() {
 
                                     <div>
 
+
                                         <div className={styles.width_scroll_number_fractions}>
-                                            {fractions[fractionIndex].includes('/') ? (
-                                                <span>
-                                                    {fractions[fractionIndex].split('/')[0]}
-                                                    <sup>{fractions[fractionIndex].split('/')[1]}</sup>
-                                                </span>
-                                            ) : (
-                                                fractions[fractionIndex]
-                                            )}
+
+                                            <p className={styles.width_rendering_element_fractions}>
+                                                {fractions[fractionIndex].includes('/') ? (
+                                                    <span className={styles.fraction_element1}>
+                                                        <span>
+                                                            {fractions[fractionIndex].split('/')[0]}
+                                                        </span>
+                                                        <span>
+                                                            {"/"}
+                                                        </span>
+                                                        <span>
+                                                            {fractions[fractionIndex].split('/')[1]}
+                                                        </span>
+                                                    </span>
+                                                ) : (
+                                                    fractions[fractionIndex]
+                                                )}
+                                            </p>
                                         </div>
 
                                         <svg
@@ -375,47 +464,65 @@ function ZebraBlinds() {
 
                                     <div className={styles.rectangle_11}></div>
                                     <div className={styles.rectangle_12}></div>
+                                    <div>
 
-                                    <div className={styles.height_scroll_number_inches}>{heightnumber}</div>
 
+                                        <div className={styles.height_scroll_number_inches}>
 
-                                    <svg
-                                        className={styles.polygon_5}
-                                        width="10"
-                                        height="8"
-                                        viewBox="0 0 10 8"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_increase_height_inches}>
-                                        <path
-                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                            fill="#D9D9D9"
-                                        />
-                                    </svg>
+                                            <p className={styles.height_rendering_element_inches}>
+                                                {heightnumber}
+                                            </p>
+                                        </div>
 
-                                    <svg
-                                        className={styles.polygon_6}
-                                        width="10"
-                                        height="8"
-                                        viewBox="0 0 10 8"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        onClick={handle_polygon_decrease_height_inches}>                            <path
-                                            d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                            fill="#D9D9D9"
-                                        />
-                                    </svg>
+                                        <svg
+                                            className={styles.polygon_5}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_increase_height_inches}>
+                                            <path
+                                                d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+
+                                        <svg
+                                            className={styles.polygon_6}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_decrease_height_inches}>                            <path
+                                                d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+                                    </div>
 
 
                                     <div className={styles.height_scroll_number_fractions}>
-                                        {fractionsheight[heightfractionIndex].includes('/') ? (
-                                            <span>
-                                                {fractionsheight[heightfractionIndex].split('/')[0]}
-                                                <sup>{fractionsheight[heightfractionIndex].split('/')[1]}</sup>
-                                            </span>
-                                        ) : (
-                                            fractionsheight[heightfractionIndex]
-                                        )}
+
+                                        <p className={styles.height_rendering_element_fractions}>
+                                            {fractionsheight[heightfractionIndex].includes('/') ? (
+                                                <span className={styles.fraction_element2}>
+                                                    <span>
+                                                        {fractions[heightfractionIndex].split('/')[0]}
+                                                    </span>
+                                                    <span>
+                                                        {"/"}
+                                                    </span>
+                                                    <span>
+                                                        {fractions[heightfractionIndex].split('/')[1]}
+                                                    </span>
+                                                </span>
+
+                                            ) : (
+                                                fractionsheight[heightfractionIndex]
+                                            )}
+                                        </p>
                                     </div>
 
                                     <svg
@@ -501,13 +608,13 @@ function ZebraBlinds() {
 
                                 <MaterialsPage></MaterialsPage>
                                 <button
-                                        className={styles.next_item2}
-                                        onClick={handleNextButton2Click}
-                                    >
-                                        <div
-                                            style={NextButton2buttonStyle}
-                                            className={styles.next_button2}>Next</div>
-                                    </button>
+                                    className={styles.next_item2}
+                                    onClick={handleNextButton2Click}
+                                >
+                                    <div
+                                        style={NextButton2buttonStyle}
+                                        className={styles.next_button2}>Next</div>
+                                </button>
 
                             </div>
                         )}
@@ -586,14 +693,14 @@ function ZebraBlinds() {
                                 <div className={styles.motorized_price_value}>$100.00</div>
 
                                 <button
-                                        className={styles.next_item3}
-                                        onClick={handleNextButton3Click}
-                                    >
-                                        <div
-                                            style={NextButton3buttonStyle}
-                                            className={styles.next_button3}>Next</div>
-                                    </button>
-                                    <div className={styles.select_lift_type_seperator_line}></div>
+                                    className={styles.next_item3}
+                                    onClick={handleNextButton3Click}
+                                >
+                                    <div
+                                        style={NextButton3buttonStyle}
+                                        className={styles.next_button3}>Next</div>
+                                </button>
+                                <div className={styles.select_lift_type_seperator_line}></div>
 
 
                             </div>
@@ -694,7 +801,7 @@ function ZebraBlinds() {
                                     ></div>
 
 
-                                    <div>
+                                    <div className={styles.select_cassette_bottom_rail_group}>
 
                                         <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
 
@@ -716,13 +823,13 @@ function ZebraBlinds() {
                                     </div>
                                 </div>
                                 <button
-                                        className={styles.next_item4}
-                                        onClick={handleNextButton4Click}
-                                    >
-                                        <div
-                                            style={NextButton4buttonStyle}
-                                            className={styles.next_button4}>See Bill</div>
-                                    </button>
+                                    className={styles.next_item4}
+                                    onClick={handleNextButton4Click}
+                                >
+                                    <div
+                                        style={NextButton4buttonStyle}
+                                        className={styles.next_button4}>See Bill</div>
+                                </button>
                             </div>
                         )}
 
@@ -754,214 +861,213 @@ function ZebraBlinds() {
 
                                 <div className={styles.review_your_order_bg}></div>
 
-                                <svg
-                                    className={styles.rectangle_45}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_43}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_36}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
 
 
-                                <svg
-                                    className={styles.rectangle_37}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
+                                <div className={styles.order_items_list}>
 
-                                <svg
-                                    className={styles.rectangle_38}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
+                                    <svg
+                                        className={styles.rectangle_45}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
 
-                                <svg
-                                    className={styles.rectangle_39}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
+                                    <div className={styles.window_name}>Window Name:
+                                    </div>
 
-                                <svg
-                                    className={styles.rectangle_40}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_41}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_42}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_44}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <svg
-                                    className={styles.rectangle_46}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
+                                    <div className={styles.window_name_answer}>
+                                        {product_title}
+                                    </div>
 
 
-                                <div className={styles.window_name}>Window Name:
+                                    <svg
+                                        className={styles.rectangle_43}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+
+                                    <div className={styles.window_type}>Window Type:</div>
+
+                                    <div className={styles.window_type_answer}>
+                                        {roomDarkeningContent}                                    </div>
+
+
+                                    <svg
+                                        className={styles.rectangle_36}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+
+
+                                    <div className={styles.width2}>Width:</div>
+                                    <div className={styles.width2_answer}>
+                                        {WidthRenderingContentInches}{"''"}
+                                        {WidthRenderingContentFractions}{"''"}                                                                
+                                        </div>
+
+                                    <svg
+                                        className={styles.rectangle_37}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+
+
+
+
+                                    <div className={styles.height2}>Height:</div>
+                                    <div className={styles.height2_answer}>
+                                    {HeightRenderingContentInches}{"''"}
+                                        {HeightRenderingContentFractions}{"''"} 
+                                                                            </div>
+
+
+                                    <svg
+                                        className={styles.rectangle_38}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+                                    <div className={styles.mount}>Mount:</div>
+                                    <div className={styles.mount_answer}>
+                                        {"same as chosen ellipse in select_mount_group"}
+                                    </div>
+
+                                    <svg
+                                        className={styles.rectangle_39}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+                                    <div className={styles.materials}>Materials:</div>
+                                    <div className={styles.materials_answer}>
+                                        {"same as chosen image label from "}
+                                    </div>
+
+                                    <svg
+                                        className={styles.rectangle_40}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+
+                                    <div className={styles.lift_type}>Lift Type:</div>
+                                    <div className={styles.lift_type_answer}>
+                                        {"same as ellipse chosen in add_lift_feature"}
+                                    </div>
+
+
+                                    <svg
+                                        className={styles.rectangle_41}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+
+                                    <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
+                                    <div className={styles.casette_head_rail_type_answer}>
+                                        {"same as ellipse chosen in select_head_rail"}
+                                    </div>
+
+                                    <svg
+                                        className={styles.rectangle_42}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
+
+                                    <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
+                                    <div className={styles.bottom_rail_type_answer}>
+                                        {"same as ellipse chosen in select_cassette_bottom_rail_group"}
+                                    </div>
+
+
+                                    <svg
+                                        className={styles.rectangle_44}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
                                 </div>
-                                <div className={styles.window_name_answer}>
-                                    {"same as product_title"}
-                                </div>
-
-                                <div className={styles.window_type}>Window Type:</div>
-                                <div className={styles.window_type_answer}>
-                                    {"same as room_darkening"}
-                                </div>
-
-                                <div className={styles.width2}>Width:</div>
-                                <div className={styles.width2_answer}>
-                                    {"same as entries from width inches and fractions"}
-                                </div>
-
-                                <div className={styles.height2}>Height:</div>
-                                <div className={styles.height2_answer}>
-                                    {"same as height inches and fractions"}
-                                </div>
-
-
-                                <div className={styles.mount}>Mount:</div>
-                                <div className={styles.mount_answer}>
-                                    {"same as chosen ellipse in select_mount_group"}
-                                </div>
-
-
-
-                                <div className={styles.materials}>Materials:</div>
-                                <div className={styles.materials_answer}>
-                                    {"same as chosen image label from "}
-                                </div>
-
-
-                                <div className={styles.lift_type}>Lift Type:</div>
-                                <div className={styles.lift_type_answer}>
-                                    {"same as ellipse chosen in add_lift_feature"}
-                                </div>
-
-
-                                <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
-                                <div className={styles.casette_head_rail_type_answer}>
-                                    {"same as ellipse chosen in select_head_rail"}
-                                </div>
-
-
-                                <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
-                                <div className={styles.bottom_rail_type_answer}>
-                                    {"same as ellipse chosen in"}
-                                </div>
-
 
 
                                 <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
