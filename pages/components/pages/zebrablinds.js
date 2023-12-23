@@ -75,24 +75,12 @@ function ZebraBlinds() {
         return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
     };
 
-
-    //1. //  ellipse logic
-    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
-    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
-    const handleEllipseClickSkipHeadRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
-    };
-    const handleEllipseClickSkipBottomRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
-    };
-
-
     //1. //  ellipse logic
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
+    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
+    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
     const handleEllipseClick1 = (ellipseNumber) => {
@@ -107,11 +95,22 @@ function ZebraBlinds() {
         Setactive_cassette_round1(ellipseNumber);
     };
 
+    const handleEllipseClickSkipHeadRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
+    };
+
+    const handleEllipseClickSkipBottomRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
+    };
+
 
 
     const handleEllipseClick5 = (ellipseNumber) => {
         Setactive_cassette_round2(ellipseNumber);
     };
+
 
 
     //2. // LOGIC FOR ENTER WIDTH
@@ -189,7 +188,7 @@ function ZebraBlinds() {
             <div className={styles.page}>
                 <div className={styles.page_wrapper}>
 
-<LeftSidePage></LeftSidePage>
+                    <LeftSidePage></LeftSidePage>
 
                     <div className={styles.right_half}>
                         <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
@@ -475,15 +474,11 @@ function ZebraBlinds() {
 
                                 <div className={styles.select_material}>2. Select Material</div>
 
-
                                 <MaterialsPage></MaterialsPage>
-
-
 
 
                                 <button className={styles.next_item} onClick={handleNextButton2Click}><div className={styles.next_button2}>Next                                </div>
                                 </button>
-
                             </div>
                         )}
 
@@ -537,6 +532,7 @@ function ZebraBlinds() {
                                         Select Chain Side
                                     </div>
                                     <div className={styles.select_chain_left_box}>Left</div>
+
                                     <div className={styles.select_chain_right_box}>
                                         Right
                                     </div>
@@ -584,17 +580,19 @@ function ZebraBlinds() {
                                 </svg>
 
                                 <svg
-                                    className={styles.select_cassette_head_rail_short_rectangle} width="200"
+                                    className={styles.select_cassette_head_rail_short_rectangle}
+                                    width="225"
                                     height="31"
-                                    viewBox="0 0 200 31"
+                                    viewBox="0 0 225 31"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
-                                        d="M0 15.5C0 6.93959 6.93959 0 15.5 0H312.5C321.06 0 328 6.93959 328 15.5V15.5C328 24.0604 321.06 31 312.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
+                                        d="M0 15.5C0 6.93959 6.93959 0 15.5 0H209.5C218.06 0 225 6.93959 225 15.5V15.5C225 24.0604 218.06 31 209.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
                                         fill="#3C3C3C"
                                     />
                                 </svg>
+
 
 
                                 <div className={styles.select_head_rail}>Select Head Rail And Bottom Rail</div>
@@ -657,6 +655,12 @@ function ZebraBlinds() {
                                         onClick={() => handleEllipseClick5(2)}
                                     ></div>
 
+
+                                    <div>
+
+                                    <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
+
+
                                     <div className={styles.cassette2}>Cassette</div>
                                     <div className={styles.product_price}>$65.00</div>
                                     <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
@@ -669,10 +673,11 @@ function ZebraBlinds() {
                                     <div className={styles.skip_head_rail_color_divider_line}></div>
                                     <div className={styles.color}>Color:</div>
                                     <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                                    <div className={styles.rectangle_32}></div>
+                                    <div className={styles.bottom_rail_color_rectangle}></div>
                                     <div className={styles.steel}>Steel</div>
                                 </div>
                                 <button className={styles.next_item} onClick={handleNextButton4Click}><div className={styles.next_button4}>Next</div></button>
+                            </div>
                             </div>
                         )}
 
@@ -860,43 +865,78 @@ function ZebraBlinds() {
                                 </svg>
 
 
-                                <div className={styles.window_name}>Window Name</div>
-                                <div className={styles.window_type}>Window Type</div>
-                                <div className={styles.width2}>Width</div>
-                                <div className={styles.height2}>Height</div>
-                                <div className={styles.mount}>Mount</div>
-                                <div className={styles.materials}>Materials</div>
-                                <div className={styles.lift_type}>Lift Type</div>
-                                <div className={styles.casette_head_rail_type}>Casette Head Rail Type</div>
-                                <div className={styles.order_item_review_1}>Bottom Rail Type</div>
+                                <div className={styles.window_name}>Window Name:
+                                </div>
+                                <div className={styles.window_name_answer}>
+                                    {"same as product_title"}
+                                </div>
+
+                                <div className={styles.window_type}>Window Type:</div>
+                                <div className={styles.window_type_answer}>
+                                    {"same as room_darkening"}
+                                </div>
+
+                                <div className={styles.width2}>Width:</div>
+                                <div className={styles.width2_answer}>
+                                    {"same as entries from width inches and fractions"}
+                                </div>
+
+                                <div className={styles.height2}>Height:</div>
+                                <div className={styles.height2_answer}>
+                                    {"same as height inches and fractions"}
+                                </div>
 
 
-                                <div className={styles.order_item_review_3}>Zebra Blinds</div>
-                                <div className={styles.order_item_review_2}>Room Darkening</div>
-                                <div className={styles.order_item_review_4}>34”</div>
-                                <div className={styles.order_item_review_5}>78”</div>
-                                <div className={styles.order_item_review_6}>Inside Mount</div>
-                                <div className={styles.order_item_review_7}>EMA26-01</div>
-                                <div className={styles.order_item_review_8}>Lift Type</div>
-                                <div className={styles.order_item_review_9}>Black With Fabric</div>
-                                <div className={styles.order_item_review_10}>Oval Black</div>
+                                <div className={styles.mount}>Mount:</div>
+                                <div className={styles.mount_answer}>
+                                    {"same as chosen ellipse in select_mount_group"}
+                                </div>
 
 
-                                <div className={styles.rectangle_47}></div>
-                                <div className={styles.rectangle_48}></div>
-                                <div className={styles.shipping_details}>Shipping Details</div>
-                                <div className={styles.total_price_tile}>Total Price</div>
-                                <div className={styles.total_price}>$65.34</div>
-                                <div className={styles.qty_1}>Qty 1</div>
-                                <div className={styles.shipping_price}>$12.34</div>
-                                <div className={styles.shipping}>Shipping</div>
-                                <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                                <div className={styles.order_number}>Order Number: 345969654</div>
-                                <div className={styles.date}>12/07/2024</div>
+
+                                <div className={styles.materials}>Materials:</div>
+                                <div className={styles.materials_answer}>
+                                    {"same as chosen image label from "}
+                                </div>
+
+
+                                <div className={styles.lift_type}>Lift Type:</div>
+                                <div className={styles.lift_type_answer}>
+                                    {"same as ellipse chosen in add_lift_feature"}
+                                </div>
+
+
+                                <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
+                                <div className={styles.casette_head_rail_type_answer}>
+                                    {"same as ellipse chosen in select_head_rail"}
+                                </div>
+
+
+                                <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
+                                <div className={styles.bottom_rail_type_answer}>
+                                    {"same as ellipse chosen in"}
+                                </div>
+
 
 
                                 <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
+                                <div className={styles.shipping_details}>Shipping Details</div>
+                                <div className={styles.total_price_tile}>Total Price</div>
+                                <div className={styles.shipping_divider1}></div>
+
+                                <div className={styles.shipping}>Shipping</div>
+                                <div className={styles.shipping_price}>$12.34</div>
+                                <div className={styles.qty_1}>Qty 1</div>
+                                <div className={styles.total_price}>$65.34</div>
+                                <div className={styles.shipping_divider2}></div>
+
+                                <div className={styles.order_number}>Order Number: 345969654</div>
+                                <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
+                                <div className={styles.date}>12/07/2024</div>
+
+
                                 <div className={styles.add_to_cart_rectangle}></div>
+
                                 <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
                                     <div class={styles.add_to_cart}>ADD TO CART</div>
                                 </Link>
@@ -910,8 +950,6 @@ function ZebraBlinds() {
                                 />
                             </div>
                         )}
-
-
 
 
                     </div>
