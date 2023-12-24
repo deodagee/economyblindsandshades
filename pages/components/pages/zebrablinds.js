@@ -184,11 +184,10 @@ function ZebraBlinds() {
 
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
+    const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
 
   
-    const handleEllipseClick3 = (ellipseNumber) => {
-        Setactive_cassette_round1(ellipseNumber);
-    };
+
 
     const handleEllipseClickSkipHeadRailColor = () => {
         console.log('Ellipse Clicked');
@@ -238,6 +237,22 @@ function ZebraBlinds() {
         // Keep the existing functionality here if needed
 
     };
+
+
+    //Add 2 head rail options to the bom
+    const handleactive_cassette_round1Ellipses = (ellipseNumber) => {
+        Setactive_cassette_round1((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+
+        // Set the content based on the clicked ellipse number
+        if (ellipseNumber === 1) {
+            Setactive_cassette_round1RenderingContent('cassette');
+        } else if (ellipseNumber === 2) {
+            Setactive_cassette_round1RenderingContent('round');
+        }
+    };
+
+        // Keep the existing functionality here if needed
+
 
     
 
@@ -721,7 +736,7 @@ function ZebraBlinds() {
                                 </div>
 
                                 <div
-                                    className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
+                                    className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
                                     onClick={() => handleLiftFeatureEllipsess(2)}
                                 ></div>
 
@@ -730,7 +745,7 @@ function ZebraBlinds() {
                                 <div className={styles.cordlift_price_value}>$60.00</div>
 
                                 <div
-                                    className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
+                                    className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
                                     onClick={() => handleLiftFeatureEllipsess(3)}
                                 ></div>
 
@@ -790,7 +805,7 @@ function ZebraBlinds() {
 
                                 <div
                                     className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
-                                    onClick={() => handleEllipseClick3(1)}
+                                    onClick={() => handleactive_cassette_round1Ellipses(1)}
                                 ></div>
                                 <div className={styles.cassette}>Cassette</div>
                                 <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
@@ -798,7 +813,7 @@ function ZebraBlinds() {
 
                                 <div
                                     className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
-                                    onClick={() => handleEllipseClick3(2)}
+                                    onClick={() => handleactive_cassette_round1Ellipses(2)}
                                 ></div>
                                 <div className={styles.round}>Round</div>
                                 <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
@@ -1117,7 +1132,7 @@ function ZebraBlinds() {
 
                                     <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
                                     <div className={styles.casette_head_rail_type_answer}>
-                                        {"same as ellipse chosen in select_head_rail"}
+                                    {active_cassette_round1RenderingContent}
                                     </div>
 
                                     <svg
