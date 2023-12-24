@@ -198,9 +198,9 @@ function ZebraBlinds() {
 
         if (ellipseNumber === 1) {
             setbottomRailOptionsRenderingContent("Bottom Rail Option 1");
-        } else if (ellipseNumber === 2) { 
+        } else if (ellipseNumber === 2) {
             setbottomRailOptionsRenderingContent("Bottom Rail Option 2");
-        } else if (ellipseNumber ===3) { 
+        } else if (ellipseNumber === 3) {
             setbottomRailOptionsRenderingContent("Bottom Rail Option 3");
         }
 
@@ -813,14 +813,6 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
-                                    <div
-                                        className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
-                                        onClick={() => handleEllipseClick5(1)}
-                                    ></div>
-                                    <div
-                                        className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
-                                        onClick={() => handleEllipseClick5(2)}
-                                    ></div>
 
 
                                     <div className={styles.select_cassette_bottom_rail_group}>
@@ -828,20 +820,30 @@ function ZebraBlinds() {
                                         <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
 
 
-                                        <div className={styles.cassette2}>option 1</div>
-                                        <div className={styles.product_price}>$00.00</div>
-                                        <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+                                        <div className={styles.bottom_rail_options}>
+                                            <span className={styles.option1}>
+                                                <div
+                                                    className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                                                    onClick={() => handleEllipseClick5(1)}
+                                                ></div>
+                                                <div className={styles.cassette2}>option 1</div>
+                                                <div className={styles.product_price}>$00.00</div>
+                                                <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
+                                            </span>
 
 
-
-                                        <div className={styles.round2}>option 2</div>
-                                        <div className={styles.product_price_2}>$00.00</div>
-                                        <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                                        <div className={styles.skip_head_rail_color_divider_line}></div>
-                                        <div className={styles.color}>Color:</div>
-                                        <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                                        <div className={styles.bottom_rail_color_rectangle}></div>
-                                        <div className={styles.steel}>Steel</div>
+                                            <span className={styles.option2}>
+                                                <div
+                                                    className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                                                    onClick={() => handleEllipseClick5(2)}
+                                                ></div>
+                                                <div className={styles.round2}>option 2</div>
+                                                <div className={styles.product_price_2}>$00.00</div>
+                                                <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
+                                                <div className={styles.skip_head_rail_color_divider_line}></div>
+                                                <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
+                                            </span>
+                                        </div>
                                     </div>
 
 

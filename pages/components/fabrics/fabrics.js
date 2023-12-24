@@ -109,8 +109,7 @@ const FabricsPage = () => {
 
       
       {active_skip_head_rail_ellipse ? null : (
-        <div className={styles.fabric_list_header}>
-          {imagesDataHeadRail.map((imageData) => (
+        <div className={styles.fabric_list_header} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>         {imagesDataHeadRail.map((imageData) => (
             <div key={imageData.key} className={styles.imageAndLabelContainerFabricsHeader}>
               <Image
                 alt="image"
@@ -138,10 +137,9 @@ const FabricsPage = () => {
 
 
       <div>
+      {active_skip_bottom_rail_ellipse ? null : (
 
-        <div className={styles.fabric_list_bottom}>
-
-          {imagesDataBottomRail.map((imageData) => (
+          <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>          {imagesDataBottomRail.map((imageData) => (
             <div key={imageData.key} className={styles.imageAndLabelContainerFabricsBottom}>
               <Image
                 alt="image"
@@ -163,17 +161,19 @@ const FabricsPage = () => {
 
           ))}
         </div>
+              )}
+
 
       </div>
 
 
 
       <div className={styles.head_rail_color_answer}>
-        {selectedImageData_Headrail ? selectedImageData_Headrail.label : ''}
+        {selectedImageData_Headrail ? selectedImageData_Headrail.label : 'Steel'}
       </div>
 
       <div className={styles.bottom_rail_color_answer}>
-        {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : ''}
+        {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : 'Steel'}
       </div>
 
 
