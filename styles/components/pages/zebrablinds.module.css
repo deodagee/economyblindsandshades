@@ -2043,7 +2043,7 @@ white-space: nowrap;
 .review_your_order_bg {
   background: #435f7031;
   width: 500px;
-  height: 300px;
+  height: 290px;
   position: absolute;
   left: 745px;
   top: 2545.85px;
@@ -2069,6 +2069,24 @@ white-space: nowrap;
   position: absolute;
   left: 747.87px;
   top: 2549.85px;
+  overflow: visible;
+}
+
+
+.rectangle_45 {
+  width: 482px;
+  height: 1px;
+  position: absolute;
+  left: 747.87px;
+  top: 2790.85px;
+  overflow: visible;
+}
+.rectangle_47 {
+  width: 482px;
+  height: 1px;
+  position: absolute;
+  left: 747.87px;
+  top: 2816.85px;
   overflow: visible;
 }
 
@@ -2430,7 +2448,7 @@ white-space: nowrap;
   font-weight: 700;
   position: absolute;
   left: 875px;
-  top: 3166px;
+  top: 3255px;
   width: 66px;
   height: 11px;
   white-space: nowrap;
@@ -2461,7 +2479,7 @@ white-space: nowrap;
   font-weight: 700;
   position: absolute;
   left: 875px;
-  top: 3184px;
+  top: 3275px;
   width: 66px;
   height: 11px;
   white-space: nowrap;
@@ -2509,9 +2527,15 @@ white-space: nowrap;
   height: 3px;
   position: absolute;
   left: 747.87px;
-  top: 2851.85px;
+  top: 2876.85px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
+}
+
+.shipping_tagger { 
+  display: flex;
+  position: absolute;
+  top: 20px;
 }
 
 .shipping_divider2 {
@@ -2520,7 +2544,7 @@ white-space: nowrap;
   height: 3px;
   position: absolute;
   left: 747.87px;
-  top: 2898.85px;
+  top: 2915.85px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
@@ -2545,7 +2569,11 @@ white-space: nowrap;
   transition: 0.3s;
 }
 
-
+.shipping_details_titles { 
+  display: flex;
+  position: absolute;
+  top: 25px;
+}
 
 .shipping_details {
   color: #000000;
@@ -2660,8 +2688,8 @@ white-space: nowrap;
   width: 19px;
   height: 11px;
   position: absolute;
-  left: 761.87px;
-  top: 2826.85px;
+  left: 760.87px;
+  top: 2852.85px;
 }
 
 .add_to_cart {
