@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
-import {MaterialsRenderingContent} from "../../zebrablinds.js"
 
 const MaterialsPage = () => {
 
@@ -27,10 +26,10 @@ const MaterialsPage = () => {
   
 
   //LOGIC FOR  CHOSEN MATERIAL RENDERING IN BOM
-  const [MaterialsRenderingContent, setMaterialsRenderingContent] = useState('');
 
 
      // Logic for materials image render
+
      const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
 
      const getImageClassName = (imageName) => {

@@ -5,28 +5,25 @@ import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
 
 const FabricsPage = () => {
+  const [active_head_rail_color_Rendering_Content, Setactive_head_rail_color_Rendering_Content] = useState('');
+  const [active_bottom_rail_color_Rendering_Content, Setactive_bottom_rail_color_Rendering_Content] = useState('');
 
 
 
   // Logic for color render head rails
   const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
-  const handleClickChooseBottomRailColor = (imageName) => {
-    Set_selected_bottom_rail_color(imageName === selected_bottom_rail_color ? null : imageName);
-  };
-  const getImageClassNameColorBottomRail = (imageName) => {
+
+  const getImageClassNameColorHeadRail  = (imageName) => {
     const baseClassName = styles[imageName];
-    return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+    return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
   };
 
   // Logic for color render bottom rails
   const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
-
-  const handleClickChooseHeadRailColor = (imageName) => {
-    Set_selected_head_rail_color(imageName === selected_head_rail_color ? null : imageName);
-  };
-  const getImageClassNameColorHeadRail = (imageName) => {
+  
+  const getImageClassNameColorBottomRail = (imageName) => {
     const baseClassName = styles[imageName];
-    return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+    return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
   };
 
   const imagesDataHeadRail = [
@@ -45,6 +42,19 @@ const FabricsPage = () => {
     { key: 'fabric_type_image5', src: '/cassette.png', label: 'Oval White' },
     // Add more image data as needed
   ];
+
+
+
+
+
+  //add color selections to the bom 
+
+  //add head rail colors
+
+  const selectedImageDataHead = imagesDataHeadRail.find(imageData => imageData.key === selected_head_rail_color);
+  const selectedImageDataBottom = imagesDataBottomRail.find(imageData => imageData.key === selected_bottom_rail_color);
+
+
 
 
   return (
@@ -103,6 +113,15 @@ Set_selected_bottom_rail_color(imageData.key);
 </div>
 
 </div>
+
+<div className={styles.head_rail_color_answer}>
+{selectedImageDataHead ? selectedImageDataHead.label : ''}
+                                    </div>
+
+
+                                    <div className={styles.bottom_rail_color_answer}>
+                                    {selectedImageDataBottom ? selectedImageDataBottom.label : ''}
+                                    </div>
         
       </div>
 

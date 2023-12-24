@@ -44,8 +44,6 @@ function ZebraBlinds() {
 
     };
 
-
-
     const handleNextButton1Click = () => {
         if (!Was_Next_Button_Clicked1) {
             // Your existing functionality
@@ -85,20 +83,6 @@ function ZebraBlinds() {
             Set_Was_Next_Button_Clicked4(true);
         }
     };
-
-
-    // Logic for materials image render
-    const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
-
-    const handleClickCHangeMaterialsImage = (imageName) => {
-        Set_materials_selectedImage(imageName === materials_selectedImage ? null : imageName);
-    };
-
-    const getImageClassNameImageRender = (imageName) => {
-        const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
-    };
-
 
 
     //2. // LOGIC FOR ENTER WIDTH
@@ -185,6 +169,8 @@ function ZebraBlinds() {
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
+    const [active_head_rail_color_Rendering_Content, Setactive_head_rail_color_Rendering_Content] = useState('');
+    const [active_bottom_rail_color_Rendering_Content, Setactive_bottom_rail_color_Rendering_Content] = useState('');
 
   
 
@@ -1148,6 +1134,17 @@ function ZebraBlinds() {
                                             fill="black"
                                         />
                                     </svg>
+
+                                    <div className={styles.head_rail_color}>Head Rail Color:</div>
+                                    <div className={styles.head_rail_color_answer}>
+                                        {active_head_rail_color_Rendering_Content}
+                                    </div>
+
+
+                                    <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
+                                    <div className={styles.bottom_rail_color_answer}>
+                                        {active_bottom_rail_color_Rendering_Content}
+                                    </div>
 
                                     <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
                                     <div className={styles.bottom_rail_type_answer}>
