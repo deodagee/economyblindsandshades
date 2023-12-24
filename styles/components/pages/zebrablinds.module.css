@@ -1275,6 +1275,18 @@ color: rgb(133, 133, 133);
 }
 
 
+.skip_top_section{
+  display: flex;
+  position: absolute;
+  top: 470px;
+}
+
+.skip_bottom_section{
+  display: flex;
+  position: absolute;
+  top: 30px;
+}
+
 
 
 .skip_head_rail_ellipse {
@@ -2381,7 +2393,7 @@ white-space: nowrap;
   display: flex;
   position: absolute;
   left: 870px;
-  top: 2690.85px;
+  top: 2790.85px;
   width: 66px;
   height: 10px;
   white-space: nowrap;
