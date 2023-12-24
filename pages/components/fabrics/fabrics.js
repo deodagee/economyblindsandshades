@@ -51,8 +51,8 @@ const FabricsPage = () => {
 
   //add head rail colors
 
-  const selectedImageDataHead = imagesDataHeadRail.find(imageData => imageData.key === selected_head_rail_color);
-  const selectedImageDataBottom = imagesDataBottomRail.find(imageData => imageData.key === selected_bottom_rail_color);
+  const selectedImageData_Bottomrail = imagesDataHeadRail.find(imageData => imageData.key === selected_head_rail_color);
+  const selectedImageData_Headrail = imagesDataBottomRail.find(imageData => imageData.key === selected_bottom_rail_color);
 
 
 
@@ -114,15 +114,18 @@ Set_selected_bottom_rail_color(imageData.key);
 
 </div>
 
+
+
 <div className={styles.head_rail_color_answer}>
-{selectedImageDataHead ? selectedImageDataHead.label : ''}
-                                    </div>
-
-
-                                    <div className={styles.bottom_rail_color_answer}>
-                                    {selectedImageDataBottom ? selectedImageDataBottom.label : ''}
+                                    {selectedImageData_Headrail ? selectedImageData_Headrail.label : ''}
                                     </div>
         
+<div className={styles.bottom_rail_color_answer}>
+{selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : ''}
+                                    </div>
+
+                                    
+                                   
       </div>
 
       

@@ -29,7 +29,6 @@ const MaterialsPage = () => {
 
 
      // Logic for materials image render
-
      const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
 
      const getImageClassName = (imageName) => {

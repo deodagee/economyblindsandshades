@@ -3,7 +3,7 @@ import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import MaterialsPage from '../materials/materials.js'; // Adjust the path accordingly
+import MaterialsPage,  {selectedImageData} from '../materials/materials.js'; // Adjust the path accordingly
 import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
 import LeftSidePage from "../leftside/leftside.js";
 
@@ -169,10 +169,7 @@ function ZebraBlinds() {
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
-    const [active_head_rail_color_Rendering_Content, Setactive_head_rail_color_Rendering_Content] = useState('');
-    const [active_bottom_rail_color_Rendering_Content, Setactive_bottom_rail_color_Rendering_Content] = useState('');
 
-  
 
 
     const handleEllipseClickSkipHeadRailColor = () => {
@@ -237,10 +234,10 @@ function ZebraBlinds() {
         }
     };
 
-        // Keep the existing functionality here if needed
+    // Keep the existing functionality here if needed
 
 
-    
+
 
     //Logic for product title 
     const [product_title, setproduct_title] = useState("ZEBRA BLINDS SHADES");
@@ -352,7 +349,7 @@ function ZebraBlinds() {
                             </div>
                             <div className={styles.inside_mount}>Inside Mount</div>
                             <Image alt="image" width={400} height={400} className={styles.outsidemount_1} src="/OutsideMount.png" />
-                            <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
+                            <Image alt="image" width={400} height={400} className={styles.insidemount_1} src="/insidemount.png" />
                             <div className={styles.outside_mount}>Outside Mount</div>
                             <div
                                 className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
@@ -818,24 +815,6 @@ function ZebraBlinds() {
                                 <FabricsPage></FabricsPage>
 
 
-
-
-
-
-                                <div className={styles.pick_bottom_rail_color_wrapper}>
-                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
-
-                                    <div
-                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                        onClick={handleEllipseClickSkipBottomRailColor}
-                                    ></div>
-                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-                                    <div className={styles.note_skipping_color_for_bottom_rail}>
-                                        *Note: Skipping Color will result with steel material
-                                    </div>
-                                </div>
-
                                 <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
                                     <div
                                         className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
@@ -867,6 +846,24 @@ function ZebraBlinds() {
                                         <div className={styles.bottom_rail_color_rectangle}></div>
                                         <div className={styles.steel}>Steel</div>
                                     </div>
+
+
+
+                                <div className={styles.pick_bottom_rail_color_wrapper}>
+                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+
+                                    <div
+                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                        onClick={handleEllipseClickSkipBottomRailColor}
+                                    ></div>
+                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                    <div className={styles.note_skipping_color_for_bottom_rail}>
+                                        *Note: Skipping Color will result with steel material
+                                    </div>
+                                </div>
+
+
                                 </div>
                                 <button
                                     className={styles.next_item4}
@@ -951,8 +948,8 @@ function ZebraBlinds() {
                                     <div className={styles.window_type}>Window Type:</div>
 
                                     <div className={styles.window_type_answer}>
-                                        {roomDarkeningContent}                                    
-                                        </div>
+                                        {roomDarkeningContent}
+                                    </div>
 
 
                                     <svg
@@ -977,7 +974,7 @@ function ZebraBlinds() {
                                             {number}</p>
 
 
-                                            <p className={styles.width_rendering_element_fractions}>
+                                        <p className={styles.width_rendering_element_fractions}>
                                             {fractions[fractionIndex].includes('/') ? (
                                                 <span className={styles.fraction_element1}>
                                                     <span>
@@ -993,8 +990,8 @@ function ZebraBlinds() {
                                             ) : (
                                                 fractions[fractionIndex]
                                             )}
-                                        </p>                                                        
-                                        </div>
+                                        </p>
+                                    </div>
 
                                     <svg
                                         className={styles.rectangle_37}
@@ -1038,7 +1035,7 @@ function ZebraBlinds() {
                                             )}
                                         </p>
 
-                </div>
+                                    </div>
 
 
                                     <svg
@@ -1076,7 +1073,6 @@ function ZebraBlinds() {
                                     </svg>
 
                                     <div className={styles.materials}>Materials:</div>
-
 
 
 
@@ -1118,7 +1114,7 @@ function ZebraBlinds() {
 
                                     <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
                                     <div className={styles.casette_head_rail_type_answer}>
-                                    {active_cassette_round1RenderingContent}
+                                        {active_cassette_round1RenderingContent}
                                     </div>
 
                                     <svg
@@ -1136,19 +1132,15 @@ function ZebraBlinds() {
                                     </svg>
 
                                     <div className={styles.head_rail_color}>Head Rail Color:</div>
-                                    <div className={styles.head_rail_color_answer}>
-                                        {active_head_rail_color_Rendering_Content}
-                                    </div>
+
 
 
                                     <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
-                                    <div className={styles.bottom_rail_color_answer}>
-                                        {active_bottom_rail_color_Rendering_Content}
-                                    </div>
+
 
                                     <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
                                     <div className={styles.bottom_rail_type_answer}>
-                                        {"same as ellipse chosen in select_cassette_bottom_rail_group"}
+                                        {"active__selected_bottom_rail_type"}
                                     </div>
 
 
@@ -1187,7 +1179,7 @@ function ZebraBlinds() {
                                 <div className={styles.add_to_cart_rectangle}></div>
 
                                 <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
-                                    <div class={styles.add_to_cart}>ADD TO CART</div>
+                                    <div className={styles.add_to_cart}>ADD TO CART</div>
                                 </Link>
 
                                 <Image alt="image" width={100} height={100} className={styles.paymenticon}
