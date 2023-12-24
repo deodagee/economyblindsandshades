@@ -161,8 +161,8 @@ function ZebraBlinds() {
     const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
-    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
+
+
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
 
@@ -172,15 +172,6 @@ function ZebraBlinds() {
     const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
 
-    const handleEllipseClickSkipHeadRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
-    };
-
-    const handleEllipseClickSkipBottomRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
-    };
 
 
 
@@ -815,14 +806,7 @@ function ZebraBlinds() {
                                 <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
                                 <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
                                 <div className={styles.fabric_types}>FABRIC TYPES</div>
-                                <div
-                                    className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                    onClick={handleEllipseClickSkipHeadRailColor}
-                                ></div>
-                                <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
-                                <div className={styles.note_skipping_color_for_head_rail}>
-                                    *Note: Skipping Color will result with steel material
-                                </div>
+
 
 
                                 <FabricsPage></FabricsPage>
@@ -866,14 +850,7 @@ function ZebraBlinds() {
                                         <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
                                         <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
 
-                                        <div
-                                            className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                            onClick={handleEllipseClickSkipBottomRailColor}
-                                        ></div>
-                                        <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-                                        <div className={styles.note_skipping_color_for_bottom_rail}>
-                                            *Note: Skipping Color will result with steel material
-                                        </div>
+
                                     </div>
 
 
