@@ -339,9 +339,7 @@ transition: 0.3s;
 }
 
 
-
-
-.ellipse_16 {
+.inside_mount_ellipse {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -354,7 +352,7 @@ transition: 0.3s;
   top: 229.83px;
 }
 
-.ellipse_17 {
+.outside_mount_ellipse {
   background: #cdcdcd;
   border-radius: 50%;
   border-style: solid;
@@ -694,6 +692,7 @@ transition: 0.3s;
   height: 15px;
   width: 50px;
   font-size: 10px;
+  white-space: nowrap;
 }
 
 
@@ -872,6 +871,28 @@ transition: 0.3s;
   height: 12.16px;
 }
 
+
+.setentriesbutton { 
+  color: #900000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-top: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 0.2rem;
+  border-width: 2px;
+  border-color: rgb(157, 157, 157);
+  position: absolute;
+  left: 1150px;
+  top: 710px;
+  width: 32.1px;
+  height: 12.16px;}
 
 .next_button1 { 
   color: #aaaaaa;
@@ -2219,6 +2240,7 @@ white-space: nowrap;
   position: absolute;
   display: flex;
   flex-direction: row;
+  gap: 5px;
   left: 875px;
   top: 2606.85px;
   width: 36px;
@@ -2248,11 +2270,14 @@ white-space: nowrap;
   font-size: 9px;
   font-weight: 700;
   position: absolute;
+  display: flex;
+  flex-direction: row;
   left: 875px;
   top: 2631.85px;
   width: 42px;
   height: 10px;
   white-space: nowrap;
+  gap: 5px;
 
 }
 
@@ -2306,7 +2331,7 @@ white-space: nowrap;
   font-weight: 700;
   position: absolute;
   left: 875px;
-  top: 2680.85px;
+  top: 2700px;
   width: 66px;
   height: 10px;
   white-space: nowrap;
