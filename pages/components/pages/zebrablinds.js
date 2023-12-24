@@ -1217,7 +1217,7 @@ function ZebraBlinds() {
 
                                 <div className={styles.order_number}>Order Number: 345969654</div>
                                 <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                                <div className={styles.date}>12/07/2024</div>
+                                <div className={styles.date}>00/00/0000</div>
 
 
                                 <div className={styles.add_to_cart_rectangle}></div>
