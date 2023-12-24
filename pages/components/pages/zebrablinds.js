@@ -23,6 +23,10 @@ function ZebraBlinds() {
 
 
     //logic for turning next button's bg color 
+
+
+
+
     const NextButton1buttonStyle = {
         backgroundColor: Was_Next_Button_Clicked1 ? 'white' : '#313131',
     };
@@ -95,42 +99,6 @@ function ZebraBlinds() {
         return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
     };
 
-    //1. //  ellipse logic
-    const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
-    const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
-    const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
-    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
-    const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
-
-    const handleEllipseClick1 = (ellipseNumber) => {
-        Setactive_inside_outside_ellipse(ellipseNumber);
-    };
-
-    const handleEllipseClick2 = (ellipseNumber) => {
-        Setactive_wand_cordlift_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
-    };
-
-    const handleEllipseClick3 = (ellipseNumber) => {
-        Setactive_cassette_round1(ellipseNumber);
-    };
-
-    const handleEllipseClickSkipHeadRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
-    };
-
-    const handleEllipseClickSkipBottomRailColor = () => {
-        console.log('Ellipse Clicked');
-        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
-    };
-
-
-
-    const handleEllipseClick5 = (ellipseNumber) => {
-        Setactive_cassette_round2(ellipseNumber);
-    };
-
 
 
     //2. // LOGIC FOR ENTER WIDTH
@@ -149,6 +117,7 @@ function ZebraBlinds() {
             setNumber((prevNumber) => prevNumber - 1);
         }
     };
+    //2. // LOGIC FOR ENTER WIDTH fractions
 
     const fractions = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
     const [fractionIndex, setFractionIndex] = useState(0);
@@ -183,6 +152,7 @@ function ZebraBlinds() {
             Setheightnumber((prevNumber) => prevNumber - 1);
         }
     };
+    //2. // LOGIC FOR ENTER HEIGHT fractions 
 
     const fractionsheight = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
     const [heightfractionIndex, SetheightfractionIndex] = useState(0);
@@ -202,7 +172,74 @@ function ZebraBlinds() {
     };
 
 
+
+    //1. //  ellipse logic
+    const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
+    const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
+    const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
+    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(null);
+    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
+    const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
+
+
+    const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
+    const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
+
+  
+    const handleEllipseClick3 = (ellipseNumber) => {
+        Setactive_cassette_round1(ellipseNumber);
+    };
+
+    const handleEllipseClickSkipHeadRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
+    };
+
+    const handleEllipseClickSkipBottomRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
+    };
+
+    const handleEllipseClick5 = (ellipseNumber) => {
+        Setactive_cassette_round2(ellipseNumber);
+    };
+
     //LOGIC FOR BOM
+    //Add inside or outside options to the bom 
+
+    const handleClickInside_And_Outisde_Ellipses = (ellipseNumber) => {
+        Setactive_inside_outside_ellipse(ellipseNumber);
+
+        // Set the content based on the clicked ellipse number
+        if (ellipseNumber === 1) {
+            setInsideOrOutsideRenderingContent('Inside Mount');
+        } else if (ellipseNumber === 2) {
+            setInsideOrOutsideRenderingContent('Outside Mount');
+        }
+
+        // Keep the existing functionality here if needed
+
+    };
+
+    //Add 3 lift type options to the bom
+    const handleLiftFeatureEllipsess = (ellipseNumber) => {
+        Setactive_wand_cordlift_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+
+        // Set the content based on the clicked ellipse number
+        if (ellipseNumber === 1) {
+            setactive_wand_cordlift_motorizedRenderingContent('wand');
+        } else if (ellipseNumber === 2) {
+            setactive_wand_cordlift_motorizedRenderingContent('cord lift');
+        }
+        else if (ellipseNumber === 3) {
+            setactive_wand_cordlift_motorizedRenderingContent('motorized');
+        }
+
+        // Keep the existing functionality here if needed
+
+    };
+
+    
 
     //Logic for product title 
     const [product_title, setproduct_title] = useState("ZEBRA BLINDS SHADES");
@@ -267,7 +304,6 @@ function ZebraBlinds() {
 
 
 
-
     return (
 
         <>
@@ -318,8 +354,8 @@ function ZebraBlinds() {
                             <Image alt="image" width={400} height={400} class={styles.insidemount_1} src="/insidemount.png" />
                             <div className={styles.outside_mount}>Outside Mount</div>
                             <div
-                                className={`${styles.ellipse_16} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                                onClick={() => handleEllipseClick1(1)}
+                                className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                                onClick={() => handleClickInside_And_Outisde_Ellipses(1)}
                             ></div>
                             <div
                                 className={styles.inside_mount_blinds_fit_within_your}
@@ -328,8 +364,8 @@ function ZebraBlinds() {
                                 popular choice. Your product will be made with a ½ inch deduction.
                             </div>
                             <div
-                                className={`${styles.ellipse_17} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                                onClick={() => handleEllipseClick1(2)}
+                                className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                                onClick={() => handleClickInside_And_Outisde_Ellipses(2)}
                             ></div>
                             <div
                                 className={styles.outside_mount_blinds_are_installed}
@@ -360,12 +396,16 @@ function ZebraBlinds() {
                             <div className={styles.enter_size_group}>
                                 <div className={styles.enter_size}>Enter Window Size:</div>
 
+
+
+
                                 <div className={styles.enter_width_window_trigger}>
                                     <div className={styles.width}>Width</div>
                                     <div className={styles.rectangle_9}></div>
                                     <div className={styles.rectangle_10}>
                                     </div>
                                     <div>
+
 
                                         <div className={styles.width_scroll_number_inches}>
 
@@ -555,10 +595,12 @@ function ZebraBlinds() {
 
                                     <div className={styles.inches2}>Inches</div>
                                     <div className={styles.eighths2}>Eighths</div>
+
                                     <button
                                         className={styles.next_item1}
                                         onClick={handleNextButton1Click}
                                     >
+
                                         <div
                                             style={NextButton1buttonStyle}
                                             className={styles.next_button1}>Next</div>
@@ -606,7 +648,10 @@ function ZebraBlinds() {
 
                                 <div className={styles.select_material}>2. Select Material</div>
 
+
                                 <MaterialsPage></MaterialsPage>
+
+
                                 <button
                                     className={styles.next_item2}
                                     onClick={handleNextButton2Click}
@@ -658,7 +703,7 @@ function ZebraBlinds() {
                                 <div className={styles.add_lift_feature}>3. Add Lift Feature</div>
                                 <div
                                     className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
-                                    onClick={() => handleEllipseClick2(1)}
+                                    onClick={() => handleLiftFeatureEllipsess(1)}
                                 ></div>
                                 <div className={styles.wand}>Wand</div>
                                 <div className={styles.free}>Free</div>
@@ -677,7 +722,7 @@ function ZebraBlinds() {
 
                                 <div
                                     className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
-                                    onClick={() => handleEllipseClick2(3)}
+                                    onClick={() => handleLiftFeatureEllipsess(2)}
                                 ></div>
 
                                 <div className={styles.cord_lift}>Cord Lift</div>
@@ -686,7 +731,7 @@ function ZebraBlinds() {
 
                                 <div
                                     className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
-                                    onClick={() => handleEllipseClick2(2)}
+                                    onClick={() => handleLiftFeatureEllipsess(3)}
                                 ></div>
 
                                 <div className={styles.motorized}>Motorized</div>
@@ -905,7 +950,8 @@ function ZebraBlinds() {
                                     <div className={styles.window_type}>Window Type:</div>
 
                                     <div className={styles.window_type_answer}>
-                                        {roomDarkeningContent}                                    </div>
+                                        {roomDarkeningContent}                                    
+                                        </div>
 
 
                                     <svg
@@ -926,8 +972,27 @@ function ZebraBlinds() {
 
                                     <div className={styles.width2}>Width:</div>
                                     <div className={styles.width2_answer}>
-                                        {WidthRenderingContentInches}{"''"}
-                                        {WidthRenderingContentFractions}{"''"}                                                                
+                                        <p className={styles.width_rendering_element_inches}>
+                                            {number}</p>
+
+
+                                            <p className={styles.width_rendering_element_fractions}>
+                                            {fractions[fractionIndex].includes('/') ? (
+                                                <span className={styles.fraction_element1}>
+                                                    <span>
+                                                        {fractions[fractionIndex].split('/')[0]}
+                                                    </span>
+                                                    <span>
+                                                        {"/"}
+                                                    </span>
+                                                    <span>
+                                                        {fractions[fractionIndex].split('/')[1]}
+                                                    </span>
+                                                </span>
+                                            ) : (
+                                                fractions[fractionIndex]
+                                            )}
+                                        </p>                                                        
                                         </div>
 
                                     <svg
@@ -946,13 +1011,33 @@ function ZebraBlinds() {
 
 
 
-
-
                                     <div className={styles.height2}>Height:</div>
                                     <div className={styles.height2_answer}>
-                                    {HeightRenderingContentInches}{"''"}
-                                        {HeightRenderingContentFractions}{"''"} 
-                                                                            </div>
+
+                                        <p className={styles.height_rendering_element_inches}>
+                                            {heightnumber}
+                                        </p>
+
+                                        <p className={styles.height_rendering_element_fractions}>
+                                            {fractionsheight[heightfractionIndex].includes('/') ? (
+                                                <span className={styles.fraction_element2}>
+                                                    <span>
+                                                        {fractions[heightfractionIndex].split('/')[0]}
+                                                    </span>
+                                                    <span>
+                                                        {"/"}
+                                                    </span>
+                                                    <span>
+                                                        {fractions[heightfractionIndex].split('/')[1]}
+                                                    </span>
+                                                </span>
+
+                                            ) : (
+                                                fractionsheight[heightfractionIndex]
+                                            )}
+                                        </p>
+
+                </div>
 
 
                                     <svg
@@ -971,7 +1056,7 @@ function ZebraBlinds() {
 
                                     <div className={styles.mount}>Mount:</div>
                                     <div className={styles.mount_answer}>
-                                        {"same as chosen ellipse in select_mount_group"}
+                                        {InsideOrOutsideRenderingContent}
                                     </div>
 
                                     <svg
@@ -981,6 +1066,7 @@ function ZebraBlinds() {
                                         viewBox="0 0 483 2"
                                         fill="none"
                                         xmlns="http://www.w3.org/2000/svg"
+
                                     >
                                         <path
                                             d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
@@ -989,9 +1075,9 @@ function ZebraBlinds() {
                                     </svg>
 
                                     <div className={styles.materials}>Materials:</div>
-                                    <div className={styles.materials_answer}>
-                                        {"same as chosen image label from "}
-                                    </div>
+
+
+
 
                                     <svg
                                         className={styles.rectangle_40}
@@ -1010,7 +1096,7 @@ function ZebraBlinds() {
 
                                     <div className={styles.lift_type}>Lift Type:</div>
                                     <div className={styles.lift_type_answer}>
-                                        {"same as ellipse chosen in add_lift_feature"}
+                                        {active_wand_cordlift_motorizedRenderingContent}
                                     </div>
 
 
