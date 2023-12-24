@@ -3,7 +3,7 @@ import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import MaterialsPage,  {selectedImageData} from '../materials/materials.js'; // Adjust the path accordingly
+import MaterialsPage, { selectedImageData } from '../materials/materials.js'; // Adjust the path accordingly
 import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
 import LeftSidePage from "../leftside/leftside.js";
 
@@ -169,7 +169,7 @@ function ZebraBlinds() {
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
-
+    const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
 
     const handleEllipseClickSkipHeadRailColor = () => {
@@ -182,9 +182,7 @@ function ZebraBlinds() {
         Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
     };
 
-    const handleEllipseClick5 = (ellipseNumber) => {
-        Setactive_cassette_round2(ellipseNumber);
-    };
+
 
     //LOGIC FOR BOM
     //Add inside or outside options to the bom 
@@ -202,6 +200,21 @@ function ZebraBlinds() {
         // Keep the existing functionality here if needed
 
     };
+
+    //add bottom rail options to the bom
+    const handleEllipseClick5 = (ellipseNumber) => {
+        Setactive_cassette_round2(ellipseNumber);
+
+        if (ellipseNumber === 1) {
+            setbottomRailOptionsRenderingContent("Bottom Rail Option 1");
+        } else if (ellipseNumber === 2) { 
+            setbottomRailOptionsRenderingContent("Bottom Rail Option 2");
+        } else if (ellipseNumber ===3) { 
+            setbottomRailOptionsRenderingContent("Bottom Rail Option 3");
+        }
+
+    };
+
 
     //Add 3 lift type options to the bom
     const handleLiftFeatureEllipsess = (ellipseNumber) => {
@@ -321,9 +334,9 @@ function ZebraBlinds() {
                                 <p className={styles.room_darkening_element}>Room Darkening</p>
 
                                 <div className={styles.top_prices}>
-                                    <p className={styles.price_regular}>$ 325.00 </p>
+                                    <p className={styles.price_regular}>$ 00.00 </p>
 
-                                    <p className={styles.price_discount}>SAVE 25%</p>
+                                    <p className={styles.price_discount}>SAVE 00%</p>
                                 </div>
                             </div>
                         </div>
@@ -725,7 +738,7 @@ function ZebraBlinds() {
 
                                 <div className={styles.cord_lift}>Cord Lift</div>
 
-                                <div className={styles.cordlift_price_value}>$60.00</div>
+                                <div className={styles.cordlift_price_value}>$00.00</div>
 
                                 <div
                                     className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
@@ -831,14 +844,14 @@ function ZebraBlinds() {
                                         <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
 
 
-                                        <div className={styles.cassette2}>Cassette</div>
-                                        <div className={styles.product_price}>$65.00</div>
+                                        <div className={styles.cassette2}>option 1</div>
+                                        <div className={styles.product_price}>$00.00</div>
                                         <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
 
 
 
-                                        <div className={styles.round2}>Round</div>
-                                        <div className={styles.product_price_2}>$60.00</div>
+                                        <div className={styles.round2}>option 2</div>
+                                        <div className={styles.product_price_2}>$00.00</div>
                                         <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
                                         <div className={styles.skip_head_rail_color_divider_line}></div>
                                         <div className={styles.color}>Color:</div>
@@ -849,19 +862,19 @@ function ZebraBlinds() {
 
 
 
-                                <div className={styles.pick_bottom_rail_color_wrapper}>
-                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
+                                    <div className={styles.pick_bottom_rail_color_wrapper}>
+                                        <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
+                                        <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
 
-                                    <div
-                                        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                        onClick={handleEllipseClickSkipBottomRailColor}
-                                    ></div>
-                                    <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-                                    <div className={styles.note_skipping_color_for_bottom_rail}>
-                                        *Note: Skipping Color will result with steel material
+                                        <div
+                                            className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                                            onClick={handleEllipseClickSkipBottomRailColor}
+                                        ></div>
+                                        <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
+                                        <div className={styles.note_skipping_color_for_bottom_rail}>
+                                            *Note: Skipping Color will result with steel material
+                                        </div>
                                     </div>
-                                </div>
 
 
                                 </div>
@@ -1133,14 +1146,38 @@ function ZebraBlinds() {
 
                                     <div className={styles.head_rail_color}>Head Rail Color:</div>
 
-
+                                    <svg
+                                        className={styles.rectangle_46}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
 
                                     <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
-
+                                    <svg
+                                        className={styles.rectangle_47}
+                                        width="483"
+                                        height="2"
+                                        viewBox="0 0 483 2"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                            fill="black"
+                                        />
+                                    </svg>
 
                                     <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
                                     <div className={styles.bottom_rail_type_answer}>
-                                        {"active__selected_bottom_rail_type"}
+                                        {bottomRailOptionsRenderingContent}
                                     </div>
 
 
@@ -1161,14 +1198,21 @@ function ZebraBlinds() {
 
 
                                 <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
-                                <div className={styles.shipping_details}>Shipping Details</div>
-                                <div className={styles.total_price_tile}>Total Price</div>
+                                <div className={styles.shipping_details_titles}>
+                                    <div className={styles.shipping_details}>Shipping Details</div>
+                                    <div className={styles.total_price_tile}>Total Price</div>
+                                </div>
                                 <div className={styles.shipping_divider1}></div>
 
-                                <div className={styles.shipping}>Shipping</div>
-                                <div className={styles.shipping_price}>$12.34</div>
-                                <div className={styles.qty_1}>Qty 1</div>
-                                <div className={styles.total_price}>$65.34</div>
+
+                                <div className={styles.shipping_tagger}>
+
+                                    <div className={styles.shipping}>Shipping</div>
+                                    <div className={styles.shipping_price}>$00.00</div>
+                                    <div className={styles.qty_1}>Qty 1</div>
+                                    <div className={styles.total_price}>$00.00</div>
+                                </div>
+
                                 <div className={styles.shipping_divider2}></div>
 
                                 <div className={styles.order_number}>Order Number: 345969654</div>
