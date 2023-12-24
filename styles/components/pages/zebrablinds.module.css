@@ -1560,6 +1560,7 @@ color: rgb(133, 133, 133);
 
  .imageAndLabelContainerFabricsHeader {
   width: 70px;
+  height: 100px;
   display: flex;
   flex-direction: column; /* Make sure each image and description are in a column */
   align-items: center; /* Center the items horizontally within each column */
@@ -1569,6 +1570,8 @@ color: rgb(133, 133, 133);
 
  .imageAndLabelContainerFabricsBottom {
   width: 70px;
+  height: 100px;
+
   display: flex;
   flex-direction: column; /* Make sure each image and description are in a column */
   align-items: center; /* Center the items horizontally within each column */
@@ -2036,7 +2039,7 @@ white-space: nowrap;
 .review_your_order_bg {
   background: #435f7031;
   width: 500px;
-  height: 250px;
+  height: 300px;
   position: absolute;
   left: 745px;
   top: 2545.85px;
@@ -2394,6 +2397,64 @@ white-space: nowrap;
   height: 11px;
   white-space: nowrap;
 
+}
+
+
+.head_rail_color{ 
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 753.87px;
+  top: 2775px;
+  width: 89px;
+  height: 11px;
+
+}
+
+.head_rail_color_answer { 
+  color: #192e4d;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 875px;
+  top: 3167px;
+  width: 66px;
+  height: 11px;
+  white-space: nowrap;
+  
+}
+
+.bottom_rail_color{ 
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 753.87px;
+  top: 2795px;
+  width: 89px;
+  height: 11px;
+
+}
+
+.bottom_rail_color_answer { 
+  color: #192e4d;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  left: 875px;
+  top: 3184px;
+  width: 66px;
+  height: 11px;
+  white-space: nowrap;
 }
 
 .bottom_rail_type {
