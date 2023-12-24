@@ -1112,7 +1112,7 @@ function ZebraBlinds() {
                                     </svg>
 
 
-                                    <div className={styles.casette_head_rail_type}>Casette Head Rail Type:</div>
+                                    <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
                                     <div className={styles.casette_head_rail_type_answer}>
                                         {active_cassette_round1RenderingContent}
                                     </div>
