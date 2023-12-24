@@ -162,6 +162,13 @@ transition: 0.3s;
   position: absolute;
   left: 1043px;
   top: 4px;
+  transition: 0.4s;
+}
+
+.room_darkening_rectangle:hover { 
+  background: #580a0a;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .room_darkening_element { 
@@ -1736,6 +1743,7 @@ color: rgb(133, 133, 133);
   top: 2241.49px;
   width: 73.65px;
   height: 14.97px;
+  white-space: nowrap;
 }
 
 
@@ -1774,6 +1782,7 @@ color: rgb(133, 133, 133);
   top: 2300.49px;
   width: 54.77px;
   height: 14.97px;
+  white-space: nowrap;
 }
 
 .active_cassette_round2 {
