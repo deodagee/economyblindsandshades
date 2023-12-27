@@ -741,9 +741,17 @@ transition: 0.3s;
 }
 
 
-.enter_height_window_trigger {
+.enter_height_window_trigger_inside_mount {
+  position: absolute;
+  margin: 0;
+}
+
+.enter_height_window_trigger_outside_mount { 
   position: absolute;
 }
+
+
+.enter_heigh
 
 .height {
   color: #000000;
