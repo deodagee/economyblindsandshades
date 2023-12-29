@@ -5,7 +5,6 @@
     align-items: center;
     position:fixed;
     background-color: white;
-
   }
   
   .headercomponent {
@@ -16,7 +15,6 @@
     justify-content: space-between;
     margin: 10px;
     padding: 0;
-    
   }
   
   .link_top_prt1 {
@@ -34,10 +32,8 @@
   }
   
   .logo_image { 
-    height: 90px;
+    height: 60px;
     width: auto;
-  
-
   }
 
 
