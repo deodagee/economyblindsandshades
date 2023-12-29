@@ -360,51 +360,51 @@ margin-top: 50px;
 
 
 .step_1 {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 805.00px;
-  top: 290px;
-  width: 178px;
+  top: 275px;
+  width: 150px;
   height: 24.33px;
 }
 
 .step_2 {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 805px;
   top: 345px;
-  width: 178px;
+  width: 150px;
   height: 31px;
 }
 
 .step_3 {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 805px;
-  top: 397px;
-  width: 178px;
+  top: 407px;
+  width: 150px;
   height: 31px;
 }
 
 
 .inside_mount_measurement_instructions {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 600;
   position: absolute;
   display: flex;
   left: 805.00px;
@@ -414,11 +414,11 @@ margin-top: 50px;
 }
 
 .outside_mount_instructions {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 600;
   position: absolute;
   left: 800px;
   top: 500px;
@@ -430,8 +430,8 @@ margin-top: 50px;
   width: 280px;
   height: auto;
   position: relative;
-  left: 1000px;
-  top: 520px;
+  left: 1050px;
+  top: 600px;
   border-radius: 0.50rem;
   box-shadow: rgb(194, 194, 194) 3px 2px 5px;
   transition: 0.3s;
@@ -445,43 +445,54 @@ margin-top: 50px;
 
 
 .step_1_outside_mount {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 800px;
-  top: 535px;
-  width: 178px;
-  height: 36.49px;
+  top: 525px;
+  width: 160px;
 }
 
 .step_2_outside_mount {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 800px;
-  top:640px;
-  width: 185px;
-  height: 27px;
+  top:637px;
+  width: 160px;
 }
 
 
 .step_3_outside_mount {
-  color: #000000;
+  color: #071949;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
   position: absolute;
   left: 800px;
-  top: 760px;
-  width: 185px;
-  height: 27px;
+  top: 765px;
+  width: 160px;
+}
+
+.step_tag { 
+  color: #b0b0b0;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: rgb(31, 31, 31);
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
 }
 
 
@@ -597,18 +608,32 @@ margin-top: 50px;
   overflow: visible;
 }
 
-.take_the_shortest {
+.inches_width_outside_mount {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
+  font-size: 5px;
   font-weight: 400;
   position: absolute;
-  left: 756.16px;
-  top: 1308.86px;
-  width: 244.56px;
-  height: 36.49px;
+  left: 1159px;
+  top: 697px;
+  width: 23.61px;
+  height: 7.49px;
 }
+
+.eighths_width_outside_mount {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  position: absolute;
+  left: 1210px;
+  top: 697px;
+  width: 32.1px;
+  height: 12.16px;
+}
+
 
 .select_color_type_seperator_line {
   background: #0d51a9;
@@ -785,7 +810,7 @@ margin-top: 50px;
   width: 280px;
   height: auto;
   position: relative;
-  left: 1000px;
+  left: 1050px;
   top: 170px;
   padding: 1px;
   border-radius: 0.50rem;
@@ -804,7 +829,7 @@ margin-top: 50px;
 .enter_size_inside_mount {
   position: absolute;
   top: -150px;
-  left: 50px;
+  left: 100px;
 }
 
 .enter_size_inside_mount_title {
@@ -835,7 +860,7 @@ margin-top: 50px;
   font-weight: 700;
   position: absolute;
   left: 757.11px;
-  top: 676px;
+  top: 670px;
   width: max-content;
   height: 14.97px;
   background-color: rgb(231, 231, 231);
@@ -860,18 +885,17 @@ margin-top: 50px;
   position: absolute;
 }
 
-
-.height_inside_mount_tag_title {
+.height_inside_mount_sub_title {
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 700;
   position: absolute;
-  left: 920px;
-  top: 675px;
-  width: 56.66px;
+  left: 935px;
+  top: 676px;
   height: 14.97px;
+  white-space: nowrap;
 }
 
 
@@ -935,11 +959,11 @@ margin-top: 50px;
   color: #000000;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 700;
   position: absolute;
   left: 1250px;
-  top: 675px;
+  top: 676px;
   height: 14.97px;
 }
 
@@ -1016,8 +1040,8 @@ margin-top: 50px;
 .enter_size_outside_mount_group {
   position: absolute;
   top: 220px;
-  left: 50px;
-
+  left: 100px;
+  display: flex;
 }
 
 .enter_size_outside_mount_tag {
@@ -1046,14 +1070,23 @@ margin-top: 50px;
   display: flex;
 }
 
-.enter_height_trigger_outside_mount { 
+.enter_height_outside_mount { 
   display: flex;
   position: absolute;
+  left: 0px;
 }
 
 .enter_height_outside_subtitle { 
-  display: flex;
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
   position: absolute;
+  left: 935px;
+  top: 676px;
+  width: 56.66px;
+  height: 14.97px;
 }
 
 .enter_height_outside_mount_rectangle1 { 
@@ -1176,6 +1209,18 @@ margin-top: 50px;
   right: 155px;
 }
 
+
+.width_outside_mount_sub_title { 
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  left: 1250px;
+  top: 676px;
+  height: 14.97px;
+}
 
 .enter_width_outside_mount_rectangle1 {
   background: #f5f5f5;
