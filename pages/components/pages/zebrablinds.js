@@ -327,25 +327,25 @@ function ZebraBlinds() {
                                     <div className={styles.inside_mount}>Inside Mount</div>
 
                                     <div className={styles.inside_mount_measurement_instructions}>
-                                        Inside Mount Measurement Instructions:
+                                        Measurement Instructions:
                                     </div>
 
                                     <div
                                         className={styles.step_1}
                                     >
-                                        Step 1: <br></br> Measure in 3 places on the width, use the smallest measurement.
+                                        <p className={styles.step_tag}> Step 1:</p> Measure in 3 places on the width, use the smallest measurement.
                                     </div>
 
                                     <div
                                         className={styles.step_2}
                                     >
-                                        Step 2: <br></br>Measure the Height in the Center, use this measurement.
+                                        <p className={styles.step_tag}>  Step 2:</p>Measure the Height in the Center, use this measurement.
                                     </div>
 
                                     <div
                                         className={styles.step_3}
                                     >
-                                        Step 3: <br></br> Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
+                                        <p className={styles.step_tag}> Step 3: </p> Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
                                     </div>
 
                                 </div>
@@ -453,8 +453,8 @@ function ZebraBlinds() {
                                                 />
                                             </svg>
 
-                                            <div className={styles.inches_height_inside_mount}>Inchesinside</div>
-                                            <div className={styles.eighths_height_inside_mount}>Eighthsinside</div>
+                                            <div className={styles.inches_height_inside_mount}>Inches</div>
+                                            <div className={styles.eighths_height_inside_mount}>Eighths</div>
                                         </div>
                                     </div>
 
@@ -554,8 +554,8 @@ function ZebraBlinds() {
                                             />
                                         </svg>
 
-                                        <div className={styles.inches_width_inside_mount}>Inchesinside</div>
-                                        <div className={styles.eighths_width_inside_mount}>Eighthsinside</div>
+                                        <div className={styles.inches_width_inside_mount}>Inches</div>
+                                        <div className={styles.eighths_width_inside_mount}>Eighths</div>
 
                                     </div>
                                 </div>
@@ -571,7 +571,7 @@ function ZebraBlinds() {
                                 <div className={styles.outside_mount}>Outside Mount</div>
 
                                 <div className={styles.outside_mount_instructions}>
-                                    Outside Mount Measurement Instructions                                </div>
+                                    Measurement Instructions:                                </div>
 
 
                                 <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/OUTSIDEMOUNT.png" />
@@ -579,13 +579,13 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.step_1_outside_mount}>
-                                    Step 1: <br></br>Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
+                                    <p className={styles.step_tag}> Step 1: </p>Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
                                 </div>
 
                                 <div
                                     className={styles.step_2_outside_mount}
                                 >
-                                    Step 2: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                    <p className={styles.step_tag}> Step 2: </p> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
 
                                 </div>
 
@@ -593,7 +593,7 @@ function ZebraBlinds() {
                                 <div
                                     className={styles.step_3_outside_mount}
                                 >
-                                    Step 3: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                    <p className={styles.step_tag}> Step 3: </p> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
 
                                 </div>
 
@@ -698,8 +698,8 @@ function ZebraBlinds() {
                                                 />
                                             </svg>
 
-                                            <div className={styles.inches_height_outside_mount}>Inches outisde</div>
-                                            <div className={styles.eighths_height_outside_mount}>Eighths outisde</div>
+                                            <div className={styles.inches_height_outside_mount}>Inches</div>
+                                            <div className={styles.eighths_height_outside_mount}>Eighths</div>
 
 
                                         </div>
@@ -804,10 +804,8 @@ function ZebraBlinds() {
                                             </svg>
 
 
-                                            <div className={styles.inches_width_outside_mount}>Inches outisde</div>
-                                            <div className={styles.eighths_width_outside_mount}>Eighths outside</div>
-
-
+                                            <div className={styles.inches_width_outside_mount}>Inches</div>
+                                            <div className={styles.eighths_width_outside_mount}>Eighths</div>
                                         </div>
                                     </div>
                                 </div>
