@@ -9,21 +9,12 @@ function zebrablinds () {
 
     return ( 
         <>
-        <ul className={styles.main_wrapper}>
-
-            <li className={styles.header_piece}>
+<div className={styles.main_wrapper}>
         <HeaderPiece></HeaderPiece>
-        </li>
-        <li className={styles.middle_piece}>
         <ZebrablindsPage></ZebrablindsPage>
-        </li>
-        <li className={styles.footer_piece}>
-        <Footer></Footer>
-        </li>
-        </ul>
+        </div>
         </>
     )
 }
-
 
 export default zebrablinds;

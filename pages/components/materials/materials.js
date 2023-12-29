@@ -23,17 +23,17 @@ const MaterialsPage = () => {
 
     // Add more image data as needed
   ];
-  
+
 
   //LOGIC FOR  CHOSEN MATERIAL RENDERING IN BOM
 
 
-     // Logic for materials image render
-     const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
+  // Logic for materials image render
+  const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
 
-     const getImageClassName = (imageName) => {
-      const baseClassName = styles[imageName];
-      return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
+  const getImageClassName = (imageName) => {
+    const baseClassName = styles[imageName];
+    return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
   };
   const selectedImageData = imagesData.find(imageData => imageData.key === materials_selectedImage);
 
@@ -46,37 +46,37 @@ const MaterialsPage = () => {
 
   return (
     <>
-    <div>
-      <div className={styles.materials_list}>
+      <div>
+        <div className={styles.materials_list}>
 
-  {imagesData.map((imageData) => (
-    <div key={imageData.key} className={styles.imageAndLabelContainerMaterials}>
-      <Image
-        alt="image"
-        width={100}
-        height={100}
-        className={getImageClassName(imageData.key)}
-        src={imageData.src}
-        onClick={() => {
-          console.log(`Click handler for ${imageData.key}`);
-          handleClickgetImageClassName(imageData.key);
-        }}
-      />
+          {imagesData.map((imageData) => (
+            <div key={imageData.key} className={styles.imageAndLabelContainerMaterials}>
+              <Image
+                alt="image"
+                width={100}
+                height={100}
+                className={getImageClassName(imageData.key)}
+                src={imageData.src}
+                onClick={() => {
+                  console.log(`Click handler for ${imageData.key}`);
+                  handleClickgetImageClassName(imageData.key);
+                }}
+              />
 
-      <div className={styles.descriptionLabelMaterials}>
-      <div>{imageData.label}</div>
+              <div className={styles.descriptionLabelMaterials}>
+                <div>{imageData.label}</div>
+              </div>
+
+            </div>
+
+          ))}
+        </div>
+      </div>
+      <div className={styles.materials_answer}>
+        {selectedImageData ? selectedImageData.label : ''}
       </div>
 
-    </div>
-    
-  ))}
-    </div>
-    </div>
-    <div className={styles.materials_answer}>
-        {selectedImageData ? selectedImageData.label : ''}
-      </div>         
-
-                                  </>
+    </>
   );
 };
 

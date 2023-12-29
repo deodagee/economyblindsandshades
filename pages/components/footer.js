@@ -9,14 +9,7 @@ function Footer ( ) {
     return ( 
 
         <>
-        <div className={styles.Footer_wrapper} >
-            sfsdfsdf
-
-            <div className={styles.footer }>
-
-            </div>
-
-
+        <div className={styles.footer} >
         </div>
         </>
     )
