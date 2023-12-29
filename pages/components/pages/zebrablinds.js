@@ -326,23 +326,28 @@ function ZebraBlinds() {
                                     ></div>
                                     <div className={styles.inside_mount}>Inside Mount</div>
 
-                                    <div className={styles.take_the_shortest2}>
-                                        Take the shortest width measurement.
+                                    <div className={styles.inside_mount_measurement_instructions}>
+                                    Inside Mount Measurement Instructions:
+                                                                        </div>
+
+                                    <div
+                                        className={styles.step_1}
+                                    >
+                                        Step 1: <br></br> Measure in 3 places on the width, use the smallest measurement.
                                     </div>
 
                                     <div
-                                        className={styles.measure_the_top_of}
+                                        className={styles.step_2}
                                     >
-                                        Measure the top of the window frame and order the exact size making NO
-                                        deductions.
+                                        Step 2: <br></br>Measure the Height in the Center, use this measurement. 
                                     </div>
 
                                     <div
-                                        className={styles.inside_mount_blinds_fit_within_your}
+                                        className={styles.step_3}
                                     >
-                                        Inside mount blinds fit within your window opening and is by far the most
-                                        popular choice. Your product will be made with a ½ inch deduction.
+                                        Step 3: <br></br> Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount). 
                                     </div>
+
                                 </div>
 
                                 <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/INSIDEMOUNT.png" />
@@ -565,25 +570,31 @@ function ZebraBlinds() {
                                 ></div>
                                 <div className={styles.outside_mount}>Outside Mount</div>
 
-                                <div className={styles.measure_the_left_center}>
-                                    Measure the left, center and right portions of the inside frame.
-                                </div>
+                                <div className={styles.outside_mount_instructions}>
+                                Outside Mount Measurement Instructions                                </div>
 
 
                                 <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/OUTSIDEMOUNT.png" />
 
 
 
-                                <div className={styles.take_the_shortest1}>
-                                    Take the shortest height measurement.
+                                <div className={styles.step_1_outside_mount}>
+                                Step 1: <br></br>Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.  
                                 </div>
 
                                 <div
-                                    className={styles.outside_mount_blinds_are_installed}
+                                    className={styles.step_2_outside_mount}
                                 >
-                                    Outside mount blinds are installed above the window opening (on the trim
-                                    or drywall). Use with a shallow window opening or on doors. Your product
-                                    will be made in the exact size you specify.
+                                        Step 2: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.   
+
+                                </div>
+
+                                
+                                <div
+                                    className={styles.step_3_outside_mount}
+                                >
+                                        Step 3: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.   
+
                                 </div>
 
 
@@ -691,16 +702,16 @@ function ZebraBlinds() {
                                             <div className={styles.eighths_height_outside_mount}>Eighths outisde</div>
                                         </div>
 
-                                        <div className={styles.enter_width2}>
-                                            <div className={styles.width2}>width outisde2</div>
+                                        <div className={styles.enter_width_outisde_mount}>
+                                            <div className={styles.width2}>width outisde</div>
 
                                             <div className={styles.enter_width_outside_mount_rectangle1}></div>
                                             <div className={styles.enter_width_outside_mount_rectangle2}></div>
                                             <div>
 
-                                                <div className={styles.height_scroll_number_inches}>
+                                                <div className={styles.height_scroll_number_inches_outside_mount}>
 
-                                                    <p className={styles.height_rendering_element_inches}>
+                                                    <p className={styles.height_rendering_element_inches_outside_mount}>
                                                         {heightnumber}
                                                     </p>
                                                 </div>
@@ -792,9 +803,9 @@ function ZebraBlinds() {
 
 
                                     </div>
-
-
                                 </div>
+
+
                             </div>
                         </div>
 
