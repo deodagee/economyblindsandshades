@@ -309,31 +309,9 @@ margin-top: 50px;
   height: 14.97px;
 }
 
-.inside_mount_blinds_fit_within_your {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  position: absolute;
-  left: 805px;
-  top: 340px;
-  width: 178px;
-  height: 31px;
-}
 
-.outside_mount_blinds_are_installed {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  position: absolute;
-  left: 800px;
-  top: 570px;
-  width: 185px;
-  height: 27px;
-}
+
+
 
 
 .inside_mount_ellipse {
@@ -381,7 +359,7 @@ margin-top: 50px;
 }
 
 
-.measure_the_top_of {
+.step_1 {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -394,8 +372,34 @@ margin-top: 50px;
   height: 24.33px;
 }
 
+.step_2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  position: absolute;
+  left: 805px;
+  top: 345px;
+  width: 178px;
+  height: 31px;
+}
 
-.take_the_shortest2 {
+.step_3 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  position: absolute;
+  left: 805px;
+  top: 397px;
+  width: 178px;
+  height: 31px;
+}
+
+
+.inside_mount_measurement_instructions {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -409,7 +413,7 @@ margin-top: 50px;
   height: 36.49px;
 }
 
-.measure_the_left_center {
+.outside_mount_instructions {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -440,7 +444,7 @@ margin-top: 50px;
 }
 
 
-.take_the_shortest1 {
+.step_1_outside_mount {
   color: #000000;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -451,6 +455,33 @@ margin-top: 50px;
   top: 535px;
   width: 178px;
   height: 36.49px;
+}
+
+.step_2_outside_mount {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  position: absolute;
+  left: 800px;
+  top:640px;
+  width: 185px;
+  height: 27px;
+}
+
+
+.step_3_outside_mount {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  position: absolute;
+  left: 800px;
+  top: 760px;
+  width: 185px;
+  height: 27px;
 }
 
 
@@ -586,7 +617,7 @@ margin-top: 50px;
   height: 2.94px;
   position: absolute;
   left: 750.5px;
-  top: 895px;
+  top: 1050px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
@@ -595,7 +626,7 @@ margin-top: 50px;
 
 .select_color_group {
   position: absolute;
-  top: 180px;
+  top: 330px;
   height: max-content;
   display: flex;
   flex-direction: row;
@@ -770,15 +801,11 @@ margin-top: 50px;
 }
 
 
-
-
-
 .enter_size_inside_mount {
   position: absolute;
   top: -150px;
   left: 50px;
 }
-
 
 .enter_size_inside_mount_title {
   color: #000000;
@@ -845,6 +872,31 @@ margin-top: 50px;
   top: 675px;
   width: 56.66px;
   height: 14.97px;
+}
+
+
+.enter_height_inside_mount_rectangle1 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1132px;
+  top: 673px;
+}
+
+.enter_height_inside_mount_rectangle2 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1185px;
+  top: 673px;
 }
 
 .inches_height_inside_mount {
@@ -917,78 +969,13 @@ margin-top: 50px;
 
 
 
-.height_scroll_number_inches {
-  position: absolute;
-  left: 1137px;
-  top: 672px;
-}
-
-
-.height_rendering_element_inches { 
-  display: flex;
-}
-
-
-.polygon_5 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1161px;
-  top: 685px;
-  overflow: visible;
-}
-
-.polygon_6 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1170.5px;
-  top: 682px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
-
-.height_scroll_number_fractions {
-  position: absolute;
-  left: 1190px;
-  top: 672px;
-}
-
-.height_rendering_element_fractions { 
-  display: flex;
-}
-
-
-.fraction_element2 { 
-  width: max-content;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
 
 
 
-.polygon_7 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1224px;
-  top: 692px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
 
-.polygon_8 {
-  width: 10.39px;
-  height: 9.36px;
-  position: absolute;
-  left: 1224px;
-  top: 682px;
-  transform: translate(-9.69px, -7.02px);
-  overflow: visible;
-}
+
+
+
 
 
 
@@ -1028,7 +1015,7 @@ margin-top: 50px;
 
 .enter_size_outside_mount_group {
   position: absolute;
-  top: 40px;
+  top: 220px;
   left: 50px;
 
 }
@@ -1069,7 +1056,7 @@ margin-top: 50px;
   position: absolute;
 }
 
-.enter_height_inside_mount_rectangle1 {
+.enter_height_outside_mount_rectangle1 { 
   background: #f5f5f5;
   border-style: solid;
   border-color: #dddddd;
@@ -1081,7 +1068,151 @@ margin-top: 50px;
   top: 673px;
 }
 
-.enter_height_inside_mount_rectangle2 {
+
+.height_scroll_number_inches {
+  position: absolute;
+  left: 1137px;
+  top: 672px;
+}
+
+
+.height_rendering_element_inches { 
+  display: flex;
+}
+
+.polygon_5 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1161px;
+  top: 685px;
+  overflow: visible;
+}
+
+.polygon_6 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1170.5px;
+  top: 682px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+
+.height_scroll_number_fractions {
+  position: absolute;
+  left: 1190px;
+  top: 672px;
+}
+
+.height_rendering_element_fractions { 
+  display: flex;
+}
+
+
+
+.fraction_element2 { 
+  width: max-content;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.polygon_7 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1224px;
+  top: 692px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+.polygon_8 {
+  width: 10.39px;
+  height: 9.36px;
+  position: absolute;
+  left: 1224px;
+  top: 682px;
+  transform: translate(-9.69px, -7.02px);
+  overflow: visible;
+}
+
+
+.inches_height_outside_mount {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  position: absolute;
+  left: 1159px;
+  top: 697px;
+  width: 23.61px;
+  height: 7.49px;
+}
+
+.eighths_height_outside_mount {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 5px;
+  font-weight: 400;
+  position: absolute;
+  left: 1210px;
+  top: 697px;
+  width: 32.1px;
+  height: 12.16px;
+}
+
+
+.enter_width_outisde_mount { 
+  display: flex;
+  position: absolute;
+  right: 155px;
+}
+
+
+.enter_width_outside_mount_rectangle1 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1132px;
+  top: 673px;
+}
+
+.enter_width_outside_mount_rectangle2 {
+  background: #f5f5f5;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 1px;
+  width: 47.21px;
+  height: 23.39px;
+  position: absolute;
+  left: 1185px;
+  top: 673px;
+}
+
+.height_scroll_number_inches_outside_mount {
+  position: absolute;
+  left: 1137px;
+  top: 672px;
+}
+
+.height_rendering_element_inches_outside_mount { 
+  display: flex;
+}
+
+
+.enter_height_outisde_mount_rectangle2 { 
   background: #f5f5f5;
   border-style: solid;
   border-color: #dddddd;
@@ -1250,7 +1381,7 @@ color: rgb(133, 133, 133);
 
 .select_lift_type_group {
   position: absolute;
-  top: -240px;
+  top: -100px;
 }
 
 .select_lift_type_seperator_line {
@@ -1564,7 +1695,7 @@ color: rgb(133, 133, 133);
 
 .select_head_rail_group {
   position: absolute;
-  top: -230px;
+  top: -70px;
 }
 
 
@@ -2122,7 +2253,7 @@ color: rgb(133, 133, 133);
 .quantity_and_add_to_cart_group { 
   display: flex;
   position: absolute;
-  top: 250px;
+  top: 350px;
 }
 
 
