@@ -327,8 +327,8 @@ function ZebraBlinds() {
                                     <div className={styles.inside_mount}>Inside Mount</div>
 
                                     <div className={styles.inside_mount_measurement_instructions}>
-                                    Inside Mount Measurement Instructions:
-                                                                        </div>
+                                        Inside Mount Measurement Instructions:
+                                    </div>
 
                                     <div
                                         className={styles.step_1}
@@ -339,13 +339,13 @@ function ZebraBlinds() {
                                     <div
                                         className={styles.step_2}
                                     >
-                                        Step 2: <br></br>Measure the Height in the Center, use this measurement. 
+                                        Step 2: <br></br>Measure the Height in the Center, use this measurement.
                                     </div>
 
                                     <div
                                         className={styles.step_3}
                                     >
-                                        Step 3: <br></br> Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount). 
+                                        Step 3: <br></br> Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
                                     </div>
 
                                 </div>
@@ -361,7 +361,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_height1}>
 
-                                            <div className={styles.height_inside_mount_tag_title}>height inside</div>
+                                            <div className={styles.height_inside_mount_sub_title}>Height:</div>
 
                                             <div className={styles.enter_height_inside_mount_rectangle1}></div>
                                             <div className={styles.enter_height_inside_mount_rectangle2}></div>
@@ -456,109 +456,109 @@ function ZebraBlinds() {
                                             <div className={styles.inches_height_inside_mount}>Inchesinside</div>
                                             <div className={styles.eighths_height_inside_mount}>Eighthsinside</div>
                                         </div>
-                                        </div>
+                                    </div>
 
 
 
-                                        <div className={styles.enter_width_inside_mount}>
-                                            
-                                            <div className={styles.enter_width_inside_mount_title}>width inside</div>
+                                    <div className={styles.enter_width_inside_mount}>
 
-                                            <div className={styles.enter_width_inside_mount_rectangle1}></div>
-                                            <div className={styles.enter_width_inside_mount_rectangle2}></div>
+                                        <div className={styles.enter_width_inside_mount_title}>Width:</div>
 
-                                            <div>
-                                                <div className={styles.height_scroll_number_inches}>
+                                        <div className={styles.enter_width_inside_mount_rectangle1}></div>
+                                        <div className={styles.enter_width_inside_mount_rectangle2}></div>
 
-                                                    <p className={styles.height_rendering_element_inches}>
-                                                        {heightnumber}
-                                                    </p>
-                                                </div>
+                                        <div>
+                                            <div className={styles.height_scroll_number_inches}>
 
-                                                <svg
-                                                    className={styles.polygon_5}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_increase_height_inches_inside_mount}>
-                                                    <path
-                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-
-                                                <svg
-                                                    className={styles.polygon_6}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_decrease_height_inches}>
-                                                    <path
-                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-                                            </div>
-
-                                            <div className={styles.height_scroll_number_fractions}>
-
-                                                <p className={styles.height_rendering_element_fractions}>
-                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                        <span className={styles.fraction_element2}>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[0]}
-                                                            </span>
-                                                            <span>
-                                                                {"/"}
-                                                            </span>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[1]}
-                                                            </span>
-                                                        </span>
-
-                                                    ) : (
-                                                        fractionsheight[heightfractionIndex]
-                                                    )}
+                                                <p className={styles.height_rendering_element_inches}>
+                                                    {heightnumber}
                                                 </p>
                                             </div>
 
                                             <svg
-                                                className={styles.polygon_7}
+                                                className={styles.polygon_5}
                                                 width="10"
                                                 height="8"
                                                 viewBox="0 0 10 8"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_fractions}>
+                                                onClick={handle_polygon_increase_height_inches_inside_mount}>
                                                 <path
-                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
+                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                     fill="#D9D9D9"
                                                 />
                                             </svg>
 
                                             <svg
-                                                className={styles.polygon_8}
+                                                className={styles.polygon_6}
                                                 width="10"
                                                 height="8"
                                                 viewBox="0 0 10 8"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_fractions}>
+                                                onClick={handle_polygon_decrease_height_inches}>
                                                 <path
-                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
+                                                    d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
                                                     fill="#D9D9D9"
                                                 />
                                             </svg>
-
-                                            <div className={styles.inches_width_inside_mount}>Inchesinside</div>
-                                            <div className={styles.eighths_width_inside_mount}>Eighthsinside</div>
-
                                         </div>
+
+                                        <div className={styles.height_scroll_number_fractions}>
+
+                                            <p className={styles.height_rendering_element_fractions}>
+                                                {fractionsheight[heightfractionIndex].includes('/') ? (
+                                                    <span className={styles.fraction_element2}>
+                                                        <span>
+                                                            {fractions[heightfractionIndex].split('/')[0]}
+                                                        </span>
+                                                        <span>
+                                                            {"/"}
+                                                        </span>
+                                                        <span>
+                                                            {fractions[heightfractionIndex].split('/')[1]}
+                                                        </span>
+                                                    </span>
+
+                                                ) : (
+                                                    fractionsheight[heightfractionIndex]
+                                                )}
+                                            </p>
+                                        </div>
+
+                                        <svg
+                                            className={styles.polygon_7}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_increase_height_fractions}>
+                                            <path
+                                                d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+
+                                        <svg
+                                            className={styles.polygon_8}
+                                            width="10"
+                                            height="8"
+                                            viewBox="0 0 10 8"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onClick={handle_polygon_decrease_height_fractions}>
+                                            <path
+                                                d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
+                                                fill="#D9D9D9"
+                                            />
+                                        </svg>
+
+                                        <div className={styles.inches_width_inside_mount}>Inchesinside</div>
+                                        <div className={styles.eighths_width_inside_mount}>Eighthsinside</div>
+
                                     </div>
+                                </div>
 
                             </div>
 
@@ -571,7 +571,7 @@ function ZebraBlinds() {
                                 <div className={styles.outside_mount}>Outside Mount</div>
 
                                 <div className={styles.outside_mount_instructions}>
-                                Outside Mount Measurement Instructions                                </div>
+                                    Outside Mount Measurement Instructions                                </div>
 
 
                                 <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/OUTSIDEMOUNT.png" />
@@ -579,21 +579,21 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.step_1_outside_mount}>
-                                Step 1: <br></br>Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.  
+                                    Step 1: <br></br>Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
                                 </div>
 
                                 <div
                                     className={styles.step_2_outside_mount}
                                 >
-                                        Step 2: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.   
+                                    Step 2: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
 
                                 </div>
 
-                                
+
                                 <div
                                     className={styles.step_3_outside_mount}
                                 >
-                                        Step 3: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.   
+                                    Step 3: <br></br> Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
 
                                 </div>
 
@@ -605,105 +605,8 @@ function ZebraBlinds() {
 
                                     <div className={styles.enter_size_outside_mount_triggers}>
 
-                                    <div className={styles.enter_height_trigger_outside_mount}>
-                                            <div className={styles.enter_height_outside_subtitle}>Height Outisde2</div>
-
-                                            <div className={styles.enter_height_outside_mount_rectangle1}></div>
-                                            <div className={styles.enter_height_outisde_mount_rectangle2}></div>
-                                            <div>
-
-                                                <div className={styles.height_scroll_number_inches}>
-
-                                                    <p className={styles.height_rendering_element_inches}>
-                                                        {heightnumber}
-                                                    </p>
-                                                </div>
-
-                                                <svg
-                                                    className={styles.polygon_5}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_increase_height_inches_outisde_mount}>
-                                                    <path
-                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-
-                                                <svg
-                                                    className={styles.polygon_6}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_decrease_height_inches}>
-                                                    <path
-                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-                                            </div>
-
-                                            <div className={styles.height_scroll_number_fractions}>
-
-                                                <p className={styles.height_rendering_element_fractions}>
-                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                        <span className={styles.fraction_element2}>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[0]}
-                                                            </span>
-                                                            <span>
-                                                                {"/"}
-                                                            </span>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[1]}
-                                                            </span>
-                                                        </span>
-
-                                                    ) : (
-                                                        fractionsheight[heightfractionIndex]
-                                                    )}
-                                                </p>
-                                            </div>
-
-                                            <svg
-                                                className={styles.polygon_7}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_fractions}>
-                                                <path
-                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
-
-                                            <svg
-                                                className={styles.polygon_8}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_fractions}>
-                                                <path
-                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
-
-                                            <div className={styles.inches_height_outside_mount}>Inches outisde</div>
-                                            <div className={styles.eighths_height_outside_mount}>Eighths outisde</div>
-                                        </div>
-
-                                        <div className={styles.enter_width_outisde_mount}>
-                                            <div className={styles.width2}>width outisde</div>
+                                        <div className={styles.enter_height_outside_mount}>
+                                            <div className={styles.enter_height_outside_subtitle}>Height:</div>
 
                                             <div className={styles.enter_width_outside_mount_rectangle1}></div>
                                             <div className={styles.enter_width_outside_mount_rectangle2}></div>
@@ -795,13 +698,117 @@ function ZebraBlinds() {
                                                 />
                                             </svg>
 
-                                            <div className={styles.inches2}>Inches</div>
-                                            <div className={styles.eighths2}>Eighths</div>
+                                            <div className={styles.inches_height_outside_mount}>Inches outisde</div>
+                                            <div className={styles.eighths_height_outside_mount}>Eighths outisde</div>
+
+
                                         </div>
 
+                                        <div className={styles.enter_width_outisde_mount}>
+                                            <div className={styles.width_outside_mount_sub_title}>Width:</div>
 
 
+                                            <div className={styles.enter_height_outside_mount_rectangle1}></div>
+                                            <div className={styles.enter_height_outisde_mount_rectangle2}></div>
+                                            <div>
 
+                                                <div className={styles.height_scroll_number_inches}>
+
+                                                    <p className={styles.height_rendering_element_inches}>
+                                                        {heightnumber}
+                                                    </p>
+                                                </div>
+
+                                                <svg
+                                                    alt="inches down outisde mount"
+
+                                                    className={styles.polygon_5}
+                                                    width="10"
+                                                    height="8"
+                                                    viewBox="0 0 10 8"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    onClick={handle_polygon_increase_height_inches_outisde_mount}>
+                                                    <path
+                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                        fill="#D9D9D9"
+                                                    />
+                                                </svg>
+
+                                                <svg
+                                                    alt="inches up outisde mount"
+                                                    className={styles.polygon_6}
+                                                    width="10"
+                                                    height="8"
+                                                    viewBox="0 0 10 8"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    onClick={handle_polygon_decrease_height_inches}>
+                                                    <path
+                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
+                                                        fill="#D9D9D9"
+                                                    />
+                                                </svg>
+                                            </div>
+
+                                            <div className={styles.height_scroll_number_fractions}>
+
+                                                <p className={styles.height_rendering_element_fractions}>
+                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
+                                                        <span className={styles.fraction_element2}>
+                                                            <span>
+                                                                {fractions[heightfractionIndex].split('/')[0]}
+                                                            </span>
+                                                            <span>
+                                                                {"/"}
+                                                            </span>
+                                                            <span>
+                                                                {fractions[heightfractionIndex].split('/')[1]}
+                                                            </span>
+                                                        </span>
+
+                                                    ) : (
+                                                        fractionsheight[heightfractionIndex]
+                                                    )}
+                                                </p>
+                                            </div>
+
+                                            <svg
+                                                alt="fractions down outisde mount"
+                                                className={styles.polygon_7}
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onClick={handle_polygon_increase_height_fractions}>
+                                                <path
+                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
+                                                    fill="#D9D9D9"
+                                                />
+                                            </svg>
+
+                                            <svg
+                                                alt="fractions up outisde mount"
+                                                className={styles.polygon_8}
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onClick={handle_polygon_decrease_height_fractions}>
+                                                <path
+                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
+                                                    fill="#D9D9D9"
+                                                />
+                                            </svg>
+
+
+                                            <div className={styles.inches_width_outside_mount}>Inches outisde</div>
+                                            <div className={styles.eighths_width_outside_mount}>Eighths outside</div>
+
+
+                                        </div>
                                     </div>
                                 </div>
 
