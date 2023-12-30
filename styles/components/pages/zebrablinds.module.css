@@ -838,10 +838,10 @@ margin-top: 50px;
 
 
 .materials_selectedImage { 
-  transform: scale(1.0.5);
   border-width: 3px;
   border-color: black;
 }
+
 
 
 .eighths {
@@ -2892,7 +2892,22 @@ color: rgb(133, 133, 133);
   display: flex;
   position: absolute;
   left: 870px;
-  top: 2790.85px;
+  top: 2795px;
+  width: 66px;
+  height: 10px;
+  white-space: nowrap;
+
+}
+.materials_answer2 {
+  color: #192e4d;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  left: 900px;
+  top: 2795px;
   width: 66px;
   height: 10px;
   white-space: nowrap;
