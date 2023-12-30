@@ -185,7 +185,7 @@ Beige: [
           src={image.src}
         />
          </div>
-        <div>{image.label}</div>
+        <div className={styles.selectedImageClass_label}>{image.label}</div>
       </div>
     ))}
   </div>
