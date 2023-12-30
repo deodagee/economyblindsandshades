@@ -636,7 +636,7 @@ margin-top: 50px;
 
 
 .select_color_type_seperator_line {
-  background: #0d51a9;
+  background: #a8a091;
   border-radius: 0.24rem;
   width: 600px;
   height: 2.94px;
@@ -863,13 +863,15 @@ margin-top: 50px;
   top: 670px;
   width: max-content;
   height: 14.97px;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   box-shadow: rgb(194, 194, 194) 3px 2px 5px;
+  cursor: crosshair;
+
 }
 
 
@@ -1055,13 +1057,14 @@ margin-top: 50px;
   top: 676px;
   width: max-content;
   height: 14.97px;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   box-shadow: rgb(194, 194, 194) 3px 2px 5px;
+  cursor: crosshair;
 }
 
 
@@ -1335,10 +1338,10 @@ color: rgb(133, 133, 133);
 
 
 .top_divider_line {
-  background: #0d51a9;
+  background: #a8a091;
   border-radius: 0.24rem;
   width: 600px;
-  height: 2.94px;
+  height: 6.94px;
   position: absolute;
   left: 750.43px;
   top: 149px;
@@ -1430,7 +1433,7 @@ color: rgb(133, 133, 133);
 }
 
 .select_lift_type_seperator_line {
-  background: #0d51a9;
+  background: #a8a091;
   border-radius: 0.24rem;
   width: 600px;
   height: 2.94px;
@@ -1625,6 +1628,21 @@ color: rgb(133, 133, 133);
   border-radius: 0.24rem;
 }
 
+.showrightchain_wrapper { 
+  position: absolute;
+  display: flex;
+  left: 1050px;
+  top: 1565px;
+  width: 100px;
+}
+
+.showleftchain_wrapper { 
+  position: absolute;
+  display: flex;
+  left: 1050px;
+  top: 1565px;
+  width: 100px;
+}
 
 .cord_lift_ellipse {
   background: #cdcdcd;
@@ -1745,7 +1763,7 @@ color: rgb(133, 133, 133);
 
 
 .select_head_rail_seperator_line {
-  background: #0d51a9;
+  background: #a8a091;
   border-radius: 0.24rem;
   width: 600px;
   height: 2.94px;
@@ -2303,7 +2321,7 @@ color: rgb(133, 133, 133);
 
 
 .quantity_seperator_line {
-  background: #0d51a9;
+  background: #a8a091;
   border-radius: 0.24rem;
   width: 600px;
   height: 2.94px;
@@ -2966,7 +2984,7 @@ color: rgb(133, 133, 133);
 
 
 .shipping_divider1 {
-  background: #0d51a9;
+  background: #a8a091;
   width: 600px;
   height: 3px;
   position: absolute;
@@ -2983,7 +3001,7 @@ color: rgb(133, 133, 133);
 }
 
 .shipping_divider2 {
-  background: #0d51a9;
+  background: #a8a091;
   width: 600px;
   height: 3px;
   position: absolute;
