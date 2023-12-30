@@ -742,6 +742,42 @@ margin-top: 50px;
 }
 
 
+.showBeigeImages_wrapper { 
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: max-content;
+  row-gap:20px;
+  column-gap: 0;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  left: 758.43px;
+  top: 915px;
+  height: 200px;
+}
+
+
+.selectedImageClass {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50px;
+
+}
+
+.imageContainer { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  padding: 2px;
+}
+
+
 /* YourComponent.module.css */
 .materials_list {
   border-width: 1px;
