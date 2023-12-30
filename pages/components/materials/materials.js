@@ -13,6 +13,7 @@ const MaterialsPage = () => {
   const [showGreyImages, setshowGreyImages] = useState(true);
   const [showWhiteImages, setshowWhiteImages] = useState(true);
 
+
   const handleshowBeigeImages = () => {
     setshowBeigeImages(!showBeigeImages);
     setshowBeigeImages(true);
@@ -170,8 +171,8 @@ Beige: [
         {selectedImageData ? selectedImageData.label : ''}
       </div>
 
-      {[showBeigeImages, showBlackImages, showBrownImages, showBronzeImages, showGreyImages,showWhiteImages] && (
-  <div className={styles.showBeigeImages_wrapper}>
+      {colorImageLists && (
+  <div className={styles.showImages_wrapper}>
     {/* Map over the selected color's image list */}
     {colorImageLists[materials_selectedImage]?.map((image) => (
       <div key={image.label} className={styles.imageContainer}>
