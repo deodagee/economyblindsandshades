@@ -45,12 +45,12 @@ const MaterialsPage = () => {
   };
 
   const imagesData = [
-    { key: 'Beige', src: '/BEIGE/ETB1-003 - BEIGE.png', label: 'Beige' },
-    { key: 'Black', src: '/BLACK/ETB1-006 - BLACK.png', label: 'Black' },
-    { key: 'Bronze', src: '/BRONZE/ETB1-005 - BRONZE.png', label: 'Bronze' },
-    { key: 'Brown', src: '/BROWN/ETB2-004 - BROWN.png', label: 'Brown' },
-    { key: 'Grey', src: '/GREY/ETB1-004 - GREY.png', label: 'Grey' },
-    { key: 'White', src: '/WHITE/ETB2-001 - WHITE.png', label: 'White' },
+    { key: 'Beige', src: '/BEIGE/ETB1003BEIGE.png', label: 'Beige' },
+    { key: 'Black', src: '/BLACK/ETB1006BLACK.png', label: 'Black' },
+    { key: 'Bronze', src: '/BRONZE/ETB1005BRONZE.png', label: 'Bronze' },
+    { key: 'Brown', src: '/BROWN/ETB2004BROWN.png', label: 'Brown' },
+    { key: 'Grey', src: '/GREY/ETB1004GREY.png', label: 'Grey' },
+    { key: 'White', src: '/WHITE/ETB2001WHITE.png', label: 'White' },
   ];
 
   const colorImageLists = {
@@ -107,7 +107,7 @@ const MaterialsPage = () => {
       { key: "Grey", src: '/GREY/ETB11001GREY.png', label: "ETB11-001" },
       { key: "Grey", src: '/GREY/ETB11002GREY.png', label: "ETB11-002" },
       { key: "Grey", src: '/GREY/ETB11004GREY.png', label: "ETB11-004" },
-      { key: "Grey", src: '/GREY/ETB14004GREY.png', label: "ETB14 - 004" },
+      { key: "Grey", src: '/GREY/ETB14004GREY.png', label: "ETB14-004" },
       { key: "Grey", src: '/GREY/ETB14003GREY.png', label: "ETB14-003" },
       { key: "Grey", src: '/GREY/ETB14005GREY.png', label: "ETB14-005" },
     ],
