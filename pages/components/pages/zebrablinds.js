@@ -350,7 +350,7 @@ function ZebraBlinds() {
 
                                 </div>
 
-                                <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/INSIDEMOUNT.png" />
+                                <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
 
                                 <div className={styles.enter_size_inside_mount}>
 
@@ -574,7 +574,7 @@ function ZebraBlinds() {
                                     Measurement Instructions:                                </div>
 
 
-                                <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/OUTSIDEMOUNT.png" />
+                                <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
 
 
 
