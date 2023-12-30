@@ -1,47 +1,99 @@
-import React, { useEffect } from "react";
-import styles from "../../styles/components/header.module.css";
-import Image from "next/image";
-import Link from "next/link";
+/* header.module.css */
 
-function HeaderPiece() {
-  useEffect(() => {
-    // Set overflowY to 'auto' on mount
-    document.body.style.overflowY = 'scroll';
-
-    // Cleanup function
-    return () => {
-      // Restore overflowX to 'hidden' and overflowY to 'auto' on unmount
-      document.body.style.overflowX = 'hidden';
-      document.body.style.overflowY = 'scroll';
-    };
-  }, []);
-
-  return (
-    <>
-    <div className={styles.header_wrapper}>
-
-    <ul className={styles.headercomponent}>
-
-        <li className={styles.link_top_prt1}> 
-        <Link className={styles.header_link} href={"/"} > Home </Link></li>
-
-        <li className={styles.header_logo}>
-          <Link href={'/'}>
-      <Image className={styles.logo_image} src={"/logo.jpg"} width={400} height={400} alt="economyblindsandshades_logo" />
-      </Link>
-    </li>
-
-    <li className={styles.link_top_prt2}> 
-    <Link className={styles.header_link} href={"/privacypolicy"} > Privacy Policy </Link>
-     <Link className={styles.header_link} href={"/getaquote"} > Get A Quote </Link>
-     <Link className={styles.header_link} href={"/learnmore"} > Learn More </Link>
-    </li>
-
-    </ul>
-    
-    </div>
-    </>
-  );
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  position: fixed;
+  background-color: white;
 }
 
-export default HeaderPiece;
+.headercomponent {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 0;
+  height: 50px;
+}
+
+.link_top_prt1 {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 20px;
+  width: 30vw;
+  order: 1;
+  /* Set the order to 1 to move it to the start */
+}
+
+.header_logo {
+  width: 30vw;
+  order: 2;
+  /* Set the order to 2 to keep it in the center */
+}
+
+.logo_image {
+  height: 90px;
+  width: auto;
+}
+
+
+.link_top_prt2 {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 30vw;
+  align-content: flex-end;
+  order: 3;
+  /* Set the order to 3 to move it to the end */
+}
+
+.header_link {
+  /* Add any additional styles for your links */
+  text-decoration: none;
+  color: #333;
+  /* Adjust the color as needed */
+  margin: 0 20px;
+  /* Add spacing between links, adjust as needed */
+}
+
+
+.second_menu_bar {
+  background-color: rgb(15, 15, 15);
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 0;
+  height: 50px;
+}
+
+.second_menu_bar_item  { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: max-content;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.chevron_top_menu { 
+  margin-left: 5px;
+  height: 7px;
+  width: 10px;
+}
