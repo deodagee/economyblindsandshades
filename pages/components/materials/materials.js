@@ -45,29 +45,29 @@ const MaterialsPage = () => {
   };
 
   const imagesData = [
-    { key: 'Beige', src: '/BEIGE/ETB1-003 - BEIGE.png', label: 'BEIGE' },
-    { key: 'Black', src: '/BLACK/ETB1-006 - BLACK.png', label: 'BLACK' },
-    { key: 'Bronze', src: '/BRONZE/ETB1-005 - BRONZE.png', label: 'BRONZE' },
-    { key: 'Brown', src: '/BROWN/ETB2-004 - BROWN.png', label: 'BROWN' },
-    { key: 'Grey', src: '/GREY/ETB1-004 - GREY.png', label: 'GREY' },
-    { key: 'White', src: '/WHITE/ETB2-001 - WHITE.png', label: 'WHITE' },
+    { key: 'Beige', src: '/BEIGE/ETB1-003 - BEIGE.png', label: 'Beige' },
+    { key: 'Black', src: '/BLACK/ETB1-006 - BLACK.png', label: 'Black' },
+    { key: 'Bronze', src: '/BRONZE/ETB1-005 - BRONZE.png', label: 'Bronze' },
+    { key: 'Brown', src: '/BROWN/ETB2-004 - BROWN.png', label: 'Brown' },
+    { key: 'Grey', src: '/GREY/ETB1-004 - GREY.png', label: 'Grey' },
+    { key: 'White', src: '/WHITE/ETB2-001 - WHITE.png', label: 'White' },
   ];
 
   const colorImageLists = {
-Beige: [
-  {key: "Beige", src: '/BEIGE/ETB1-003 - BEIGE.png', label: "ETB1-003"},
-  {key: "Beige", src: '/BEIGE/ETB2-002 - BEIGE.png', label: "ETB2-002"},
-  {key: "Beige", src: '/BEIGE/ETB3-001 - BEIGE.png', label: "ETB3-001"},
-  {key: "Beige", src: '/BEIGE/ETB3-002 - BEIGE.png', label: "ETB3-002"},
-  {key: "Beige", src: '/BEIGE/ETB3-003 - BEIGE.png', label: "ETB3-003"},
-  {key: "Beige", src: '/BEIGE/ETB5-003 - BEIGE.png', label: "ETB5-003"},
-  {key: "Beige", src: '/BEIGE/ETB6-003 - BEIGE.png', label: "ETB6-003"},
-  {key: "Beige", src: '/BEIGE/ETB7-001 - BEIGE.png', label: "ETB7-001"},
-  {key: "Beige", src: '/BEIGE/ETB8-003 - BEIGE.png', label: "ETB8-003"},
-  {key: "Beige", src: '/BEIGE/ETB10-001 - BEIGE.png', label: "ETB10-001"},
-  {key: "Beige", src: '/BEIGE/ETB11-003 - BEIGE.png', label: "ETB11-003"},
+    Beige: [
+      { key: "Beige", src: '/BEIGE/ETB1-003 - BEIGE.png', label: "ETB1-003" },
+      { key: "Beige", src: '/BEIGE/ETB2-002 - BEIGE.png', label: "ETB2-002" },
+      { key: "Beige", src: '/BEIGE/ETB3-001 - BEIGE.png', label: "ETB3-001" },
+      { key: "Beige", src: '/BEIGE/ETB3-002 - BEIGE.png', label: "ETB3-002" },
+      { key: "Beige", src: '/BEIGE/ETB3-003 - BEIGE.png', label: "ETB3-003" },
+      { key: "Beige", src: '/BEIGE/ETB5-003 - BEIGE.png', label: "ETB5-003" },
+      { key: "Beige", src: '/BEIGE/ETB6-003 - BEIGE.png', label: "ETB6-003" },
+      { key: "Beige", src: '/BEIGE/ETB7-001 - BEIGE.png', label: "ETB7-001" },
+      { key: "Beige", src: '/BEIGE/ETB8-003 - BEIGE.png', label: "ETB8-003" },
+      { key: "Beige", src: '/BEIGE/ETB10-001 - BEIGE.png', label: "ETB10-001" },
+      { key: "Beige", src: '/BEIGE/ETB11-003 - BEIGE.png', label: "ETB11-003" },
 
-],
+    ],
 
     Black: [
       { key: "Black", src: '/BLACK/ETB1-006 - BLACK.png', label: "ETB1-006" },
@@ -129,18 +129,38 @@ Beige: [
 
 
   // Logic for materials image render
+  //1.
   const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
-
+  //2.
   const getImageClassName = (imageName) => {
-    const baseClassName = styles[imageName];
-    return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
+    const baseClassName1 = styles[imageName];
+    return `${baseClassName1} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
   };
-
-  const selectedImageData = imagesData.find((imageData) => imageData.key === materials_selectedImage);
-
+  //3.
   const handleClickgetImageClassName = (imageName) => {
     Set_materials_selectedImage(imageName === materials_selectedImage ? null : imageName);
   };
+  //4.
+  const selectedImageData = imagesData.find((imageData) => imageData.key === materials_selectedImage );
+
+
+
+  //1.
+  const [materials_selectedColor, Set_materials_selectedColor] = useState(null);
+  //2.
+  const getImageColorName = (imageName) => {
+    const baseClassName = styles[imageName];
+    return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : styles.hidden}`;
+  };
+  //3.
+  const handleClickgetImageColorName = (ColorName) => {
+    Set_materials_selectedColor(ColorName === materials_selectedColor ? null : ColorName);
+  };
+  //4.
+  const selectedColorData = colorImageLists[materials_selectedImage]?.find((colordata) => colordata.key === materials_selectedColor );
+
+
+
 
   return (
     <>
@@ -148,6 +168,7 @@ Beige: [
         <div className={styles.materials_list}>
           {imagesData.map((imageData) => (
             <div key={imageData.key} className={styles.imageAndLabelContainerMaterials}>
+
               <Image
                 alt="image"
                 width={100}
@@ -167,31 +188,39 @@ Beige: [
           ))}
         </div>
       </div>
+
+
+      {colorImageLists && (
+        <div className={styles.showImages_wrapper}>
+          {/* Map over the selected color's image list */}
+          {colorImageLists[materials_selectedImage]?.map((colordata) => (
+            <div key={colordata.key} className={styles.imageContainer}>
+              <div>
+                <Image
+                  className={getImageColorName(colordata.key)}
+                  alt="key"
+                  width={100}
+                  height={100}
+                  src={colordata.src}
+                  onClick={() => {
+                    console.log(`Click handler for ${colordata.key}`);
+                    handleClickgetImageColorName(colordata.key);
+                  }}
+                />
+              </div>
+              <div className={styles.selectedImageClass_label}>{colordata.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
       <div className={styles.materials_answer}>
         {selectedImageData ? selectedImageData.label : ''}
       </div>
 
-      {colorImageLists && (
-  <div className={styles.showImages_wrapper}>
-    {/* Map over the selected color's image list */}
-    {colorImageLists[materials_selectedImage]?.map((image) => (
-      <div key={image.label} className={styles.imageContainer}>
-
-        <div>
-        <Image
-          className={styles.selectedImageClass}
-          alt={image.label}
-          width={100}
-          height={100}
-          src={image.src}
-        />
-         </div>
-        <div className={styles.selectedImageClass_label}>{image.label}</div>
+      <div className={styles.materials_answer2}>
+        {selectedColorData ? selectedColorData.label : ''}
       </div>
-    ))}
-  </div>
-)}
-
     </>
   );
 };

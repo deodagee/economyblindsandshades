@@ -287,6 +287,8 @@ function ZebraBlinds() {
                     <LeftSidePage></LeftSidePage>
 
                     <div className={styles.right_half}>
+
+                        <div className={styles.top_title_area}>
                         <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
 
                         <div className={styles.room_darkening_rectangle}></div>
@@ -302,6 +304,7 @@ function ZebraBlinds() {
 
                                     <p className={styles.price_discount}>SAVE 00%</p>
                                 </div>
+                                </div>
                             </div>
                         </div>
 
@@ -312,11 +315,14 @@ function ZebraBlinds() {
                             adds personality to any room. These zebra shades are made with two pieces
                             of fabric, which both have alternating panels/bands:
                         </div>
+
+                        <div className={styles.star_group}>
                         <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
                         <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+                        </div>
 
                         <div className={styles.top_divider_line}></div>
 
@@ -876,6 +882,15 @@ function ZebraBlinds() {
                         </div>
 
                         <div className={styles.select_lift_type_group}>
+                            
+                        <Image
+                                className={styles.iconforselectlifttype}
+                                alt="iconforselectlifttype"
+                                width={100}
+                                height={100}
+                                src={"/chevronleft.png"}>
+                            </Image>
+                            
                             <div className={styles.select_lift_type_seperator_line}></div>
                             <svg
                                 className={styles.select_lift_type_long_rectangle}
@@ -904,14 +919,6 @@ function ZebraBlinds() {
                                     fill="#102035"
                                 />
                             </svg>
-
-                            <Image
-                                className={styles.iconforselectlifttype}
-                                alt="iconforselectlifttype"
-                                width={100}
-                                height={100}
-                                src={"/chevronleft.png"}>
-                            </Image>
 
                             <div className={styles.select_lift_type_title}>
                                 <p>

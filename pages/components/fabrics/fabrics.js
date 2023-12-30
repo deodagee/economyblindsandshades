@@ -169,11 +169,11 @@ const FabricsPage = () => {
 
 
       <div className={styles.head_rail_color_answer}>
-        {selectedImageData_Headrail ? selectedImageData_Headrail.label : 'Steel'}
+        {selectedImageData_Headrail ? selectedImageData_Headrail.label : ''}
       </div>
 
       <div className={styles.bottom_rail_color_answer}>
-        {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : 'Steel'}
+        {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : ''}
       </div>
 
 
