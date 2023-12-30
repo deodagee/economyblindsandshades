@@ -21,7 +21,7 @@ z-index: -1;
   flex-shrink: 0;
   width: 1367.15px;
   position: relative;
-  top: 150px;
+  top: 200px;
 }
 
 
@@ -641,9 +641,9 @@ margin-top: 50px;
 
 
 .select_color_type_seperator_line {
-  background: #a8a091;
+  background: #cecece;
   border-radius: 0.24rem;
-  width: 600px;
+  width: 650px;
   height: 2.94px;
   position: absolute;
   left: 750.5px;
@@ -1393,10 +1393,10 @@ color: rgb(133, 133, 133);
 
 
 .top_divider_line {
-  background: #a8a091;
+  background: #cecece;
   border-radius: 0.24rem;
-  width: 600px;
-  height: 6.94px;
+  width: 650px;
+  height: 2px;
   position: absolute;
   left: 750.43px;
   top: 149px;
@@ -1488,9 +1488,9 @@ color: rgb(133, 133, 133);
 
 
 .select_lift_type_seperator_line {
-  background: #a8a091;
+  background: #cecece;
   border-radius: 0.24rem;
-  width: 600px;
+  width: 650px;
   height: 2.94px;
   position: absolute;
   left: 750.5px;
@@ -1821,9 +1821,9 @@ color: rgb(133, 133, 133);
 
 
 .select_head_rail_seperator_line {
-  background: #a8a091;
+  background: #cecece;
   border-radius: 0.24rem;
-  width: 600px;
+  width: 650px;
   height: 2.94px;
   position: absolute;
   left: 750.5px;
@@ -2379,9 +2379,9 @@ color: rgb(133, 133, 133);
 
 
 .quantity_seperator_line {
-  background: #a8a091;
+  background: #cecece;
   border-radius: 0.24rem;
-  width: 600px;
+  width: 650px;
   height: 2.94px;
   position: absolute;
   left: 750.5px;
@@ -2535,8 +2535,8 @@ color: rgb(133, 133, 133);
 }
 
 .review_your_order_seperator_line {
-  background: #d4d4d4;
-  width: 600px;
+  background: #cecece;
+  width: 650px;
   height: 0.94px;
   position: absolute;
   left: 750.5px;
@@ -3057,8 +3057,8 @@ color: rgb(133, 133, 133);
 
 
 .shipping_divider1 {
-  background: #a8a091;
-  width: 600px;
+  background: #cecece;
+  width: 650px;
   height: 3px;
   position: absolute;
   left: 747.87px;
@@ -3074,8 +3074,8 @@ color: rgb(133, 133, 133);
 }
 
 .shipping_divider2 {
-  background: #a8a091;
-  width: 600px;
+  background: #cecece;
+  width: 650px;
   height: 3px;
   position: absolute;
   left: 747.87px;
