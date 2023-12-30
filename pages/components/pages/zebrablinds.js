@@ -8,41 +8,49 @@ import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
 import LeftSidePage from "../leftside/leftside.js";
 import Footer from "../footer.js";
 
+
+
 function ZebraBlinds() {
-    const [Was_Next_Button_Clicked1, Set_Was_Next_Button_Clicked1] = useState(false);
-    const [Was_Next_Button_Clicked2, Set_Was_Next_Button_Clicked2] = useState(false);
-    const [Was_Next_Button_Clicked3, Set_Was_Next_Button_Clicked3] = useState(false);
     const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
     const [handle_polygon_increase_height_inches_outisde_mount, Sethandle_polygon_increase_height_inches_outisde_mount] = useState(false);
 
 
+
+    //Logic for add chain side
+
+    const [showImageright, setShowImageright] = useState(true);
+
+
+    const [showImageleft, setShowImageleft] = useState(false);
+
+
+
+    const showleftsidechain = () => {
+        setShowImageleft(!showImageleft);
+      setShowImageleft(true);
+        // Toggle off the right side image
+        setShowImageright(false);
+      };
+      
+      const showrightsidechain = () => {
+        setShowImageright(!showImageright);
+        setShowImageright(true);
+
+        // Toggle off the left side image
+        setShowImageleft(false);
+      };
+      
+
+
+
     //logic for turning next button's bg color 
-
-
-
-
-    const NextButton1buttonStyle = {
-        backgroundColor: Was_Next_Button_Clicked1 ? 'white' : '#313131',
-    };
-    const NextButton2buttonStyle = {
-        backgroundColor: Was_Next_Button_Clicked2 ? 'white' : '#313131',
-    };
-
-    const NextButton3buttonStyle = {
-        backgroundColor: Was_Next_Button_Clicked3 ? 'white' : '#313131',
-    };
-
 
     const NextButton4buttonStyle = {
         backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
     };
 
-
-
-
     //2. // LOGIC FOR ENTER WIDTH
     const [number, setNumber] = useState(1);
-
 
     const handle_polygon_decrease_width_inches = () => {
         // Increase the number, but not beyond 100
@@ -56,7 +64,6 @@ function ZebraBlinds() {
             setNumber((prevNumber) => prevNumber - 1);
         }
     };
-
 
     //2. // LOGIC FOR ENTER WIDTH fractions
 
@@ -926,14 +933,56 @@ function ZebraBlinds() {
                                 <div className={styles.select_chain_side_wrapper_title}>
                                     Select Chain Side
                                 </div>
-                                <div className={styles.select_chain_left_box}>Left</div>
 
-                                <div className={styles.select_chain_right_box}>
-                                    Right
-                                </div>
+
+                                <button
+                                    className={styles.select_chain_left_box_button}
+                                    onClick={showleftsidechain}
+                                >
+                                    <div className={styles.select_chain_left_box}>Left</div>
+                                </button>
+
+                                <button
+                                    className={styles.select_chain_right_box_button}
+                                    onClick={showrightsidechain}
+                                >
+                                    <div className={styles.select_chain_right_box}>Right</div>
+                                </button>
+
+                                {showImageright && (
+
+                                    <>
+                                        <div className={styles.showrightchain_wrapper}>
+                                            <Image
+                                                width={400}
+                                                height={400}
+                                                className={styles.showrightchain}
+                                                alt="showrightchain"
+                                                src="/rightside.png" // replace with the path to your image
+
+                                            />
+                                        </div>
+                                    </>
+                                )}
+
+
+                                {showImageleft && (
+
+                                    <>
+                                        <div className={styles.showleftchain_wrapper}>
+                                            <Image
+                                                width={400}
+                                                height={400}
+                                                className={styles.showleftchain}
+                                                alt="showleftchain"
+                                                src="/leftside.png" // replace with the path to your image
+
+                                            />
+                                        </div>
+                                    </>
+                                )}
 
                             </div>
-
                             <div
                                 className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
                                 onClick={() => handleLiftFeatureEllipsess(2)}
@@ -944,7 +993,8 @@ function ZebraBlinds() {
                             <div className={styles.cordlift_price_value}>$00.00</div>
 
                             <div
-                                className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ? styles.active_wand_cordlift_motorized : ''}`}
+                                className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ?
+                                    styles.active_wand_cordlift_motorized : ''}`}
                                 onClick={() => handleLiftFeatureEllipsess(3)}
                             ></div>
 
