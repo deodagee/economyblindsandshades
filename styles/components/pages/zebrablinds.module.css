@@ -742,10 +742,10 @@ margin-top: 50px;
 }
 
 
-.showBeigeImages_wrapper { 
+.showImages_wrapper { 
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   width: 300px;
   row-gap:0;
@@ -805,7 +805,7 @@ margin-top: 50px;
   overflow-y: hidden;
   width: 550px;
   left: 776.94px;
-  top: 820.68px;
+  top: 805.68px;
 }
 
 
