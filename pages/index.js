@@ -4,6 +4,7 @@ import styles from '../styles/components/home.module.css';
 import React from "react";
 import Link from 'next/link';
 import HeaderPiece from "./components/header"
+import Footer from './components/footer';
 
 
 export default function HomePage() {
@@ -29,7 +30,9 @@ export default function HomePage() {
   <p className={styles.welcome}>Welcome</p>
   </div>
 <div className={styles.box_prt2}>
+
     <Link href={"/getaquote"}><p className={styles.getaquote}>Get A Quote</p></Link>
+
     <Link href={"/learnmore"}><p className={styles.learnmore}>Learn More</p></Link>
     </div>
   </div>
@@ -161,10 +164,9 @@ export default function HomePage() {
             </Link>
             </div>
           </div>
-
+          
         </div>
         </div>
-
       </div>
       </div>
       </div>
