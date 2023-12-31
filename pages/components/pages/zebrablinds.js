@@ -995,9 +995,9 @@ function ZebraBlinds() {
                                 onClick={() => handleLiftFeatureEllipsess(2)}
                             ></div>
 
-                            <div className={styles.cord_lift}>Cord Lift</div>
+                            <div className={styles.cord_lift}>Cord Less</div>
 
-                            <div className={styles.cordlift_price_value}>$00.00</div>
+                            <div className={styles.cordlift_price_value}>$05.00</div>
 
                             <div
                                 className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ?
@@ -1375,20 +1375,6 @@ function ZebraBlinds() {
                                 </svg>
 
                                 <div className={styles.head_rail_color}>Head Rail Color:</div>
-
-                                <svg
-                                    className={styles.rectangle_46}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
 
                                 <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
                                 <svg

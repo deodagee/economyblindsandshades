@@ -5,44 +5,6 @@ import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
 
 const MaterialsPage = () => {
-  //logic for show color sections
-  const [showBeigeImages, setshowBeigeImages] = useState(true);
-  const [showBlackImages, setshowBlackImages] = useState(true);
-  const [showBrownImages, setshowBrownImages] = useState(true);
-  const [showBronzeImages, setshowBronzeImages] = useState(true);
-  const [showGreyImages, setshowGreyImages] = useState(true);
-  const [showWhiteImages, setshowWhiteImages] = useState(true);
-
-
-  const handleshowBeigeImages = () => {
-    setshowBeigeImages(!showBeigeImages);
-    setshowBeigeImages(true);
-  };
-
-  const handleshowBlackImages = () => {
-    setshowBlackImages(!showBlackImages);
-    setshowBlackImages(true);
-  };
-
-  const handleshowBrownImages = () => {
-    setshowBrownImages(!showBrownImages);
-    setshowBrownImages(true);
-  };
-
-  const handleshowBronzeImages = () => {
-    setshowBronzeImages(!showBronzeImages);
-    setshowBronzeImages(true);
-  };
-
-  const handleshowGreyImages = () => {
-    setshowGreyImages(!showGreyImages);
-    setshowGreyImages(true);
-  };
-
-  const handleshowWhiteImages = () => {
-    setshowWhiteImages(!showWhiteImages);
-    setshowWhiteImages(true);
-  };
 
   const imagesData = [
     { key: 'Beige', src: '/BEIGE/ETB1003BEIGE.png', label: 'Beige' },
@@ -128,98 +90,18 @@ const MaterialsPage = () => {
   };
 
 
-  // Logic for materials image render
-  //1.
-  const [materials_selectedImage, Set_materials_selectedImage] = useState(null);
-  //2.
-  const getImageClassName = (imageName) => {
-    const baseClassName1 = styles[imageName];
-    return `${baseClassName1} ${imageName === materials_selectedImage ? styles.materials_selectedImage : ''}`;
-  };
-  //3.
-  const handleClickgetImageClassName = (imageName) => {
-    Set_materials_selectedImage(imageName === materials_selectedImage ? null : imageName);
-  };
-  //4.
-  const selectedImageData = imagesData.find((imageData) => imageData.key === materials_selectedImage );
-
-
-
-  //1.
-  const [materials_selectedColor, Set_materials_selectedColor] = useState(null);
-  //2.
-  const getImageColorName = (imageName) => {
-    const baseClassName = styles[imageName];
-    return `${baseClassName} ${imageName === materials_selectedImage ? styles.materials_selectedImage : styles.hidden}`;
-  };
-  //3.
-  const handleClickgetImageColorName = (ColorName) => {
-    Set_materials_selectedColor(ColorName === materials_selectedColor ? null : ColorName);
-  };
-  //4.
-  const selectedColorData = colorImageLists[materials_selectedImage]?.find((colordata) => colordata.key === materials_selectedColor );
-
-
-
-
   return (
     <>
-      <div>
-        <div className={styles.materials_list}>
-          {imagesData.map((imageData) => (
-            <div key={imageData.key} className={styles.imageAndLabelContainerMaterials}>
-
-              <Image
-                alt="image"
-                width={100}
-                height={100}
-                className={getImageClassName(imageData.key)}
-                src={imageData.src}
-                onClick={() => {
-                  console.log(`Click handler for ${imageData.key}`);
-                  handleClickgetImageClassName(imageData.key);
-                }}
-              />
-
-              <div className={styles.descriptionLabelMaterials}>
-                <div>{imageData.label}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
 
-      {colorImageLists && (
-        <div className={styles.showImages_wrapper}>
-          {/* Map over the selected color's image list */}
-          {colorImageLists[materials_selectedImage]?.map((colordata) => (
-            <div key={colordata.key} className={styles.imageContainer}>
-              <div>
-                <Image
-                  className={getImageColorName(colordata.key)}
-                  alt="key"
-                  width={100}
-                  height={100}
-                  src={colordata.src}
-                  onClick={() => {
-                    console.log(`Click handler for ${colordata.key}`);
-                    handleClickgetImageColorName(colordata.key);
-                  }}
-                />
-              </div>
-              <div className={styles.selectedImageClass_label}>{colordata.label}</div>
-            </div>
-          ))}
-        </div>
-      )}
+
 
       <div className={styles.materials_answer}>
-        {selectedImageData ? selectedImageData.label : ''}
+        {""}
       </div>
 
       <div className={styles.materials_answer2}>
-        {selectedColorData ? selectedColorData.label : ''}
+        {""}
       </div>
     </>
   );

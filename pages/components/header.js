@@ -3,6 +3,7 @@ import styles from "../../styles/components/header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+
 function HeaderPiece() {
   useEffect(() => {
     // Set overflowY to 'auto' on mount
