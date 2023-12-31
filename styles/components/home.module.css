@@ -33,13 +33,18 @@
 }
 
 .box {
-  background-color: rgb(131, 165, 170);
+  background: linear-gradient(to right, #779499, #415c61, #415c61, #446065); 
   align-items: center;
   justify-content: center;
   width: 500px;
   height: 500px;
   display: flex;
   flex-direction: column;
+  background-image: url("/rfblinds.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
 }
 
 .box_prt1 {
@@ -52,6 +57,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 15px;
 }
+
 
 .box_prt2 {
   display: flex;
@@ -123,13 +129,31 @@
 
 }
 
-.two_section_div {
+.two_section_div1, .two_section_div2, .two_section_div3, .two_section_div4 {
   display: flex;
   flex-direction: row;
-  height: 500px;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(241, 241, 241), rgb(255, 255, 255)); 
+
 }
+
+.two_section_div1 { 
+  height: 300px;
+}
+
+.two_section_div2 { 
+  height: 300px;
+}
+
+.two_section_div3 { 
+  height: 300px;
+}
+
+.two_section_div4 { 
+  height: 400px;
+}
+
 
 
 .whattypeofblindspng {
