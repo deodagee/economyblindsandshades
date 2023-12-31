@@ -94,17 +94,44 @@ const MaterialsPage = () => {
     <>
 
 
+      <div className={styles.materials_list}>
+        {imagesData.map((item) => (
+          <div
+            className={styles.imageAndLabelContainerMaterials}
+            key={item.key}>
+            <Image src={item.src} alt={item.label} width={100} height={100} />
+            <p className={styles.descriptionLabelMaterials}>{item.label}</p>
+          </div>
+        ))}
+      </div>
 
+
+      <div className={styles.showImages_wrapper}>
+        {Object.entries(colorImageLists).map(([color, items]) => (
+
+          <div
+            className={styles.images_and_subtitles} key={color}>
+            {items.map((item) => (
+              <div
+                className={styles.imageContainer}
+                key={item.label}>
+                <h3 className={styles.images_and_subtitles_color_name}>{color}</h3>
+                <Image src={item.src} alt={item.label} width={100} height={100} />
+                <p className={styles.selectedImageClass_label}>{item.label}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
 
       <div className={styles.materials_answer}>
-        {""}
+        {"display imagesData here"}
       </div>
 
       <div className={styles.materials_answer2}>
-        {""}
+        {"display colorImageLists here"}
       </div>
     </>
   );
 };
-
 export default MaterialsPage;
