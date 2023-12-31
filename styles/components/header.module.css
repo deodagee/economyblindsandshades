@@ -11,10 +11,29 @@
   background-color: white;
 }
 
-.headercomponent {
+.header_promo_bar { 
+  height: 40px;
   width: 100vw;
+  background-color: rgb(190, 190, 190);
+align-items: center;
+justify-content: center;
+display: flex;
+padding: 10px;
+}
+
+.header_promo_bar p {
+font-size: 15px;
+font-weight: 700;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(78, 78, 78);
+}
+
+
+.header_top_bar {
   list-style: none;
   display: flex;
+  flex-direction: row;
+  width: 95vw;
   align-items: center;
   justify-content: space-between;
   margin: 10px;
@@ -22,49 +41,65 @@
   height: 50px;
 }
 
-.link_top_prt1 {
-  color: #808080;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 20px;
-  width: 30vw;
-  order: 1;
-  /* Set the order to 1 to move it to the start */
-}
+
 
 .header_logo {
-  width: 30vw;
-  order: 2;
-  /* Set the order to 2 to keep it in the center */
+  display: flex;
+
 }
 
 .logo_image {
-  height: 90px;
+  height: 60px;
   width: auto;
 }
 
+.icons_and_links_for_top_wrapper { 
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+}
 
-.link_top_prt2 {
-  color: #808080;
+.icons_group { 
+  display: flex;
+  margin-right: 5vw;
+
+}
+
+.icon_and_text { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons_for_top { 
+display: flex;
+width: 30px;
+margin: 10px;
+}
+
+.icons_for_top_text { 
   font-size: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top_links {
+  color: black;
+  font-size: 16px;
   font-weight: 600;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 30vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-content: flex-end;
-  order: 3;
-  /* Set the order to 3 to move it to the end */
+  justify-content: flex-end;
+  width: max-content;
+  margin-right: 20px;
 }
 
-.header_link {
-  /* Add any additional styles for your links */
-  text-decoration: none;
-  color: #333;
-  /* Adjust the color as needed */
-  margin: 0 20px;
-  /* Add spacing between links, adjust as needed */
+.top_links_item { 
+  display: flex;
+  white-space: nowrap;
 }
-
 
 .second_menu_bar {
   background-color: rgb(15, 15, 15);
@@ -96,6 +131,12 @@
 .second_menu_bar_item:hover { 
   transform: scale(1.05);
   transition: 0.2s;
+}
+
+.header_link { 
+  color: rgb(255, 187, 0);
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .chevron_top_menu { 
