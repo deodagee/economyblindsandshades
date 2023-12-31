@@ -71,7 +71,7 @@ export default function HomePage() {
 
 <div className={styles.two_section_div}>
   
-        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/howsooncanibookanestimate.PNG" />
+        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/howsooncanibookanestimate.png" />
 
         <div className={styles.are_you_priced_text}>
           <div className={styles.title}>How soon can I book an estimate?</div>
@@ -83,7 +83,7 @@ export default function HomePage() {
 
 <div className={styles.two_section_div}>
   
-        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/aretheoptionsaffordableandstylish.PNG" />
+        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/aretheoptionsaffordableandstylish.png" />
 
         <div className={styles.are_you_priced_text}>
           <div className={styles.title}>Are the options affordable and stylish?</div>
@@ -96,7 +96,7 @@ export default function HomePage() {
 
 <div className={styles.two_section_div}>
   
-        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/areyoupricedcompetitively.PNG" />
+        <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/areyoupricedcompetitively.png" />
 
         <div className={styles.are_you_priced_text}>
           <div className={styles.title}>Are you priced competitively?</div>
