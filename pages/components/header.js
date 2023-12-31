@@ -19,75 +19,128 @@ function HeaderPiece() {
 
   return (
     <>
-    <div className={styles.header_wrapper}>
+      <div className={styles.header_wrapper}>
 
-    <ul className={styles.headercomponent}>
-        <li className={styles.link_top_prt1}> 
-        <Link className={styles.header_link} href={"/"} > Home </Link></li>
-        <li className={styles.header_logo}>
-          <Link href={'/'}>
-      <Image className={styles.logo_image} src={"/logo.jpg"} width={400} height={400} alt="economyblindsandshades_logo" />
-      </Link>
-    </li>
-    <li className={styles.link_top_prt2}> 
-    <Link className={styles.header_link} href={"/privacypolicy"} > Privacy Policy </Link>
-     <Link className={styles.header_link} href={"/getaquote"} > Get A Quote </Link>
-     <Link className={styles.header_link} href={"/learnmore"} > Learn More </Link>
-    </li>
-    </ul>
+        <ol className={styles.header_promo_bar}>
+
+          <li>
+            <p>
+              20% OFF ON EVERY PURCHASE FOR THE NEXT MONTH
+            </p>
+          </li>
 
 
-    <ul className={styles.second_menu_bar}>
+        </ol>
 
-      <li className={styles.second_menu_bar_item}>Zebra Blinds
-      <Image 
-      className={styles.chevron_top_menu}
-      width={100}
-      height={100}
-      src={"/chevronwhite.png"}
-      alt="chevron_top_menu">
-      </Image>
-      </li>
+        <ol className={styles.header_top_bar}>
 
-      <li className={styles.second_menu_bar_item}>Shangrila Blinds
-      <Image 
-      className={styles.chevron_top_menu}
-      width={100}
-      height={100}
-      src={"/chevronwhite.png"}
-      alt="chevron_top_menu">
-      </Image>
-      </li>
+          <li className={styles.header_logo}>
+            <Link href={'/'}>
+              <Image className={styles.logo_image} src={"/logo.jpg"} width={400} height={400} alt="economyblindsandshades_logo" />
+            </Link>
+          </li>
 
-      <li className={styles.second_menu_bar_item}>Roman Blinds
-      <Image 
-      className={styles.chevron_top_menu}
-      width={100}
-      height={100}
-      src={"/chevronwhite.png"}
-      alt="chevron_top_menu">
-      </Image></li>
+          <li className={styles.top_links}>
 
-      <li className={styles.second_menu_bar_item}>Roller Blinds
-      <Image 
-      className={styles.chevron_top_menu}
-      width={100}
-      height={100}
-      src={"/chevronwhite.png"}
-      alt="chevron_top_menu">
-      </Image></li>
+          <span className={styles.icons_and_links_for_top_wrapper}>
+            <span className={styles.icons_group}>
+          <span className={styles.icon_and_text}>
+          <Image
+          className={styles.icons_for_top}
+          alt="free_shipping"
+          width={100}
+          height={100}
+          src={"/freeshipping.png"}>
+          </Image>
+          <p className={styles.icons_for_top_text}>Free Shipping</p>
+          </span>
 
-      <li className={styles.second_menu_bar_item}>HoneyComb Blinds
-      <Image 
-      className={styles.chevron_top_menu}
-      width={100}
-      height={100}
-      src={"/chevronwhite.png"}
-      alt="chevron_top_menu">
-      </Image>
-      </li>
-    </ul>
-    </div>
+          <span className={styles.icon_and_text}>
+          <Image
+          className={styles.icons_for_top}
+          alt="customer_satisfaction"
+          width={100}
+          height={100}
+          src={"/customersatisfaction.png"}>
+          </Image>
+          <p className={styles.icons_for_top_text}>Customer Satisfaction</p>
+          </span>
+
+          <span className={styles.icon_and_text}>
+          <Image
+          className={styles.icons_for_top}
+          alt="remarkable_designs"
+          width={100}
+          height={100}
+          src={"/remarkabledesigns.png"}>
+          </Image>
+          <p className={styles.icons_for_top_text}>Remarkable Designs</p>
+          </span>
+
+          </span>
+
+          <span>
+            <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
+            </span>
+
+            </span>
+          </li>
+        </ol>
+
+
+        <ul className={styles.second_menu_bar}>
+          <li className={styles.second_menu_bar_item}>
+            <Link className={styles.header_link} href={"/"} > Home </Link>
+          </li>
+          <li className={styles.second_menu_bar_item}>Zebra Blinds
+            <Image
+              className={styles.chevron_top_menu}
+              width={100}
+              height={100}
+              src={"/chevronwhite.png"}
+              alt="chevron_top_menu">
+            </Image>
+          </li>
+
+          <li className={styles.second_menu_bar_item}>Shangrila Blinds
+            <Image
+              className={styles.chevron_top_menu}
+              width={100}
+              height={100}
+              src={"/chevronwhite.png"}
+              alt="chevron_top_menu">
+            </Image>
+          </li>
+
+          <li className={styles.second_menu_bar_item}>Roman Blinds
+            <Image
+              className={styles.chevron_top_menu}
+              width={100}
+              height={100}
+              src={"/chevronwhite.png"}
+              alt="chevron_top_menu">
+            </Image></li>
+
+          <li className={styles.second_menu_bar_item}>Roller Blinds
+            <Image
+              className={styles.chevron_top_menu}
+              width={100}
+              height={100}
+              src={"/chevronwhite.png"}
+              alt="chevron_top_menu">
+            </Image></li>
+
+          <li className={styles.second_menu_bar_item}>HoneyComb Blinds
+            <Image
+              className={styles.chevron_top_menu}
+              width={100}
+              height={100}
+              src={"/chevronwhite.png"}
+              alt="chevron_top_menu">
+            </Image>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
