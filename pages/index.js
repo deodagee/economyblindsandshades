@@ -69,7 +69,7 @@ export default function HomePage() {
   </p>
 </div>
 
-<div className={styles.two_section_div}>
+<div className={styles.two_section_div1}>
   
         <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/howsooncanibookanestimate.png" />
 
@@ -81,7 +81,7 @@ export default function HomePage() {
         </div>
         </div>
 
-<div className={styles.two_section_div}>
+<div className={styles.two_section_div2}>
   
         <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/aretheoptionsaffordableandstylish.png" />
 
@@ -94,7 +94,7 @@ export default function HomePage() {
         </div>
 
 
-<div className={styles.two_section_div}>
+<div className={styles.two_section_div3}>
   
         <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/areyoupricedcompetitively.png" />
 
@@ -107,7 +107,7 @@ export default function HomePage() {
         </div>
 
 
-<div className={styles.two_section_div}>
+<div className={styles.two_section_div4}>
   
         <Image width={300} height={300} alt='center_image' className={styles.whattypeofblindspng} src="/whattypeofblindsdoyouinstall.png" />
 
