@@ -60,7 +60,6 @@ z-index: -1;
   border-radius: 0.5%;
 }
 
-
 .sliding_gallery_component {
   display: flex;
   flex-direction: row;
@@ -79,25 +78,6 @@ z-index: -1;
   display: flex;
   flex-direction: row;
 }
-
-.imageContainer { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100px;
-  height: max-content;
-  margin: 5px;
-}
-
-
-.selectedImage { 
-  border-width: 2px;
-  padding: 5px;
-  border-color: #8a8a8a;
-  margin: 0;
-}
-
 
 .chevron_left {
   width: 8px;
@@ -796,51 +776,6 @@ margin-top: 50px;
   color: grey;
 }
 
-
-/* YourComponent.module.css */
-.materials_list {
-  border-width: 1px;
-  border-radius: 0.25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  position: absolute; /* Adjust as needed */
-  scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 550px;
-  left: 776.94px;
-  top: 805.68px;
-}
-
-
-
-
-  .imageAndLabelContainerMaterials {
-    width: 70px;
-    display: flex;
-    flex-direction: column; /* Make sure each image and description are in a column */
-    align-items: center; /* Center the items horizontally within each column */
-    margin: 10px; /* Adjust as needed */
-    text-align: center; /* Center the image and label */
-  }
-
-.descriptionLabelMaterials {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 15px;
-  width: 50px;
-  font-size: 10px;
-  white-space: nowrap;
-}
-
-
-.materials_selectedImage { 
-  border-width: 3px;
-  border-color: black;
-}
 
 
 
@@ -1690,15 +1625,16 @@ color: rgb(133, 133, 133);
   position: absolute;
   display: flex;
   left: 1050px;
-  top: 1565px;
+  top: 1510px;
   width: 100px;
 }
+
 
 .showleftchain_wrapper { 
   position: absolute;
   display: flex;
   left: 1050px;
-  top: 1565px;
+  top: 1510px;
   width: 100px;
 }
 
