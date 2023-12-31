@@ -36,15 +36,15 @@ function HeaderPiece() {
 
           <li className={styles.header_logo}>
             <Link href={'/'}>
-              <Image className={styles.logo_image} src={"/logo.jpg"} width={400} height={400} alt="economyblindsandshades_logo" />
+              <Image className={styles.logo_image} src={"/logo2.png"} width={400} height={400} alt="economyblindsandshades_logo" />
             </Link>
           </li>
 
           <li className={styles.top_links}>
 
-          <span className={styles.icons_and_links_for_top_wrapper}>
-            <span className={styles.icons_group}>
-          <span className={styles.icon_and_text}>
+          <div className={styles.icons_and_links_for_top_wrapper}>
+            <div className={styles.icons_group}>
+          <div className={styles.icon_and_text}>
           <Image
           className={styles.icons_for_top}
           alt="free_shipping"
@@ -53,9 +53,9 @@ function HeaderPiece() {
           src={"/freeshipping.png"}>
           </Image>
           <p className={styles.icons_for_top_text}>Free Shipping</p>
-          </span>
+          </div>
 
-          <span className={styles.icon_and_text}>
+          <div className={styles.icon_and_text}>
           <Image
           className={styles.icons_for_top}
           alt="customer_satisfaction"
@@ -64,9 +64,9 @@ function HeaderPiece() {
           src={"/customersatisfaction.png"}>
           </Image>
           <p className={styles.icons_for_top_text}>Customer Satisfaction</p>
-          </span>
+          </div>
 
-          <span className={styles.icon_and_text}>
+          <div className={styles.icon_and_text}>
           <Image
           className={styles.icons_for_top}
           alt="remarkable_designs"
@@ -75,15 +75,31 @@ function HeaderPiece() {
           src={"/remarkabledesigns.png"}>
           </Image>
           <p className={styles.icons_for_top_text}>Remarkable Designs</p>
-          </span>
+          </div>
 
-          </span>
+          </div>
 
-          <span>
+          <Image
+          className={styles.add_to_cart}
+          alt="add_to_cart"
+          width={100}
+          height={100}
+          src={"/cart.png"}>
+          </Image>
+          <div>
+
+          </div>
+
+          <div className={styles.divider_line}
+            ></div>
+
+          <div side_links>
+            <span>
             <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
             </span>
+            </div>
 
-            </span>
+            </div>
           </li>
         </ol>
 
