@@ -124,12 +124,12 @@ const MaterialsPage = () => {
         ))}
       </div>
 
-      <div className={styles.materials_answer}>
-        {"display imagesData here"}
+      <div className={styles.materials_answer_head_rail}>
+        {"Select A Color"}
       </div>
 
-      <div className={styles.materials_answer2}>
-        {"display colorImageLists here"}
+      <div className={styles.materials_answer_bottom_rail}>
+        {"Select A Color  "}
       </div>
     </>
   );
