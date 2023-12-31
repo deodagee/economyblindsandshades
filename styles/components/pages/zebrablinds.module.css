@@ -654,7 +654,7 @@
 
 .select_color_long_rectangle {
   border-radius: 0px;
-  width: 480.63px;
+  width: 800px;
   height: 30.88px;
   position: absolute;
   left: 747.67px;
@@ -665,11 +665,12 @@
 .select_color_short_rectangle {
   border-radius: 0px;
   width: 300px;
-  height: 30.88px;
+  height: 30px;
   position: absolute;
   left: 718px;
   top: 728.76px;
   overflow: visible;
+
 
 }
 
@@ -747,7 +748,7 @@
   display: grid;
   gap: 16px;
   position: absolute;
-  top: 800px;
+  top: 830px;
   left: 780px;
   background-color: rgb(236, 236, 236);
   padding: 20px;
@@ -1447,7 +1448,7 @@
   height: 2.94px;
   position: absolute;
   left: 750.5px;
-  top: 130px;
+  top: 1370px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
@@ -1464,7 +1465,7 @@
 
 .select_lift_type_long_rectangle {
   border-radius: 0px;
-  width: 480.63px;
+  width: 800px;
   height: 30.88px;
   position: absolute;
   left: 750.5px;
@@ -1475,11 +1476,12 @@
 .select_lift_type_short_rectangle {
   border-radius: 0px;
   width: 225;
-  height: 31px;
+  height: 30px;
   position: absolute;
   left: 755.87px;
   top: 1384.85px;
   overflow: visible;
+
 }
 
 
@@ -1784,12 +1786,13 @@
   top: 1730px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
+
 }
 
 
 .select_cassette_head_rail_long_rectangle {
   border-radius: 0px;
-  width: 480.63px;
+  width: 800px;
   height: 30.88px;
   position: absolute;
   left: 750.5px;
@@ -1802,7 +1805,7 @@
 .select_cassette_head_rail_short_rectangle {
   border-radius: 0px;
   width: 225;
-  height: 31px;
+  height: 30px;
   position: absolute;
   left: 750.87px;
   top: 1744.85px;
@@ -2856,7 +2859,7 @@
   height: 11px;
 }
 
-.materials_answer {
+.materials_answer_head_rail {
   color: #192e4d;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
@@ -2865,14 +2868,14 @@
   display: flex;
   position: absolute;
   left: 870px;
-  top: 2795px;
+  top: 4395px;
   width: 66px;
   height: 10px;
   white-space: nowrap;
 
 }
 
-.materials_answer2 {
+.materials_answer_bottom_rail {
   color: #192e4d;
   text-align: left;
   font-family: "Inter-Bold", sans-serif;
@@ -2880,8 +2883,8 @@
   font-weight: 700;
   display: flex;
   position: absolute;
-  left: 900px;
-  top: 2795px;
+  left: 870px;
+  top: 4417px;
   width: 66px;
   height: 10px;
   white-space: nowrap;
