@@ -295,14 +295,14 @@
   transition: 0.5s;
   cursor: pointer;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
   gap: 5px;
   padding: 20px;
   position: absolute;
-  top: 2750px;
-  left: 780px;
+  top: 2090px;
+  left: 700px;
   background-image: url("/indexcomponent2.png");
   background-position: center;
   background-size: cover;

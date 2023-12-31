@@ -156,6 +156,8 @@
   color: rgb(233, 31, 0);
 }
 
+
+
 .header_link {
   color: rgb(222, 222, 222);
   font-weight: 700;
@@ -182,4 +184,46 @@
 .chevron_top_menu:hover {
   transform: scale(1.1);
   transition: 0.2s;
+}
+.handle_open_menu { 
+  display: flex;
+}
+
+.drop_down_menu { 
+  display: flex;
+  background-color: rgb(27, 27, 27);
+position: fixed;
+margin-left: 270px;
+margin-top: 180px;
+font-size: 10px;
+width: 200px;
+height: max-content;
+align-items: center;
+justify-content: center;
+color: black;
+border-width: 1px;
+border-color: white;
+border-bottom-left-radius: 0.25rem;
+border-bottom-right-radius: 0.25rem;
+}
+
+
+.drop_down_menu_item { 
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10px;
+  margin: 10px;
+  background-color: rgb(22, 22, 22);
+  width: 198px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.drop_down_menu_item:hover { 
+  background-color: rgb(61, 61, 61);
+  transition: 0.4s;
+  color:rgb(234, 35, 4) ;
 }
