@@ -265,8 +265,10 @@ function ZebraBlinds() {
             <div className={styles.page}>
                 <div className={styles.page_wrapper}>
 
-                    <LeftSidePage></LeftSidePage>
 
+<div className={styles.left_half}>
+                    <LeftSidePage></LeftSidePage>
+                    </div>
                     <div className={styles.right_half}>
 
                         <div className={styles.top_title_area}>
@@ -863,7 +865,7 @@ function ZebraBlinds() {
                             <svg
                                 className={styles.select_cassette_head_rail_short_rectangle}
                                 width="225"
-                                height="31"
+                                height="32"
                                 viewBox="0 0 225 31"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"

@@ -94,18 +94,6 @@ const MaterialsPage = () => {
     <>
 
 
-      <div className={styles.materials_list}>
-        {imagesData.map((item) => (
-          <div
-            className={styles.imageAndLabelContainerMaterials}
-            key={item.key}>
-            <Image src={item.src} alt={item.label} width={100} height={100} />
-            <p className={styles.descriptionLabelMaterials}>{item.label}</p>
-          </div>
-        ))}
-      </div>
-
-
       <div className={styles.showImages_wrapper}>
         {Object.entries(colorImageLists).map(([color, items]) => (
 
