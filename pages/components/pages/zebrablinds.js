@@ -901,7 +901,7 @@ function ZebraBlinds() {
                             <FabricsPage></FabricsPage>
 
 
-                            <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
+                         <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
 
 
                                 <div className={styles.select_cassette_bottom_rail_group}>
@@ -1217,6 +1217,8 @@ function ZebraBlinds() {
                         </div>
 
 
+<div>
+
                         <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
                         <div className={styles.shipping_details_titles}>
                             <div className={styles.shipping_details}>Shipping Details</div>
@@ -1253,6 +1255,7 @@ function ZebraBlinds() {
                             className={styles.paypalicon}
                             src="/paymenticon.png"
                         />
+                        </div>
                     </div>
 
 

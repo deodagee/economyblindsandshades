@@ -45,19 +45,19 @@ const FabricsPage = () => {
   };
 
   const imagesDataHeadRail = [
-    { key: 'fabric_type_image1', src: '/cassette.png', label: 'Oval Black' },
-    { key: 'fabric_type_image2', src: '/cassette.png', label: 'Oval Brown' },
-    { key: 'fabric_type_image3', src: '/cassette.png', label: 'Oval Beige' },
-    { key: 'fabric_type_image4', src: '/cassette.png', label: 'Oval Grey' },
-    { key: 'fabric_type_image5', src: '/cassette.png', label: 'Oval White' },
+    { key: 'fabric_type_image1', src: '/pickcolor.png', label: ' Black' },
+    { key: 'fabric_type_image2', src: '/pickcolor.png', label: ' Brown' },
+    { key: 'fabric_type_image3', src: '/pickcolor.png', label: ' Beige' },
+    { key: 'fabric_type_image4', src: '/pickcolor.png', label: ' Grey' },
+    { key: 'fabric_type_image5', src: '/pickcolor.png', label: ' White' },
     // Add more image data as needed
   ];
   const imagesDataBottomRail = [
-    { key: 'fabric_type_image1', src: '/cassette.png', label: 'Oval Black' },
-    { key: 'fabric_type_image2', src: '/cassette.png', label: 'Oval Brown' },
-    { key: 'fabric_type_image3', src: '/cassette.png', label: 'Oval Beige' },
-    { key: 'fabric_type_image4', src: '/cassette.png', label: 'Oval Grey' },
-    { key: 'fabric_type_image5', src: '/cassette.png', label: 'Oval White' },
+    { key: 'fabric_type_image1', src: '/pickcolor.png', label: ' Black' },
+    { key: 'fabric_type_image2', src: '/pickcolor.png', label: ' Brown' },
+    { key: 'fabric_type_image3', src: '/pickcolor.png', label: ' Beige' },
+    { key: 'fabric_type_image4', src: '/pickcolor.png', label: ' Grey' },
+    { key: 'fabric_type_image5', src: '/pickcolor.png', label: ' White' },
     // Add more image data as needed
   ];
 
