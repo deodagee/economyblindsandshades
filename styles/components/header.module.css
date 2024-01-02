@@ -37,7 +37,8 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px;
-  padding: 0;
+  padding-top:20px;
+  padding-bottom: 20px;
   height: 50px;
 }
 
@@ -49,8 +50,9 @@
 }
 
 .logo_image {
-  height: 60px;
+  height: 80px;
   width: auto;
+  margin-left: 10px;
 }
 
 .icons_and_links_for_top_wrapper {
@@ -131,7 +133,6 @@
   align-items: center;
   justify-content: space-evenly;
   margin: 10px;
-  padding: 0;
   height: 50px;
 }
 
