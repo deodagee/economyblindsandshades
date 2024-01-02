@@ -12,7 +12,6 @@ import Footer from "../footer.js";
 
 function ZebraBlinds() {
     const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
-    const [handle_polygon_increase_height_inches_outisde_mount, Sethandle_polygon_increase_height_inches_outisde_mount] = useState(false);
 
 
 
@@ -27,21 +26,18 @@ function ZebraBlinds() {
 
     const showleftsidechain = () => {
         setShowImageleft(!showImageleft);
-      setShowImageleft(true);
+        setShowImageleft(true);
         // Toggle off the right side image
         setShowImageright(false);
-      };
-      
-      const showrightsidechain = () => {
+    };
+
+    const showrightsidechain = () => {
         setShowImageright(!showImageright);
         setShowImageright(true);
 
         // Toggle off the left side image
         setShowImageleft(false);
-      };
-      
-
-
+    };
 
     //logic for turning next button's bg color 
 
@@ -49,83 +45,119 @@ function ZebraBlinds() {
         backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
     };
 
-    //2. // LOGIC FOR ENTER WIDTH
-    const [number, setNumber] = useState(1);
 
-    const handle_polygon_decrease_width_inches = () => {
-        // Increase the number, but not beyond 100
-        if (number < 100) {
-            setNumber((prevNumber) => prevNumber + 1);
-        }
+
+
+
+    //2. // LOGIC FOR SHOW WHOLE NUMBERS INSIDE MOUNT HEIGHT
+    const [selectedNumber_height_inside_mount, setselectedNumber_height_inside_mount] = useState(null);
+    const [whole_number_index_inside_mount_height, setwhole_number_index_inside_mount_height] = useState(1);
+    const whole_number_inside_mount_height = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+
+    const handle_drop_down_show_numbers_height_inside_mount = () => {
+        setwhole_number_index_inside_mount_height(!whole_number_index_inside_mount_height);
+    }
+    //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT HEIGHT
+    const handleNumberClick_inside_mount_height = (number_inside_mount_height) => {
+        setselectedNumber_height_inside_mount(number_inside_mount_height);
     };
-    const handle_polygon_increase_width_inches = () => {
-        // Decrease the number, but not below 1
-        if (number > 1) {
-            setNumber((prevNumber) => prevNumber - 1);
-        }
+
+    const renderNumbers_inside_mount_height = () => {
+        return whole_number_inside_mount_height.map((number_inside_mount_height, index) => (
+            <div
+                key={index}
+                className={`${styles.singleNumber_inside_mount_height} ${selectedNumber_height_inside_mount === number_inside_mount_height ? styles.selectedNumber_height_inside_mount : ''}`}
+                onClick={() => handleNumberClick_inside_mount_height(number_inside_mount_height)}
+            >
+                {number_inside_mount_height}
+            </div>
+        ));
     };
-
-    //2. // LOGIC FOR ENTER WIDTH fractions
-
-    const fractions = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
+    //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
+    const [selectedFraction_height, setselectedFraction_height] = useState(null);
     const [fractionIndex, setFractionIndex] = useState(0);
+    const fractions_inside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
-    const handle_polygon_increase_width_fractions = () => {
-        // Decrease the index, but not below 0
-        if (fractionIndex > 0) {
-            setFractionIndex((prevIndex) => prevIndex - 1);
-        }
+    const handle_drop_down_show_fractions_inside_mount_height = () => {
+        setFractionIndex(!fractionIndex);
+    }
+
+    //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
+    const handleFractionClick_inside_mount_height = (fraction_inside_mount_height) => {
+        setselectedFraction_height(fraction_inside_mount_height);
     };
 
-    const handle_polygon_decrease_width_fractions = () => {
-        // Increase the index, but not beyond the length of the array - 1
-        if (fractionIndex < fractions.length - 1) {
-            setFractionIndex((prevIndex) => prevIndex + 1);
-        }
+    const renderFractions_inside_mount_height = () => {
+        return fractions_inside_mount_height.map((fraction_inside_mount_height, index) => (
+            <div
+                key={index}
+                className={`${styles.singleFraction_height} ${selectedFraction_height === fraction_inside_mount_height ? styles.selectedFraction_height : ''}`}
+                onClick={() => handleFractionClick_inside_mount_height(fraction_inside_mount_height)}
+            >
+                {fraction_inside_mount_height}
+            </div>
+        ));
     };
 
-    //2. // LOGIC FOR ENTER HEIGHT
-    const [heightnumber, Setheightnumber] = useState(1);
 
+    //---------------------------------------------------------------------------------------------------
 
-    const handle_polygon_decrease_height_inches = () => {
-        // Increase the number, but not beyond 100
-        if (heightnumber < 100) {
-            Setheightnumber((prevNumber) => prevNumber + 1);
-        }
-    };
-    const handle_polygon_increase_height_inches_inside_mount = () => {
-        // Decrease the number, but not below 1
-        if (heightnumber > 1) {
-            Setheightnumber((prevNumber) => prevNumber - 1);
-        }
+    //2. // LOGIC FOR SHOW WHOLE NUMBERS INSIDE MOUNT WIDTH
+    const [selectedNumber_inside_mount_width, setselectedNumber_inside_mount_width] = useState(null);
+    const [whole_number_index_inside_mount_width, setwhole_number_index_inside_mount_width] = useState(1);
+    const whole_number_inside_mount_width = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
 
+    const handle_drop_down_show_numbers_width_inside_mount = () => {
+        setwhole_number_index_inside_mount_width(!whole_number_index_inside_mount_width);
+    }
+    //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT WIDTH
+    const handleNumberClick_inside_mount_width = (number_inside_mount_width) => {
+        setselectedNumber_inside_mount_width(number_inside_mount_width);
     };
 
-    const handle_polygon_increase_height_inches_outside_mount = () => {
-        // Decrease the number, but not below 1
-        if (heightnumber > 1) {
-            Setheightnumber((prevNumber) => prevNumber - 1);
-        }
+    const renderNumbers_inside_mount_width = () => {
+        return whole_number_inside_mount_width.map((number_inside_mount_width, index) => (
+            <div
+                key={index}
+                className={`${styles.singleNumber_inside_mount_width} ${selectedNumber_inside_mount_width === number_inside_mount_width ? styles.selectedNumber_inside_mount_width : ''}`}
+                onClick={() => handleNumberClick_inside_mount_width(number_inside_mount_width)}
+            >
+                {number_inside_mount_width}
+            </div>
+        ));
     };
-    //2. // LOGIC FOR ENTER HEIGHT fractions 
+    //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
+    const [selectedFraction_width, setselectedFraction_width] = useState(null);
+    const [fractionIndex_inside_mount_width, setfractionIndex_inside_mount_width] = useState(0);
+    const fractions_inside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
-    const fractionsheight = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-    const [heightfractionIndex, SetheightfractionIndex] = useState(0);
+    const handle_drop_down_show_fractions_inside_mount_width = () => {
+        setfractionIndex_inside_mount_width(!fractionIndex_inside_mount_width);
+    }
 
-    const handle_polygon_increase_height_fractions = () => {
-        // Decrease the index, but not below 0
-        if (heightfractionIndex > 0) {
-            SetheightfractionIndex((prevIndex) => prevIndex - 1);
-        }
+    //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
+    const handleFractionClick_inside_mount_width = (fraction_inside_mount_width) => {
+        setselectedFraction_width(fraction_inside_mount_width);
     };
 
-    const handle_polygon_decrease_height_fractions = () => {
-        // Increase the index, but not beyond the length of the array - 1
-        if (heightfractionIndex < fractionsheight.length - 1) {
-            SetheightfractionIndex((prevIndex) => prevIndex + 1);
-        }
+    const renderFractions_inside_mount_width = () => {
+        return fractions_inside_mount_width.map((fraction_inside_mount_width, index) => (
+            <div
+                key={index}
+                className={`${styles.singleFraction_width} ${selectedFraction_width === fraction_inside_mount_width ? styles.selectedFraction_width : ''}`}
+                onClick={() => handleFractionClick_inside_mount_width(fraction_inside_mount_width)}
+            >
+                {fraction_inside_mount_width}
+            </div>
+        ));
     };
+
+
+
+
+
+
+
 
 
 
@@ -134,20 +166,15 @@ function ZebraBlinds() {
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
 
-
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
-
 
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
     const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
-
-
-
-
     //LOGIC FOR BOM
+
     //Add inside or outside options to the bom 
 
     const handleClickInside_And_Outisde_Ellipses = (ellipseNumber) => {
@@ -231,52 +258,6 @@ function ZebraBlinds() {
 
 
 
-    //Logic for room width rendering inches section
-    const [WidthRenderingContentInches, setWidthRenderingContentInches] = useState('');
-
-    useEffect(() => {
-        // Fetch the contents of the width_rendering_element_inches section and set the state
-        const widthRenderingElementInches = document.querySelector(`.${styles.width_rendering_element_inches}`);
-        if (widthRenderingElementInches) {
-            setWidthRenderingContentInches(widthRenderingElementInches.textContent || widthRenderingElementInches.innerText);
-        }
-    }, []);
-
-    //Logic for room width rendering fractions section
-    const [WidthRenderingContentFractions, setWidthRenderingContentFractions] = useState('');
-
-    useEffect(() => {
-        // Fetch the contents of the width_rendering_element_fractions section and set the state
-        const widthRenderingElementFractions = document.querySelector(`.${styles.width_rendering_element_fractions}`);
-        if (widthRenderingElementFractions) {
-            setWidthRenderingContentFractions(widthRenderingElementFractions.textContent || widthRenderingElementFractions.innerText);
-        }
-    }, []);
-
-
-    //Logic for room height rendering inches section
-    const [HeightRenderingContentInches, setHeightRenderingContentInches] = useState('');
-
-    useEffect(() => {
-        // Fetch the contents of the height_rendering_element_inches section and set the state
-        const heightRenderingElementInches = document.querySelector(`.${styles.height_rendering_element_inches}`);
-        if (heightRenderingElementInches) {
-            setHeightRenderingContentInches(heightRenderingElementInches.textContent || heightRenderingElementInches.innerText);
-        }
-    }, []);
-
-    //Logic for room height rendering fractions section
-    const [HeightRenderingContentFractions, setHeightRenderingContentFractions] = useState('');
-
-    useEffect(() => {
-        // Fetch the contents of the height_rendering_element_fractions section and set the state
-        const heightRenderingElementFractions = document.querySelector(`.${styles.height_rendering_element_fractions}`);
-        if (heightRenderingElementFractions) {
-            setHeightRenderingContentFractions(heightRenderingElementFractions.textContent || heightRenderingElementFractions.innerText);
-        }
-    }, []);
-
-
 
     return (
 
@@ -289,21 +270,21 @@ function ZebraBlinds() {
                     <div className={styles.right_half}>
 
                         <div className={styles.top_title_area}>
-                        <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
+                            <div className={styles.product_title}>ZEBRA BLINDS SHADES</div>
 
-                        <div className={styles.room_darkening_rectangle}></div>
+                            <div className={styles.room_darkening_rectangle}></div>
 
 
-                        <div>
-                            <div className={styles.room_darkening}>
+                            <div>
+                                <div className={styles.room_darkening}>
 
-                                <p className={styles.room_darkening_element}>Room Darkening</p>
+                                    <p className={styles.room_darkening_element}>Room Darkening</p>
 
-                                <div className={styles.top_prices}>
-                                    <p className={styles.price_regular}>$ 00.00 </p>
+                                    <div className={styles.top_prices}>
+                                        <p className={styles.price_regular}>$ 00.00 </p>
 
-                                    <p className={styles.price_discount}>SAVE 00%</p>
-                                </div>
+                                        <p className={styles.price_discount}>SAVE 00%</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -317,11 +298,11 @@ function ZebraBlinds() {
                         </div>
 
                         <div className={styles.star_group}>
-                        <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
-                        <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
-                        <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
-                        <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
-                        <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+                            <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
+                            <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
+                            <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
+                            <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
+                            <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
                         </div>
 
                         <div className={styles.top_divider_line}></div>
@@ -367,7 +348,7 @@ function ZebraBlinds() {
 
                                 <div className={styles.enter_size_inside_mount}>
 
-                                    <div className={styles.enter_size_inside_mount_tag}>Enter Inside Mount Size:</div>
+                                    <div className={styles.enter_size_inside_mount_tag}>Choose Inside Mount Size</div>
 
                                     <div className={styles.enter_size_inside_mount_triggers}>
 
@@ -375,99 +356,89 @@ function ZebraBlinds() {
                                         <div className={styles.enter_height1}>
 
                                             <div className={styles.height_inside_mount_sub_title}>Height:</div>
+                                            <div className={styles.enter_height_inside_mount_rectangle_1}>
+                                                <div className={styles.toggle_disclaimer}>
+                                                    Toggle
+                                                </div>
+                                                <svg
+                                                    className={styles.polygon_1}
+                                                    width="20"
+                                                    height="16"
+                                                    viewBox="0 0 10 8"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    onClick={handle_drop_down_show_numbers_height_inside_mount}>
+                                                    <path
+                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                        fill="#da1212"
+                                                    />
+                                                </svg>
 
-                                            <div className={styles.enter_height_inside_mount_rectangle1}></div>
-                                            <div className={styles.enter_height_inside_mount_rectangle2}></div>
+
+
+                                            </div>
+
+
+                                            <div className={styles.enter_height_inside_mount_rectangle_2}>
+                                                <div className={styles.toggle_disclaimer}>
+                                                    Toggle
+                                                </div>
+                                                <svg
+                                                    className={styles.polygon_2}
+                                                    width="20"
+                                                    height="16"
+                                                    viewBox="0 0 10 8"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    onClick={handle_drop_down_show_fractions_inside_mount_height}>
+                                                    <path
+                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                        fill="#da1212"
+                                                    />
+                                                </svg>
+
+                                            </div>
+
+
 
                                             <div>
                                                 <div className={styles.height_scroll_number_inches}>
 
-                                                    <p className={styles.height_rendering_element_inches}>
-                                                        {heightnumber}
-                                                    </p>
+                                                    {whole_number_index_inside_mount_height && (
+                                                        <div className={styles.display_whole_numbers_wrapper}>
+                                                            <div>
+                                                                <div className={styles.heightScrollNumberInches}>
+                                                                    {whole_number_index_inside_mount_height && (
+                                                                        <div className={styles.displayWholeNumbersWrapper}>
+                                                                            <div className={styles.displayWholeNumbers}>{whole_number_index_inside_mount_height && <>{renderNumbers_inside_mount_height()}</>}</div>
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </div>
-
-                                                <svg
-                                                    className={styles.polygon_5}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_increase_height_inches_inside_mount}>
-                                                    <path
-                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-
-                                                <svg
-                                                    className={styles.polygon_6}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_decrease_height_inches}>
-                                                    <path
-                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
                                             </div>
 
-                                            <div className={styles.height_scroll_number_fractions}>
 
+                                            <div className={styles.scroll_number_fractions_inside_mount_height}>
                                                 <p className={styles.height_rendering_element_fractions}>
-                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                        <span className={styles.fraction_element2}>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[0]}
-                                                            </span>
-                                                            <span>
-                                                                {"/"}
-                                                            </span>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[1]}
-                                                            </span>
-                                                        </span>
-
-                                                    ) : (
-                                                        fractionsheight[heightfractionIndex]
-                                                    )}
+                                                    <div className={styles.heightScrollNumberInches}>
+                                                        {fractionIndex && (
+                                                            <div className={styles.display_fractions_inside_mount_height}>
+                                                                <div className={styles.displayWholeFractions_inside_mount_height}>{fractionIndex && <>{renderFractions_inside_mount_height()}</>}</div>
+                                                            </div>
+                                                        )}
+                                                    </div>
                                                 </p>
                                             </div>
 
-                                            <svg
-                                                className={styles.polygon_7}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_fractions}>
-                                                <path
-                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
 
-                                            <svg
-                                                className={styles.polygon_8}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_fractions}>
-                                                <path
-                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
 
-                                            <div className={styles.inches_height_inside_mount}>Inches</div>
-                                            <div className={styles.eighths_height_inside_mount}>Eighths</div>
+
+
+
+
                                         </div>
                                     </div>
 
@@ -475,100 +446,122 @@ function ZebraBlinds() {
 
                                     <div className={styles.enter_width_inside_mount}>
 
-                                        <div className={styles.enter_width_inside_mount_title}>Width:</div>
+                                        <div className={styles.enter_width_inside_mount_title}>Width1:</div>
 
-                                        <div className={styles.enter_width_inside_mount_rectangle1}></div>
-                                        <div className={styles.enter_width_inside_mount_rectangle2}></div>
-
-                                        <div>
-                                            <div className={styles.height_scroll_number_inches}>
-
-                                                <p className={styles.height_rendering_element_inches}>
-                                                    {heightnumber}
-                                                </p>
+                                        <div className={styles.enter_width_inside_mount_rectangle_1}>
+                                            <div className={styles.toggle_disclaimer}>
+                                                Toggle
                                             </div>
-
                                             <svg
-                                                className={styles.polygon_5}
-                                                width="10"
-                                                height="8"
+                                                className={styles.polygon_3}
+                                                width="20"
+                                                height="16"
                                                 viewBox="0 0 10 8"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_inches_inside_mount}>
-                                                <path
+                                                onClick={handle_drop_down_show_numbers_width_inside_mount}
+
+                                            >                                                <path
                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                    fill="#D9D9D9"
+                                                    fill="#da1212"
                                                 />
                                             </svg>
 
-                                            <svg
-                                                className={styles.polygon_6}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_inches}>
-                                                <path
-                                                    d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
+
                                         </div>
 
-                                        <div className={styles.height_scroll_number_fractions}>
+                                        <div className={styles.enter_width_inside_mount_rectangle_2}>
+                                            <div className={styles.toggle_disclaimer}>
+                                                Toggle
+                                            </div>
+                                            <svg
+                                                className={styles.polygon_4}
+                                                width="20"
+                                                height="16"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onClick={handle_drop_down_show_fractions_inside_mount_width}
+                                            >
+                                                <path
+                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                    fill="#da1212"
+                                                />
+                                            </svg>
 
-                                            <p className={styles.height_rendering_element_fractions}>
-                                                {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                    <span className={styles.fraction_element2}>
-                                                        <span>
-                                                            {fractions[heightfractionIndex].split('/')[0]}
-                                                        </span>
-                                                        <span>
-                                                            {"/"}
-                                                        </span>
-                                                        <span>
-                                                            {fractions[heightfractionIndex].split('/')[1]}
-                                                        </span>
-                                                    </span>
 
-                                                ) : (
-                                                    fractionsheight[heightfractionIndex]
+                                        </div>
+
+                                        <div className={styles.for_width_inches_scrollbar}>
+                                            <div className={styles.height_scroll_number_inches}>
+
+                                                {whole_number_index_inside_mount_width && (
+                                                    <div className={styles.display_whole_numbers_wrapper}>
+                                                        <div>
+                                                            <div className={styles.heightScrollNumberInches}>
+                                                                {whole_number_index_inside_mount_width && (
+                                                                    <div className={styles.displayWholeNumbersWrapper}>
+                                                                        <div className={styles.displayWholeNumbers}>{whole_number_index_inside_mount_width && <>{renderNumbers_inside_mount_width()}</>}</div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 )}
+                                            </div>
+                                        </div>
+
+
+                                        <div className={styles.scroll_number_fractions_inside_mount_width}>
+                                            <p className={styles.rendering_element_fractions_inside_mount_width}>
+                                                <div className={styles.heightScrollNumberInches}>
+                                                    {fractionIndex_inside_mount_width && (
+                                                        <div className={styles.display_fractions_inside_mount_width}>
+                                                            <div className={styles.displayWholeFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <>{renderFractions_inside_mount_width()}</>}</div>
+                                                        </div>
+                                                    )}
+                                                </div>
                                             </p>
                                         </div>
 
+
+
+
+                            
+
+
+
+
+
                                         <svg
-                                            className={styles.polygon_7}
+                                            className={styles.polygon_5}
                                             width="10"
                                             height="8"
                                             viewBox="0 0 10 8"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            onClick={handle_polygon_increase_height_fractions}>
+                                        >
                                             <path
-                                                d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
+                                                d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                 fill="#D9D9D9"
                                             />
                                         </svg>
 
+
+
                                         <svg
-                                            className={styles.polygon_8}
+                                            className={styles.polygon_5}
                                             width="10"
                                             height="8"
                                             viewBox="0 0 10 8"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            onClick={handle_polygon_decrease_height_fractions}>
+                                        >
                                             <path
-                                                d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
+                                                d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                 fill="#D9D9D9"
                                             />
                                         </svg>
-
-                                        <div className={styles.inches_width_inside_mount}>Inches</div>
-                                        <div className={styles.eighths_width_inside_mount}>Eighths</div>
 
                                     </div>
                                 </div>
@@ -628,97 +621,21 @@ function ZebraBlinds() {
                                                 <div className={styles.height_scroll_number_inches_outside_mount}>
 
                                                     <p className={styles.height_rendering_element_inches_outside_mount}>
-                                                        {heightnumber}
                                                     </p>
                                                 </div>
 
-                                                <svg
-                                                    className={styles.polygon_5}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_increase_height_inches_outisde_mount}>
-                                                    <path
-                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
 
-                                                <svg
-                                                    className={styles.polygon_6}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_decrease_height_inches}>
-                                                    <path
-                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
+
+
                                             </div>
 
-                                            <div className={styles.height_scroll_number_fractions}>
 
-                                                <p className={styles.height_rendering_element_fractions}>
-                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                        <span className={styles.fraction_element2}>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[0]}
-                                                            </span>
-                                                            <span>
-                                                                {"/"}
-                                                            </span>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[1]}
-                                                            </span>
-                                                        </span>
-
-                                                    ) : (
-                                                        fractionsheight[heightfractionIndex]
-                                                    )}
-                                                </p>
-                                            </div>
-
-                                            <svg
-                                                className={styles.polygon_7}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_fractions}>
-                                                <path
-                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
-
-                                            <svg
-                                                className={styles.polygon_8}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_fractions}>
-                                                <path
-                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
-
-                                            <div className={styles.inches_height_outside_mount}>Inches</div>
-                                            <div className={styles.eighths_height_outside_mount}>Eighths</div>
 
 
                                         </div>
 
                                         <div className={styles.enter_width_outisde_mount}>
-                                            <div className={styles.width_outside_mount_sub_title}>Width:</div>
+                                            <div className={styles.width_outside_mount_sub_title}>Width2:</div>
 
 
                                             <div className={styles.enter_height_outside_mount_rectangle1}></div>
@@ -728,97 +645,14 @@ function ZebraBlinds() {
                                                 <div className={styles.height_scroll_number_inches}>
 
                                                     <p className={styles.height_rendering_element_inches}>
-                                                        {heightnumber}
                                                     </p>
                                                 </div>
 
-                                                <svg
-                                                    alt="inches down outisde mount"
 
-                                                    className={styles.polygon_5}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_increase_height_inches_outisde_mount}>
-                                                    <path
-                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
-
-                                                <svg
-                                                    alt="inches up outisde mount"
-                                                    className={styles.polygon_6}
-                                                    width="10"
-                                                    height="8"
-                                                    viewBox="0 0 10 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    onClick={handle_polygon_decrease_height_inches}>
-                                                    <path
-                                                        d="M5.0605 7.29883L0.562881 0.281453L9.55812 0.281453L5.0605 7.29883Z"
-                                                        fill="#D9D9D9"
-                                                    />
-                                                </svg>
                                             </div>
 
-                                            <div className={styles.height_scroll_number_fractions}>
-
-                                                <p className={styles.height_rendering_element_fractions}>
-                                                    {fractionsheight[heightfractionIndex].includes('/') ? (
-                                                        <span className={styles.fraction_element2}>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[0]}
-                                                            </span>
-                                                            <span>
-                                                                {"/"}
-                                                            </span>
-                                                            <span>
-                                                                {fractions[heightfractionIndex].split('/')[1]}
-                                                            </span>
-                                                        </span>
-
-                                                    ) : (
-                                                        fractionsheight[heightfractionIndex]
-                                                    )}
-                                                </p>
-                                            </div>
-
-                                            <svg
-                                                alt="fractions down outisde mount"
-                                                className={styles.polygon_7}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_increase_height_fractions}>
-                                                <path
-                                                    d="M5.377 0.392578L9.87462 7.40995H0.879378L5.377 0.392578Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
-
-                                            <svg
-                                                alt="fractions up outisde mount"
-                                                className={styles.polygon_8}
-                                                width="10"
-                                                height="8"
-                                                viewBox="0 0 10 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                onClick={handle_polygon_decrease_height_fractions}>
-                                                <path
-                                                    d="M5.38081 7.29883L0.883194 0.281453L9.87843 0.281453L5.38081 7.29883Z"
-                                                    fill="#D9D9D9"
-                                                />
-                                            </svg>
 
 
-                                            <div className={styles.inches_width_outside_mount}>Inches</div>
-                                            <div className={styles.eighths_width_outside_mount}>Eighths</div>
                                         </div>
                                     </div>
                                 </div>
@@ -882,15 +716,15 @@ function ZebraBlinds() {
                         </div>
 
                         <div className={styles.select_lift_type_group}>
-                            
-                        <Image
+
+                            <Image
                                 className={styles.iconforselectlifttype}
                                 alt="iconforselectlifttype"
                                 width={100}
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-                            
+
                             <div className={styles.select_lift_type_seperator_line}></div>
                             <svg
                                 className={styles.select_lift_type_long_rectangle}
@@ -1212,251 +1046,220 @@ function ZebraBlinds() {
 
 
 
-                                <div className={styles.width2bom}>Width:</div>
+                                <div className={styles.widthbom}>Inside Mount Width:</div>
+
+
                                 <div className={styles.width2_answer}>
-                                    <p className={styles.width_rendering_element_inches}>
-                                        {number}</p>
-
-                                    <p className={styles.width_rendering_element_fractions}>
-                                        {fractions[fractionIndex].includes('/') ? (
-                                            <span className={styles.fraction_element1}>
-                                                <span>
-                                                    {fractions[fractionIndex].split('/')[0]}
-                                                </span>
-                                                <span>
-                                                    {"/"}
-                                                </span>
-                                                <span>
-                                                    {fractions[fractionIndex].split('/')[1]}
-                                                </span>
-                                            </span>
-                                        ) : (
-                                            fractions[fractionIndex]
-                                        )}
-                                    </p>
-                                </div>
-
-                                <svg
-                                    className={styles.rectangle_37}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-
-
-                                <div className={styles.height2bom}>Height:</div>
-                                <div className={styles.height2_answer}>
-
-                                    <p className={styles.height_rendering_element_inches}>
-                                        {heightnumber}
-                                    </p>
-
-                                    <p className={styles.height_rendering_element_fractions}>
-                                        {fractionsheight[heightfractionIndex].includes('/') ? (
-                                            <span className={styles.fraction_element2}>
-                                                <span>
-                                                    {fractions[heightfractionIndex].split('/')[0]}
-                                                </span>
-                                                <span>
-                                                    {"/"}
-                                                </span>
-                                                <span>
-                                                    {fractions[heightfractionIndex].split('/')[1]}
-                                                </span>
-                                            </span>
-
-                                        ) : (
-                                            fractionsheight[heightfractionIndex]
-                                        )}
-                                    </p>
+                                    <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span>{" (Inches width),"}<span></span></p>
+                                    <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span>{" (Fractions width)"}<span></span></p>
 
                                 </div>
+                            </div>
 
-
-                                <svg
-                                    className={styles.rectangle_38}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <div className={styles.mount}>Mount:</div>
-                                <div className={styles.mount_answer}>
-                                    {InsideOrOutsideRenderingContent}
-                                </div>
-
-                                <svg
-                                    className={styles.rectangle_39}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <div className={styles.materialsbom}>Materials:</div>
+                            <svg
+                                className={styles.rectangle_37}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
 
 
 
-                                <svg
-                                    className={styles.rectangle_40}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
+                            <div className={styles.heightbom}>Inside Mount Height:</div>
 
 
-                                <div className={styles.lift_type}>Lift Type:</div>
-                                <div className={styles.lift_type_answer}>
-                                    {active_wand_cordlift_motorizedRenderingContent}
-                                </div>
+                            <div className={styles.height2Answer}>
+                                <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span>{" (Inches)height,"}<span></span></p>
+                                <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height}</span>{" (Fractions)height"}<span></span></p>
 
-
-                                <svg
-                                    className={styles.rectangle_41}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-
-                                <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
-                                <div className={styles.casette_head_rail_type_answer}>
-                                    {active_cassette_round1RenderingContent}
-                                </div>
-
-                                <svg
-                                    className={styles.rectangle_42}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <div className={styles.head_rail_color}>Head Rail Color:</div>
-
-                                <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
-                                <svg
-                                    className={styles.rectangle_47}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-
-                                <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
-                                <div className={styles.bottom_rail_type_answer}>
-                                    {bottomRailOptionsRenderingContent}
-                                </div>
-
-
-                                <svg
-                                    className={styles.rectangle_44}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
                             </div>
 
 
-                            <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
-                            <div className={styles.shipping_details_titles}>
-                                <div className={styles.shipping_details}>Shipping Details</div>
-                                <div className={styles.total_price_tile}>Total Price</div>
+
+
+
+                            <svg
+                                className={styles.rectangle_38}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
+
+                            <div className={styles.mount}>Mount:</div>
+                            <div className={styles.mount_answer}>
+                                {InsideOrOutsideRenderingContent}
                             </div>
-                            <div className={styles.shipping_divider1}></div>
+
+                            <svg
+                                className={styles.rectangle_39}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
+
+                            <div className={styles.materialsbom}>Materials:</div>
 
 
-                            <div className={styles.shipping_tagger}>
 
-                                <div className={styles.shipping}>Shipping</div>
-                                <div className={styles.shipping_price}>FREE</div>
-                                <div className={styles.qty_1}>Qty 1</div>
-                                <div className={styles.total_price}>$00.00</div>
+                            <svg
+                                className={styles.rectangle_40}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
+
+
+                            <div className={styles.lift_type}>Lift Type:</div>
+                            <div className={styles.lift_type_answer}>
+                                {active_wand_cordlift_motorizedRenderingContent}
                             </div>
 
-                            <div className={styles.shipping_divider2}></div>
 
-                            <div className={styles.order_number}>Order Number: 345969654</div>
-                            <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                            <div className={styles.date}>00/00/0000</div>
+                            <svg
+                                className={styles.rectangle_41}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
 
 
-                            <div className={styles.add_to_cart_rectangle}></div>
+                            <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
+                            <div className={styles.casette_head_rail_type_answer}>
+                                {active_cassette_round1RenderingContent}
+                            </div>
 
-                            <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
-                                <div className={styles.add_to_cart}>ADD TO CART</div>
-                            </Link>
+                            <svg
+                                className={styles.rectangle_42}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
 
-                            <Image alt="image" width={100} height={100} className={styles.paymenticon}
-                                src="/interact.png" />
+                            <div className={styles.head_rail_color}>Head Rail Color:</div>
 
-                            <Image alt="image" width={100} height={100}
-                                className={styles.paypalicon}
-                                src="/paymenticon.png"
-                            />
+                            <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
+                            <svg
+                                className={styles.rectangle_47}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
+
+                            <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
+                            <div className={styles.bottom_rail_type_answer}>
+                                {bottomRailOptionsRenderingContent}
+                            </div>
+
+
+                            <svg
+                                className={styles.rectangle_44}
+                                width="483"
+                                height="2"
+                                viewBox="0 0 483 2"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
+                                    fill="black"
+                                />
+                            </svg>
                         </div>
 
 
-                    </div>
-                </div>
-                <Footer></Footer>
+                        <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
+                        <div className={styles.shipping_details_titles}>
+                            <div className={styles.shipping_details}>Shipping Details</div>
+                            <div className={styles.total_price_tile}>Total Price</div>
+                        </div>
+                        <div className={styles.shipping_divider1}></div>
 
+
+                        <div className={styles.shipping_tagger}>
+
+                            <div className={styles.shipping}>Shipping</div>
+                            <div className={styles.shipping_price}>FREE</div>
+                            <div className={styles.qty_1}>Qty 1</div>
+                            <div className={styles.total_price}>$00.00</div>
+                        </div>
+
+                        <div className={styles.shipping_divider2}></div>
+
+                        <div className={styles.order_number}>Order Number: 345969654</div>
+                        <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
+                        <div className={styles.date}>00/00/0000</div>
+
+
+                        <div className={styles.add_to_cart_rectangle}></div>
+
+                        <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
+                            <div className={styles.add_to_cart}>ADD TO CART</div>
+                        </Link>
+
+                        <Image alt="image" width={100} height={100} className={styles.paymenticon}
+                            src="/interact.png" />
+
+                        <Image alt="image" width={100} height={100}
+                            className={styles.paypalicon}
+                            src="/paymenticon.png"
+                        />
+                    </div>
+
+
+                </div>
             </div>
+            <Footer></Footer>
+
 
         </>
     )
