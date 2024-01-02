@@ -3075,7 +3075,7 @@
   height: 3px;
   position: absolute;
   left: 747.87px;
-  top: 2876.85px;
+  top:5000.85px; 
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, -1);
 }
@@ -3103,8 +3103,8 @@
   width: 100px;
   height: 25px;
   position: absolute;
-  left: 1095.87px;
-  top: 2925px;
+  left: 875px;
+  top: 4883.85px;
   box-shadow: -3px 3px 8px 0px rgba(0, 0, 0, 0.25);
   transform-origin: 0 0;
   transition: 0.3s;
@@ -3119,7 +3119,8 @@
 .shipping_details_titles {
   display: flex;
   position: absolute;
-  top: 25px;
+  top: 500px;
+  
 }
 
 .shipping_details {
@@ -3142,8 +3143,8 @@
   font-size: 13px;
   font-weight: 700;
   position: absolute;
-  left: 1101.87px;
-  top: 2822.85px;
+  left: 1001.87px;
+  top:4406.85px; 
   width: 88px;
   height: 15px;
 }
@@ -3156,7 +3157,7 @@
   font-weight: 700;
   position: absolute;
   left: 1148.87px;
-  top: 2867.85px;
+  top: 4890.85px; 
   width: 41px;
 }
 
@@ -3168,7 +3169,7 @@
   font-weight: 700;
   position: absolute;
   left: 1100.87px;
-  top: 2867.85px;
+  top: 4890.85px; 
   width: 30px;
 }
 
@@ -3180,7 +3181,7 @@
   font-weight: 700;
   position: absolute;
   left: 847.87px;
-  top: 2867.85px;
+  top: 4890.85px; 
   width: 40px;
 }
 
@@ -3192,8 +3193,8 @@
   font-weight: 700;
   position: absolute;
   left: 774.87px;
-  top: 2867.85px;
-  width: 52px;
+  top: 4890.85px; 
+   width: 52px;
 }
 
 .estimated_delivery_date {
@@ -3204,7 +3205,7 @@
   font-weight: 700;
   position: absolute;
   left: 906.87px;
-  top: 2933.85px;
+  top:5006.85px; 
   width: 73px;
 }
 
@@ -3216,7 +3217,7 @@
   font-weight: 700;
   position: absolute;
   left: 814px;
-  top: 2933.85px;
+  top:5006.85px; 
   width: 84px;
 }
 
@@ -3228,7 +3229,7 @@
   font-weight: 700;
   position: absolute;
   left: 988.87px;
-  top: 2933.85px;
+  top:5006.85px; 
   width: 35px;
 }
 
@@ -3237,7 +3238,7 @@
   height: 11px;
   position: absolute;
   left: 760.87px;
-  top: 2852.85px;
+  top: 4890.85px;
 }
 
 .add_to_cart {
@@ -3247,8 +3248,8 @@
   font-size: 7px;
   font-weight: 700;
   position: absolute;
-  left: 1123px;
-  top: 2932.85px;
+  left: 900px;
+  top: 4892px;
   width: 50px;
   height: 10px;
 }
@@ -3258,8 +3259,8 @@
   width: auto;
   height: 10px;
   position: relative;
-  left: 1100px;
-  top: 2958px;
+  left: 1070px;
+  top: 4565.85px;
 }
 
 .paypalicon {
@@ -3267,5 +3268,5 @@
   height: 10px;
   position: relative;
   left: 1107px;
-  top: 2958px;
+  top: 4555.85px;
 }
