@@ -906,33 +906,16 @@ function ZebraBlinds() {
                             </Image>
 
                             <div className={styles.select_lift_type_seperator_line}></div>
-                            <svg
+                            <div
                                 className={styles.select_lift_type_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
                             >
-                                <path
-                                    d="M0.496094 16.0847C0.496094 7.55841 7.40802 0.646484 15.9343 0.646484H465.684C474.21 0.646484 481.122 7.55841 481.122 16.0847V16.0847C481.122 24.611 474.21 31.5229 465.684 31.5229H15.9343C7.40804 31.5229 0.496094 24.611 0.496094 16.0847V16.0847Z"
-                                    fill="#202020"
-                                />
-                            </svg>
+                            </div>
 
-                            <svg
+                            <div
                                 className={styles.select_lift_type_short_rectangle}
-                                width="225"
-                                height="31"
-                                viewBox="0 0 225 31"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
                             >
-                                <path
-                                    d="M0 15.5C0 6.93959 6.93959 0 15.5 0H209.5C218.06 0 225 6.93959 225 15.5V15.5C225 24.0604 218.06 31 209.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
-                                    fill="#630505"
-                                />
-                            </svg>
+                            </div>
+
 
                             <div className={styles.select_lift_type_title}>
                                 <p>
@@ -1449,7 +1432,6 @@ function ZebraBlinds() {
 
                 </div>
             </div>
-            <Footer></Footer>
 
 
         </>

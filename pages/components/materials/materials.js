@@ -1,7 +1,7 @@
 // pages/components/materials/materials.js
 import React from 'react';
 import Image from 'next/image';
-import styles from "../../../styles/components/pages/zebrablinds.module.css"
+import styles from "../../../styles/components/pages/materials.module.css"
 import { useState } from "react";
 
 const MaterialsPage = () => {
