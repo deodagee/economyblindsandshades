@@ -10,7 +10,6 @@ function zebrablinds () {
     return ( 
         <>
 <div className={styles.main_wrapper}>
-        <HeaderPiece></HeaderPiece>
         <ZebrablindsPage></ZebrablindsPage>
         </div>
         </>

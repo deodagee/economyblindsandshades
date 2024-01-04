@@ -26,6 +26,25 @@ const LeftSidePage = () => {
         { key: 'honeycombblinds', src: '/honeycombblinds.png', label: 'FIRST1-41' },
 
         { key: 'etb3004', src: '/etb3004.jpg', label: 'etb3004' },
+        { key: 'cassettesteel', src: '/cassettesteel.png', label: 'cassettesteel' },
+
+        { key: 'indexcomponentmain', src: '/indexcomponentmain.png', label: 'indexcomponentmain' },
+
+        { key: 'slidingcomponent8', src: '/slidingcomponent8.png', label: 'slidingcomponent8' },
+
+        { key: 'reviewsbg', src: '/reviewsbg.png', label: 'reviewsbg' },
+
+        { key: 'rollerblinds', src: '/rollerblinds.png', label: 'rollerblinds' },
+
+        { key: 'zebrablinds', src: '/zebrablinds.png', label: 'zebrablinds' },
+
+        { key: 'whattypeofblindsdoyouinstall', src: '/whattypeofblindsdoyouinstall.png', label: 'whattypeofblindsdoyouinstall' },
+        { key: 'slidingcomponent1', src: '/slidingcomponent1.png', label: 'slidingcomponent1' },
+        { key: 'aretheoptionsaffordableandstylish', src: '/aretheoptionsaffordableandstylish.png', label: 'aretheoptionsaffordableandstylish' },
+        { key: 'howsooncanibookanestimate', src: '/howsooncanibookanestimate.png', label: 'howsooncanibookanestimate' },
+        { key: 'honeycombblinds', src: '/honeycombblinds.png', label: 'FIRST1-41' },
+
+        { key: 'etb3004', src: '/etb3004.jpg', label: 'etb3004' },
 
         // Add more image data as needed
     ];
@@ -68,9 +87,8 @@ const LeftSidePage = () => {
                     {ImageDataLeftSide.map((item, index) => (
                         <div
                             key={item.key}
-                            className={`${styles.imageContainer} ${
-                                selectedImage === item.src ? styles.selectedImage : ''
-                            }`}
+                            className={`${styles.imageContainer} ${selectedImage === item.src ? styles.selectedImage : ''
+                                }`}
                             onClick={() => setSelectedImage(item.src)}
                         >
                             <Image src={item.src} alt={item.label} width={100} height={100} />
