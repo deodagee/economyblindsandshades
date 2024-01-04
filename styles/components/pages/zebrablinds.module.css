@@ -180,8 +180,10 @@
 
 .select_mount_group {
   display: flex;
-  flex-direction: column;
-  width: max-content;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: max-content;
 }
 
 .select_mount_group_title {
@@ -196,13 +198,37 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.left_right_inside_mount { 
+  display: flex;
+  gap: 2vw;
+
+}
+
+.visible_inside_mount {
+  display: contents;
+}
+
+.invisible_inside_mount {
+  display: none;
+}
+
+.left_inside_mount { 
+  display: flex;
+  height: 50vh;
+  width: 25vw;
+  margin-top: 3vh;
+}
+
 
 .inside_mount_group_left_side {
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: 25vw;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .ellipse_and_type {
   display: flex;
@@ -238,7 +264,8 @@
 
 
 }
-.outside_mount_choice { 
+
+.outside_mount_choice {
   white-space: nowrap;
   font-size: 12px;
 
@@ -247,12 +274,14 @@
 .active_inside_outside_ellipse {
   background-color: rgb(40, 40, 40);
   font-size: 12px;
-  color: rgba(66, 220, 0, 0.881);}
+  color: rgba(66, 220, 0, 0.881);
+}
 
 
 .inside_mount_measurement_instructions {
   display: flex;
-  font-size: 12px;
+  flex-direction: column;
+  justify-content: flex-start;  font-size: 12px;
 }
 
 .step_1_inside_mount,
@@ -292,6 +321,14 @@
   width: 20vw;
   background-color: rgb(249, 249, 249);
   padding: 10px;
+  font-size: 10px;
+}
+
+.right_inside_mount { 
+  display: flex;
+  height: 50vh;
+  width: 25vw;
+  margin-top: 3vh;
 }
 
 .inside_mount_group_right_side {
@@ -299,7 +336,6 @@
   width: 25vw;
   align-items: center;
   justify-content: center;
-  border-width: 2px;
 }
 
 .insidemount_Image {
@@ -307,7 +343,6 @@
   align-items: center;
   justify-content: center;
   width: max-content;
-  border-width: 5px;
 }
 
 .enter_size_inside_mount_group {
@@ -317,6 +352,7 @@
   justify-content: center;
   width: 30vw;
   height: 25vh;
+  margin-top: 2vh;
 }
 
 .enter_size_inside_mount_title {
@@ -392,7 +428,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -402,11 +438,11 @@
   padding: 5px;
 }
 
-.display_whole_numbers_wrapper_inside_mount_height { 
+.display_whole_numbers_wrapper_inside_mount_height {
   width: 100px;
 }
 
-.displayWholeNumbers_inside_mount_height { 
+.displayWholeNumbers_inside_mount_height {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -418,22 +454,22 @@
 
 }
 
-.ScrollNumberInches_height_inside_mount { 
+.ScrollNumberInches_height_inside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.singleNumber_inside_mount_height:hover { 
+.singleNumber_inside_mount_height:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
   border-width: 1px;
   border-color: grey;
 
-  }
+}
 
-.selectedNumber_height_inside_mount { 
+.selectedNumber_height_inside_mount {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -465,19 +501,19 @@
 }
 
 
-.polygon_2 { 
+.polygon_2 {
   display: flex;
   transform: rotate(180deg);
   width: 10px;
   top: 0;
 }
 
-.height_scroll_number_fractions_inside_mount { 
+.height_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -487,11 +523,11 @@
   padding: 5px;
 }
 
-.display_fractions_wrapper_inside_mount_height { 
+.display_fractions_wrapper_inside_mount_height {
   width: 100px;
 }
 
-.ScrollNumberFractions_height_inside_mount { 
+.ScrollNumberFractions_height_inside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -509,7 +545,7 @@
   justify-content: flex-start;
 }
 
-.singleFraction_height_inside_mount:hover{ 
+.singleFraction_height_inside_mount:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -517,7 +553,7 @@
   border-color: grey;
 }
 
-.selectedFraction_height_inside_mount { 
+.selectedFraction_height_inside_mount {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -526,7 +562,7 @@
 }
 
 
-.enter_width_group_inside_mount { 
+.enter_width_group_inside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -543,7 +579,7 @@
   gap: 10px;
 }
 
-.width_inside_mount_sub_title { 
+.width_inside_mount_sub_title {
   display: flex;
   font-size: 15px;
   color: rgb(45, 45, 45);
@@ -560,7 +596,7 @@
   height: 10px;
 }
 
-.toggle_disclaimer_inches_inside_mount_width { 
+.toggle_disclaimer_inches_inside_mount_width {
   display: flex;
   position: static;
   flex-direction: row;
@@ -579,12 +615,12 @@
   top: 0;
 }
 
-.width_scroll_number_inches_inside_mount { 
+.width_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -595,12 +631,12 @@
 }
 
 
-.display_whole_numbers_wrapper_inside_mount_width { 
+.display_whole_numbers_wrapper_inside_mount_width {
   width: 100px;
 }
 
 
-.displayWholeNumbers_inside_mount_width { 
+.displayWholeNumbers_inside_mount_width {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -612,14 +648,14 @@
 }
 
 
-.ScrollNumberInches_width_inside_mount { 
+.ScrollNumberInches_width_inside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 
-.singleNumber_inside_mount_width:hover { 
+.singleNumber_inside_mount_width:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -627,7 +663,7 @@
   border-color: grey;
 }
 
-.selectedNumber_inside_mount_width { 
+.selectedNumber_inside_mount_width {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -635,112 +671,138 @@
   border-color: grey;
 }
 
-  .enter_width_inside_mount_rectangle_2 { 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    width: 15vw;
-    height: 10px;
-  }
-  
-  .toggle_disclaimer_fractions_inside_mount_width { 
-    display: flex;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-weight: 600;
-    margin: 10px;
-    white-space: nowrap;
-  }
+.enter_width_inside_mount_rectangle_2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 15vw;
+  height: 10px;
+}
 
-  .polygon_4 {
-    display: flex;
-    transform: rotate(180deg);
-    width: 10px;
-    top: 0;
-  }
+.toggle_disclaimer_fractions_inside_mount_width {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px;
+  white-space: nowrap;
+}
 
-  .width_scroll_number_fractions_inside_mount { 
-    position: static;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-top:0vh ;
-    z-index: 1;
-    width: 200px;
-    height: max-content;
-    overflow-x: scroll;
-    border-width: 1px;
-    border-color: black;
-    padding: 5px;
-  }
+.polygon_4 {
+  display: flex;
+  transform: rotate(180deg);
+  width: 10px;
+  top: 0;
+}
 
-  .display_fractions_wrapper_inside_mount_width { 
-    width: 100px;
-  }
+.width_scroll_number_fractions_inside_mount {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 0vh;
+  z-index: 1;
+  width: 200px;
+  height: max-content;
+  overflow-x: scroll;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+}
 
-  
-  .displayFractions_inside_mount_width { 
-    gap: 15px;
-    padding: 10px;
-    width: 22px;
-    height: 22px;
-    font-size: 15px;
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
+.display_fractions_wrapper_inside_mount_width {
+  width: 100px;
+}
 
 
-  .ScrollNumberFractions_width_inside_mount { 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .singleFraction_width_inside_mount:hover { 
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 0.24rem;
-    border-width: 1px;
-    border-color: grey;
-  }
-
-  .selectedFraction_width { 
-    background-color: rgb(88, 0, 0);
-    color: rgb(212, 212, 212);
-    border-radius: 0.24rem;
-    border-width: 1px;
-    border-color: grey;  
-  }
+.displayFractions_inside_mount_width {
+  gap: 15px;
+  padding: 10px;
+  width: 22px;
+  height: 22px;
+  font-size: 15px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 
+.ScrollNumberFractions_width_inside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  .outside_mount_group { 
-    width: 59vw;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.singleFraction_width_inside_mount:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 0.24rem;
+  border-width: 1px;
+  border-color: grey;
+}
 
-.outside_mount_group_left_side { 
+.selectedFraction_width {
+  background-color: rgb(88, 0, 0);
+  color: rgb(212, 212, 212);
+  border-radius: 0.24rem;
+  border-width: 1px;
+  border-color: grey;
+}
+
+
+
+.outside_mount_group {
+  width: 59vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.visible_outside_mount { 
+display: contents;
+}
+
+.invisible_outside_mount { 
+display: none;
+}
+
+.outside_mount_group_left_side {
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: 25vw;
+  align-items: center;
+  justify-content: center;
 }
 
-.outside_mount_instructions { 
+.left_right_outside_mount { 
   display: flex;
-  font-size: 12px;
+  gap: 2vw;
 }
 
-.step_1_outside_mount, .step_2_outside_mount, .step_3_outside_mount { 
+.left_outside_mount { 
+  display: flex;
+  height: 50vh;
+  width: 25vw;
+  margin-top: 2vh;
+}
+
+.outside_mount_measurement_instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+    font-size: 12px;
+}
+
+.step_1_outside_mount,
+.step_2_outside_mount,
+.step_3_outside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -753,46 +815,52 @@
 }
 
 
+.right_outside_mount { 
+display: flex;
+height: 50vh;
+width: 25vw;
+margin-top: 2vh;
+}
 
-.outside_mount_group_right_side { 
+
+.outside_mount_group_right_side {
   display: flex;
   width: 25vw;
   align-items: center;
   justify-content: center;
-  border-width: 2px;
 
 }
 
-.outsidemount_Image { 
+.outsidemount_Image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
-  border-width: 5px;
+  width: max-content;
 }
 
-.enter_size_outside_mount_group { 
+.enter_size_outside_mount_group {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 30vw;
   height: 25vh;
+  margin-top: 2vh;
 }
 
-.enter_size_outside_mount_title { 
+.enter_size_outside_mount_title {
   display: flex;
   font-size: 15px;
 }
 
-.enter_height_and_width_outside_mount_group { 
+.enter_height_and_width_outside_mount_group {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
   height: max-content;
 }
 
-.enter_height_group_outside_mount { 
+.enter_height_group_outside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -802,7 +870,7 @@
 
 }
 
-.height_and_toggle_outside_mount { 
+.height_and_toggle_outside_mount {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -810,14 +878,14 @@
   gap: 10px;
 }
 
-.height_outside_mount_sub_title { 
+.height_outside_mount_sub_title {
   display: flex;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
 }
 
-.enter_height_outside_mount_rectangle_1 { 
+.enter_height_outside_mount_rectangle_1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -827,7 +895,7 @@
   height: 10px;
 }
 
-.toggle_disclaimer_inches_outside_mount { 
+.toggle_disclaimer_inches_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -853,7 +921,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -863,11 +931,11 @@
   padding: 5px;
 }
 
-.display_whole_numbers_wrapper_outside_mount_height { 
+.display_whole_numbers_wrapper_outside_mount_height {
   width: 100px;
 }
 
-.displayWholeNumbers_outside_mount_height { 
+.displayWholeNumbers_outside_mount_height {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -878,13 +946,13 @@
   justify-content: flex-start;
 }
 
-.ScrollNumberInches_height_outside_mount { 
+.ScrollNumberInches_height_outside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.singleNumber_outside_mount_height:hover { 
+.singleNumber_outside_mount_height:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -892,7 +960,7 @@
   border-color: grey;
 }
 
-.selectedNumber_height_outside_mount { 
+.selectedNumber_height_outside_mount {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -900,7 +968,7 @@
   border-color: grey;
 }
 
-.enter_width_outside_mount_rectangle_2 { 
+.enter_width_outside_mount_rectangle_2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -910,7 +978,7 @@
   height: 10px;
 }
 
-.toggle_disclaimer_fractions_outside_mount { 
+.toggle_disclaimer_fractions_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -924,19 +992,19 @@
 
 
 
-.polygon_6 { 
+.polygon_6 {
   display: flex;
   transform: rotate(180deg);
   width: 10px;
   top: 0;
 }
 
-.height_scroll_number_fractions_outside_mount { 
+.height_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -946,11 +1014,18 @@
   padding: 5px;
 }
 
-.display_fractions_wrapper_outside_mount_height { 
+.display_fractions_wrapper_outside_mount_height {
   width: 100px;
 }
 
-.displayFractions_outside_mount_height { 
+
+.ScrollNumberFractions_height_outside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.displayFractions_outside_mount_height {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -962,14 +1037,7 @@
 }
 
 
-.ScrollNumberFractions_height_outside_mount { 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-
-.singleFraction_height_outside_mount:hover { 
+.singleFraction_height_outside_mount:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -977,7 +1045,7 @@
   border-color: grey;
 }
 
-.selectedFraction_outside_mount_height { 
+.selectedFraction_outside_mount_height {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -986,7 +1054,7 @@
 }
 
 
-.enter_width_group_outside_mount { 
+.enter_width_group_outside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -995,7 +1063,7 @@
   background-color: rgb(235, 235, 235);
 }
 
-.width_and_toggle_outside_mount { 
+.width_and_toggle_outside_mount {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1004,14 +1072,14 @@
 
 }
 
-.width_outside_mount_sub_title { 
+.width_outside_mount_sub_title {
   display: flex;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
 }
 
-.enter_width_outside_mount_rectangle_1 { 
+.enter_width_outside_mount_rectangle_1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1021,7 +1089,7 @@
   height: 10px;
 }
 
-.toggle_disclaimer_inches_outside_mount { 
+.toggle_disclaimer_inches_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1033,19 +1101,19 @@
   white-space: nowrap;
 }
 
-.polygon_7 { 
+.polygon_7 {
   display: flex;
   transform: rotate(180deg);
   width: 10px;
   top: 0;
 }
 
-.width_scroll_number_inches_outside_mount { 
+.width_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -1055,11 +1123,11 @@
   padding: 5px;
 }
 
-.display_whole_numbers_wrapper_outside_mount_width { 
+.display_whole_numbers_wrapper_outside_mount_width {
   width: 100px;
 }
 
-.displayWholeNumbers_outside_mount_width { 
+.displayWholeNumbers_outside_mount_width {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -1070,13 +1138,13 @@
   justify-content: flex-start;
 }
 
-.ScrollNumberInches_width_outside_mount { 
+.ScrollNumberInches_width_outside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.singleNumber_outside_mount_width:hover { 
+.singleNumber_outside_mount_width:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -1084,7 +1152,7 @@
   border-color: grey;
 }
 
-.selectedNumber_outside_mount_width { 
+.selectedNumber_outside_mount_width {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -1093,19 +1161,19 @@
 }
 
 
-.polygon_8 { 
+.polygon_8 {
   display: flex;
   transform: rotate(180deg);
   width: 10px;
   top: 0;
 }
 
-.width_scroll_number_fractions_outside_mount { 
+.width_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top:0vh ;
+  margin-top: 0vh;
   z-index: 1;
   width: 200px;
   height: max-content;
@@ -1115,11 +1183,11 @@
   padding: 5px;
 }
 
-.display_fractions_wrapper_outside_mount_width { 
+.display_fractions_wrapper_outside_mount_width {
   width: 100px;
 }
 
-.displayFractions_outside_mount_width { 
+.displayFractions_outside_mount_width {
   gap: 15px;
   width: 22px;
   height: 22px;
@@ -1130,14 +1198,14 @@
   justify-content: flex-start;
 }
 
-.ScrollNumberFractions_width_outside_mount { 
+.ScrollNumberFractions_width_outside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
 
-.singleFraction_width_inside_mount:hover { 
+.singleFraction_width_inside_mount:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   border-radius: 0.24rem;
@@ -1145,7 +1213,7 @@
   border-color: grey;
 }
 
-.selectedFraction_width_outside_mount_width { 
+.selectedFraction_width_outside_mount_width {
   background-color: rgb(88, 0, 0);
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
@@ -1154,14 +1222,14 @@
 }
 
 
-.select_color_type_seperator_line { 
+.select_color_type_seperator_line {
   height: 2px;
   width: 100%;
   background-color: red;
   margin: 10px;
 }
 
-.select_color_long_rectangle { 
+.select_color_long_rectangle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1173,30 +1241,31 @@
 
 }
 
-.select_color_short_rectangle { 
+.select_color_short_rectangle {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   width: 12vw;
   height: 5vh;
   border-radius: 2rem;
   background-color: #820000;
 }
+
 .select_color_short_rectangle:hover {
   cursor: default;
 }
 
-.select_color_title { 
+.select_color_title {
   color: white;
   font-size: 15px;
 }
 
-.select_lift_type_seperator_line { 
+.select_lift_type_seperator_line {
   display: flex;
   height: 2px;
   width: 100%;
   margin: 10px;
-  background-color:red;
+  background-color: red;
 }
 
 /* mobile styling */
@@ -1229,6 +1298,14 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .left_inside_mount { 
+    display: flex;
+    height: 50vh;
+    width: 25vw;
+    margin-top: 3vh;
+  }
+  
+
   .insidemount_Image {
     width: 60vw;
   }
@@ -1246,19 +1323,28 @@
     background-color: rgb(233, 233, 233);
   }
 
+  .step_tag_description {
+    display: flex;
+    width: max-content;
+    width: 40vw;
+    height: 9vh;
+  }
+
   /* outside mount */
 
-  .outside_mount_group { 
+  .outside_mount_group {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .outsidemount_Image { 
+  .outsidemount_Image {
     width: 60vw;
 
   }
 
-  .step_1_outside_mount, .step_2_outside_mount, .step_3_outside_mount { 
+  .step_1_outside_mount,
+  .step_2_outside_mount,
+  .step_3_outside_mount {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1270,13 +1356,7 @@
   }
 
 
-  /* other details */
-  .step_tag_description {
-    display: flex;
-    width: max-content;
-    width: 40vw;
-    height: 9vh;
-  }
+
 
 }
 
