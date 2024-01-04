@@ -426,7 +426,7 @@ function ZebraBlinds() {
                         <div className={styles.select_mount_group}>
 
                             <div className={styles.select_mount_group_title}>
-                                Choose Inside or Outside Mount
+                                Choose Your Mount Type
                             </div>
 
                             <div className={styles.inside_mount_group}>
@@ -438,14 +438,14 @@ function ZebraBlinds() {
                                             className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
                                             onClick={() => handleClickInside_And_Outisde_Ellipses(1)}
                                         >
-                                            <div className={styles.inside_mount}>Inside Mount</div>
+                                            <div className={styles.inside_mount_choice}>Inside Mount</div>
                                         </div>
 
                                         <div
                                             className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
                                             onClick={() => handleClickInside_And_Outisde_Ellipses(2)}
                                         >
-                                            <div className={styles.inside_mount}>Outside Mount</div>
+                                            <div className={styles.outside_mount_choice}>Outside Mount</div>
                                         </div>
 
                                     </div>
@@ -504,7 +504,7 @@ function ZebraBlinds() {
                                                 <div className={styles.enter_height_inside_mount_rectangle_1}>
                                                     <div className={styles.toggle_disclaimer_inches_inside_mount_height}>
                                                         <p>
-                                                        INCHES
+                                                            INCHES
                                                         </p>
                                                         <svg
                                                             className={styles.polygon_1}
@@ -882,42 +882,13 @@ function ZebraBlinds() {
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-                            <svg
-                                className={styles.select_color_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <div className={styles.select_color_long_rectangle}
                             >
-                                <path
-                                    d="M0.667969 16.1941C0.667969 7.66779 7.5799 0.755859 16.1062 0.755859H465.856C474.382 0.755859 481.294 7.66779 481.294 16.1941V16.1941C481.294 24.7204 474.382 31.6323 465.856 31.6323H16.1062C7.57992 31.6323 0.667969 24.7204 0.667969 16.1941V16.1941Z"
-                                    fill="#202020"
-                                />
-                            </svg>
-
-                            <svg
-                                className={styles.select_color_short_rectangle}
-                                width="225"
-                                height="31"
-                                viewBox="0 0 225 31"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0 15.5C0 6.93959 6.93959 0 15.5 0H209.5C218.06 0 225 6.93959 225 15.5V15.5C225 24.0604 218.06 31 209.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
-                                    fill="#630505"
-
-                                />
-                            </svg>
-
-
-
-                            <div className={styles.select_color}>
-                                <div className={styles.select_color_title}>
-
-                                    <p className={styles.iconforselectcolor_text}>Select Color / Material</p></div>
+                                <div className={styles.select_color_short_rectangle}>
+                                    <p className={styles.select_color_title}>Select Color / Material</p>
+                                </div>
                             </div>
+
 
                             <div className={styles.select_material}>2. Select Material</div>
 
