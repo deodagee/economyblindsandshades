@@ -86,11 +86,13 @@
   position: absolute;
   left: 40vw;
   width: 59vw;
+  height: max-content;
   display: flex;
   flex-direction: column;
   padding: 20px;
   border-width: 2px;
   overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -160,6 +162,7 @@
   height: auto;
 }
 
+
 .a_distinctive_look_that {
   display: flex;
   align-items: center;
@@ -182,14 +185,74 @@
   display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
-width: max-content;
+justify-content: space-evenly;
+width: 59vw;
+background: linear-gradient(to bottom, #f4f4f4,  #f4f4f4,#f5f5f5, #f7f7f7);
+width: 55vw;
+}
+
+.titled_step_combo { 
+  display: flex;
+  width: 55vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  
+}
+
+.select_mount_type_long_rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 5vh;
+  border-radius: 2rem;
+  background-color: #c1c1c1;
+  justify-content: start;
+
+}
+
+.select_mount_type_short_rectangle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 5vh;
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #820000;
+}
+
+.select_mount_type_short_rectangle:hover {
+  cursor: default;
+}
+
+.iconforselect_mount_type { 
+  display: flex;
+  padding: 2px;
+  width: 15px;
+  height: auto;
+  transform: rotate(90deg);
+  margin: 10px;
+}
+
+.select_mount_type_group_title {
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f1f1;
+  white-space: nowrap;
 }
 
 .select_mount_group_title {
   display: flex;
   font-size: 20px;
   font-weight: 700;
+  color: rgb(66, 66, 66);
+  margin-top: 3vh;
+  margin-bottom: 2vh;
 }
 
 .inside_mount_group {
@@ -201,7 +264,6 @@ width: max-content;
 .left_right_inside_mount { 
   display: flex;
   gap: 2vw;
-
 }
 
 .visible_inside_mount {
@@ -219,7 +281,6 @@ width: max-content;
   margin-top: 3vh;
 }
 
-
 .inside_mount_group_left_side {
   display: flex;
   flex-direction: column;
@@ -228,7 +289,6 @@ width: max-content;
   align-items: center;
   justify-content: center;
 }
-
 
 .ellipse_and_type {
   display: flex;
@@ -261,14 +321,11 @@ width: max-content;
 .inside_mount_choice {
   white-space: nowrap;
   font-size: 12px;
-
-
 }
 
 .outside_mount_choice {
   white-space: nowrap;
   font-size: 12px;
-
 }
 
 .active_inside_outside_ellipse {
@@ -277,11 +334,22 @@ width: max-content;
   color: rgba(66, 220, 0, 0.881);
 }
 
-
 .inside_mount_measurement_instructions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  font-size: 12px;
+  justify-content: flex-start; 
+  color: white;
+}
+
+.measurement_instructions_title_inside_mount { 
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #ababab;
+  padding: 5px;
+  border-radius: 0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step_1_inside_mount,
@@ -292,10 +360,10 @@ width: max-content;
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  width: 20vw;
-  height: 10vh;
+  width: 25vw;
+  height: 12vh;
   padding: 10px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(235, 235, 235);
 }
 
 .step_tag {
@@ -317,11 +385,12 @@ width: max-content;
   align-items: center;
   justify-content: left;
   text-align: left;
-  height: 8vh;
-  width: 20vw;
+  height: 10vh;
+  width: 22vw;
   background-color: rgb(249, 249, 249);
-  padding: 10px;
+  padding: 5px;
   font-size: 10px;
+  color: black;
 }
 
 .right_inside_mount { 
@@ -343,6 +412,10 @@ width: max-content;
   align-items: center;
   justify-content: center;
   width: max-content;
+  border-width: 2px;
+  border-color: #3d3d3d;
+  padding: 5px;
+  border-radius: 0.45rem;
 }
 
 .enter_size_inside_mount_group {
@@ -350,14 +423,18 @@ width: max-content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30vw;
-  height: 25vh;
+  width: 59vw;
+  height: 30vh;
   margin-top: 2vh;
+  margin-bottom: 5vh;
 }
 
 .enter_size_inside_mount_title {
   display: flex;
   font-size: 15px;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  color: white;
 }
 
 .enter_height_and_width_inside_mount_group {
@@ -372,7 +449,8 @@ width: max-content;
   align-items: center;
   justify-content: center;
   height: max-content;
-  width: 15vw;
+  width: 20vw;
+  padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 }
 
@@ -384,7 +462,6 @@ width: max-content;
   justify-content: center;
   gap: 10px;
 }
-
 
 .height_inside_mount_sub_title {
   display: flex;
@@ -433,9 +510,17 @@ width: max-content;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
+}
+
+.height_scroll_number_inches_inside_mount:hover { 
+transform: scale(0.98);
+transition: 0.4s;
 }
 
 .display_whole_numbers_wrapper_inside_mount_height {
@@ -451,7 +536,6 @@ width: max-content;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-
 }
 
 .ScrollNumberInches_height_inside_mount {
@@ -477,7 +561,6 @@ width: max-content;
   border-color: grey;
 }
 
-
 .enter_height_inside_mount_rectangle_2 {
   display: flex;
   flex-direction: row;
@@ -500,7 +583,6 @@ width: max-content;
   white-space: nowrap;
 }
 
-
 .polygon_2 {
   display: flex;
   transform: rotate(180deg);
@@ -518,9 +600,12 @@ width: max-content;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_fractions_wrapper_inside_mount_height {
@@ -531,7 +616,6 @@ width: max-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
 }
 
 .displayFractions_inside_mount_height {
@@ -561,13 +645,13 @@ width: max-content;
   border-color: grey;
 }
 
-
 .enter_width_group_inside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
   height: max-content;
-  width: 15vw;
+  width: 20vw;
+  padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 }
 
@@ -625,16 +709,17 @@ width: max-content;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
-
 
 .display_whole_numbers_wrapper_inside_mount_width {
   width: 100px;
 }
-
 
 .displayWholeNumbers_inside_mount_width {
   gap: 15px;
@@ -647,13 +732,11 @@ width: max-content;
   justify-content: flex-start;
 }
 
-
 .ScrollNumberInches_width_inside_mount {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-
 
 .singleNumber_inside_mount_width:hover {
   background-color: rgb(0, 0, 0);
@@ -710,15 +793,17 @@ width: max-content;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_fractions_wrapper_inside_mount_width {
   width: 100px;
 }
-
 
 .displayFractions_inside_mount_width {
   gap: 15px;
@@ -732,7 +817,6 @@ width: max-content;
   align-items: center;
   justify-content: flex-start;
 }
-
 
 .ScrollNumberFractions_width_inside_mount {
   display: flex;
@@ -755,8 +839,6 @@ width: max-content;
   border-width: 1px;
   border-color: grey;
 }
-
-
 
 .outside_mount_group {
   width: 59vw;
@@ -797,7 +879,17 @@ display: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-    font-size: 12px;
+}
+
+.measurement_instructions_title_outside_mount { 
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #ababab;
+  padding: 5px;
+  border-radius: 0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step_1_outside_mount,
@@ -809,9 +901,10 @@ display: none;
   flex-direction: row;
   gap: 10px;
   width: 25vw;
-  height: 10vh;
+  height: 12vh;
   padding: 10px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(235, 235, 235);
+  
 }
 
 
@@ -836,21 +929,35 @@ margin-top: 2vh;
   align-items: center;
   justify-content: center;
   width: max-content;
+  border-width: 2px;
+  border-color: #3d3d3d;
+  padding: 5px;
+  border-radius: 0.45rem;
 }
 
 .enter_size_outside_mount_group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 30vw;
-  height: 25vh;
+justify-content: center;
+  width: max-content;
+  height: max-content;
+  padding: 20px;
   margin-top: 2vh;
+  margin-bottom: 5vh;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  border-color: #c2c2c2;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+
 }
 
 .enter_size_outside_mount_title {
   display: flex;
   font-size: 15px;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  color: rgb(43, 43, 43);
 }
 
 .enter_height_and_width_outside_mount_group {
@@ -865,7 +972,8 @@ margin-top: 2vh;
   align-items: center;
   justify-content: center;
   height: max-content;
-  width: 15vw;
+  width: 20vw;
+  padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 
 }
@@ -926,9 +1034,12 @@ margin-top: 2vh;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_whole_numbers_wrapper_outside_mount_height {
@@ -1009,9 +1120,12 @@ margin-top: 2vh;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_fractions_wrapper_outside_mount_height {
@@ -1059,7 +1173,8 @@ margin-top: 2vh;
   align-items: center;
   justify-content: center;
   height: max-content;
-  width: 15vw;
+  width: 20vw;
+  padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 }
 
@@ -1118,9 +1233,12 @@ margin-top: 2vh;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_whole_numbers_wrapper_outside_mount_width {
@@ -1178,9 +1296,12 @@ margin-top: 2vh;
   width: 200px;
   height: max-content;
   overflow-x: scroll;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
   padding: 5px;
+  transition: 0.4s;
 }
 
 .display_fractions_wrapper_outside_mount_width {
@@ -1226,14 +1347,23 @@ margin-top: 2vh;
   height: 2px;
   width: 100%;
   background-color: red;
-  margin: 10px;
+  margin: 1vw;
+  margin-top: 3vh;
 }
+
+.select_color_group { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
 
 .select_color_long_rectangle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25vw;
+  width: 40vw;
   height: 5vh;
   border-radius: 2rem;
   background-color: #c1c1c1;
@@ -1243,10 +1373,12 @@ margin-top: 2vh;
 
 .select_color_short_rectangle {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 12vw;
+  width: 20vw;
   height: 5vh;
+  padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
 }
@@ -1255,10 +1387,49 @@ margin-top: 2vh;
   cursor: default;
 }
 
-.select_color_title {
-  color: white;
-  font-size: 15px;
+.iconforselectcolor { 
+  display: flex;
+  padding: 2px;
+  width: 15px;
+  height: auto;
+  transform: rotate(90deg);
+  margin: 10px;
 }
+
+.select_color_title {
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f1f1;
+  white-space: nowrap;
+}
+
+.select_color_subtitle { 
+  width: 59vw;
+  display: flex;
+padding: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .select_lift_type_seperator_line {
   display: flex;
