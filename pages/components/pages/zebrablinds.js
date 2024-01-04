@@ -423,9 +423,22 @@ function ZebraBlinds() {
 
                         <div className={styles.select_mount_group}>
 
-                            <div className={styles.select_mount_group_title}>
-                                Choose Your Mount Type
+                            <span className={styles.titled_step_combo}>
+                        <div className={styles.select_mount_type_long_rectangle}
+                            >
+                                <div className={styles.select_mount_type_short_rectangle}>
+                                <Image
+                                className={styles.iconforselect_mount_type}
+                                alt="iconforselectcolor"
+                                width={100}
+                                height={100}
+                                src={"/chevronleft.png"}>
+                            </Image>
+                                    <div className={styles.select_mount_type_group_title}>1. Choose Your Mount Type</div>
+                                </div>
                             </div>
+                            </span>
+
                             <div className={styles.ellipse_and_type}>
                                 <div
                                     className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
@@ -451,7 +464,11 @@ function ZebraBlinds() {
 
                                             <span className={styles.measurments_and_image_inside_mount}>
                                                 <div className={styles.inside_mount_measurement_instructions}>
-                                                    Measurement Instructions:
+                                                    <p className={styles.measurement_instructions_title_inside_mount}>
+
+                                                        Measurement Instructions:
+
+                                                    </p>
                                                 </div>
 
                                                 <div
@@ -670,33 +687,36 @@ function ZebraBlinds() {
                                     <span className={styles.left_outside_mount}>
                                         <div className={styles.inside_mount_group_left_side}>
                                             <div className={styles.outside_mount_measurement_instructions}>
-                                                Measurement Instructions:
 
-                                            <div className={styles.step_1_outside_mount}>
-                                                <p className={styles.step_tag}> Step 1: </p>
-                                                <p className={styles.step_tag_description}>
-                                                    Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
+                                                <p className={styles.measurement_instructions_title_outside_mount}>
+                                                    Measurement Instructions:
                                                 </p>
-                                            </div>
 
-                                            <div
-                                                className={styles.step_2_outside_mount}
-                                            >
-                                                <p className={styles.step_tag}> Step 2: </p>
-                                                <p className={styles.step_tag_description}>
-                                                    Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
-                                                </p>
-                                            </div>
+                                                <div className={styles.step_1_outside_mount}>
+                                                    <p className={styles.step_tag}> Step 1: </p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
+                                                    </p>
+                                                </div>
+
+                                                <div
+                                                    className={styles.step_2_outside_mount}
+                                                >
+                                                    <p className={styles.step_tag}> Step 2: </p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                                    </p>
+                                                </div>
 
 
-                                            <div
-                                                className={styles.step_3_outside_mount}
-                                            >
-                                                <p className={styles.step_tag}> Step 3: </p>
-                                                <p className={styles.step_tag_description}>
-                                                    Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
-                                                </p>
-                                            </div>
+                                                <div
+                                                    className={styles.step_3_outside_mount}
+                                                >
+                                                    <p className={styles.step_tag}> Step 3: </p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </span>
@@ -880,24 +900,23 @@ function ZebraBlinds() {
 
 
                         <div className={styles.select_color_group}>
-                            <Image
+
+                            
+                            <div className={styles.select_color_long_rectangle}
+                            >
+                                <div className={styles.select_color_short_rectangle}>
+                                <Image
                                 className={styles.iconforselectcolor}
                                 alt="iconforselectcolor"
                                 width={100}
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-                            <div className={styles.select_color_long_rectangle}
-                            >
-                                <div className={styles.select_color_short_rectangle}>
-                                    <p className={styles.select_color_title}>Select Color / Material</p>
+                                    <p className={styles.select_color_title}>2. Select Color / Material</p>
                                 </div>
-
                             </div>
 
-
-
-                            <div className={styles.select_material}>2. Select Material</div>
+                            <div className={styles.select_color_subtitle}> Select Material</div>
 
                             <MaterialsPage></MaterialsPage>
                         </div>
@@ -1243,6 +1262,13 @@ function ZebraBlinds() {
                                     fill="black"
                                 />
                             </svg>
+                            <div className={styles.materials_answer_head_rail}>
+                                {"Select A Color"}
+                            </div>
+
+                            <div className={styles.materials_answer_bottom_rail}>
+                                {"Select A Color  "}
+                            </div>
 
 
 
