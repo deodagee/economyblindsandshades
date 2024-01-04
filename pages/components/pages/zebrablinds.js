@@ -264,20 +264,7 @@ function ZebraBlinds() {
     };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     //1. //  ellipse logic
-    const [active_inside_outside_ellipse, Setactive_inside_outside_ellipse] = useState(null);
     const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
 
@@ -288,22 +275,32 @@ function ZebraBlinds() {
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
     const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
+
+    // TOGGLE INSIDE AND OUTISDE MOUNT DIV VISIBLITY 
+    const [active_inside_outside_ellipse, setActiveInsideOutsideEllipse] = useState(null);
+    const [inside_mount_group_visible, setInsideMountGroupVisible] = useState(true);
+    const [outside_mount_group_visible, setOutsideMountGroupVisible] = useState(true);
+
+    const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
+
+        if (ellipseNumber === 1) {
+            setActiveInsideOutsideEllipse(ellipseNumber);
+            setInsideOrOutsideRenderingContent('Inside Mount');
+            setInsideMountGroupVisible(true);
+            setOutsideMountGroupVisible(false);
+
+        } else if (ellipseNumber === 2) {
+            setActiveInsideOutsideEllipse(ellipseNumber);
+            setInsideOrOutsideRenderingContent('Outside Mount');
+            setInsideMountGroupVisible(false);
+            setOutsideMountGroupVisible(true);
+        }
+    };
+
+
     //LOGIC FOR BOM
 
     //Add inside or outside options to the bom 
-
-    const handleClickInside_And_Outisde_Ellipses = (ellipseNumber) => {
-        Setactive_inside_outside_ellipse(ellipseNumber);
-
-        // Set the content based on the clicked ellipse number
-        if (ellipseNumber === 1) {
-            setInsideOrOutsideRenderingContent('Inside Mount');
-        } else if (ellipseNumber === 2) {
-            setInsideOrOutsideRenderingContent('Outside Mount');
-        }
-
-
-    };
 
     //add bottom rail options to the bom
     const handleEllipseClick5 = (ellipseNumber) => {
@@ -428,67 +425,71 @@ function ZebraBlinds() {
                             <div className={styles.select_mount_group_title}>
                                 Choose Your Mount Type
                             </div>
-
-                            <div className={styles.inside_mount_group}>
-
-                                <div className={styles.inside_mount_group_left_side}>
-
-                                    <div className={styles.ellipse_and_type}>
-                                        <div
-                                            className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                                            onClick={() => handleClickInside_And_Outisde_Ellipses(1)}
-                                        >
-                                            <div className={styles.inside_mount_choice}>Inside Mount</div>
-                                        </div>
-
-                                        <div
-                                            className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                                            onClick={() => handleClickInside_And_Outisde_Ellipses(2)}
-                                        >
-                                            <div className={styles.outside_mount_choice}>Outside Mount</div>
-                                        </div>
-
-                                    </div>
-
-
-
-                                    <div className={styles.inside_mount_measurement_instructions}>
-                                        Measurement Instructions:
-                                    </div>
-
-                                    <div
-                                        className={styles.step_1_inside_mount}
-                                    >
-                                        <p className={styles.step_tag}> Step 1:</p>
-                                        <p className={styles.step_tag_description}>
-                                            Measure in 3 places on the width, use the smallest measurement.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        className={styles.step_2_inside_mount}
-                                    >
-                                        <p className={styles.step_tag}>  Step 2:</p>
-                                        <p className={styles.step_tag_description}>
-                                            Measure the Height in the Center, use this measurement.
-                                        </p>
-                                    </div>
-
-
-                                    <div
-                                        className={styles.step_3_inside_mount}
-                                    >
-                                        <p className={styles.step_tag}> Step 3: </p>
-                                        <p className={styles.step_tag_description}>
-                                            Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
-                                        </p>
-                                    </div>
+                            <div className={styles.ellipse_and_type}>
+                                <div
+                                    className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                                    onClick={() => handleClickInside_And_Outside_Ellipses(1)}
+                                >
+                                    <div className={styles.inside_mount_choice}>Inside Mount</div>
                                 </div>
 
-                                <div className={styles.inside_mount_group_right_side}>
-                                    <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
+                                <div
+                                    className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                                    onClick={() => handleClickInside_And_Outside_Ellipses(2)}
+                                >
+                                    <div className={styles.outside_mount_choice}>Outside Mount</div>
                                 </div>
+                            </div>
 
+                            <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
+                                <span className={styles.left_right_inside_mount}>
+
+                                    <span className={styles.left_inside_mount}>
+                                        <div className={styles.inside_mount_group_left_side}>
+
+
+                                            <span className={styles.measurments_and_image_inside_mount}>
+                                                <div className={styles.inside_mount_measurement_instructions}>
+                                                    Measurement Instructions:
+                                                </div>
+
+                                                <div
+                                                    className={styles.step_1_inside_mount}
+                                                >
+                                                    <p className={styles.step_tag}> Step 1:</p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Measure in 3 places on the width, use the smallest measurement.
+                                                    </p>
+                                                </div>
+
+                                                <div
+                                                    className={styles.step_2_inside_mount}
+                                                >
+                                                    <p className={styles.step_tag}>  Step 2:</p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Measure the Height in the Center, use this measurement.
+                                                    </p>
+                                                </div>
+
+
+                                                <div
+                                                    className={styles.step_3_inside_mount}
+                                                >
+                                                    <p className={styles.step_tag}> Step 3: </p>
+                                                    <p className={styles.step_tag_description}>
+                                                        Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
+                                                    </p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </span>
+
+                                    <span className={styles.right_inside_mount}>
+                                        <div className={styles.inside_mount_group_right_side}>
+                                            <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
+                                        </div>
+                                    </span>
+                                </span>
 
 
                                 <div className={styles.enter_size_inside_mount_group}>
@@ -662,47 +663,51 @@ function ZebraBlinds() {
 
 
 
-                            <div className={styles.outside_mount_group}>
+                            <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
+                                <span className={styles.left_right_outside_mount}>
 
-                                <div className={styles.inside_mount_group_left_side}>
+                                    <span className={styles.left_outside_mount}>
+                                        <div className={styles.inside_mount_group_left_side}>
+                                            <div className={styles.outside_mount_measurement_instructions}>
+                                                Measurement Instructions:
 
+                                            <div className={styles.step_1_outside_mount}>
+                                                <p className={styles.step_tag}> Step 1: </p>
+                                                <p className={styles.step_tag_description}>
+                                                    Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
+                                                </p>
+                                            </div>
 
-
-                                    <div className={styles.outside_mount_instructions}>
-                                        Measurement Instructions:
-                                    </div>
-
-                                    <div className={styles.step_1_outside_mount}>
-                                        <p className={styles.step_tag}> Step 1: </p>
-                                        <p className={styles.step_tag_description}>
-                                            Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        className={styles.step_2_outside_mount}
-                                    >
-                                        <p className={styles.step_tag}> Step 2: </p>
-                                        <p className={styles.step_tag_description}>
-                                            Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
-                                        </p>
-                                    </div>
+                                            <div
+                                                className={styles.step_2_outside_mount}
+                                            >
+                                                <p className={styles.step_tag}> Step 2: </p>
+                                                <p className={styles.step_tag_description}>
+                                                    Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                                </p>
+                                            </div>
 
 
-                                    <div
-                                        className={styles.step_3_outside_mount}
-                                    >
-                                        <p className={styles.step_tag}> Step 3: </p>
-                                        <p className={styles.step_tag_description}>
-                                            Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
-                                        </p>
-                                    </div>
-                                </div>
+                                            <div
+                                                className={styles.step_3_outside_mount}
+                                            >
+                                                <p className={styles.step_tag}> Step 3: </p>
+                                                <p className={styles.step_tag_description}>
+                                                    Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                                </p>
+                                            </div>
+                                            </div>
 
+                                        </div>
+                                    </span>
 
-                                <div className={styles.outside_mount_group_right_side}>
-                                    <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
-                                </div>
+                                    <span className={styles.right_outside_mount}>
+                                        <div className={styles.outside_mount_group_right_side}>
+                                            <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
+                                        </div>
+                                    </span>
+                                </span>
+
 
 
                                 <div className={styles.enter_size_outside_mount_group}>
@@ -887,7 +892,9 @@ function ZebraBlinds() {
                                 <div className={styles.select_color_short_rectangle}>
                                     <p className={styles.select_color_title}>Select Color / Material</p>
                                 </div>
+
                             </div>
+
 
 
                             <div className={styles.select_material}>2. Select Material</div>
