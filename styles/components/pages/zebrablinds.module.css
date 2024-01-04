@@ -108,7 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  font-size: 20px;
+  font-size: 25px;
   width: max-content;
   word-wrap: nowrap;
 }
@@ -144,7 +144,7 @@
   justify-content: start;
   align-items: center;
   gap: 0;
-  margin: 0;
+  margin-left: 2vw;
 
 }
 
@@ -164,9 +164,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 59vw;
+  width: 45vw;
   height: max-content;
   padding: 10px;
+  font-size: 12px;
+
 }
 
 .top_divider_line {
@@ -1186,6 +1188,15 @@
 
 .select_color_title { 
   color: white;
+  font-size: 15px;
+}
+
+.select_lift_type_seperator_line { 
+  display: flex;
+  height: 2px;
+  width: 100%;
+  margin: 10px;
+  background-color:red;
 }
 
 /* mobile styling */
