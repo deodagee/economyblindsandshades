@@ -32,12 +32,12 @@
 .picture_frame {
   display: flex;
   width: 35vw;
-  max-height: 55vh;
+  height: 55vh;
   align-items: center;
   justify-content: center;
   margin: 5px;
-  border-color: red;
-  background-color: darkgray;
+  border-color: rgb(225, 225, 225);
+  background-color: rgb(18, 18, 18);
   border-width: 1px;
   border-radius: 0.15rem;
 }
@@ -184,7 +184,8 @@
 
 .select_mount_group_title {
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .inside_mount_group {
@@ -215,6 +216,7 @@
   padding-left: 20px;
   border-radius: 0.75rem;
   cursor: pointer;
+  color: black;
 }
 
 .outside_mount_ellipse {
@@ -225,18 +227,26 @@
   padding-left: 20px;
   border-radius: 0.75rem;
   cursor: pointer;
+  color: black;
+}
+
+.inside_mount_choice {
+  white-space: nowrap;
+  font-size: 12px;
+
+
+}
+.outside_mount_choice { 
+  white-space: nowrap;
+  font-size: 12px;
+
 }
 
 .active_inside_outside_ellipse {
   background-color: rgb(40, 40, 40);
-  color: rgb(24, 24, 24);
-}
+  font-size: 12px;
+  color: rgba(66, 220, 0, 0.881);}
 
-.inside_mount {
-  white-space: nowrap;
-  color: white;
-
-}
 
 .inside_mount_measurement_instructions {
   display: flex;
@@ -305,8 +315,6 @@
   justify-content: center;
   width: 30vw;
   height: 25vh;
-
-
 }
 
 .enter_size_inside_mount_title {
@@ -762,12 +770,12 @@
 }
 
 .enter_size_outside_mount_group { 
-  margin: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25vw;
+  width: 30vw;
+  height: 25vh;
 }
 
 .enter_size_outside_mount_title { 
@@ -1144,9 +1152,41 @@
 }
 
 
+.select_color_type_seperator_line { 
+  height: 2px;
+  width: 100%;
+  background-color: red;
+  margin: 10px;
+}
 
+.select_color_long_rectangle { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2rem;
+  background-color: #c1c1c1;
+  justify-content: start;
 
+}
 
+.select_color_short_rectangle { 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 12vw;
+  height: 5vh;
+  border-radius: 2rem;
+  background-color: #820000;
+}
+.select_color_short_rectangle:hover {
+  cursor: default;
+}
+
+.select_color_title { 
+  color: white;
+}
 
 /* mobile styling */
 
