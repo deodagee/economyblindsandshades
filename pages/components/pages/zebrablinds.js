@@ -78,7 +78,7 @@ function ZebraBlinds() {
     };
     //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
     const [selectedFraction_height_inside_mount, setselectedFraction_height_inside_mount] = useState(null);
-    const [fractionIndex_inside_mount_height, setfractionIndex_inside_mount_height] = useState(0);
+    const [fractionIndex_inside_mount_height, setfractionIndex_inside_mount_height] = useState(1);
     const fractions_inside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_inside_mount_height = () => {
@@ -131,7 +131,7 @@ function ZebraBlinds() {
     };
     //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
     const [selectedFraction_width, setselectedFraction_width] = useState(null);
-    const [fractionIndex_inside_mount_width, setfractionIndex_inside_mount_width] = useState(0);
+    const [fractionIndex_inside_mount_width, setfractionIndex_inside_mount_width] = useState(1);
     const fractions_inside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_inside_mount_width = () => {
@@ -185,7 +185,7 @@ function ZebraBlinds() {
     };
     //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS HEIGHT
     const [selectedFraction_outside_mount_height, setselectedFraction_outside_mount_height] = useState(null);
-    const [fractionIndex_outside_mount_height, setFractionIndex_outside_mount_height] = useState(0);
+    const [fractionIndex_outside_mount_height, setFractionIndex_outside_mount_height] = useState(1);
     const fractions_outside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_outside_mount_height = () => {
@@ -239,7 +239,7 @@ function ZebraBlinds() {
 
     //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS WIDTH
     const [selectedFraction_width_outside_mount_width, setselectedFraction_outside_mount_width] = useState(null);
-    const [fractionIndex_outside_mount_width, setfractionIndex_outside_mount_width] = useState(0);
+    const [fractionIndex_outside_mount_width, setfractionIndex_outside_mount_width] = useState(1);
     const fractions_outside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_outside_mount_width = () => {
@@ -277,11 +277,12 @@ function ZebraBlinds() {
 
 
     // TOGGLE INSIDE AND OUTISDE MOUNT DIV VISIBLITY 
-    const [active_inside_outside_ellipse, setActiveInsideOutsideEllipse] = useState(null);
+    const [active_inside_outside_ellipse, setActiveInsideOutsideEllipse] = useState(1);
     const [inside_mount_group_visible, setInsideMountGroupVisible] = useState(true);
-    const [outside_mount_group_visible, setOutsideMountGroupVisible] = useState(true);
+    const [outside_mount_group_visible, setOutsideMountGroupVisible] = useState(false);
 
     const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
+
 
         if (ellipseNumber === 1) {
             setActiveInsideOutsideEllipse(ellipseNumber);
@@ -697,7 +698,6 @@ function ZebraBlinds() {
                                                 </p>
                                             </div>
                                             </div>
-
                                         </div>
                                     </span>
 
