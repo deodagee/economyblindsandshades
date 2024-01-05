@@ -18,27 +18,41 @@ function ZebraBlinds() {
 
     //Logic for add chain side
 
-    const [showImageright, setShowImageright] = useState(true);
 
 
     const [showImageleft, setShowImageleft] = useState(false);
+    const [showImageright, setShowImageright] = useState(true);
 
 
+
+    const show_image_left_right_chain_side = (isLeftSide) => {
+
+        if (isLeftSide) {
+            setShowImageleft(true);
+            setShowImageright(false);
+        } else {
+            setShowImageright(true);
+            setShowImageleft(false);
+        }
+    };
 
     const showleftsidechain = () => {
-        setShowImageleft(!showImageleft);
         setShowImageleft(true);
-        // Toggle off the right side image
         setShowImageright(false);
     };
 
     const showrightsidechain = () => {
-        setShowImageright(!showImageright);
         setShowImageright(true);
-
-        // Toggle off the left side image
         setShowImageleft(false);
     };
+
+    const leftButtonClass = showImageleft
+        ? `${styles.select_chain_left_box_button} ${styles.select_chain_left_box_button_active}`
+        : styles.select_chain_left_box_button;
+
+    const rightButtonClass = showImageright
+        ? `${styles.select_chain_right_box_button} ${styles.select_chain_right_box_button_active}`
+        : styles.select_chain_right_box_button;
 
     //logic for turning next button's bg color 
 
@@ -961,15 +975,21 @@ function ZebraBlinds() {
 
                                 <div className={styles.show_image_chain_buttons}>
                                     <button
-                                        className={styles.select_chain_left_box_button}
-                                        onClick={showleftsidechain}
+                                        className={leftButtonClass}
+                                        onClick={() => {
+                                            show_image_left_right_chain_side(true);
+                                            showleftsidechain();
+                                        }}
                                     >
                                         <div className={styles.select_chain_left_text}>Left</div>
                                     </button>
 
                                     <button
-                                        className={styles.select_chain_right_box_button}
-                                        onClick={showrightsidechain}
+                                        className={rightButtonClass}
+                                        onClick={() => {
+                                            show_image_left_right_chain_side(false);
+                                            showrightsidechain();
+                                        }}
                                     >
                                         <div className={styles.select_chain_right_text}>Right</div>
                                     </button>
@@ -1114,7 +1134,7 @@ function ZebraBlinds() {
                             </div>
 
                             <div className={styles.pick_head_rail_color_wrapper}>
-                            <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
+                                <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
 
                                 <div className={styles.pick_head_rail_color_subtitle}>Pick Head Rail Color</div>
                             </div>
