@@ -437,8 +437,6 @@ function ZebraBlinds() {
                                     <div className={styles.select_mount_type_group_title}>1. Choose Your Mount Type</div>
                                 </div>
                             </div>
-                            </span>
-
                             <div className={styles.ellipse_and_type}>
                                 <div
                                     className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
@@ -454,6 +452,10 @@ function ZebraBlinds() {
                                     <div className={styles.outside_mount_choice}>Outside Mount</div>
                                 </div>
                             </div>
+                            </span>
+
+
+                            
 
                             <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
                                 <span className={styles.left_right_inside_mount}>
