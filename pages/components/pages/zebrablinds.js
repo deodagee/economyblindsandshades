@@ -434,7 +434,7 @@ function ZebraBlinds() {
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-                                    <div className={styles.select_mount_type_group_title}>1. Choose Your Mount Type</div>
+                                    <div className={styles.select_mount_type_group_title}> <span className={styles.select_mount_type_group_title_tag}>1.</span> Choose Your Mount Type</div>
                                 </div>
                             </div>
                             <div className={styles.ellipse_and_type}>
@@ -914,7 +914,7 @@ function ZebraBlinds() {
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-                                    <p className={styles.select_color_title}>2. Select Color / Material</p>
+                                    <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2. </span> Select Color / Material</div>
                                 </div>
                             </div>
 
@@ -922,6 +922,9 @@ function ZebraBlinds() {
 
                             <MaterialsPage></MaterialsPage>
                         </div>
+
+                        <div className={styles.select_lift_type_seperator_line}></div>
+
 
                         <div className={styles.select_lift_type_group}>
 
@@ -933,7 +936,6 @@ function ZebraBlinds() {
                                 src={"/chevronleft.png"}>
                             </Image>
 
-                            <div className={styles.select_lift_type_seperator_line}></div>
                             <div
                                 className={styles.select_lift_type_long_rectangle}
                             >
