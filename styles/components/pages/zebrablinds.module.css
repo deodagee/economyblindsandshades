@@ -1731,14 +1731,12 @@
   padding: 20px;
 }
 
-.wand_option {
+.wand_option_group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
-
 
 .wand_ellipse {
   display: flex;
@@ -1792,7 +1790,7 @@
   white-space: nowrap;
 }
 
-.cord_less_option {
+.cord_less_option_group {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1857,7 +1855,7 @@
 }
 
 
-.motorized_option { 
+.motorized_option_group { 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1921,9 +1919,224 @@
   white-space: nowrap;
 }
 
+.select_head_rail_seperator_line {
+  display: flex;
+  height: 3px;
+  width: 98%;
+  margin: 10px;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  background-color: black;
+  border-radius: 0.56rem;
+}
+
+.select_head_rail_group { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 59vw;
+}
+
+.titled_step_combo {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 59vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2vh;
+}
+
+.select_cassette_head_rail_long_rectangle { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 5vh;
+  border-radius: 2rem;
+  background-color: #c1c1c1;
+  justify-content: start;
+}
+
+.select_cassette_head_rail_short_rectangle { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 5vh;
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #820000;
+}
+
+.select_cassette_head_rail_short_rectangle:hover { 
+  cursor: default;
+}
+
+.iconforselect_cassette_head_rail { 
+  display: none;
+  padding: 2px;
+  width: 15px;
+  height: auto;
+  transform: rotate(90deg);
+  margin: 10px;
+}
+
+.select_head_rail_group_title { 
+  gap: 20px;
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f1f1;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.select_head_rail_group_title_tag { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 2rem;
+  margin: 5px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 5px;
+}
+
+.select_head_rail_subtitle { 
+  width: 59vw;
+  display: flex;
+  padding: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+}
+
+.select_head_rail_option_group { 
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  align-items: start;
+  justify-content: flex-start;
+  width: 59vw;
+}
+
+.select_head_rail_option_selection_wrapper { 
+  display: flex;
+  flex-direction: row;
+}
+
+.select_cassette_ellipse1 { 
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #9f9f9f;
+  border-radius: 1rem;
+}
+
+.active_cassette_round1 { 
+  display: flex;
+  background-color: #29b200;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+}
+
+.select_head_rail_image_and_tag { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.cassette_chosen_image {
+  display: flex;
+  width: 10vw;
+  height: auto;
+}
 
 
+.cassette_header { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4vw;
+  height: 2vh;
+  white-space: nowrap;
+  font-size: 12px;
+  width: 10vw;
+}
 
+.select_round_ellipse1 { 
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #9f9f9f;
+  border-radius: 1rem;
+}
+
+
+.active_cassette_round1 { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  width: 4vw;
+  height: 2vh;
+  padding: 10px;
+  border-radius: 0.45rem;
+  border-color: #8f8f8f;
+  border-width: 1px;
+  white-space: nowrap;
+}
+
+.round_chosen_image { 
+  display: flex;
+  width: 10vw;
+  height: auto;
+}
+
+.round_header { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4vw;
+  height: 2vh;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.pick_head_rail_color_titles_wrapper { 
+display: flex;
+width: 59vw;
+align-items: start;
+justify-content: start;
+flex-direction: column;
+
+}
+
+.fabric_types_subtitle { 
+  width: 59vw;
+  display: flex;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+}
+
+
+.pick_head_rail_color_subtitle { 
+  width: 59vw;
+  display: flex;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+  margin-top: 2vh;
+  
+}
 
 
 
