@@ -950,6 +950,8 @@ function ZebraBlinds() {
                                 </div>
                             </span>
 
+
+
                             <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                             <div className={styles.select_chain_side_wrapper}>
                                 <div className={styles.select_chain_side_wrapper_title}>
@@ -1010,7 +1012,7 @@ function ZebraBlinds() {
 
                             <div className={styles.select_chain_options}>
 
-                                <div className={styles.wand_option}>
+                                <div className={styles.wand_option_group}>
                                     <div className={styles.option_ellipse_wrapper}>
                                         <span
                                             className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
@@ -1024,7 +1026,7 @@ function ZebraBlinds() {
                                 </div>
 
 
-                                <div className={styles.cord_less_option}>
+                                <div className={styles.cord_less_option_group}>
                                     <div className={styles.option_ellipse_wrapper}>
                                         <span
                                             className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
@@ -1040,13 +1042,13 @@ function ZebraBlinds() {
                                 </div>
 
 
-                                <div className={styles.motorized_option}>
+                                <div className={styles.motorized_option_group}>
                                     <div className={styles.motorized_ellipse_wrapper}>
-                                    <span
-                                        className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
-                                            styles.active_wand_cordless_motorized : ''}`}
-                                        onClick={() => handleLiftFeatureEllipsess(3)}
-                                    ></span>
+                                        <span
+                                            className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                                                styles.active_wand_cordless_motorized : ''}`}
+                                            onClick={() => handleLiftFeatureEllipsess(3)}
+                                        ></span>
                                     </div>
 
                                     <span className={styles.option_subtitles}>
@@ -1059,59 +1061,63 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
+                        <div className={styles.select_head_rail_seperator_line}></div>
 
                         <div className={styles.select_head_rail_group}>
-                            <div className={styles.select_head_rail_seperator_line}></div>
-                            <svg
-                                className={styles.select_cassette_head_rail_long_rectangle}
-                                width="482"
-                                height="32"
-                                viewBox="0 0 482 32"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.496094 16.3113C0.496094 7.78497 7.40802 0.873047 15.9343 0.873047H465.684C474.21 0.873047 481.122 7.78497 481.122 16.3113V16.3113C481.122 24.8376 474.21 31.7495 465.684 31.7495H15.9343C7.40804 31.7495 0.496094 24.8376 0.496094 16.3113V16.3113Z"
-                                    fill="#202020"
-                                />
-                            </svg>
+                            <span className={styles.titled_step_combo}>
+                                <div className={styles.select_cassette_head_rail_long_rectangle}
+                                >
+                                    <div
+                                        className={styles.select_cassette_head_rail_short_rectangle}
+                                    >
+                                        <Image
+                                            className={styles.iconforselect_cassette_head_rail}
+                                            alt="iconforselectcassetteheaerail"
+                                            width={100}
+                                            height={100}
+                                            src={"/chevronleft.png"}>
+                                        </Image>
+                                        <div className={styles.select_head_rail_group_title}>
+                                            <span className={styles.select_head_rail_group_title_tag}>4.</span>Select Head Rail And Bottom Rail
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
 
-                            <svg
-                                className={styles.select_cassette_head_rail_short_rectangle}
-                                width="225"
-                                height="32"
-                                viewBox="0 0 225 31"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0 15.5C0 6.93959 6.93959 0 15.5 0H209.5C218.06 0 225 6.93959 225 15.5V15.5C225 24.0604 218.06 31 209.5 31H15.5C6.93959 31 0 24.0604 0 15.5V15.5Z"
-                                    fill="#630505"
-                                />
-                            </svg>
+                            <div className={styles.select_head_rail_subtitle}> Select Head Rail</div>
 
 
-                            <div className={styles.select_head_rail_and_bottom_rail}>Select Head Rail And Bottom Rail</div>
-                            <div className={styles.select_head_rail}>4. Select Head Rail</div>
 
-                            <div
-                                className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
-                                onClick={() => handleactive_cassette_round1Ellipses(1)}
-                            ></div>
-                            <div className={styles.cassette}>Cassette</div>
-                            <Image alt="image" width={400} height={400} className={styles.chosen_image} src="/cassette.png" />
+                            <div className={styles.select_head_rail_option_group}>
 
+                                <span className={styles.select_head_rail_option_selection_wrapper}>
 
-                            <div
-                                className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
-                                onClick={() => handleactive_cassette_round1Ellipses(2)}
-                            ></div>
-                            <div className={styles.round}>Round</div>
-                            <Image alt="image" width={400} height={400} className={styles.cassette_round_image} src="/cassetteround.png" />
-                            <div className={styles.pick_head_rail_color}>Pick Head Rail Color</div>
-                            <div className={styles.fabric_types}>FABRIC TYPES</div>
+                                    <div className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
+                                        onClick={() => handleactive_cassette_round1Ellipses(1)}
+                                    ></div>
+                                    <span className={styles.select_head_rail_image_and_tag}>
+                                        <Image alt="image" width={400} height={400} className={styles.cassette_chosen_image} src="/cassette.png" />
+                                        <div className={styles.cassette_header}>Cassette</div>
+                                    </span>
+                                </span>
 
+                                <span className={styles.select_head_rail_option_selection_wrapper}>
+                                    <div
+                                        className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
+                                        onClick={() => handleactive_cassette_round1Ellipses(2)}
+                                    ></div>
+                                    <span className={styles.select_head_rail_image_and_tag}>
+                                        <Image alt="image" width={400} height={400} className={styles.round_chosen_image} src="/cassetteround.png" />
+                                        <div className={styles.round_header}>Round</div>
+                                    </span>
+                                </span>
+                            </div>
 
+                            <div className={styles.pick_head_rail_color_wrapper}>
+                            <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
+
+                                <div className={styles.pick_head_rail_color_subtitle}>Pick Head Rail Color</div>
+                            </div>
 
                             <FabricsPage></FabricsPage>
 
