@@ -265,13 +265,13 @@ function ZebraBlinds() {
 
 
     //1. //  ellipse logic
-    const [active_wand_cordlift_motorized, Setactive_wand_cordlift_motorized] = useState(null);
+    const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
 
     const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
-    const [active_wand_cordlift_motorizedRenderingContent, setactive_wand_cordlift_motorizedRenderingContent] = useState('');
+    const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
     const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
     const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
@@ -320,16 +320,16 @@ function ZebraBlinds() {
 
     //Add 3 lift type options to the bom
     const handleLiftFeatureEllipsess = (ellipseNumber) => {
-        Setactive_wand_cordlift_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+        setactive_wand_cordless_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
 
         // Set the content based on the clicked ellipse number
         if (ellipseNumber === 1) {
-            setactive_wand_cordlift_motorizedRenderingContent('wand');
+            setactive_wand_cordless_motorizedRenderingContent('wand');
         } else if (ellipseNumber === 2) {
-            setactive_wand_cordlift_motorizedRenderingContent('cord lift');
+            setactive_wand_cordless_motorizedRenderingContent('cord lift');
         }
         else if (ellipseNumber === 3) {
-            setactive_wand_cordlift_motorizedRenderingContent('motorized');
+            setactive_wand_cordless_motorizedRenderingContent('motorized');
         }
 
         // Keep the existing functionality here if needed
@@ -435,8 +435,8 @@ function ZebraBlinds() {
                                             src={"/chevronleft.png"}>
                                         </Image>
                                         <div className={styles.select_mount_type_group_title}>
-                                             <span className={styles.select_mount_type_group_title_tag}>1.</span> 
-                                             Choose Your Mount Type</div>
+                                            <span className={styles.select_mount_type_group_title_tag}>1.</span>
+                                            Choose Your Mount Type</div>
                                     </div>
                                 </div>
                                 <div className={styles.ellipse_and_type}>
@@ -928,72 +928,50 @@ function ZebraBlinds() {
                         <div className={styles.select_lift_type_seperator_line}></div>
 
                         <div className={styles.select_lift_type_group}>
-                        <span className={styles.titled_step_combo}>
+                            <span className={styles.titled_step_combo}>
 
-                            <div
-                                className={styles.select_lift_type_long_rectangle}
-                            >
                                 <div
-                                    className={styles.select_lift_type_short_rectangle}
+                                    className={styles.select_lift_type_long_rectangle}
                                 >
-                                     <Image
-                                className={styles.iconforselectlifttype}
-                                alt="iconforselectlifttype"
-                                width={100}
-                                height={100}
-                                src={"/chevronleft.png"}>
-                            </Image>
-                                    <div className={styles.select_lift_type_group_title}>
-                                           <span className={styles.select_lift_type_group_title_tag}>3.</span> Select Lift Type
+                                    <div
+                                        className={styles.select_lift_type_short_rectangle}
+                                    >
+                                        <Image
+                                            className={styles.iconforselectlifttype}
+                                            alt="iconforselectlifttype"
+                                            width={100}
+                                            height={100}
+                                            src={"/chevronleft.png"}>
+                                        </Image>
+                                        <div className={styles.select_lift_type_group_title}>
+                                            <span className={styles.select_lift_type_group_title_tag}>3.</span> Select Lift Type
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-
-                    
                             </span>
-                            
-
-
-
-
-
-                           
-
-
-
-
-
-
-
 
                             <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
-                            <div
-                                className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleLiftFeatureEllipsess(1)}
-                            ></div>
-                            <div className={styles.wand}>Wand</div>
-                            <div className={styles.free}>Free</div>
-
                             <div className={styles.select_chain_side_wrapper}>
                                 <div className={styles.select_chain_side_wrapper_title}>
                                     Select Chain Side
                                 </div>
 
 
-                                <button
-                                    className={styles.select_chain_left_box_button}
-                                    onClick={showleftsidechain}
-                                >
-                                    <div className={styles.select_chain_left_box}>Left</div>
-                                </button>
+                                <div className={styles.show_image_chain_buttons}>
+                                    <button
+                                        className={styles.select_chain_left_box_button}
+                                        onClick={showleftsidechain}
+                                    >
+                                        <div className={styles.select_chain_left_text}>Left</div>
+                                    </button>
 
-                                <button
-                                    className={styles.select_chain_right_box_button}
-                                    onClick={showrightsidechain}
-                                >
-                                    <div className={styles.select_chain_right_box}>Right</div>
-                                </button>
+                                    <button
+                                        className={styles.select_chain_right_box_button}
+                                        onClick={showrightsidechain}
+                                    >
+                                        <div className={styles.select_chain_right_text}>Right</div>
+                                    </button>
+                                </div>
 
                                 {showImageright && (
 
@@ -1002,9 +980,9 @@ function ZebraBlinds() {
                                             <Image
                                                 width={400}
                                                 height={400}
-                                                className={styles.showrightchain}
+                                                className={styles.show_right_chain_image_render}
                                                 alt="showrightchain"
-                                                src="/rightside.png" // replace with the path to your image
+                                                src="/rightside.png"
 
                                             />
                                         </div>
@@ -1019,33 +997,66 @@ function ZebraBlinds() {
                                             <Image
                                                 width={400}
                                                 height={400}
-                                                className={styles.showleftchain}
+                                                className={styles.show_left_chain_image_render}
                                                 alt="showleftchain"
-                                                src="/leftside.png" // replace with the path to your image
-
+                                                src="/leftside.png"
                                             />
                                         </div>
                                     </>
                                 )}
 
                             </div>
-                            <div
-                                className={`${styles.cord_lift_ellipse} ${active_wand_cordlift_motorized === 2 ? styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleLiftFeatureEllipsess(2)}
-                            ></div>
 
-                            <div className={styles.cord_lift}>Cord Less</div>
 
-                            <div className={styles.cordlift_price_value}>$05.00</div>
+                            <div className={styles.select_chain_options}>
 
-                            <div
-                                className={`${styles.motorized_ellipse} ${active_wand_cordlift_motorized === 3 ?
-                                    styles.active_wand_cordlift_motorized : ''}`}
-                                onClick={() => handleLiftFeatureEllipsess(3)}
-                            ></div>
+                                <div className={styles.wand_option}>
+                                    <div className={styles.option_ellipse_wrapper}>
+                                        <span
+                                            className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                                            onClick={() => handleLiftFeatureEllipsess(1)}
+                                        ></span>
+                                    </div>
+                                    <span className={styles.option_subtitles}>
+                                        <div className={styles.wand_subtitle}>Wand</div>
+                                        <div className={styles.free_subtitle}>Free</div>
+                                    </span>
+                                </div>
 
-                            <div className={styles.motorized}>Motorized</div>
-                            <div className={styles.motorized_price_value}>$100.00</div>
+
+                                <div className={styles.cord_less_option}>
+                                    <div className={styles.option_ellipse_wrapper}>
+                                        <span
+                                            className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
+                                            onClick={() => handleLiftFeatureEllipsess(2)}
+                                        ></span>
+                                    </div>
+
+
+                                    <span className={styles.option_subtitles}>
+                                        <div className={styles.cord_less_subtitle}>Cord Less</div>
+                                        <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
+                                    </span>
+                                </div>
+
+
+                                <div className={styles.motorized_option}>
+                                    <div className={styles.motorized_ellipse_wrapper}>
+                                    <span
+                                        className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                                            styles.active_wand_cordless_motorized : ''}`}
+                                        onClick={() => handleLiftFeatureEllipsess(3)}
+                                    ></span>
+                                    </div>
+
+                                    <span className={styles.option_subtitles}>
+                                        <div className={styles.motorized_subtitle}>Motorized</div>
+                                        <div className={styles.motorized_price_value_subtitle}>$100.00</div>
+                                    </span>
+                                </div>
+
+
+                            </div>
                         </div>
 
 
@@ -1359,7 +1370,7 @@ function ZebraBlinds() {
 
                             <div className={styles.lift_type}>Lift Type:</div>
                             <div className={styles.lift_type_answer}>
-                                {active_wand_cordlift_motorizedRenderingContent}
+                                {active_wand_cordless_motorizedRenderingContent}
                             </div>
 
 
