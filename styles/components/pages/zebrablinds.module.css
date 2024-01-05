@@ -47,7 +47,7 @@
   width: 35vw;
   max-height: 55vh;
   flex-direction: row;
-  border-radius: 0.75rem;
+
 }
 
 .sliding_gallery_component {
@@ -2154,7 +2154,39 @@
   font-size: 13px;
   color: #5b5b5b;
   margin-top: 2vh;
+}
 
+
+/* Start of Fabrics Page */
+
+.skip_head_section { 
+  display: flex;
+  width: 59vw;
+  flex-direction: column;
+  padding: 20px;
+  align-items: start;
+  justify-content: start;
+}
+
+.fabric_list_header {
+  display: flex;
+}
+
+.fabric_list_header_image_and_description {
+  display: flex;
+  flex-direction: column;
+  height: 9vh;
+  width: 8vw;
+}
+
+.fabric_list_header_image { 
+  display: flex;
+  width: 8vw;
+  height: 8vw;
+}
+
+.fabric_list_header_image_description {
+  display: flex;
 }
 
 .skip_top_section {
@@ -2166,7 +2198,7 @@
   justify-content: start;
 }
 
-.ellipse_and_title { 
+.ellipse_and_title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2185,8 +2217,10 @@
   display: flex;
   width: 2vh;
   height: 2vh;
-  background-color: #39b806;
+  background-color: #9f9f9f;
   border-radius: 1rem;
+  background-color: #29b200;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
 .skip_head_rail_color_for_head_rail_title {
@@ -2201,11 +2235,12 @@
   width: 59vw;
   display: flex;
   padding: 20px;
-  font-size: 13px;
-  color: #3c0e0e;
+  font-size: 10px;
+  color: #6b0a0a;
+  height: 4vh;
 }
 
-.skip_bottom_section { 
+.skip_bottom_section {
   display: flex;
   width: 59vw;
   flex-direction: column;
@@ -2214,14 +2249,33 @@
   justify-content: start;
 }
 
-.ellipse_and_title { 
+.fabric_list_bottom {
+  display: flex;
+}
+
+.fabric_list_bottom_image_and_description {
+  display: flex;
+  flex-direction: column;
+}
+
+.fabric_list_bottom_image { 
+  display: flex;
+  width: 8vw;
+  height: 8vw;
+}
+
+.fabric_list_bottom_image_description {
+  display: flex;
+}
+
+.ellipse_and_title {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.skip_bottom_rail_ellipse { 
+.skip_bottom_rail_ellipse {
   display: flex;
   width: 2vh;
   height: 2vh;
@@ -2229,15 +2283,17 @@
   border-radius: 1rem;
 }
 
-.active_skip_bottom_rail_ellipse { 
+.active_skip_bottom_rail_ellipse {
   display: flex;
   width: 2vh;
   height: 2vh;
-  background-color: #39b806;
+  background-color: #9f9f9f;
   border-radius: 1rem;
+  background-color: #29b200;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.skip_head_rail_color_for_bottom_rail { 
+.skip_head_rail_color_for_bottom_rail {
   width: 59vw;
   display: flex;
   padding: 20px;
@@ -2245,24 +2301,53 @@
   color: #5b5b5b;
 }
 
-.note_skipping_color_for_bottom_rail { 
+.note_skipping_color_for_bottom_rail {
   width: 59vw;
   display: flex;
   padding: 20px;
-  font-size: 13px;
-  color: #3c0e0e;
+  font-size: 10px;
+  color: #6b0a0a;
+  height: 4vh;
 }
 
-
-
-
-
-.imageAndLabelContainerFabricsHeader{ 
+.head_rail_color_answer {
   display: flex;
 }
 
+.bottom_rail_color_answer {
+  display: flex;
+}
+
+/* End of Fabrics Page */
 
 
+
+
+.chosen_cassette_or_chosen_round_wrapper {
+
+
+
+}
+
+.select_cassette_bottom_rail_group {
+
+
+
+
+}
+
+.select_cassette_bottom_rail_subtitle {
+  width: 59vw;
+  display: flex;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+  margin-top: 2vh;
+}
+
+.select_bottom_rail_options {
+  display: flex;
+}
 
 
 

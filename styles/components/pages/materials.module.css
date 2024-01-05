@@ -1,10 +1,9 @@
-.showImages_wrapper { 
+.showImages_wrapper {
     display: flex;
     gap: 1vw;
     background: linear-gradient(to top, #eeeeee, #f1f1f1, #e6e6e6, #eeeeee);
     box-shadow: rgb(133, 133, 133) 6px 5px 20px;
-
-        padding: 10px;
+    padding: 10px;
     border-radius: 0.25rem;
     border-width: 2px;
     border-color: rgb(227, 227, 227);
@@ -15,13 +14,13 @@
     overflow-y: scroll;
 }
 
-.images_and_subtitles { 
+.images_and_subtitles {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.imageContainer { 
+.imageContainer {
     background-color: rgb(212, 212, 212);
     margin: 5px;
     border-width: 2px;
@@ -29,7 +28,7 @@
     transition: 0.4s;
 }
 
-.imageContainer:hover { 
+.imageContainer:hover {
     transform: scale(1.05);
     transition: 0.4s;
     box-shadow: #858585 2px 3px 7px;
