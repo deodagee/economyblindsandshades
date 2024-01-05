@@ -183,15 +183,15 @@
 
 .select_mount_group {
   display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-width: 59vw;
-background: linear-gradient(to bottom, #f4f4f4,  #f4f4f4,#f5f5f5, #f7f7f7);
-width: 55vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 59vw;
+  background: linear-gradient(to bottom, #f4f4f4, #f4f4f4, #f5f5f5, #f7f7f7);
+  width: 55vw;
 }
 
-.titled_step_combo { 
+.titled_step_combo {
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -199,7 +199,7 @@ width: 55vw;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 2vh;
-  
+
 }
 
 .select_mount_type_long_rectangle {
@@ -230,7 +230,7 @@ width: 55vw;
   cursor: default;
 }
 
-.iconforselect_mount_type { 
+.iconforselect_mount_type {
   display: flex;
   padding: 2px;
   width: 15px;
@@ -264,7 +264,7 @@ width: 55vw;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.left_right_inside_mount { 
+.left_right_inside_mount {
   display: flex;
   gap: 2vw;
 }
@@ -277,7 +277,7 @@ width: 55vw;
   display: none;
 }
 
-.left_inside_mount { 
+.left_inside_mount {
   display: flex;
   height: 50vh;
   width: 25vw;
@@ -349,11 +349,11 @@ width: 55vw;
 .inside_mount_measurement_instructions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   color: white;
 }
 
-.measurement_instructions_title_inside_mount { 
+.measurement_instructions_title_inside_mount {
   font-size: 12px;
   color: #ffffff;
   background-color: #ababab;
@@ -405,7 +405,7 @@ width: 55vw;
   color: black;
 }
 
-.right_inside_mount { 
+.right_inside_mount {
   display: flex;
   height: 50vh;
   width: 25vw;
@@ -435,10 +435,23 @@ width: 55vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 59vw;
-  height: 30vh;
+  width: max-content;
+  height: max-content;
+  padding: 20px;
   margin-top: 2vh;
   margin-bottom: 5vh;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  border-color: #c2c2c2;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  transition: 0.4s;
+}
+
+.enter_size_inside_mount_group:hover {
+  transform: scale(1.01);
+  transition: 0.4s;
+  box-shadow: rgb(60, 60, 60) 3px 2px 10px;
+  border-color: #747474;
 }
 
 .enter_size_inside_mount_title {
@@ -446,7 +459,7 @@ width: 55vw;
   font-size: 15px;
   margin-top: 3vh;
   margin-bottom: 2vh;
-  color: white;
+  color: rgb(43, 43, 43);
 }
 
 .enter_height_and_width_inside_mount_group {
@@ -460,7 +473,7 @@ width: 55vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 30vh;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -520,19 +533,22 @@ width: 55vw;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  overflow: hidden;
 }
 
-.height_scroll_number_inches_inside_mount:hover { 
-transform: scale(0.98);
-transition: 0.4s;
+.height_scroll_number_inches_inside_mount:hover {
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_whole_numbers_wrapper_inside_mount_height {
@@ -610,14 +626,22 @@ transition: 0.4s;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+
+.height_scroll_number_fractions_inside_mount:hover {
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_fractions_wrapper_inside_mount_height {
@@ -661,7 +685,7 @@ transition: 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 30vh;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -719,14 +743,22 @@ transition: 0.4s;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+
+.width_scroll_number_inches_inside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_whole_numbers_wrapper_inside_mount_width {
@@ -803,14 +835,21 @@ transition: 0.4s;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+.width_scroll_number_fractions_inside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_fractions_wrapper_inside_mount_width {
@@ -858,12 +897,12 @@ transition: 0.4s;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.visible_outside_mount { 
-display: contents;
+.visible_outside_mount {
+  display: contents;
 }
 
-.invisible_outside_mount { 
-display: none;
+.invisible_outside_mount {
+  display: none;
 }
 
 .outside_mount_group_left_side {
@@ -875,12 +914,12 @@ display: none;
   justify-content: center;
 }
 
-.left_right_outside_mount { 
+.left_right_outside_mount {
   display: flex;
   gap: 2vw;
 }
 
-.left_outside_mount { 
+.left_outside_mount {
   display: flex;
   height: 50vh;
   width: 25vw;
@@ -893,7 +932,7 @@ display: none;
   justify-content: flex-start;
 }
 
-.measurement_instructions_title_outside_mount { 
+.measurement_instructions_title_outside_mount {
   font-size: 12px;
   color: #ffffff;
   background-color: #ababab;
@@ -916,15 +955,15 @@ display: none;
   height: 12vh;
   padding: 10px;
   background-color: rgb(235, 235, 235);
-  
+
 }
 
 
-.right_outside_mount { 
-display: flex;
-height: 50vh;
-width: 25vw;
-margin-top: 2vh;
+.right_outside_mount {
+  display: flex;
+  height: 50vh;
+  width: 25vw;
+  margin-top: 2vh;
 }
 
 
@@ -951,7 +990,7 @@ margin-top: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-justify-content: center;
+  justify-content: center;
   width: max-content;
   height: max-content;
   padding: 20px;
@@ -961,7 +1000,14 @@ justify-content: center;
   border-radius: 0.45rem;
   border-color: #c2c2c2;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  transition: 0.4s;
+}
 
+.enter_size_outside_mount_group:hover {
+  transform: scale(1.01);
+  transition: 0.4s;
+  box-shadow: rgb(60, 60, 60) 3px 2px 10px;
+  border-color: #747474;
 }
 
 .enter_size_outside_mount_title {
@@ -983,7 +1029,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 30vh;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -1044,14 +1090,21 @@ justify-content: center;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+.height_scroll_number_inches_outside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_whole_numbers_wrapper_outside_mount_height {
@@ -1130,14 +1183,22 @@ justify-content: center;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+
+.height_scroll_number_fractions_outside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_fractions_wrapper_outside_mount_height {
@@ -1184,7 +1245,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 30vh;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -1243,14 +1304,22 @@ justify-content: center;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+
+.width_scroll_number_inches_outside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_whole_numbers_wrapper_outside_mount_width {
@@ -1306,14 +1375,21 @@ justify-content: center;
   margin-top: 0vh;
   z-index: 1;
   width: 200px;
-  height: max-content;
-  overflow-x: scroll;
+  height: 5vh;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+}
+.width_scroll_number_fractions_outside_mount:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .display_fractions_wrapper_outside_mount_width {
@@ -1363,7 +1439,7 @@ justify-content: center;
   margin-top: 3vh;
 }
 
-.select_color_group { 
+.select_color_group {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1399,7 +1475,7 @@ justify-content: center;
   cursor: default;
 }
 
-.iconforselectcolor { 
+.iconforselectcolor {
   display: flex;
   padding: 2px;
   width: 15px;
@@ -1416,10 +1492,10 @@ justify-content: center;
   white-space: nowrap;
 }
 
-.select_color_subtitle { 
+.select_color_subtitle {
   width: 59vw;
   display: flex;
-padding: 20px;
+  padding: 20px;
   font-size: 13px;
   color: #5b5b5b;
 
@@ -1481,13 +1557,13 @@ padding: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .left_inside_mount { 
+  .left_inside_mount {
     display: flex;
     height: 50vh;
     width: 25vw;
     margin-top: 3vh;
   }
-  
+
 
   .insidemount_Image {
     width: 60vw;
