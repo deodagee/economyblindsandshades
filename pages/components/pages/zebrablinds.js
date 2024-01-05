@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import MaterialsPage, { selectedImageData } from '../materials/materials.js'; // Adjust the path accordingly
-import FabricsPage from '../fabrics/fabrics.js'; // Adjust the path accordingly
 import LeftSidePage from "../leftside/leftside.js";
 import Footer from "../footer.js";
 import HeaderPiece from "../header.js";
@@ -1083,123 +1082,10 @@ function ZebraBlinds() {
 
                         <div className={styles.select_head_rail_seperator_line}></div>
 
-                        <div className={styles.select_head_rail_group}>
-                            <span className={styles.titled_step_combo}>
-                                <div className={styles.select_cassette_head_rail_long_rectangle}
-                                >
-                                    <div
-                                        className={styles.select_cassette_head_rail_short_rectangle}
-                                    >
-                                        <Image
-                                            className={styles.iconforselect_cassette_head_rail}
-                                            alt="iconforselectcassetteheaerail"
-                                            width={100}
-                                            height={100}
-                                            src={"/chevronleft.png"}>
-                                        </Image>
-                                        <div className={styles.select_head_rail_group_title}>
-                                            <span className={styles.select_head_rail_group_title_tag}>4.</span>Select Head Rail And Bottom Rail
-                                        </div>
-                                    </div>
-                                </div>
-                            </span>
-
-                            <div className={styles.select_head_rail_subtitle}> Select Head Rail</div>
-
-
-
-                            <div className={styles.select_head_rail_option_group}>
-
-                                <span className={styles.select_head_rail_option_selection_wrapper}>
-
-                                    <div className={`${styles.select_cassette_ellipse1} ${active_cassette_round1 === 1 ? styles.active_cassette_round1 : ''}`}
-                                        onClick={() => handleactive_cassette_round1Ellipses(1)}
-                                    ></div>
-                                    <span className={styles.select_head_rail_image_and_tag}>
-                                        <Image alt="image" width={400} height={400} className={styles.cassette_chosen_image} src="/cassette.png" />
-                                        <div className={styles.cassette_header}>Cassette</div>
-                                    </span>
-                                </span>
-
-                                <span className={styles.select_head_rail_option_selection_wrapper}>
-                                    <div
-                                        className={`${styles.select_round_ellipse1} ${active_cassette_round1 === 2 ? styles.active_cassette_round1 : ''}`}
-                                        onClick={() => handleactive_cassette_round1Ellipses(2)}
-                                    ></div>
-                                    <span className={styles.select_head_rail_image_and_tag}>
-                                        <Image alt="image" width={400} height={400} className={styles.round_chosen_image} src="/cassetteround.png" />
-                                        <div className={styles.round_header}>Round</div>
-                                    </span>
-                                </span>
-                            </div>
-
-                            <div className={styles.pick_head_rail_color_wrapper}>
-                                <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
-
-                                <div className={styles.pick_head_rail_color_subtitle}>Pick Head Rail Color</div>
-                            </div>
-
-                            <FabricsPage></FabricsPage>
-
-
-                            <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
-
-
-                                <div className={styles.select_cassette_bottom_rail_group}>
-
-                                    <div className={styles.select_cassette_bottom_rail}>5. Select Bottom Rail</div>
-
-
-                                    <div className={styles.bottom_rail_options}>
-                                        <span className={styles.option1}>
-                                            <div
-                                                className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
-                                                onClick={() => handleEllipseClick5(1)}
-                                            ></div>
-                                            <div className={styles.cassette2}>option 1</div>
-                                            <div className={styles.product_price}>$00.00</div>
-                                            <Image alt="image" width={400} height={400} className={styles.cassette_image_2} src="/cassette.png" />
-                                        </span>
-
-
-                                        <span className={styles.option2}>
-                                            <div
-                                                className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
-                                                onClick={() => handleEllipseClick5(2)}
-                                            ></div>
-                                            <div className={styles.round2}>option 2</div>
-                                            <div className={styles.product_price_2}>$00.00</div>
-                                            <Image alt="image" width={400} height={400} className={styles.cassette_image3} src="/cassette.png" />
-                                            <Image alt="image" width={400} height={400} className={styles.chosen_headrail_image} src="/cassettesteel.png" />
-                                        </span>
-                                    </div>
-                                </div>
-
-
-
-                                <div className={styles.pick_bottom_rail_color_wrapper}>
-                                    <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-                                    <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
-
-
-                                </div>
-
-
-                            </div>
-                            <button
-                                className={styles.next_item4}                            >
-                                <div
-                                    style={NextButton4buttonStyle}
-                                    className={styles.next_button4}>See Bill</div>
-                            </button>
-                        </div>
-
-
 
 
                         <div className={styles.quantity_and_add_to_cart_group}>
                             <div className={styles.quantity_seperator_line}></div>
-
                             <div className={styles.quantity}>Quantity</div>
                             <div className={styles.rectangle_29}></div>
                             <div className={styles.rectangle_30}></div>
@@ -1209,24 +1095,11 @@ function ZebraBlinds() {
                             <div className={styles.qty_number}>1</div>
                             <div className={styles.quantity_is_always_1_box}></div>
                             <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-
                             <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-
-
-
-
-
                             <div className={styles.review_your_order_seperator_line}></div>
-
-
                             <div className={styles.review_your_order}>Review Your Order</div>
-
                             <div className={styles.review_your_order_bg}></div>
-
-
-
                             <div className={styles.order_items_list}>
-
                                 <svg
                                     className={styles.rectangle_45}
                                     width="483"
@@ -1240,15 +1113,11 @@ function ZebraBlinds() {
                                         fill="black"
                                     />
                                 </svg>
-
                                 <div className={styles.window_name}>Window Name:
                                 </div>
-
                                 <div className={styles.window_name_answer}>
                                     {product_title}
                                 </div>
-
-
                                 <svg
                                     className={styles.rectangle_43}
                                     width="483"
@@ -1262,15 +1131,10 @@ function ZebraBlinds() {
                                         fill="black"
                                     />
                                 </svg>
-
-
                                 <div className={styles.window_type}>Window Type:</div>
-
                                 <div className={styles.window_type_answer}>
                                     {roomDarkeningContent}
                                 </div>
-
-
                                 <svg
                                     className={styles.rectangle_36}
                                     width="483"
@@ -1284,23 +1148,17 @@ function ZebraBlinds() {
                                         fill="black"
                                     />
                                 </svg>
-
-
-
                                 <div className={styles.widthbom}>Inside Mount Width:</div>
                                 <div className={styles.width2_answer}>
                                     <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span>{" (Inches width),"}<span></span></p>
                                     <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span>{" (Fractions width)"}<span></span></p>
-
                                 </div>
                                 <div className={styles.widthbom}>Outisde Mount Width:</div>
                                 <div className={styles.width2_answer}>
                                     <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span>{" (Inches width),"}<span></span></p>
                                     <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span>{" (Fractions width)"}<span></span></p>
-
                                 </div>
                             </div>
-
                             <svg
                                 className={styles.rectangle_37}
                                 width="483"
