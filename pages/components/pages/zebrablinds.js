@@ -11,7 +11,6 @@ import HeaderPiece from "../header.js";
 
 
 function ZebraBlinds() {
-    const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
 
 
 
@@ -55,10 +54,7 @@ function ZebraBlinds() {
 
     //logic for turning next button's bg color 
 
-    const NextButton4buttonStyle = {
-        backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
-    };
-
+  
 
 
 
@@ -279,14 +275,11 @@ function ZebraBlinds() {
 
     //1. //  ellipse logic
     const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
-    const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-
-    const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
 
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
-    const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
-    const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
+
+
 
 
     // TOGGLE INSIDE AND OUTISDE MOUNT DIV VISIBLITY 
@@ -317,18 +310,7 @@ function ZebraBlinds() {
     //Add inside or outside options to the bom 
 
     //add bottom rail options to the bom
-    const handleEllipseClick5 = (ellipseNumber) => {
-        Setactive_cassette_round2(ellipseNumber);
 
-        if (ellipseNumber === 1) {
-            setbottomRailOptionsRenderingContent("Bottom Rail Option 1");
-        } else if (ellipseNumber === 2) {
-            setbottomRailOptionsRenderingContent("Bottom Rail Option 2");
-        } else if (ellipseNumber === 3) {
-            setbottomRailOptionsRenderingContent("Bottom Rail Option 3");
-        }
-
-    };
 
 
     //Add 3 lift type options to the bom
@@ -351,16 +333,7 @@ function ZebraBlinds() {
 
 
     //Add 2 head rail options to the bom
-    const handleactive_cassette_round1Ellipses = (ellipseNumber) => {
-        Setactive_cassette_round1((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
 
-        // Set the content based on the clicked ellipse number
-        if (ellipseNumber === 1) {
-            Setactive_cassette_round1RenderingContent('cassette');
-        } else if (ellipseNumber === 2) {
-            Setactive_cassette_round1RenderingContent('round');
-        }
-    };
 
     // Keep the existing functionality here if needed
 
@@ -1274,9 +1247,7 @@ function ZebraBlinds() {
 
 
                             <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
-                            <div className={styles.casette_head_rail_type_answer}>
-                                {active_cassette_round1RenderingContent}
-                            </div>
+
 
                             <svg
                                 className={styles.rectangle_42}
@@ -1310,9 +1281,6 @@ function ZebraBlinds() {
                             </svg>
 
                             <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
-                            <div className={styles.bottom_rail_type_answer}>
-                                {bottomRailOptionsRenderingContent}
-                            </div>
 
 
                             <svg

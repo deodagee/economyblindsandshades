@@ -5,7 +5,43 @@ import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
 
 const FabricsPage = () => {
+  const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
+  const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
+  const [active_cassette_round2, Setactive_cassette_round2] = useState(null);
+  const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
 
+  const NextButton4buttonStyle = {
+    backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
+  };
+
+  const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
+
+  const handleactive_cassette_round1Ellipses = (ellipseNumber) => {
+    
+    Setactive_cassette_round1((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
+
+    // Set the content based onf the clicked ellipse number
+    if (ellipseNumber === 1) {
+      Setactive_cassette_round1RenderingContent('cassette');
+    } else if (ellipseNumber === 2) {
+      Setactive_cassette_round1RenderingContent('round');
+    }
+
+  };
+
+  const handleEllipseClick5 = (ellipseNumber) => {
+    
+    Setactive_cassette_round2(ellipseNumber);
+
+    if (ellipseNumber === 1) {
+      setbottomRailOptionsRenderingContent("Bottom Rail Option 1");
+    } else if (ellipseNumber === 2) {
+      setbottomRailOptionsRenderingContent("Bottom Rail Option 2");
+    } else if (ellipseNumber === 3) {
+      setbottomRailOptionsRenderingContent("Bottom Rail Option 3");
+    }
+
+  };
 
   //1. //  ellipse logic
 
@@ -173,103 +209,103 @@ const FabricsPage = () => {
 
         <div className={styles.skip_head_section}>
 
-<div>
-  {active_skip_head_rail_ellipse ? null : (
-    <div className={styles.fabric_list_header} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-      {imagesDataHeadRail.map((imageData) => (
-        <div key={imageData.key} className={styles.fabric_list_header_image_and_description}>
+          <div>
+            {active_skip_head_rail_ellipse ? null : (
+              <div className={styles.fabric_list_header} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
+                {imagesDataHeadRail.map((imageData) => (
+                  <div key={imageData.key} className={styles.fabric_list_header_image_and_description}>
 
-          <div className={styles.fabric_list_header_image}>
-            <Image
-              alt="image"
-              width={100}
-              height={100}
-              className={getImageClassNameColorHeadRail(imageData.key)}
-              src={imageData.src}
-              onClick={() => {
-                if (!active_skip_head_rail_ellipse) {
-                  console.log(`Click handler for ${imageData.key}`);
-                  Set_selected_head_rail_color(imageData.key);
-                }
-              }}
-              style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-            />
+                    <div className={styles.fabric_list_header_image}>
+                      <Image
+                        alt="image"
+                        width={100}
+                        height={100}
+                        className={getImageClassNameColorHeadRail(imageData.key)}
+                        src={imageData.src}
+                        onClick={() => {
+                          if (!active_skip_head_rail_ellipse) {
+                            console.log(`Click handler for ${imageData.key}`);
+                            Set_selected_head_rail_color(imageData.key);
+                          }
+                        }}
+                        style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+                      />
+                    </div>
+
+                    <div className={styles.fabric_list_header_image_description}>
+                      <div>{imageData.label}</div>
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className={styles.fabric_list_header_image_description}>
-            <div>{imageData.label}</div>
-          </div>
 
-        </div>
-      ))}
-    </div>
-  )}
-</div>
-
-
-<div className={styles.skip_top_section}>
-  <div className={styles.ellipse_and_title}>
-    <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-      onClick={handleEllipseClickSkipHeadRailColor}
-    ></div>
-    <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color
-    </div>
-  </div>
-  <div className={styles.note_skipping_color_for_head_rail}>
-    *Note: Skipping Color will result with steel material
-  </div>
-</div>
-</div>
-
-
-
-
-<div className={styles.skip_bottom_section}>
-
-<div>
-  {active_skip_bottom_rail_ellipse ? null : (
-    <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
-      {imagesDataBottomRail.map((imageData) => (
-
-        <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
-
-          <div className={styles.fabric_list_bottom_image}>
-            <Image
-              alt="image"
-              width={100}
-              height={100}
-              className={getImageClassNameColorBottomRail(imageData.key)}
-              src={imageData.src}
-              onClick={() => {
-                if (!active_skip_bottom_rail_ellipse) {
-                  console.log(`Click handler for ${imageData.key}`);
-                  Set_selected_bottom_rail_color(imageData.key);
-                }
-              }}
-              style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
-            />
-          </div>
-
-          <div className={styles.fabric_list_bottom_image_description}>
-            <div>{imageData.label}</div>
+          <div className={styles.skip_top_section}>
+            <div className={styles.ellipse_and_title}>
+              <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                onClick={handleEllipseClickSkipHeadRailColor}
+              ></div>
+              <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color
+              </div>
+            </div>
+            <div className={styles.note_skipping_color_for_head_rail}>
+              *Note: Skipping Color will result with steel material
+            </div>
           </div>
         </div>
-      ))}
-    </div>
-  )}
-</div>
 
-<div className={styles.ellipse_and_title}>
-  <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-    onClick={handleEllipseClickSkipBottomRailColor}
-  ></div>
-  <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color
-  </div>
-</div>
-<div className={styles.note_skipping_color_for_bottom_rail}>
-  *Note: Skipping Color will result with steel material
-</div>
-</div>
+
+
+
+        <div className={styles.skip_bottom_section}>
+
+          <div>
+            {active_skip_bottom_rail_ellipse ? null : (
+              <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
+                {imagesDataBottomRail.map((imageData) => (
+
+                  <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
+
+                    <div className={styles.fabric_list_bottom_image}>
+                      <Image
+                        alt="image"
+                        width={100}
+                        height={100}
+                        className={getImageClassNameColorBottomRail(imageData.key)}
+                        src={imageData.src}
+                        onClick={() => {
+                          if (!active_skip_bottom_rail_ellipse) {
+                            console.log(`Click handler for ${imageData.key}`);
+                            Set_selected_bottom_rail_color(imageData.key);
+                          }
+                        }}
+                        style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
+                      />
+                    </div>
+
+                    <div className={styles.fabric_list_bottom_image_description}>
+                      <div>{imageData.label}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className={styles.ellipse_and_title}>
+            <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+              onClick={handleEllipseClickSkipBottomRailColor}
+            ></div>
+            <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color
+            </div>
+          </div>
+          <div className={styles.note_skipping_color_for_bottom_rail}>
+            *Note: Skipping Color will result with steel material
+          </div>
+        </div>
 
 
 
@@ -357,19 +393,20 @@ const FabricsPage = () => {
 
 
 
-
-
-
-
-
-
-
       <div className={styles.head_rail_color_answer}>
         {selectedImageData_Headrail ? selectedImageData_Headrail.label : ''}
       </div>
 
       <div className={styles.bottom_rail_color_answer}>
         {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : ''}
+      </div>
+
+      <div className={styles.casette_head_rail_type_answer}>
+        {active_cassette_round1RenderingContent}
+      </div>
+
+      <div className={styles.bottom_rail_type_answer}>
+        {bottomRailOptionsRenderingContent}
       </div>
 
     </div>
