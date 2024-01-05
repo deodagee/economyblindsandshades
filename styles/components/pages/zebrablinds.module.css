@@ -1007,10 +1007,10 @@
   border-color: #c2c2c2;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   transition: 0.4s;
+  transform: scale(0.78);
 }
 
 .enter_size_outside_mount_group:hover {
-  transform: scale(1.01);
   transition: 0.4s;
   box-shadow: rgb(60, 60, 60) 3px 2px 10px;
   border-color: #747474;
@@ -1636,13 +1636,12 @@
 
 .select_chain_side_wrapper_title {
   width: 59vw;
-  height:20px;
+  height: 20px;
   display: flex;
   padding-left: 20px;
   font-size: 11px;
   color: #5b5b5b;
 }
-
 
 .show_image_chain_buttons {
   width: 59vw;
@@ -1663,12 +1662,21 @@
   border-color: #c3c3c3;
 }
 
+
 .select_chain_left_box_button:hover,
 .select_chain_left_text:hover {
-  background-color: #787878;
-  border-color: #4a4a4a;
-  color: #e3e3e3;
+  background-color: #ececec;
+  border-color: #ababab;
 }
+
+
+.select_chain_left_box_button_active {
+  background-color: #e6e6e6;
+  border-color: #444444;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+  transition: 0.4s;
+}
+
 
 
 .select_chain_left_text {
@@ -1689,14 +1697,20 @@
   border-radius: 0.56rem;
   border-width: 1px;
   border-color: #c3c3c3;
-  color: green;
 }
 
 .select_chain_right_box_button:hover,
 .select_chain_right_text:hover {
-  background-color: #787878;
-  border-color: #4a4a4a;
-  color: #e3e3e3;
+  background-color: #ececec;
+  border-color: #ababab;
+}
+
+.select_chain_right_box_button_active {
+  background-color: #e6e6e6;
+  border-color: #444444;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+  transition: 0.4s;
+
 }
 
 .select_chain_right_text {
@@ -1797,11 +1811,11 @@
   justify-content: center;
 }
 
-.option_ellipse_wrapper { 
+.option_ellipse_wrapper {
   width: 3vw;
 }
 
-.cord_less_ellipse { 
+.cord_less_ellipse {
   display: flex;
   width: 2vh;
   height: 2vh;
@@ -1809,13 +1823,13 @@
   border-radius: 1rem;
 }
 
-.active_wand_cordless_motorized { 
+.active_wand_cordless_motorized {
   display: flex;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.option_subtitles { 
+.option_subtitles {
   display: flex;
   flex-direction: row;
   gap: 2vh;
@@ -1855,18 +1869,18 @@
 }
 
 
-.motorized_option_group { 
+.motorized_option_group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.motorized_ellipse_wrapper { 
+.motorized_ellipse_wrapper {
   width: 3vw;
 }
 
-.motorized_ellipse { 
+.motorized_ellipse {
   display: flex;
   width: 2vh;
   height: 2vh;
@@ -1874,7 +1888,7 @@
   border-radius: 1rem;
 }
 
-.active_wand_cordless_motorized { 
+.active_wand_cordless_motorized {
   display: flex;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
@@ -1891,7 +1905,7 @@
   white-space: nowrap;
 }
 
-.motorized_subtitle { 
+.motorized_subtitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1906,7 +1920,7 @@
 
 }
 
-.motorized_price_value_subtitle { 
+.motorized_price_value_subtitle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1930,7 +1944,7 @@
   border-radius: 0.56rem;
 }
 
-.select_head_rail_group { 
+.select_head_rail_group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1948,7 +1962,7 @@
   margin-top: 2vh;
 }
 
-.select_cassette_head_rail_long_rectangle { 
+.select_cassette_head_rail_long_rectangle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1959,7 +1973,7 @@
   justify-content: start;
 }
 
-.select_cassette_head_rail_short_rectangle { 
+.select_cassette_head_rail_short_rectangle {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1971,11 +1985,11 @@
   background-color: #820000;
 }
 
-.select_cassette_head_rail_short_rectangle:hover { 
+.select_cassette_head_rail_short_rectangle:hover {
   cursor: default;
 }
 
-.iconforselect_cassette_head_rail { 
+.iconforselect_cassette_head_rail {
   display: none;
   padding: 2px;
   width: 15px;
@@ -1984,7 +1998,7 @@
   margin: 10px;
 }
 
-.select_head_rail_group_title { 
+.select_head_rail_group_title {
   gap: 20px;
   display: flex;
   font-size: 15px;
@@ -1996,7 +2010,7 @@
   justify-content: center;
 }
 
-.select_head_rail_group_title_tag { 
+.select_head_rail_group_title_tag {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2009,7 +2023,7 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.select_head_rail_subtitle { 
+.select_head_rail_subtitle {
   width: 59vw;
   display: flex;
   padding: 20px;
@@ -2017,7 +2031,7 @@
   color: #5b5b5b;
 }
 
-.select_head_rail_option_group { 
+.select_head_rail_option_group {
   display: flex;
   flex-direction: row;
   gap: 3vw;
@@ -2026,12 +2040,12 @@
   width: 59vw;
 }
 
-.select_head_rail_option_selection_wrapper { 
+.select_head_rail_option_selection_wrapper {
   display: flex;
   flex-direction: row;
 }
 
-.select_cassette_ellipse1 { 
+.select_cassette_ellipse1 {
   display: flex;
   width: 2vh;
   height: 2vh;
@@ -2039,13 +2053,13 @@
   border-radius: 1rem;
 }
 
-.active_cassette_round1 { 
+.active_cassette_round1 {
   display: flex;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.select_head_rail_image_and_tag { 
+.select_head_rail_image_and_tag {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2060,7 +2074,7 @@
 }
 
 
-.cassette_header { 
+.cassette_header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2071,7 +2085,7 @@
   width: 10vw;
 }
 
-.select_round_ellipse1 { 
+.select_round_ellipse1 {
   display: flex;
   width: 2vh;
   height: 2vh;
@@ -2080,7 +2094,7 @@
 }
 
 
-.active_cassette_round1 { 
+.active_cassette_round1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2094,13 +2108,13 @@
   white-space: nowrap;
 }
 
-.round_chosen_image { 
+.round_chosen_image {
   display: flex;
   width: 10vw;
   height: auto;
 }
 
-.round_header { 
+.round_header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2110,16 +2124,16 @@
   font-size: 12px;
 }
 
-.pick_head_rail_color_titles_wrapper { 
-display: flex;
-width: 59vw;
-align-items: start;
-justify-content: start;
-flex-direction: column;
+.pick_head_rail_color_titles_wrapper {
+  display: flex;
+  width: 59vw;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
 
 }
 
-.fabric_types_subtitle { 
+.fabric_types_subtitle {
   width: 59vw;
   display: flex;
   padding-left: 20px;
@@ -2128,14 +2142,14 @@ flex-direction: column;
 }
 
 
-.pick_head_rail_color_subtitle { 
+.pick_head_rail_color_subtitle {
   width: 59vw;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
   margin-top: 2vh;
-  
+
 }
 
 
