@@ -423,39 +423,41 @@ function ZebraBlinds() {
 
                         <div className={styles.select_mount_group}>
 
-                            <span className={styles.titled_step_combo}>
-                        <div className={styles.select_mount_type_long_rectangle}
-                            >
-                                <div className={styles.select_mount_type_short_rectangle}>
-                                <Image
-                                className={styles.iconforselect_mount_type}
-                                alt="iconforselectcolor"
-                                width={100}
-                                height={100}
-                                src={"/chevronleft.png"}>
-                            </Image>
-                                    <div className={styles.select_mount_type_group_title}> <span className={styles.select_mount_type_group_title_tag}>1.</span> Choose Your Mount Type</div>
-                                </div>
-                            </div>
-                            <div className={styles.ellipse_and_type}>
-                                <div
-                                    className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                                    onClick={() => handleClickInside_And_Outside_Ellipses(1)}
+                            <span className={styles.titled_step_combo_head}>
+                                <div className={styles.select_mount_type_long_rectangle}
                                 >
-                                    <div className={styles.inside_mount_choice}>Inside Mount</div>
+                                    <div className={styles.select_mount_type_short_rectangle}>
+                                        <Image
+                                            className={styles.iconforselect_mount_type}
+                                            alt="iconforselectcolor"
+                                            width={100}
+                                            height={100}
+                                            src={"/chevronleft.png"}>
+                                        </Image>
+                                        <div className={styles.select_mount_type_group_title}>
+                                             <span className={styles.select_mount_type_group_title_tag}>1.</span> 
+                                             Choose Your Mount Type</div>
+                                    </div>
                                 </div>
+                                <div className={styles.ellipse_and_type}>
+                                    <div
+                                        className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                                        onClick={() => handleClickInside_And_Outside_Ellipses(1)}
+                                    >
+                                        <div className={styles.inside_mount_choice}>Inside Mount</div>
+                                    </div>
 
-                                <div
-                                    className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                                    onClick={() => handleClickInside_And_Outside_Ellipses(2)}
-                                >
-                                    <div className={styles.outside_mount_choice}>Outside Mount</div>
+                                    <div
+                                        className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                                        onClick={() => handleClickInside_And_Outside_Ellipses(2)}
+                                    >
+                                        <div className={styles.outside_mount_choice}>Outside Mount</div>
+                                    </div>
                                 </div>
-                            </div>
                             </span>
 
 
-                            
+
 
                             <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
                                 <span className={styles.left_right_inside_mount}>
@@ -903,17 +905,17 @@ function ZebraBlinds() {
 
                         <div className={styles.select_color_group}>
 
-                            
+
                             <div className={styles.select_color_long_rectangle}
                             >
                                 <div className={styles.select_color_short_rectangle}>
-                                <Image
-                                className={styles.iconforselectcolor}
-                                alt="iconforselectcolor"
-                                width={100}
-                                height={100}
-                                src={"/chevronleft.png"}>
-                            </Image>
+                                    <Image
+                                        className={styles.iconforselectcolor}
+                                        alt="iconforselectcolor"
+                                        width={100}
+                                        height={100}
+                                        src={"/chevronleft.png"}>
+                                    </Image>
                                     <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2. </span> Select Color / Material</div>
                                 </div>
                             </div>
@@ -925,37 +927,47 @@ function ZebraBlinds() {
 
                         <div className={styles.select_lift_type_seperator_line}></div>
 
-
                         <div className={styles.select_lift_type_group}>
+                        <span className={styles.titled_step_combo}>
 
-                            <Image
+                            <div
+                                className={styles.select_lift_type_long_rectangle}
+                            >
+                                <div
+                                    className={styles.select_lift_type_short_rectangle}
+                                >
+                                     <Image
                                 className={styles.iconforselectlifttype}
                                 alt="iconforselectlifttype"
                                 width={100}
                                 height={100}
                                 src={"/chevronleft.png"}>
                             </Image>
-
-                            <div
-                                className={styles.select_lift_type_long_rectangle}
-                            >
-                            </div>
-
-                            <div
-                                className={styles.select_lift_type_short_rectangle}
-                            >
+                                    <div className={styles.select_lift_type_group_title}>
+                                           <span className={styles.select_lift_type_group_title_tag}>3.</span> Select Lift Type
+                                    </div>
+                                </div>
                             </div>
 
 
-                            <div className={styles.select_lift_type_title}>
-                                <p>
-                                    Select Lift Type
-                                </p>
-                            </div>
+                    
+                            </span>
+                            
 
-                            <Image alt="image" width={100} height={100} className={styles.lift_typeicon1} src="/lifttypeicon.png" />
 
-                            <div className={styles.add_lift_feature}>3. Add Lift Feature</div>
+
+
+
+                           
+
+
+
+
+
+
+
+
+                            <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                             <div
                                 className={`${styles.wand_ellipse} ${active_wand_cordlift_motorized === 1 ? styles.active_wand_cordlift_motorized : ''}`}
                                 onClick={() => handleLiftFeatureEllipsess(1)}
@@ -1066,7 +1078,6 @@ function ZebraBlinds() {
                                     fill="#630505"
                                 />
                             </svg>
-
 
 
                             <div className={styles.select_head_rail_and_bottom_rail}>Select Head Rail And Bottom Rail</div>
