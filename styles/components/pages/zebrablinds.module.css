@@ -2043,6 +2043,7 @@
 .select_head_rail_option_selection_wrapper {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
 .select_cassette_ellipse1 {
@@ -2055,6 +2056,10 @@
 
 .active_cassette_round1 {
   display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #9f9f9f;
+  border-radius: 1rem;  
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
@@ -2071,6 +2076,7 @@
   display: flex;
   width: 10vw;
   height: auto;
+  border-radius: 0.85rem;
 }
 
 
@@ -2093,25 +2099,23 @@
   border-radius: 1rem;
 }
 
-
 .active_cassette_round1 {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  width: 4vw;
+  width: 2vh;
   height: 2vh;
-  padding: 10px;
-  border-radius: 0.45rem;
-  border-color: #8f8f8f;
-  border-width: 1px;
-  white-space: nowrap;
+  background-color: #9f9f9f;
+  border-radius: 1rem;  
+  background-color: #29b200;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
+
 
 .round_chosen_image {
   display: flex;
   width: 10vw;
   height: auto;
+  border-radius: 0.85rem;
+
 }
 
 .round_header {
@@ -2136,6 +2140,7 @@
 .fabric_types_subtitle {
   width: 59vw;
   display: flex;
+  margin-top: 10px;
   padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
@@ -2150,6 +2155,15 @@
   color: #5b5b5b;
   margin-top: 2vh;
 
+}
+
+.skip_top_section { 
+  display: flex;
+  width: 59vw;
+  flex-direction: column;
+  padding: 20px;
+  align-items: start;
+  justify-content: start;
 }
 
 
