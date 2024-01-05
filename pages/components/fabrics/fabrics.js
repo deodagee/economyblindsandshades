@@ -78,66 +78,64 @@ const FabricsPage = () => {
   return (
 
     <div>
+      <div className={styles.skip_top_section}>
 
-
-<div className={styles.skip_top_section}>
-
-      <div
-          className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                  onClick={handleEllipseClickSkipHeadRailColor}
-      ></div>
-      <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color</div>
-      <div className={styles.note_skipping_color_for_head_rail}>
-        *Note: Skipping Color will result with steel material
+        <div className={styles.ellipse_and_title}>
+          <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+            onClick={handleEllipseClickSkipHeadRailColor}
+          ></div>
+          <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color
+          </div>
+        </div>
+        <div className={styles.note_skipping_color_for_head_rail}>
+          *Note: Skipping Color will result with steel material
+        </div>
       </div>
 
+      <div className={styles.skip_bottom_section}>
+        <div className={styles.ellipse_and_title}>
+        <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+          onClick={handleEllipseClickSkipBottomRailColor}
+        ></div>
+        <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color
+        </div>
+        </div>
+        <div className={styles.note_skipping_color_for_bottom_rail}>
+          *Note: Skipping Color will result with steel material
+        </div>
       </div>
 
 
-
-
-<div className={styles.skip_bottom_section}>
-      <div
-        className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-        onClick={handleEllipseClickSkipBottomRailColor}
-      ></div>
-      <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color</div>
-      <div className={styles.note_skipping_color_for_bottom_rail}>
-        *Note: Skipping Color will result with steel material
-      </div>
-      </div>
-
-      
       {active_skip_head_rail_ellipse ? null : (
         <div className={styles.fabric_list_header} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>         {imagesDataHeadRail.map((imageData) => (
-            <div key={imageData.key} className={styles.imageAndLabelContainerFabricsHeader}>
-              <Image
-                alt="image"
-                width={100}
-                height={100}
-                className={getImageClassNameColorHeadRail(imageData.key)}
-                src={imageData.src}
-                onClick={() => {
-                  if (!active_skip_head_rail_ellipse) {
-                    console.log(`Click handler for ${imageData.key}`);
-                    Set_selected_head_rail_color(imageData.key);
-                  }
-                }}
-                style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-              />
+          <div key={imageData.key} className={styles.imageAndLabelContainerFabricsHeader}>
+            <Image
+              alt="image"
+              width={100}
+              height={100}
+              className={getImageClassNameColorHeadRail(imageData.key)}
+              src={imageData.src}
+              onClick={() => {
+                if (!active_skip_head_rail_ellipse) {
+                  console.log(`Click handler for ${imageData.key}`);
+                  Set_selected_head_rail_color(imageData.key);
+                }
+              }}
+              style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+            />
 
-              <div className={styles.descriptionLabelFabrics}>
-                <div>{imageData.label}</div>
-              </div>
+            <div className={styles.descriptionLabelFabrics}>
+              <div>{imageData.label}</div>
             </div>
-          ))}
+          </div>
+        ))}
         </div>
       )}
 
 
 
       <div>
-      {active_skip_bottom_rail_ellipse ? null : (
+        {active_skip_bottom_rail_ellipse ? null : (
 
           <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>          {imagesDataBottomRail.map((imageData) => (
             <div key={imageData.key} className={styles.imageAndLabelContainerFabricsBottom}>
@@ -160,8 +158,8 @@ const FabricsPage = () => {
             </div>
 
           ))}
-        </div>
-              )}
+          </div>
+        )}
 
 
       </div>
