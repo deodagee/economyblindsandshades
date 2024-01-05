@@ -2059,7 +2059,7 @@
   width: 2vh;
   height: 2vh;
   background-color: #9f9f9f;
-  border-radius: 1rem;  
+  border-radius: 1rem;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
@@ -2104,7 +2104,7 @@
   width: 2vh;
   height: 2vh;
   background-color: #9f9f9f;
-  border-radius: 1rem;  
+  border-radius: 1rem;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
@@ -2157,7 +2157,7 @@
 
 }
 
-.skip_top_section { 
+.skip_top_section {
   display: flex;
   width: 59vw;
   flex-direction: column;
@@ -2166,20 +2166,100 @@
   justify-content: start;
 }
 
+.ellipse_and_title { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.skip_head_rail_ellipse {
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #9f9f9f;
+  border-radius: 1rem;
+}
+
+.active_skip_head_rail_ellipse {
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #39b806;
+  border-radius: 1rem;
+}
+
+.skip_head_rail_color_for_head_rail_title {
+  width: 59vw;
+  display: flex;
+  padding: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+}
+
+.note_skipping_color_for_head_rail {
+  width: 59vw;
+  display: flex;
+  padding: 20px;
+  font-size: 13px;
+  color: #3c0e0e;
+}
+
+.skip_bottom_section { 
+  display: flex;
+  width: 59vw;
+  flex-direction: column;
+  padding: 20px;
+  align-items: start;
+  justify-content: start;
+}
+
+.ellipse_and_title { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.skip_bottom_rail_ellipse { 
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #9f9f9f;
+  border-radius: 1rem;
+}
+
+.active_skip_bottom_rail_ellipse { 
+  display: flex;
+  width: 2vh;
+  height: 2vh;
+  background-color: #39b806;
+  border-radius: 1rem;
+}
+
+.skip_head_rail_color_for_bottom_rail { 
+  width: 59vw;
+  display: flex;
+  padding: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+}
+
+.note_skipping_color_for_bottom_rail { 
+  width: 59vw;
+  display: flex;
+  padding: 20px;
+  font-size: 13px;
+  color: #3c0e0e;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+.imageAndLabelContainerFabricsHeader{ 
+  display: flex;
+}
 
 
 
