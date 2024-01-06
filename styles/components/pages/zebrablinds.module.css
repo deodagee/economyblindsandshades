@@ -1,4 +1,4 @@
-.header {
+.header_piece {
   z-index: 100;
 }
 
@@ -1944,11 +1944,13 @@
   border-radius: 0.56rem;
 }
 
+
+/* Start of Fabrics Page */
 .select_head_rail_group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   width: 59vw;
 }
 
@@ -2074,13 +2076,13 @@
 
 .cassette_chosen_image {
   display: flex;
-  width: 10vw;
+  width: 7vw;
   height: auto;
   border-radius: 0.85rem;
 }
 
 
-.cassette_header {
+.cassette_type {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2109,16 +2111,14 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-
 .round_chosen_image {
   display: flex;
-  width: 10vw;
+  width: 7vw;
   height: auto;
   border-radius: 0.85rem;
-
 }
 
-.round_header {
+.round_type {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2128,17 +2128,45 @@
   font-size: 12px;
 }
 
-.pick_head_rail_color_titles_wrapper {
+.fabric_types_top_and_bottom_main_wrapper {
   display: flex;
   width: 59vw;
+  height: max-content;
+}
+
+.fabric_types_top_and_bottom_second_wrapper {
+  display: flex;
+  width: 55vw;
+  padding: 30px;
+  overflow-y: hidden;
+  overflow-x: hidden;
   align-items: start;
   justify-content: start;
   flex-direction: column;
+  margin-top: 5vh;
 
 }
 
+.fabric_types_top_and_bottom_second_wrapper:hover {
+  border-width: 3px;
+  border-top: none;
+  border-bottom: none;
+  border-color: rgb(181, 181, 181);
+  transition: 0.6s;
+  transform: scale(0.99);
+}
+
+
+.pick_head_rail_color_titles_wrapper {
+  display: flex;
+  width: 50vw;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+
 .fabric_types_subtitle {
-  width: 59vw;
+  width: 50vw;
   display: flex;
   margin-top: 10px;
   padding-left: 20px;
@@ -2148,7 +2176,7 @@
 
 
 .pick_head_rail_color_subtitle {
-  width: 59vw;
+  width: 50vw;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
@@ -2157,52 +2185,59 @@
 }
 
 
-/* Start of Fabrics Page */
 
-.head_section { 
+.top_section {
   display: flex;
-  width: 59vw;
+  width: 50vw;
   flex-direction: column;
   padding: 20px;
   align-items: start;
   justify-content: start;
 }
 
-.fabric_list_header {
+.fabric_list_top {
+  width: 45vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh;
 }
 
-.fabric_list_header_image_and_description {
+.fabric_list_top_image_and_description {
   display: flex;
   flex-direction: column;
   height: 9vh;
   width: 8vw;
+  margin: 2vh;
 }
 
-.fabric_list_header_image { 
+.fabric_list_top_image {
   display: flex;
   width: 8vw;
   height: 8vw;
 }
 
-.fabric_list_header_image_description {
+.fabric_list_top_image_description {
   display: flex;
 }
 
 .skip_top_section {
   display: flex;
-  width: 59vw;
+  width: 50vw;
   flex-direction: column;
-  padding: 20px;
+  padding-left: 20px;
   align-items: start;
   justify-content: start;
+  margin-top: 6vh;
 }
 
 .ellipse_and_title {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-self: start;
+  justify-self: start;
 }
 
 .skip_head_rail_ellipse {
@@ -2223,26 +2258,25 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.skip_head_rail_color_for_head_rail_title {
-  width: 59vw;
+.skip_head_rail_color {
+  width: 50vw;
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
 }
 
 .note_skipping_color_for_head_rail {
-  width: 59vw;
   display: flex;
   padding: 20px;
   font-size: 10px;
   color: #6b0a0a;
-  height: 4vh;
 }
 
 .bottom_section {
   display: flex;
-  width: 59vw;
+  width: 50vw;
   flex-direction: column;
   padding: 20px;
   align-items: start;
@@ -2250,15 +2284,24 @@
 }
 
 .fabric_list_bottom {
+  width: 45vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh;
 }
 
 .fabric_list_bottom_image_and_description {
   display: flex;
   flex-direction: column;
+  height: 9vh;
+  width: 8vw;
+  margin: 2vh;
 }
 
-.fabric_list_bottom_image { 
+.fabric_list_bottom_image {
   display: flex;
   width: 8vw;
   height: 8vw;
@@ -2268,11 +2311,22 @@
   display: flex;
 }
 
+.skip_bottom_section {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  padding-left: 20px;
+  align-items: start;
+  justify-content: start;
+  margin-top: 6vh;
+
+}
+
 .ellipse_and_title {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-self: start;
+  justify-self: start;
 }
 
 .skip_bottom_rail_ellipse {
@@ -2293,22 +2347,101 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.skip_head_rail_color_for_bottom_rail {
-  width: 59vw;
+.skip_bottom_rail_color {
+  width: 50vw;
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
 }
 
 .note_skipping_color_for_bottom_rail {
-  width: 59vw;
   display: flex;
   padding: 20px;
   font-size: 10px;
   color: #6b0a0a;
-  height: 4vh;
 }
+
+
+.chosen_cassette_or_chosen_round_wrapper {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  padding: 20px;
+}
+
+.select_cassette_or_bottom_rail_group {
+  display: flex;
+}
+
+.select_bottom_rail_options {
+  display: flex;
+}
+
+.bottom_rail_option_1 {}
+
+.select_cassette_ellipse2 {}
+
+.active_cassette_round2 {}
+
+.cassette2 {}
+
+.product_price {}
+
+.cassette_image_2 {
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+
+}
+
+.bottom_rail_option_2 {}
+
+
+.select_round_ellipse2 {}
+
+.active_cassette_round2 {}
+
+.round2 {}
+
+.product_price_2 {}
+
+
+.cassette_image3 {
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+}
+
+.chosen_headrail_image {
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+}
+
+.pick_bottom_rail_color_wrapper {}
+
+
+.pick_bottom_rail_color_subtitle {
+  width: 50vw;
+  display: flex;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+  margin-top: 2vh;
+}
+
+
+.fabric_types_subtitle {}
+
+
+.see_bill_button_wrapper {}
+
+.see_bill_button {}
+
+.see_bill_text {}
+
 
 .head_rail_color_answer {
   display: flex;
@@ -2318,121 +2451,12 @@
   display: flex;
 }
 
+.casette_head_rail_type_answer {}
+
+.bottom_rail_type_answer {}
+
+
 /* End of Fabrics Page */
-
-
-.chosen_cassette_or_chosen_round_wrapper {
-
-}
-
-.select_cassette_bottom_rail_group {
-
-}
-
-.select_bottom_rail_options {
-  display: flex;
-}
-
-.bottom_rail_option_1 { 
-
-}
-
-.select_cassette_ellipse2 { 
-
-}
-
-.active_cassette_round2 { 
-
-}
-
-.cassette2 { 
-
-}
-
-.product_price { 
-
-}
-
-.cassette_image_2  { 
-display: flex;
-width: 10vw;
-height: 10vh;
-
-}
-
-.bottom_rail_option_2 { 
-
-}
-
-
-.select_round_ellipse2 { 
-
-}
-
-.active_cassette_round2 { 
-
-}
-
-.round2 { 
-
-}
-
-.product_price_2 { 
-
-}
-
-
-.cassette_image3 { 
-  display: flex;
-  width: 10vw;
-  height: 10vh;
-}
-
-.chosen_headrail_image { 
-  display: flex;
-  width: 10vw;
-  height: 10vh;
-}
-
-.pick_bottom_rail_color_wrapper { 
-
-}
-
-
-.pick_bottom_rail_color { 
-
-}
-
-
-.fabric_types_for_bottom_rail { 
-
-}
-
-
-.next_item4 { 
-
-}
-
-.next_button4 { 
-
-}
-
-
-.head_rail_color_answer { 
-
-}
-
-.bottom_rail_color_answer { 
-
-}
-
-.casette_head_rail_type_answer { 
-
-}
-
-.bottom_rail_type_answer { 
-
-}
 
 
 
