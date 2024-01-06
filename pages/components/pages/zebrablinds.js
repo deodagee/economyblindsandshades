@@ -362,7 +362,7 @@ function ZebraBlinds() {
 
         <>
             <div className={styles.page}>
-                <div className={styles.header}>
+                <div className={styles.header_piece}>
                     <HeaderPiece></HeaderPiece>
 
                 </div>

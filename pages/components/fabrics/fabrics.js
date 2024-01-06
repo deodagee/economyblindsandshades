@@ -31,7 +31,7 @@ const FabricsPage = () => {
   };
 
   const handleEllipseClick5 = (ellipseNumber) => {
-    
+
     Setactive_cassette_round2(ellipseNumber);
 
     if (ellipseNumber === 1) {
@@ -126,15 +126,13 @@ const FabricsPage = () => {
                 src={"/chevronleft.png"}>
               </Image>
               <div className={styles.select_head_rail_group_title}>
-                <span className={styles.select_head_rail_group_title_tag}>4.</span>Select Head Rail And Bottom Rail
+                <span className={styles.select_head_rail_group_title_tag}>4.</span>Head Rail And Bottom Rail
               </div>
             </div>
           </div>
         </span>
 
-        <div className={styles.select_head_rail_subtitle}> Select Head Rail</div>
-
-
+        <div className={styles.select_head_rail_subtitle}> Select Your Head Rail Type</div>
 
         <div className={styles.select_head_rail_option_group}>
 
@@ -145,7 +143,7 @@ const FabricsPage = () => {
             ></div>
             <span className={styles.select_head_rail_image_and_tag}>
               <Image alt="image" width={400} height={400} className={styles.cassette_chosen_image} src="/cassette.png" />
-              <div className={styles.cassette_header}>Cassette Type</div>
+              <div className={styles.cassette_type}>Cassette Type</div>
             </span>
           </span>
 
@@ -156,10 +154,15 @@ const FabricsPage = () => {
             ></div>
             <span className={styles.select_head_rail_image_and_tag}>
               <Image alt="image" width={400} height={400} className={styles.round_chosen_image} src="/cassetteround.png" />
-              <div className={styles.round_header}>Round Type</div>
+              <div className={styles.round_type}>Round Type</div>
             </span>
           </span>
         </div>
+
+
+
+        <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
+        <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
         <div className={styles.pick_head_rail_color_titles_wrapper}>
           <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
@@ -167,17 +170,27 @@ const FabricsPage = () => {
           <div className={styles.pick_head_rail_color_subtitle}>Pick Head Rail Color</div>
         </div>
 
+        <div className={styles.top_section}>
+          <div className={styles.skip_top_section}>
+            <div className={styles.ellipse_and_title}>
+              <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                onClick={handleEllipseClickSkipHeadRailColor}
+              ></div>
+              <div className={styles.skip_head_rail_color}>Skip Head Rail Color
+              </div>
+            </div>
+            <div className={styles.note_skipping_color_for_head_rail}>
+              *Note: Skipping Color will result with steel material
+            </div>
+          </div>
 
-
-        <div className={styles.head_section}>
-
-          <div>
+                    <div>
             {active_skip_head_rail_ellipse ? null : (
-              <div className={styles.fabric_list_header} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
+              <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
                 {imagesDataHeadRail.map((imageData) => (
-                  <div key={imageData.key} className={styles.fabric_list_header_image_and_description}>
+                  <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
 
-                    <div className={styles.fabric_list_header_image}>
+                    <div className={styles.fabric_list_top_image}>
                       <Image
                         alt="image"
                         width={100}
@@ -194,7 +207,7 @@ const FabricsPage = () => {
                       />
                     </div>
 
-                    <div className={styles.fabric_list_header_image_description}>
+                    <div className={styles.fabric_list_top_image_description}>
                       <div>{imageData.label}</div>
                     </div>
 
@@ -203,25 +216,28 @@ const FabricsPage = () => {
               </div>
             )}
           </div>
+        </div>
 
 
-          <div className={styles.skip_top_section}>
-            <div className={styles.ellipse_and_title}>
-              <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                onClick={handleEllipseClickSkipHeadRailColor}
-              ></div>
-              <div className={styles.skip_head_rail_color_for_head_rail_title}>Skip Head Rail Color
-              </div>
-            </div>
-            <div className={styles.note_skipping_color_for_head_rail}>
-              *Note: Skipping Color will result with steel material
-            </div>
-          </div>
-
+        <div className={styles.pick_bottom_rail_color_wrapper}>
+          <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
+          <div className={styles.pick_bottom_rail_color_subtitle}>Pick Bottom Rail Color</div>
         </div>
 
 
         <div className={styles.bottom_section}>
+          <div className={styles.skip_bottom_section}>
+            <div className={styles.ellipse_and_title}>
+              <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
+                onClick={handleEllipseClickSkipBottomRailColor}
+              ></div>
+              <div className={styles.skip_bottom_rail_color}>Skip Bottom Rail Color
+              </div>
+            </div>
+            <div className={styles.note_skipping_color_for_bottom_rail}>
+              *Note: Skipping Color will result with steel material
+            </div>
+          </div>
 
           <div>
             {active_skip_bottom_rail_ellipse ? null : (
@@ -256,59 +272,20 @@ const FabricsPage = () => {
             )}
           </div>
 
-
-          <div className={styles.skip_bottom_section}>
-          <div className={styles.ellipse_and_title}>
-            <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-              onClick={handleEllipseClickSkipBottomRailColor}
-            ></div>
-            <div className={styles.skip_head_rail_color_for_bottom_rail}>Skip Bottom Rail Color
-            </div>
-          </div>
-          <div className={styles.note_skipping_color_for_bottom_rail}>
-            *Note: Skipping Color will result with steel material
-          </div>
-          </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+        </div>
 
 
         <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
 
-          <div className={styles.select_cassette_bottom_rail_group}>
+          <div className={styles.select_cassette_or_bottom_rail_group}>
 
             <div className={styles.select_bottom_rail_options}>
 
               <span className={styles.bottom_rail_option_1}>
 
-                <div
-                  className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
+                <div className={`${styles.select_cassette_ellipse2} ${active_cassette_round2 === 1 ? styles.active_cassette_round2 : ''}`}
                   onClick={() => handleEllipseClick5(1)}
                 ></div>
 
@@ -319,8 +296,7 @@ const FabricsPage = () => {
 
               <span className={styles.bottom_rail_option_2}>
 
-                <div
-                  className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
+                <div className={`${styles.select_round_ellipse2} ${active_cassette_round2 === 2 ? styles.active_cassette_round2 : ''}`}
                   onClick={() => handleEllipseClick5(2)}
                 ></div>
 
@@ -331,22 +307,18 @@ const FabricsPage = () => {
               </span>
 
             </div>
-
           </div>
-
-          <div className={styles.pick_bottom_rail_color_wrapper}>
-            <div className={styles.pick_bottom_rail_color}>Pick Bottom Rail Color</div>
-            <div className={styles.fabric_types_for_bottom_rail}>FABRIC TYPES</div>
-          </div>
-
         </div>
 
-        <button
-          className={styles.next_item4}>
-          <div
-            style={NextButton4buttonStyle}
-            className={styles.next_button4}>See Bill</div>
-        </button>
+
+        <div className={styles.see_bill_button_wrapper}>
+          <button className={styles.see_bill_button}>
+            <div
+              style={NextButton4buttonStyle}
+              className={styles.see_bill_text}>See Bill</div>
+          </button>
+        </div>
+
       </div>
 
 
