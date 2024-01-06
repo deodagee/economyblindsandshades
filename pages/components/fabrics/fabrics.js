@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
 
+
 const FabricsPage = () => {
   const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
   const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
@@ -17,7 +18,7 @@ const FabricsPage = () => {
   const [bottomRailOptionsRenderingContent, setbottomRailOptionsRenderingContent] = useState('');
 
   const handleactive_cassette_round1Ellipses = (ellipseNumber) => {
-    
+
     Setactive_cassette_round1((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
 
     // Set the content based onf the clicked ellipse number
@@ -110,6 +111,7 @@ const FabricsPage = () => {
     <div>
 
       <div className={styles.select_head_rail_group}>
+
         <span className={styles.titled_step_combo}>
           <div className={styles.select_cassette_head_rail_long_rectangle}
           >
@@ -167,47 +169,7 @@ const FabricsPage = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div className={styles.skip_head_section}>
+        <div className={styles.head_section}>
 
           <div>
             {active_skip_head_rail_ellipse ? null : (
@@ -255,12 +217,11 @@ const FabricsPage = () => {
               *Note: Skipping Color will result with steel material
             </div>
           </div>
+
         </div>
 
 
-
-
-        <div className={styles.skip_bottom_section}>
+        <div className={styles.bottom_section}>
 
           <div>
             {active_skip_bottom_rail_ellipse ? null : (
@@ -295,6 +256,8 @@ const FabricsPage = () => {
             )}
           </div>
 
+
+          <div className={styles.skip_bottom_section}>
           <div className={styles.ellipse_and_title}>
             <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
               onClick={handleEllipseClickSkipBottomRailColor}
@@ -304,6 +267,7 @@ const FabricsPage = () => {
           </div>
           <div className={styles.note_skipping_color_for_bottom_rail}>
             *Note: Skipping Color will result with steel material
+          </div>
           </div>
         </div>
 
@@ -337,11 +301,7 @@ const FabricsPage = () => {
 
         <div className={styles.chosen_cassette_or_chosen_round_wrapper}>
 
-
           <div className={styles.select_cassette_bottom_rail_group}>
-
-            <div className={styles.select_cassette_bottom_rail_subtitle}>Select Bottom Rail</div>
-
 
             <div className={styles.select_bottom_rail_options}>
 
@@ -381,8 +341,6 @@ const FabricsPage = () => {
 
         </div>
 
-
-
         <button
           className={styles.next_item4}>
           <div
@@ -390,7 +348,6 @@ const FabricsPage = () => {
             className={styles.next_button4}>See Bill</div>
         </button>
       </div>
-
 
 
       <div className={styles.head_rail_color_answer}>

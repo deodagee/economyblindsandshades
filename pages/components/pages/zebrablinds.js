@@ -7,6 +7,7 @@ import MaterialsPage, { selectedImageData } from '../materials/materials.js'; //
 import LeftSidePage from "../leftside/leftside.js";
 import Footer from "../footer.js";
 import HeaderPiece from "../header.js";
+import FabricsPage from "../fabrics/fabrics.js";
 
 
 
@@ -1049,13 +1050,12 @@ function ZebraBlinds() {
                                     </span>
                                 </div>
 
-
                             </div>
                         </div>
 
+                        <FabricsPage></FabricsPage>
+
                         <div className={styles.select_head_rail_seperator_line}></div>
-
-
 
                         <div className={styles.quantity_and_add_to_cart_group}>
                             <div className={styles.quantity_seperator_line}></div>
