@@ -2159,7 +2159,7 @@
 
 /* Start of Fabrics Page */
 
-.skip_head_section { 
+.head_section { 
   display: flex;
   width: 59vw;
   flex-direction: column;
@@ -2240,7 +2240,7 @@
   height: 4vh;
 }
 
-.skip_bottom_section {
+.bottom_section {
   display: flex;
   width: 59vw;
   flex-direction: column;
@@ -2321,44 +2321,118 @@
 /* End of Fabrics Page */
 
 
-
-
 .chosen_cassette_or_chosen_round_wrapper {
-
-
 
 }
 
 .select_cassette_bottom_rail_group {
 
-
-
-
-}
-
-.select_cassette_bottom_rail_subtitle {
-  width: 59vw;
-  display: flex;
-  padding-left: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
-  margin-top: 2vh;
 }
 
 .select_bottom_rail_options {
   display: flex;
 }
 
+.bottom_rail_option_1 { 
+
+}
+
+.select_cassette_ellipse2 { 
+
+}
+
+.active_cassette_round2 { 
+
+}
+
+.cassette2 { 
+
+}
+
+.product_price { 
+
+}
+
+.cassette_image_2  { 
+display: flex;
+width: 10vw;
+height: 10vh;
+
+}
+
+.bottom_rail_option_2 { 
+
+}
 
 
+.select_round_ellipse2 { 
+
+}
+
+.active_cassette_round2 { 
+
+}
+
+.round2 { 
+
+}
+
+.product_price_2 { 
+
+}
 
 
+.cassette_image3 { 
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+}
+
+.chosen_headrail_image { 
+  display: flex;
+  width: 10vw;
+  height: 10vh;
+}
+
+.pick_bottom_rail_color_wrapper { 
+
+}
 
 
+.pick_bottom_rail_color { 
+
+}
 
 
+.fabric_types_for_bottom_rail { 
+
+}
 
 
+.next_item4 { 
+
+}
+
+.next_button4 { 
+
+}
+
+
+.head_rail_color_answer { 
+
+}
+
+.bottom_rail_color_answer { 
+
+}
+
+.casette_head_rail_type_answer { 
+
+}
+
+.bottom_rail_type_answer { 
+
+}
 
 
 
