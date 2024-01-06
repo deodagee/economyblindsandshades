@@ -2364,14 +2364,14 @@
 }
 
 
-.chosen_cassette_or_chosen_round_wrapper {
+.extra_options_set_main_wrapper {
   display: flex;
   width: 50vw;
   align-items: center;
   padding: 20px;
 }
 
-.select_cassette_or_bottom_rail_group {
+.extra_options_set_second_wrapper {
   display: flex;
 }
 
@@ -2379,27 +2379,32 @@
   display: flex;
 }
 
+.extra_options_set {}
+
 .bottom_rail_option_1 {}
 
-.select_cassette_ellipse2 {}
+.bottom_rail_option_1_ellipse {}
 
-.active_cassette_round2 {}
+.active_bottom_rail_option_1_ellipse {}
 
-.cassette2 {}
+.option_1_text {}
 
-.product_price {}
+.option_1_price {}
 
-.cassette_image_2 {
+.option_1_Image {
   display: flex;
   width: 10vw;
   height: 10vh;
-
 }
+
 
 .bottom_rail_option_2 {}
 
+.bottom_rail_option_2_ellipse {}
 
-.select_round_ellipse2 {}
+.active_bottom_rail_option_2_ellipse {}
+
+
 
 .active_cassette_round2 {}
 
@@ -2409,12 +2414,6 @@
 
 
 .cassette_image3 {
-  display: flex;
-  width: 10vw;
-  height: 10vh;
-}
-
-.chosen_headrail_image {
   display: flex;
   width: 10vw;
   height: 10vh;
