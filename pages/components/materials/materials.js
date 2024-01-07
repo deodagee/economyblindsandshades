@@ -86,6 +86,9 @@ const MaterialsPage = () => {
       { key: "White", src: '/WHITE/ETB14001WHITE.png', label: "ETB14-001" },
       { key: "White", src: '/WHITE/ETB15001WHITE.png', label: "ETB15-001" },
       { key: "White", src: '/WHITE/ETB16001WHITE.png', label: "ETB16-001" },
+      { key: "White", src: '/WHITE/ETB1001WHITE.png', label: "ETB1-001" },
+
+
     ],
   };
 

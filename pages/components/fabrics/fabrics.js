@@ -236,6 +236,7 @@ const FabricsPage = () => {
 
 
             <div className={styles.pick_bottom_rail_color_wrapper}>
+
               <div className={styles.fabric_types_subtitle}>FABRIC TYPES</div>
               <div className={styles.pick_bottom_rail_color_subtitle}>Pick Bottom Rail Color</div>
             </div>
@@ -301,29 +302,34 @@ const FabricsPage = () => {
 
               <span className={styles.bottom_rail_option_1}>
 
+
+                <div className={styles.extra_options_set_ellipse_and_image}>
                 <div className={`${styles.bottom_rail_option_1_ellipse} ${active_bottom_rail_option_1_ellipse === 1 ? styles.active_bottom_rail_option_1_ellipse : ''}`}
                   onClick={() => handleEllipseClick5}
                 ></div>
+                <Image alt="image" width={400} height={400} className={styles.option_1_Image} src="/cassette.png" />
+                </div>
 
                 <div className={styles.option_1_text}>option 1</div>
                 <div className={styles.option_1_price}>$00.00</div>
-                <Image alt="image" width={400} height={400} className={styles.option_1_Image} src="/cassette.png" />
               </span>
 
               <span className={styles.bottom_rail_option_2}>
-
+              <div className={styles.extra_options_set_ellipse_and_image}>
                 <div className={`${styles.bottom_rail_option_2_ellipse} ${active_bottom_rail_option_2_ellipse === 2 ? styles.active_bottom_rail_option_2_ellipse : ''}`}
                   onClick={() => handleEllipseClick6}
                 ></div>
+                <Image alt="image" width={400} height={400} className={styles.option_2_Image} src="/cassette.png" />
+                </div>
 
                 <div className={styles.option_2_text}>option 2</div>
                 <div className={styles.option_2_price}>$00.00</div>
-                <Image alt="image" width={400} height={400} className={styles.option_2_Image} src="/cassette.png" />
               </span>
 
             </div>
           </div>
         </div>
+
 
 
         <div className={styles.see_bill_button_wrapper}>
