@@ -10,7 +10,6 @@ import HeaderPiece from "../header.js";
 import FabricsPage from "../fabrics/fabrics.js";
 
 
-
 function ZebraBlinds() {
 
 
@@ -55,7 +54,7 @@ function ZebraBlinds() {
 
     //logic for turning next button's bg color 
 
-  
+
 
 
 
@@ -364,12 +363,9 @@ function ZebraBlinds() {
             <div className={styles.page}>
                 <div className={styles.header_piece}>
                     <HeaderPiece></HeaderPiece>
-
                 </div>
+
                 <div className={styles.page_wrapper}>
-
-
-
 
                     <ol className={styles.left_half}>
                         <LeftSidePage></LeftSidePage>
@@ -530,23 +526,24 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                </div>
+                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
 
-                                                <div className={styles.height_scroll_number_inches_inside_mount}>
-
-                                                    {whole_number_index_inside_mount_height && (
-                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                                                            <div className={styles.ScrollNumberInches_height_inside_mount}>
-                                                                {whole_number_index_inside_mount_height && (
-                                                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <>{renderNumbers_inside_mount_height()}</>}
+                                                        {whole_number_index_inside_mount_height && (
+                                                            <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
+                                                                <div className={styles.ScrollNumberInches_height_inside_mount}>
+                                                                    {whole_number_index_inside_mount_height && (
+                                                                        <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
+                                                                            <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                 </div>
+
+
 
 
 
@@ -568,18 +565,17 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-
-                                                </div>
-                                                <div className={styles.height_scroll_number_fractions_inside_mount}>
+                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
 
                                                     {fractionIndex_inside_mount_height && (
                                                         <div className={styles.display_fractions_wrapper_inside_mount_height}>
                                                             <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <>{renderFractions_inside_mount_height()}</>}
+                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     )}
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -610,23 +606,21 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
+                                                    <div className={styles.width_scroll_number_inches_inside_mount}>
 
-
-                                                </div>
-                                                <div className={styles.width_scroll_number_inches_inside_mount}>
-
-                                                    {whole_number_index_inside_mount_width && (
-                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
-                                                            <div className={styles.ScrollNumberInches_width_inside_mount}>
-                                                                {whole_number_index_inside_mount_width && (
-                                                                    <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
-                                                                        <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <>{renderNumbers_inside_mount_width()}</>}
+                                                        {whole_number_index_inside_mount_width && (
+                                                            <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
+                                                                <div className={styles.ScrollNumberInches_width_inside_mount}>
+                                                                    {whole_number_index_inside_mount_width && (
+                                                                        <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
+                                                                            <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                 </div>
 
 
@@ -649,20 +643,19 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                </div>
-                                                <div className={styles.width_scroll_number_fractions_inside_mount}>
+                                                    <div className={styles.width_scroll_number_fractions_inside_mount}>
 
 
-                                                    {fractionIndex_inside_mount_width && (
-                                                        <div className={styles.display_fractions_wrapper_inside_mount_width}>
-                                                            <div className={styles.ScrollNumberFractions_width_inside_mount}>
-                                                                <div className={styles.displayFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <>{renderFractions_inside_mount_width()}</>}
+                                                        {fractionIndex_inside_mount_width && (
+                                                            <div className={styles.display_fractions_wrapper_inside_mount_width}>
+                                                                <div className={styles.ScrollNumberFractions_width_inside_mount}>
+                                                                    <div className={styles.displayFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <div className={styles.displayFractions_inside_mount_width_list_of_numbers}>{renderFractions_inside_mount_width()}</div>}
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                 </div>
-
                                             </div>
 
                                         </div>
@@ -750,22 +743,23 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                </div>
-                                                <div className={styles.height_scroll_number_inches_outside_mount}>
+                                                    <div className={styles.height_scroll_number_inches_outside_mount}>
 
-                                                    {whole_number_index_outside_mount_height && (
-                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_height}>
-                                                            <div className={styles.ScrollNumberInches_height_outside_mount}>
-                                                                {whole_number_index_outside_mount_height && (
-                                                                    <div className={styles.displayWholeNumbersWrapper_height_outside_mount}>
-                                                                        <div className={styles.displayWholeNumbers_outside_mount_height}>{whole_number_index_outside_mount_height && <>{renderNumbers_outside_mount_height()}</>}
+                                                        {whole_number_index_outside_mount_height && (
+                                                            <div className={styles.display_whole_numbers_wrapper_outside_mount_height}>
+                                                                <div className={styles.ScrollNumberInches_height_outside_mount}>
+                                                                    {whole_number_index_outside_mount_height && (
+                                                                        <div className={styles.displayWholeNumbersWrapper_height_outside_mount}>
+                                                                            <div className={styles.displayWholeNumbers_outside_mount_height}>{whole_number_index_outside_mount_height && <div className={styles.displayWholeNumbers_outside_mount_height_list_of_numbers}>{renderNumbers_outside_mount_height()}</div>}
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                 </div>
+
 
 
                                                 <div className={styles.enter_width_outside_mount_rectangle_2}>
@@ -787,18 +781,18 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
+                                                    <div className={styles.height_scroll_number_fractions_outside_mount}>
 
-                                                </div>
-                                                <div className={styles.height_scroll_number_fractions_outside_mount}>
-
-                                                    {fractionIndex_outside_mount_height && (
-                                                        <div className={styles.display_fractions_wrapper_outside_mount_height}>
-                                                            <div className={styles.ScrollNumberFractions_height_outside_mount}>
-                                                                <div className={styles.displayFractions_outside_mount_height}>{fractionIndex_outside_mount_height && <>{renderFractions_outside_mount_height()}</>}
+                                                        {fractionIndex_outside_mount_height && (
+                                                            <div className={styles.display_fractions_wrapper_outside_mount_height}>
+                                                                <div className={styles.ScrollNumberFractions_height_outside_mount}>
+                                                                    <div className={styles.displayFractions_outside_mount_height}>{fractionIndex_outside_mount_height && <div className={styles.displayFractions_outside_mount_height_list_of_numbers}>{renderFractions_outside_mount_height()}</div>}
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -828,21 +822,22 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                </div>
-                                                <div className={styles.width_scroll_number_inches_outside_mount}>
+                                                    <div className={styles.width_scroll_number_inches_outside_mount}>
 
-                                                    {whole_number_index_outside_mount_width && (
-                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
-                                                            <div className={styles.ScrollNumberInches_width_outside_mount}>
-                                                                {whole_number_index_outside_mount_width && (
-                                                                    <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
-                                                                        <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <>{renderNumbers_outside_mount_width()}</>}
+                                                        {whole_number_index_outside_mount_width && (
+                                                            <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
+                                                                <div className={styles.ScrollNumberInches_width_outside_mount}>
+                                                                    {whole_number_index_outside_mount_width && (
+                                                                        <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
+                                                                            <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
+
                                                 </div>
 
 
@@ -865,18 +860,19 @@ function ZebraBlinds() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                </div>
-                                                <div className={styles.width_scroll_number_fractions_outside_mount}>
+                                                    <div className={styles.width_scroll_number_fractions_outside_mount}>
 
-                                                    {fractionIndex_outside_mount_width && (
-                                                        <div className={styles.display_fractions_wrapper_outside_mount_width}>
-                                                            <div className={styles.ScrollNumberFractions_width_outside_mount}>
-                                                                <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <>{renderFractions_outside_mount_width()}</>}
+                                                        {fractionIndex_outside_mount_width && (
+                                                            <div className={styles.display_fractions_wrapper_outside_mount_width}>
+                                                                <div className={styles.ScrollNumberFractions_width_outside_mount}>
+                                                                    <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    )}
+                                                        )}
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -942,7 +938,21 @@ function ZebraBlinds() {
                             <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                             <div className={styles.select_chain_side_wrapper}>
                                 <div className={styles.select_chain_side_wrapper_title}>
-                                    Select Chain Side
+                                    Select Wand, Cordless Or Motorized
+                                </div>
+
+                                <div className={styles.wand_option_group}>
+                                    <div className={styles.option_ellipse_wrapper}>
+                                        <span
+                                            className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                                            onClick={() => handleLiftFeatureEllipsess(1)}
+                                        ></span>
+                                    </div>
+                                    <span className={styles.option_subtitles}>
+                                        <div className={styles.wand_subtitle}>Wand</div>
+                                        <div className={styles.options_price_seperator}></div>
+                                        <div className={styles.free_subtitle}>Free</div>
+                                    </span>
                                 </div>
 
 
@@ -1005,18 +1015,7 @@ function ZebraBlinds() {
 
                             <div className={styles.select_chain_options}>
 
-                                <div className={styles.wand_option_group}>
-                                    <div className={styles.option_ellipse_wrapper}>
-                                        <span
-                                            className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                                            onClick={() => handleLiftFeatureEllipsess(1)}
-                                        ></span>
-                                    </div>
-                                    <span className={styles.option_subtitles}>
-                                        <div className={styles.wand_subtitle}>Wand</div>
-                                        <div className={styles.free_subtitle}>Free</div>
-                                    </span>
-                                </div>
+                                
 
 
                                 <div className={styles.cord_less_option_group}>
@@ -1030,6 +1029,7 @@ function ZebraBlinds() {
 
                                     <span className={styles.option_subtitles}>
                                         <div className={styles.cord_less_subtitle}>Cord Less</div>
+                                        <div className={styles.options_price_seperator}></div>
                                         <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
                                     </span>
                                 </div>
@@ -1046,6 +1046,7 @@ function ZebraBlinds() {
 
                                     <span className={styles.option_subtitles}>
                                         <div className={styles.motorized_subtitle}>Motorized</div>
+                                        <div className={styles.options_price_seperator}></div>
                                         <div className={styles.motorized_price_value_subtitle}>$100.00</div>
                                     </span>
                                 </div>
@@ -1299,11 +1300,10 @@ function ZebraBlinds() {
                         </div>
 
 
-                        <div>
-
+                        <div className={styles.shipping_details_wrapper}>
                             <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
-                            <div className={styles.shipping_details_titles}>
-                                <div className={styles.shipping_details}>Shipping Details</div>
+                            <div className={styles.shipping_details_title_wrapper}>
+                                <div className={styles.shipping_details_title}>Shipping Details</div>
                                 <div className={styles.total_price_tile}>Total Price</div>
                             </div>
                             <div className={styles.shipping_divider1}></div>

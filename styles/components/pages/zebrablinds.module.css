@@ -188,6 +188,7 @@
   width: 59vw;
   background: linear-gradient(to bottom, #f4f4f4, #f4f4f4, #f5f5f5, #f7f7f7);
   width: 55vw;
+  height: max-content;
 }
 
 .titled_step_combo_head {
@@ -461,9 +462,9 @@
 
 .enter_size_inside_mount_title {
   display: flex;
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 3vh;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
   color: rgb(43, 43, 43);
 }
 
@@ -478,10 +479,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: max-content;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
+
 }
 
 
@@ -502,13 +504,12 @@
 
 .enter_height_inside_mount_rectangle_1 {
   display: flex;
-  position: static;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_inches_inside_mount_height {
@@ -521,6 +522,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 .polygon_1 {
@@ -537,23 +539,21 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
+  overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
-  overflow: hidden;
 }
 
 .height_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_whole_numbers_wrapper_inside_mount_height {
@@ -569,6 +569,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayWholeNumbers_inside_mount_height_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberInches_height_inside_mount {
@@ -601,7 +607,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_fractions_inside_mount_height {
@@ -614,6 +620,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 .polygon_2 {
@@ -630,8 +637,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -644,9 +651,7 @@
 .height_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_fractions_wrapper_inside_mount_height {
@@ -670,6 +675,12 @@
   justify-content: flex-start;
 }
 
+.displayFractions_inside_mount_height_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 .singleFraction_height_inside_mount:hover {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -690,7 +701,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: max-content;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -718,7 +729,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -731,6 +742,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 .polygon_3 {
@@ -747,8 +759,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -761,9 +773,7 @@
 .width_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_whole_numbers_wrapper_inside_mount_width {
@@ -779,6 +789,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayWholeNumbers_inside_mount_width_list_of_numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberInches_width_inside_mount {
@@ -810,7 +826,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {
@@ -823,6 +839,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 .polygon_4 {
@@ -839,8 +856,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -853,10 +870,9 @@
 .width_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
+
 
 .display_fractions_wrapper_inside_mount_width {
   width: 100px;
@@ -868,11 +884,17 @@
   width: 22px;
   height: 22px;
   font-size: 15px;
-  padding: 2px;
+  padding: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayFractions_inside_mount_width_list_of_numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberFractions_width_inside_mount {
@@ -1035,7 +1057,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: max-content;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -1064,7 +1086,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_inches_outside_mount {
@@ -1077,6 +1099,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 
@@ -1095,8 +1118,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1109,9 +1132,7 @@
 .height_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_whole_numbers_wrapper_outside_mount_height {
@@ -1127,6 +1148,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayWholeNumbers_outside_mount_height_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberInches_height_outside_mount {
@@ -1158,7 +1185,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_fractions_outside_mount {
@@ -1171,6 +1198,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 
@@ -1189,8 +1217,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1203,9 +1231,7 @@
 .height_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_fractions_wrapper_outside_mount_height {
@@ -1230,6 +1256,12 @@
   justify-content: flex-start;
 }
 
+.displayFractions_outside_mount_height_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 
 .singleFraction_height_outside_mount:hover {
   background-color: rgb(0, 0, 0);
@@ -1252,7 +1284,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: max-content;
   width: 20vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
@@ -1281,7 +1313,7 @@
   justify-content: center;
   gap: 0;
   width: 15vw;
-  height: 10px;
+  height: max-content;
 }
 
 .toggle_disclaimer_inches_outside_mount {
@@ -1294,6 +1326,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  width: 5vw;
 }
 
 .polygon_7 {
@@ -1310,8 +1343,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1324,9 +1357,7 @@
 .width_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_whole_numbers_wrapper_outside_mount_width {
@@ -1342,6 +1373,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayWholeNumbers_outside_mount_width_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberInches_width_outside_mount {
@@ -1381,8 +1418,8 @@
   justify-content: start;
   margin-top: 0vh;
   z-index: 1;
-  width: 200px;
-  height: 5vh;
+  width: 5vw;
+  height: 5vw;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1395,9 +1432,7 @@
 .width_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .display_fractions_wrapper_outside_mount_width {
@@ -1413,6 +1448,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.displayFractions_outside_mount_width_list_of_numbers { 
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .ScrollNumberFractions_width_outside_mount {
@@ -1750,6 +1791,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-left: 20px;
+
 }
 
 .wand_ellipse {
@@ -1775,6 +1818,8 @@
   padding: 5px;
   height: 4vh;
   white-space: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .wand_subtitle {
@@ -1800,8 +1845,9 @@
   padding: 10px;
   border-width: 1px;
   border-radius: 0.45rem;
-  border-color: rgb(218, 218, 218);
+  border-color: rgb(233, 233, 233);
   white-space: nowrap;
+  color: grey;
 }
 
 .cord_less_option_group {
@@ -1866,6 +1912,7 @@
   border-radius: 0.45rem;
   border-color: rgb(218, 218, 218);
   white-space: nowrap;
+  color: green;
 }
 
 
@@ -1917,7 +1964,12 @@
   border-color: #8f8f8f;
   border-width: 1px;
   white-space: nowrap;
-
+}
+.options_price_seperator { 
+  height: 3px;
+  width: 20px;
+  background-color: rgb(85, 85, 85);
+  border-radius: 0.60rem;
 }
 
 .motorized_price_value_subtitle {
@@ -1931,6 +1983,8 @@
   border-radius: 0.45rem;
   border-color: rgb(218, 218, 218);
   white-space: nowrap;
+  color: green;
+
 }
 
 .select_head_rail_seperator_line {
@@ -2042,7 +2096,12 @@
   width: 59vw;
 }
 
-.select_head_rail_option_selection_wrapper {
+.select_head_rail_option_selection_wrapper { 
+  display: flex;
+  flex-direction: row;
+}
+
+.select_head_rail_cassette_option_selection_wrapper {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -2093,12 +2152,18 @@
   width: 10vw;
 }
 
+.select_head_rail_round_option_selection_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .select_round_ellipse1 {
   display: flex;
   width: 2vh;
   height: 2vh;
   background-color: #9f9f9f;
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .active_cassette_round1 {
@@ -2126,6 +2191,7 @@
   height: 2vh;
   white-space: nowrap;
   font-size: 12px;
+  width: 10vw;
 }
 
 .fabric_types_top_and_bottom_main_wrapper {
@@ -2144,13 +2210,18 @@
   justify-content: start;
   flex-direction: column;
   margin-top: 5vh;
+  transition: 0.6s;
+  height: max-content;
+}
+
+.fabric_types_top_and_bottom_second_wrapper::before {
+  transition: 0.6s;
 
 }
 
 .fabric_types_top_and_bottom_second_wrapper:hover {
   border-width: 3px;
   border-top: none;
-  border-bottom: none;
   border-color: rgb(181, 181, 181);
   transition: 0.6s;
   transform: scale(0.99);
@@ -2360,7 +2431,7 @@
 }
 
 .extra_options_set_main_wrapper {
-  display: flex;
+  display: none;
   width: 59vw;
   padding: 20px;
 }
@@ -2373,8 +2444,10 @@
 .extra_options_set {
   display: flex;
   width: 59vw;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 10vw;
 }
 
 .bottom_rail_option_1 {
@@ -2382,9 +2455,10 @@
   flex-direction: column;
 }
 
-.extra_options_set_ellipse_and_image { 
+.extra_options_set_ellipse_and_image {
   display: flex;
-  flex-direction: row;}
+  flex-direction: row;
+}
 
 .bottom_rail_option_1_ellipse {
   display: flex;
@@ -2406,8 +2480,9 @@
   height: 10vh;
 }
 
-.option_1_text {display: flex;
-word-wrap: nowrap;
+.option_1_text {
+  display: flex;
+  word-wrap: nowrap;
 }
 
 .option_1_price {
@@ -2420,9 +2495,10 @@ word-wrap: nowrap;
   flex-direction: column;
 }
 
-.extra_options_set_ellipse_and_image { 
+.extra_options_set_ellipse_and_image {
   display: flex;
-  flex-direction: row;}
+  flex-direction: row;
+}
 
 .bottom_rail_option_2_ellipse {
   display: flex;
@@ -2438,41 +2514,23 @@ word-wrap: nowrap;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.option_2_Image { 
+.option_2_Image {
   display: flex;
   width: 10vw;
   height: 10vh;
 }
 
-.option_1_text {display: flex;
+.option_1_text {
+  display: flex;
   word-wrap: nowrap;
-  }
-
-  .option_2_price { 
-    display: flex;
-  }
-
-.active_cassette_round2 {
-
 }
 
-.round2 {
-
-}
-
-.product_price_2 {
-
-}
-
-.cassette_image3 {
+.option_2_price {
   display: flex;
-  width: 10vw;
-  height: 10vh;
+  word-wrap: nowrap;
 }
 
-.pick_bottom_rail_color_wrapper {
-
-}
+.pick_bottom_rail_color_titles_wrapper {}
 
 .fabric_types_subtitle {
   width: 50vw;
@@ -2492,17 +2550,11 @@ word-wrap: nowrap;
   margin-top: 2vh;
 }
 
-.see_bill_button_wrapper {
+.see_bill_button_wrapper {}
 
-}
+.see_bill_button {}
 
-.see_bill_button {
-
-}
-
-.see_bill_text {
-
-}
+.see_bill_text {}
 
 .head_rail_color_answer {
   display: flex;
@@ -2519,6 +2571,43 @@ word-wrap: nowrap;
 
 /* End of Fabrics Page */
 
+
+.quantity_and_add_to_cart_group { 
+  display: flex;
+  width: 59vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.shipping_details_wrapper { 
+  display: flex;
+  width: 59vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.shippingtruck_1 { 
+  display: flex;
+  height: 2vh;
+  width: auto;
+  margin: 5px;
+}
+
+.paymenticon { 
+  display: flex;
+  height: auto;
+  width: 3vw;
+  margin: 5px;
+}
+
+.paypalicon { 
+  display: flex;
+  height: auto;
+  width: 3vw;
+  margin: 5px;
+}
 
 
 

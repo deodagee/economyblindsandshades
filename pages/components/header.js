@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/components/header.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import MessageBox from "./pages/contact";
 
 
 function HeaderPiece() {
@@ -42,77 +43,77 @@ function HeaderPiece() {
 
         </ol>
 
-        <ol className={styles.header_top_bar}>
+        <div className={styles.header_top_bar}>
 
-          <li className={styles.header_logo}>
-            <Link href={'/'}>
-              <Image className={styles.logo_image} src={"/logo2.png"} width={400} height={400} alt="economyblindsandshades_logo" />
-            </Link>
-          </li>
+          <div>
+            <li className={styles.header_logo}>
+              <Link href={'/'}>
+                <Image className={styles.logo_image} src={"/logodarker.png"} width={400} height={400} alt="economyblindsandshades_logo" />
+              </Link>
+            </li>
+          </div>
 
-          <li className={styles.top_links}>
-
-            <div className={styles.icons_and_links_for_top_wrapper}>
-              <div className={styles.icons_group}>
-                <div className={styles.icon_and_text}>
-                  <Image
-                    className={styles.icons_for_top}
-                    alt="free_shipping"
-                    width={100}
-                    height={100}
-                    src={"/freeshipping.png"}>
-                  </Image>
-                  <p className={styles.icons_for_top_text}>Free Shipping</p>
-                </div>
-
-                <div className={styles.icon_and_text}>
-                  <Image
-                    className={styles.icons_for_top}
-                    alt="customer_satisfaction"
-                    width={100}
-                    height={100}
-                    src={"/customersatisfaction.png"}>
-                  </Image>
-                  <p className={styles.icons_for_top_text}>Customer Satisfaction</p>
-                </div>
-
-                <div className={styles.icon_and_text}>
-                  <Image
-                    className={styles.icons_for_top}
-                    alt="remarkable_designs"
-                    width={100}
-                    height={100}
-                    src={"/remarkabledesigns.png"}>
-                  </Image>
-                  <p className={styles.icons_for_top_text}>Remarkable Designs</p>
-                </div>
-
-              </div>
-
+          <div className={styles.icons_group}>
+            <div className={styles.icon_and_text}>
               <Image
-                className={styles.add_to_cart}
-                alt="add_to_cart"
+                className={styles.icons_for_top}
+                alt="free_shipping"
                 width={100}
                 height={100}
-                src={"/cart.png"}>
+                src={"/freeshipping.png"}>
               </Image>
+              <p className={styles.icons_for_top_text}>Free Shipping</p>
+            </div>
+
+            <div className={styles.icon_and_text}>
+              <Image
+                className={styles.icons_for_top}
+                alt="customer_satisfaction"
+                width={100}
+                height={100}
+                src={"/customersatisfaction.png"}>
+              </Image>
+              <p className={styles.icons_for_top_text}>Customer Satisfaction</p>
+            </div>
+
+            <div className={styles.icon_and_text}>
+              <Image
+                className={styles.icons_for_top}
+                alt="large_selection"
+                width={100}
+                height={100}
+                src={"/largeselection.png"}>
+              </Image>
+              <p className={styles.icons_for_top_text}>Large Selection</p>
+            </div>
+
+          </div>
+
+          <span className={styles.links_for_top_wrapper}>
+            <span className={styles.side_links} >
               <div>
-
+                <Image
+                  className={styles.add_to_cart}
+                  alt="add_to_cart"
+                  width={100}
+                  height={100}
+                  src={"/cart.png"}>
+                </Image>
               </div>
-
+              <div>
+                <Link className={styles.top_links_item}
+                  href={"/contact"}
+                > Contact
+                </Link>
+              </div>
               <div className={styles.divider_line}
               ></div>
-
-              <div side_links>
-                <span>
-                  <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
-                </span>
+              <div>
+                <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
               </div>
-
-            </div>
-          </li>
-        </ol>
-
+            </span>
+          </span>
+        </div>
 
         <ul className={styles.second_menu_bar}>
           <li className={styles.second_menu_bar_item}>
@@ -194,9 +195,9 @@ function HeaderPiece() {
           <div className={styles.drop_down_menu}>
             <ul>
               <Link href={"/zebrablinds"}>
-              <li className={styles.drop_down_menu_item}>
-                Room Darkening
-              </li>
+                <li className={styles.drop_down_menu_item}>
+                  Room Darkening
+                </li>
               </Link>
               <li className={styles.drop_down_menu_item}>                Light Filtering
               </li>

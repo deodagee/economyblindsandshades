@@ -10,8 +10,7 @@
     color: rgb(30, 30, 30);
     font-size: 12px;
     white-space: nowrap;
-    height: 40vh;
-    overflow-y: scroll;
+    height: max-content;
 }
 
 .images_and_subtitles {
