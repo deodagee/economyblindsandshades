@@ -6,15 +6,12 @@ import { useState } from "react";
 
 
 const FabricsPage = () => {
-  const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(false);
   const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
   const [active_bottom_rail_option_1_ellipse, setactive_bottom_rail_option_1_ellipse] = useState(null);
   const [active_bottom_rail_option_2_ellipse, setactive_bottom_rail_option_2_ellipse] = useState(null);
   const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
 
-  const NextButton4buttonStyle = {
-    backgroundColor: Was_Next_Button_Clicked4 ? 'white' : '#313131',
-  };
+
 
   const [bottomRailOptions1RenderingContent, setbottomRailOptions1RenderingContent] = useState('');
   const [bottomRailOptions2RenderingContent, setbottomRailOptions2RenderingContent] = useState('');
@@ -332,13 +329,7 @@ const FabricsPage = () => {
 
 
 
-        <div className={styles.see_bill_button_wrapper}>
-          <button className={styles.see_bill_button}>
-            <div
-              style={NextButton4buttonStyle}
-              className={styles.see_bill_text}>See Bill</div>
-          </button>
-        </div>
+
 
       </div>
 

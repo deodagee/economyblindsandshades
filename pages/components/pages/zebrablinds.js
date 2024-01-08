@@ -350,6 +350,23 @@ function ZebraBlinds() {
         }
     }, []);
 
+    const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(null);
+
+
+    const NextButton4buttonStyle = {
+        width: '5vw',
+        borderRadius: Was_Next_Button_Clicked4 ? '0.45rem' : '0.95rem',
+        borderWidth: '2px',
+        borderColor: Was_Next_Button_Clicked4 ? 'black' : 'grey',
+        backgroundColor: Was_Next_Button_Clicked4 ? "brown": "grey",
+    
+      };
+    
+      const handle_click_see_bill_button = () => {
+        // Handle button click logic
+        Set_Was_Next_Button_Clicked4(true);
+      };
+
 
 
 
@@ -1069,10 +1086,14 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
+                        
+
                         <FabricsPage></FabricsPage>
 
                         <div className={styles.select_head_rail_seperator_line}></div>
                         <div className={styles.quantity_seperator_line}></div>
+
+                        
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
@@ -1107,8 +1128,20 @@ function ZebraBlinds() {
                             </div>
                             <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
 
+
+                            <div className={styles.see_bill_button_wrapper}>
+                            <button
+                                onClick={handle_click_see_bill_button}
+                                className={styles.see_bill_button}>
+                                <div
+                                    style={NextButton4buttonStyle}
+                                    className={styles.see_bill_text}>See Bill</div>
+                            </button>
+                        </div>
+
                             <div className={styles.review_your_order}>Review Your Order</div>
                             <div className={styles.review_your_order_seperator_line}></div>
+
                             <div className={styles.review_your_order_bg}>
                                 <div className={styles.order_items_list}>
                                     <span
