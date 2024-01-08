@@ -1,5 +1,6 @@
 .showImages_wrapper {
     display: flex;
+    flex-direction: column;
     gap: 1vw;
     background: linear-gradient(to top, #eeeeee, #f1f1f1, #e6e6e6, #eeeeee);
     box-shadow: rgb(133, 133, 133) 6px 5px 20px;
@@ -10,14 +11,31 @@
     color: rgb(30, 30, 30);
     font-size: 12px;
     white-space: nowrap;
-    height: max-content;
+    overflow: scroll;
 }
 
-.images_and_subtitles {
+
+.white, .grey, .bronze, .black, .brown , .beige{ 
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.divider_line { 
+    height: 2px;
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+    border-radius: 0.56rem;
+}
+.images_and_subtitles {
+    width: 49vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
     gap: 10px;
 }
+
 
 .imageContainer {
     background-color: rgb(212, 212, 212);
@@ -32,5 +50,12 @@
     transition: 0.4s;
     box-shadow: #858585 2px 3px 7px;
     border-radius: 0.15rem;
+
+}
+
+.image_itself { 
+    display: flex;
+    width: 200px;
+
 
 }

@@ -441,7 +441,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: max-content;
+  width: 45vw;
   height: max-content;
   padding: 20px;
   margin-top: 2vh;
@@ -451,7 +451,6 @@
   border-color: #c2c2c2;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   transition: 0.4s;
-  transform: scale(0.78);
 }
 
 .enter_size_inside_mount_group:hover {
@@ -471,25 +470,26 @@
 .enter_height_and_width_inside_mount_group {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: max-content;
+  gap: 10px;
 }
 
 .enter_height_group_inside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
-  width: 20vw;
+  height: 17vh;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
+  padding: 5px;
 
 }
 
 
 .height_and_toggle_inside_mount {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -497,9 +497,16 @@
 
 .height_inside_mount_sub_title {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
+  width: 10vw;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
 }
 
 .enter_height_inside_mount_rectangle_1 {
@@ -508,8 +515,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
 .toggle_disclaimer_inches_inside_mount_height {
@@ -522,7 +534,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 .polygon_1 {
@@ -530,6 +541,11 @@
   transform: rotate(180deg);
   width: 10px;
   top: 0;
+}
+
+.scroller_partition_height_inside_outside_mount { 
+  display: flex;
+  width: 10vw;
 }
 
 .height_scroll_number_inches_inside_mount {
@@ -561,7 +577,8 @@
 }
 
 .displayWholeNumbers_inside_mount_height {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -574,6 +591,7 @@
 .displayWholeNumbers_inside_mount_height_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -606,8 +624,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
 .toggle_disclaimer_fractions_inside_mount_height {
@@ -620,7 +643,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 .polygon_2 {
@@ -628,6 +650,12 @@
   transform: rotate(180deg);
   width: 10px;
   top: 0;
+}
+
+
+.scroller_partition_height_inside_mount { 
+  display: flex;
+  width: 10vw;
 }
 
 .height_scroll_number_fractions_inside_mount {
@@ -665,7 +693,8 @@
 }
 
 .displayFractions_inside_mount_height {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -678,6 +707,7 @@
 .displayFractions_inside_mount_height_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -701,15 +731,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
-  width: 20vw;
+  height: 17vh;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 }
 
 .width_and_toggle_inside_mount {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -717,9 +746,16 @@
 
 .width_inside_mount_sub_title {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
+  width: 10vw;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
 }
 
 .enter_width_inside_mount_rectangle_1 {
@@ -728,8 +764,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -742,7 +783,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 .polygon_3 {
@@ -750,6 +790,11 @@
   transform: rotate(180deg);
   width: 10px;
   top: 0;
+}
+
+.scroller_partition_width_inside_mount { 
+  display: flex;
+  width: 10vw;
 }
 
 .width_scroll_number_inches_inside_mount {
@@ -781,7 +826,8 @@
 }
 
 .displayWholeNumbers_inside_mount_width {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -794,6 +840,7 @@
 .displayWholeNumbers_inside_mount_width_list_of_numbers {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -825,8 +872,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {
@@ -839,7 +891,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 .polygon_4 {
@@ -847,6 +898,11 @@
   transform: rotate(180deg);
   width: 10px;
   top: 0;
+}
+
+.scroller_partition_width_inside_mount { 
+  display: flex;
+  width: 10vw;
 }
 
 .width_scroll_number_fractions_inside_mount {
@@ -878,13 +934,19 @@
   width: 100px;
 }
 
+.ScrollNumberFractions_width_inside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
 .displayFractions_inside_mount_width {
-  gap: 15px;
-  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
-  padding: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -894,14 +956,10 @@
 .displayFractions_inside_mount_width_list_of_numbers {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
-.ScrollNumberFractions_width_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 
 .singleFraction_width_inside_mount:hover {
   background-color: rgb(0, 0, 0);
@@ -1019,7 +1077,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: max-content;
+  width: 45vw;
   height: max-content;
   padding: 20px;
   margin-top: 2vh;
@@ -1029,7 +1087,6 @@
   border-color: #c2c2c2;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
   transition: 0.4s;
-  transform: scale(0.78);
 }
 
 .enter_size_outside_mount_group:hover {
@@ -1049,24 +1106,25 @@
 .enter_height_and_width_outside_mount_group {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: row;
-  height: max-content;
+  flex-direction: column;
+  height: max-content;  
+  gap: 10px;
 }
 
 .enter_height_group_outside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
-  width: 20vw;
+  height: 17vh;
+  width: 43vw;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
-
+  padding: 5px;
 }
 
 .height_and_toggle_outside_mount {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -1074,9 +1132,16 @@
 
 .height_outside_mount_sub_title {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
+  width: 10vw;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
 }
 
 .enter_height_outside_mount_rectangle_1 {
@@ -1085,11 +1150,16 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 10vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
-.toggle_disclaimer_inches_outside_mount {
+.toggle_disclaimer_inches_height_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1099,7 +1169,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 
@@ -1109,7 +1178,10 @@
   width: 10px;
   top: 0;
 }
-
+.scroller_partition_inches_outside_mount { 
+  display: flex;
+  width: 10vw;
+}
 
 .height_scroll_number_inches_outside_mount {
   position: static;
@@ -1140,7 +1212,8 @@
 }
 
 .displayWholeNumbers_outside_mount_height {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -1153,6 +1226,7 @@
 .displayWholeNumbers_outside_mount_height_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -1178,17 +1252,22 @@
   border-color: grey;
 }
 
-.enter_width_outside_mount_rectangle_2 {
+.enter_width_fractions_outside_mount_rectangle_2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
-.toggle_disclaimer_fractions_outside_mount {
+.toggle_disclaimer_width_fractions_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1209,6 +1288,10 @@
   width: 10px;
   top: 0;
 }
+
+.scroller_partition_fractions_outside_mount { 
+  display: flex;
+  width: 10vw;}
 
 .height_scroll_number_fractions_outside_mount {
   position: static;
@@ -1246,7 +1329,8 @@
 }
 
 .displayFractions_outside_mount_height {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -1259,6 +1343,7 @@
 .displayFractions_outside_mount_height_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -1284,15 +1369,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
-  width: 20vw;
+  height: 17vh;
   padding-bottom: 2vh;
   background-color: rgb(235, 235, 235);
 }
 
 .width_and_toggle_outside_mount {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -1301,9 +1385,16 @@
 
 .width_outside_mount_sub_title {
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
+  width: 10vw;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
 }
 
 .enter_width_outside_mount_rectangle_1 {
@@ -1312,11 +1403,16 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 15vw;
+  width: 11.5vw;
   height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
 }
 
-.toggle_disclaimer_inches_outside_mount {
+.toggle_disclaimer_inches_width_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1326,7 +1422,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 .polygon_7 {
@@ -1334,6 +1429,11 @@
   transform: rotate(180deg);
   width: 10px;
   top: 0;
+}
+
+.scroller_partition_width_outside_mount { 
+  display: flex;
+  width: 10vw;
 }
 
 .width_scroll_number_inches_outside_mount {
@@ -1365,7 +1465,8 @@
 }
 
 .displayWholeNumbers_outside_mount_width {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -1378,6 +1479,7 @@
 .displayWholeNumbers_outside_mount_width_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 
@@ -1401,6 +1503,34 @@
   border-radius: 0.24rem;
   border-width: 1px;
   border-color: grey;
+}
+
+.enter_width_fractions_outside_mount_rectangle_2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 11.5vw;
+  height: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 10vh;
+}
+
+.toggle_disclaimer_width_fractions_outside_mount { 
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px;
+  white-space: nowrap;
+  width: 5vw;
 }
 
 
@@ -1440,7 +1570,8 @@
 }
 
 .displayFractions_outside_mount_width {
-  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 22px;
   height: 22px;
   font-size: 15px;
@@ -1453,6 +1584,7 @@
 .displayFractions_outside_mount_width_list_of_numbers { 
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 2vh;
 }
 

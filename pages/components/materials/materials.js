@@ -15,8 +15,7 @@ const MaterialsPage = () => {
     { key: 'White', src: '/WHITE/ETB2001WHITE.png', label: 'White' },
   ];
 
-  const colorImageLists = {
-    Beige: [
+   const Beige =[
       { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
       { key: "Beige", src: '/BEIGE/ETB2002BEIGE.png', label: "ETB2-002" },
       { key: "Beige", src: '/BEIGE/ETB3001BEIGE.png', label: "ETB3-001" },
@@ -29,9 +28,9 @@ const MaterialsPage = () => {
       { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
       { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
 
-    ],
+    ];
 
-    Black: [
+    const Black =  [
       { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
       { key: "Black", src: '/BLACK/ETB4003BLACK.png', label: "ETB4-003" },
       { key: "Black", src: '/BLACK/ETB4004BLACK.png', label: "ETB4-004" },
@@ -39,23 +38,23 @@ const MaterialsPage = () => {
       { key: "Black", src: '/BLACK/ETB5007BLACK.png', label: "ETB5-007" },
       { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
       { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
-    ],
+    ];
 
-    Brown: [
+    const Brown =  [
       { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
       { key: "Brown", src: '/BROWN/ETB3007BROWN.png', label: "ETB3-007" },
       { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
       { key: "Brown", src: '/BROWN/ETB6004BROWN.png', label: "ETB6-004" },
       { key: "Brown", src: '/BROWN/ETB7003BROWN.png', label: "ETB7-003" },
       { key: "Brown", src: '/BROWN/ETB9004BROWN.png', label: "ETB9-004" },
-    ],
+    ];
 
-    Bronze: [
+    const Bronze = [
       { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
       { key: "Bronze", src: '/BRONZE/ETB3006BRONZE.png', label: "ETB3-006" },
-    ],
+    ];
 
-    Grey: [
+    const Grey =  [
       { key: "Grey", src: '/GREY/ETB1004GREY.png', label: "ETB1-004" },
       { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
       { key: "Grey", src: '/GREY/ETB3004GREY.png', label: "ETB3-004" },
@@ -72,8 +71,9 @@ const MaterialsPage = () => {
       { key: "Grey", src: '/GREY/ETB14004GREY.png', label: "ETB14-004" },
       { key: "Grey", src: '/GREY/ETB14003GREY.png', label: "ETB14-003" },
       { key: "Grey", src: '/GREY/ETB14005GREY.png', label: "ETB14-005" },
-    ],
-    White: [
+    ];
+
+    const White =  [
       { key: "White", src: '/WHITE/ETB2001WHITE.png', label: "ETB2-001" },
       { key: "White", src: '/WHITE/ETB4001WHITE.png', label: "ETB4-001" },
       { key: "White", src: '/WHITE/ETB4002WHITE.png', label: "ETB4-002" },
@@ -87,34 +87,59 @@ const MaterialsPage = () => {
       { key: "White", src: '/WHITE/ETB15001WHITE.png', label: "ETB15-001" },
       { key: "White", src: '/WHITE/ETB16001WHITE.png', label: "ETB16-001" },
       { key: "White", src: '/WHITE/ETB1001WHITE.png', label: "ETB1-001" },
+    ];
 
-
-    ],
-  };
-
-
-  return (
-    <>
-
-
+    return (
       <div className={styles.showImages_wrapper}>
-        {Object.entries(colorImageLists).map(([color, items]) => (
+        <div className={styles.white}>
+          Whites
+        {renderColorList(White)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.grey}>
+          Greys
+        {renderColorList(Grey)}
+        </div>
+        <div className={styles.divider_line}></div>
 
-          <div
-            className={styles.images_and_subtitles} key={color}>
-            {items.map((item) => (
-              <div
-                className={styles.imageContainer}
-                key={item.label}>
-                <h3 className={styles.images_and_subtitles_color_name}>{color}</h3>
-                <Image src={item.src} alt={item.label} width={100} height={100} />
-                <p className={styles.selectedImageClass_label}>{item.label}</p>
-              </div>
-            ))}
+        <div className={styles.bronze}>
+          Bronzes
+        {renderColorList(Bronze)}
+        </div>
+        <div className={styles.divider_line}></div>
+
+        <div className={styles.brown}>
+          Browns
+        {renderColorList(Brown)}
+        </div>
+        <div className={styles.divider_line}></div>
+
+        <div className={styles.black}>
+          Black
+        {renderColorList(Black)}
+        </div>
+        <div className={styles.divider_line}></div>
+
+        <div className={styles.beige}>
+          Beiges
+        {renderColorList(Beige)}
+        </div>
+      </div>
+    );
+  };
+  
+  const renderColorList = (colorList) => {
+    return (
+      <div className={styles.images_and_subtitles} key={colorList[0].key}>
+        {colorList.map((item) => (
+          <div className={styles.imageContainer} key={item.label}>
+            <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
+            <Image className={styles.image_itself} src={item.src} alt={item.label} width={100} height={100} />
+            <p className={styles.selectedImageClass_label}>{item.label}</p>
           </div>
         ))}
       </div>
-    </>
-  );
-};
-export default MaterialsPage;
+    );
+  };
+  
+  export default MaterialsPage;
