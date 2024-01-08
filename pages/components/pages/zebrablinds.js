@@ -567,15 +567,15 @@ function ZebraBlinds() {
                                                     </div>
                                                     <div className={styles.height_scroll_number_fractions_inside_mount}>
 
-                                                    {fractionIndex_inside_mount_height && (
-                                                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                                                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                                        {fractionIndex_inside_mount_height && (
+                                                            <div className={styles.display_fractions_wrapper_inside_mount_height}>
+                                                                <div className={styles.ScrollNumberFractions_height_inside_mount}>
+                                                                    <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    )}
-                                                </div>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1015,7 +1015,7 @@ function ZebraBlinds() {
 
                             <div className={styles.select_chain_options}>
 
-                                
+
 
 
                                 <div className={styles.cord_less_option_group}>
@@ -1057,250 +1057,181 @@ function ZebraBlinds() {
                         <FabricsPage></FabricsPage>
 
                         <div className={styles.select_head_rail_seperator_line}></div>
+                        <div className={styles.quantity_seperator_line}></div>
 
                         <div className={styles.quantity_and_add_to_cart_group}>
-                            <div className={styles.quantity_seperator_line}></div>
-                            <div className={styles.quantity}>Quantity</div>
-                            <div className={styles.rectangle_29}></div>
-                            <div className={styles.rectangle_30}></div>
-                            <div className={styles.question_mark_ellipse}></div>
-                            <div className={styles.question_mark}>?</div>
-                            <div className={styles.qty}>Qty</div>
-                            <div className={styles.qty_number}>1</div>
-                            <div className={styles.quantity_is_always_1_box}></div>
-                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+
+                            <div className={styles.quantity_title}>Quantity</div>
+                            <div className={styles.quantity_rectangle_and_numbers}>
+                                <div className={styles.quantity_rectangle}>
+                                    <span>
+                                        <div className={styles.qty}>Qty</div>
+                                    </span>
+                                    <span>
+                                        <div className={styles.question_mark_ellipse_and_number_wrapper}>
+                                            <span>
+                                                <div className={styles.question_ellipse}>
+                                                    <div className={styles.questiomark}>?</div>
+                                                </div>
+                                            </span>
+                                            <span>
+                                                <div className={styles.qty_number}>1</div>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>
+                                        <div className={styles.quantity_is_always_1_wrapper}>
+                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                        </div>
+
+                                    </span>
+                                </div>
+                            </div>
                             <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                            <div className={styles.review_your_order_seperator_line}></div>
+
                             <div className={styles.review_your_order}>Review Your Order</div>
-                            <div className={styles.review_your_order_bg}></div>
-                            <div className={styles.order_items_list}>
-                                <svg
-                                    className={styles.rectangle_45}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <div className={styles.window_name}>Window Name:
+                            <div className={styles.review_your_order_seperator_line}></div>
+                            <div className={styles.review_your_order_bg}>
+                                <div className={styles.order_items_list}>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.window_name}>Window Name:
+                                        </div>
+                                        <div className={styles.window_name_answer}>
+                                            {product_title}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.window_type}>Window Type:</div>
+                                        <div className={styles.window_type_answer}>
+                                            {roomDarkeningContent}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.widthbom}>Inside Mount Width:</div>
+                                        <div className={styles.width2_answer}>
+                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span>{" (Inches width),"}<span></span></p>
+                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span>{" (Fractions width)"}<span></span></p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.widthbom}>Outisde Mount Width:</div>
+                                        <div className={styles.width2_answer}>
+                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span>{" (Inches width),"}<span></span></p>
+                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span>{" (Fractions width)"}<span></span></p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.heightbom}>Inside Mount Height:</div>
+                                        <div className={styles.height2Answer}>
+                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span>{" (Inches)height,"}<span></span></p>
+                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height_inside_mount}</span>{" (Fractions)height"}<span></span></p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.heightbom}>Outside Mount Height:</div>
+                                        <div className={styles.height2Answer}>
+                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_outside_mount}</span>{" (Inches)height,"}<span></span></p>
+                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_outside_mount_height}</span>{" (Fractions)height"}<span></span></p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.materials_answer_head_rail}>
+                                            {"Select A Color"}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.materials_answer_bottom_rail}>
+                                            {"Select A Color  "}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.mount}>Mount:</div>
+                                        <div className={styles.mount_answer}>
+                                            {InsideOrOutsideRenderingContent}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.materialsbom}>Materials:</div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.lift_type}>Lift Type:</div>
+                                        <div className={styles.lift_type_answer}>
+                                            {active_wand_cordless_motorizedRenderingContent}
+                                        </div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+
+                                        <div className={styles.head_rail_color}>Head Rail Color:</div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+
+                                    <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+                                    <div className={styles.description_and_answer}>
+                                    <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
+                                    </div>
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+
                                 </div>
-                                <div className={styles.window_name_answer}>
-                                    {product_title}
-                                </div>
-                                <svg
-                                    className={styles.rectangle_43}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <div className={styles.window_type}>Window Type:</div>
-                                <div className={styles.window_type_answer}>
-                                    {roomDarkeningContent}
-                                </div>
-                                <svg
-                                    className={styles.rectangle_36}
-                                    width="483"
-                                    height="2"
-                                    viewBox="0 0 483 2"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                        fill="black"
-                                    />
-                                </svg>
-                                <div className={styles.widthbom}>Inside Mount Width:</div>
-                                <div className={styles.width2_answer}>
-                                    <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span>{" (Inches width),"}<span></span></p>
-                                    <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span>{" (Fractions width)"}<span></span></p>
-                                </div>
-                                <div className={styles.widthbom}>Outisde Mount Width:</div>
-                                <div className={styles.width2_answer}>
-                                    <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span>{" (Inches width),"}<span></span></p>
-                                    <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span>{" (Fractions width)"}<span></span></p>
-                                </div>
                             </div>
-                            <svg
-                                className={styles.rectangle_37}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-                            <div className={styles.materials_answer_head_rail}>
-                                {"Select A Color"}
-                            </div>
-
-                            <div className={styles.materials_answer_bottom_rail}>
-                                {"Select A Color  "}
-                            </div>
-
-
-
-                            <div className={styles.heightbom}>Inside Mount Height:</div>
-                            <div className={styles.height2Answer}>
-                                <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span>{" (Inches)height,"}<span></span></p>
-                                <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height_inside_mount}</span>{" (Fractions)height"}<span></span></p>
-
-                            </div>
-                            <div className={styles.heightbom}>Outside Mount Height:</div>
-                            <div className={styles.height2Answer}>
-                                <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_outside_mount}</span>{" (Inches)height,"}<span></span></p>
-                                <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_outside_mount_height}</span>{" (Fractions)height"}<span></span></p>
-
-                            </div>
-
-
-
-
-
-                            <svg
-                                className={styles.rectangle_38}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-                            <div className={styles.mount}>Mount:</div>
-                            <div className={styles.mount_answer}>
-                                {InsideOrOutsideRenderingContent}
-                            </div>
-
-                            <svg
-                                className={styles.rectangle_39}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-                            <div className={styles.materialsbom}>Materials:</div>
-
-
-
-                            <svg
-                                className={styles.rectangle_40}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-
-                            <div className={styles.lift_type}>Lift Type:</div>
-                            <div className={styles.lift_type_answer}>
-                                {active_wand_cordless_motorizedRenderingContent}
-                            </div>
-
-
-                            <svg
-                                className={styles.rectangle_41}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-
-                            <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
-
-
-                            <svg
-                                className={styles.rectangle_42}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-                            <div className={styles.head_rail_color}>Head Rail Color:</div>
-
-                            <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
-                            <svg
-                                className={styles.rectangle_47}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
-
-                            <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
-
-
-                            <svg
-                                className={styles.rectangle_44}
-                                width="483"
-                                height="2"
-                                viewBox="0 0 483 2"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M0.871094 0.853516H482.871V1.85352H0.871094V0.853516Z"
-                                    fill="black"
-                                />
-                            </svg>
                         </div>
 
 
-                        <div className={styles.shipping_details_wrapper}>
+
+                        <div className={styles.shipping_details_group_wrapper}>
                             <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
                             <div className={styles.shipping_details_title_wrapper}>
                                 <div className={styles.shipping_details_title}>Shipping Details</div>
