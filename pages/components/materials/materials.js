@@ -32,7 +32,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
   const handleSelectMaterial = (src, label) => {
     console.log(`Clicked on file: ${src}`);
     setSelectedMaterial({ src, label });
-  };
+};
 
   const colorData = {
     Beige: [
@@ -113,8 +113,12 @@ const MaterialsPage = ({ showLeftHalf }) => {
       {colorList.map((item) => (
         <div
           key={item.label}
-          className={`${styles.imageContainer} ${selectedMaterial === item.src ? styles.selectedImage : ''}`}
+          className={`${styles.imageContainer} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
           onClick={() => handleSelectMaterial(item.src)}
+          style={{
+            border: selectedMaterial && selectedMaterial.src === item.src ? '2px solid black' : '2px solid transparent',
+            padding: selectedMaterial && selectedMaterial.src === item.src ? '5px' : '0', // Add padding if selected
+          }}
         >
           <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
           <Image className={styles.image_itself} src={item.src} alt={item.label} width={100} height={100} />
@@ -123,11 +127,12 @@ const MaterialsPage = ({ showLeftHalf }) => {
       ))}
     </div>
   );
-
+  
 
   return (
     <div className={styles.materials_page}>
       <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
+
         <div className={styles.sliding_gallery_component}>
         <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
         <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
@@ -136,7 +141,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
             {selectedMaterial ? (
               <>
                 <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
-                <div className={`${styles.imageContainer2} ${styles.selectedImage}`}>
+                <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
                   <Image
                     className={styles.image_itself1}
                     src={selectedMaterial.src}
@@ -150,11 +155,11 @@ const MaterialsPage = ({ showLeftHalf }) => {
 
 
               <div className={styles.image_and_scroller_wrapper}>
-                <div className={`${styles.imageContainer2} ${styles.selectedImage}`}>
+                <div className={`${styles.imageContainer2} ${styles.selectedImage3}`}>
                   <Image
                     width={100}
                     height={100}
-                    className={styles.image_itself1}
+                    className={styles.image_itself2}
                     src={FirstImageRender[0].src}
                     alt={FirstImageRender[0].label}
 
@@ -197,6 +202,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
 
                 </div>
               </div>
+              
             )}
           </div>
         </div>
@@ -204,7 +210,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
       <div className={styles.selectColorImageCollection}>
         {Object.keys(colorData).map((color) => (
           <div key={color} className={styles[color.toLowerCase()]}>
-            <p className={styles.color_section_title}>{color}s</p>
+            <p className={styles.color_section_title}>{color}</p>
             {renderColorList(colorData[color])}
           </div>
         ))}
