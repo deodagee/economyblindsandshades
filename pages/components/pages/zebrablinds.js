@@ -435,19 +435,18 @@ function ZebraBlinds() {
                                         className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
                                         onClick={() => handleClickInside_And_Outside_Ellipses(1)}
                                     >
-                                        <div className={styles.inside_mount_choice}>Inside Mount</div>
                                     </div>
+                                    <div className={styles.inside_mount_choice}>Inside Mount</div>
+
 
                                     <div
                                         className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
                                         onClick={() => handleClickInside_And_Outside_Ellipses(2)}
                                     >
-                                        <div className={styles.outside_mount_choice}>Outside Mount</div>
                                     </div>
+                                    <div className={styles.outside_mount_choice}>Outside Mount</div>
                                 </div>
                             </span>
-
-
 
 
                             <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
