@@ -1771,8 +1771,6 @@
 .select_lift_type_group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 850px;
 }
 
@@ -1848,34 +1846,47 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.select_lift_type_subtitle {
-  width: 850px;
+.ellipse_and_type_add_lift_feature { 
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
   padding: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin: 20px;
+  margin-left: 20px;
+}
+
+.select_lift_type_subtitle {
+  display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
 }
 
 .select_chain_side_wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   width: 850px;
+  height: 200px;
 }
 
 
-.select_chain_side_wrapper_title {
-  width: 850px;
-  height: 20px;
+.select_chain_side_wrapper_subtitle {
   display: flex;
-  padding-left: 20px;
-  font-size: 11px;
-  color: #5b5b5b;
+
 }
 
 .show_image_chain_buttons {
-  width: 850px;
+  width: max-content;
   display: flex;
   padding: 20px;
   gap: 10px;
@@ -1974,6 +1985,8 @@
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 20px;
+  gap: 50px;
+  height: 420px;
 }
 
 .wand_option_group {
@@ -2081,7 +2094,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 40px;
+  width: max-content;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
@@ -2095,7 +2108,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: max-content;
   height: 20px;
   padding: 10px;
   border-width: 1px;
@@ -2147,7 +2160,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 40px;
+  width: max-content;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
@@ -2167,7 +2180,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: max-content;
   height: 20px;
   padding: 10px;
   border-width: 1px;
@@ -2388,26 +2401,22 @@
 
 .fabric_types_top_and_bottom_main_wrapper {
   display: flex;
+  align-items: start;
+  justify-content: flex-start;
   width: 850px;
-  height: max-content;
 }
 
 .fabric_types_top_and_bottom_second_wrapper {
   display: flex;
-  width: max-content;
-  padding: 300px;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  align-items: start;
-  justify-content: start;
+  width: 850px;
   flex-direction: column;
-  margin-top: 50px;
-  transition: 0.6s;
-  height: max-content;
+
+
 }
 
 .fabric_types_top_and_bottom_second_wrapper::before {
   transition: 0.6s;
+  
 
 }
 
@@ -2428,7 +2437,7 @@
 }
 
 .fabric_types_subtitle {
-  width: 500px;
+  width: 850px;
   display: flex;
   margin-top: 10px;
   padding-left: 20px;
@@ -2437,7 +2446,7 @@
 }
 
 .pick_head_rail_color_subtitle {
-  width: 500px;
+  width: 850px;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
@@ -2447,7 +2456,7 @@
 
 .top_section {
   display: flex;
-  width: 500px;
+  width: 850px;
   flex-direction: column;
   padding: 20px;
   align-items: start;
@@ -2455,7 +2464,8 @@
 }
 
 .fabric_list_top {
-  width: 450px;
+  width: 700px;
+
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
@@ -2484,11 +2494,11 @@
 
 .skip_top_section {
   display: flex;
-  width: 500px;
+  width: 850px;
   flex-direction: column;
   padding-left: 20px;
-  align-items: start;
-  justify-content: start;
+  align-self: flex-start;
+  justify-content: flex-start;
   margin-top: 60px;
 }
 
@@ -2518,7 +2528,7 @@
 }
 
 .skip_head_rail_color {
-  width: 500px;
+  width: 850px;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -2535,7 +2545,7 @@
 
 .bottom_section {
   display: flex;
-  width: 500px;
+  width: 850px;
   flex-direction: column;
   padding: 20px;
   align-items: start;
@@ -2543,7 +2553,7 @@
 }
 
 .fabric_list_bottom {
-  width: 450px;
+  width: 700px;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
@@ -2572,7 +2582,7 @@
 
 .skip_bottom_section {
   display: flex;
-  width: 500px;
+  width: 850px;
   flex-direction: column;
   padding-left: 20px;
   align-items: start;
@@ -2607,7 +2617,7 @@
 }
 
 .skip_bottom_rail_color {
-  width: 500px;
+  width: 850px;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -2725,7 +2735,7 @@
 .pick_bottom_rail_color_titles_wrapper {}
 
 .fabric_types_subtitle {
-  width: 500px;
+  width: 850px;
   display: flex;
   margin-top: 10px;
   padding-left: 20px;
@@ -2734,7 +2744,7 @@
 }
 
 .pick_bottom_rail_color_subtitle {
-  width: 500px;
+  width: 850px;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
@@ -2926,7 +2936,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 850px;
   height: max-content;
   border-width: 2px;
   background-color: rgb(241, 241, 241);

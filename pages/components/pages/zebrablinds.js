@@ -947,6 +947,7 @@ function ZebraBlinds() {
 
                             <div className={styles.ellipse_and_type_select_material}>
                                 <div className={styles.select_color_subtitle}> Select Material</div>
+                                <div>Click On A Color To Choose And Add</div>
                             </div>
                             <MaterialsPage></MaterialsPage>
                         </div>
@@ -976,12 +977,14 @@ function ZebraBlinds() {
                                 </div>
                             </span>
 
+                            <div className={styles.ellipse_and_type_add_lift_feature}>
+                                <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
+                                <div>                                    Select Wand, Cordless Or Motorized
+                                </div>
+                            </div>
 
-
-                            <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                             <div className={styles.select_chain_side_wrapper}>
-                                <div className={styles.select_chain_side_wrapper_title}>
-                                    Select Wand, Cordless Or Motorized
+                                <div className={styles.select_chain_side_wrapper_subtitle}>
                                 </div>
 
                                 <div className={styles.wand_option_group}>
