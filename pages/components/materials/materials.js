@@ -4,12 +4,29 @@ import Image from 'next/image';
 import styles from '../../../styles/components/pages/materials.module.css';
 
 const MaterialsPage = ({ showLeftHalf }) => {
-  
-  const ImageDataLeftSide = [
-    { key: 'cassettesteel', src: '/cassettesteel.png', label: 'cassettesteel' },
+
+  const FirstImageRender = [
+    { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
+    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
+    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
+    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
+    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
+    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
+    { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
+    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
+    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
+    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
+    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
+    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
+    { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
+    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
+    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
+    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
+    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
+    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
+
   ];
 
-  const [selectedImage, setSelectedImage] = useState(null);
   const [selectedMaterial, setSelectedMaterial] = useState(null);
 
   const handleSelectMaterial = (src, label) => {
@@ -30,7 +47,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Beige", src: '/BEIGE/ETB8003BEIGE.png', label: "ETB8-003" },
       { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
       { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
-            // Add more Beige color data as needed
+      // Add more Beige color data as needed
     ],
     Black: [
       { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
@@ -40,7 +57,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Black", src: '/BLACK/ETB5007BLACK.png', label: "ETB5-007" },
       { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
       { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
-            // Add more Black color data as needed
+      // Add more Black color data as needed
     ],
     Brown: [
       { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
@@ -49,7 +66,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Brown", src: '/BROWN/ETB6004BROWN.png', label: "ETB6-004" },
       { key: "Brown", src: '/BROWN/ETB7003BROWN.png', label: "ETB7-003" },
       { key: "Brown", src: '/BROWN/ETB9004BROWN.png', label: "ETB9-004" },
-            // Add more Brown color data as needed
+      // Add more Brown color data as needed
     ],
     Bronze: [
       { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
@@ -107,24 +124,13 @@ const MaterialsPage = ({ showLeftHalf }) => {
     </div>
   );
 
+
   return (
     <div className={styles.materials_page}>
       <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
-        <div className={styles.picture_frame}>
-          {selectedImage && (
-            <Image
-              className={styles.selectedImage_styles}
-              src={selectedImage}
-              alt="Selected Image"
-              width={200}
-              height={200}
-              style={{ border: '1px solid white' }}
-            />
-          )}
-        </div>
         <div className={styles.sliding_gallery_component}>
           <div className={styles.selectedImageContainer}>
-            {selectedMaterial && (
+            {selectedMaterial ? (
               <>
                 <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
                 <div className={`${styles.imageContainer2} ${styles.selectedImage}`}>
@@ -137,11 +143,62 @@ const MaterialsPage = ({ showLeftHalf }) => {
                   />
                 </div>
               </>
+            ) : (
+
+
+              <div className={styles.image_and_scroller_wrapper}>
+                <div className={`${styles.imageContainer2} ${styles.selectedImage}`}>
+                  <Image
+                    width={100}
+                    height={100}
+                    className={styles.image_itself1}
+                    src={FirstImageRender[0].src}
+                    alt={FirstImageRender[0].label}
+
+                  />
+                </div>
+                <div className={styles.scroller}>
+
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      className={styles.chevron_left}
+                      alt='chevronright'
+                      src={"/chevronright.png"}>
+                    </Image>
+                  </span>
+
+                  <div className={styles.scroller_image_list}>
+                    {FirstImageRender.map((item) => (
+                      <Image
+                        key={item.label}
+                        width={100}
+                        height={100}
+                        className={styles.scroller_image}
+                        src={item.src}
+                        alt={item.label}
+                      />
+                    ))}
+                  </div>
+
+                  <span>
+                    <Image
+                      width={100}
+                      height={100}
+                      className={styles.chevron_right}
+                      alt='chevronright'
+                      src={"/chevronright.png"}>
+                    </Image>
+                  </span>
+
+                </div>
+              </div>
             )}
           </div>
         </div>
       </div>
-      <div className={styles.showImages_wrapper}>
+      <div className={styles.selectColorImageCollection}>
         {Object.keys(colorData).map((color) => (
           <div key={color} className={styles[color.toLowerCase()]}>
             <p className={styles.color_section_title}>{color}s</p>
@@ -154,4 +211,3 @@ const MaterialsPage = ({ showLeftHalf }) => {
 };
 
 export default MaterialsPage;
-
