@@ -14,8 +14,6 @@ function HeaderPiece() {
 
   }
 
-
-
   useEffect(() => {
     // Set overflowY to 'auto' on mount
     document.body.style.overflowY = 'scroll';

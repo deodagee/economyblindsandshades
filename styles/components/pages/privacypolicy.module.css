@@ -10,10 +10,10 @@
 
 .privacy_page_wrapper { 
 display: flex;
-width: 55vw;
+width: 550px;
 flex-direction: column;
 align-items: center;
-margin-top: 25vh;
+margin-top: 250px;
 }
 
 
@@ -28,8 +28,8 @@ margin-top: 25vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    margin-top:2vh;
-    margin-bottom: 2vh;
+    margin-top:20px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -39,8 +39,8 @@ margin-top: 25vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    margin-top:2vh;
-    margin-bottom: 2vh;
+    margin-top:20px;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: 700;
     text-decoration: underline;
@@ -50,8 +50,8 @@ margin-top: 25vh;
     display: flex;
     font-size: 15px;
     color: rgb(90, 90, 90);
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .copyright { 
@@ -59,14 +59,14 @@ margin-top: 25vh;
     display: flex;
     font-size: 15px;
     color: rgb(90, 90, 90);
-    margin-top: 10vh;
-    margin-bottom: 2vh;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 .darkened_paragraph_title { 
     display: flex;
     font-size: 17px;
     font-weight: 800;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: rgb(37, 37, 37);
 }

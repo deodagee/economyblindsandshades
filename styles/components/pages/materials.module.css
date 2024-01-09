@@ -1,7 +1,7 @@
 .showImages_wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 10x;
     background: linear-gradient(to top, #eeeeee, #f1f1f1, #e6e6e6, #eeeeee);
     box-shadow: rgb(133, 133, 133) 6px 5px 20px;
     padding: 10px;
@@ -28,7 +28,7 @@
     border-radius: 0.56rem;
 }
 .images_and_subtitles {
-    width: 49vw;
+    width: 490px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;

@@ -57,7 +57,7 @@ const LeftSidePage = () => {
 
 
     return (
-        <div className={styles.left_half}>
+        <div className={styles.left_half_off_page}>
             <div className={styles.picture_frame}>
                 {selectedImage && (
                     <Image

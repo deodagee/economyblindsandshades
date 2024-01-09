@@ -380,7 +380,7 @@ function ZebraBlinds() {
 
                 <div className={styles.page_wrapper}>
 
-                    <ol className={styles.left_half}>
+                    <ol className={styles.left_half_on_page}>
                         <LeftSidePage></LeftSidePage>
                     </ol>
                     <ol className={styles.right_half}>
@@ -515,10 +515,15 @@ function ZebraBlinds() {
                                     <div className={styles.enter_height_and_width_inside_mount_group}>
 
                                         <div className={styles.enter_height_group_inside_mount}>
+
+
                                             <div className={styles.height_and_toggle_inside_mount}>
                                                 <div className={styles.height_inside_mount_sub_title}>
-                                                    CHOOSE HEIGHT
+                                                    CHOOSE HEIGHT:
                                                 </div>
+
+
+                                                <div className={styles.inches_fractions_boat}>
 
                                                 <div className={styles.enter_height_inside_mount_rectangle_1}>
                                                     <div className={styles.toggle_disclaimer_inches_inside_mount_height}>
@@ -564,7 +569,7 @@ function ZebraBlinds() {
 
 
 
-                                                <div className={styles.enter_height_inside_mount_rectangle_2}>
+                                                <div className={styles.enter_height_fractions_inside_mount_rectangle_2}>
                                                     <div className={styles.toggle_disclaimer_fractions_inside_mount_height}>
                                                         <p>FRACTIONS</p>
                                                         <svg
@@ -598,6 +603,7 @@ function ZebraBlinds() {
                                                         )}
                                                     </div>
                                                 </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -608,6 +614,9 @@ function ZebraBlinds() {
                                                 <div className={styles.width_inside_mount_sub_title}>
                                                     CHOOSE WIDTH:
                                                 </div>
+
+                                                <div className={styles.inches_fractions_boat}>
+
                                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                                                     <div className={styles.toggle_disclaimer_inches_inside_mount_width}>
@@ -683,6 +692,7 @@ function ZebraBlinds() {
                                                         )}
                                                     </div>
                                                 </div>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -751,6 +761,7 @@ function ZebraBlinds() {
                                                     CHOOSE HEIGHT:
                                                 </div>
 
+                                                <div className={styles.inches_fractions_boat}>
                                                 <div className={styles.enter_height_outside_mount_rectangle_1}>
                                                     <div className={styles.toggle_disclaimer_inches_height_outside_mount}>
                                                         <p>
@@ -793,7 +804,7 @@ function ZebraBlinds() {
 
 
 
-                                                <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
+                                                <div className={styles.enter_height_fractions_outside_mount_rectangle_2}>
                                                     <div className={styles.toggle_disclaimer_width_fractions_outside_mount}>
 
                                                         <p>FRACTIONS</p>
@@ -824,6 +835,7 @@ function ZebraBlinds() {
                                                             </div>
                                                         )}
                                                     </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -834,6 +846,9 @@ function ZebraBlinds() {
                                                 <div className={styles.width_outside_mount_sub_title}>
                                                     CHOOSE WIDTH:
                                                 </div>
+
+                                                <div className={styles.inches_fractions_boat}>
+
                                                 <div className={styles.enter_width_outside_mount_rectangle_1}>
 
                                                     <div className={styles.toggle_disclaimer_inches_width_outside_mount}>
@@ -904,6 +919,7 @@ function ZebraBlinds() {
                                                             </div>
                                                         </div>
                                                     )}
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -15,8 +15,8 @@
 }
 
 .contact_box { 
-    height: 60vh;
-    width: 50vw;
+    height: 600px;
+    width: 500px;
     display: flex;
     border-width: 3px;
     border-radius: 0.24rem;

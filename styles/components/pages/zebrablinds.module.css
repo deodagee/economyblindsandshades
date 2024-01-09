@@ -1,9 +1,11 @@
 .header_piece {
   z-index: 100;
+  position: fixed;
 }
 
 .page {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -12,27 +14,37 @@
 }
 
 .page_wrapper {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
   width: 100vw;
   height: 100vw;
-  margin-top: 180px;
+  margin-top: -100px;
 }
 
-.left_half {
+.left_half_on_page {
   position: fixed;
   display: flex;
-  flex-direction: column;
-  width: 39vw;
-  border-width: 2px;
+  height: 100vh;
+  width: 500px;
+  margin-left: 20px;
+}
+
+.left_half_off_page {
+  display: flex;
+  position: fixed;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  border-width: 2px;
 }
 
 .picture_frame {
   display: flex;
-  width: 35vw;
-  height: 55vh;
+  width: 400px;
+  height: 300px;
   align-items: center;
   justify-content: center;
   margin: 5px;
@@ -44,9 +56,10 @@
 
 .selectedImage_styles {
   display: flex;
-  width: 35vw;
-  max-height: 55vh;
+  width: 380px;
+  max-height: 280px;
   flex-direction: row;
+  border-radius: 0.56rem;
 
 }
 
@@ -62,7 +75,7 @@
   justify-content: space-evenly;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 35vw;
+  width: 350px;
   min-height: 50px;
   align-items: center;
   justify-content: center;
@@ -82,22 +95,24 @@
 /* RIGHT HALF OF SELECT MOUNT GROUP  */
 
 .right_half {
-  position: absolute;
-  left: 40vw;
-  width: 59vw;
-  height: max-content;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1100px;
+  margin-top: 0;
+  margin-left: 550px;
   display: flex;
+  position: static;
   flex-direction: column;
   padding: 20px;
   border-width: 2px;
   overflow-y: scroll;
-  overflow-y: hidden;
   overflow-x: hidden;
 }
 
 .top_title_area {
   display: flex;
-  width: 59vw;
+  width: max-content;
   flex-direction: row;
   justify-content: start;
   align-items: center;
@@ -109,7 +124,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  font-size: 25px;
+  font-size: 40px;
   width: max-content;
   word-wrap: nowrap;
 }
@@ -130,22 +145,34 @@
   display: flex;
   width: max-content;
   word-wrap: nowrap;
+  font-size: 13px;
 }
 
 .top_prices {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  font-size: 12px;
+}
+
+.price_regular {
+  display: flex;
+  color: green;
+}
+
+.price_discount {
+  display: flex;
+  color: brown;
 }
 
 .star_group {
   display: flex;
-  width: 59vw;
+  width: 850px;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 0;
-  margin-left: 2vw;
+  gap: 5px;
+  margin-left: 20px;
 
 }
 
@@ -157,7 +184,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
+  width: 25px;
   height: auto;
 }
 
@@ -166,11 +193,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45vw;
+  width: 850px;
   height: max-content;
-  padding: 10px;
-  font-size: 12px;
-
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 20px;
 }
 
 .top_divider_line {
@@ -185,28 +213,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 59vw;
+  width: 850px;
   background: linear-gradient(to bottom, #f4f4f4, #f4f4f4, #f5f5f5, #f7f7f7);
-  width: 55vw;
   height: max-content;
+
 }
 
 .titled_step_combo_head {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 20px;
   width: max-content;
   align-self: start;
   justify-content: flex-start;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 .select_mount_type_long_rectangle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
-  height: 5vh;
+  width: 850px;
+  height: 35px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -217,8 +245,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 20vw;
-  height: 5vh;
+  width: 300px;
+  height: 35px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -240,7 +268,7 @@
 .select_mount_type_group_title {
   gap: 20px;
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #f1f1f1;
   white-space: nowrap;
@@ -263,16 +291,20 @@
 }
 
 .inside_mount_group {
-  width: 59vw;
+  width: 850px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .left_right_inside_mount {
+  width: 850px;
   display: flex;
-  gap: 2vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .visible_inside_mount {
@@ -285,16 +317,15 @@
 
 .left_inside_mount {
   display: flex;
-  height: 50vh;
-  width: 25vw;
-  margin-top: 3vh;
+  height: 500px;
+  margin-top: 30px;
 }
 
 .inside_mount_group_left_side {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 25vw;
+  width: 400px;
   align-items: center;
   justify-content: center;
 }
@@ -303,13 +334,13 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
-  width: 40vw;
+  width: max-content;
   padding: 20px;
   align-items: center;
   justify-content: flex-start;
   background-color: rgb(243, 243, 243);
   border-radius: 2rem;
-  height: 2vh;
+  height: 20px;
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
 
 }
@@ -338,12 +369,12 @@
 
 .inside_mount_choice {
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .outside_mount_choice {
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .active_inside_outside_ellipse {
@@ -360,7 +391,7 @@
 }
 
 .measurement_instructions_title_inside_mount {
-  font-size: 12px;
+  font-size: 15px;
   color: #ffffff;
   background-color: #ababab;
   padding: 5px;
@@ -378,8 +409,8 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  width: 25vw;
-  height: 12vh;
+  width: 400px;
+  height: 120px;
   padding: 10px;
   background-color: rgb(235, 235, 235);
 }
@@ -387,8 +418,8 @@
 .step_tag {
   display: flex;
   background-color: black;
-  width: 5vw;
-  height: 2vh;
+  width: 50px;
+  height: 20px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 0.24rem;
@@ -403,8 +434,8 @@
   align-items: center;
   justify-content: left;
   text-align: left;
-  height: 10vh;
-  width: 22vw;
+  height: 100px;
+  width: 300px;
   background-color: rgb(249, 249, 249);
   padding: 5px;
   font-size: 10px;
@@ -413,14 +444,13 @@
 
 .right_inside_mount {
   display: flex;
-  height: 50vh;
-  width: 25vw;
-  margin-top: 3vh;
+  height: 500px;
+  width: max-content;
+  margin-top: 30px;
 }
 
 .inside_mount_group_right_side {
   display: flex;
-  width: 25vw;
   align-items: center;
   justify-content: center;
 }
@@ -441,11 +471,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 45vw;
+  width: 800px;
   height: max-content;
   padding: 20px;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
+  margin-top: 20px;
+  margin-bottom: 50pxs;
   border-width: 2px;
   border-radius: 0.45rem;
   border-color: #c2c2c2;
@@ -462,15 +492,15 @@
 .enter_size_inside_mount_title {
   display: flex;
   font-size: 17px;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: rgb(43, 43, 43);
 }
 
 .enter_height_and_width_inside_mount_group {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: max-content;
   gap: 10px;
 }
@@ -479,17 +509,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 17vh;
-  padding-bottom: 2vh;
+  height: 250px;
+  width: 390px;
   background-color: rgb(235, 235, 235);
-  padding: 5px;
-
 }
 
 
 .height_and_toggle_inside_mount {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -499,15 +527,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
-  width: 10vw;
+  width: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
 }
+
 
 .enter_height_inside_mount_rectangle_1 {
   display: flex;
@@ -515,13 +545,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_inches_inside_mount_height {
@@ -543,9 +573,9 @@
   top: 0;
 }
 
-.scroller_partition_height_inside_outside_mount { 
+.scroller_partition_height_inside_outside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .height_scroll_number_inches_inside_mount {
@@ -553,10 +583,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -588,11 +618,11 @@
   justify-content: flex-start;
 }
 
-.displayWholeNumbers_inside_mount_height_list_of_numbers { 
+.displayWholeNumbers_inside_mount_height_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 .ScrollNumberInches_height_inside_mount {
@@ -618,19 +648,19 @@
   border-color: grey;
 }
 
-.enter_height_inside_mount_rectangle_2 {
+.enter_height_fractions_inside_mount_rectangle_2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_height {
@@ -653,9 +683,9 @@
 }
 
 
-.scroller_partition_height_inside_mount { 
+.scroller_partition_height_inside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .height_scroll_number_fractions_inside_mount {
@@ -663,10 +693,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -686,12 +716,6 @@
   width: 100px;
 }
 
-.ScrollNumberFractions_height_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
 .displayFractions_inside_mount_height {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -704,12 +728,19 @@
   justify-content: flex-start;
 }
 
-.displayFractions_inside_mount_height_list_of_numbers { 
+.displayFractions_inside_mount_height_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
+
+.ScrollNumberFractions_height_inside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 
 .singleFraction_height_inside_mount:hover {
   background-color: rgb(0, 0, 0);
@@ -724,21 +755,21 @@
   color: rgb(212, 212, 212);
   border-radius: 0.24rem;
   border-width: 1px;
-  border-color: grey;
+  border-color: rgb(95, 92, 92);
 }
 
 .enter_width_group_inside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 17vh;
-  padding-bottom: 2vh;
+  height: 250px;
+  width: 390px;
   background-color: rgb(235, 235, 235);
 }
 
 .width_and_toggle_inside_mount {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -748,15 +779,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
-  width: 10vw;
+  width: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
 }
+
+
 
 .enter_width_inside_mount_rectangle_1 {
   display: flex;
@@ -764,13 +798,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -792,9 +826,9 @@
   top: 0;
 }
 
-.scroller_partition_width_inside_mount { 
+.scroller_partition_width_inside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .width_scroll_number_inches_inside_mount {
@@ -802,10 +836,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -841,7 +875,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 .ScrollNumberInches_width_inside_mount {
@@ -872,13 +906,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {
@@ -900,9 +934,9 @@
   top: 0;
 }
 
-.scroller_partition_width_inside_mount { 
+.scroller_partition_width_inside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .width_scroll_number_fractions_inside_mount {
@@ -910,10 +944,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -957,7 +991,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 
@@ -978,9 +1012,20 @@
 }
 
 .outside_mount_group {
-  width: 59vw;
+  width: 850px;
+  align-items: center;
+  justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.left_right_outside_mount {
+  width: 850px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .visible_outside_mount {
@@ -991,35 +1036,32 @@
   display: none;
 }
 
+.left_outside_mount {
+  display: flex;
+  height: 500px;
+  margin-top: 30px;
+}
+
 .outside_mount_group_left_side {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 25vw;
+  width: 400px;
   align-items: center;
   justify-content: center;
 }
 
-.left_right_outside_mount {
-  display: flex;
-  gap: 2vw;
-}
 
-.left_outside_mount {
-  display: flex;
-  height: 50vh;
-  width: 25vw;
-  margin-top: 2vh;
-}
 
 .outside_mount_measurement_instructions {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: white;
 }
 
 .measurement_instructions_title_outside_mount {
-  font-size: 12px;
+  font-size: 15px;
   color: #ffffff;
   background-color: #ababab;
   padding: 5px;
@@ -1037,8 +1079,8 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
-  width: 25vw;
-  height: 12vh;
+  width: 400px;
+  height: 120px;
   padding: 10px;
   background-color: rgb(235, 235, 235);
 
@@ -1047,15 +1089,14 @@
 
 .right_outside_mount {
   display: flex;
-  height: 50vh;
-  width: 25vw;
-  margin-top: 2vh;
+  height: 500px;
+  width: max-content;
+  margin-top: 30px;
 }
 
 
 .outside_mount_group_right_side {
   display: flex;
-  width: 25vw;
   align-items: center;
   justify-content: center;
 
@@ -1077,11 +1118,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 45vw;
+  width: 800px;
   height: max-content;
   padding: 20px;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
+  margin-top: 20px;
+  margin-bottom: 50pxs;
   border-width: 2px;
   border-radius: 0.45rem;
   border-color: #c2c2c2;
@@ -1097,17 +1138,17 @@
 
 .enter_size_outside_mount_title {
   display: flex;
-  font-size: 15px;
-  margin-top: 3vh;
-  margin-bottom: 2vh;
+  font-size: 17px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: rgb(43, 43, 43);
 }
 
 .enter_height_and_width_outside_mount_group {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
-  height: max-content;  
+  flex-direction: row;
+  height: max-content;
   gap: 10px;
 }
 
@@ -1115,16 +1156,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 17vh;
-  width: 43vw;
-  padding-bottom: 2vh;
+  height: 250px;
+  width: 390px;
   background-color: rgb(235, 235, 235);
-  padding: 5px;
 }
 
 .height_and_toggle_outside_mount {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -1134,15 +1173,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
-  width: 10vw;
+  width: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
 }
+
+.inches_fractions_boat { 
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 
 .enter_height_outside_mount_rectangle_1 {
   display: flex;
@@ -1150,13 +1197,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 10vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_inches_height_outside_mount {
@@ -1178,9 +1225,10 @@
   width: 10px;
   top: 0;
 }
-.scroller_partition_inches_outside_mount { 
+
+.scroller_partition_inches_outside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .height_scroll_number_inches_outside_mount {
@@ -1188,10 +1236,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1223,11 +1271,11 @@
   justify-content: flex-start;
 }
 
-.displayWholeNumbers_outside_mount_height_list_of_numbers { 
+.displayWholeNumbers_outside_mount_height_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 .ScrollNumberInches_height_outside_mount {
@@ -1252,19 +1300,19 @@
   border-color: grey;
 }
 
-.enter_width_fractions_outside_mount_rectangle_2 {
+.enter_height_fractions_outside_mount_rectangle_2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_width_fractions_outside_mount {
@@ -1277,10 +1325,7 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
-
-
 
 .polygon_6 {
   display: flex;
@@ -1289,19 +1334,20 @@
   top: 0;
 }
 
-.scroller_partition_fractions_outside_mount { 
+.scroller_partition_fractions_outside_mount {
   display: flex;
-  width: 10vw;}
+  width: 100px;
+}
 
 .height_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1321,13 +1367,6 @@
   width: 100px;
 }
 
-
-.ScrollNumberFractions_height_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
 .displayFractions_outside_mount_height {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1340,11 +1379,17 @@
   justify-content: flex-start;
 }
 
-.displayFractions_outside_mount_height_list_of_numbers { 
+.displayFractions_outside_mount_height_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
+}
+
+.ScrollNumberFractions_height_outside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 
@@ -1369,14 +1414,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 17vh;
-  padding-bottom: 2vh;
+  height: 250px;
+  width: 390px;
   background-color: rgb(235, 235, 235);
 }
 
 .width_and_toggle_outside_mount {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -1387,10 +1432,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   font-size: 15px;
   color: rgb(45, 45, 45);
   font-weight: 700;
-  width: 10vw;
+  width: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1403,13 +1449,13 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
 .toggle_disclaimer_inches_width_outside_mount {
@@ -1431,9 +1477,9 @@
   top: 0;
 }
 
-.scroller_partition_width_outside_mount { 
+.scroller_partition_width_outside_mount {
   display: flex;
-  width: 10vw;
+  width: 100px;
 }
 
 .width_scroll_number_inches_outside_mount {
@@ -1441,10 +1487,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1476,11 +1522,11 @@
   justify-content: flex-start;
 }
 
-.displayWholeNumbers_outside_mount_width_list_of_numbers { 
+.displayWholeNumbers_outside_mount_width_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 .ScrollNumberInches_width_outside_mount {
@@ -1511,16 +1557,16 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 11.5vw;
+  width: 150px;
   height: max-content;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 10vh;
+  height: 100px;
 }
 
-.toggle_disclaimer_width_fractions_outside_mount { 
+.toggle_disclaimer_width_fractions_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1530,7 +1576,6 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  width: 5vw;
 }
 
 
@@ -1546,10 +1591,10 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-top: 0vh;
+  margin-top: 0;
   z-index: 1;
-  width: 5vw;
-  height: 5vw;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1581,11 +1626,11 @@
   justify-content: flex-start;
 }
 
-.displayFractions_outside_mount_width_list_of_numbers { 
+.displayFractions_outside_mount_width_list_of_numbers {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  gap: 2vh;
+  gap: 20px;
 }
 
 .ScrollNumberFractions_width_outside_mount {
@@ -1617,8 +1662,8 @@
   height: 3px;
   width: 98%;
   margin: 10px;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+  margin-top: 50px;
+  margin-bottom: 20px;
   background-color: black;
   border-radius: 0.56rem;
 }
@@ -1635,8 +1680,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
-  height: 5vh;
+  width: 400px;
+  height: 50px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -1647,8 +1692,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 20vw;
-  height: 5vh;
+  width: 200px;
+  height: 50px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -1692,7 +1737,7 @@
 }
 
 .select_color_subtitle {
-  width: 59vw;
+  width: 850px;
   display: flex;
   padding: 20px;
   font-size: 13px;
@@ -1704,8 +1749,8 @@
   height: 3px;
   width: 98%;
   margin: 10px;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+  margin-top: 50px;
+  margin-bottom: 20px;
   background-color: black;
   border-radius: 0.56rem;
 }
@@ -1715,17 +1760,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 59vw;
+  width: 850px;
 }
 
 .titled_step_combo {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  width: 59vw;
+  gap: 20px;
+  width: 850px;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 
@@ -1733,8 +1778,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
-  height: 5vh;
+  width: 400px;
+  height: 50px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -1745,8 +1790,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 20vw;
-  height: 5vh;
+  width: 300px;
+  height: 35px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -1791,7 +1836,7 @@
 }
 
 .select_lift_type_subtitle {
-  width: 59vw;
+  width: 850px;
   display: flex;
   padding: 20px;
   font-size: 13px;
@@ -1803,12 +1848,12 @@
   flex-direction: column;
   align-items: start;
   justify-content: flex-start;
-  width: 59vw;
+  width: 850px;
 }
 
 
 .select_chain_side_wrapper_title {
-  width: 59vw;
+  width: 850px;
   height: 20px;
   display: flex;
   padding-left: 20px;
@@ -1817,14 +1862,14 @@
 }
 
 .show_image_chain_buttons {
-  width: 59vw;
+  width: 850px;
   display: flex;
   padding: 20px;
   gap: 10px;
 }
 
 .select_chain_left_box_button {
-  width: 3vw;
+  width: 30px;
   padding: 5px;
   background-color: #d9d9d9;
   display: flex;
@@ -1861,7 +1906,7 @@
 }
 
 .select_chain_right_box_button {
-  width: 3vw;
+  width: 30px;
   padding: 5px;
   background-color: #d9d9d9;
   display: flex;
@@ -1895,7 +1940,7 @@
 
 .show_right_chain_image_render {
   display: flex;
-  width: 20vw;
+  width: 200px;
   height: auto;
 }
 
@@ -1905,14 +1950,14 @@
 
 .show_left_chain_image_render {
   display: flex;
-  width: 20vw;
+  width: 200px;
   height: auto;
 }
 
 .select_chain_options {
   display: flex;
   flex-direction: column;
-  width: 59vw;
+  width: 850px;
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 20px;
@@ -1929,8 +1974,8 @@
 
 .wand_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
@@ -1944,11 +1989,11 @@
 .option_subtitles {
   display: flex;
   flex-direction: row;
-  gap: 2vh;
+  gap: 20px;
   font-size: 11px;
   font-weight: 500;
   padding: 5px;
-  height: 4vh;
+  height: 40px;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
@@ -1959,8 +2004,8 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
   border-color: #8f8f8f;
@@ -1972,8 +2017,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-width: 1px;
   border-radius: 0.45rem;
@@ -1990,13 +2035,13 @@
 }
 
 .option_ellipse_wrapper {
-  width: 3vw;
+  width: 30px;
 }
 
 .cord_less_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
@@ -2010,11 +2055,11 @@
 .option_subtitles {
   display: flex;
   flex-direction: row;
-  gap: 2vh;
+  gap: 20px;
   font-size: 11px;
   font-weight: 500;
   padding: 5px;
-  height: 4vh;
+  height: 40px;
   white-space: nowrap;
 }
 
@@ -2023,8 +2068,8 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
   border-color: #8f8f8f;
@@ -2037,8 +2082,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-width: 1px;
   border-radius: 0.45rem;
@@ -2056,13 +2101,13 @@
 }
 
 .motorized_ellipse_wrapper {
-  width: 3vw;
+  width: 30px;
 }
 
 .motorized_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
@@ -2076,11 +2121,11 @@
 .option_subtitles {
   display: flex;
   flex-direction: row;
-  gap: 2vh;
+  gap: 20px;
   font-size: 11px;
   font-weight: 500;
   padding: 5px;
-  height: 4vh;
+  height: 40px;
   white-space: nowrap;
 }
 
@@ -2089,15 +2134,16 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
   border-color: #8f8f8f;
   border-width: 1px;
   white-space: nowrap;
 }
-.options_price_seperator { 
+
+.options_price_seperator {
   height: 3px;
   width: 20px;
   background-color: rgb(85, 85, 85);
@@ -2108,8 +2154,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   padding: 10px;
   border-width: 1px;
   border-radius: 0.45rem;
@@ -2124,8 +2170,8 @@
   height: 2px;
   width: 98%;
   margin: 10px;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+  margin-top: 50px;
+  margin-bottom: 20px;
   background-color: rgb(122, 122, 122);
   border-radius: 0.56rem;
 }
@@ -2137,25 +2183,25 @@
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  width: 59vw;
+  width: 850px;
 }
 
 .titled_step_combo {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  width: 59vw;
+  gap: 20px;
+  width: 850px;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 .select_cassette_head_rail_long_rectangle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40vw;
-  height: 5vh;
+  width: 400px;
+  height: 50px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -2166,8 +2212,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 20vw;
-  height: 5vh;
+  width: 200px;
+  height: 50px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -2212,7 +2258,7 @@
 }
 
 .select_head_rail_subtitle {
-  width: 59vw;
+  width: 850px;
   display: flex;
   padding: 20px;
   font-size: 13px;
@@ -2222,13 +2268,13 @@
 .select_head_rail_option_group {
   display: flex;
   flex-direction: row;
-  gap: 3vw;
+  gap: 30px;
   align-items: start;
   justify-content: flex-start;
-  width: 59vw;
+  width: 850px;
 }
 
-.select_head_rail_option_selection_wrapper { 
+.select_head_rail_option_selection_wrapper {
   display: flex;
   flex-direction: row;
 }
@@ -2241,16 +2287,16 @@
 
 .select_cassette_ellipse1 {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
 
 .active_cassette_round1 {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
   background-color: #29b200;
@@ -2267,7 +2313,7 @@
 
 .cassette_chosen_image {
   display: flex;
-  width: 7vw;
+  width: 70px;
   height: auto;
   border-radius: 0.85rem;
 }
@@ -2277,11 +2323,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   white-space: nowrap;
   font-size: 12px;
-  width: 10vw;
+  width: 100px;
 }
 
 .select_head_rail_round_option_selection_wrapper {
@@ -2292,16 +2338,16 @@
 
 .select_round_ellipse1 {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem
 }
 
 .active_cassette_round1 {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
   background-color: #29b200;
@@ -2310,7 +2356,7 @@
 
 .round_chosen_image {
   display: flex;
-  width: 7vw;
+  width: 70px;
   height: auto;
   border-radius: 0.85rem;
 }
@@ -2319,29 +2365,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4vw;
-  height: 2vh;
+  width: 40px;
+  height: 20px;
   white-space: nowrap;
   font-size: 12px;
-  width: 10vw;
+  width: 100px;
 }
 
 .fabric_types_top_and_bottom_main_wrapper {
   display: flex;
-  width: 59vw;
+  width: 850px;
   height: max-content;
 }
 
 .fabric_types_top_and_bottom_second_wrapper {
   display: flex;
-  width: 55vw;
-  padding: 30px;
+  width: 550px;
+  padding: 300px;
   overflow-y: hidden;
   overflow-x: hidden;
   align-items: start;
   justify-content: start;
   flex-direction: column;
-  margin-top: 5vh;
+  margin-top: 50px;
   transition: 0.6s;
   height: max-content;
 }
@@ -2361,14 +2407,14 @@
 
 .pick_head_rail_color_titles_wrapper {
   display: flex;
-  width: 50vw;
+  width: 500px;
   align-items: start;
   justify-content: start;
   flex-direction: column;
 }
 
 .fabric_types_subtitle {
-  width: 50vw;
+  width: 500px;
   display: flex;
   margin-top: 10px;
   padding-left: 20px;
@@ -2377,17 +2423,17 @@
 }
 
 .pick_head_rail_color_subtitle {
-  width: 50vw;
+  width: 500px;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 .top_section {
   display: flex;
-  width: 50vw;
+  width: 500px;
   flex-direction: column;
   padding: 20px;
   align-items: start;
@@ -2395,27 +2441,27 @@
 }
 
 .fabric_list_top {
-  width: 45vw;
+  width: 450px;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3vh;
+  padding: 30px;
 }
 
 .fabric_list_top_image_and_description {
   display: flex;
   flex-direction: column;
-  height: 9vh;
-  width: 8vw;
-  margin: 2vh;
+  height: 90px;
+  width: 80px;
+  margin: 20px;
 }
 
 .fabric_list_top_image {
   display: flex;
-  width: 8vw;
-  height: 8vw;
+  width: 80px;
+  height: 80px;
 }
 
 .fabric_list_top_image_description {
@@ -2424,12 +2470,12 @@
 
 .skip_top_section {
   display: flex;
-  width: 50vw;
+  width: 500px;
   flex-direction: column;
   padding-left: 20px;
   align-items: start;
   justify-content: start;
-  margin-top: 6vh;
+  margin-top: 60px;
 }
 
 .ellipse_and_title {
@@ -2441,16 +2487,16 @@
 
 .skip_head_rail_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
 
 .active_skip_head_rail_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
   background-color: #29b200;
@@ -2458,7 +2504,7 @@
 }
 
 .skip_head_rail_color {
-  width: 50vw;
+  width: 500px;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -2475,7 +2521,7 @@
 
 .bottom_section {
   display: flex;
-  width: 50vw;
+  width: 500px;
   flex-direction: column;
   padding: 20px;
   align-items: start;
@@ -2483,27 +2529,27 @@
 }
 
 .fabric_list_bottom {
-  width: 45vw;
+  width: 450px;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3vh;
+  padding: 30px;
 }
 
 .fabric_list_bottom_image_and_description {
   display: flex;
   flex-direction: column;
-  height: 9vh;
-  width: 8vw;
-  margin: 2vh;
+  height: 90px;
+  width: 80px;
+  margin: 20px;
 }
 
 .fabric_list_bottom_image {
   display: flex;
-  width: 8vw;
-  height: 8vw;
+  width: 80px;
+  height: 80px;
 }
 
 .fabric_list_bottom_image_description {
@@ -2512,12 +2558,12 @@
 
 .skip_bottom_section {
   display: flex;
-  width: 50vw;
+  width: 500px;
   flex-direction: column;
   padding-left: 20px;
   align-items: start;
   justify-content: start;
-  margin-top: 6vh;
+  margin-top: 60px;
 
 }
 
@@ -2530,16 +2576,16 @@
 
 .skip_bottom_rail_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
 
 .active_skip_bottom_rail_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
   background-color: #29b200;
@@ -2547,7 +2593,7 @@
 }
 
 .skip_bottom_rail_color {
-  width: 50vw;
+  width: 500px;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -2564,22 +2610,22 @@
 
 .extra_options_set_main_wrapper {
   display: none;
-  width: 59vw;
+  width: 850px;
   padding: 20px;
 }
 
 .extra_options_set_second_wrapper {
   display: flex;
-  width: 59vw;
+  width: 850px;
 }
 
 .extra_options_set {
   display: flex;
-  width: 59vw;
+  width: 850px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10vw;
+  gap: 100px;
 }
 
 .bottom_rail_option_1 {
@@ -2594,8 +2640,8 @@
 
 .bottom_rail_option_1_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
@@ -2608,8 +2654,8 @@
 
 .option_1_Image {
   display: flex;
-  width: 10vw;
-  height: 10vh;
+  width: 100px;
+  height: 100px;
 }
 
 .option_1_text {
@@ -2634,8 +2680,8 @@
 
 .bottom_rail_option_2_ellipse {
   display: flex;
-  width: 2vh;
-  height: 2vh;
+  width: 20px;
+  height: 20px;
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
@@ -2648,8 +2694,8 @@
 
 .option_2_Image {
   display: flex;
-  width: 10vw;
-  height: 10vh;
+  width: 100px;
+  height: 100px;
 }
 
 .option_1_text {
@@ -2665,7 +2711,7 @@
 .pick_bottom_rail_color_titles_wrapper {}
 
 .fabric_types_subtitle {
-  width: 50vw;
+  width: 500px;
   display: flex;
   margin-top: 10px;
   padding-left: 20px;
@@ -2674,24 +2720,24 @@
 }
 
 .pick_bottom_rail_color_subtitle {
-  width: 50vw;
+  width: 500px;
   display: flex;
   padding-left: 20px;
   font-size: 13px;
   color: #5b5b5b;
-  margin-top: 2vh;
+  margin-top: 20px;
 }
 
 .see_bill_button_wrapper {
-  width: 59vw;
+  width: 850px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .see_bill_button {
-display: flex;
-margin: 20px;
+  display: flex;
+  margin: 20px;
 }
 
 .see_bill_text {
@@ -2712,31 +2758,31 @@ margin: 20px;
 
 
 /* End of Fabrics Page */
-.quantity_seperator_line { 
+.quantity_seperator_line {
   display: flex;
   height: 2px;
   width: 98%;
   margin: 10px;
   margin-top: 0;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
   background-color: rgb(122, 122, 122);
   border-radius: 0.56rem;
 }
 
-.quantity_and_add_to_cart_group { 
+.quantity_and_add_to_cart_group {
   display: flex;
-  width: 59vw;
+  width: 850px;
   align-items: start;
   flex-direction: column;
   padding-left: 20px;
 }
 
-.quantity_title { 
+.quantity_title {
   display: flex;
   font-size: 15px;
 }
 
-.quantity_rectangle_and_numbers { 
+.quantity_rectangle_and_numbers {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2744,11 +2790,11 @@ margin: 20px;
   gap: 10px;
 }
 
-.quantity_title { 
+.quantity_title {
   display: flex;
 }
 
-.quantity_rectangle { 
+.quantity_rectangle {
   height: 25px;
   width: 100px;
   background-color: rgb(237, 237, 237);
@@ -2762,7 +2808,8 @@ margin: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.qty { 
+
+.qty {
   display: flex;
 }
 
@@ -2771,6 +2818,7 @@ margin: 20px;
 .question_mark_ellipse_and_number_wrapper * {
   box-sizing: border-box;
 }
+
 .question_mark_ellipse_and_number_wrapper {
   flex-shrink: 0;
   width: 11px;
@@ -2781,6 +2829,7 @@ margin: 20px;
   flex-direction: row;
   gap: 10px;
 }
+
 .question_ellipse {
   background: rgba(217, 217, 217, 0);
   border-radius: 50%;
@@ -2794,6 +2843,7 @@ margin: 20px;
   justify-content: center;
 
 }
+
 .questiomark {
   color: #faa500;
   text-align: left;
@@ -2805,13 +2855,13 @@ margin: 20px;
   margin-bottom: 2px;
 }
 
-.question_mark { 
+.question_mark {
   display: flex;
   width: 15px;
   height: 15px;
 }
 
-.quantity_is_always_1_wrapper { 
+.quantity_is_always_1_wrapper {
   display: flex;
   width: max-content;
   border-width: 2px;
@@ -2823,21 +2873,21 @@ margin: 20px;
 
 }
 
-.quantity_is_always_1 { 
+.quantity_is_always_1 {
   display: flex;
   white-space: nowrap;
 
 }
 
-.quantity_is_always_1_note { 
+.quantity_is_always_1_note {
   font-size: 10px;
   font-weight: 600;
-  width: 25vw;
+  width: 250px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.review_your_order { 
+.review_your_order {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2846,23 +2896,23 @@ margin: 20px;
   font-weight: 700;
 }
 
-.review_your_order_seperator_line { 
+.review_your_order_seperator_line {
   display: flex;
   height: 3px;
-  width: 49vw;
+  width: 490px;
   margin: 10px;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: rgb(191, 191, 191);
   border-radius: 0.56rem;
 }
 
 
-.review_your_order_bg { 
+.review_your_order_bg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50vw;
+  width: 500px;
   height: max-content;
   border-width: 2px;
   background-color: rgb(241, 241, 241);
@@ -2872,7 +2922,7 @@ margin: 20px;
   border-color: rgb(217, 217, 217);
 }
 
-.order_items_list { 
+.order_items_list {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2884,7 +2934,7 @@ margin: 20px;
 .bill_divider {
   display: flex;
   height: 2px;
-  width: 45vw;
+  width: 450px;
   border-radius: 0.24rem;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -2895,7 +2945,7 @@ margin: 20px;
   display: flex;
   flex-direction: row;
   padding-left: 20px;
-  gap: 10vw;
+  gap: 100px;
 }
 
 
@@ -2907,32 +2957,32 @@ margin: 20px;
 
 
 
-.shipping_details_group_wrapper { 
+.shipping_details_group_wrapper {
   display: flex;
-  width: 59vw;
+  width: 850px;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 50pxs;
 }
 
-.shippingtruck_1 { 
+.shippingtruck_1 {
   display: flex;
-  height: 2vh;
+  height: 20px;
   width: auto;
   margin: 5px;
 }
 
-.paymenticon { 
+.paymenticon {
   display: flex;
   height: auto;
-  width: 3vw;
+  width: 30px;
   margin: 5px;
 }
 
-.paypalicon { 
+.paypalicon {
   display: flex;
   height: auto;
-  width: 3vw;
+  width: 30px;
   margin: 5px;
 }
 
@@ -2955,7 +3005,7 @@ margin: 20px;
 @media (min-width: 300px) and (max-width: 1190px) and (orientation: landscape) {
   .top_title_area {
     display: flex;
-    width: 48vw;
+    width: 480px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2965,7 +3015,7 @@ margin: 20px;
 
   .star_group {
     display: flex;
-    width: 48vw;
+    width: 480px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -2982,14 +3032,14 @@ margin: 20px;
 
   .left_inside_mount {
     display: flex;
-    height: 50vh;
-    width: 25vw;
-    margin-top: 3vh;
+    height: 500px;
+    width: 250px;
+    margin-top: 30px;
   }
 
 
   .insidemount_Image {
-    width: 60vw;
+    width: 600px;
   }
 
   .step_1_inside_mount,
@@ -2999,17 +3049,17 @@ margin: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 5vh;
-    width: 50vw;
-    height: 10vh;
+    gap: 50px;
+    width: 500px;
+    height: 100px;
     background-color: rgb(233, 233, 233);
   }
 
   .step_tag_description {
     display: flex;
     width: max-content;
-    width: 40vw;
-    height: 9vh;
+    width: 400px;
+    height: 90px;
   }
 
   /* outside mount */
@@ -3020,7 +3070,7 @@ margin: 20px;
   }
 
   .outsidemount_Image {
-    width: 60vw;
+    width: 600px;
 
   }
 
@@ -3031,9 +3081,9 @@ margin: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 5vh;
-    width: 50vw;
-    height: 10vh;
+    gap: 50px;
+    width: 500px;
+    height: 100px;
     background-color: rgb(233, 233, 233);
   }
 
@@ -3046,7 +3096,7 @@ margin: 20px;
 @media (min-width: 300px) and (max-width: 1190px) and (orientation: portrait) {
   .top_title_area {
     display: flex;
-    width: 48vw;
+    width: 480px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -3056,7 +3106,7 @@ margin: 20px;
 
   .star_group {
     display: flex;
-    width: 48vw;
+    width: 480px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -3070,7 +3120,7 @@ margin: 20px;
   }
 
   .insidemount_Image {
-    width: 60vw;
+    width: 600px;
   }
 
   .step_1_inside_mount,
@@ -3080,17 +3130,17 @@ margin: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 2vw;
-    width: 50vw;
-    height: 10vh;
+    gap: 20px;
+    width: 500px;
+    height: 100px;
     background-color: rgb(233, 233, 233);
   }
 
   .step_tag_description {
     display: flex;
     width: max-content;
-    width: 40vw;
-    height: 9vh;
+    width: 400px;
+    height: 90px;
   }
 }
 
