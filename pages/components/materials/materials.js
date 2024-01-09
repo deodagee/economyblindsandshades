@@ -129,6 +129,9 @@ const MaterialsPage = ({ showLeftHalf }) => {
     <div className={styles.materials_page}>
       <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
         <div className={styles.sliding_gallery_component}>
+        <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
+        <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
+        <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
           <div className={styles.selectedImageContainer}>
             {selectedMaterial ? (
               <>

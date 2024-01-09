@@ -43,6 +43,7 @@
 
 .sliding_gallery_component {
     display: flex;
+    flex-direction: column;
     position: fixed;
     align-items: center;
     justify-content: center;
@@ -56,9 +57,34 @@
     border-radius: 0.55rem;
     width: 502px;
     height: 502px;
-    background: linear-gradient(to bottom, #151515, #2d2d2d, #202020);
+    background: linear-gradient(to bottom, #264a4e, #487d82, #264a4e);
     box-shadow: rgb(133, 133, 133) 6px 5px 20px;
 }
+
+
+.imageContainer_titles { 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.imageContainer_title1 { 
+    color: white;
+    font-size: 20px;
+}
+
+.imageContainer_title2 { 
+    color: white;
+    font-size: 12px;
+}
+.imageContainer_title3 { 
+    color: rgb(222, 107, 0);
+    font-size: 7px;
+    margin: 5px;
+}
+
 
 .selectedImageContainer {
     width: 500px;

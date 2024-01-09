@@ -390,6 +390,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-color: grey;
 }
 
 .step_1_inside_mount,
