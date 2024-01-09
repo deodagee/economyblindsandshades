@@ -400,12 +400,44 @@ function ZebraBlinds() {
                             <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
                         </div>
 
+                        <div className={styles.qty_group}>
+                        <div className={styles.quantity_title}>Quantity</div>
+                            <div className={styles.quantity_rectangle_and_numbers}>
+                                <div className={styles.quantity_rectangle}>
+                                    <span>
+                                        <div className={styles.qty}>Qty</div>
+                                    </span>
+                                    <span>
+                                        <div className={styles.question_mark_ellipse_and_number_wrapper}>
+                                            <span>
+                                                <div className={styles.question_ellipse}>
+                                                    <div className={styles.questiomark}>?</div>
+                                                </div>
+                                            </span>
+                                            <span>
+                                                <div className={styles.qty_number}>1</div>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>
+                                        <div className={styles.quantity_is_always_1_wrapper}>
+                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                        </div>
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
                         <div
                             className={styles.a_distinctive_look_that}
                         >
                             A distinctive look that makes a statement, this revolutionary     sheer shade
                             adds personality to any room. These zebra shades are made with two pieces
                             of fabric, which both have alternating panels/bands:
+                        </div>
                         </div>
 
 
@@ -446,7 +478,10 @@ function ZebraBlinds() {
                                     </div>
                                     <div className={styles.outside_mount_choice}>Outside Mount</div>
                                 </div>
+                                
                             </span>
+
+                            
 
 
                             <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
@@ -1114,36 +1149,7 @@ function ZebraBlinds() {
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
-                            <div className={styles.quantity_title}>Quantity</div>
-                            <div className={styles.quantity_rectangle_and_numbers}>
-                                <div className={styles.quantity_rectangle}>
-                                    <span>
-                                        <div className={styles.qty}>Qty</div>
-                                    </span>
-                                    <span>
-                                        <div className={styles.question_mark_ellipse_and_number_wrapper}>
-                                            <span>
-                                                <div className={styles.question_ellipse}>
-                                                    <div className={styles.questiomark}>?</div>
-                                                </div>
-                                            </span>
-                                            <span>
-                                                <div className={styles.qty_number}>1</div>
-                                            </span>
-                                        </div>
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span>
-                                        <div className={styles.quantity_is_always_1_wrapper}>
-                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                        </div>
-
-                                    </span>
-                                </div>
-                            </div>
-                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                            
 
 
                             <div className={styles.see_bill_button_wrapper}>
