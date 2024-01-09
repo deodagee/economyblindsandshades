@@ -1,4 +1,69 @@
+.selectedImageContainer { 
+}
+
+.images_and_subtitles_color_name { 
+    display: flex;
+}
+
+.imageContainer1 { 
+    background-color: rgb(212, 212, 212);
+    margin: 5px;
+    border-width: 2px;
+    border-color: rgb(206, 206, 206);
+    transition: 0.4s;
+    width: 120px;
+}
+
+.imageContainer2 { 
+    display: flex;
+    position: static;
+    margin-right: 400px;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    margin-top: 0;
+    border-color: rgb(237, 237, 237);
+    background: linear-gradient(to bottom, #06090b, #141b1f, #19252c, #1c2022);
+    border-width: 1px;
+    border-radius: 0.75rem;
+  }
+
+
+.image_itself1 { 
+    display: flex;
+    position: static;
+    display: flex;
+}
+
+.src1 { 
+
+}
+
+.label1{ 
+
+}
+.whole_thing { 
+    display: flex;
+    width: 100vw;
+    position: static;
+}
+
+.left_half_off_page { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    position: absolute;
+    left: 50px;
+    top: 220px;
+
+}
+
 .showImages_wrapper {
+    width: 800px;
     display: flex;
     flex-direction: column;
     gap: 10x;
@@ -11,6 +76,7 @@
     color: rgb(30, 30, 30);
     font-size: 12px;
     white-space: nowrap;
+
 }
 
 
@@ -35,6 +101,15 @@
     background-color: rgb(168, 168, 168);
     border-radius: 0.56rem;
 }
+
+.selectedImageContainer{ 
+display: flex;
+width: 400px;
+height: auto;
+position: fixed;
+}
+
+
 .images_and_subtitles {
     width: 490px;
     display: grid;
@@ -74,6 +149,4 @@
 .image_itself { 
     display: flex;
     width: 200px;
-
-
 }

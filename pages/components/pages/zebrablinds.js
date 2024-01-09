@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import MaterialsPage, { selectedImageData } from '../materials/materials.js'; // Adjust the path accordingly
-import LeftSidePage from "../leftside/leftside.js";
 import Footer from "../footer.js";
 import HeaderPiece from "../header.js";
 import FabricsPage from "../fabrics/fabrics.js";
@@ -379,10 +378,6 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.page_wrapper}>
-
-                    <ol className={styles.left_half_on_page}>
-                        <LeftSidePage></LeftSidePage>
-                    </ol>
                     <ol className={styles.right_half}>
 
                         <div className={styles.top_title_area}>

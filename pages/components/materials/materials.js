@@ -4,15 +4,21 @@ import Image from 'next/image';
 import styles from "../../../styles/components/pages/materials.module.css"
 import { useState } from "react";
 
-const MaterialsPage = () => {
+const MaterialsPage = ({ showLeftHalf }) => {
+    const ImageDataLeftSide = [
+    { key: 'cassettesteel', src: '/cassettesteel.png', label: 'cassettesteel' },
+  ];
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
 
   const [selectedMaterial, setSelectedMaterial] = useState(null);
 
   const handleSelectMaterial = (src, label) => {
-    // Log the name of the file clicked on
     console.log(`Clicked on file: ${src}`);
-    setSelectedMaterial(src);
+    setSelectedMaterial({ src, label });
   };
+
 
 
   const Beige = [
@@ -93,6 +99,7 @@ const MaterialsPage = () => {
   const renderColorList = (colorList) => {
     return (
       <>
+
         <div className={styles.images_and_subtitles} key={colorList[0].key}>
           {colorList.map((item) => (
             <div
@@ -111,36 +118,85 @@ const MaterialsPage = () => {
   };
 
   return (
-    <div className={styles.showImages_wrapper}>
-      <div className={styles.white}>
-        <p className={styles.color_section_title}>Whites</p>
-        {renderColorList(White)}
-      </div>
-      <div className={styles.divider_line}></div>
-      <div className={styles.grey}>
-      <p className={styles.color_section_title}>Greys</p>
+    <div className={styles.left_half_off_page}>
+      <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
+        <div className={styles.frame_title}>
+          Product View
+        </div>
+        <div className={styles.picture_frame}>
+          {selectedImage && (
+            <Image
+              className={styles.selectedImage_styles}
+              src={selectedImage}
+              alt="Selected Image"
+              width={200}
+              height={200}
+              style={{ border: '1px solid white' }}
+            />
+          )}
+        </div>
 
-        {renderColorList(Grey)}
+        <div className={styles.sliding_gallery_component}>
+
+          <div className={styles.selectedImageContainer}>
+            {/* Render selected image in a separate div */}
+            {selectedMaterial && (
+              <>
+                <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
+                <div className={`${styles.imageContainer2} ${styles.selectedImage}`}>
+                  <Image
+                    className={styles.image_itself1}
+                    src={selectedMaterial.src}
+                    alt={selectedMaterial.label2}
+                    width={100}
+                    height={100}
+                  />
+                  {/* You can add additional information or styling as needed */}
+                </div>
+              </>
+            )}
+          </div>
+
+
+
+        </div>
       </div>
-      <div className={styles.divider_line}></div>
-      <div className={styles.bronze}>
-      <p className={styles.color_section_title}>Bronzes</p>
-        {renderColorList(Bronze)}
-      </div>
-      <div className={styles.divider_line}></div>
-      <div className={styles.brown}>
-      <p className={styles.color_section_title}>Browns</p>
-        {renderColorList(Brown)}
-      </div>
-      <div className={styles.divider_line}></div>
-      <div className={styles.black}>
-      <p className={styles.color_section_title}>Blacks</p>
-        {renderColorList(Black)}
-      </div>
-      <div className={styles.divider_line}></div>
-      <div className={styles.beige}>
-      <p className={styles.color_section_title}>Beiges</p>
-        {renderColorList(Beige)}
+
+
+
+
+
+      <div className={styles.showImages_wrapper}>
+        <div className={styles.white}>
+          <p className={styles.color_section_title}>Whites</p>
+          {renderColorList(White)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.grey}>
+          <p className={styles.color_section_title}>Greys</p>
+
+          {renderColorList(Grey)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.bronze}>
+          <p className={styles.color_section_title}>Bronzes</p>
+          {renderColorList(Bronze)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.brown}>
+          <p className={styles.color_section_title}>Browns</p>
+          {renderColorList(Brown)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.black}>
+          <p className={styles.color_section_title}>Blacks</p>
+          {renderColorList(Black)}
+        </div>
+        <div className={styles.divider_line}></div>
+        <div className={styles.beige}>
+          <p className={styles.color_section_title}>Beiges</p>
+          {renderColorList(Beige)}
+        </div>
       </div>
     </div>
   );
