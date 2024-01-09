@@ -5,59 +5,18 @@ import styles from "../../../styles/components/pages/zebrablinds.module.css"
 import { useState } from "react";
 
 const LeftSidePage = () => {
-    //left side image table 
     const ImageDataLeftSide = [
         { key: 'cassettesteel', src: '/cassettesteel.png', label: 'cassettesteel' },
-
-        { key: 'indexcomponentmain', src: '/indexcomponentmain.png', label: 'indexcomponentmain' },
-
-        { key: 'slidingcomponent8', src: '/slidingcomponent8.png', label: 'slidingcomponent8' },
-
-        { key: 'reviewsbg', src: '/reviewsbg.png', label: 'reviewsbg' },
-
-        { key: 'rollerblinds', src: '/rollerblinds.png', label: 'rollerblinds' },
-
-        { key: 'zebrablinds', src: '/zebrablinds.png', label: 'zebrablinds' },
-
-        { key: 'whattypeofblindsdoyouinstall', src: '/whattypeofblindsdoyouinstall.png', label: 'whattypeofblindsdoyouinstall' },
-        { key: 'slidingcomponent1', src: '/slidingcomponent1.png', label: 'slidingcomponent1' },
-        { key: 'aretheoptionsaffordableandstylish', src: '/aretheoptionsaffordableandstylish.png', label: 'aretheoptionsaffordableandstylish' },
-        { key: 'howsooncanibookanestimate', src: '/howsooncanibookanestimate.png', label: 'howsooncanibookanestimate' },
-        { key: 'honeycombblinds', src: '/honeycombblinds.png', label: 'FIRST1-41' },
-
-        { key: 'etb3004', src: '/etb3004.jpg', label: 'etb3004' },
-        { key: 'cassettesteel', src: '/cassettesteel.png', label: 'cassettesteel' },
-
-        { key: 'indexcomponentmain', src: '/indexcomponentmain.png', label: 'indexcomponentmain' },
-
-        { key: 'slidingcomponent8', src: '/slidingcomponent8.png', label: 'slidingcomponent8' },
-
-        { key: 'reviewsbg', src: '/reviewsbg.png', label: 'reviewsbg' },
-
-        { key: 'rollerblinds', src: '/rollerblinds.png', label: 'rollerblinds' },
-
-        { key: 'zebrablinds', src: '/zebrablinds.png', label: 'zebrablinds' },
-
-        { key: 'whattypeofblindsdoyouinstall', src: '/whattypeofblindsdoyouinstall.png', label: 'whattypeofblindsdoyouinstall' },
-        { key: 'slidingcomponent1', src: '/slidingcomponent1.png', label: 'slidingcomponent1' },
-        { key: 'aretheoptionsaffordableandstylish', src: '/aretheoptionsaffordableandstylish.png', label: 'aretheoptionsaffordableandstylish' },
-        { key: 'howsooncanibookanestimate', src: '/howsooncanibookanestimate.png', label: 'howsooncanibookanestimate' },
-        { key: 'honeycombblinds', src: '/honeycombblinds.png', label: 'FIRST1-41' },
-
-        { key: 'etb3004', src: '/etb3004.jpg', label: 'etb3004' },
-
-        // Add more image data as needed
     ];
 
-    // Logic for color render image left side
     const [selectedImage, setSelectedImage] = useState(null);
-    const handleImageClick = (src) => {
-        setSelectedImage(src);
-    };
 
 
     return (
         <div className={styles.left_half_off_page}>
+            <div className={styles.frame_title}>
+                Product View
+            </div>
             <div className={styles.picture_frame}>
                 {selectedImage && (
                     <Image

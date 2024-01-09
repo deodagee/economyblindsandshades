@@ -78,6 +78,7 @@ const FabricsPage = () => {
     Set_selected_bottom_rail_color(null);
   };
 
+
   // Logic for color render head rails
   const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
 
@@ -141,7 +142,7 @@ const FabricsPage = () => {
                 src={"/chevronleft.png"}>
               </Image>
               <div className={styles.select_head_rail_group_title}>
-                <span className={styles.select_head_rail_group_title_tag}>4.</span>Head Rail And Bottom Rail
+                <span className={styles.select_head_rail_group_title_tag}>4.</span>Head And Bottom Rail
               </div>
             </div>
           </div>

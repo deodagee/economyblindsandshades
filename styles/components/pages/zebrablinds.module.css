@@ -1,16 +1,20 @@
-.header_piece {
-  z-index: 100;
-  position: fixed;
-}
-
 .page {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100vw;
   margin: 0;
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 10px;
+}
+
+.header_piece {
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: max-content;
 }
 
 .page_wrapper {
@@ -19,8 +23,8 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 100vw;
-  margin-top: -100px;
+  height: max-content;
+  margin-top: 200px;
 }
 
 .left_half_on_page {
@@ -41,6 +45,13 @@
   border-width: 2px;
 }
 
+.frame_title {
+  display: flex;
+  margin: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .picture_frame {
   display: flex;
   width: 400px;
@@ -48,6 +59,7 @@
   align-items: center;
   justify-content: center;
   margin: 5px;
+  margin-top: 0;
   border-color: rgb(237, 237, 237);
   background: linear-gradient(to bottom, #06090b, #141b1f, #19252c, #1c2022);
   border-width: 1px;
@@ -98,7 +110,7 @@
   height: 100vh;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 1100px;
+  width: max-content;
   margin-top: 0;
   margin-left: 550px;
   display: flex;
@@ -106,8 +118,6 @@
   flex-direction: column;
   padding: 20px;
   border-width: 2px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .top_title_area {
@@ -342,7 +352,6 @@
   border-radius: 2rem;
   height: 20px;
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
-
 }
 
 .inside_mount_ellipse {
@@ -1184,7 +1193,7 @@
   padding: 2px;
 }
 
-.inches_fractions_boat { 
+.inches_fractions_boat {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -1680,8 +1689,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 50px;
+  width: 850px;
+  height: 35px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -1692,8 +1701,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 35px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -1713,14 +1722,15 @@
 }
 
 .select_color_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
-  font-size: 15px;
+  display: flex;
+  font-size: 20px;
   font-weight: 700;
   color: #f1f1f1;
   white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .select_color_group_title_tag {
@@ -1736,12 +1746,28 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.select_color_subtitle {
-  width: 850px;
+.ellipse_and_type_select_material {
   display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
   padding: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin: 20px;
+  margin-left: 20px;
+}
+
+.select_color_subtitle {
+  display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
 }
 
 .select_lift_type_seperator_line {
@@ -1778,8 +1804,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 50px;
+  width: 850px;
+  height: 35px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -1813,7 +1839,7 @@
 .select_lift_type_group_title {
   gap: 20px;
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #f1f1f1;
   white-space: nowrap;
@@ -2200,8 +2226,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 50px;
+  width: 850px;
+  height: 35px;
   border-radius: 2rem;
   background-color: #c1c1c1;
   justify-content: start;
@@ -2212,8 +2238,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 35px;
   padding: 10px;
   border-radius: 2rem;
   background-color: #820000;
@@ -2235,7 +2261,7 @@
 .select_head_rail_group_title {
   gap: 20px;
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   color: #f1f1f1;
   white-space: nowrap;
@@ -2380,7 +2406,7 @@
 
 .fabric_types_top_and_bottom_second_wrapper {
   display: flex;
-  width: 550px;
+  width: max-content;
   padding: 300px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -2407,7 +2433,7 @@
 
 .pick_head_rail_color_titles_wrapper {
   display: flex;
-  width: 500px;
+  width: 850px;
   align-items: start;
   justify-content: start;
   flex-direction: column;

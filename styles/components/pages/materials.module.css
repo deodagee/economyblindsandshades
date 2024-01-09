@@ -15,10 +15,18 @@
 
 
 .white, .grey, .bronze, .black, .brown , .beige{ 
-    width: 100%;
+    width: max-content;
     height: auto;
     display: flex;
     justify-content: space-evenly;
+}
+
+.color_section_title { 
+    display: flex;
+    width: 50px;
+    height: max-content;
+    margin: 10px;
+    text-decoration: underline;
 }
 
 .divider_line { 
@@ -42,6 +50,7 @@
     border-width: 2px;
     border-color: rgb(206, 206, 206);
     transition: 0.4s;
+    width: 120px;
 }
 
 .imageContainer:hover {
@@ -49,6 +58,16 @@
     transition: 0.4s;
     box-shadow: #858585 2px 3px 7px;
     border-radius: 0.15rem;
+
+}
+
+.selectedImage { 
+    border-color: black;
+    border-width: 3px;
+    border-radius: 0.15rem;
+    padding: 5px;
+    transition: 0.3s;
+    box-shadow: #ffffff 3px 5px 10px;
 
 }
 
