@@ -133,7 +133,7 @@ margin-bottom: 50px;
 }
 
 .second_menu_bar {
-  background: linear-gradient(to right, #000000, #262626, #000000);
+  background: linear-gradient(to right, #356569, #487d82, #397076);
   width: 100vw;
   list-style: none;
   display: flex;
@@ -161,23 +161,23 @@ margin-bottom: 50px;
 .second_menu_bar_item:hover {
   transform: scale(1.05);
   transition: 0.2s;
-  color: rgb(233, 31, 0);
+  color: #122628;
 }
 
 
 .header_link {
-  color: rgb(222, 222, 222);
+  color: #444444;
   font-weight: 700;
   font-size: 15px;
   background-color: rgb(11, 24, 32);
   padding: 1px;
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 0.15rem;
+  border-radius: 0.65rem;
   border-width: 1px;
-  border-color: rgb(231, 0, 0);
+  border-color: #ffffff;
   box-shadow: -3px 3px 5px 0px rgba(255, 255, 255, 0.14);
-  background: linear-gradient(to right, rgb(0, 0, 0), rgb(66, 0, 0), rgb(62, 0, 0));
+  background: linear-gradient(to right, #bebebe,#bcbcbc,#adadad);
 }
 
 
