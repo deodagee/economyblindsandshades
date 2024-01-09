@@ -206,7 +206,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 900px;
-  background: linear-gradient(to bottom, #f4f4f4, #f4f4f4, #f5f5f5, #f7f7f7);
+  background: linear-gradient(to right, #ffffff,#f4f4f4,  #f4f4f4, #f5f5f5, #f7f7f7, #ffffff);
   height: max-content;
 
 }
