@@ -7,23 +7,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
 
   const FirstImageRender = [
     { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
-    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
-    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
-    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
-    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
-    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
-    { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
-    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
-    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
-    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
-    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
-    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
-    { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
-    { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
-    { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
-    { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
-    { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
-    { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
+
 
   ];
 
