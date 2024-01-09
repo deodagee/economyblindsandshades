@@ -988,41 +988,44 @@ function ZebraBlinds() {
                                 </div>
 
                                 <div className={styles.wand_option_group}>
-                                    <div className={styles.option_ellipse_wrapper}>
-                                        <span
-                                            className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                                            onClick={() => handleLiftFeatureEllipsess(1)}
-                                        ></span>
-                                    </div>
                                     <span className={styles.option_subtitles}>
+                                        <div className={styles.option_ellipse_wrapper}>
+                                            <span
+                                                className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                                                onClick={() => handleLiftFeatureEllipsess(1)}
+                                            ></span>
+                                        </div>
                                         <div className={styles.wand_subtitle}>Wand</div>
                                         <div className={styles.options_price_seperator}></div>
                                         <div className={styles.free_subtitle}>Free</div>
                                     </span>
-                                </div>
+                                    <div className={styles.select_chainparagraph}>Select Which Side You Wnat Your Wand To Be Installed.</div>
 
-
-                                <div className={styles.show_image_chain_buttons}>
-                                    <button
-                                        className={leftButtonClass}
-                                        onClick={() => {
-                                            show_image_left_right_chain_side(true);
-                                            showleftsidechain();
-                                        }}
-                                    >
+                                    <div className={styles.show_image_chain_buttons}>
+                                        <button
+                                            className={leftButtonClass}
+                                            onClick={() => {
+                                                show_image_left_right_chain_side(true);
+                                                showleftsidechain();
+                                            }}
+                                        >                                        
                                         <div className={styles.select_chain_left_text}>Left</div>
-                                    </button>
+                                        </button>
 
-                                    <button
-                                        className={rightButtonClass}
-                                        onClick={() => {
-                                            show_image_left_right_chain_side(false);
-                                            showrightsidechain();
-                                        }}
-                                    >
-                                        <div className={styles.select_chain_right_text}>Right</div>
-                                    </button>
+                                        <button
+                                            className={rightButtonClass}
+                                            onClick={() => {
+                                                show_image_left_right_chain_side(false);
+                                                showrightsidechain();
+                                            }}
+                                        >
+                                            <div className={styles.select_chain_right_text}>Right</div>
+                                        </button>
+                                    </div>
+
                                 </div>
+
+
 
                                 {showImageright && (
 

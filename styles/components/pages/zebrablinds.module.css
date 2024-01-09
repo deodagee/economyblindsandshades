@@ -25,29 +25,9 @@
   width: 100vw;
   height: max-content;
   margin-top: 200px;
+  
 }
 
-.frame_title {
-  display: flex;
-  margin: 30px;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-
-.picture_frame {
-  display: flex;
-  width: 400px;
-  height: 300px;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-  margin-top: 0;
-  border-color: rgb(237, 237, 237);
-  background: linear-gradient(to bottom, #06090b, #141b1f, #19252c, #1c2022);
-  border-width: 1px;
-  border-radius: 0.75rem;
-}
 
 .selectedImage_styles {
   display: flex;
@@ -1893,8 +1873,8 @@
 }
 
 .select_chain_left_box_button {
-  width: 30px;
-  padding: 5px;
+  width: 45px;
+  padding: 2px;
   background-color: #d9d9d9;
   display: flex;
   align-items: center;
@@ -1930,8 +1910,8 @@
 }
 
 .select_chain_right_box_button {
-  width: 30px;
-  padding: 5px;
+  width: 45px;
+  padding: 2px;
   background-color: #d9d9d9;
   display: flex;
   align-items: center;
@@ -1991,7 +1971,7 @@
 
 .wand_option_group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-left: 20px;
@@ -2030,7 +2010,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 40px;
+  width: 80px;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
@@ -2051,6 +2031,12 @@
   border-color: rgb(233, 233, 233);
   white-space: nowrap;
   color: grey;
+}
+
+.select_chainparagraph { 
+  display: flex;
+  font-size: 10px;
+  width: 200px;
 }
 
 .cord_less_option_group {
@@ -2094,7 +2080,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: max-content;
+  width: 80px;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
@@ -2160,7 +2146,7 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: max-content;
+  width: 80px;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
