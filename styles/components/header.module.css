@@ -205,9 +205,9 @@ margin-bottom: 50px;
 .drop_down_menu {
   display: flex;
   background-color: rgb(27, 27, 27);
-  position: fixed;
-  margin-left: 270px;
-  margin-top: 180px;
+  position: absolute;
+  left: 265px;
+  top: 190px;
   font-size: 10px;
   width: 200px;
   height: max-content;
@@ -238,5 +238,6 @@ margin-bottom: 50px;
 .drop_down_menu_item:hover {
   background-color: rgb(61, 61, 61);
   transition: 0.4s;
-  color: rgb(234, 35, 4);
+  color: rgb(224, 224, 224);
+  background-color: #427175;
 }
