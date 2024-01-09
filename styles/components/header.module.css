@@ -133,7 +133,7 @@ margin-bottom: 50px;
 }
 
 .second_menu_bar {
-  background: linear-gradient(to right, #356569, #487d82, #397076);
+  background: linear-gradient(to right, #264a4e, #487d82, #264a4e);
   width: 100vw;
   list-style: none;
   display: flex;
@@ -170,10 +170,10 @@ margin-bottom: 50px;
   font-weight: 700;
   font-size: 15px;
   background-color: rgb(11, 24, 32);
-  padding: 1px;
+  padding: 0;
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 0.65rem;
+  border-radius: 0.55rem;
   border-width: 1px;
   border-color: #ffffff;
   box-shadow: -3px 3px 5px 0px rgba(255, 255, 255, 0.14);
