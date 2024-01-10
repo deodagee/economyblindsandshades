@@ -7,8 +7,6 @@ const MaterialsPage = ({ showLeftHalf }) => {
 
   const FirstImageRender = [
     { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
-
-
   ];
 
   const [selectedMaterial, setSelectedMaterial] = useState(null);
@@ -16,7 +14,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
   const handleSelectMaterial = (src, label) => {
     console.log(`Clicked on file: ${src}`);
     setSelectedMaterial({ src, label });
-};
+  };
 
   const colorData = {
     Beige: [
@@ -31,7 +29,6 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Beige", src: '/BEIGE/ETB8003BEIGE.png', label: "ETB8-003" },
       { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
       { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
-      // Add more Beige color data as needed
     ],
     Black: [
       { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
@@ -41,7 +38,6 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Black", src: '/BLACK/ETB5007BLACK.png', label: "ETB5-007" },
       { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
       { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
-      // Add more Black color data as needed
     ],
     Brown: [
       { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
@@ -50,7 +46,6 @@ const MaterialsPage = ({ showLeftHalf }) => {
       { key: "Brown", src: '/BROWN/ETB6004BROWN.png', label: "ETB6-004" },
       { key: "Brown", src: '/BROWN/ETB7003BROWN.png', label: "ETB7-003" },
       { key: "Brown", src: '/BROWN/ETB9004BROWN.png', label: "ETB9-004" },
-      // Add more Brown color data as needed
     ],
     Bronze: [
       { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
@@ -111,16 +106,15 @@ const MaterialsPage = ({ showLeftHalf }) => {
       ))}
     </div>
   );
-  
 
   return (
     <div className={styles.materials_page}>
       <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
         <div className={styles.sliding_gallery_component}>
-        <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
-        <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
-        <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
+          <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
+            <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
+            <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
           <div className={styles.selectedImageContainer}>
             {selectedMaterial ? (
               <>
@@ -136,7 +130,6 @@ const MaterialsPage = ({ showLeftHalf }) => {
                 </div>
               </>
             ) : (
-
 
               <div className={styles.image_and_scroller_wrapper}>
                 <div className={`${styles.imageContainer2} ${styles.selectedImage3}`}>
@@ -186,7 +179,7 @@ const MaterialsPage = ({ showLeftHalf }) => {
 
                 </div>
               </div>
-              
+
             )}
           </div>
         </div>

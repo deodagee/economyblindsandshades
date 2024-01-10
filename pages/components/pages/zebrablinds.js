@@ -401,8 +401,9 @@ function ZebraBlinds() {
                         </div>
 
                         <div className={styles.qty_group}>
-                        <div className={styles.quantity_title}>Quantity</div>
+                            <div className={styles.quantity_title}>Quantity</div>
                             <div className={styles.quantity_rectangle_and_numbers}>
+
                                 <div className={styles.quantity_rectangle}>
                                     <span>
                                         <div className={styles.qty}>Qty</div>
@@ -431,16 +432,14 @@ function ZebraBlinds() {
                                 </div>
                             </div>
                             <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                        <div
-                            className={styles.a_distinctive_look_that}
-                        >
-                            A distinctive look that makes a statement, this revolutionary     sheer shade
-                            adds personality to any room. These zebra shades are made with two pieces
-                            of fabric, which both have alternating panels/bands:
+                            <div
+                                className={styles.a_distinctive_look_that}
+                            >
+                                A distinctive look that makes a statement, this revolutionary sheer shade
+                                adds personality to any room. These zebra shades are made with two pieces
+                                of fabric, which both have alternating panels/bands:
+                            </div>
                         </div>
-                        </div>
-
-
 
                         <div className={styles.top_divider_line}></div>
 
@@ -478,10 +477,10 @@ function ZebraBlinds() {
                                     </div>
                                     <div className={styles.outside_mount_choice}>Outside Mount</div>
                                 </div>
-                                
+
                             </span>
 
-                            
+
 
 
                             <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
@@ -547,15 +546,17 @@ function ZebraBlinds() {
 
 
                                             <div className={styles.height_and_toggle_inside_mount}>
+                                                <div className={styles.choose_height_image_placeholder}></div>
                                                 <div className={styles.height_inside_mount_sub_title}>
                                                     CHOOSE HEIGHT:
                                                 </div>
-
-
                                                 <div className={styles.inches_fractions_boat}>
 
-                                                    <div className={styles.enter_height_inside_mount_rectangle_1}>
-                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_height}>
+                                                    <div className={styles.enter_height_inside_mount_rectangle_1}
+                                                    >
+                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_height}
+                                                            onClick={handle_drop_down_show_numbers_height_inside_mount}
+                                                        >
                                                             <p>
                                                                 INCHES
                                                             </p>
@@ -566,7 +567,7 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_numbers_height_inside_mount}>
+                                                            >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                                     fill="#da1212"
@@ -598,8 +599,11 @@ function ZebraBlinds() {
 
 
 
-                                                    <div className={styles.enter_height_fractions_inside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_height}>
+                                                    <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
+                                                    >
+                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
+                                                            onClick={handle_drop_down_show_fractions_inside_mount_height}
+                                                        >
                                                             <p>FRACTIONS</p>
                                                             <svg
                                                                 className={styles.polygon_2}
@@ -608,7 +612,7 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_fractions_inside_mount_height}>
+                                                            >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                                     fill="#da1212"
@@ -640,6 +644,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_width_group_inside_mount}>
                                             <div className={styles.width_and_toggle_inside_mount}>
+                                                <div className={styles.choose_height_image_placeholder}></div>
                                                 <div className={styles.width_inside_mount_sub_title}>
                                                     CHOOSE WIDTH:
                                                 </div>
@@ -648,7 +653,9 @@ function ZebraBlinds() {
 
                                                     <div className={styles.enter_width_inside_mount_rectangle_1}>
 
-                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_width}>
+                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_width}
+                                                            onClick={handle_drop_down_show_numbers_width_inside_mount}
+                                                        >
                                                             <p>INCHES</p>
                                                             <svg
                                                                 className={styles.polygon_3}
@@ -657,7 +664,6 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_numbers_width_inside_mount}
                                                             >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
@@ -687,7 +693,9 @@ function ZebraBlinds() {
 
 
                                                     <div className={styles.enter_width_inside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_width}>
+                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
+                                                            onClick={handle_drop_down_show_fractions_inside_mount_width}
+                                                        >
                                                             <p>FRACTIONS</p>
 
                                                             <svg
@@ -697,7 +705,6 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_fractions_inside_mount_width}
                                                             >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
@@ -786,13 +793,16 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_height_group_outside_mount}>
                                             <div className={styles.height_and_toggle_outside_mount}>
+                                                <div className={styles.choose_height_image_placeholder}></div>
                                                 <div className={styles.height_outside_mount_sub_title}>
                                                     CHOOSE HEIGHT:
                                                 </div>
 
                                                 <div className={styles.inches_fractions_boat}>
                                                     <div className={styles.enter_height_outside_mount_rectangle_1}>
-                                                        <div className={styles.toggle_disclaimer_inches_height_outside_mount}>
+                                                        <div className={styles.toggle_disclaimer_inches_height_outside_mount}
+                                                            onClick={handle_drop_down_show_numbers_height_outside_mount}
+                                                        >
                                                             <p>
                                                                 INCHES
                                                             </p>
@@ -803,12 +813,13 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_numbers_height_outside_mount}>
+                                                            >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
                                                                     fill="#da1212"
                                                                 />
                                                             </svg>
+
                                                         </div>
 
                                                         <div className={styles.scroller_partition_inches_outside_mount}>
@@ -834,7 +845,8 @@ function ZebraBlinds() {
 
 
                                                     <div className={styles.enter_height_fractions_outside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}>
+                                                        <div className={styles.toggle_disclaimer_height_fractions_outside_mount}
+                                                            onClick={handle_drop_down_show_fractions_outside_mount_height}                                                                                                                        >
 
                                                             <p>FRACTIONS</p>
                                                             <svg
@@ -844,7 +856,6 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_fractions_outside_mount_height}
                                                             >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
@@ -872,6 +883,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_width_group_outside_mount}>
                                             <div className={styles.width_and_toggle_outside_mount}>
+                                                <div className={styles.choose_height_image_placeholder}></div>
                                                 <div className={styles.width_outside_mount_sub_title}>
                                                     CHOOSE WIDTH:
                                                 </div>
@@ -880,7 +892,9 @@ function ZebraBlinds() {
 
                                                     <div className={styles.enter_width_outside_mount_rectangle_1}>
 
-                                                        <div className={styles.toggle_disclaimer_inches_width_outside_mount}>
+                                                        <div className={styles.toggle_disclaimer_inches_width_outside_mount}
+                                                            onClick={handle_drop_down_show_numbers_width_outside_mount}
+                                                        >
                                                             <p>INCHES</p>
                                                             <svg
                                                                 className={styles.polygon_7}
@@ -889,7 +903,6 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_numbers_width_outside_mount}
                                                             >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
@@ -919,7 +932,9 @@ function ZebraBlinds() {
 
 
                                                     <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}>
+                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
+                                                            onClick={handle_drop_down_show_fractions_outside_mount_width}
+                                                        >
                                                             <p>FRACTIONS</p>
                                                             <svg
                                                                 className={styles.polygon_8}
@@ -928,7 +943,6 @@ function ZebraBlinds() {
                                                                 viewBox="0 0 10 8"
                                                                 fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                onClick={handle_drop_down_show_fractions_outside_mount_width}
                                                             >
                                                                 <path
                                                                     d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
@@ -1006,7 +1020,8 @@ function ZebraBlinds() {
                                             src={"/chevronleft.png"}>
                                         </Image>
                                         <div className={styles.select_lift_type_group_title}>
-                                            <span className={styles.select_lift_type_group_title_tag}>3.</span> Select Lift Type
+                                            <span className={styles.select_lift_type_group_title_tag}>3.</span>
+                                            Select Lift Type
                                         </div>
                                     </div>
                                 </div>
@@ -1014,7 +1029,8 @@ function ZebraBlinds() {
 
                             <div className={styles.ellipse_and_type_add_lift_feature}>
                                 <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
-                                <div>                                    Select Wand, Cordless Or Motorized
+                                <div>
+                                    Select Wand, Cordless Or Motorized
                                 </div>
                             </div>
 
@@ -1023,7 +1039,7 @@ function ZebraBlinds() {
                                 </div>
 
                                 <div className={styles.wand_option_group}>
-                                    <span className={styles.option_subtitles}>
+                                    <span className={styles.option_subtitles1}>
                                         <div className={styles.option_ellipse_wrapper}>
                                             <span
                                                 className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
@@ -1034,7 +1050,7 @@ function ZebraBlinds() {
                                         <div className={styles.options_price_seperator}></div>
                                         <div className={styles.free_subtitle}>Free</div>
                                     </span>
-                                    <div className={styles.select_chainparagraph}>Select Which Side You Wnat Your Wand To Be Installed.</div>
+                                    <div className={styles.select_chainparagraph}>Select Which Side You Want Your Wand To Be Installed.</div>
 
                                     <div className={styles.show_image_chain_buttons}>
                                         <button
@@ -1043,8 +1059,8 @@ function ZebraBlinds() {
                                                 show_image_left_right_chain_side(true);
                                                 showleftsidechain();
                                             }}
-                                        >                                        
-                                        <div className={styles.select_chain_left_text}>Left</div>
+                                        >
+                                            <div className={styles.select_chain_left_text}>Left</div>
                                         </button>
 
                                         <button
@@ -1057,10 +1073,7 @@ function ZebraBlinds() {
                                             <div className={styles.select_chain_right_text}>Right</div>
                                         </button>
                                     </div>
-
                                 </div>
-
-
 
                                 {showImageright && (
 
@@ -1097,11 +1110,7 @@ function ZebraBlinds() {
                             </div>
 
 
-                            <div className={styles.select_chain_options}>
-
-
-
-
+                            <div className={styles.select_chain_options1}>
                                 <div className={styles.cord_less_option_group}>
                                     <div className={styles.option_ellipse_wrapper}>
                                         <span
@@ -1111,14 +1120,17 @@ function ZebraBlinds() {
                                     </div>
 
 
-                                    <span className={styles.option_subtitles}>
+                                    <span className={styles.option_subtitles2}>
                                         <div className={styles.cord_less_subtitle}>Cord Less</div>
                                         <div className={styles.options_price_seperator}></div>
                                         <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
+                                        <div className={styles.cord_less_option_image_placeholder}></div>
                                     </span>
+                                </div>
                                 </div>
 
 
+                                <div className={styles.select_chain_options2}>
                                 <div className={styles.motorized_option_group}>
                                     <div className={styles.motorized_ellipse_wrapper}>
                                         <span
@@ -1128,14 +1140,15 @@ function ZebraBlinds() {
                                         ></span>
                                     </div>
 
-                                    <span className={styles.option_subtitles}>
+                                    <span className={styles.option_subtitles3}>
                                         <div className={styles.motorized_subtitle}>Motorized</div>
                                         <div className={styles.options_price_seperator}></div>
                                         <div className={styles.motorized_price_value_subtitle}>$100.00</div>
+                                        <div className={styles.motorized_option_image_placeholder}></div>
                                     </span>
                                 </div>
+                                </div>
 
-                            </div>
                         </div>
 
 
@@ -1149,7 +1162,7 @@ function ZebraBlinds() {
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
-                            
+
 
 
                             <div className={styles.see_bill_button_wrapper}>

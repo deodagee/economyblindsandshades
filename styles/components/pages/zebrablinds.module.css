@@ -489,7 +489,7 @@
   align-items: center;
   justify-content: center;
   width: 800px;
-  height: max-content;
+  height: 300px;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 50pxs;
@@ -509,7 +509,7 @@
 .enter_size_inside_mount_title {
   display: flex;
   font-size: 17px;
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 30px;
   color: rgb(43, 43, 43);
 }
@@ -526,9 +526,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: max-content;
   width: 390px;
   background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border-radius: 0.25rem;
 }
 
 
@@ -538,6 +540,13 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.choose_height_image_placeholder { 
+  display: flex;
+  height: 100px;
+  width: 150px;
+  background-color: black;
 }
 
 .height_inside_mount_sub_title {
@@ -562,13 +571,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_inches_inside_mount_height {
@@ -581,6 +589,15 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+.toggle_disclaimer_inches_inside_mount_height:hover { 
+  background-color: rgb(159, 159, 159);
+transition: 0.3s;
 }
 
 .polygon_1 {
@@ -671,13 +688,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_height {
@@ -690,6 +706,16 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_fractions_inside_mount_height:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
 }
 
 .polygon_2 {
@@ -779,9 +805,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: max-content;
   width: 390px;
   background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border-radius: 0.25rem;
 }
 
 .width_and_toggle_inside_mount {
@@ -815,13 +843,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -834,8 +861,16 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
 }
-
+.toggle_disclaimer_inches_inside_mount_width:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
+}
 .polygon_3 {
   display: flex;
   transform: rotate(180deg);
@@ -919,17 +954,17 @@
 
 .enter_width_inside_mount_rectangle_2 {
   display: flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {
@@ -942,6 +977,16 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_fractions_inside_mount_width:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
 }
 
 .polygon_4 {
@@ -1140,7 +1185,7 @@
   align-items: center;
   justify-content: center;
   width: 800px;
-  height: max-content;
+  height: 300px;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 50pxs;
@@ -1160,7 +1205,7 @@
 .enter_size_outside_mount_title {
   display: flex;
   font-size: 17px;
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 30px;
   color: rgb(43, 43, 43);
 }
@@ -1177,9 +1222,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: max-content;
   width: 390px;
   background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border-radius: 0.25rem;
 }
 
 .height_and_toggle_outside_mount {
@@ -1218,13 +1265,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_inches_height_outside_mount {
@@ -1237,8 +1283,17 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
 }
 
+.toggle_disclaimer_inches_height_outside_mount:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
+}
 
 .polygon_5 {
   display: flex;
@@ -1246,6 +1301,8 @@
   width: 10px;
   top: 0;
 }
+
+
 
 .scroller_partition_inches_outside_mount {
   display: flex;
@@ -1327,16 +1384,15 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
-.toggle_disclaimer_width_fractions_outside_mount {
+.toggle_disclaimer_height_fractions_outside_mount {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1346,6 +1402,16 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_height_fractions_outside_mount:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
 }
 
 .polygon_6 {
@@ -1435,9 +1501,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: max-content;
   width: 390px;
   background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border-radius: 0.25rem;
 }
 
 .width_and_toggle_outside_mount {
@@ -1470,13 +1538,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_inches_width_outside_mount {
@@ -1489,6 +1556,16 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_inches_width_outside_mount:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
 }
 
 .polygon_7 {
@@ -1578,13 +1655,12 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 150px;
-  height: max-content;
+  width: 170px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 100px;
+  height: 70px;
 }
 
 .toggle_disclaimer_width_fractions_outside_mount {
@@ -1597,8 +1673,17 @@
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
 }
 
+.toggle_disclaimer_width_fractions_outside_mount:hover { 
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
+}
 
 .polygon_8 {
   display: flex;
@@ -1797,6 +1882,7 @@
   display: flex;
   flex-direction: column;
   width: 850px;
+  height: max-content;
 }
 
 .titled_step_combo {
@@ -1898,10 +1984,11 @@
 .select_chain_side_wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;
   width: 850px;
   height: 200px;
+  padding-left: 20px;
 }
 
 
@@ -2007,11 +2094,12 @@
   display: flex;
   flex-direction: column;
   width: 850px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   padding: 20px;
   gap: 50px;
   height: 420px;
+  
 }
 
 .wand_option_group {
@@ -2019,7 +2107,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 20px;
 
 }
 
@@ -2037,10 +2124,10 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.option_subtitles {
+.option_subtitles1 {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
   font-size: 11px;
   font-weight: 500;
   padding: 5px;
@@ -2083,6 +2170,10 @@
   font-size: 10px;
   width: 200px;
 }
+.select_chain_options1 { 
+  display: flex;
+  margin-left: 20px;
+}
 
 .cord_less_option_group {
   display: flex;
@@ -2109,15 +2200,14 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.option_subtitles {
+.option_subtitles2 {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 5px;
-  height: 40px;
-  white-space: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  width: 850px;
+  height: 200px;
 }
 
 .cord_less_subtitle {
@@ -2149,6 +2239,17 @@
   color: green;
 }
 
+.cord_less_option_image_placeholder { 
+  display: flex;
+  width: 200px;
+  height: 140px;
+  background-color: grey;
+}
+
+.select_chain_options2 { 
+  display: flex;
+  margin-left: 20px;
+}
 
 .motorized_option_group {
   display: flex;
@@ -2175,15 +2276,14 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
-.option_subtitles {
+.option_subtitles3 {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 5px;
-  height: 40px;
-  white-space: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  width: 850px;
+  height: 200px;
 }
 
 .motorized_subtitle {
@@ -2219,7 +2319,13 @@
   border-color: rgb(218, 218, 218);
   white-space: nowrap;
   color: green;
+}
 
+.motorized_option_image_placeholder {
+  display: flex;
+  width: 200px;
+  height: 140px;
+  background-color: grey;
 }
 
 .select_head_rail_seperator_line {
@@ -2316,20 +2422,40 @@
 }
 
 .select_head_rail_subtitle {
-  width: 850px;
   display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
+}
+
+.ellipse_and_type_head_and_bottom_rail { 
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
   padding: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin: 20px;
+  margin-left: 20px;
 }
 
 .select_head_rail_option_group {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  align-items: start;
+  align-items: center;
   justify-content: flex-start;
   width: 850px;
+  background: linear-gradient(to right, #ffffff,#f4f4f4,  #ebebeb, #f5f5f5, #f7f7f7, #ffffff);
+  height: 120px;
+  padding: 20px;
+  border-radius: 0.35rem;
 }
 
 .select_head_rail_option_selection_wrapper {
@@ -2373,7 +2499,7 @@
   display: flex;
   width: 70px;
   height: auto;
-  border-radius: 0.85rem;
+  border-radius: 0.35rem;
 }
 
 
@@ -2416,7 +2542,7 @@
   display: flex;
   width: 70px;
   height: auto;
-  border-radius: 0.85rem;
+  border-radius: 0.35rem;
 }
 
 .round_type {
@@ -2435,28 +2561,31 @@
   align-items: start;
   justify-content: flex-start;
   width: 850px;
+  margin-top: 50px;
 }
 
 .fabric_types_top_and_bottom_second_wrapper {
   display: flex;
   width: 850px;
   flex-direction: column;
-
-
-}
-
-.fabric_types_top_and_bottom_second_wrapper::before {
-  transition: 0.6s;
-  
+  height: 700px;
+  border-width: 2px;
+border-color: rgb(205, 205, 205);
+border-radius: 0.56rem;
+transition: 0.3s;
 
 }
+
+
 
 .fabric_types_top_and_bottom_second_wrapper:hover {
-  border-width: 3px;
-  border-top: none;
-  border-color: rgb(181, 181, 181);
-  transition: 0.6s;
-  transform: scale(0.99);
+border-color: rgb(234, 234, 234);
+background-color: rgb(240, 240, 240);
+transform: scale(1.002);
+transition: 0.3s;
+border-width: 1px;
+box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+
 }
 
 .pick_head_rail_color_titles_wrapper {
@@ -2468,41 +2597,62 @@
 }
 
 .fabric_types_subtitle {
-  width: 850px;
+  width: 100px;
+  height: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 10px;
-  padding-left: 20px;
+  margin-left: 20px;
   font-size: 13px;
-  color: #5b5b5b;
+  color: #3a3a3a;
+  background-color: rgb(197, 197, 197);
+  border-radius: 0.35rem;
+  border-width: 1px;
+border-color: grey;
 }
 
 .pick_head_rail_color_subtitle {
-  width: 850px;
   display: flex;
-  padding-left: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
-  margin-top: 20px;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
 }
 
 .top_section {
   display: flex;
   width: 850px;
   flex-direction: column;
-  padding: 20px;
   align-items: start;
   justify-content: start;
+
+}
+.skip_head_rail_image_placeholder_invisible {
+  display: none;
+}
+.skip_head_rail_image_placeholder_visible { 
+  width: 800px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(78, 73, 73);
+  background-image: url("/whattypeofblindsdoyouinstall.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
 }
 
 .fabric_list_top {
-  width: 700px;
-
+  width: 800px;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  margin: 20px;
 }
 
 .fabric_list_top_image_and_description {
@@ -2530,7 +2680,7 @@
   padding-left: 20px;
   align-self: flex-start;
   justify-content: flex-start;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .ellipse_and_title {
@@ -2578,19 +2728,37 @@
   display: flex;
   width: 850px;
   flex-direction: column;
-  padding: 20px;
   align-items: start;
   justify-content: start;
 }
 
+.skip_bottom_rail_image_placeholder_invisible {
+  display: none;
+}
+.skip_bottom_rail_image_placeholder_visible { 
+  width: 800px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(78, 73, 73);
+  background-image: url("/whattypeofblindsdoyouinstall.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+
+
+
 .fabric_list_bottom {
-  width: 700px;
+  width: 800px;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  margin: 20px;
 }
 
 .fabric_list_bottom_image_and_description {
@@ -2616,10 +2784,9 @@
   width: 850px;
   flex-direction: column;
   padding-left: 20px;
-  align-items: start;
-  justify-content: start;
-  margin-top: 60px;
-
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .ellipse_and_title {
@@ -2636,6 +2803,8 @@
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
+
+
 
 .active_skip_bottom_rail_ellipse {
   display: flex;
@@ -2664,7 +2833,7 @@
 }
 
 .extra_options_set_main_wrapper {
-  display: none;
+  display: flex;
   width: 850px;
   padding: 20px;
 }
@@ -2672,6 +2841,7 @@
 .extra_options_set_second_wrapper {
   display: flex;
   width: 850px;
+  gap:5px;
 }
 
 .extra_options_set {
@@ -2686,11 +2856,14 @@
 .bottom_rail_option_1 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .extra_options_set_ellipse_and_image {
   display: flex;
   flex-direction: row;
+  gap: 5px;
 }
 
 .bottom_rail_option_1_ellipse {
@@ -2726,6 +2899,8 @@
 .bottom_rail_option_2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .extra_options_set_ellipse_and_image {
@@ -2763,15 +2938,24 @@
   word-wrap: nowrap;
 }
 
-.pick_bottom_rail_color_titles_wrapper {}
+.pick_bottom_rail_color_titles_wrapper {
 
-.fabric_types_subtitle {
-  width: 850px;
+}
+
+.fabric_types_subtitle2 {
+  width: 100px;
+  height: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 10px;
-  padding-left: 20px;
+  margin-left: 20px;
   font-size: 13px;
-  color: #5b5b5b;
+  color: #3a3a3a;
+  background-color: rgb(197, 197, 197);
+  border-radius: 0.35rem;
+  border-width: 1px;
+border-color: grey;
 }
 
 .pick_bottom_rail_color_subtitle {
