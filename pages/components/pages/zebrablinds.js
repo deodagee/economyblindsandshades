@@ -520,44 +520,41 @@ function ZebraBlinds() {
     //logic 
 
     const Rounded_Top_Cassette_With_Fabric_Insert = [
-        { key: 'Beige With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Beige RoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric' },
-        { key: 'Black With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Black Rounded Top Cassette With Fabric Insert.jpg', label: 'Black  With Fabric' },
-        { key: 'Brown With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Brown Rounded Top Cassette With Fabric Insert.jpg', label: 'Brown  With Fabric' },
-        { key: 'Grey With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Grey Rounded Top Cassette With Fabric Insert.jpg', label: 'Grey  With Fabric' },
-        { key: 'White With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/White Rounded Top Cassette With Fabric Insert.jpg', label: 'White  With Fabric' },
+        { key: 'Beige With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric' },
+        { key: 'Black With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric' },
+        { key: 'Brown With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric' },
+        { key: 'Grey With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric' },
+        { key: 'White With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric' },
         // Add more image data as needed
     ];
-
-
+    
     const Square_Top_Aluminum = [
-        { key: 'Beige Aluminum ', src: '/Cassettes/SquareTopCassetteAluminum/Beige Square Top Cassette Aluminum.jpg', label: 'Beige Aluminum' },
-        { key: 'Black Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Black Square Top Cassette Aluminum.jpg', label: 'Black Aluminum' },
-        { key: 'Brown Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Brown Square Top Cassette Aluminum.jpg', label: 'Brown Aluminum' },
-        { key: 'Grey Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Grey Square Top Cassette Aluminum.jpg', label: 'Grey Aluminum' },
-        { key: 'White Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/White Square Top Cassette Aluminum.jpg', label: 'White Aluminum' },
+        { key: 'Beige Aluminum ', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum' },
+        { key: 'Black Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum' },
+        { key: 'Brown Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum' },
+        { key: 'Grey Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum' },
+        { key: 'White Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum' },
         // Add more image data as needed
     ];
-
-
+    
     const Bottom_Rail_Square_With_Fabric_Insert = [
-        { key: 'Beige  With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Beige Bottom Rail Square With Fabric Insert.jpg', label: 'Beige With Fabric' },
-        { key: 'Black With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Black Bottom Rail Square With Fabric Insert.jpg', label: 'Black With Fabric' },
-        { key: 'Brown With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Brown Bottom Rail Square With Fabric Insert.jpg', label: 'Brown With Fabric' },
-        { key: 'Grey With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Grey Bottom Rail Square With Fabric Insert.jpg', label: 'Grey With Fabric' },
-        { key: 'White With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/White Bottom Rail Square With Fabric Insert.jpg', label: 'White With Fabric' },
+        { key: 'Beige  With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric' },
+        { key: 'Black With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric' },
+        { key: 'Brown With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric' },
+        { key: 'Grey With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric' },
+        { key: 'White With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric' },
         // Add more image data as needed
     ];
-
+    
     const Bottom_Oval_Rail_Aluminum = [
-        { key: 'Beige Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Beige Bottom Oval Rail Aluminum.jpg', label: 'Beige Aluminum' },
-        { key: 'Black Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Black Bottom Oval Rail Aluminum.jpg', label: 'Black Aluminum' },
-        { key: 'Brown Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Brown Bottom Oval Rail Aluminum.jpg', label: 'Brown Aluminum' },
-        { key: 'Grey Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Grey Bottom Oval Rail Aluminum.jpg', label: 'Grey Aluminum' },
-        { key: 'White Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/White Bottom Oval Rail Aluminum.jpg', label: 'White Aluminum' },
+        { key: 'Beige Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum' },
+        { key: 'Black Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum' },
+        { key: 'Brown Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum' },
+        { key: 'Grey Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum' },
+        { key: 'White Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum' },
         // Add more image data as needed
     ];
-
-
+    
 
     const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
     const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
