@@ -155,9 +155,20 @@
 
 
 .qty_group { 
-  display: contents;
-  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
+
+.qty_group_part1 { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .quantity_title {
   margin-top: 20px;
@@ -165,35 +176,40 @@
   font-size: 15px;
 }
 
-.quantity_rectangle_and_numbers {
+.quantity_rectangle_and_numbers { 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
-.quantity_title {
+.quantity_rectangle { 
   display: flex;
-}
-
-.quantity_rectangle {
-  height: 25px;
-  width: 80px;
-  background-color: rgb(237, 237, 237);
-  border-radius: 0.05rem;
-  display: flex;
-  flex-direction: row;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(206, 206, 206);
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  flex-direction: row;
   gap: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  
+ border-radius: 0.15rem;
+ box-shadow: rgb(161, 161, 161) 0px 0px 5px;
+ transition: 0.3s;
 }
+
+.quantity_rectangle:hover { 
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: rgb(109, 109, 109) 0px 0px 5px;
+}
+
 
 .qty {
+  display: flex;
+}
+
+.qty_number  { 
   display: flex;
 }
 
@@ -481,7 +497,7 @@
   align-items: center;
   justify-content: center;
   width: 800px;
-  height: 300px;
+  height: max-content;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 50pxs;
@@ -1981,7 +1997,7 @@ padding-right: 5px;
   align-items: center;
   justify-content: center;
   margin: 0;
-  top: 230px;
+  top: 245px;
   left: 25px;
   width: 510px;
   height: 550px;
@@ -3394,21 +3410,7 @@ border-color: grey;
 }
 
 
-.question_mark_ellipse_and_number_wrapper,
-.question_mark_ellipse_and_number_wrapper * {
-  box-sizing: border-box;
-}
 
-.question_mark_ellipse_and_number_wrapper {
-  flex-shrink: 0;
-  width: 11px;
-  height: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-}
 
 .question_ellipse {
   background: rgba(217, 217, 217, 0);
@@ -3460,11 +3462,12 @@ border-color: grey;
 }
 
 .quantity_is_always_1_note {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  width: 250px;
+  width: max-content;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: rgb(197, 128, 0);
 }
 
 .review_your_order {
