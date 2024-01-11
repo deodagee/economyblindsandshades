@@ -2581,24 +2581,13 @@ transition: 0.3s;
   background-color: grey;
 }
 
-.select_head_rail_seperator_line {
-  display: flex;
-  height: 2px;
-  width: 98%;
-  margin: 10px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  background-color: rgb(122, 122, 122);
-  border-radius: 0.56rem;
-}
+
 
 
 /* Start of Fabrics Page */
 .select_head_rail_group {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
   width: 850px;
 }
 
@@ -2977,13 +2966,8 @@ border-color: grey;
   color: #6b0a0a;
 }
 
-.bottom_section {
-  display: flex;
-  width: 850px;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-}
+
+
 
 .skip_bottom_rail_image_placeholder_invisible {
   display: none;
@@ -3047,6 +3031,40 @@ border-color: grey;
   flex-direction: row;
   align-self: start;
   justify-self: start;
+}
+
+.fabric_types_subtitle2 {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 13px;
+  color: #3a3a3a;
+  background-color: rgb(197, 197, 197);
+  border-radius: 0.35rem;
+  border-width: 1px;
+border-color: grey;
+}
+
+.pick_bottom_rail_color_subtitle {
+  width: 850px;
+  display: flex;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #5b5b5b;
+  margin-top: 20px;
+}
+
+
+.bottom_section {
+  display: flex;
+  width: 850px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
 }
 
 .skip_bottom_rail_ellipse {
@@ -3191,34 +3209,8 @@ border-color: grey;
   word-wrap: nowrap;
 }
 
-.pick_bottom_rail_color_titles_wrapper {
 
-}
 
-.fabric_types_subtitle2 {
-  width: 100px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 13px;
-  color: #3a3a3a;
-  background-color: rgb(197, 197, 197);
-  border-radius: 0.35rem;
-  border-width: 1px;
-border-color: grey;
-}
-
-.pick_bottom_rail_color_subtitle {
-  width: 850px;
-  display: flex;
-  padding-left: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
-  margin-top: 20px;
-}
 
 .see_bill_button_wrapper {
   width: 850px;
@@ -3236,6 +3228,12 @@ border-color: grey;
   font-size: 10px;
 }
 
+.answers_div { 
+  display: flex;
+  position: absolute;
+  
+}
+
 .head_rail_color_answer {
   display: flex;
 }
@@ -3245,17 +3243,22 @@ border-color: grey;
 }
 
 .casette_head_rail_type_answer {
-  display: flex;
-  position: absolute;
 }
 
 .bottom_rail_type_answer {
   display: flex;
-  position: fixed;
-  top: 100px;
 }
 
-
+.select_head_rail_seperator_line {
+  display: flex;
+  height: 2px;
+  width: 98%;
+  margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: rgb(122, 122, 122);
+  border-radius: 0.56rem;
+}
 /* End of Fabrics Page */
 .quantity_seperator_line {
   display: flex;
