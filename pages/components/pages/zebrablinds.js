@@ -11,27 +11,12 @@ import HeaderPiece from "../header.js";
 function ZebraBlinds() {
 
 
+
+
+
     // Logic for color render bottom rails
 
-    const imagesDataHeadRail = [
-        { key: 'Beige Head', src: '/BEIGE/ETB1003BEIGE.png', label: 'Beige Head' },
-        { key: 'Black Head', src: '/BLACK/ETB1006BLACK.png', label: 'Black' },
-        { key: 'Bronze Head', src: '/BRONZE/ETB1005BRONZE.png', label: 'Bronze' },
-        { key: 'Brown Head', src: '/BROWN/ETB2004BROWN.png', label: 'Brown' },
-        { key: 'Grey Head', src: '/GREY/ETB1004GREY.png', label: 'Grey' },
-        { key: 'White Head', src: '/WHITE/ETB2001WHITE.png', label: 'White Head' },
-        // Add more image data as needed
-    ];
 
-    const imagesDataBottomRail = [
-        { key: 'Beige Bottom', src: '/BEIGE/ETB1003BEIGE.png', label: 'Beige Bottom' },
-        { key: 'Black Bottom', src: '/BLACK/ETB1006BLACK.png', label: 'Black' },
-        { key: 'Bronze Bottom', src: '/BRONZE/ETB1005BRONZE.png', label: 'Bronze' },
-        { key: 'Brown Bottom', src: '/BROWN/ETB2004BROWN.png', label: 'Brown' },
-        { key: 'Grey Bottom', src: '/GREY/ETB1004GREY.png', label: 'Grey' },
-        { key: 'White Bottom', src: '/WHITE/ETB2001WHITE.png', label: 'White Bottom' },
-        // Add more image data as needed
-    ];
 
 
     //add color selections to the bom 
@@ -526,46 +511,102 @@ function ZebraBlinds() {
 
     // SKIP HEAD  RAIL LOGIC 
 
-        //1. //  ellipse logic
-        const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(false);
-        const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
-        const [skip_head_rail_image_placeholder, setskip_head_rail_image_placeholder] = useState(false);
-        const [skip_bottom_rail_image_placeholder, setskip_bottom_rail_image_placeholder] = useState(false);
-    
-        //logic 
-    
-        const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
-        const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
-    
-        const selectedImageData_Bottomrail = imagesDataHeadRail.find(imageData => imageData.key === selected_head_rail_color);
-        const selectedImageData_Headrail = imagesDataBottomRail.find(imageData => imageData.key === selected_bottom_rail_color);
-    
-        const getImageClassNameColorHeadRail = (imageName) => {
-            const baseClassName = styles[imageName];
-            return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
-        };
-        const getImageClassNameColorBottomRail = (imageName) => {
-            const baseClassName = styles[imageName];
-            return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
-        };
-    
-        const handleEllipseClickSkipHeadRailColor = () => {
-            console.log('Ellipse Clicked');
-            Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
-            setskip_head_rail_image_placeholder((prevActive) => !prevActive);
-        };
-    
-    
-        const handleEllipseClickSkipBottomRailColor = () => {
-            console.log('Ellipse Clicked');
-            Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
-            setskip_bottom_rail_image_placeholder((prevActive) => !prevActive);
-        };
+    //1. //  ellipse logic
+    const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(false);
+    const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
+    const [skip_head_rail_image_placeholder, setskip_head_rail_image_placeholder] = useState(false);
+    const [skip_bottom_rail_image_placeholder, setskip_bottom_rail_image_placeholder] = useState(false);
+
+    //logic 
+
+    const Rounded_Top_Cassette_With_Fabric_Insert = [
+        { key: 'Beige With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Beige RoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric' },
+        { key: 'Black With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Black Rounded Top Cassette With Fabric Insert.jpg', label: 'Black  With Fabric' },
+        { key: 'Brown With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Brown Rounded Top Cassette With Fabric Insert.jpg', label: 'Brown  With Fabric' },
+        { key: 'Grey With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/Grey Rounded Top Cassette With Fabric Insert.jpg', label: 'Grey  With Fabric' },
+        { key: 'White With Fabric', src: '/Cassettes/Rounded Top Cassette With Fabric Insert/White Rounded Top Cassette With Fabric Insert.jpg', label: 'White  With Fabric' },
+        // Add more image data as needed
+    ];
+
+
+    const Square_Top_Aluminum = [
+        { key: 'Beige Aluminum ', src: '/Cassettes/SquareTopCassetteAluminum/Beige Square Top Cassette Aluminum.jpg', label: 'Beige Aluminum' },
+        { key: 'Black Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Black Square Top Cassette Aluminum.jpg', label: 'Black Aluminum' },
+        { key: 'Brown Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Brown Square Top Cassette Aluminum.jpg', label: 'Brown Aluminum' },
+        { key: 'Grey Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/Grey Square Top Cassette Aluminum.jpg', label: 'Grey Aluminum' },
+        { key: 'White Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/White Square Top Cassette Aluminum.jpg', label: 'White Aluminum' },
+        // Add more image data as needed
+    ];
+
+
+    const Bottom_Rail_Square_With_Fabric_Insert = [
+        { key: 'Beige  With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Beige Bottom Rail Square With Fabric Insert.jpg', label: 'Beige With Fabric' },
+        { key: 'Black With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Black Bottom Rail Square With Fabric Insert.jpg', label: 'Black With Fabric' },
+        { key: 'Brown With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Brown Bottom Rail Square With Fabric Insert.jpg', label: 'Brown With Fabric' },
+        { key: 'Grey With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/Grey Bottom Rail Square With Fabric Insert.jpg', label: 'Grey With Fabric' },
+        { key: 'White With Fabric', src: '/Bottom Rail/BottomRailSquareWithFabricInsert/White Bottom Rail Square With Fabric Insert.jpg', label: 'White With Fabric' },
+        // Add more image data as needed
+    ];
+
+    const Bottom_Oval_Rail_Aluminum = [
+        { key: 'Beige Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Beige Bottom Oval Rail Aluminum.jpg', label: 'Beige Aluminum' },
+        { key: 'Black Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Black Bottom Oval Rail Aluminum.jpg', label: 'Black Aluminum' },
+        { key: 'Brown Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Brown Bottom Oval Rail Aluminum.jpg', label: 'Brown Aluminum' },
+        { key: 'Grey Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/Grey Bottom Oval Rail Aluminum.jpg', label: 'Grey Aluminum' },
+        { key: 'White Aluminum2', src: '/Bottom Rail/BottomOvalRailAluminum/White Bottom Oval Rail Aluminum.jpg', label: 'White Aluminum' },
+        // Add more image data as needed
+    ];
+
+
+
+    const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
+    const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
+
+
+    const Rounded_Top_Cassette_With_Fabric_Insert_function = Rounded_Top_Cassette_With_Fabric_Insert.find(imageData => imageData.key === selected_head_rail_color);
+
+    const Bottom_Rail_Square_With_Fabric_Insert_function = Bottom_Rail_Square_With_Fabric_Insert.find(imageData => imageData.key === selected_bottom_rail_color);
+
+    const Bottom_Oval_Rail_Aluminum_function = Bottom_Oval_Rail_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
+
+    const Square_Top_Aluminum_function = Square_Top_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
+
+
+    const handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+    };
+    const handleRender_Bottom_Rail_Square_With_Fabric_Insert_function = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+    };
+
+    const handleRender_Bottom_Oval_Rail_Aluminum_function = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+    };
+    const handleRender_Square_Top_Aluminum_function = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+    };
+
+    const handleEllipseClickSkipHeadRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
+        setskip_head_rail_image_placeholder((prevActive) => !prevActive);
+    };
+
+
+    const handleEllipseClickSkipBottomRailColor = () => {
+        console.log('Ellipse Clicked');
+        Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
+        setskip_bottom_rail_image_placeholder((prevActive) => !prevActive);
+    };
 
 
 
 
-    // EXTRA OPTIONS LOGIC S
+    // EXTRA OPTIONS LOGIC 
 
     const [bottomRailOptions1RenderingContent, setbottomRailOptions1RenderingContent] = useState('');
     const [bottomRailOptions2RenderingContent, setbottomRailOptions2RenderingContent] = useState('');
@@ -1474,6 +1515,7 @@ function ZebraBlinds() {
 
 
                         <div>
+                            insert fabrics page here
                             <div>
                                 <div className={styles.select_head_rail_group}>
 
@@ -1534,9 +1576,9 @@ function ZebraBlinds() {
                                         <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
                                             <div className={styles.pick_head_rail_color_titles_wrapper}>
-                                                <div className={styles.fabric_types_subtitle}>FABRICS</div>
+                                                <div className={styles.fabric_types_subtitle}>Cassettes</div>
 
-                                                <div className={styles.pick_head_rail_color_subtitle}>Pick Head Rail Color:</div>
+                                                <div className={styles.pick_head_rail_color_subtitle}>Pick Cassette Type:</div>
                                             </div>
 
                                             <div className={styles.top_section}>
@@ -1545,12 +1587,13 @@ function ZebraBlinds() {
                                                         <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
                                                             onClick={handleEllipseClickSkipHeadRailColor}
                                                         ></div>
-                                                        <div className={styles.skip_head_rail_color}>Skip Head Rail Color
+                                                        <div className={styles.skip_head_rail_color}>Skip Cassette Type
                                                         </div>
                                                     </div>
                                                     <div className={styles.note_skipping_color_for_head_rail}>
                                                         *Note: Skipping Color will result with steel material
                                                     </div>
+
                                                 </div>
 
 
@@ -1561,33 +1604,66 @@ function ZebraBlinds() {
 
 
                                                 <div>
+                                                    
                                                     <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}></div>
                                                     {active_skip_head_rail_ellipse ? null : (
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-                                                        {imagesDataHeadRail.map((imageData) => (
-                                                            <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
-                                                                <div className={styles.fabric_list_top_image}>
-                                                                    <Image
-                                                                        alt="image"
-                                                                        width={100}
-                                                                        height={100}
-                                                                        className={getImageClassNameColorHeadRail(imageData.key)}
-                                                                        src={imageData.src}
-                                                                        onClick={() => {
-                                                                            if (!active_skip_head_rail_ellipse) {
-                                                                                console.log(`Click handler for ${imageData.key}`);
-                                                                                Set_selected_head_rail_color(imageData.key);
-                                                                            }
-                                                                        }}
-                                                                        style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-                                                                    />
-                                                                </div>
-                                                                <div className={styles.fabric_list_top_image_description}>
-                                                                    <div>{imageData.label}</div>
-                                                                </div>
+                                                            <div className={styles.fabric_list_top_list1}>
+                                                            <div className={styles.pick_head_rail_color_subtitle}>rounded with fabric</div>
+
+                                                                {Rounded_Top_Cassette_With_Fabric_Insert.map((imageData) => (
+                                                                    <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+                                                                        <div className={styles.fabric_list_top_image}>
+                                                                            <Image
+                                                                                alt="image"
+                                                                                width={100}
+                                                                                height={100}
+                                                                                className={handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function(imageData.key)}
+                                                                                src={imageData.src}
+                                                                                onClick={() => {
+                                                                                    if (!active_skip_head_rail_ellipse) {
+                                                                                        console.log(`Click handler for ${imageData.key}`);
+                                                                                        Set_selected_head_rail_color(imageData.key);
+                                                                                    }
+                                                                                }}
+                                                                                style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+                                                                            />
+                                                                        </div>
+                                                                        <div className={styles.fabric_list_top_image_description}>
+                                                                            <div>{imageData.label}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
                                                             </div>
-                                                        ))}
-                                                    </div>
+
+                                                            <div className={styles.fabric_list_top_list2}>
+                                                            <div className={styles.pick_head_rail_color_subtitle}>rounded without fabric</div>
+
+                                                                {Square_Top_Aluminum.map((imageData) => (
+                                                                    <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+                                                                        <div className={styles.fabric_list_top_image}>
+                                                                            <Image
+                                                                                alt="image"
+                                                                                width={100}
+                                                                                height={100}
+                                                                                className={handleRender_Bottom_Rail_Square_With_Fabric_Insert_function(imageData.key)}
+                                                                                src={imageData.src}
+                                                                                onClick={() => {
+                                                                                    if (!active_skip_head_rail_ellipse) {
+                                                                                        console.log(`Click handler for ${imageData.key}`);
+                                                                                        Set_selected_head_rail_color(imageData.key);
+                                                                                    }
+                                                                                }}
+                                                                                style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+                                                                            />
+                                                                        </div>
+                                                                        <div className={styles.fabric_list_top_image_description}>
+                                                                            <div>{imageData.label}</div>
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
                                                     )}
                                                 </div>
 
@@ -1596,8 +1672,8 @@ function ZebraBlinds() {
 
                                             <div className={styles.pick_bottom_rail_color_wrapper}>
 
-                                                <div className={styles.fabric_types_subtitle2}>FABRICS</div>
-                                                <div className={styles.pick_bottom_rail_color_subtitle}>Pick Bottom Rail Color</div>
+                                                <div className={styles.fabric_types_subtitle2}>Bottom Rail</div>
+                                                <div className={styles.pick_bottom_rail_color_subtitle}>Pick Bottom Rail Type:</div>
 
 
                                                 <div className={styles.bottom_section}>
@@ -1605,9 +1681,9 @@ function ZebraBlinds() {
                                                         <div className={styles.ellipse_and_title}>
 
                                                             <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                                                onClick={handleEllipseClickSkipBottomRailColor}
+                                                                onClick={handleRender_Bottom_Oval_Rail_Aluminum_function}
                                                             ></div>
-                                                            <div className={styles.skip_bottom_rail_color}>Skip Bottom Rail Color
+                                                            <div className={styles.skip_bottom_rail_color}>Skip Bottom Rail Type
                                                             </div>
                                                         </div>
                                                         <div className={styles.note_skipping_color_for_bottom_rail}>
@@ -1621,32 +1697,68 @@ function ZebraBlinds() {
                                                         <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}></div>
                                                         {active_skip_bottom_rail_ellipse ? null : (
                                                             <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
-                                                                {imagesDataBottomRail.map((imageData) => (
+                                                                <div className={styles.fabric_list_bottom_list1}>
+                                                                <div className={styles.pick_head_rail_color_subtitle}>oval with fabric</div>
 
-                                                                    <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
+                                                                    {Bottom_Rail_Square_With_Fabric_Insert.map((imageData) => (
 
-                                                                        <div className={styles.fabric_list_bottom_image}>
-                                                                            <Image
-                                                                                alt="image"
-                                                                                width={100}
-                                                                                height={100}
-                                                                                className={getImageClassNameColorBottomRail(imageData.key)}
-                                                                                src={imageData.src}
-                                                                                onClick={() => {
-                                                                                    if (!active_skip_bottom_rail_ellipse) {
-                                                                                        console.log(`Click handler for ${imageData.key}`);
-                                                                                        Set_selected_bottom_rail_color(imageData.key);
-                                                                                    }
-                                                                                }}
-                                                                                style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
-                                                                            />
+                                                                        <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
+
+                                                                            <div className={styles.fabric_list_bottom_image}>
+                                                                                <Image
+                                                                                    alt="image"
+                                                                                    width={100}
+                                                                                    height={100}
+                                                                                    className={handleRender_Square_Top_Aluminum_function(imageData.key)}
+                                                                                    src={imageData.src}
+                                                                                    onClick={() => {
+                                                                                        if (!active_skip_bottom_rail_ellipse) {
+                                                                                            console.log(`Click handler for ${imageData.key}`);
+                                                                                            Set_selected_bottom_rail_color(imageData.key);
+                                                                                        }
+                                                                                    }}
+                                                                                    style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
+                                                                                />
+                                                                            </div>
+
+                                                                            <div className={styles.fabric_list_bottom_image_description}>
+                                                                                <div>{imageData.label}</div>
+                                                                            </div>
                                                                         </div>
+                                                                    ))}
+                                                                </div>
 
-                                                                        <div className={styles.fabric_list_bottom_image_description}>
-                                                                            <div>{imageData.label}</div>
+                                                                <div className={styles.fabric_list_bottom_list2}>
+                                                                <div className={styles.pick_head_rail_color_subtitle}>oval without fabric</div>
+
+                                                                    {Bottom_Oval_Rail_Aluminum.map((imageData) => (
+
+                                                                        <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
+
+                                                                            <div className={styles.fabric_list_bottom_image}>
+                                                                                <Image
+                                                                                    alt="image"
+                                                                                    width={100}
+                                                                                    height={100}
+                                                                                    className={handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function(imageData.key)}
+                                                                                    src={imageData.src}
+                                                                                    onClick={() => {
+                                                                                        if (!active_skip_bottom_rail_ellipse) {
+                                                                                            console.log(`Click handler for ${imageData.key}`);
+                                                                                            Set_selected_bottom_rail_color(imageData.key);
+                                                                                        }
+                                                                                    }}
+                                                                                    style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
+                                                                                />
+                                                                            </div>
+
+                                                                            <div className={styles.fabric_list_bottom_image_description}>
+                                                                                <div>{imageData.label}</div>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                ))}
+                                                                    ))}
+                                                                </div>
+
                                                             </div>
                                                         )}
                                                     </div>
@@ -1696,11 +1808,14 @@ function ZebraBlinds() {
 
                                 <div className={styles.answers_div}>
                                     <div className={styles.head_rail_color_answer}>
-                                        {selectedImageData_Headrail ? selectedImageData_Headrail.label : ''}
+                                        {Rounded_Top_Cassette_With_Fabric_Insert_function ? Rounded_Top_Cassette_With_Fabric_Insert_function.label : ''}
+                                        {Square_Top_Aluminum_function ? Square_Top_Aluminum_function.label : ''}
+                                        {Bottom_Oval_Rail_Aluminum_function ? Bottom_Oval_Rail_Aluminum_function.label : ''}
+                                        {Bottom_Rail_Square_With_Fabric_Insert_function ? Bottom_Rail_Square_With_Fabric_Insert_function.label : ''}
+
                                     </div>
 
                                     <div className={styles.bottom_rail_color_answer}>
-                                        {selectedImageData_Bottomrail ? selectedImageData_Bottomrail.label : ''}
                                     </div>
 
                                     <div className={styles.casette_head_rail_type_answer}>
