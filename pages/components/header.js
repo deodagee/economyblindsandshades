@@ -52,8 +52,15 @@ function HeaderPiece() {
 
             <li>
               <p>
-                20% OFF ON EVERY PURCHASE FOR THE NEXT MONTH
-              </p>
+
+                <Image
+                  src={"/factorydirect.png"}
+                  width={100}
+                  height={100}
+                  alt="header_top_image"
+                  className={styles.header_top_image}>
+
+                </Image>              </p>
             </li>
 
           </ol>

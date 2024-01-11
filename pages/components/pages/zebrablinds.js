@@ -255,7 +255,7 @@ function ZebraBlinds() {
         ));
     };
     //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
-    const [selectedFraction_width, setselectedFraction_width] = useState(null);
+    const [selectedFraction_width, setselectedFraction_width] = useState("please select a size");
     const [fractionIndex_inside_mount_width, setfractionIndex_inside_mount_width] = useState(false);
     const fractions_inside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
@@ -310,7 +310,7 @@ function ZebraBlinds() {
     };
     //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS HEIGHT
     const [selectedFraction_outside_mount_height, setselectedFraction_outside_mount_height] = useState(null);
-    const [fractionIndex_outside_mount_height, setFractionIndex_outside_mount_height] = useState(false);
+    const [fractionIndex_outside_mount_height, setFractionIndex_outside_mount_height] = useState(null);
     const fractions_outside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_outside_mount_height = () => {
@@ -364,7 +364,7 @@ function ZebraBlinds() {
 
     //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS WIDTH
     const [selectedFraction_width_outside_mount_width, setselectedFraction_outside_mount_width] = useState(null);
-    const [fractionIndex_outside_mount_width, setfractionIndex_outside_mount_width] = useState(false);
+    const [fractionIndex_outside_mount_width, setfractionIndex_outside_mount_width] = useState(null);
     const fractions_outside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
 
     const handle_drop_down_show_fractions_outside_mount_width = () => {
@@ -392,7 +392,7 @@ function ZebraBlinds() {
     //1. //  ellipse logic
     const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
 
-    const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('');
+    const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('Inside Mount');
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
 
 
@@ -493,7 +493,6 @@ function ZebraBlinds() {
 
     // CHOOSE CASSSETTE OR ROUND LOGIC 
     const [active_cassette_round1, Setactive_cassette_round1] = useState(null);
-    const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
 
     const handleactive_cassette_round1Ellipses = (ellipseNumber) => {
 
@@ -519,6 +518,12 @@ function ZebraBlinds() {
 
     //logic 
 
+    const [active_cassette_round1RenderingContent, Setactive_cassette_round1RenderingContent] = useState('');
+    const [bottomRailOptions1RenderingContent, setbottomRailOptions1RenderingContent] = useState('');
+    const [bottomRailOptions2RenderingContent, setbottomRailOptions2RenderingContent] = useState('');
+
+
+
     const Rounded_Top_Cassette_With_Fabric_Insert = [
         { key: 'Beige With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric' },
         { key: 'Black With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric' },
@@ -527,7 +532,7 @@ function ZebraBlinds() {
         { key: 'White With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric' },
         // Add more image data as needed
     ];
-    
+
     const Square_Top_Aluminum = [
         { key: 'Beige Aluminum ', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum' },
         { key: 'Black Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum' },
@@ -536,7 +541,7 @@ function ZebraBlinds() {
         { key: 'White Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum' },
         // Add more image data as needed
     ];
-    
+
     const Bottom_Rail_Square_With_Fabric_Insert = [
         { key: 'Beige  With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric' },
         { key: 'Black With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric' },
@@ -545,7 +550,7 @@ function ZebraBlinds() {
         { key: 'White With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric' },
         // Add more image data as needed
     ];
-    
+
     const Bottom_Oval_Rail_Aluminum = [
         { key: 'Beige Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum' },
         { key: 'Black Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum' },
@@ -554,7 +559,7 @@ function ZebraBlinds() {
         { key: 'White Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum' },
         // Add more image data as needed
     ];
-    
+
 
     const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
     const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
@@ -562,11 +567,13 @@ function ZebraBlinds() {
 
     const Rounded_Top_Cassette_With_Fabric_Insert_function = Rounded_Top_Cassette_With_Fabric_Insert.find(imageData => imageData.key === selected_head_rail_color);
 
+    const Square_Top_Aluminum_function = Square_Top_Aluminum.find(imageData => imageData.key === selected_head_rail_color);
+
+
     const Bottom_Rail_Square_With_Fabric_Insert_function = Bottom_Rail_Square_With_Fabric_Insert.find(imageData => imageData.key === selected_bottom_rail_color);
 
     const Bottom_Oval_Rail_Aluminum_function = Bottom_Oval_Rail_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
 
-    const Square_Top_Aluminum_function = Square_Top_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
 
 
     const handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function = (imageName) => {
@@ -575,12 +582,12 @@ function ZebraBlinds() {
     };
     const handleRender_Bottom_Rail_Square_With_Fabric_Insert_function = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
     };
 
     const handleRender_Bottom_Oval_Rail_Aluminum_function = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
     const handleRender_Square_Top_Aluminum_function = (imageName) => {
         const baseClassName = styles[imageName];
@@ -604,10 +611,6 @@ function ZebraBlinds() {
 
 
     // EXTRA OPTIONS LOGIC 
-
-    const [bottomRailOptions1RenderingContent, setbottomRailOptions1RenderingContent] = useState('');
-    const [bottomRailOptions2RenderingContent, setbottomRailOptions2RenderingContent] = useState('');
-
     const [active_bottom_rail_option_1_ellipse, setactive_bottom_rail_option_1_ellipse] = useState(null);
     const [active_bottom_rail_option_2_ellipse, setactive_bottom_rail_option_2_ellipse] = useState(null);
     const handleEllipseClick5 = (ellipseNumber) => {
@@ -1281,15 +1284,17 @@ function ZebraBlinds() {
                                             <div className={styles.selectedImageContainer}>
                                                 {selectedMaterial ? (
                                                     <>
-                                                        <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
-                                                        <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
-                                                            <Image
-                                                                className={styles.image_itself1}
-                                                                src={selectedMaterial.src}
-                                                                alt='image'
-                                                                width={100}
-                                                                height={100}
-                                                            />
+                                                        <div className={styles.imageContainer2_wrapper}>
+                                                            <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
+                                                                <Image
+                                                                    className={styles.image_itself1}
+                                                                    src={selectedMaterial.src}
+                                                                    alt='image'
+                                                                    width={100}
+                                                                    height={100}
+                                                                />
+                                                            </div>
+                                                            <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
                                                         </div>
                                                     </>
                                                 ) : (
@@ -1512,7 +1517,6 @@ function ZebraBlinds() {
 
 
                         <div>
-                            insert fabrics page here
                             <div>
                                 <div className={styles.select_head_rail_group}>
 
@@ -1601,12 +1605,12 @@ function ZebraBlinds() {
 
 
                                                 <div>
-                                                    
+
                                                     <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}></div>
                                                     {active_skip_head_rail_ellipse ? null : (
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
                                                             <div className={styles.fabric_list_top_list1}>
-                                                            <div className={styles.pick_head_rail_color_subtitle}>rounded with fabric</div>
+                                                                <div className={styles.pick_head_rail_color_subtitle}>rounded with fabric</div>
 
                                                                 {Rounded_Top_Cassette_With_Fabric_Insert.map((imageData) => (
                                                                     <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
@@ -1634,7 +1638,7 @@ function ZebraBlinds() {
                                                             </div>
 
                                                             <div className={styles.fabric_list_top_list2}>
-                                                            <div className={styles.pick_head_rail_color_subtitle}>rounded without fabric</div>
+                                                                <div className={styles.pick_head_rail_color_subtitle}>rounded without fabric</div>
 
                                                                 {Square_Top_Aluminum.map((imageData) => (
                                                                     <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
@@ -1678,7 +1682,7 @@ function ZebraBlinds() {
                                                         <div className={styles.ellipse_and_title}>
 
                                                             <div className={`${styles.skip_bottom_rail_ellipse} ${active_skip_bottom_rail_ellipse ? styles.active_skip_bottom_rail_ellipse : ''}`}
-                                                                onClick={handleRender_Bottom_Oval_Rail_Aluminum_function}
+                                                                onClick={handleEllipseClickSkipBottomRailColor}
                                                             ></div>
                                                             <div className={styles.skip_bottom_rail_color}>Skip Bottom Rail Type
                                                             </div>
@@ -1693,9 +1697,12 @@ function ZebraBlinds() {
                                                     <div>
                                                         <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}></div>
                                                         {active_skip_bottom_rail_ellipse ? null : (
+
                                                             <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
+
+
                                                                 <div className={styles.fabric_list_bottom_list1}>
-                                                                <div className={styles.pick_head_rail_color_subtitle}>oval with fabric</div>
+                                                                    <div className={styles.pick_head_rail_color_subtitle}>oval with fabric</div>
 
                                                                     {Bottom_Rail_Square_With_Fabric_Insert.map((imageData) => (
 
@@ -1726,7 +1733,7 @@ function ZebraBlinds() {
                                                                 </div>
 
                                                                 <div className={styles.fabric_list_bottom_list2}>
-                                                                <div className={styles.pick_head_rail_color_subtitle}>oval without fabric</div>
+                                                                    <div className={styles.pick_head_rail_color_subtitle}>oval without fabric</div>
 
                                                                     {Bottom_Oval_Rail_Aluminum.map((imageData) => (
 
@@ -1737,7 +1744,7 @@ function ZebraBlinds() {
                                                                                     alt="image"
                                                                                     width={100}
                                                                                     height={100}
-                                                                                    className={handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function(imageData.key)}
+                                                                                    className={handleRender_Bottom_Oval_Rail_Aluminum_function(imageData.key)}
                                                                                     src={imageData.src}
                                                                                     onClick={() => {
                                                                                         if (!active_skip_bottom_rail_ellipse) {
@@ -1801,31 +1808,6 @@ function ZebraBlinds() {
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <div className={styles.answers_div}>
-                                    <div className={styles.head_rail_color_answer}>
-                                        {Rounded_Top_Cassette_With_Fabric_Insert_function ? Rounded_Top_Cassette_With_Fabric_Insert_function.label : ''}
-                                        {Square_Top_Aluminum_function ? Square_Top_Aluminum_function.label : ''}
-                                        {Bottom_Oval_Rail_Aluminum_function ? Bottom_Oval_Rail_Aluminum_function.label : ''}
-                                        {Bottom_Rail_Square_With_Fabric_Insert_function ? Bottom_Rail_Square_With_Fabric_Insert_function.label : ''}
-
-                                    </div>
-
-                                    <div className={styles.bottom_rail_color_answer}>
-                                    </div>
-
-                                    <div className={styles.casette_head_rail_type_answer}>
-                                        {active_cassette_round1RenderingContent}
-                                    </div>
-
-                                    <div className={styles.bottom_rail_type_answer}>
-                                        {bottomRailOptions1RenderingContent}
-                                    </div>
-                                    <div className={styles.bottom_rail_type_answer}>
-                                        {bottomRailOptions2RenderingContent}
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -1853,122 +1835,132 @@ function ZebraBlinds() {
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.window_name}>Window Name:
+                                        <div className={styles.window_name_answer}>Window Name:
                                         </div>
-                                        <div className={styles.window_name_answer}>
+                                        <div className={styles.answers_answers}>
                                             {product_title}
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.window_type}>Window Type:</div>
-                                        <div className={styles.window_type_answer}>
+                                        <div className={styles.window_type_answer}>Window Type:</div>
+                                        <div className={styles.answers_answers}>
                                             {roomDarkeningContent}
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.widthbom}>Inside Mount Width:</div>
-                                        <div className={styles.width2_answer}>
-                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span>{" (Inches width),"}<span></span></p>
-                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span>{" (Fractions width)"}<span></span></p>
+                                        <div className={styles.width2_answer}>Window Size:</div>
+                                        <div className={styles.answers_answers}>
+                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_inside_mount_width}</span><span></span></p>
+                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span><span></span></p>
+                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span><span></span></p>
+                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span><span></span></p>
+                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span><span></span></p>
+                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height_inside_mount}</span><span></span></p>
+                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_outside_mount}</span><span></span></p>
+                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_outside_mount_height}</span><span></span></p>
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.widthbom}>Outside Mount Width:</div>
-                                        <div className={styles.width2_answer}>
-                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span>{" (Inches width),"}<span></span></p>
-                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span>{" (Fractions width)"}<span></span></p>
-                                        </div>
-                                    </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
-                                    <div className={styles.description_and_answer}>
-                                        <div className={styles.heightbom}>Inside Mount Height:</div>
-                                        <div className={styles.height2Answer}>
-                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span>{" (Inches)height,"}<span></span></p>
-                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height_inside_mount}</span>{" (Fractions)height"}<span></span></p>
-                                        </div>
-                                    </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
-                                    <div className={styles.description_and_answer}>
-                                        <div className={styles.heightbom}>Outside Mount Height:</div>
-                                        <div className={styles.height2Answer}>
-                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_outside_mount}</span>{" (Inches)height,"}<span></span></p>
-                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_outside_mount_height}</span>{" (Fractions)height"}<span></span></p>
-                                        </div>
-                                    </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
-                                    <div className={styles.description_and_answer}>
-                                        <div className={styles.mount}>Mount:</div>
-                                        <div className={styles.mount_answer}>
+                                        <div className={styles.mount_answer}>Mount:</div>
+                                        <div className={styles.answers_answers}>
                                             {InsideOrOutsideRenderingContent}
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.materialsbom}>Material:</div>
-                                        <div className={styles.materials_answer_head_rail}>
+                                        <div className={styles.materials_answer}>Material:</div>
+
+                                        <div className={styles.answers_answers}>
                                             {selectedFileNameMaterials ? `Color: ${selectedFileNameMaterials}` : "Please Select A Color"}
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
+
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.lift_type}>Lift Type:</div>
-                                        <div className={styles.lift_type_answer}>
-                                            {active_wand_cordless_motorizedRenderingContent}
+                                        <div className={styles.lift_type_answer}>Lift Type:</div>
+                                        <div className={styles.answers_answers}>
+                                        {active_wand_cordless_motorizedRenderingContent ? `Color: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                    </div>
+                                    </div>
+
+
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.head_rail_type_answer}>Rail Type:</div>
+                                        <div className={styles.answers_answers}>
+
+                                        {active_cassette_round1RenderingContent ? `Color: ${active_cassette_round1RenderingContent}` : "Please Select Rail Type"}
+                                    </div>
+                                    </div>
+
+
+                                    <span
+                                        className={styles.bill_divider}>
+                                    </span>
+
+                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
+                                        <div className={styles.answers_answers}>
+                                        {Rounded_Top_Cassette_With_Fabric_Insert_function ? `Color: ${Rounded_Top_Cassette_With_Fabric_Insert_function.label}` : "Please Select Cassette Choice"}
+
+                                        {Square_Top_Aluminum_function ? `Color: ${Square_Top_Aluminum_function.label}` : ""}
                                         </div>
                                     </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
-                                    <div className={styles.description_and_answer}>
-                                        <div className={styles.casette_head_rail_type}> Head Rail Type:</div>
-                                    </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
+
                                     <div className={styles.description_and_answer}>
 
-                                        <div className={styles.head_rail_color}>Head Rail Color:</div>
-                                    </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
-                                    <div className={styles.description_and_answer}>
+                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
 
-                                        <div className={styles.bottom_rail_color}>Bottom Rail Color:</div>
+                                        <div className={styles.answers_answers}>
+                                        {Bottom_Rail_Square_With_Fabric_Insert_function ? `Color: ${Bottom_Rail_Square_With_Fabric_Insert_function.label}` : "Please Select Bottom Rail Choice"}
+
+                                        {Bottom_Oval_Rail_Aluminum_function ? `Color: ${Bottom_Oval_Rail_Aluminum_function.label}` : ""}
+                                        </div>
                                     </div>
-                                    <span
-                                        className={styles.bill_divider}>
-                                    </span>
-                                    <div className={styles.description_and_answer}>
-                                        <div className={styles.bottom_rail_type}>Bottom Rail Type:</div>
-                                    </div>
+
                                     <span
                                         className={styles.bill_divider}>
                                     </span>
 
                                 </div>
+
+
                             </div>
                         </div>
+
+
+                      
 
 
 

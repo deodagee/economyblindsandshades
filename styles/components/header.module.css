@@ -28,6 +28,12 @@
   color: rgb(78, 78, 78);
 }
 
+
+.header_top_image { 
+display: flex;
+}
+
+
 .header_top_bar {
   list-style: none;
   display: flex;
