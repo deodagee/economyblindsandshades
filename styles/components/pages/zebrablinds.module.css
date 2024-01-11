@@ -25,7 +25,7 @@
   width: 100vw;
   height: max-content;
   margin-top: 200px;
-  
+
 }
 
 
@@ -154,7 +154,7 @@
 
 
 
-.qty_group { 
+.qty_group {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -162,7 +162,7 @@
   justify-content: center;
 }
 
-.qty_group_part1 { 
+.qty_group_part1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,7 +176,7 @@
   font-size: 15px;
 }
 
-.quantity_rectangle_and_numbers { 
+.quantity_rectangle_and_numbers {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -184,7 +184,7 @@
   justify-content: center;
 }
 
-.quantity_rectangle { 
+.quantity_rectangle {
   display: flex;
   height: 30px;
   width: 100px;
@@ -193,12 +193,12 @@
   justify-content: center;
   flex-direction: row;
   gap: 10px;
- border-radius: 0.15rem;
- box-shadow: rgb(161, 161, 161) 0px 0px 5px;
- transition: 0.3s;
+  border-radius: 0.15rem;
+  box-shadow: rgb(161, 161, 161) 0px 0px 5px;
+  transition: 0.3s;
 }
 
-.quantity_rectangle:hover { 
+.quantity_rectangle:hover {
   transform: scale(1.05);
   transition: 0.3s;
   box-shadow: rgb(109, 109, 109) 0px 0px 5px;
@@ -209,7 +209,7 @@
   display: flex;
 }
 
-.qty_number  { 
+.qty_number {
   display: flex;
 }
 
@@ -239,9 +239,12 @@
   align-items: center;
   justify-content: space-evenly;
   width: 900px;
-  background: linear-gradient(to right, #ffffff,#f4f4f4,  #f4f4f4, #f5f5f5, #f7f7f7, #ffffff);
   height: max-content;
-
+  background: linear-gradient(to top, #f0f0f0, #fbfbfb, #f0f0f0);
+  height: max-content;
+  border-radius: 0.25rem;
+  padding-bottom: 20px;
+  padding: 10px;
 }
 
 .titled_step_combo_head {
@@ -261,7 +264,7 @@
   width: 850px;
   height: 35px;
   border-radius: 2rem;
-  background: linear-gradient(to right, #ffffff, #efefef, #9e9e9e, #f7f7f7);
+  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #f8f8f8);
   justify-content: start;
 }
 
@@ -325,10 +328,11 @@
 
 .left_right_inside_mount {
   width: 850px;
+  height: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -342,7 +346,6 @@
 
 .left_inside_mount {
   display: flex;
-  height: 500px;
   margin-top: 30px;
 }
 
@@ -407,8 +410,9 @@
 .inside_mount_measurement_instructions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   color: white;
+  height: max-content;
 }
 
 .measurement_instructions_title_inside_mount {
@@ -454,12 +458,28 @@
   justify-content: center;
 }
 
+.step_tag_description_wrapper { 
+  display: flex;
+  flex-direction: column;
+}
+
+.step_tag_description_note { 
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  width: 300px;
+  background-color: rgb(249, 249, 249);
+  padding: 5px;
+  font-size: 10px;
+  color: black;
+}
+
 .step_tag_description {
   display: flex;
   align-items: center;
   justify-content: left;
   text-align: left;
-  height: 100px;
   width: 300px;
   background-color: rgb(249, 249, 249);
   padding: 5px;
@@ -550,7 +570,7 @@
   gap: 10px;
 }
 
-.choose_height_image_placeholder { 
+.choose_height_image_placeholder {
   display: flex;
   height: 100px;
   width: 150px;
@@ -603,9 +623,10 @@
   transition: 0.3s;
   border-radius: 0.35rem;
 }
-.toggle_disclaimer_inches_inside_mount_height:hover { 
+
+.toggle_disclaimer_inches_inside_mount_height:hover {
   background-color: rgb(159, 159, 159);
-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .polygon_1 {
@@ -721,7 +742,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_fractions_inside_mount_height:hover { 
+.toggle_disclaimer_fractions_inside_mount_height:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -875,10 +896,12 @@ transition: 0.3s;
   transition: 0.3s;
   border-radius: 0.35rem;
 }
-.toggle_disclaimer_inches_inside_mount_width:hover { 
+
+.toggle_disclaimer_inches_inside_mount_width:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
+
 .polygon_3 {
   display: flex;
   transform: rotate(180deg);
@@ -992,7 +1015,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_fractions_inside_mount_width:hover { 
+.toggle_disclaimer_fractions_inside_mount_width:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -1094,7 +1117,7 @@ transition: 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -1122,12 +1145,12 @@ transition: 0.3s;
 }
 
 
-
 .outside_mount_measurement_instructions {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   color: white;
+  height: max-content;
 }
 
 .measurement_instructions_title_outside_mount {
@@ -1146,8 +1169,7 @@ transition: 0.3s;
 }
 
 .step_1_outside_mount,
-.step_2_outside_mount,
-.step_3_outside_mount {
+.step_2_outside_mount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1157,7 +1179,6 @@ transition: 0.3s;
   height: 120px;
   padding: 10px;
   background-color: rgb(235, 235, 235);
-
 }
 
 
@@ -1193,7 +1214,7 @@ transition: 0.3s;
   align-items: center;
   justify-content: center;
   width: 800px;
-  height: 300px;
+  height: max-content;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 50pxs;
@@ -1298,7 +1319,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_inches_height_outside_mount:hover { 
+.toggle_disclaimer_inches_height_outside_mount:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -1417,7 +1438,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_height_fractions_outside_mount:hover { 
+.toggle_disclaimer_height_fractions_outside_mount:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -1571,7 +1592,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_inches_width_outside_mount:hover { 
+.toggle_disclaimer_inches_width_outside_mount:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -1688,7 +1709,7 @@ transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_width_fractions_outside_mount:hover { 
+.toggle_disclaimer_width_fractions_outside_mount:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
@@ -1797,7 +1818,7 @@ transition: 0.3s;
   width: 850px;
   height: 35px;
   border-radius: 2rem;
-  background: linear-gradient(to right, #ffffff, #efefef, #9e9e9e, #f7f7f7);
+  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #ffffff);
   justify-content: start;
 }
 
@@ -1903,7 +1924,7 @@ transition: 0.3s;
   width: 200px;
 }
 
-.selectedImage { 
+.selectedImage {
   display: flex;
 }
 
@@ -1941,10 +1962,10 @@ transition: 0.3s;
   justify-content: center;
 }
 
-.imageContainer2_wrapper { 
-display: flex;
-flex-direction: column;
-align-items: center;
+.imageContainer2_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -1966,12 +1987,12 @@ align-items: center;
   align-items: center;
   justify-content: center;
   color: rgb(0, 0, 0);
-font-size: 12px;
-background-color: white;
-width: 100px;
-padding: 2px;
-padding-left: 5px;
-padding-right: 5px;
+  font-size: 12px;
+  background-color: white;
+  width: 100px;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .image_itself1 {
@@ -2189,7 +2210,7 @@ padding-right: 5px;
   width: 850px;
   height: 35px;
   border-radius: 2rem;
-  background: linear-gradient(to right, #ffffff, #efefef, #9e9e9e, #f7f7f7);
+  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #ffffff);
   justify-content: start;
 }
 
@@ -2243,7 +2264,7 @@ padding-right: 5px;
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.ellipse_and_type_add_lift_feature { 
+.ellipse_and_type_add_lift_feature {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -2385,7 +2406,7 @@ padding-right: 5px;
   padding: 20px;
   gap: 50px;
   height: 420px;
-  
+
 }
 
 .wand_option_group {
@@ -2451,12 +2472,13 @@ padding-right: 5px;
   color: grey;
 }
 
-.select_chainparagraph { 
+.select_chainparagraph {
   display: flex;
   font-size: 10px;
   width: 200px;
 }
-.select_chain_options1 { 
+
+.select_chain_options1 {
   display: flex;
   margin-left: 20px;
 }
@@ -2525,14 +2547,14 @@ padding-right: 5px;
   color: green;
 }
 
-.cord_less_option_image_placeholder { 
+.cord_less_option_image_placeholder {
   display: flex;
   width: 200px;
   height: 140px;
   background-color: grey;
 }
 
-.select_chain_options2 { 
+.select_chain_options2 {
   display: flex;
   margin-left: 20px;
 }
@@ -2641,7 +2663,7 @@ padding-right: 5px;
   width: 850px;
   height: 35px;
   border-radius: 2rem;
-  background: linear-gradient(to right, #ffffff, #efefef, #9e9e9e, #f7f7f7);
+  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #ffffff);
   justify-content: start;
 }
 
@@ -2704,7 +2726,7 @@ padding-right: 5px;
   margin: 10px;
 }
 
-.ellipse_and_type_head_and_bottom_rail { 
+.ellipse_and_type_head_and_bottom_rail {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -2727,7 +2749,7 @@ padding-right: 5px;
   align-items: center;
   justify-content: flex-start;
   width: 850px;
-  background: linear-gradient(to right, #ffffff,#f4f4f4,  #ebebeb, #f5f5f5, #f7f7f7, #ffffff);
+  background: linear-gradient(to right, #ffffff, #f4f4f4, #ebebeb, #f5f5f5, #f7f7f7, #ffffff);
   height: 120px;
   padding: 20px;
   border-radius: 0.35rem;
@@ -2845,21 +2867,21 @@ padding-right: 5px;
   flex-direction: column;
   height: max-content;
   border-width: 2px;
-border-color: rgb(205, 205, 205);
-border-radius: 0.56rem;
-transition: 0.3s;
+  border-color: rgb(205, 205, 205);
+  border-radius: 0.56rem;
+  transition: 0.3s;
 
 }
 
 
 
 .fabric_types_top_and_bottom_second_wrapper:hover {
-border-color: rgb(234, 234, 234);
-background-color: rgb(240, 240, 240);
-transform: scale(1.002);
-transition: 0.3s;
-border-width: 1px;
-box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+  border-color: rgb(234, 234, 234);
+  background-color: rgb(240, 240, 240);
+  transform: scale(1.002);
+  transition: 0.3s;
+  border-width: 1px;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 
 }
 
@@ -2881,10 +2903,12 @@ box-shadow: rgb(80, 80, 80) 0px 0px 5px;
   justify-content: start;
 
 }
+
 .skip_head_rail_image_placeholder_invisible {
   display: none;
 }
-.skip_head_rail_image_placeholder_visible { 
+
+.skip_head_rail_image_placeholder_visible {
   width: 800px;
   height: 150px;
   display: flex;
@@ -2907,7 +2931,7 @@ box-shadow: rgb(80, 80, 80) 0px 0px 5px;
   margin: 20px;
 }
 
-.selected_head_rail_color { 
+.selected_head_rail_color {
   border-width: 2px;
   border-color: rgb(132, 132, 132);
   padding: 2px;
@@ -2917,7 +2941,7 @@ box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 
 }
 
-.selected_bottom_rail_color { 
+.selected_bottom_rail_color {
   border-width: 2px;
   border-color: rgb(132, 132, 132);
   padding: 2px;
@@ -2927,12 +2951,12 @@ box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 
 }
 
-.fabric_list_top_list1 { 
+.fabric_list_top_list1 {
   display: flex;
   flex-direction: row;
 }
 
-.fabric_list_top_list2{ 
+.fabric_list_top_list2 {
   display: flex;
   flex-direction: row;
 }
@@ -2978,7 +3002,7 @@ box-shadow: rgb(80, 80, 80) 0px 0px 5px;
   background-color: rgb(197, 197, 197);
   border-radius: 0.35rem;
   border-width: 1px;
-border-color: grey;
+  border-color: grey;
 }
 
 .pick_head_rail_color_subtitle {
@@ -3036,7 +3060,8 @@ border-color: grey;
 .skip_bottom_rail_image_placeholder_invisible {
   display: none;
 }
-.skip_bottom_rail_image_placeholder_visible { 
+
+.skip_bottom_rail_image_placeholder_visible {
   width: 800px;
   height: 150px;
   display: flex;
@@ -3062,12 +3087,12 @@ border-color: grey;
 }
 
 
-.fabric_list_bottom_list1 { 
+.fabric_list_bottom_list1 {
   display: flex;
   flex-direction: row;
 }
 
-.fabric_list_bottom_list2 { 
+.fabric_list_bottom_list2 {
   display: flex;
   flex-direction: row;
 }
@@ -3121,7 +3146,7 @@ border-color: grey;
   background-color: rgb(197, 197, 197);
   border-radius: 0.35rem;
   border-width: 1px;
-border-color: grey;
+  border-color: grey;
 }
 
 
@@ -3189,7 +3214,7 @@ border-color: grey;
 .extra_options_set_second_wrapper {
   display: none;
   width: 850px;
-  gap:5px;
+  gap: 5px;
 }
 
 .extra_options_set {
@@ -3306,49 +3331,49 @@ border-color: grey;
 }
 
 
-.window_name_answer { 
+.window_name_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.window_type_answer { 
+.window_type_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.width2_answer { 
+.width2_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.height2Answer  { 
+.height2Answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.mount_answer { 
+.mount_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.materials_answer { 
+.materials_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.head_rail_type_answer { 
+.head_rail_type_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
-.lift_type_answer { 
+.lift_type_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
@@ -3363,20 +3388,22 @@ border-color: grey;
 .casette_rail_type_answer {
   width: 150px;
   display: flex;
-  flex-direction: column;}
+  flex-direction: column;
+}
 
 .bottom_rail_type_answer {
   width: 150px;
   display: flex;
-  flex-direction: column;}
+  flex-direction: column;
+}
 
 
-  .answers_answers { 
-    display: flex;
-    flex-direction: row;
-    width: 200px;
-    gap: 10px;
-  }
+.answers_answers {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  gap: 10px;
+}
 
 
 .select_head_rail_seperator_line {
@@ -3389,6 +3416,7 @@ border-color: grey;
   background-color: rgb(122, 122, 122);
   border-radius: 0.56rem;
 }
+
 /* End of Fabrics Page */
 .quantity_seperator_line {
   display: flex;
@@ -3539,15 +3567,15 @@ border-color: grey;
   width: 850px;
   align-items: center;
   justify-content: center;
-  margin-top: 50pxs;
+  margin-top: 50px;
 }
 
-.shipping_details_title_wrapper { 
+.shipping_details_title_wrapper {
   display: flex;
   flex-direction: row;
 }
 
-.shipping_tagger { 
+.shipping_tagger {
   display: flex;
   flex-direction: row;
 }

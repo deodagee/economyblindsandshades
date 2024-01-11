@@ -674,12 +674,12 @@ function ZebraBlinds() {
                         </div>
 
                         <div
-                                className={styles.a_distinctive_look_that}
-                            >
-                                A distinctive look that makes a statement, this revolutionary sheer shade
-                                adds personality to any room. These zebra shades are made with two pieces
-                                of fabric, which both have alternating panels/bands:
-                            </div>
+                            className={styles.a_distinctive_look_that}
+                        >
+                            A distinctive look that makes a statement, this revolutionary sheer shade
+                            adds personality to any room. These zebra shades are made with two pieces
+                            of fabric, which both have alternating panels/bands:
+                        </div>
 
 
                         <div className={styles.top_divider_line}></div>
@@ -745,7 +745,8 @@ function ZebraBlinds() {
                                                 >
                                                     <p className={styles.step_tag}> Step 1:</p>
                                                     <p className={styles.step_tag_description}>
-                                                        Measure in 3 places on the width, use the smallest measurement.
+                                                        Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
+                                                        (If You Do Not Have 3” Ledge Follow Outside Mount Process).
                                                     </p>
                                                 </div>
 
@@ -754,7 +755,8 @@ function ZebraBlinds() {
                                                 >
                                                     <p className={styles.step_tag}>  Step 2:</p>
                                                     <p className={styles.step_tag_description}>
-                                                        Measure the Height in the Center, use this measurement.
+                                                        Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
+                                                        (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
                                                     </p>
                                                 </div>
 
@@ -764,7 +766,8 @@ function ZebraBlinds() {
                                                 >
                                                     <p className={styles.step_tag}> Step 3: </p>
                                                     <p className={styles.step_tag_description}>
-                                                        Ensure you have 3” inside the window frame ledge. (If you don’t have 3” window Ledge follow process for outside mount).
+                                                        Vertical Direction (Height) Measure Inside Window Frame Centre.
+                                                        (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
                                                     </p>
                                                 </div>
                                             </span>
@@ -781,30 +784,30 @@ function ZebraBlinds() {
 
                                 <div className={styles.enter_size_inside_mount_group}>
 
-                                <div className={styles.qty_group}>
-                                <div className={styles.qty_group_part1}>
-                            <div className={styles.quantity_title}>QUANTITY</div>
-                            <div className={styles.quantity_rectangle_and_numbers}>
+                                    <div className={styles.qty_group}>
+                                        <div className={styles.qty_group_part1}>
+                                            <div className={styles.quantity_title}>QUANTITY</div>
+                                            <div className={styles.quantity_rectangle_and_numbers}>
 
-                                <div className={styles.quantity_rectangle}>
-                                        <div className={styles.qty}>QTY</div>
-                                        <div className={styles.qty_number}>1</div>
-                                </div>
+                                                <div className={styles.quantity_rectangle}>
+                                                    <div className={styles.qty}>QTY</div>
+                                                    <div className={styles.qty_number}>1</div>
+                                                </div>
 
-                                <div>
-                                    <span>
-                                        <div className={styles.quantity_is_always_1_wrapper}>
-                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                                <div>
+                                                    <span>
+                                                        <div className={styles.quantity_is_always_1_wrapper}>
+                                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                                        </div>
+
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                    </span>
-                                </div>
-                            </div>
-                            </div>
-                            <div className={styles.qty_group_part2}>
-                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                            </div>
-                        </div>
+                                        <div className={styles.qty_group_part2}>
+                                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                                        </div>
+                                    </div>
 
 
 
@@ -1020,28 +1023,27 @@ function ZebraBlinds() {
 
                                                 <div className={styles.step_1_outside_mount}>
                                                     <p className={styles.step_tag}> Step 1: </p>
+                                                    <span className={styles.step_tag_description_wrapper}>
                                                     <p className={styles.step_tag_description}>
-                                                        Measure the width including window trim – Then ADD 4” to your dimension(This will ensure you are past the trim 2” on each side for overlap), use this measurement.
+                                                        Horizontal Direction (Width) Measure Width Including Window Trim In The Center
+                                                        (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
                                                     </p>
+                                                    <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
+                                                    </p>
+                                                    </span>
                                                 </div>
 
                                                 <div
                                                     className={styles.step_2_outside_mount}
                                                 >
                                                     <p className={styles.step_tag}> Step 2: </p>
+                                                    <span className={styles.step_tag_description_wrapper}>
                                                     <p className={styles.step_tag_description}>
-                                                        Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
+                                                        Vertical Direction (Height) Measure Height Including Window Trim In The Center
+                                                        (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
                                                     </p>
-                                                </div>
-
-
-                                                <div
-                                                    className={styles.step_3_outside_mount}
-                                                >
-                                                    <p className={styles.step_tag}> Step 3: </p>
-                                                    <p className={styles.step_tag_description}>
-                                                        Measure the height in the center including window trim, Then ADD 5-1/2” to your dimension(This will ensure you are past the trim to allow top cassette mount & bottom overlap), use this measurement.
-                                                    </p>
+                                                    <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1057,6 +1059,34 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.enter_size_outside_mount_group}>
+                                    
+                                    
+                                <div className={styles.qty_group}>
+                                        <div className={styles.qty_group_part1}>
+                                            <div className={styles.quantity_title}>QUANTITY</div>
+                                            <div className={styles.quantity_rectangle_and_numbers}>
+
+                                                <div className={styles.quantity_rectangle}>
+                                                    <div className={styles.qty}>QTY</div>
+                                                    <div className={styles.qty_number}>1</div>
+                                                </div>
+
+                                                <div>
+                                                    <span>
+                                                        <div className={styles.quantity_is_always_1_wrapper}>
+                                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                                        </div>
+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className={styles.qty_group_part2}>
+                                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                                        </div>
+                                    </div>
+
+
                                     <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
                                     <div className={styles.enter_height_and_width_outside_mount_group}>
 
@@ -1899,8 +1929,8 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.lift_type_answer}>Lift Type:</div>
                                         <div className={styles.answers_answers}>
-                                        {active_wand_cordless_motorizedRenderingContent ? `Color: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
-                                    </div>
+                                            {active_wand_cordless_motorizedRenderingContent ? `Color: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                        </div>
                                     </div>
 
 
@@ -1911,8 +1941,8 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.head_rail_type_answer}>Rail Type:</div>
                                         <div className={styles.answers_answers}>
-                                        {active_cassette_round1RenderingContent ? `Color: ${active_cassette_round1RenderingContent}` : "Please Select Rail Type"}
-                                    </div>
+                                            {active_cassette_round1RenderingContent ? `Color: ${active_cassette_round1RenderingContent}` : "Please Select Rail Type"}
+                                        </div>
                                     </div>
 
 
@@ -1923,9 +1953,9 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
                                         <div className={styles.answers_answers}>
-                                        {Rounded_Top_Cassette_With_Fabric_Insert_function ? `Color: ${Rounded_Top_Cassette_With_Fabric_Insert_function.label}` : "Please Select Cassette Choice"}
+                                            {Rounded_Top_Cassette_With_Fabric_Insert_function ? `Color: ${Rounded_Top_Cassette_With_Fabric_Insert_function.label}` : ""}
 
-                                        {Square_Top_Aluminum_function ? `Color: ${Square_Top_Aluminum_function.label}` : ""}
+                                            {Square_Top_Aluminum_function ? `Color: ${Square_Top_Aluminum_function.label}` : ""}
                                         </div>
                                     </div>
 
@@ -1938,9 +1968,9 @@ function ZebraBlinds() {
                                         <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
 
                                         <div className={styles.answers_answers}>
-                                        {Bottom_Rail_Square_With_Fabric_Insert_function ? `Color: ${Bottom_Rail_Square_With_Fabric_Insert_function.label}` : "Please Select Bottom Rail Choice"}
+                                            {Bottom_Rail_Square_With_Fabric_Insert_function ? `Color: ${Bottom_Rail_Square_With_Fabric_Insert_function.label}` : ""}
 
-                                        {Bottom_Oval_Rail_Aluminum_function ? `Color: ${Bottom_Oval_Rail_Aluminum_function.label}` : ""}
+                                            {Bottom_Oval_Rail_Aluminum_function ? `Color: ${Bottom_Oval_Rail_Aluminum_function.label}` : ""}
                                         </div>
                                     </div>
 
@@ -1955,7 +1985,7 @@ function ZebraBlinds() {
                         </div>
 
 
-                      
+
 
 
 
