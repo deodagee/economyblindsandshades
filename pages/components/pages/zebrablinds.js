@@ -31,12 +31,24 @@ function ZebraBlinds() {
     ];
 
     const [selectedMaterial, setSelectedMaterial] = useState(null);
-    const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
+    const [selectedFabric, setselectedFabric] = useState(null);
 
+
+    const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
+    const [selectedFileNameFabric, setselectedFileNameFabric] = useState(null);
+
+    
     const handleSelectMaterial = (key, src, label) => {
         console.log(`Clicked on file: ${src}`);
         setSelectedMaterial({ key, src, label });
         setselectedFileNameMaterials(`${key} - ${label}`); // Combine key and label
+    };
+
+    
+    const handleSelectFabric = (key, src, label) => {
+        console.log(`Clicked on file: ${src}`);
+        setselectedFabric({ key, src, label });
+        setselectedFileNameFabric(`${key} - ${label}`); // Combine key and label
     };
 
 
@@ -111,6 +123,27 @@ function ZebraBlinds() {
 
     };
 
+    const render_fabric_section_images_on_viewer = (colorList1) => (
+        <>
+            <div className={styles.images_and_subtitles} key={colorList1[0].key}>
+                {colorList1.map((item) => (
+                    <div
+                        key={item.label}
+                        className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
+                        onClick={() => handleSelectFabric(item.key, item.src, item.label)} // Pass key, src, and label
+                        style={{
+                            border: selectedMaterial && selectedMaterial.src === item.src ? '2px solid black' : '2px solid transparent',
+                            padding: selectedMaterial && selectedMaterial.src === item.src ? '5px' : '0', // Add padding if selected
+                        }}
+                    >
+                        <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
+                        <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
+                        <p className={styles.selectedImageClass_label}>{item.label}</p>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 
     const renderColorList = (colorList) => (
         <>
@@ -580,6 +613,7 @@ function ZebraBlinds() {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
     };
+
     const handleRender_Bottom_Rail_Square_With_Fabric_Insert_function = (imageName) => {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
@@ -589,6 +623,7 @@ function ZebraBlinds() {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
+
     const handleRender_Square_Top_Aluminum_function = (imageName) => {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
@@ -1024,12 +1059,12 @@ function ZebraBlinds() {
                                                 <div className={styles.step_1_outside_mount}>
                                                     <p className={styles.step_tag}> Step 1: </p>
                                                     <span className={styles.step_tag_description_wrapper}>
-                                                    <p className={styles.step_tag_description}>
-                                                        Horizontal Direction (Width) Measure Width Including Window Trim In The Center
-                                                        (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
-                                                    </p>
-                                                    <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
-                                                    </p>
+                                                        <p className={styles.step_tag_description}>
+                                                            Horizontal Direction (Width) Measure Width Including Window Trim In The Center
+                                                            (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
+                                                        </p>
+                                                        <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
+                                                        </p>
                                                     </span>
                                                 </div>
 
@@ -1038,11 +1073,11 @@ function ZebraBlinds() {
                                                 >
                                                     <p className={styles.step_tag}> Step 2: </p>
                                                     <span className={styles.step_tag_description_wrapper}>
-                                                    <p className={styles.step_tag_description}>
-                                                        Vertical Direction (Height) Measure Height Including Window Trim In The Center
-                                                        (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
-                                                    </p>
-                                                    <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
+                                                        <p className={styles.step_tag_description}>
+                                                            Vertical Direction (Height) Measure Height Including Window Trim In The Center
+                                                            (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                                        </p>
+                                                        <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
                                                     </span>
                                                 </div>
                                             </div>
@@ -1059,9 +1094,9 @@ function ZebraBlinds() {
 
 
                                 <div className={styles.enter_size_outside_mount_group}>
-                                    
-                                    
-                                <div className={styles.qty_group}>
+
+
+                                    <div className={styles.qty_group}>
                                         <div className={styles.qty_group_part1}>
                                             <div className={styles.quantity_title}>QUANTITY</div>
                                             <div className={styles.quantity_rectangle_and_numbers}>
@@ -1310,6 +1345,20 @@ function ZebraBlinds() {
                                             <div className={styles.selectedImageContainer}>
                                                 {selectedMaterial ? (
                                                     <>
+
+                                                        <div className={styles.imageContainer2_wrapper}>
+                                                            <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
+                                                                <Image
+                                                                    className={styles.image_itself1}
+                                                                    src={selectedFabric.src}
+                                                                    alt='image'
+                                                                    width={100}
+                                                                    height={100}
+                                                                />
+                                                            </div>
+                                                            <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
+                                                        </div>
+
                                                         <div className={styles.imageContainer2_wrapper}>
                                                             <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
                                                                 <Image
@@ -1386,6 +1435,16 @@ function ZebraBlinds() {
                                             </div>
                                         ))}
                                     </div>
+                                    
+                                    <div className={styles.selectColorImageCollection}>
+                                        {Object.keys(colorData).map((color) => (
+                                            <div key={color} className={styles[color.toLowerCase()]}>
+                                                <p className={styles.color_section_title}>{color}</p>
+                                                {render_fabric_section_images_on_viewer(colorData[color])}
+                                            </div>
+                                        ))}
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1640,6 +1699,7 @@ function ZebraBlinds() {
 
                                                                 {Rounded_Top_Cassette_With_Fabric_Insert.map((imageData) => (
                                                                     <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+
                                                                         <div className={styles.fabric_list_top_image}>
                                                                             <Image
                                                                                 alt="image"
@@ -1656,6 +1716,7 @@ function ZebraBlinds() {
                                                                                 style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
                                                                             />
                                                                         </div>
+
                                                                         <div className={styles.fabric_list_top_image_description}>
                                                                             <div>{imageData.label}</div>
                                                                         </div>
