@@ -355,39 +355,20 @@ function ZebraBlinds() {
 
 
     const colorData = {
-        Beige: [
-            { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
-            { key: "Beige", src: '/BEIGE/ETB2002BEIGE.png', label: "ETB2-002" },
-            { key: "Beige", src: '/BEIGE/ETB3001BEIGE.png', label: "ETB3-001" },
-            { key: "Beige", src: '/BEIGE/ETB3002BEIGE.png', label: "ETB3-002" },
-            { key: "Beige", src: '/BEIGE/ETB3003BEIGE.png', label: "ETB3-003" },
-            { key: "Beige", src: '/BEIGE/ETB5003BEIGE.png', label: "ETB5-003" },
-            { key: "Beige", src: '/BEIGE/ETB6003BEIGE.png', label: "ETB6-003" },
-            { key: "Beige", src: '/BEIGE/ETB7001BEIGE.png', label: "ETB7-001" },
-            { key: "Beige", src: '/BEIGE/ETB8003BEIGE.png', label: "ETB8-003" },
-            { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
-            { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
-        ],
-        Black: [
-            { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
-            { key: "Black", src: '/BLACK/ETB4003BLACK.png', label: "ETB4-003" },
-            { key: "Black", src: '/BLACK/ETB4004BLACK.png', label: "ETB4-004" },
-            { key: "Black", src: '/BLACK/ETB5006BLACK.png', label: "ETB5-006" },
-            { key: "Black", src: '/BLACK/ETB5007BLACK.png', label: "ETB5-007" },
-            { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
-            { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
-        ],
-        Brown: [
-            { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
-            { key: "Brown", src: '/BROWN/ETB3007BROWN.png', label: "ETB3-007" },
-            { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
-            { key: "Brown", src: '/BROWN/ETB6004BROWN.png', label: "ETB6-004" },
-            { key: "Brown", src: '/BROWN/ETB7003BROWN.png', label: "ETB7-003" },
-            { key: "Brown", src: '/BROWN/ETB9004BROWN.png', label: "ETB9-004" },
-        ],
-        Bronze: [
-            { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
-            { key: "Bronze", src: '/BRONZE/ETB3006BRONZE.png', label: "ETB3-006" },
+        White: [
+            { key: "White", src: '/WHITE/ETB2001WHITE.png', label: "ETB2-001" },
+            { key: "White", src: '/WHITE/ETB4001WHITE.png', label: "ETB4-001" },
+            { key: "White", src: '/WHITE/ETB4002WHITE.png', label: "ETB4-002" },
+            { key: "White", src: '/WHITE/ETB5001WHITE.png', label: "ETB5-001" },
+            { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
+            { key: "White", src: '/WHITE/ETB6001WHITE.png', label: "ETB6-001" },
+            { key: "White", src: '/WHITE/ETB8001WHITE.png', label: "ETB8-001" },
+            { key: "White", src: '/WHITE/ETB8002WHITE.png', label: "ETB8-002" },
+            { key: "White", src: '/WHITE/ETB9001WHITE.png', label: "ETB9-001" },
+            { key: "White", src: '/WHITE/ETB14001WHITE.png', label: "ETB14-001" },
+            { key: "White", src: '/WHITE/ETB15001WHITE.png', label: "ETB15-001" },
+            { key: "White", src: '/WHITE/ETB16001WHITE.png', label: "ETB16-001" },
+            { key: "White", src: '/WHITE/ETB1001WHITE.png', label: "ETB1-001" },
         ],
         Grey: [
             { key: "Grey", src: '/GREY/ETB1004GREY.png', label: "ETB1-004" },
@@ -407,21 +388,45 @@ function ZebraBlinds() {
             { key: "Grey", src: '/GREY/ETB14003GREY.png', label: "ETB14-003" },
             { key: "Grey", src: '/GREY/ETB14005GREY.png', label: "ETB14-005" },
         ],
-        White: [
-            { key: "White", src: '/WHITE/ETB2001WHITE.png', label: "ETB2-001" },
-            { key: "White", src: '/WHITE/ETB4001WHITE.png', label: "ETB4-001" },
-            { key: "White", src: '/WHITE/ETB4002WHITE.png', label: "ETB4-002" },
-            { key: "White", src: '/WHITE/ETB5001WHITE.png', label: "ETB5-001" },
-            { key: "White", src: '/WHITE/ETB5002WHITE.png', label: "ETB5-002" },
-            { key: "White", src: '/WHITE/ETB6001WHITE.png', label: "ETB6-001" },
-            { key: "White", src: '/WHITE/ETB8001WHITE.png', label: "ETB8-001" },
-            { key: "White", src: '/WHITE/ETB8002WHITE.png', label: "ETB8-002" },
-            { key: "White", src: '/WHITE/ETB9001WHITE.png', label: "ETB9-001" },
-            { key: "White", src: '/WHITE/ETB14001WHITE.png', label: "ETB14-001" },
-            { key: "White", src: '/WHITE/ETB15001WHITE.png', label: "ETB15-001" },
-            { key: "White", src: '/WHITE/ETB16001WHITE.png', label: "ETB16-001" },
-            { key: "White", src: '/WHITE/ETB1001WHITE.png', label: "ETB1-001" },
+        Black: [
+            { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
+            { key: "Black", src: '/BLACK/ETB4003BLACK.png', label: "ETB4-003" },
+            { key: "Black", src: '/BLACK/ETB4004BLACK.png', label: "ETB4-004" },
+            { key: "Black", src: '/BLACK/ETB5006BLACK.png', label: "ETB5-006" },
+            { key: "Black", src: '/BLACK/ETB5007BLACK.png', label: "ETB5-007" },
+            { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
+            { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
         ],
+        Bronze: [
+            { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
+            { key: "Bronze", src: '/BRONZE/ETB3006BRONZE.png', label: "ETB3-006" },
+        ],
+        Brown: [
+            { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
+            { key: "Brown", src: '/BROWN/ETB3007BROWN.png', label: "ETB3-007" },
+            { key: "Brown", src: '/BROWN/ETB5005BROWN.png', label: "ETB5-005" },
+            { key: "Brown", src: '/BROWN/ETB6004BROWN.png', label: "ETB6-004" },
+            { key: "Brown", src: '/BROWN/ETB7003BROWN.png', label: "ETB7-003" },
+            { key: "Brown", src: '/BROWN/ETB9004BROWN.png', label: "ETB9-004" },
+        ],
+
+        Beige: [
+            { key: "Beige", src: '/BEIGE/ETB1003BEIGE.png', label: "ETB1-003" },
+            { key: "Beige", src: '/BEIGE/ETB2002BEIGE.png', label: "ETB2-002" },
+            { key: "Beige", src: '/BEIGE/ETB3001BEIGE.png', label: "ETB3-001" },
+            { key: "Beige", src: '/BEIGE/ETB3002BEIGE.png', label: "ETB3-002" },
+            { key: "Beige", src: '/BEIGE/ETB3003BEIGE.png', label: "ETB3-003" },
+            { key: "Beige", src: '/BEIGE/ETB5003BEIGE.png', label: "ETB5-003" },
+            { key: "Beige", src: '/BEIGE/ETB6003BEIGE.png', label: "ETB6-003" },
+            { key: "Beige", src: '/BEIGE/ETB7001BEIGE.png', label: "ETB7-001" },
+            { key: "Beige", src: '/BEIGE/ETB8003BEIGE.png', label: "ETB8-003" },
+            { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
+            { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
+        ],
+
+
+
+
     };
 
 
@@ -469,20 +474,20 @@ function ZebraBlinds() {
     const Top_Head_Rail_Choices_Fabrics_Aluminum = {
 
         Rounded_Top_Cassette_With_Fabric_Insert: [
-            { key: 'Beige', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric Top1' },
+            { key: 'White', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric Top1' },
+            { key: 'Grey', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric Top1' },
             { key: 'Black', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric Top1' },
             { key: 'Brown', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric Top1' },
-            { key: 'Grey', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric Top1' },
-            { key: 'White', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric Top1' },
+            { key: 'Beige', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric Top1' },
             // Add more image data as needed
         ],
 
         Square_Top_Aluminum: [
-            { key: 'Beige', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum Top1' },
+            { key: 'White', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum Top1' },
+            { key: 'Grey', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum Top1' },
             { key: 'Black', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum Top1' },
             { key: 'Brown', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum Top1' },
-            { key: 'Grey', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum Top1' },
-            { key: 'White', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum Top1' },
+            { key: 'Beige', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum Top1' },
             // Add more image data as needed
         ]
 
@@ -491,20 +496,20 @@ function ZebraBlinds() {
     const Bottom_Bottom_Rail_Choices_Fabrics_Aluminum = {
 
         Bottom_Rail_Square_With_Fabric_Insert: [
-            { key: 'Beige', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric Bottom' },
+            { key: 'White', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric Bottom' },
+            { key: 'Grey', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric Bottom' },
             { key: 'Black', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric Bottom' },
             { key: 'Brown', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric Bottom' },
-            { key: 'Grey', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric Bottom' },
-            { key: 'White', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric Bottom' },
+            { key: 'Beige', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric Bottom' },
             // Add more image data as needed
         ],
 
         Bottom_Oval_Rail_Aluminum: [
-            { key: 'Beige', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum Bottom' },
+            { key: 'White', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum Bottom' },
+            { key: 'Grey', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum Bottom' },
             { key: 'Black', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum Bottom' },
             { key: 'Brown', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum Bottom' },
-            { key: 'Grey', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum Bottom' },
-            { key: 'White', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum Bottom' },
+            { key: 'Beige', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum Bottom' },
             // Add more image data as needed
         ]
     }
