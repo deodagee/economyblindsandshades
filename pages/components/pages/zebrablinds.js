@@ -347,23 +347,6 @@ function ZebraBlinds() {
         }
     }, []);
 
-    const [Was_Next_Button_Clicked4, Set_Was_Next_Button_Clicked4] = useState(null);
-
-
-    const NextButton4buttonStyle = {
-        width: '5vw',
-        borderRadius: Was_Next_Button_Clicked4 ? '0.45rem' : '0.95rem',
-        borderWidth: '2px',
-        borderColor: Was_Next_Button_Clicked4 ? 'black' : 'grey',
-        backgroundColor: Was_Next_Button_Clicked4 ? "brown" : "grey",
-
-    };
-
-    const handle_click_see_bill_button = () => {
-        // Handle button click logic
-        Set_Was_Next_Button_Clicked4(true);
-    };
-
 
 
     const FirstImageRender = [
@@ -1501,7 +1484,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span>Head And Bottom Rail
+                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail 
                                                 </div>
                                             </div>
                                         </div>
@@ -1651,15 +1634,6 @@ function ZebraBlinds() {
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
-                            <div className={styles.see_bill_button_wrapper}>
-                                <button
-                                    onClick={handle_click_see_bill_button}
-                                    className={styles.see_bill_button}>
-                                    <div
-                                        style={NextButton4buttonStyle}
-                                        className={styles.see_bill_text}>See Bill</div>
-                                </button>
-                            </div>
 
                             <div className={styles.review_your_order}>Review Your Order</div>
                             <div className={styles.review_your_order_seperator_line}></div>
