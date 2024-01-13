@@ -2875,7 +2875,7 @@
   padding: 2px;
   transition: 0.2s;
   border-radius: 0.45rem;
-  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
 }
 
 .top_section {
@@ -3014,7 +3014,7 @@ display: flex;
     padding: 2px;
     transition: 0.2s;
     border-radius: 0.45rem;
-    box-shadow: rgb(255, 0, 0) 0px 0px 5px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
   
   }
 .pick_bottom_rail_color_wrapper { 
