@@ -323,7 +323,7 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.inside_mount_group_wraper { 
+.inside_mount_group_wraper {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -348,7 +348,7 @@
   gap: 20px;
 }
 
-.first_chosen_inside_mount_selection { 
+.first_chosen_inside_mount_selection {
   display: flex;
   width: 100px;
   height: auto;
@@ -478,12 +478,12 @@
   justify-content: center;
 }
 
-.step_tag_description_wrapper { 
+.step_tag_description_wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.step_tag_description_note { 
+.step_tag_description_note {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -597,6 +597,15 @@
   background-color: black;
 }
 
+.incremental_slider {
+  display: flex;
+  background-color: rgb(137, 182, 0);
+  width: 200px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
 .height_inside_mount_sub_title {
   display: flex;
   align-items: center;
@@ -611,7 +620,6 @@
   border-width: 1px;
   padding: 2px;
 }
-
 
 .enter_height_inside_mount_rectangle_1 {
   display: flex;
@@ -1149,14 +1157,14 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.first_chosen_inside_mount_selection_wrapper { 
+.first_chosen_inside_mount_selection_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 850px;
 }
 
-.first_chosen_inside_mount_selection { 
+.first_chosen_inside_mount_selection {
   display: flex;
   width: 250px;
   height: auto;
@@ -1335,8 +1343,18 @@
 
 .inches_fractions_boat {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.enter_size_boat_top { 
+  display: flex;
   flex-direction: row;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -2807,7 +2825,7 @@
   margin-left: 20px;
 }
 
-.select_head_rail_subtitle { 
+.select_head_rail_subtitle {
   display: flex;
   font-size: 15px;
   color: brown;
@@ -2985,7 +3003,7 @@
   flex-direction: column;
 }
 
-.pick_head_rail_color_subtitle_rounded_with_fabric { 
+.pick_head_rail_color_subtitle_rounded_with_fabric {
   display: flex;
   font-size: 15px;
   color: brown;
@@ -2994,43 +3012,45 @@
 }
 
 
-.fabric_list_images_render_top { 
+.fabric_list_images_render_top {
   display: flex;
   width: 850px;
   justify-content: space-evenly;
-  }
-
-  
-  .fabric_list_top_image_and_description {
-    display: flex;
-    flex-direction: column;
-    height: 90px;
-    width: 80px;
-    margin: 5px;
-  }
+}
 
 
-  .fabric_list_top_image_description {
-    display: flex;
-  }
+.fabric_list_top_image_and_description {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  width: 80px;
+  margin: 5px;
+}
+
+
+.fabric_list_top_image_description {
+  display: flex;
+}
 
 
 
-  .selected_bottom_rail_color {
-    border-width: 2px;
-    border-color: rgb(132, 132, 132);
-    padding: 2px;
-    transition: 0.2s;
-    border-radius: 0.45rem;
-    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
-  
-  }
-.pick_bottom_rail_color_wrapper { 
+.selected_bottom_rail_color {
+  border-width: 2px;
+  border-color: rgb(132, 132, 132);
+  padding: 2px;
+  transition: 0.2s;
+  border-radius: 0.45rem;
+  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+
+}
+
+.pick_bottom_rail_color_wrapper {
   display: contents;
 }
 
 
-.pick_bottom_rail_color_subtitle1, .pick_bottom_rail_color_subtitle0 {
+.pick_bottom_rail_color_subtitle1,
+.pick_bottom_rail_color_subtitle0 {
   display: flex;
   font-size: 15px;
   color: brown;
@@ -3055,7 +3075,7 @@
   padding-left: 20px;
   align-self: flex-start;
   justify-content: flex-start;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 
@@ -3093,41 +3113,41 @@
   flex-direction: column;
 }
 
-.pick_head_rail_color_subtitle_oval_with_fabric { 
+.pick_head_rail_color_subtitle_oval_with_fabric {
   display: flex;
   font-size: 15px;
   color: brown;
   margin-left: 20px;
   margin: 10px;
 
-width: 850px;
+  width: 850px;
 
-align-items: flex-start;
-justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 
-.fabric_list_images_render_bottom { 
+.fabric_list_images_render_bottom {
   display: flex;
   width: 850px;
   justify-content: space-evenly;
-  }
+}
 
 
-  .fabric_list_bottom_image_and_description {
-    display: flex;
-    flex-direction: column;
-    height: 90px;
-    width: 80px;
-    margin: 5px;
-  }
+.fabric_list_bottom_image_and_description {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  width: 80px;
+  margin: 5px;
+}
 
 
 
-  .fabric_list_bottom_image_description {
-    display: flex;
-  
-  }
+.fabric_list_bottom_image_description {
+  display: flex;
+
+}
 
 
 
@@ -3206,7 +3226,7 @@ justify-content: flex-start;
 }
 
 
-.answers_answers2 { 
+.answers_answers2 {
   display: flex;
   flex-direction: column;
   width: 200px;

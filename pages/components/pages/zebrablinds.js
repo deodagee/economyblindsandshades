@@ -111,7 +111,7 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_numbers_width_inside_mount = () => {
         setwhole_number_index_inside_mount_width(!whole_number_index_inside_mount_width);
-   
+
         setwhole_number_index_inside_mount_height(false);
         setfractionIndex_inside_mount_height(false);
         setfractionIndex_inside_mount_width(false);
@@ -142,7 +142,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_inside_mount_width = () => {
         setfractionIndex_inside_mount_width(!fractionIndex_inside_mount_width);
 
-        
+
         setwhole_number_index_inside_mount_height(false);
         setwhole_number_index_inside_mount_width(false);
 
@@ -177,7 +177,7 @@ function ZebraBlinds() {
 
         setwhole_number_index_outside_mount_height(!whole_number_index_outside_mount_height);
 
-        
+
         setwhole_number_index_inside_mount_height(false);
         setwhole_number_index_outside_mount_width(false);
 
@@ -210,7 +210,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_outside_mount_height = () => {
         setFractionIndex_outside_mount_height(!fractionIndex_outside_mount_height);
 
-        
+
 
         setwhole_number_index_outside_mount_width(false);
         setwhole_number_index_outside_mount_height(false);
@@ -246,7 +246,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_numbers_width_outside_mount = () => {
         setwhole_number_index_outside_mount_width(!whole_number_index_outside_mount_width);
 
-        
+
 
         setwhole_number_index_outside_mount_height(false);
 
@@ -279,8 +279,8 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_outside_mount_width = () => {
         setfractionIndex_outside_mount_width(!fractionIndex_outside_mount_width);
 
-        
-  
+
+
         setwhole_number_index_outside_mount_width(false);
         setwhole_number_index_outside_mount_height(false);
 
@@ -607,7 +607,27 @@ function ZebraBlinds() {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
-    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// ////////////////////////////////////
+
+    const [value, setValue] = useState(0);
+
+    const handleSliderChange = (event) => {
+        setValue(parseFloat(event.target.value));
+    };
+
+    const handleIncrement = () => {
+        setValue((prevValue) => (prevValue < 40 ? prevValue + 1 : prevValue));
+    };
+
+    const handleDecrement = () => {
+        setValue((prevValue) => (prevValue > 0 ? prevValue - 1 : prevValue));
+    };
+
+    const renderInches = () => {
+        const inches = Math.floor(value);
+        const fraction = (value - inches).toFixed(2);
+        return `${inches}' ${fraction * 12}"`;
+    };
 
     return (
 
@@ -792,58 +812,60 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
                                         <div className={styles.enter_height_and_width_inside_mount_group}>
-                                          
+
 
 
                                             <div className={styles.enter_width_group_inside_mount}>
                                                 <div className={styles.width_and_toggle_inside_mount}>
                                                     <div className={styles.choose_height_image_placeholder}></div>
+
                                                     <div className={styles.width_inside_mount_sub_title}>
                                                         CHOOSE WIDTH:
                                                     </div>
 
                                                     <div className={styles.inches_fractions_boat}>
 
-                                                        <div className={styles.enter_width_inside_mount_rectangle_1}>
 
-                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_width}
-                                                                onClick={handle_drop_down_show_numbers_width_inside_mount}
-                                                            >
-                                                                <p>INCHES</p>
-                                                                <svg
-                                                                    className={styles.polygon_3}
-                                                                    width="20"
-                                                                    height="16"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                        <span className={styles.enter_size_boat_top}>
+                                                            <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                                                <div className={styles.toggle_disclaimer_inches_inside_mount_width}
+                                                                    onClick={handle_drop_down_show_numbers_width_inside_mount}
                                                                 >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-                                                            <div className={styles.scroller_partition_width_inside_mount}>
+                                                                    <p>INCHES</p>
+                                                                    <svg
+                                                                        className={styles.polygon_3}
+                                                                        width="20"
+                                                                        height="16"
+                                                                        viewBox="0 0 10 8"
+                                                                        fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                    >
+                                                                        <path
+                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                            fill="#da1212"
+                                                                        />
+                                                                    </svg>
+                                                                </div>
+                                                                <div className={styles.scroller_partition_width_inside_mount}>
 
 
-                                                                {whole_number_index_inside_mount_width && (
-                                                                    <div className={styles.width_scroll_number_inches_inside_mount}>
-                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
-                                                                            <div className={styles.ScrollNumberInches_width_inside_mount}>
-                                                                                {whole_number_index_inside_mount_width && (
-                                                                                    <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
-                                                                                        <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
+                                                                    {whole_number_index_inside_mount_width && (
+                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                            <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
+                                                                                <div className={styles.ScrollNumberInches_width_inside_mount}>
+                                                                                    {whole_number_index_inside_mount_width && (
+                                                                                        <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
+                                                                                            <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                )}
+                                                                                    )}
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-
 
                                                         <div className={styles.enter_width_inside_mount_rectangle_2}>
                                                             <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
@@ -881,6 +903,25 @@ function ZebraBlinds() {
                                                                 )}
                                                             </div>
                                                         </div>
+                                                        </span>
+
+                                                        <span className={styles.enter_size_boat_bottom}>
+                                                        <div className={styles.incremental_slider}>
+                                                        <div>
+                                                            <button onClick={handleDecrement}>-</button>
+                                                            <input
+                                                                type="range"
+                                                                min={0}
+                                                                max={40}
+                                                                step={0.01}
+                                                                value={value}
+                                                                onChange={handleSliderChange}
+                                                            />
+                                                            <button onClick={handleIncrement}>+</button>
+                                                            <span>{renderInches()}</span>
+                                                        </div>
+                                                    </div>
+                                                        </span>
                                                     </div>
                                                 </div>
 
@@ -890,100 +931,124 @@ function ZebraBlinds() {
                                             <div className={styles.enter_height_group_inside_mount}>
 
 
-<div className={styles.height_and_toggle_inside_mount}>
-    <div className={styles.choose_height_image_placeholder}></div>
-    <div className={styles.height_inside_mount_sub_title}>
-        CHOOSE HEIGHT:
-    </div>
-    <div className={styles.inches_fractions_boat}>
-
-        <div className={styles.enter_height_inside_mount_rectangle_1}
-        >
-            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
-                onClick={handle_drop_down_show_numbers_height_inside_mount}
-            >
-                <p>
-                    INCHES
-                </p>
-                <svg
-                    className={styles.polygon_1}
-                    width="20"
-                    height="16"
-                    viewBox="0 0 10 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                        fill="#da1212"
-                    />
-                </svg>
-            </div>
-            <div className={styles.scroller_partition_height_inside_outside_mount}>
+                                                <div className={styles.height_and_toggle_inside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.height_inside_mount_sub_title}>
+                                                        CHOOSE HEIGHT:
+                                                    </div>
+                                                    <div className={styles.inches_fractions_boat}>
 
 
-                {whole_number_index_inside_mount_height && (
-                    <div className={styles.height_scroll_number_inches_inside_mount}>
-                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                            <div className={styles.ScrollNumberInches_height_inside_mount}>
-                                {whole_number_index_inside_mount_height && (
-                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </div>
+                                                    <span className={styles.enter_size_boat_top}>
+                                                            
+
+                                                        <div className={styles.enter_height_inside_mount_rectangle_1}
+                                                        >
+                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
+                                                                onClick={handle_drop_down_show_numbers_height_inside_mount}
+                                                            >
+                                                                <p>
+                                                                    INCHES
+                                                                </p>
+                                                                <svg
+                                                                    className={styles.polygon_1}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_height_inside_outside_mount}>
+
+
+                                                                {whole_number_index_inside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
+                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
+                                                                            <div className={styles.ScrollNumberInches_height_inside_mount}>
+                                                                                {whole_number_index_inside_mount_height && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
 
 
 
 
 
 
-        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
-        >
-            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
-                onClick={handle_drop_down_show_fractions_inside_mount_height}
-            >
-                <p>FRACTIONS</p>
-                <svg
-                    className={styles.polygon_2}
-                    width="20"
-                    height="16"
-                    viewBox="0 0 10 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                        fill="#da1212"
-                    />
-                </svg>
-            </div>
+                                                        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
+                                                        >
+                                                            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
+                                                                onClick={handle_drop_down_show_fractions_inside_mount_height}
+                                                            >
+                                                                <p>FRACTIONS</p>
+                                                                <svg
+                                                                    className={styles.polygon_2}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
 
-            <div className={styles.scroller_partition_height_inside_mount}>
+                                                            <div className={styles.scroller_partition_height_inside_mount}>
 
 
-                {fractionIndex_inside_mount_height && (
-                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+                                                                {fractionIndex_inside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
 
-                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+                                                                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
+                                                                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
+                                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                        </span>
+
+                                                        <span className={styles.enter_size_boat_bottom}>
+                                                        <div className={styles.incremental_slider}>
+                                                        <div>
+                                                            <button onClick={handleDecrement}>-</button>
+                                                            <input
+                                                                type="range"
+                                                                min={0}
+                                                                max={40}
+                                                                step={0.01}
+                                                                value={value}
+                                                                onChange={handleSliderChange}
+                                                            />
+                                                            <button onClick={handleIncrement}>+</button>
+                                                            <span>{renderInches()}</span>
+                                                        </div>
+                                                    </div>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
@@ -1087,7 +1152,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
                                         <div className={styles.enter_height_and_width_outside_mount_group}>
-                                            
+
 
 
                                             <div className={styles.enter_width_group_outside_mount}>
@@ -1099,6 +1164,8 @@ function ZebraBlinds() {
 
                                                     <div className={styles.inches_fractions_boat}>
 
+                                                        <span className={styles.enter_size_boat_top}>
+                                                                
                                                         <div className={styles.enter_width_outside_mount_rectangle_1}>
 
                                                             <div className={styles.toggle_disclaimer_inches_width_outside_mount}
@@ -1172,9 +1239,31 @@ function ZebraBlinds() {
                                                                 </div>
                                                             )}
                                                         </div>
+                                                        </span>
+
+                                                        <span className={styles.enter_size_boat_bottom}>
+                                                        <div className={styles.incremental_slider}>
+                                                        <div>
+                                                            <button onClick={handleDecrement}>-</button>
+                                                            <input
+                                                                type="range"
+                                                                min={0}
+                                                                max={40}
+                                                                step={0.01}
+                                                                value={value}
+                                                                onChange={handleSliderChange}
+                                                            />
+                                                            <button onClick={handleIncrement}>+</button>
+                                                            <span>{renderInches()}</span>
+                                                        </div>
+                                                    </div>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
+
+
+
 
 
                                             <div className={styles.enter_height_group_outside_mount}>
@@ -1185,6 +1274,8 @@ function ZebraBlinds() {
                                                     </div>
 
                                                     <div className={styles.inches_fractions_boat}>
+
+                                                        <span className={styles.enter_size_boat_top}>
                                                         <div className={styles.enter_height_outside_mount_rectangle_1}>
                                                             <div className={styles.toggle_disclaimer_inches_height_outside_mount}
                                                                 onClick={handle_drop_down_show_numbers_height_outside_mount}
@@ -1262,6 +1353,25 @@ function ZebraBlinds() {
                                                                 )}
                                                             </div>
                                                         </div>
+                                                        </span>
+
+                                                        <span className={styles.enter_size_boat_bottom}>
+                                                        <div className={styles.incremental_slider}>
+                                                        <div>
+                                                            <button onClick={handleDecrement}>-</button>
+                                                            <input
+                                                                type="range"
+                                                                min={0}
+                                                                max={40}
+                                                                step={0.01}
+                                                                value={value}
+                                                                onChange={handleSliderChange}
+                                                            />
+                                                            <button onClick={handleIncrement}>+</button>
+                                                            <span>{renderInches()}</span>
+                                                        </div>
+                                                    </div>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1530,7 +1640,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail 
+                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail
                                                 </div>
                                             </div>
                                         </div>
@@ -1577,41 +1687,41 @@ function ZebraBlinds() {
                                                             <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Top Cassette </div>
 
 
-                                                                <div >
-                                                                    {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
-                                                                        <div className={styles.fabric_list_images_render_top} key={key}>
+                                                            <div >
+                                                                {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
+                                                                    <div className={styles.fabric_list_images_render_top} key={key}>
 
 
 
-                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
-                                                                                <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
-                                                                                    {/* Render the actual image here */}
+                                                                        {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
+                                                                            <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+                                                                                {/* Render the actual image here */}
 
-                                                                                    <div>
-                                                                                        <Image
-                                                                                            className={handleRenderClickImageToMergeFabrics(imageData.key)}
-                                                                                            width={100}
-                                                                                            height={100}
-                                                                                            src={imageData.src}
-                                                                                            alt={imageData.label}
-                                                                                            onClick={() => {
-                                                                                                if (!active_skip_head_rail_ellipse) {
-                                                                                                    console.log(`Click handler for ${imageData.key}`);
-                                                                                                    Set_selected_head_rail_color(imageData.key);
-                                                                                                }
-                                                                                            }}
-                                                                                            style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-                                                                                        />
-                                                                                    </div>
-                                                                                    <div className={styles.fabric_list_top_image_description}>
-                                                                                        <div>{imageData.label}</div>
-                                                                                    </div>
+                                                                                <div>
+                                                                                    <Image
+                                                                                        className={handleRenderClickImageToMergeFabrics(imageData.key)}
+                                                                                        width={100}
+                                                                                        height={100}
+                                                                                        src={imageData.src}
+                                                                                        alt={imageData.label}
+                                                                                        onClick={() => {
+                                                                                            if (!active_skip_head_rail_ellipse) {
+                                                                                                console.log(`Click handler for ${imageData.key}`);
+                                                                                                Set_selected_head_rail_color(imageData.key);
+                                                                                            }
+                                                                                        }}
+                                                                                        style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+                                                                                    />
                                                                                 </div>
-                                                                            ))}
-                                                                        </div>
-                                                                    ))}
-                                                                </div>
+                                                                                <div className={styles.fabric_list_top_image_description}>
+                                                                                    <div>{imageData.label}</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        ))}
+                                                                    </div>
+                                                                ))}
                                                             </div>
+                                                        </div>
                                                     )}
                                                 </div>
                                             </div>
