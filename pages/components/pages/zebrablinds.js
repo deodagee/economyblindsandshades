@@ -763,105 +763,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
                                         <div className={styles.enter_height_and_width_inside_mount_group}>
-
-                                            <div className={styles.enter_height_group_inside_mount}>
-
-
-                                                <div className={styles.height_and_toggle_inside_mount}>
-                                                    <div className={styles.choose_height_image_placeholder}></div>
-                                                    <div className={styles.height_inside_mount_sub_title}>
-                                                        CHOOSE HEIGHT:
-                                                    </div>
-                                                    <div className={styles.inches_fractions_boat}>
-
-                                                        <div className={styles.enter_height_inside_mount_rectangle_1}
-                                                        >
-                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
-                                                                onClick={handle_drop_down_show_numbers_height_inside_mount}
-                                                            >
-                                                                <p>
-                                                                    INCHES
-                                                                </p>
-                                                                <svg
-                                                                    className={styles.polygon_1}
-                                                                    width="20"
-                                                                    height="16"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-                                                            <div className={styles.scroller_partition_height_inside_outside_mount}>
-
-
-                                                                {whole_number_index_inside_mount_height && (
-                                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
-                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                                                                            <div className={styles.ScrollNumberInches_height_inside_mount}>
-                                                                                {whole_number_index_inside_mount_height && (
-                                                                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                                                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                )}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-
-
-
-
-
-
-                                                        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
-                                                        >
-                                                            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
-                                                                onClick={handle_drop_down_show_fractions_inside_mount_height}
-                                                            >
-                                                                <p>FRACTIONS</p>
-                                                                <svg
-                                                                    className={styles.polygon_2}
-                                                                    width="20"
-                                                                    height="16"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-
-                                                            <div className={styles.scroller_partition_height_inside_mount}>
-
-
-                                                                {fractionIndex_inside_mount_height && (
-                                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
-
-                                                                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                                                                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
+                                          
 
 
                                             <div className={styles.enter_width_group_inside_mount}>
@@ -954,6 +856,108 @@ function ZebraBlinds() {
                                                 </div>
 
                                             </div>
+
+
+                                            <div className={styles.enter_height_group_inside_mount}>
+
+
+<div className={styles.height_and_toggle_inside_mount}>
+    <div className={styles.choose_height_image_placeholder}></div>
+    <div className={styles.height_inside_mount_sub_title}>
+        CHOOSE HEIGHT:
+    </div>
+    <div className={styles.inches_fractions_boat}>
+
+        <div className={styles.enter_height_inside_mount_rectangle_1}
+        >
+            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
+                onClick={handle_drop_down_show_numbers_height_inside_mount}
+            >
+                <p>
+                    INCHES
+                </p>
+                <svg
+                    className={styles.polygon_1}
+                    width="20"
+                    height="16"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                        fill="#da1212"
+                    />
+                </svg>
+            </div>
+            <div className={styles.scroller_partition_height_inside_outside_mount}>
+
+
+                {whole_number_index_inside_mount_height && (
+                    <div className={styles.height_scroll_number_inches_inside_mount}>
+                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
+                            <div className={styles.ScrollNumberInches_height_inside_mount}>
+                                {whole_number_index_inside_mount_height && (
+                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
+                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+
+
+
+
+
+
+        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
+        >
+            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
+                onClick={handle_drop_down_show_fractions_inside_mount_height}
+            >
+                <p>FRACTIONS</p>
+                <svg
+                    className={styles.polygon_2}
+                    width="20"
+                    height="16"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                        fill="#da1212"
+                    />
+                </svg>
+            </div>
+
+            <div className={styles.scroller_partition_height_inside_mount}>
+
+
+                {fractionIndex_inside_mount_height && (
+                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+
+                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
+                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
+                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -1054,6 +1058,95 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
                                         <div className={styles.enter_height_and_width_outside_mount_group}>
+                                            
+
+
+                                            <div className={styles.enter_width_group_outside_mount}>
+                                                <div className={styles.width_and_toggle_outside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.width_outside_mount_sub_title}>
+                                                        CHOOSE WIDTH:
+                                                    </div>
+
+                                                    <div className={styles.inches_fractions_boat}>
+
+                                                        <div className={styles.enter_width_outside_mount_rectangle_1}>
+
+                                                            <div className={styles.toggle_disclaimer_inches_width_outside_mount}
+                                                                onClick={handle_drop_down_show_numbers_width_outside_mount}
+                                                            >
+                                                                <p>INCHES</p>
+                                                                <svg
+                                                                    className={styles.polygon_7}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_width_outside_mount}>
+
+                                                                {whole_number_index_outside_mount_width && (
+                                                                    <div className={styles.width_scroll_number_inches_outside_mount}>
+
+                                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
+                                                                            <div className={styles.ScrollNumberInches_width_outside_mount}>
+                                                                                {whole_number_index_outside_mount_width && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
+                                                            <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
+                                                                onClick={handle_drop_down_show_fractions_outside_mount_width}
+                                                            >
+                                                                <p>FRACTIONS</p>
+                                                                <svg
+                                                                    className={styles.polygon_8}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+
+                                                            {fractionIndex_outside_mount_width && (
+                                                                <div className={styles.width_scroll_number_fractions_outside_mount}>
+
+                                                                    <div className={styles.display_fractions_wrapper_outside_mount_width}>
+                                                                        <div className={styles.ScrollNumberFractions_width_outside_mount}>
+                                                                            <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
 
                                             <div className={styles.enter_height_group_outside_mount}>
                                                 <div className={styles.height_and_toggle_outside_mount}>
@@ -1145,91 +1238,6 @@ function ZebraBlinds() {
                                             </div>
 
 
-                                            <div className={styles.enter_width_group_outside_mount}>
-                                                <div className={styles.width_and_toggle_outside_mount}>
-                                                    <div className={styles.choose_height_image_placeholder}></div>
-                                                    <div className={styles.width_outside_mount_sub_title}>
-                                                        CHOOSE WIDTH:
-                                                    </div>
-
-                                                    <div className={styles.inches_fractions_boat}>
-
-                                                        <div className={styles.enter_width_outside_mount_rectangle_1}>
-
-                                                            <div className={styles.toggle_disclaimer_inches_width_outside_mount}
-                                                                onClick={handle_drop_down_show_numbers_width_outside_mount}
-                                                            >
-                                                                <p>INCHES</p>
-                                                                <svg
-                                                                    className={styles.polygon_7}
-                                                                    width="10"
-                                                                    height="8"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-                                                            <div className={styles.scroller_partition_width_outside_mount}>
-
-                                                                {whole_number_index_outside_mount_width && (
-                                                                    <div className={styles.width_scroll_number_inches_outside_mount}>
-
-                                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
-                                                                            <div className={styles.ScrollNumberInches_width_outside_mount}>
-                                                                                {whole_number_index_outside_mount_width && (
-                                                                                    <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
-                                                                                        <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                )}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
-                                                            <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
-                                                                onClick={handle_drop_down_show_fractions_outside_mount_width}
-                                                            >
-                                                                <p>FRACTIONS</p>
-                                                                <svg
-                                                                    className={styles.polygon_8}
-                                                                    width="10"
-                                                                    height="8"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-
-                                                            {fractionIndex_outside_mount_width && (
-                                                                <div className={styles.width_scroll_number_fractions_outside_mount}>
-
-                                                                    <div className={styles.display_fractions_wrapper_outside_mount_width}>
-                                                                        <div className={styles.ScrollNumberFractions_width_outside_mount}>
-                                                                            <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
