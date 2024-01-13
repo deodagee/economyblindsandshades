@@ -658,12 +658,12 @@
 .height_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -671,14 +671,17 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
+
 }
 
 .height_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_whole_numbers_wrapper_inside_mount_height {
@@ -779,12 +782,12 @@
 .height_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -792,14 +795,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .height_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_fractions_wrapper_inside_mount_height {
@@ -935,12 +940,12 @@
 .width_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -948,14 +953,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .width_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_whole_numbers_wrapper_inside_mount_width {
@@ -1055,12 +1062,12 @@
 .width_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1068,14 +1075,17 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .width_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
-  width: 70px;}
+  height: 300px;
+  width: 70px;
+  background-color: white;
+}
 
 
 .display_fractions_wrapper_inside_mount_width {
@@ -1377,12 +1387,12 @@
 .height_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1390,14 +1400,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .height_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_whole_numbers_wrapper_outside_mount_height {
@@ -1496,12 +1508,12 @@
 .height_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1509,14 +1521,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .height_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_fractions_wrapper_outside_mount_height {
@@ -1652,12 +1666,12 @@
 .width_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1665,14 +1679,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .width_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_whole_numbers_wrapper_outside_mount_width {
@@ -1766,12 +1782,12 @@
 .width_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 50px;
+  height: 300px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1779,14 +1795,16 @@
   border-color: rgb(107, 107, 107);
   padding: 5px;
   transition: 0.4s;
+  background-color: white;
 }
 
 .width_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: max-content;
+  height: 300px;
   width: 70px;
+  background-color: white;
 }
 
 .display_fractions_wrapper_outside_mount_width {
