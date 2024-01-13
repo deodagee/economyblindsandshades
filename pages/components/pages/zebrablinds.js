@@ -402,7 +402,7 @@ function ZebraBlinds() {
 
 
     const FirstImageRender = [
-        { key: "rfblinds", src: '/rfblinds.jpg', label: "rfblinds" },
+        { key: "rfblinds", src: '/slidingcomponent2.png', label: "rfblinds" },
     ];
 
 

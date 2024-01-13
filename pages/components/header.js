@@ -54,9 +54,9 @@ function HeaderPiece() {
               <p>
 
                 <Image
-                  src={"/factorydirectsavingsversion3.png"}
+                  src={"/factorydirectsavingsversion4.png"}
                   width={200}
-                  height={100}
+                  height={200}
                   alt="header_top_image"
                   className={styles.header_top_image}>
 
