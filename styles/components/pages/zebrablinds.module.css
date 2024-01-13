@@ -597,14 +597,82 @@
   background-color: black;
 }
 
+.ruler_for_boat_wrapper { 
+height: 70px; 
+ width: 350px;
+  background-color: rgb(227, 227, 227);
+  margin: 5px;
+  box-shadow: rgb(118, 118, 118) 1px 2px 8px;
+border-radius: 0.44rem;
+margin-top: 10px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.ruler_for_boat { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.inches_on_the_ruler { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 50px;
+  gap: 20px;
+  border-width: 1px;
+  border-color: black;
+}
+
 .incremental_slider {
   display: flex;
   background-color: rgb(137, 182, 0);
-  width: 200px;
-  height: auto;
+  width: max-content;
+  height: 20px;
   align-items: center;
   justify-content: center;
+  border-radius: 0.15rem;
+  background-image: url('/ruler.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+/* YourStyles.module.css */
+
+.incremental_slider {
+  margin: 20px; /* Adjust margin as needed */
+}
+
+.incremental_slider > div {
+  display: flex;
+  align-items: center;
+}
+
+.incremental_slider button {
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0 8px; /* Adjust margin as needed */
+  cursor: pointer;
+}
+
+.incremental_slider input {
+  width: 200px; /* Adjust width as needed */
+}
+
+.incremental_slider span {
+  margin-left: 8px; /* Adjust margin as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
 
 .height_inside_mount_sub_title {
   display: flex;

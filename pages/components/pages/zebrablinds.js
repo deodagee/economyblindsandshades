@@ -611,25 +611,25 @@ function ZebraBlinds() {
 
     const IncrementalSlider = ({ initialValue = 0, max = 40 }) => {
         const [value, setValue] = useState(initialValue);
-    
+
         const handleSliderChange = (event) => {
             setValue(parseFloat(event.target.value));
         };
-    
+
         const handleIncrement = () => {
             setValue((prevValue) => (prevValue < max ? prevValue + 1 : prevValue));
         };
-    
+
         const handleDecrement = () => {
             setValue((prevValue) => (prevValue > 0 ? prevValue - 1 : prevValue));
         };
-    
+
         const renderInches = () => {
             const inches = Math.floor(value);
             const fraction = (value - inches).toFixed(2);
             return `${inches}' ${fraction * 12}"`;
         };
-    
+
         return (
             <div className={styles.incremental_slider}>
                 <div>
@@ -649,8 +649,9 @@ function ZebraBlinds() {
         );
     };
 
-    
-    
+    const numberOfSpans = 100;
+
+
     return (
 
         <>
@@ -928,9 +929,19 @@ function ZebraBlinds() {
                                                         </span>
 
                                                         <span className={styles.enter_size_boat_bottom}>
+
+                                                            <div className={styles.ruler_for_boat_wrapper}>
+                                                                <div className={styles.ruler_for_boat}>
+                                                                    <div className={styles.inches_on_the_ruler}>
+                                                                        {Array.from({ length: numberOfSpans }, (_, index) => (
+                                                                            <span key={index} className={styles.measured_inch}></span>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <div className={styles.incremental_slider}>
-                                                            <IncrementalSlider />
-        
+                                                                <IncrementalSlider />
+
                                                             </div>
                                                         </span>
                                                     </div>
@@ -1040,8 +1051,10 @@ function ZebraBlinds() {
                                                         </span>
 
                                                         <span className={styles.enter_size_boat_bottom}>
-                                                        <IncrementalSlider initialValue={10} />
-       
+                                                            <div className={styles.incremental_slider}>
+
+                                                                <IncrementalSlider initialValue={10} />
+                                                            </div>
                                                         </span>
 
                                                     </div>
@@ -1239,8 +1252,13 @@ function ZebraBlinds() {
                                                             </div>
                                                         </span>
                                                         <span className={styles.enter_size_boat_bottom}>
-                                                        <IncrementalSlider initialValue={20} />
+
+                                                            <div className={styles.incremental_slider}>
+
+                                                                <IncrementalSlider initialValue={20} />
+                                                            </div>
                                                         </span>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1339,7 +1357,9 @@ function ZebraBlinds() {
                                                         </span>
 
                                                         <span className={styles.enter_size_boat_bottom}>
-                                                        <IncrementalSlider initialValue={30} />
+                                                            <div className={styles.incremental_slider}>
+                                                                <IncrementalSlider initialValue={30} />
+                                                            </div>
                                                         </span>
                                                     </div>
                                                 </div>
