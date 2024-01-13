@@ -111,7 +111,7 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_numbers_width_inside_mount = () => {
         setwhole_number_index_inside_mount_width(!whole_number_index_inside_mount_width);
-
+   
         setwhole_number_index_inside_mount_height(false);
         setfractionIndex_inside_mount_height(false);
         setfractionIndex_inside_mount_width(false);
@@ -142,7 +142,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_inside_mount_width = () => {
         setfractionIndex_inside_mount_width(!fractionIndex_inside_mount_width);
 
-
+        
         setwhole_number_index_inside_mount_height(false);
         setwhole_number_index_inside_mount_width(false);
 
@@ -177,7 +177,7 @@ function ZebraBlinds() {
 
         setwhole_number_index_outside_mount_height(!whole_number_index_outside_mount_height);
 
-
+        
         setwhole_number_index_inside_mount_height(false);
         setwhole_number_index_outside_mount_width(false);
 
@@ -210,7 +210,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_outside_mount_height = () => {
         setFractionIndex_outside_mount_height(!fractionIndex_outside_mount_height);
 
-
+        
 
         setwhole_number_index_outside_mount_width(false);
         setwhole_number_index_outside_mount_height(false);
@@ -246,7 +246,7 @@ function ZebraBlinds() {
     const handle_drop_down_show_numbers_width_outside_mount = () => {
         setwhole_number_index_outside_mount_width(!whole_number_index_outside_mount_width);
 
-
+        
 
         setwhole_number_index_outside_mount_height(false);
 
@@ -279,8 +279,8 @@ function ZebraBlinds() {
     const handle_drop_down_show_fractions_outside_mount_width = () => {
         setfractionIndex_outside_mount_width(!fractionIndex_outside_mount_width);
 
-
-
+        
+  
         setwhole_number_index_outside_mount_width(false);
         setwhole_number_index_outside_mount_height(false);
 
@@ -579,12 +579,12 @@ function ZebraBlinds() {
     ];
 
     const Match_Amluminum_With_Aluminum = [
-        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum,
-        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum,
+        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert,
+        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert,
     ]
     //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
     const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
-        (imageDataTOP) => imageDataTOP.key === selected_head_rail_color
+        (imageData) => imageData.key === selected_head_rail_color
     );
     const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
         (imageData) => imageData.key === selected_bottom_rail_color
@@ -597,25 +597,16 @@ function ZebraBlinds() {
         (imageData) => imageData.key === selected_bottom_rail_color
     );
     //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
-    // For Head Rail Fabric Choices
-    const handleRenderClickImageToMergeFabrics = (imageName, set) => {
+
+    const handleRenderClickImageToMergeFabrics = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${(set === 'head_rail' && imageName === selected_head_rail_color) ||
-            (set === 'bottom_rail' && imageName === selected_bottom_rail_color)
-            ? styles.selected_head_rail_color
-            : ''}`;
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
     };
 
-    // For Bottom Rail Aluminum Choices
-    const handleRenderClickImageToMergeAluminum = (imageName, set) => {
+    const handleRenderClickImageToMergeAluminum = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${(set === 'head_rail' && imageName === selected_head_rail_color) ||
-            (set === 'bottom_rail' && imageName === selected_bottom_rail_color)
-            ? styles.selected_bottom_rail_color
-            : ''}`;
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
-
-
     //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
 
     return (
@@ -801,7 +792,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
                                         <div className={styles.enter_height_and_width_inside_mount_group}>
-
+                                          
 
 
                                             <div className={styles.enter_width_group_inside_mount}>
@@ -899,100 +890,100 @@ function ZebraBlinds() {
                                             <div className={styles.enter_height_group_inside_mount}>
 
 
-                                                <div className={styles.height_and_toggle_inside_mount}>
-                                                    <div className={styles.choose_height_image_placeholder}></div>
-                                                    <div className={styles.height_inside_mount_sub_title}>
-                                                        CHOOSE HEIGHT:
-                                                    </div>
-                                                    <div className={styles.inches_fractions_boat}>
+<div className={styles.height_and_toggle_inside_mount}>
+    <div className={styles.choose_height_image_placeholder}></div>
+    <div className={styles.height_inside_mount_sub_title}>
+        CHOOSE HEIGHT:
+    </div>
+    <div className={styles.inches_fractions_boat}>
 
-                                                        <div className={styles.enter_height_inside_mount_rectangle_1}
-                                                        >
-                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
-                                                                onClick={handle_drop_down_show_numbers_height_inside_mount}
-                                                            >
-                                                                <p>
-                                                                    INCHES
-                                                                </p>
-                                                                <svg
-                                                                    className={styles.polygon_1}
-                                                                    width="20"
-                                                                    height="16"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-                                                            <div className={styles.scroller_partition_height_inside_outside_mount}>
-
-
-                                                                {whole_number_index_inside_mount_height && (
-                                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
-                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                                                                            <div className={styles.ScrollNumberInches_height_inside_mount}>
-                                                                                {whole_number_index_inside_mount_height && (
-                                                                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                                                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                )}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
+        <div className={styles.enter_height_inside_mount_rectangle_1}
+        >
+            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
+                onClick={handle_drop_down_show_numbers_height_inside_mount}
+            >
+                <p>
+                    INCHES
+                </p>
+                <svg
+                    className={styles.polygon_1}
+                    width="20"
+                    height="16"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                        fill="#da1212"
+                    />
+                </svg>
+            </div>
+            <div className={styles.scroller_partition_height_inside_outside_mount}>
 
 
+                {whole_number_index_inside_mount_height && (
+                    <div className={styles.height_scroll_number_inches_inside_mount}>
+                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
+                            <div className={styles.ScrollNumberInches_height_inside_mount}>
+                                {whole_number_index_inside_mount_height && (
+                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
+                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
 
 
 
 
-                                                        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
-                                                        >
-                                                            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
-                                                                onClick={handle_drop_down_show_fractions_inside_mount_height}
-                                                            >
-                                                                <p>FRACTIONS</p>
-                                                                <svg
-                                                                    className={styles.polygon_2}
-                                                                    width="20"
-                                                                    height="16"
-                                                                    viewBox="0 0 10 8"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                        fill="#da1212"
-                                                                    />
-                                                                </svg>
-                                                            </div>
-
-                                                            <div className={styles.scroller_partition_height_inside_mount}>
 
 
-                                                                {fractionIndex_inside_mount_height && (
-                                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
+        >
+            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
+                onClick={handle_drop_down_show_fractions_inside_mount_height}
+            >
+                <p>FRACTIONS</p>
+                <svg
+                    className={styles.polygon_2}
+                    width="20"
+                    height="16"
+                    viewBox="0 0 10 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                        fill="#da1212"
+                    />
+                </svg>
+            </div>
 
-                                                                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                                                                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+            <div className={styles.scroller_partition_height_inside_mount}>
+
+
+                {fractionIndex_inside_mount_height && (
+                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+
+                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
+                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
+                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 
 
@@ -1096,7 +1087,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
                                         <div className={styles.enter_height_and_width_outside_mount_group}>
-
+                                            
 
 
                                             <div className={styles.enter_width_group_outside_mount}>
@@ -1487,6 +1478,7 @@ function ZebraBlinds() {
                                         ></span>
                                     </div>
 
+
                                     <span className={styles.option_subtitles2}>
                                         <div className={styles.cord_less_subtitle}>Cord Less</div>
                                         <div className={styles.options_price_seperator}></div>
@@ -1495,6 +1487,7 @@ function ZebraBlinds() {
                                     </span>
                                 </div>
                             </div>
+
 
                             <div className={styles.select_chain_options2}>
                                 <div className={styles.motorized_option_group}>
@@ -1514,7 +1507,10 @@ function ZebraBlinds() {
                                     </span>
                                 </div>
                             </div>
+
                         </div>
+
+
 
                         <div>
                             <div>
@@ -1534,7 +1530,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail
+                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail 
                                                 </div>
                                             </div>
                                         </div>
@@ -1570,7 +1566,9 @@ function ZebraBlinds() {
                                                     <div className={styles.note_skipping_color_for_head_rail}>
                                                         *Note: Skipping Color will result with steel material
                                                     </div>
+
                                                 </div>
+
 
                                                 <div>
                                                     <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}></div>
@@ -1578,39 +1576,46 @@ function ZebraBlinds() {
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
                                                             <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Top Cassette </div>
 
-                                                            <div >
-                                                                {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
-                                                                    <div className={styles.fabric_list_images_render_top} key={key}>
-                                                                        {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageDataTOP) => (
-                                                                            <div key={imageDataTOP.key} className={styles.fabric_list_top_image_and_description}>
-                                                                                <div>
-                                                                                    <Image
-                                                                                        className={handleRenderClickImageToMergeFabrics(imageDataTOP.key, 'head_rail')}
-                                                                                        width={100}
-                                                                                        height={100}
-                                                                                        src={imageDataTOP.src}
-                                                                                        alt={imageDataTOP.label}
-                                                                                        onClick={() => {
-                                                                                            if (!active_skip_head_rail_ellipse) {
-                                                                                                console.log(`Click handler for ${imageDataTOP.key}`);
-                                                                                                Set_selected_head_rail_color(imageDataTOP.key);
-                                                                                            }
-                                                                                        }}
-                                                                                        style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-                                                                                    />
+
+                                                                <div >
+                                                                    {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
+                                                                        <div className={styles.fabric_list_images_render_top} key={key}>
+
+
+
+                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
+                                                                                <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+                                                                                    {/* Render the actual image here */}
+
+                                                                                    <div>
+                                                                                        <Image
+                                                                                            className={handleRenderClickImageToMergeFabrics(imageData.key)}
+                                                                                            width={100}
+                                                                                            height={100}
+                                                                                            src={imageData.src}
+                                                                                            alt={imageData.label}
+                                                                                            onClick={() => {
+                                                                                                if (!active_skip_head_rail_ellipse) {
+                                                                                                    console.log(`Click handler for ${imageData.key}`);
+                                                                                                    Set_selected_head_rail_color(imageData.key);
+                                                                                                }
+                                                                                            }}
+                                                                                            style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
+                                                                                        />
+                                                                                    </div>
+                                                                                    <div className={styles.fabric_list_top_image_description}>
+                                                                                        <div>{imageData.label}</div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div className={styles.fabric_list_top_image_description}>
-                                                                                    <div>{imageDataTOP.label}</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        ))}
-                                                                    </div>
-                                                                ))}
+                                                                            ))}
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
                                                             </div>
-                                                        </div>
                                                     )}
                                                 </div>
                                             </div>
+
 
                                             <div className={styles.pick_bottom_rail_color_wrapper}>
                                                 <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
@@ -1628,8 +1633,9 @@ function ZebraBlinds() {
                                                                             <div className={styles.fabric_list_images_render_bottom} key={key}>
                                                                                 {Bottom_Bottom_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
                                                                                     <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
+                                                                                        {/* Render the actual image here */}
                                                                                         <Image
-                                                                                            className={handleRenderClickImageToMergeAluminum(imageData.key, 'bottom_rail')}
+                                                                                            className={handleRenderClickImageToMergeAluminum(imageData.key)}
                                                                                             width={100}
                                                                                             height={100}
                                                                                             src={imageData.src}
@@ -1654,10 +1660,13 @@ function ZebraBlinds() {
                                                             )}
                                                         </div>
                                                     </div>
+
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
