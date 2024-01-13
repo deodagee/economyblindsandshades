@@ -663,6 +663,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_whole_numbers_wrapper_inside_mount_height {
@@ -782,6 +784,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_fractions_wrapper_inside_mount_height {
@@ -936,6 +940,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_whole_numbers_wrapper_inside_mount_width {
@@ -1054,7 +1060,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-}
+  height: max-content;
+  width: 70px;}
 
 
 .display_fractions_wrapper_inside_mount_width {
@@ -1360,6 +1367,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_whole_numbers_wrapper_outside_mount_height {
@@ -1477,6 +1486,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_fractions_wrapper_outside_mount_height {
@@ -1631,6 +1642,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_whole_numbers_wrapper_outside_mount_width {
@@ -1743,6 +1756,8 @@
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
+  height: max-content;
+  width: 70px;
 }
 
 .display_fractions_wrapper_outside_mount_width {
@@ -1947,6 +1962,7 @@
 }
 
 .image_and_scroller_wrapper {
+  width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1963,9 +1979,11 @@
 }
 
 .imageContainer2_wrapper {
+  width: 500px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
 }
 
@@ -2718,13 +2736,7 @@
   color: rgb(255, 255, 255);
 }
 
-.select_head_rail_subtitle {
-  display: flex;
-  font-size: 15px;
-  color: brown;
-  margin-left: 20px;
-  margin: 10px;
-}
+
 
 .ellipse_and_type_head_and_bottom_rail {
   display: flex;
@@ -2742,73 +2754,19 @@
   margin-left: 20px;
 }
 
-.select_head_rail_option_group {
+.select_head_rail_subtitle { 
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 850px;
-  background: linear-gradient(to right, #ffffff, #f4f4f4, #ebebeb, #f5f5f5, #f7f7f7, #ffffff);
-  height: 120px;
-  padding: 20px;
-  border-radius: 0.35rem;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
 }
 
-.select_head_rail_option_selection_wrapper {
-  display: flex;
-  flex-direction: row;
-}
 
 .select_head_rail_cassette_option_selection_wrapper {
   display: flex;
   flex-direction: row;
   gap: 10px;
-}
-
-.select_cassette_ellipse1 {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
-
-.active_cassette_round1 {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.select_head_rail_image_and_tag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-}
-
-.cassette_chosen_image {
-  display: flex;
-  width: 70px;
-  height: auto;
-  border-radius: 0.35rem;
-}
-
-
-.cassette_type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 20px;
-  white-space: nowrap;
-  font-size: 12px;
-  width: 100px;
 }
 
 .select_head_rail_round_option_selection_wrapper {
@@ -2817,47 +2775,12 @@
   gap: 10px;
 }
 
-.select_round_ellipse1 {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem
-}
-
-.active_cassette_round1 {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.round_chosen_image {
-  display: flex;
-  width: 70px;
-  height: auto;
-  border-radius: 0.35rem;
-}
-
-.round_type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 20px;
-  white-space: nowrap;
-  font-size: 12px;
-  width: 100px;
-}
-
 .fabric_types_top_and_bottom_main_wrapper {
   display: flex;
   align-items: start;
   justify-content: flex-start;
   width: 850px;
+  height: max-content;
   margin-top: 50px;
 }
 
@@ -2872,8 +2795,6 @@
   transition: 0.3s;
 
 }
-
-
 
 .fabric_types_top_and_bottom_second_wrapper:hover {
   border-color: rgb(234, 234, 234);
@@ -2893,42 +2814,12 @@
   flex-direction: column;
 }
 
-
-
-.top_section {
+.pick_head_rail_color_subtitle_cassette_type {
   display: flex;
-  width: 850px;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-
-}
-
-.skip_head_rail_image_placeholder_invisible {
-  display: none;
-}
-
-.skip_head_rail_image_placeholder_visible {
-  width: 800px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(78, 73, 73);
-  background-image: url("/whattypeofblindsdoyouinstall.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 20px;
-}
-
-.fabric_list_top {
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
+  font-size: 15px;
+  color: rgb(20, 20, 20);
+  margin-left: 20px;
+  margin: 10px;
 }
 
 .selected_head_rail_color {
@@ -2938,45 +2829,12 @@
   transition: 0.2s;
   border-radius: 0.45rem;
   box-shadow: rgb(31, 31, 31) 0px 0px 5px;
-
 }
 
-.selected_bottom_rail_color {
-  border-width: 2px;
-  border-color: rgb(132, 132, 132);
-  padding: 2px;
-  transition: 0.2s;
-  border-radius: 0.45rem;
-  box-shadow: rgb(31, 31, 31) 0px 0px 5px;
-
-}
-
-.fabric_list_top_list1 {
+.top_section {
   display: flex;
-  flex-direction: row;
-}
-
-.fabric_list_top_list2 {
-  display: flex;
-  flex-direction: row;
-}
-
-.fabric_list_top_image_and_description {
-  display: flex;
+  width: 850px;
   flex-direction: column;
-  height: 90px;
-  width: 80px;
-  margin: 20px;
-}
-
-.fabric_list_top_image {
-  display: flex;
-  width: 80px;
-  height: 80px;
-}
-
-.fabric_list_top_image_description {
-  display: flex;
 }
 
 .skip_top_section {
@@ -2989,36 +2847,14 @@
   margin-top: 10px;
 }
 
-.fabric_types_subtitle {
-  width: 100px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 13px;
-  color: #3a3a3a;
-  background-color: rgb(197, 197, 197);
-  border-radius: 0.35rem;
-  border-width: 1px;
-  border-color: grey;
-}
 
-.pick_head_rail_color_subtitle {
-  display: flex;
-  font-size: 15px;
-  color: brown;
-  margin-left: 20px;
-  margin: 10px;
-}
-
-.ellipse_and_title {
+.ellipse_and_title_head_rail {
   display: flex;
   flex-direction: row;
   align-self: start;
   justify-self: start;
 }
+
 
 .skip_head_rail_ellipse {
   display: flex;
@@ -3027,6 +2863,7 @@
   background-color: #9f9f9f;
   border-radius: 1rem;
 }
+
 
 .active_skip_head_rail_ellipse {
   display: flex;
@@ -3038,6 +2875,8 @@
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
 
+
+
 .skip_head_rail_color {
   width: 850px;
   display: flex;
@@ -3046,6 +2885,7 @@
   font-size: 13px;
   color: #5b5b5b;
 }
+
 
 .note_skipping_color_for_head_rail {
   display: flex;
@@ -3057,13 +2897,13 @@
 
 
 
-.skip_bottom_rail_image_placeholder_invisible {
+.skip_head_rail_image_placeholder_invisible {
   display: none;
 }
 
-.skip_bottom_rail_image_placeholder_visible {
+.skip_head_rail_image_placeholder_visible {
   width: 800px;
-  height: 150px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3075,6 +2915,107 @@
   margin: 20px;
 }
 
+
+.fabric_list_top {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.fabric_list_top_list1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.pick_head_rail_color_subtitle_rounded_with_fabric { 
+  display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
+}
+
+
+.fabric_list_images_render_top { 
+display: flex;
+  }
+
+  
+  .fabric_list_top_image_and_description {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    width: 80px;
+    margin: 5px;
+  }
+
+
+  .fabric_list_top_image_description {
+    display: flex;
+  }
+
+
+
+  .selected_bottom_rail_color {
+    border-width: 2px;
+    border-color: rgb(132, 132, 132);
+    padding: 2px;
+    transition: 0.2s;
+    border-radius: 0.45rem;
+    box-shadow: rgb(31, 31, 31) 0px 0px 5px;
+  
+  }
+.pick_bottom_rail_color_wrapper { 
+  display: contents;
+}
+
+
+.pick_bottom_rail_color_subtitle1 {
+  display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
+  background-color: rgb(212, 212, 212);
+}
+
+.bottom_section {
+  display: flex;
+  width: 850px;
+  flex-direction: column;
+}
+
+.skip_bottom_section {
+  display: flex;
+  width: 850px;
+  flex-direction: column;
+  padding-left: 20px;
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px; 
+}
+
+
+.skip_bottom_rail_image_placeholder_invisible {
+  display: none;
+}
+
+.skip_bottom_rail_image_placeholder_visible {
+  width: 800px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(78, 73, 73);
+  background-image: url("/whattypeofblindsdoyouinstall.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
 
 
 .fabric_list_bottom {
@@ -3089,70 +3030,10 @@
 
 .fabric_list_bottom_list1 {
   display: flex;
-  flex-direction: row;
-}
-
-.fabric_list_bottom_list2 {
-  display: flex;
-  flex-direction: row;
-}
-
-.fabric_list_bottom_image_and_description {
-  display: flex;
   flex-direction: column;
-  height: 90px;
-  width: 80px;
-  margin: 20px;
 }
 
-.fabric_list_bottom_image {
-  display: flex;
-  width: 80px;
-  height: 80px;
-}
-
-.fabric_list_bottom_image_description {
-  display: flex;
-
-}
-
-.skip_bottom_section {
-  display: flex;
-  width: 850px;
-  flex-direction: column;
-  padding-left: 20px;
-  align-self: flex-start;
-  justify-content: flex-start;
-  margin-top: 10px;
-}
-
-.ellipse_and_title {
-  display: flex;
-  flex-direction: row;
-  align-self: start;
-  justify-self: start;
-}
-
-.fabric_types_subtitle2 {
-  width: 100px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 13px;
-  color: #3a3a3a;
-  background-color: rgb(197, 197, 197);
-  border-radius: 0.35rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-
-
-
-.pick_bottom_rail_color_subtitle {
+.pick_head_rail_color_subtitle_oval_with_fabric { 
   display: flex;
   font-size: 15px;
   color: brown;
@@ -3161,159 +3042,27 @@
 }
 
 
-.bottom_section {
-  display: flex;
-  width: 850px;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-}
+.fabric_list_images_render_bottom { 
+display: flex;
+  }
 
-.skip_bottom_rail_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
+
+  .fabric_list_bottom_image_and_description {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    width: 80px;
+    margin: 5px;
+  }
 
 
 
-.active_skip_bottom_rail_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.skip_bottom_rail_color {
-  width: 850px;
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  font-size: 13px;
-  color: #5b5b5b;
-}
-
-.note_skipping_color_for_bottom_rail {
-  display: flex;
-  padding: 20px;
-  font-size: 10px;
-  color: #6b0a0a;
-}
-
-.extra_options_set_main_wrapper {
-  display: flex;
-  width: 850px;
-  padding: 20px;
-}
-
-.extra_options_set_second_wrapper {
-  display: none;
-  width: 850px;
-  gap: 5px;
-}
-
-.extra_options_set {
-  display: flex;
-  width: 850px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-}
-
-.bottom_rail_option_1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.extra_options_set_ellipse_and_image {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-
-.bottom_rail_option_1_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
-
-.active_bottom_rail_option_1_ellipse {
-  display: flex;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.option_1_Image {
-  display: flex;
-  width: 100px;
-  height: 100px;
-}
-
-.option_1_text {
-  display: flex;
-  word-wrap: nowrap;
-}
-
-.option_1_price {
-  display: flex;
-  word-wrap: nowrap;
-}
-
-.bottom_rail_option_2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.extra_options_set_ellipse_and_image {
-  display: flex;
-  flex-direction: row;
-}
-
-.bottom_rail_option_2_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
-
-.active_bottom_rail_option_2_ellipse {
-  display: flex;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.option_2_Image {
-  display: flex;
-  width: 100px;
-  height: 100px;
-}
-
-.option_1_text {
-  display: flex;
-  word-wrap: nowrap;
-}
-
-.option_2_price {
-  display: flex;
-  word-wrap: nowrap;
-}
-
-
-
-
+  .fabric_list_bottom_image_description {
+    display: flex;
+  
+  }
+  
+  
 .see_bill_button_wrapper {
   width: 850px;
   display: flex;
@@ -3405,6 +3154,13 @@
   gap: 10px;
 }
 
+
+.answers_answers2 { 
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+}
 
 .select_head_rail_seperator_line {
   display: flex;
