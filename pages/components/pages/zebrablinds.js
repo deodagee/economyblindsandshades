@@ -526,6 +526,9 @@ function ZebraBlinds() {
         ]
     }
 
+
+
+
     const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
 
     //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
@@ -539,29 +542,42 @@ function ZebraBlinds() {
         ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert,
     ];
 
-    const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(imageData => imageData.key === selected_head_rail_color);
-    const Bottom_Oval_Rail_Aluminum_function = Match_Fabric_With_bottom.find(imageData => imageData.key === selected_head_rail_color);
-
-    const handleRenderClickImageToMergeFabrics = (imageName, selectedColor, set) => {
-        const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selectedColor ? styles[`selected_${set}_color`] : ''}`;
-    };
-    
-    const handleRenderClickImageToMergeAluminum = (imageName, selectedColor, set) => {
-        const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selectedColor ? styles[`selected_${set}_color`] : ''}`;
-    };
-    
-
-    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
-
     const Match_Amluminum_With_Aluminum = [
         ...Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum,
         ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum,
     ]
 
-    const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Amluminum_With_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
-    const Square_Top_Aluminum_function = Match_Amluminum_With_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+
+
+    const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
+        (imageDataTOP) => imageDataTOP.key === selected_head_rail_color
+    );
+    const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
+        (imageData) => imageData.key === selected_bottom_rail_color
+    );
+
+
+    const Square_Top_Aluminum_function = Match_Amluminum_With_Aluminum.find(
+        (imageData) => imageData.key === selected_bottom_rail_color
+    );
+    const Bottom_Oval_Rail_Aluminum_function = Match_Amluminum_With_Aluminum.find(
+        (imageData) => imageData.key === selected_bottom_rail_color
+    );
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+
+    const handleRenderClickImageToMergeFabrics = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+    };
+
+    const handleRenderClickImageToMergeAluminum = (imageName) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+    };
+
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+
 
 
     return (
@@ -645,541 +661,572 @@ function ZebraBlinds() {
 
 
 
+                            <div className={styles.inside_mount_group_wraper}>
 
-                            <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
-                                <span className={styles.left_right_inside_mount}>
+                                <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
+                                    <span className={styles.first_chosen_inside_mount_selection_wrapper}>
+                                        <Image
+                                            alt="first chosen image"
+                                            width={100}
+                                            height={100}
+                                            src={"/logo.ong"}
+                                            className={styles.first_chosen_inside_mount_selection}>
 
-                                    <span className={styles.left_inside_mount}>
-                                        <div className={styles.inside_mount_group_left_side}>
-
-                                            <span className={styles.measurments_and_image_inside_mount}>
-                                                <div className={styles.inside_mount_measurement_instructions}>
-                                                    <p className={styles.measurement_instructions_title_inside_mount}>
-                                                        Measurement Instructions:
-                                                    </p>
-                                                </div>
-
-                                                <div
-                                                    className={styles.step_1_inside_mount}
-                                                >
-                                                    <p className={styles.step_tag}> Step 1:</p>
-                                                    <p className={styles.step_tag_description}>
-                                                        Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
-                                                        (If You Do Not Have 3” Ledge Follow Outside Mount Process).
-                                                    </p>
-                                                </div>
-
-                                                <div
-                                                    className={styles.step_2_inside_mount}
-                                                >
-                                                    <p className={styles.step_tag}>  Step 2:</p>
-                                                    <p className={styles.step_tag_description}>
-                                                        Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
-                                                        (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
-                                                    </p>
-                                                </div>
-
-
-                                                <div
-                                                    className={styles.step_3_inside_mount}
-                                                >
-                                                    <p className={styles.step_tag}> Step 3: </p>
-                                                    <p className={styles.step_tag_description}>
-                                                        Vertical Direction (Height) Measure Inside Window Frame Centre.
-                                                        (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
-                                                    </p>
-                                                </div>
-                                            </span>
-                                        </div>
+                                        </Image>
                                     </span>
-
-                                    <span className={styles.right_inside_mount}>
-                                        <div className={styles.inside_mount_group_right_side}>
-                                            <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
-                                        </div>
-                                    </span>
-                                </span>
-
-
-                                <div className={styles.enter_size_inside_mount_group}>
-
-                                    <div className={styles.qty_group}>
-                                        <div className={styles.qty_group_part1}>
-                                            <div className={styles.quantity_title}>QUANTITY</div>
-                                            <div className={styles.quantity_rectangle_and_numbers}>
-
-                                                <div className={styles.quantity_rectangle}>
-                                                    <div className={styles.qty}>QTY</div>
-                                                    <div className={styles.qty_number}>1</div>
-                                                </div>
-
-                                                <div>
-                                                    <span>
-                                                        <div className={styles.quantity_is_always_1_wrapper}>
-                                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                                        </div>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.qty_group_part2}>
-                                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                                        </div>
-                                    </div>
+                                    <span className={styles.left_right_inside_mount}>
 
 
 
-                                    <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
-                                    <div className={styles.enter_height_and_width_inside_mount_group}>
 
-                                        <div className={styles.enter_height_group_inside_mount}>
+                                        <span className={styles.left_inside_mount}>
 
+                                            <div className={styles.inside_mount_group_left_side}>
 
-                                            <div className={styles.height_and_toggle_inside_mount}>
-                                                <div className={styles.choose_height_image_placeholder}></div>
-                                                <div className={styles.height_inside_mount_sub_title}>
-                                                    CHOOSE HEIGHT:
-                                                </div>
-                                                <div className={styles.inches_fractions_boat}>
+                                                <span className={styles.measurments_and_image_inside_mount}>
+                                                    <div className={styles.inside_mount_measurement_instructions}>
+                                                        <p className={styles.measurement_instructions_title_inside_mount}>
+                                                            Measurement Instructions:
+                                                        </p>
+                                                    </div>
 
-                                                    <div className={styles.enter_height_inside_mount_rectangle_1}
+                                                    <div
+                                                        className={styles.step_1_inside_mount}
                                                     >
-                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_height}
-                                                            onClick={handle_drop_down_show_numbers_height_inside_mount}
-                                                        >
-                                                            <p>
-                                                                INCHES
-                                                            </p>
-                                                            <svg
-                                                                className={styles.polygon_1}
-                                                                width="20"
-                                                                height="16"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                        <div className={styles.scroller_partition_height_inside_outside_mount}>
+                                                        <p className={styles.step_tag}> Step 1:</p>
+                                                        <p className={styles.step_tag_description}>
+                                                            Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
+                                                            (If You Do Not Have 3” Ledge Follow Outside Mount Process).
+                                                        </p>
+                                                    </div>
 
-
-                                                            {whole_number_index_inside_mount_height && (
-                                                                <div className={styles.height_scroll_number_inches_inside_mount}>
-                                                                    <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                                                                        <div className={styles.ScrollNumberInches_height_inside_mount}>
-                                                                            {whole_number_index_inside_mount_height && (
-                                                                                <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                                                                    <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            )}
-                                                        </div>
+                                                    <div
+                                                        className={styles.step_2_inside_mount}
+                                                    >
+                                                        <p className={styles.step_tag}>  Step 2:</p>
+                                                        <p className={styles.step_tag_description}>
+                                                            Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
+                                                            (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
+                                                        </p>
                                                     </div>
 
 
-
-
-
-
-                                                    <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
+                                                    <div
+                                                        className={styles.step_3_inside_mount}
                                                     >
-                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
-                                                            onClick={handle_drop_down_show_fractions_inside_mount_height}
+                                                        <p className={styles.step_tag}> Step 3: </p>
+                                                        <p className={styles.step_tag_description}>
+                                                            Vertical Direction (Height) Measure Inside Window Frame Centre.
+                                                            (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                                        </p>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </span>
+
+                                        <span className={styles.right_inside_mount}>
+                                            <div className={styles.inside_mount_group_right_side}>
+                                                <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
+                                            </div>
+                                        </span>
+                                    </span>
+
+
+                                    <div className={styles.enter_size_inside_mount_group}>
+
+                                        <div className={styles.qty_group}>
+                                            <div className={styles.qty_group_part1}>
+                                                <div className={styles.quantity_title}>QUANTITY</div>
+                                                <div className={styles.quantity_rectangle_and_numbers}>
+
+                                                    <div className={styles.quantity_rectangle}>
+                                                        <div className={styles.qty}>QTY</div>
+                                                        <div className={styles.qty_number}>1</div>
+                                                    </div>
+
+                                                    <div>
+                                                        <span>
+                                                            <div className={styles.quantity_is_always_1_wrapper}>
+                                                                <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                                            </div>
+
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={styles.qty_group_part2}>
+                                                <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
+                                        <div className={styles.enter_height_and_width_inside_mount_group}>
+
+                                            <div className={styles.enter_height_group_inside_mount}>
+
+
+                                                <div className={styles.height_and_toggle_inside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.height_inside_mount_sub_title}>
+                                                        CHOOSE HEIGHT:
+                                                    </div>
+                                                    <div className={styles.inches_fractions_boat}>
+
+                                                        <div className={styles.enter_height_inside_mount_rectangle_1}
                                                         >
-                                                            <p>FRACTIONS</p>
-                                                            <svg
-                                                                className={styles.polygon_2}
-                                                                width="20"
-                                                                height="16"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_height}
+                                                                onClick={handle_drop_down_show_numbers_height_inside_mount}
                                                             >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
+                                                                <p>
+                                                                    INCHES
+                                                                </p>
+                                                                <svg
+                                                                    className={styles.polygon_1}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_height_inside_outside_mount}>
 
-                                                        <div className={styles.scroller_partition_height_inside_mount}>
 
-
-                                                            {fractionIndex_inside_mount_height && (
-                                                                <div className={styles.height_scroll_number_fractions_inside_mount}>
-
-                                                                    <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                                                                        <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                            <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
+                                                                {whole_number_index_inside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
+                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
+                                                                            <div className={styles.ScrollNumberInches_height_inside_mount}>
+                                                                                {whole_number_index_inside_mount_height && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height && <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            )}
+                                                                )}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
 
 
-                                        <div className={styles.enter_width_group_inside_mount}>
-                                            <div className={styles.width_and_toggle_inside_mount}>
-                                                <div className={styles.choose_height_image_placeholder}></div>
-                                                <div className={styles.width_inside_mount_sub_title}>
-                                                    CHOOSE WIDTH:
-                                                </div>
 
-                                                <div className={styles.inches_fractions_boat}>
 
-                                                    <div className={styles.enter_width_inside_mount_rectangle_1}>
 
-                                                        <div className={styles.toggle_disclaimer_inches_inside_mount_width}
-                                                            onClick={handle_drop_down_show_numbers_width_inside_mount}
+                                                        <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
                                                         >
-                                                            <p>INCHES</p>
-                                                            <svg
-                                                                className={styles.polygon_3}
-                                                                width="20"
-                                                                height="16"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
+                                                            <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
+                                                                onClick={handle_drop_down_show_fractions_inside_mount_height}
                                                             >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                        <div className={styles.scroller_partition_width_inside_mount}>
+                                                                <p>FRACTIONS</p>
+                                                                <svg
+                                                                    className={styles.polygon_2}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+
+                                                            <div className={styles.scroller_partition_height_inside_mount}>
 
 
-                                                            {whole_number_index_inside_mount_width && (
-                                                                <div className={styles.width_scroll_number_inches_inside_mount}>
-                                                                    <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
-                                                                        <div className={styles.ScrollNumberInches_width_inside_mount}>
-                                                                            {whole_number_index_inside_mount_width && (
-                                                                                <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
-                                                                                    <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
-                                                                                    </div>
+                                                                {fractionIndex_inside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+
+                                                                        <div className={styles.display_fractions_wrapper_inside_mount_height}>
+                                                                            <div className={styles.ScrollNumberFractions_height_inside_mount}>
+                                                                                <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
                                                                                 </div>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div className={styles.enter_width_inside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
-                                                            onClick={handle_drop_down_show_fractions_inside_mount_width}
-                                                        >
-                                                            <p>FRACTIONS</p>
-
-                                                            <svg
-                                                                className={styles.polygon_4}
-                                                                width="20"
-                                                                height="16"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                        <div className={styles.scroller_partition_width_inside_mount}>
-
-
-                                                            {fractionIndex_inside_mount_width && (
-                                                                <div className={styles.width_scroll_number_fractions_inside_mount}>
-
-                                                                    <div className={styles.display_fractions_wrapper_inside_mount_width}>
-                                                                        <div className={styles.ScrollNumberFractions_width_inside_mount}>
-                                                                            <div className={styles.displayFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <div className={styles.displayFractions_inside_mount_width_list_of_numbers}>{renderFractions_inside_mount_width()}</div>}
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            )}
+                                                                )}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
+
+
+                                            <div className={styles.enter_width_group_inside_mount}>
+                                                <div className={styles.width_and_toggle_inside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.width_inside_mount_sub_title}>
+                                                        CHOOSE WIDTH:
+                                                    </div>
+
+                                                    <div className={styles.inches_fractions_boat}>
+
+                                                        <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                                            <div className={styles.toggle_disclaimer_inches_inside_mount_width}
+                                                                onClick={handle_drop_down_show_numbers_width_inside_mount}
+                                                            >
+                                                                <p>INCHES</p>
+                                                                <svg
+                                                                    className={styles.polygon_3}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_width_inside_mount}>
+
+
+                                                                {whole_number_index_inside_mount_width && (
+                                                                    <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                        <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
+                                                                            <div className={styles.ScrollNumberInches_width_inside_mount}>
+                                                                                {whole_number_index_inside_mount_width && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div className={styles.enter_width_inside_mount_rectangle_2}>
+                                                            <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
+                                                                onClick={handle_drop_down_show_fractions_inside_mount_width}
+                                                            >
+                                                                <p>FRACTIONS</p>
+
+                                                                <svg
+                                                                    className={styles.polygon_4}
+                                                                    width="20"
+                                                                    height="16"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_width_inside_mount}>
+
+
+                                                                {fractionIndex_inside_mount_width && (
+                                                                    <div className={styles.width_scroll_number_fractions_inside_mount}>
+
+                                                                        <div className={styles.display_fractions_wrapper_inside_mount_width}>
+                                                                            <div className={styles.ScrollNumberFractions_width_inside_mount}>
+                                                                                <div className={styles.displayFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <div className={styles.displayFractions_inside_mount_width_list_of_numbers}>{renderFractions_inside_mount_width()}</div>}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
 
+                            <div className={styles.outside_mount_group_wrapper}>
+                                <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
+                                    <span className={styles.first_chosen_inside_mount_selection_wrapper}>
 
-                            <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
-                                <span className={styles.left_right_outside_mount}>
+                                        <Image
+                                            alt="first chosen image"
+                                            width={100}
+                                            height={100}
+                                            src={"/logo.ong"}
+                                            className={styles.first_chosen_inside_mount_selection}>
 
-                                    <span className={styles.left_outside_mount}>
-                                        <div className={styles.inside_mount_group_left_side}>
-                                            <div className={styles.outside_mount_measurement_instructions}>
-
-                                                <p className={styles.measurement_instructions_title_outside_mount}>
-                                                    Measurement Instructions:
-                                                </p>
-
-                                                <div className={styles.step_1_outside_mount}>
-                                                    <p className={styles.step_tag}> Step 1: </p>
-                                                    <span className={styles.step_tag_description_wrapper}>
-                                                        <p className={styles.step_tag_description}>
-                                                            Horizontal Direction (Width) Measure Width Including Window Trim In The Center
-                                                            (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
-                                                        </p>
-                                                        <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
-                                                        </p>
-                                                    </span>
-                                                </div>
-
-                                                <div
-                                                    className={styles.step_2_outside_mount}
-                                                >
-                                                    <p className={styles.step_tag}> Step 2: </p>
-                                                    <span className={styles.step_tag_description_wrapper}>
-                                                        <p className={styles.step_tag_description}>
-                                                            Vertical Direction (Height) Measure Height Including Window Trim In The Center
-                                                            (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
-                                                        </p>
-                                                        <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </Image>
                                     </span>
-
-                                    <span className={styles.right_outside_mount}>
-                                        <div className={styles.outside_mount_group_right_side}>
-                                            <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
-                                        </div>
-                                    </span>
-                                </span>
+                                    <span className={styles.left_right_outside_mount}>
 
 
 
-                                <div className={styles.enter_size_outside_mount_group}>
+                                        <span className={styles.left_outside_mount}>
 
+                                            <div className={styles.inside_mount_group_left_side}>
+                                                <div className={styles.outside_mount_measurement_instructions}>
 
-                                    <div className={styles.qty_group}>
-                                        <div className={styles.qty_group_part1}>
-                                            <div className={styles.quantity_title}>QUANTITY</div>
-                                            <div className={styles.quantity_rectangle_and_numbers}>
+                                                    <p className={styles.measurement_instructions_title_outside_mount}>
+                                                        Measurement Instructions:
+                                                    </p>
 
-                                                <div className={styles.quantity_rectangle}>
-                                                    <div className={styles.qty}>QTY</div>
-                                                    <div className={styles.qty_number}>1</div>
-                                                </div>
-
-                                                <div>
-                                                    <span>
-                                                        <div className={styles.quantity_is_always_1_wrapper}>
-                                                            <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                                        </div>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.qty_group_part2}>
-                                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                                        </div>
-                                    </div>
-
-
-                                    <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
-                                    <div className={styles.enter_height_and_width_outside_mount_group}>
-
-                                        <div className={styles.enter_height_group_outside_mount}>
-                                            <div className={styles.height_and_toggle_outside_mount}>
-                                                <div className={styles.choose_height_image_placeholder}></div>
-                                                <div className={styles.height_outside_mount_sub_title}>
-                                                    CHOOSE HEIGHT:
-                                                </div>
-
-                                                <div className={styles.inches_fractions_boat}>
-                                                    <div className={styles.enter_height_outside_mount_rectangle_1}>
-                                                        <div className={styles.toggle_disclaimer_inches_height_outside_mount}
-                                                            onClick={handle_drop_down_show_numbers_height_outside_mount}
-                                                        >
-                                                            <p>
-                                                                INCHES
+                                                    <div className={styles.step_1_outside_mount}>
+                                                        <p className={styles.step_tag}> Step 1: </p>
+                                                        <span className={styles.step_tag_description_wrapper}>
+                                                            <p className={styles.step_tag_description}>
+                                                                Horizontal Direction (Width) Measure Width Including Window Trim In The Center
+                                                                (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
                                                             </p>
-                                                            <svg
-                                                                className={styles.polygon_5}
-                                                                width="10"
-                                                                height="8"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-
-                                                        </div>
-
-                                                        <div className={styles.scroller_partition_inches_outside_mount}>
-                                                            {whole_number_index_outside_mount_height && (
-                                                                <div className={styles.height_scroll_number_inches_outside_mount}>
-
-                                                                    <div className={styles.display_whole_numbers_wrapper_outside_mount_height}>
-                                                                        <div className={styles.ScrollNumberInches_height_outside_mount}>
-                                                                            {whole_number_index_outside_mount_height && (
-                                                                                <div className={styles.displayWholeNumbersWrapper_height_outside_mount}>
-                                                                                    <div className={styles.displayWholeNumbers_outside_mount_height}>{whole_number_index_outside_mount_height && <div className={styles.displayWholeNumbers_outside_mount_height_list_of_numbers}>{renderNumbers_outside_mount_height()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                            )}
-                                                        </div>
+                                                            <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
+                                                            </p>
+                                                        </span>
                                                     </div>
 
+                                                    <div
+                                                        className={styles.step_2_outside_mount}
+                                                    >
+                                                        <p className={styles.step_tag}> Step 2: </p>
+                                                        <span className={styles.step_tag_description_wrapper}>
+                                                            <p className={styles.step_tag_description}>
+                                                                Vertical Direction (Height) Measure Height Including Window Trim In The Center
+                                                                (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                                            </p>
+                                                            <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+
+                                        <span className={styles.right_outside_mount}>
+                                            <div className={styles.outside_mount_group_right_side}>
+                                                <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
+                                            </div>
+                                        </span>
+                                    </span>
 
 
-                                                    <div className={styles.enter_height_fractions_outside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_height_fractions_outside_mount}
-                                                            onClick={handle_drop_down_show_fractions_outside_mount_height}                                                                                                                        >
 
-                                                            <p>FRACTIONS</p>
-                                                            <svg
-                                                                className={styles.polygon_6}
-                                                                width="10"
-                                                                height="8"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
+                                    <div className={styles.enter_size_outside_mount_group}>
+
+
+                                        <div className={styles.qty_group}>
+                                            <div className={styles.qty_group_part1}>
+                                                <div className={styles.quantity_title}>QUANTITY</div>
+                                                <div className={styles.quantity_rectangle_and_numbers}>
+
+                                                    <div className={styles.quantity_rectangle}>
+                                                        <div className={styles.qty}>QTY</div>
+                                                        <div className={styles.qty_number}>1</div>
+                                                    </div>
+
+                                                    <div>
+                                                        <span>
+                                                            <div className={styles.quantity_is_always_1_wrapper}>
+                                                                <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                                            </div>
+
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={styles.qty_group_part2}>
+                                                <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                                            </div>
+                                        </div>
+
+
+                                        <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
+                                        <div className={styles.enter_height_and_width_outside_mount_group}>
+
+                                            <div className={styles.enter_height_group_outside_mount}>
+                                                <div className={styles.height_and_toggle_outside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.height_outside_mount_sub_title}>
+                                                        CHOOSE HEIGHT:
+                                                    </div>
+
+                                                    <div className={styles.inches_fractions_boat}>
+                                                        <div className={styles.enter_height_outside_mount_rectangle_1}>
+                                                            <div className={styles.toggle_disclaimer_inches_height_outside_mount}
+                                                                onClick={handle_drop_down_show_numbers_height_outside_mount}
                                                             >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
+                                                                <p>
+                                                                    INCHES
+                                                                </p>
+                                                                <svg
+                                                                    className={styles.polygon_5}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+
+                                                            </div>
+
+                                                            <div className={styles.scroller_partition_inches_outside_mount}>
+                                                                {whole_number_index_outside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_inches_outside_mount}>
+
+                                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_height}>
+                                                                            <div className={styles.ScrollNumberInches_height_outside_mount}>
+                                                                                {whole_number_index_outside_mount_height && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_height_outside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_outside_mount_height}>{whole_number_index_outside_mount_height && <div className={styles.displayWholeNumbers_outside_mount_height_list_of_numbers}>{renderNumbers_outside_mount_height()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                )}
+                                                            </div>
                                                         </div>
-                                                        <div className={styles.scroller_partition_fractions_outside_mount}>
-                                                            {fractionIndex_outside_mount_height && (
-                                                                <div className={styles.height_scroll_number_fractions_outside_mount}>
-                                                                    <div className={styles.display_fractions_wrapper_outside_mount_height}>
-                                                                        <div className={styles.ScrollNumberFractions_height_outside_mount}>
-                                                                            <div className={styles.displayFractions_outside_mount_height}>{fractionIndex_outside_mount_height && <div className={styles.displayFractions_outside_mount_height_list_of_numbers}>{renderFractions_outside_mount_height()}</div>}
+
+
+
+                                                        <div className={styles.enter_height_fractions_outside_mount_rectangle_2}>
+                                                            <div className={styles.toggle_disclaimer_height_fractions_outside_mount}
+                                                                onClick={handle_drop_down_show_fractions_outside_mount_height}                                                                                                                        >
+
+                                                                <p>FRACTIONS</p>
+                                                                <svg
+                                                                    className={styles.polygon_6}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_fractions_outside_mount}>
+                                                                {fractionIndex_outside_mount_height && (
+                                                                    <div className={styles.height_scroll_number_fractions_outside_mount}>
+                                                                        <div className={styles.display_fractions_wrapper_outside_mount_height}>
+                                                                            <div className={styles.ScrollNumberFractions_height_outside_mount}>
+                                                                                <div className={styles.displayFractions_outside_mount_height}>{fractionIndex_outside_mount_height && <div className={styles.displayFractions_outside_mount_height_list_of_numbers}>{renderFractions_outside_mount_height()}</div>}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div className={styles.enter_width_group_outside_mount}>
+                                                <div className={styles.width_and_toggle_outside_mount}>
+                                                    <div className={styles.choose_height_image_placeholder}></div>
+                                                    <div className={styles.width_outside_mount_sub_title}>
+                                                        CHOOSE WIDTH:
+                                                    </div>
+
+                                                    <div className={styles.inches_fractions_boat}>
+
+                                                        <div className={styles.enter_width_outside_mount_rectangle_1}>
+
+                                                            <div className={styles.toggle_disclaimer_inches_width_outside_mount}
+                                                                onClick={handle_drop_down_show_numbers_width_outside_mount}
+                                                            >
+                                                                <p>INCHES</p>
+                                                                <svg
+                                                                    className={styles.polygon_7}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                            <div className={styles.scroller_partition_width_outside_mount}>
+
+                                                                {whole_number_index_outside_mount_width && (
+                                                                    <div className={styles.width_scroll_number_inches_outside_mount}>
+
+                                                                        <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
+                                                                            <div className={styles.ScrollNumberInches_width_outside_mount}>
+                                                                                {whole_number_index_outside_mount_width && (
+                                                                                    <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
+                                                                                        <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
+                                                            <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
+                                                                onClick={handle_drop_down_show_fractions_outside_mount_width}
+                                                            >
+                                                                <p>FRACTIONS</p>
+                                                                <svg
+                                                                    className={styles.polygon_8}
+                                                                    width="10"
+                                                                    height="8"
+                                                                    viewBox="0 0 10 8"
+                                                                    fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                    <path
+                                                                        d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
+                                                                        fill="#da1212"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+
+                                                            {fractionIndex_outside_mount_width && (
+                                                                <div className={styles.width_scroll_number_fractions_outside_mount}>
+
+                                                                    <div className={styles.display_fractions_wrapper_outside_mount_width}>
+                                                                        <div className={styles.ScrollNumberFractions_width_outside_mount}>
+                                                                            <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             )}
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div className={styles.enter_width_group_outside_mount}>
-                                            <div className={styles.width_and_toggle_outside_mount}>
-                                                <div className={styles.choose_height_image_placeholder}></div>
-                                                <div className={styles.width_outside_mount_sub_title}>
-                                                    CHOOSE WIDTH:
-                                                </div>
-
-                                                <div className={styles.inches_fractions_boat}>
-
-                                                    <div className={styles.enter_width_outside_mount_rectangle_1}>
-
-                                                        <div className={styles.toggle_disclaimer_inches_width_outside_mount}
-                                                            onClick={handle_drop_down_show_numbers_width_outside_mount}
-                                                        >
-                                                            <p>INCHES</p>
-                                                            <svg
-                                                                className={styles.polygon_7}
-                                                                width="10"
-                                                                height="8"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                        <div className={styles.scroller_partition_width_outside_mount}>
-
-                                                            {whole_number_index_outside_mount_width && (
-                                                                <div className={styles.width_scroll_number_inches_outside_mount}>
-
-                                                                    <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
-                                                                        <div className={styles.ScrollNumberInches_width_outside_mount}>
-                                                                            {whole_number_index_outside_mount_width && (
-                                                                                <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
-                                                                                    <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            )}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
-                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
-                                                            onClick={handle_drop_down_show_fractions_outside_mount_width}
-                                                        >
-                                                            <p>FRACTIONS</p>
-                                                            <svg
-                                                                className={styles.polygon_8}
-                                                                width="10"
-                                                                height="8"
-                                                                viewBox="0 0 10 8"
-                                                                fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                                <path
-                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                    fill="#da1212"
-                                                                />
-                                                            </svg>
-                                                        </div>
-
-                                                        {fractionIndex_outside_mount_width && (
-                                                            <div className={styles.width_scroll_number_fractions_outside_mount}>
-
-                                                                <div className={styles.display_fractions_wrapper_outside_mount_width}>
-                                                                    <div className={styles.ScrollNumberFractions_width_outside_mount}>
-                                                                        <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        )}
                                                     </div>
                                                 </div>
                                             </div>
@@ -1501,28 +1548,28 @@ function ZebraBlinds() {
 
 
 
-                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
-                                                                                <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
+                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageDataTOP) => (
+                                                                                <div key={imageDataTOP.key} className={styles.fabric_list_top_image_and_description}>
                                                                                     {/* Render the actual image here */}
 
                                                                                     <div>
                                                                                         <Image
-                                                                                            className={handleRenderClickImageToMergeFabrics(imageData.key)}
+                                                                                            className={handleRenderClickImageToMergeFabrics(imageDataTOP.key)}
                                                                                             width={100}
                                                                                             height={100}
-                                                                                            src={imageData.src}
-                                                                                            alt={imageData.label}
+                                                                                            src={imageDataTOP.src}
+                                                                                            alt={imageDataTOP.label}
                                                                                             onClick={() => {
                                                                                                 if (!active_skip_head_rail_ellipse) {
-                                                                                                    console.log(`Click handler for ${imageData.key}`);
-                                                                                                    Set_selected_head_rail_color(imageData.key);
+                                                                                                    console.log(`Click handler for ${imageDataTOP.key}`);
+                                                                                                    Set_selected_head_rail_color(imageDataTOP.key);
                                                                                                 }
                                                                                             }}
                                                                                             style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
                                                                                         />
                                                                                     </div>
                                                                                     <div className={styles.fabric_list_top_image_description}>
-                                                                                        <div>{imageData.label}</div>
+                                                                                        <div>{imageDataTOP.label}</div>
                                                                                     </div>
                                                                                 </div>
                                                                             ))}
@@ -1596,7 +1643,15 @@ function ZebraBlinds() {
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
-                        
+                            <div className={styles.see_bill_button_wrapper}>
+                                <button
+                                    onClick={handle_click_see_bill_button}
+                                    className={styles.see_bill_button}>
+                                    <div
+                                        style={NextButton4buttonStyle}
+                                        className={styles.see_bill_text}>See Bill</div>
+                                </button>
+                            </div>
 
                             <div className={styles.review_your_order}>Review Your Order</div>
                             <div className={styles.review_your_order_seperator_line}></div>

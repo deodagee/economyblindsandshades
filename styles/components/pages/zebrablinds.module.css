@@ -318,6 +318,13 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
+.inside_mount_group_wraper { 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .inside_mount_group {
   width: 850px;
   align-items: center;
@@ -336,6 +343,13 @@
   gap: 20px;
 }
 
+.first_chosen_inside_mount_selection { 
+  display: flex;
+  width: 100px;
+  height: auto;
+  background-color: black;
+}
+
 .visible_inside_mount {
   display: contents;
 }
@@ -346,6 +360,7 @@
 
 .left_inside_mount {
   display: flex;
+  height: 500px;
   margin-top: 30px;
 }
 
@@ -1117,6 +1132,21 @@
   justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.first_chosen_inside_mount_selection_wrapper { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 850px;
+}
+
+.first_chosen_inside_mount_selection { 
+  display: flex;
+  width: 250px;
+  height: auto;
+  background-color: black;
+  margin: 20px;
 }
 
 .left_right_outside_mount {
