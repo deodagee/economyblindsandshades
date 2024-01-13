@@ -2828,7 +2828,7 @@
   padding: 2px;
   transition: 0.2s;
   border-radius: 0.45rem;
-  box-shadow: rgb(31, 31, 31) 0px 0px 5px;
+  box-shadow: rgb(255, 0, 0) 0px 0px 5px;
 }
 
 .top_section {
@@ -2854,7 +2854,6 @@
   align-self: start;
   justify-self: start;
 }
-
 
 .skip_head_rail_ellipse {
   display: flex;
@@ -2965,7 +2964,7 @@ display: flex;
     padding: 2px;
     transition: 0.2s;
     border-radius: 0.45rem;
-    box-shadow: rgb(31, 31, 31) 0px 0px 5px;
+    box-shadow: rgb(255, 0, 0) 0px 0px 5px;
   
   }
 .pick_bottom_rail_color_wrapper { 
@@ -3061,23 +3060,7 @@ display: flex;
     display: flex;
   
   }
-  
-  
-.see_bill_button_wrapper {
-  width: 850px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.see_bill_button {
-  display: flex;
-  margin: 20px;
-}
-
-.see_bill_text {
-  font-size: 10px;
-}
 
 
 .window_name_answer {

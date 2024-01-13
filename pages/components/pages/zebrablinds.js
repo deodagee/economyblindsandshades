@@ -526,50 +526,42 @@ function ZebraBlinds() {
         ]
     }
 
-
-
-
     const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
+
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
 
     const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
 
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
 
+    const Match_Fabric_With_bottom = [
+        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert,
+        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert,
+    ];
 
+    const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(imageData => imageData.key === selected_head_rail_color);
+    const Bottom_Oval_Rail_Aluminum_function = Match_Fabric_With_bottom.find(imageData => imageData.key === selected_head_rail_color);
 
-
-
-    // For Cassette Choice
-    const Rounded_Top_Cassette_With_Fabric_Insert_function = Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert.find(imageDataTOP => imageDataTOP.key === selected_head_rail_color);
-
-    const handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function = (imageNameTOP) => {
-        // Your existing logic
-    };
-
-    const Square_Top_Aluminum_function = Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum.find(imageDataTOP => imageDataTOP.key === selected_head_rail_color);
-
-    const handleRender_Square_Top_Aluminum_function = (imageNameTOP) => {
-        const baseClassName = styles[imageNameTOP];
-        return `${baseClassName} ${imageNameTOP === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
-    };
-
-
-
-
-
-    // For Bottom Rail Choice
-    const Bottom_Rail_Square_With_Fabric_Insert_function = Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert.find(imageData => imageData.key === selected_bottom_rail_color);
-
-    const handleRender_Bottom_Rail_Square_With_Fabric_Insert_function = (imageName) => {
-        // Your existing logic
-    };
-
-    const Bottom_Oval_Rail_Aluminum_function = Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
-
-    const handleRender_Bottom_Oval_Rail_Aluminum_function = (imageName) => {
+    const handleRenderClickImageToMergeFabrics = (imageName, selectedColor, set) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+        return `${baseClassName} ${imageName === selectedColor ? styles[`selected_${set}_color`] : ''}`;
     };
+    
+    const handleRenderClickImageToMergeAluminum = (imageName, selectedColor, set) => {
+        const baseClassName = styles[imageName];
+        return `${baseClassName} ${imageName === selectedColor ? styles[`selected_${set}_color`] : ''}`;
+    };
+    
 
+    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+
+    const Match_Amluminum_With_Aluminum = [
+        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum,
+        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum,
+    ]
+
+    const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Amluminum_With_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
+    const Square_Top_Aluminum_function = Match_Amluminum_With_Aluminum.find(imageData => imageData.key === selected_bottom_rail_color);
 
 
     return (
@@ -1509,28 +1501,28 @@ function ZebraBlinds() {
 
 
 
-                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageDataTOP) => (
-                                                                                <div key={imageDataTOP.key} className={styles.fabric_list_top_image_and_description}>
+                                                                            {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
+                                                                                <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
                                                                                     {/* Render the actual image here */}
 
                                                                                     <div>
                                                                                         <Image
-                                                                                            className={handleRender_Rounded_Top_Cassette_With_Fabric_Insert_function(imageDataTOP.key)}
+                                                                                            className={handleRenderClickImageToMergeFabrics(imageData.key)}
                                                                                             width={100}
                                                                                             height={100}
-                                                                                            src={imageDataTOP.src}
-                                                                                            alt={imageDataTOP.label}
+                                                                                            src={imageData.src}
+                                                                                            alt={imageData.label}
                                                                                             onClick={() => {
                                                                                                 if (!active_skip_head_rail_ellipse) {
-                                                                                                    console.log(`Click handler for ${imageDataTOP.key}`);
-                                                                                                    Set_selected_head_rail_color(imageDataTOP.key);
+                                                                                                    console.log(`Click handler for ${imageData.key}`);
+                                                                                                    Set_selected_head_rail_color(imageData.key);
                                                                                                 }
                                                                                             }}
                                                                                             style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
                                                                                         />
                                                                                     </div>
                                                                                     <div className={styles.fabric_list_top_image_description}>
-                                                                                        <div>{imageDataTOP.label}</div>
+                                                                                        <div>{imageData.label}</div>
                                                                                     </div>
                                                                                 </div>
                                                                             ))}
@@ -1562,7 +1554,7 @@ function ZebraBlinds() {
                                                                                     <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
                                                                                         {/* Render the actual image here */}
                                                                                         <Image
-                                                                                            className={handleRender_Bottom_Oval_Rail_Aluminum_function(imageData.key)}
+                                                                                            className={handleRenderClickImageToMergeAluminum(imageData.key)}
                                                                                             width={100}
                                                                                             height={100}
                                                                                             src={imageData.src}
@@ -1604,15 +1596,7 @@ function ZebraBlinds() {
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
-                            <div className={styles.see_bill_button_wrapper}>
-                                <button
-                                    onClick={handle_click_see_bill_button}
-                                    className={styles.see_bill_button}>
-                                    <div
-                                        style={NextButton4buttonStyle}
-                                        className={styles.see_bill_text}>See Bill</div>
-                                </button>
-                            </div>
+                        
 
                             <div className={styles.review_your_order}>Review Your Order</div>
                             <div className={styles.review_your_order_seperator_line}></div>
@@ -1705,13 +1689,13 @@ function ZebraBlinds() {
 
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.answers_answers2}>
-                                        <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
+                                            <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
                                             {Rounded_Top_Cassette_With_Fabric_Insert_function && (
                                                 <span>
                                                     Color: {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
                                                 </span>
-                                                
+
                                             )}
                                             {Bottom_Rail_Square_With_Fabric_Insert_function && (
                                                 <span>
@@ -1729,7 +1713,7 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
 
                                         <div className={styles.answers_answers2}>
-                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
+                                            <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
 
                                             {Square_Top_Aluminum_function && (
                                                 <span>
