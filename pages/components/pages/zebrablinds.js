@@ -46,8 +46,13 @@ function ZebraBlinds() {
     const whole_number_inside_mount_height = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
 
     const handle_drop_down_show_numbers_height_inside_mount = () => {
-
         setwhole_number_index_inside_mount_height(!whole_number_index_inside_mount_height);
+
+
+        setwhole_number_index_inside_mount_width(false);
+
+        setfractionIndex_inside_mount_height(false);
+        setfractionIndex_inside_mount_width(false);
 
     }
     //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT HEIGHT
@@ -73,6 +78,10 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_fractions_inside_mount_height = () => {
         setfractionIndex_inside_mount_height(!fractionIndex_inside_mount_height);
+
+        setwhole_number_index_inside_mount_height(false);
+        setwhole_number_index_inside_mount_width(false);
+        setfractionIndex_inside_mount_width(false);
     }
 
     //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
@@ -102,6 +111,12 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_numbers_width_inside_mount = () => {
         setwhole_number_index_inside_mount_width(!whole_number_index_inside_mount_width);
+   
+        setwhole_number_index_inside_mount_height(false);
+        setfractionIndex_inside_mount_height(false);
+        setfractionIndex_inside_mount_width(false);
+
+
     }
     //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT WIDTH
     const handleNumberClick_inside_mount_width = (number_inside_mount_width) => {
@@ -126,6 +141,12 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_fractions_inside_mount_width = () => {
         setfractionIndex_inside_mount_width(!fractionIndex_inside_mount_width);
+
+        
+        setwhole_number_index_inside_mount_height(false);
+        setwhole_number_index_inside_mount_width(false);
+
+        setfractionIndex_inside_mount_height(false);
     }
 
     //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
@@ -156,6 +177,14 @@ function ZebraBlinds() {
 
         setwhole_number_index_outside_mount_height(!whole_number_index_outside_mount_height);
 
+        
+        setwhole_number_index_inside_mount_height(false);
+        setwhole_number_index_outside_mount_width(false);
+
+        setfractionIndex_outside_mount_width(false);
+        setfractionIndex_outside_mount_height(false);
+
+
     }
     //LOGIC FOR CLICKING THE SHOWN NUMBERS OUTSIDE MOUNT HEIGHT
     const handleNumberClick_outside_mount_height = (number_outside_mount_height) => {
@@ -180,6 +209,13 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_fractions_outside_mount_height = () => {
         setFractionIndex_outside_mount_height(!fractionIndex_outside_mount_height);
+
+        
+
+        setwhole_number_index_outside_mount_width(false);
+        setwhole_number_index_outside_mount_height(false);
+        setfractionIndex_outside_mount_width(false);
+
     }
 
     //LOGIC FOR CLICKING THE SHOWN FRACTIONS OUTSIDE MOUNT FRACTIONS HEIGHT
@@ -209,6 +245,14 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_numbers_width_outside_mount = () => {
         setwhole_number_index_outside_mount_width(!whole_number_index_outside_mount_width);
+
+        
+
+        setwhole_number_index_outside_mount_height(false);
+
+        setfractionIndex_outside_mount_width(false);
+        setfractionIndex_outside_mount_height(false);
+
     }
     //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT WIDTH
     const handleNumberClick_outside_mount_width = (number_outside_mount_width) => {
@@ -234,6 +278,14 @@ function ZebraBlinds() {
 
     const handle_drop_down_show_fractions_outside_mount_width = () => {
         setfractionIndex_outside_mount_width(!fractionIndex_outside_mount_width);
+
+        
+  
+        setwhole_number_index_outside_mount_width(false);
+        setwhole_number_index_outside_mount_height(false);
+
+        setfractionIndex_outside_mount_height(false);
+
     }
 
     //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
