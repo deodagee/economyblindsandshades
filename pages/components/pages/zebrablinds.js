@@ -1534,8 +1534,7 @@ function ZebraBlinds() {
                                                     <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}></div>
                                                     {active_skip_head_rail_ellipse ? null : (
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-                                                            <div className={styles.fabric_list_top_list1}>
-                                                                <div className={styles.pick_head_rail_color_subtitle_rounded_with_fabric}>rounded with fabric</div>
+                                                            <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Top Cassette </div>
 
 
                                                                 <div >
@@ -1573,7 +1572,6 @@ function ZebraBlinds() {
                                                                     ))}
                                                                 </div>
                                                             </div>
-                                                        </div>
                                                     )}
                                                 </div>
                                             </div>
@@ -1589,7 +1587,7 @@ function ZebraBlinds() {
                                                             {active_skip_bottom_rail_ellipse ? null : (
                                                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                                                     <div className={styles.fabric_list_bottom_list1}>
-                                                                        <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>oval with fabric</div>
+                                                                        <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Bottom Rail</div>
 
                                                                         {Object.keys(Bottom_Bottom_Rail_Choices_Fabrics_Aluminum).map((key) => (
                                                                             <div className={styles.fabric_list_images_render_bottom} key={key}>

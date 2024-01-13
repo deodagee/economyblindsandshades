@@ -2949,8 +2949,8 @@
   width: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin: 20px;
 }
 
@@ -3068,6 +3068,11 @@ display: flex;
   color: brown;
   margin-left: 20px;
   margin: 10px;
+
+width: 850px;
+
+align-items: flex-start;
+justify-content: flex-start;
 }
 
 
