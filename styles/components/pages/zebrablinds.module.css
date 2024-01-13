@@ -2862,9 +2862,9 @@
 
 .top_section {
   display: flex;
-  width: 850px;
+  width: 845px;
   flex-direction: column;
-  background-color: rgb(213, 213, 213);
+  background-color: rgb(237, 237, 237);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -3015,9 +3015,9 @@ display: flex;
 
 .bottom_section {
   display: flex;
-  width: 850px;
+  width: 845px;
   flex-direction: column;
-  background-color: rgb(213, 213, 213);
+  background-color: rgb(237, 237, 237);
   margin-top: 10px;
   margin-bottom: 10px;
 }

@@ -1513,7 +1513,6 @@ function ZebraBlinds() {
 
                                             <div className={styles.pick_bottom_rail_color_subtitle0}>Cassette Type:</div>
 
-
                                             <div className={styles.top_section}>
                                                 <div className={styles.skip_top_section}>
                                                     <div className={styles.ellipse_and_title_head_rail}>
