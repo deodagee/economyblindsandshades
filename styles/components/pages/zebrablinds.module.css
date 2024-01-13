@@ -2990,7 +2990,9 @@
 
 
 .fabric_list_images_render_top { 
-display: flex;
+  display: flex;
+  width: 850px;
+  justify-content: space-evenly;
   }
 
   
@@ -3101,7 +3103,9 @@ justify-content: flex-start;
 
 
 .fabric_list_images_render_bottom { 
-display: flex;
+  display: flex;
+  width: 850px;
+  justify-content: space-evenly;
   }
 
 
@@ -3308,7 +3312,7 @@ display: flex;
 .review_your_order_seperator_line {
   display: flex;
   height: 3px;
-  width: 490px;
+  width: 100%;
   margin: 10px;
   margin-top: 50px;
   margin-bottom: 50px;
