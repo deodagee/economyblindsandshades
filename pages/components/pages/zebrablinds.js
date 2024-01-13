@@ -1638,7 +1638,7 @@ function ZebraBlinds() {
                         <div className={styles.quantity_and_add_to_cart_group}>
 
 
-                            <div className={styles.review_your_order}>Review Your Order</div>
+                            <div className={styles.review_your_order}>Review Your Blind Selection</div>
                             <div className={styles.review_your_order_seperator_line}></div>
 
                             <div className={styles.review_your_order_bg}>

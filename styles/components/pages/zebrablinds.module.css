@@ -25,7 +25,6 @@
   width: 100vw;
   height: max-content;
   margin-top: 200px;
-
 }
 
 
@@ -2865,6 +2864,9 @@
   display: flex;
   width: 850px;
   flex-direction: column;
+  background-color: rgb(213, 213, 213);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .skip_top_section {
@@ -3002,7 +3004,7 @@ display: flex;
 }
 
 
-.pick_bottom_rail_color_subtitle1 {
+.pick_bottom_rail_color_subtitle1, .pick_bottom_rail_color_subtitle0 {
   display: flex;
   font-size: 15px;
   color: brown;
@@ -3015,6 +3017,9 @@ display: flex;
   display: flex;
   width: 850px;
   flex-direction: column;
+  background-color: rgb(213, 213, 213);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .skip_bottom_section {
