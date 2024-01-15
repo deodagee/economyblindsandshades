@@ -653,13 +653,34 @@
   color: black;
 }
 
-.line_1,
-.line_2,
-.line_3,
-.line_4,
 .line_0 {
   background-color: black;
-  height: 20px;
+  height: 30px;
+  width: 3px;
+  display: flex;
+}
+
+.line_1 { 
+  background-color: black;
+  height: 40px;
+  width: 3px;
+  display: flex;
+}
+.line_2 { 
+  background-color: black;
+  height: 50px;
+  width: 3px;
+  display: flex;
+}
+.line_3 {
+  background-color: black;
+  height: 60px;
+  width: 3px;
+  display: flex;
+}
+.line_4 {
+  background-color: black;
+  height: 70px;
   width: 3px;
   display: flex;
 }
@@ -687,7 +708,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -732,11 +753,11 @@
 .height_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -808,7 +829,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -854,11 +875,11 @@
 .height_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -966,7 +987,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1011,11 +1032,11 @@
 .width_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1082,12 +1103,11 @@
 
 .enter_width_inside_mount_rectangle_2 {
   display: flex;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1132,11 +1152,11 @@
 .width_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1404,7 +1424,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1451,11 +1471,11 @@
 .height_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1526,7 +1546,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1571,11 +1591,11 @@
 .height_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1683,7 +1703,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1728,11 +1748,11 @@
 .width_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1803,7 +1823,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  width: 170px;
+  width: 173px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
@@ -1843,11 +1863,11 @@
 .width_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 60px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;

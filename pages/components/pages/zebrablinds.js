@@ -608,8 +608,8 @@ function ZebraBlinds() {
 
                                                                     <div className={styles.width_scroll_number_fractions_inside_mount}>
                                                                         <span>
-                                                                            {Array.from({ length: 30 }, (_, index) => (
-                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
+                                                                                <div key={index}>{fraction}</div>
                                                                             ))}
                                                                         </span>
                                                                     </div>
@@ -694,7 +694,7 @@ function ZebraBlinds() {
 
                                                                         <span className={styles.ruler_line_group}>
                                                                             <span className={styles.line_0}></span>
-                                                                            <div className={styles.ruler_line_number}>1</div>
+                                                                            <div className={styles.ruler_line_number}>2</div>
                                                                         </span>
 
                                                                         <span className={styles.ruler_line_group}>
@@ -920,11 +920,12 @@ function ZebraBlinds() {
 
                                                                     <div className={styles.height_scroll_number_fractions_inside_mount}>
                                                                         <span>
-                                                                            {Array.from({ length: 30 }, (_, index) => (
-                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
+                                                                                <div key={index}>{fraction}</div>
                                                                             ))}
                                                                         </span>
                                                                     </div>
+
                                                                 </div>
                                                             </div>
                                                         </span>
@@ -1007,7 +1008,7 @@ function ZebraBlinds() {
 
                                                                             <span className={styles.ruler_line_group}>
                                                                                 <span className={styles.line_0}></span>
-                                                                                <div className={styles.ruler_line_number}>1</div>
+                                                                                <div className={styles.ruler_line_number}>2</div>
                                                                             </span>
 
                                                                             <span className={styles.ruler_line_group}>
@@ -1328,8 +1329,8 @@ function ZebraBlinds() {
 
                                                                         <div className={styles.width_scroll_number_fractions_outside_mount}>
                                                                             <span>
-                                                                                {Array.from({ length: 30 }, (_, index) => (
-                                                                                    <div key={index + 1}>{index + 1}</div>
+                                                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
+                                                                                    <div key={index}>{fraction}</div>
                                                                                 ))}
                                                                             </span>
                                                                         </div>
@@ -1420,8 +1421,8 @@ function ZebraBlinds() {
                                                                 <div className={styles.scroller_partition_fractions_outside_mount}>
                                                                     <div className={styles.height_scroll_number_fractions_outside_mount}>
                                                                         <span>
-                                                                            {Array.from({ length: 30 }, (_, index) => (
-                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
+                                                                                <div key={index}>{fraction}</div>
                                                                             ))}
                                                                         </span>
                                                                     </div>
