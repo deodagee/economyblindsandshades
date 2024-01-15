@@ -592,9 +592,10 @@
 
 .choose_height_image_placeholder {
   display: flex;
-  height: 60px;
-  width: 150px;
+  height: 120px;
+  width: 200px;
   background-color: black;
+  margin: 10px;
 }
 
 /* Add these styles for highlighting */
@@ -602,45 +603,79 @@
   background-color: yellow; /* You can adjust the highlighting color */
 }
 
-.selectedFraction { 
+/* Your existing styles */
+.inchNumber {
   display: flex;
-  color: rgb(107, 0, 128);
-  background-color: rgb(0, 255, 191);
+  align-items: center;
+  justify-content: center;
+  /* Your existing styles */
 }
+
+.inchNumber:hover {
+  background-color: grey;
+}
+
+
+/* Your existing styles */
+.fractionNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fractionNumber:hover {
+  background-color: grey;
+}
+
+.wholeNumber { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wholeNumber:hover { 
+  background-color: grey;
+}
+
 
 .selectedInch { 
+  font-size: 20px;
   display: flex;
-  color: rgb(0, 128, 19);
-  background-color: rgb(0, 35, 26);
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
-
-
-.selectedRuler { 
-  display: flex;
-  color: rgb(39, 16, 44);
-  background-color: rgb(199, 255, 241);
-
-}
-
 
 .selectedNumber { 
+  font-size: 20px;
   display: flex;
-  color: green;
-  background-color: yellow;
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
 
 .selectedFraction { 
-display: flex;
-color: red;
-background-color: black;
-font-size: 25px;
+  font-size: 20px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
 
 .selectedRuler { 
+  font-size: 20px;
   display: flex;
-  color: black;
-  background-color: green;
-  font-size: 25px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
 
 /* Existing styles for ruler */
@@ -666,12 +701,16 @@ font-size: 25px;
 }
 
 .ruler_for_boat {
+  font-size: 15px;
   display: flex;
-  width: 390px;
+  width: 360px;
   overflow-x: scroll;
   align-items: center;
   justify-content: flex-start;
-  background-color: brown;
+  background-color: rgb(12, 94, 83);
+  border-color: rgb(79, 226, 0);
+  border-width: 2px;
+  border-radius: 0.25rem;
 }
 
 .ruler_numbers_and_label {
@@ -679,7 +718,7 @@ font-size: 25px;
   flex-direction: row;
   border-width: 2px;
   border-color: black;
-  height: 100px;
+  height: 80px;
 }
 
 .ruler_line_group {
@@ -705,32 +744,32 @@ cursor: pointer;
 
 .line_1 { 
   background-color: black;
-  height: 40px;
+  height: 20px;
   width: 3px;
   display: flex;
 }
 .line_2 { 
   background-color: black;
-  height: 50px;
+  height: 30px;
   width: 3px;
   display: flex;
 }
 .line_3 {
   background-color: black;
-  height: 60px;
+  height: 40px;
   width: 3px;
   display: flex;
 }
 .line_4 {
   background-color: black;
-  height: 70px;
+  height: 50px;
   width: 3px;
   display: flex;
 }
 
 .line_0 {
   background-color: black;
-  height: 80px;
+  height: 60px;
   width: 3px;
   display: flex;
 }
@@ -819,9 +858,11 @@ cursor: pointer;
   font-size: 20px;
 }
 
+
 .height_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -944,6 +985,7 @@ cursor: pointer;
 .height_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: max-content;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1101,6 +1143,7 @@ cursor: pointer;
 .width_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1221,6 +1264,7 @@ cursor: pointer;
 .width_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: max-content;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1540,6 +1584,7 @@ cursor: pointer;
 .height_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1660,6 +1705,7 @@ cursor: pointer;
 .height_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: max-content;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1817,6 +1863,7 @@ cursor: pointer;
 .width_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -1932,6 +1979,7 @@ cursor: pointer;
 .width_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
+  height: max-content;
   overflow-y: scroll;
   background-color: white;
 }
