@@ -597,19 +597,41 @@
   background-color: black;
 }
 
-.ruler_for_boat_wrapper { 
-display: contents;
-margin: 5px;
+/* Add these styles for highlighting */
+.ruler_line_group.selected {
+  background-color: yellow; /* You can adjust the highlighting color */
 }
 
-.ruler_for_boat { 
+/* Existing styles for ruler */
+.inches_fractions_boat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.enter_size_boat_top {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ruler_for_boat_wrapper {
+  display: contents;
+  margin: 5px;
+}
+
+.ruler_for_boat {
   display: flex;
   width: 390px;
   overflow-x: scroll;
   background-color: brown;
 }
 
-.ruler_numbers_and_label { 
+.ruler_numbers_and_label {
   display: flex;
   flex-direction: row;
   border-width: 2px;
@@ -617,51 +639,27 @@ margin: 5px;
   height: 100px;
 }
 
-.ruler_line_group { 
-display: flex;
-flex-direction: column;
-width: 30px;
-align-items: center;
+.ruler_line_group {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  align-items: center;
 }
 
-.ruler_line_number { 
+.ruler_line_number {
   display: flex;
   font-size: 15px;
   font-weight: 700;
   color: black;
 }
 
-.line_1 { 
-  background-color:black;
+.line_1,
+.line_2,
+.line_3,
+.line_4,
+.line_0 {
+  background-color: black;
   height: 20px;
-  width: 3px;
-  display: flex;
-}
-
-.line_2 { 
-  background-color:black;
-  height: 30px;
-  width: 3px;
-  display: flex;
-}
-
-.line_3 { 
-  background-color:black;
-  height: 40px;
-  width: 3px;
-  display: flex;
-}
-
-.line_4 { 
-  background-color:black;
-  height: 50px;
-  width: 3px;
-  display: flex;
-}
-
-.line_0 { 
-  background-color:black;
-  height: 60px;
   width: 3px;
   display: flex;
 }
@@ -734,12 +732,12 @@ align-items: center;
 .height_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -748,15 +746,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
-
+  font-size: 20px;
 }
 
 .height_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -858,12 +854,12 @@ align-items: center;
 .height_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -872,14 +868,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .height_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1016,12 +1011,12 @@ align-items: center;
 .width_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1030,14 +1025,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .width_scroll_number_inches_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1138,12 +1132,12 @@ align-items: center;
 .width_scroll_number_fractions_inside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1152,14 +1146,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .width_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1403,21 +1396,6 @@ align-items: center;
   padding: 2px;
 }
 
-.inches_fractions_boat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.enter_size_boat_top { 
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .enter_height_outside_mount_rectangle_1 {
@@ -1473,12 +1451,12 @@ align-items: center;
 .height_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1487,14 +1465,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .height_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1594,12 +1571,12 @@ align-items: center;
 .height_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1608,14 +1585,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .height_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1752,12 +1728,12 @@ align-items: center;
 .width_scroll_number_inches_outside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1766,14 +1742,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .width_scroll_number_inches_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 
@@ -1868,12 +1843,12 @@ align-items: center;
 .width_scroll_number_fractions_outside_mount {
   position: static;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
   width: 50px;
-  height: 300px;
+  height: 60px;
   overflow: hidden;
   border-width: 2px;
   border-radius: 0.45rem;
@@ -1882,14 +1857,13 @@ align-items: center;
   padding: 5px;
   transition: 0.4s;
   background-color: white;
+  font-size: 20px;
 }
 
 .width_scroll_number_fractions_outside_mount:hover {
   transform: scale(0.98);
   transition: 0.4s;
   overflow-y: scroll;
-  height: 300px;
-  width: 70px;
   background-color: white;
 }
 

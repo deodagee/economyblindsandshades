@@ -34,280 +34,23 @@ function ZebraBlinds() {
     // Step 1 Ellipse Logic, allows ellipse selection for inside outside moount and renders choice to the bom
 
 
-
-
-
-
-
-
     // LOGIC FOR SHOW WHOLE NUMBERS INSIDE MOUNT HEIGHT
-    const [selectedNumber_height_inside_mount, setselectedNumber_height_inside_mount] = useState(null);
-    const [whole_number_index_inside_mount_height, setwhole_number_index_inside_mount_height] = useState(false);
-    const whole_number_inside_mount_height = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
 
-    const handle_drop_down_show_numbers_height_inside_mount = () => {
-        setwhole_number_index_inside_mount_height(!whole_number_index_inside_mount_height);
-
-
-        setwhole_number_index_inside_mount_width(false);
-
-        setfractionIndex_inside_mount_height(false);
-        setfractionIndex_inside_mount_width(false);
-
-    }
-    //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT HEIGHT
-    const handleNumberClick_inside_mount_height = (number_inside_mount_height) => {
-        setselectedNumber_height_inside_mount(number_inside_mount_height);
-    };
-
-    const renderNumbers_inside_mount_height = () => {
-        return whole_number_inside_mount_height.map((number_inside_mount_height, index) => (
-            <div
-                key={index}
-                className={`${styles.singleNumber_inside_mount_height} ${selectedNumber_height_inside_mount === number_inside_mount_height ? styles.selectedNumber_height_inside_mount : ''}`}
-                onClick={() => handleNumberClick_inside_mount_height(number_inside_mount_height)}
-            >
-                {number_inside_mount_height}
-            </div>
-        ));
-    };
     //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
-    const [selectedFraction_height_inside_mount, setselectedFraction_height_inside_mount] = useState(null);
-    const [fractionIndex_inside_mount_height, setfractionIndex_inside_mount_height] = useState(false);
-    const fractions_inside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-
-    const handle_drop_down_show_fractions_inside_mount_height = () => {
-        setfractionIndex_inside_mount_height(!fractionIndex_inside_mount_height);
-
-        setwhole_number_index_inside_mount_height(false);
-        setwhole_number_index_inside_mount_width(false);
-        setfractionIndex_inside_mount_width(false);
-    }
-
-    //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS HEIGHT
-    const handleFractionClick_inside_mount_height = (fraction_inside_mount_height) => {
-        setselectedFraction_height_inside_mount(fraction_inside_mount_height);
-    };
-
-    const renderFractions_inside_mount_height = () => {
-        return fractions_inside_mount_height.map((fraction_inside_mount_height, index) => (
-            <div
-                key={index}
-                className={`${styles.singleFraction_height_inside_mount} ${selectedFraction_height_inside_mount === fraction_inside_mount_height ? styles.selectedFraction_height_inside_mount : ''}`}
-                onClick={() => handleFractionClick_inside_mount_height(fraction_inside_mount_height)}
-            >
-                {fraction_inside_mount_height}
-            </div>
-        ));
-    };
-
 
     //---------------------------------------------------------------------------------------------------
 
-    //2. // LOGIC FOR SHOW WHOLE NUMBERS INSIDE MOUNT WIDTH
-    const [selectedNumber_inside_mount_width, setselectedNumber_inside_mount_width] = useState(null);
-    const [whole_number_index_inside_mount_width, setwhole_number_index_inside_mount_width] = useState(false);
-    const whole_number_inside_mount_width = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-
-    const handle_drop_down_show_numbers_width_inside_mount = () => {
-        setwhole_number_index_inside_mount_width(!whole_number_index_inside_mount_width);
-
-        setwhole_number_index_inside_mount_height(false);
-        setfractionIndex_inside_mount_height(false);
-        setfractionIndex_inside_mount_width(false);
-
-
-    }
-    //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT WIDTH
-    const handleNumberClick_inside_mount_width = (number_inside_mount_width) => {
-        setselectedNumber_inside_mount_width(number_inside_mount_width);
-    };
-
-    const renderNumbers_inside_mount_width = () => {
-        return whole_number_inside_mount_width.map((number_inside_mount_width, index) => (
-            <div
-                key={index}
-                className={`${styles.singleNumber_inside_mount_width} ${selectedNumber_inside_mount_width === number_inside_mount_width ? styles.selectedNumber_inside_mount_width : ''}`}
-                onClick={() => handleNumberClick_inside_mount_width(number_inside_mount_width)}
-            >
-                {number_inside_mount_width}
-            </div>
-        ));
-    };
     //2. // LOGIC FOR SHOW FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
-    const [selectedFraction_width, setselectedFraction_width] = useState(null);
-    const [fractionIndex_inside_mount_width, setfractionIndex_inside_mount_width] = useState(false);
-    const fractions_inside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-
-    const handle_drop_down_show_fractions_inside_mount_width = () => {
-        setfractionIndex_inside_mount_width(!fractionIndex_inside_mount_width);
-
-
-        setwhole_number_index_inside_mount_height(false);
-        setwhole_number_index_inside_mount_width(false);
-
-        setfractionIndex_inside_mount_height(false);
-    }
-
-    //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
-    const handleFractionClick_inside_mount_width = (fraction_inside_mount_width) => {
-        setselectedFraction_width(fraction_inside_mount_width);
-    };
-
-    const renderFractions_inside_mount_width = () => {
-        return fractions_inside_mount_width.map((fraction_inside_mount_width, index) => (
-            <div
-                key={index}
-                className={`${styles.singleFraction_width_inside_mount} ${selectedFraction_width === fraction_inside_mount_width ? styles.selectedFraction_width : ''}`}
-                onClick={() => handleFractionClick_inside_mount_width(fraction_inside_mount_width)}
-            >
-                {fraction_inside_mount_width}
-            </div>
-        ));
-    };
-
 
     //---------------------------------------------------------------------------------------------------------------------
     // // LOGIC FOR SHOW WHOLE NUMBERS OUTSIDE MOUNT HEIGHT
-    const [selectedNumber_height_outside_mount, setselectedNumber_height_outside_mount] = useState(null);
-    const [whole_number_index_outside_mount_height, setwhole_number_index_outside_mount_height] = useState(false);
-    const whole_number_outside_mount_height = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-
-    const handle_drop_down_show_numbers_height_outside_mount = () => {
-
-        setwhole_number_index_outside_mount_height(!whole_number_index_outside_mount_height);
-
-
-        setwhole_number_index_inside_mount_height(false);
-        setwhole_number_index_outside_mount_width(false);
-
-        setfractionIndex_outside_mount_width(false);
-        setfractionIndex_outside_mount_height(false);
-
-
-    }
-    //LOGIC FOR CLICKING THE SHOWN NUMBERS OUTSIDE MOUNT HEIGHT
-    const handleNumberClick_outside_mount_height = (number_outside_mount_height) => {
-        setselectedNumber_height_outside_mount(number_outside_mount_height);
-    };
-
-    const renderNumbers_outside_mount_height = () => {
-        return whole_number_outside_mount_height.map((number_outside_mount_height, index) => (
-            <div
-                key={index}
-                className={`${styles.singleNumber_outside_mount_height} ${selectedNumber_height_outside_mount === number_outside_mount_height ? styles.selectedNumber_height_inside_mount : ''}`}
-                onClick={() => handleNumberClick_outside_mount_height(number_outside_mount_height)}
-            >
-                {number_outside_mount_height}
-            </div>
-        ));
-    };
-    //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS HEIGHT
-    const [selectedFraction_outside_mount_height, setselectedFraction_outside_mount_height] = useState(null);
-    const [fractionIndex_outside_mount_height, setFractionIndex_outside_mount_height] = useState(null);
-    const fractions_outside_mount_height = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-
-    const handle_drop_down_show_fractions_outside_mount_height = () => {
-        setFractionIndex_outside_mount_height(!fractionIndex_outside_mount_height);
-
-
-
-        setwhole_number_index_outside_mount_width(false);
-        setwhole_number_index_outside_mount_height(false);
-        setfractionIndex_outside_mount_width(false);
-
-    }
-
-    //LOGIC FOR CLICKING THE SHOWN FRACTIONS OUTSIDE MOUNT FRACTIONS HEIGHT
-    const handleFractionClick_outside_mount_height = (fraction_outside_mount_height) => {
-        setselectedFraction_outside_mount_height(fraction_outside_mount_height);
-    };
-
-    const renderFractions_outside_mount_height = () => {
-        return fractions_outside_mount_height.map((fraction_outside_mount_height, index) => (
-            <div
-                key={index}
-                className={`${styles.singleFraction_height_outside_mount} ${selectedFraction_outside_mount_height === fraction_outside_mount_height ? styles.selectedFraction_outside_mount_height : ''}`}
-                onClick={() => handleFractionClick_outside_mount_height(fraction_outside_mount_height)}
-            >
-                {fraction_outside_mount_height}
-            </div>
-        ));
-    };
 
 
     //---------------------------------------------------------------------------------------------------
 
     //2. // LOGIC FOR SHOW WHOLE NUMBERS OUTSIDE MOUNT WIDTH
-    const [selectedNumber_outside_mount_width, setselectedNumber_outside_mount_width] = useState(null);
-    const [whole_number_index_outside_mount_width, setwhole_number_index_outside_mount_width] = useState(false);
-    const whole_number_outside_mount_width = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-
-    const handle_drop_down_show_numbers_width_outside_mount = () => {
-        setwhole_number_index_outside_mount_width(!whole_number_index_outside_mount_width);
-
-
-
-        setwhole_number_index_outside_mount_height(false);
-
-        setfractionIndex_outside_mount_width(false);
-        setfractionIndex_outside_mount_height(false);
-
-    }
-    //LOGIC FOR CLICKING THE SHOWN NUMBERS INSIDE MOUNT WIDTH
-    const handleNumberClick_outside_mount_width = (number_outside_mount_width) => {
-        setselectedNumber_outside_mount_width(number_outside_mount_width);
-    };
-
-    const renderNumbers_outside_mount_width = () => {
-        return whole_number_outside_mount_width.map((number_outside_mount_width, index) => (
-            <div
-                key={index}
-                className={`${styles.singleNumber_outside_mount_width} ${selectedNumber_outside_mount_width === number_outside_mount_width ? styles.selectedNumber_outside_mount_width : ''}`}
-                onClick={() => handleNumberClick_outside_mount_width(number_outside_mount_width)}
-            >
-                {number_outside_mount_width}
-            </div>
-        ));
-    };
 
     //2. // LOGIC FOR SHOW FRACTIONS OUTSIDE MOUNT FRACTIONS WIDTH
-    const [selectedFraction_width_outside_mount_width, setselectedFraction_outside_mount_width] = useState(null);
-    const [fractionIndex_outside_mount_width, setfractionIndex_outside_mount_width] = useState(null);
-    const fractions_outside_mount_width = ["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"];
-
-    const handle_drop_down_show_fractions_outside_mount_width = () => {
-        setfractionIndex_outside_mount_width(!fractionIndex_outside_mount_width);
-
-
-
-        setwhole_number_index_outside_mount_width(false);
-        setwhole_number_index_outside_mount_height(false);
-
-        setfractionIndex_outside_mount_height(false);
-
-    }
-
-    //LOGIC FOR CLICKING THE SHOWN FRACTIONS INSIDE MOUNT FRACTIONS WIDTH
-    const handleFractionClick_outside_mount_width = (fraction_outside_mount_width) => {
-        setselectedFraction_outside_mount_width(fraction_outside_mount_width);
-    };
-
-    const renderFractions_outside_mount_width = () => {
-        return fractions_outside_mount_width.map((fraction_outside_mount_width, index) => (
-            <div
-                key={index}
-                className={`${styles.singleFraction_width_inside_mount} ${selectedFraction_width_outside_mount_width === fraction_outside_mount_width ? styles.selectedFraction_width_outside_mount_width : ''}`}
-                onClick={() => handleFractionClick_outside_mount_width(fraction_outside_mount_width)}
-            >
-                {fraction_outside_mount_width}
-            </div>
-        ));
-    };
-
-
-
-
 
     //Step 3 prt1 Slect Lift Type, ellipse Logic in active_wand_cordless_motorized is all 3 selections and handleLiftFeatureEllipsess renders them to the Bom
     const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
@@ -609,6 +352,7 @@ function ZebraBlinds() {
     };
     //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// ///////////////////////////////////
 
+
     return (
 
         <>
@@ -810,7 +554,6 @@ function ZebraBlinds() {
                                                             <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                                                                 <div className={styles.toggle_disclaimer_inches_inside_mount_width}
-                                                                    onClick={handle_drop_down_show_numbers_width_inside_mount}
                                                                 >
                                                                     <p>INCHES</p>
                                                                     <svg
@@ -830,26 +573,19 @@ function ZebraBlinds() {
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
 
 
-                                                                    {whole_number_index_inside_mount_width && (
-                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
-                                                                            <div className={styles.display_whole_numbers_wrapper_inside_mount_width}>
-                                                                                <div className={styles.ScrollNumberInches_width_inside_mount}>
-                                                                                    {whole_number_index_inside_mount_width && (
-                                                                                        <div className={styles.displayWholeNumbersWrapper_width_inside_mount}>
-                                                                                            <div className={styles.displayWholeNumbers_inside_mount_width}>{whole_number_index_inside_mount_width && <div className={styles.displayWholeNumbers_inside_mount_width_list_of_numbers}>{renderNumbers_inside_mount_width()}</div>}
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    )}
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
+                                                                    <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
 
                                                             <div className={styles.enter_width_inside_mount_rectangle_2}>
                                                                 <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
-                                                                    onClick={handle_drop_down_show_fractions_inside_mount_width}
+
                                                                 >
                                                                     <p>FRACTIONS</p>
 
@@ -870,17 +606,13 @@ function ZebraBlinds() {
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
 
 
-                                                                    {fractionIndex_inside_mount_width && (
-                                                                        <div className={styles.width_scroll_number_fractions_inside_mount}>
-
-                                                                            <div className={styles.display_fractions_wrapper_inside_mount_width}>
-                                                                                <div className={styles.ScrollNumberFractions_width_inside_mount}>
-                                                                                    <div className={styles.displayFractions_inside_mount_width}>{fractionIndex_inside_mount_width && <div className={styles.displayFractions_inside_mount_width_list_of_numbers}>{renderFractions_inside_mount_width()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
+                                                                    <div className={styles.width_scroll_number_fractions_inside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </span>
@@ -1105,6 +837,7 @@ function ZebraBlinds() {
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            re-render-numbers here
                                                         </span>
                                                         ruler end
 
@@ -1129,7 +862,6 @@ function ZebraBlinds() {
                                                             <div className={styles.enter_height_inside_mount_rectangle_1}>
 
                                                                 <div className={styles.toggle_disclaimer_inches_inside_mount_height}
-                                                                    onClick={handle_drop_down_show_numbers_height_inside_mount}
                                                                 >
                                                                     <p>
                                                                         INCHES
@@ -1152,36 +884,20 @@ function ZebraBlinds() {
 
                                                                 <div className={styles.scroller_partition_height_inside_outside_mount}>
 
-                                                                    {whole_number_index_inside_mount_height && (
-                                                                        <div className={styles.height_scroll_number_inches_inside_mount}>
-                                                                            <div className={styles.display_whole_numbers_wrapper_inside_mount_height}>
-                                                                                <div className={styles.ScrollNumberInches_height_inside_mount}>
 
-                                                                                    {whole_number_index_inside_mount_height && (
-                                                                                        <div className={styles.displayWholeNumbersWrapper_height_inside_mount}>
-                                                                                            <div className={styles.displayWholeNumbers_inside_mount_height}>{whole_number_index_inside_mount_height &&
-                                                                                                <div className={styles.displayWholeNumbers_inside_mount_height_list_of_numbers}>{renderNumbers_inside_mount_height()}</div>}
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    )}
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
+                                                                    <div className={styles.height_scroll_number_inches_inside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
-
                                                             </div>
-
-
-
-
-
 
                                                             <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
                                                             >
                                                                 <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
-                                                                    onClick={handle_drop_down_show_fractions_inside_mount_height}
                                                                 >
                                                                     <p>FRACTIONS</p>
                                                                     <svg
@@ -1202,17 +918,13 @@ function ZebraBlinds() {
                                                                 <div className={styles.scroller_partition_height_inside_mount}>
 
 
-                                                                    {fractionIndex_inside_mount_height && (
-                                                                        <div className={styles.height_scroll_number_fractions_inside_mount}>
-
-                                                                            <div className={styles.display_fractions_wrapper_inside_mount_height}>
-                                                                                <div className={styles.ScrollNumberFractions_height_inside_mount}>
-                                                                                    <div className={styles.displayFractions_inside_mount_height}>{fractionIndex_inside_mount_height && <div className={styles.displayFractions_inside_mount_height_list_of_numbers}>{renderFractions_inside_mount_height()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
+                                                                    <div className={styles.height_scroll_number_fractions_inside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </span>
@@ -1567,7 +1279,6 @@ function ZebraBlinds() {
                                                                     <div className={styles.enter_width_outside_mount_rectangle_1}>
 
                                                                         <div className={styles.toggle_disclaimer_inches_width_outside_mount}
-                                                                            onClick={handle_drop_down_show_numbers_width_outside_mount}
                                                                         >
                                                                             <p>INCHES</p>
                                                                             <svg
@@ -1586,29 +1297,19 @@ function ZebraBlinds() {
                                                                         </div>
                                                                         <div className={styles.scroller_partition_width_outside_mount}>
 
-                                                                            {whole_number_index_outside_mount_width && (
-                                                                                <div className={styles.width_scroll_number_inches_outside_mount}>
-
-                                                                                    <div className={styles.display_whole_numbers_wrapper_outside_mount_width}>
-                                                                                        <div className={styles.ScrollNumberInches_width_outside_mount}>
-                                                                                            {whole_number_index_outside_mount_width && (
-                                                                                                <div className={styles.displayWholeNumbersWrapper_width_outside_mount}>
-                                                                                                    <div className={styles.displayWholeNumbers_outside_mount_width}>{whole_number_index_outside_mount_width && <div className={styles.displayWholeNumbers_outside_mount_width_list_of_numbers}>{renderNumbers_outside_mount_width()}</div>}
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            )}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            )}
+                                                                            <div className={styles.width_scroll_number_inches_outside_mount}>
+                                                                                <span>
+                                                                                    {Array.from({ length: 30 }, (_, index) => (
+                                                                                        <div key={index + 1}>{index + 1}</div>
+                                                                                    ))}
+                                                                                </span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
 
 
                                                                     <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
-                                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}
-                                                                            onClick={handle_drop_down_show_fractions_outside_mount_width}
-                                                                        >
+                                                                        <div className={styles.toggle_disclaimer_width_fractions_outside_mount}>
                                                                             <p>FRACTIONS</p>
                                                                             <svg
                                                                                 className={styles.polygon_8}
@@ -1625,17 +1326,13 @@ function ZebraBlinds() {
                                                                             </svg>
                                                                         </div>
 
-                                                                        {fractionIndex_outside_mount_width && (
-                                                                            <div className={styles.width_scroll_number_fractions_outside_mount}>
-
-                                                                                <div className={styles.display_fractions_wrapper_outside_mount_width}>
-                                                                                    <div className={styles.ScrollNumberFractions_width_outside_mount}>
-                                                                                        <div className={styles.displayFractions_outside_mount_width}>{fractionIndex_outside_mount_width && <div className={styles.displayFractions_outside_mount_width_list_of_numbers}>{renderFractions_outside_mount_width()}</div>}
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        )}
+                                                                        <div className={styles.width_scroll_number_fractions_outside_mount}>
+                                                                            <span>
+                                                                                {Array.from({ length: 30 }, (_, index) => (
+                                                                                    <div key={index + 1}>{index + 1}</div>
+                                                                                ))}
+                                                                            </span>
+                                                                        </div>
                                                                     </div>
                                                                 </span>
                                                                 <span className={styles.enter_size_boat_bottom}>
@@ -1667,7 +1364,6 @@ function ZebraBlinds() {
                                                         <span className={styles.enter_size_boat_top}>
                                                             <div className={styles.enter_height_outside_mount_rectangle_1}>
                                                                 <div className={styles.toggle_disclaimer_inches_height_outside_mount}
-                                                                    onClick={handle_drop_down_show_numbers_height_outside_mount}
                                                                 >
                                                                     <p>
                                                                         INCHES
@@ -1689,22 +1385,13 @@ function ZebraBlinds() {
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_inches_outside_mount}>
-                                                                    {whole_number_index_outside_mount_height && (
-                                                                        <div className={styles.height_scroll_number_inches_outside_mount}>
-
-                                                                            <div className={styles.display_whole_numbers_wrapper_outside_mount_height}>
-                                                                                <div className={styles.ScrollNumberInches_height_outside_mount}>
-                                                                                    {whole_number_index_outside_mount_height && (
-                                                                                        <div className={styles.displayWholeNumbersWrapper_height_outside_mount}>
-                                                                                            <div className={styles.displayWholeNumbers_outside_mount_height}>{whole_number_index_outside_mount_height && <div className={styles.displayWholeNumbers_outside_mount_height_list_of_numbers}>{renderNumbers_outside_mount_height()}</div>}
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    )}
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    )}
+                                                                    <div className={styles.height_scroll_number_inches_outside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
 
 
@@ -1713,8 +1400,7 @@ function ZebraBlinds() {
 
 
                                                             <div className={styles.enter_height_fractions_outside_mount_rectangle_2}>
-                                                                <div className={styles.toggle_disclaimer_height_fractions_outside_mount}
-                                                                    onClick={handle_drop_down_show_fractions_outside_mount_height}                                                                                                                        >
+                                                                <div className={styles.toggle_disclaimer_height_fractions_outside_mount}>
 
                                                                     <p>FRACTIONS</p>
                                                                     <svg
@@ -1732,16 +1418,13 @@ function ZebraBlinds() {
                                                                     </svg>
                                                                 </div>
                                                                 <div className={styles.scroller_partition_fractions_outside_mount}>
-                                                                    {fractionIndex_outside_mount_height && (
-                                                                        <div className={styles.height_scroll_number_fractions_outside_mount}>
-                                                                            <div className={styles.display_fractions_wrapper_outside_mount_height}>
-                                                                                <div className={styles.ScrollNumberFractions_height_outside_mount}>
-                                                                                    <div className={styles.displayFractions_outside_mount_height}>{fractionIndex_outside_mount_height && <div className={styles.displayFractions_outside_mount_height_list_of_numbers}>{renderFractions_outside_mount_height()}</div>}
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    )}
+                                                                    <div className={styles.height_scroll_number_fractions_outside_mount}>
+                                                                        <span>
+                                                                            {Array.from({ length: 30 }, (_, index) => (
+                                                                                <div key={index + 1}>{index + 1}</div>
+                                                                            ))}
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </span>
@@ -2201,16 +1884,7 @@ function ZebraBlinds() {
                                         <div className={styles.width2_answer}>Window Size:</div>
                                         <div className={styles.answers_answers}>
 
-                                            <p className={styles.width_rendering_element_inches}><span>
-                                                {selectedNumber_inside_mount_width}
-                                            </span><span></span></p>
-                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width}</span><span></span></p>
-                                            <p className={styles.width_rendering_element_inches}><span>{selectedNumber_outside_mount_width}</span><span></span></p>
-                                            <p className={styles.width_rendering_element_fractions}><span>{selectedFraction_width_outside_mount_width}</span><span></span></p>
-                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_inside_mount}</span><span></span></p>
-                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_height_inside_mount}</span><span></span></p>
-                                            <p className={styles.heightRenderingElementInches}><span>{selectedNumber_height_outside_mount}</span><span></span></p>
-                                            <p className={styles.heightRenderingElementFractions}><span>{selectedFraction_outside_mount_height}</span><span></span></p>
+
                                         </div>
                                     </div>
 
