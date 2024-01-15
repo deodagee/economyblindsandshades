@@ -613,19 +613,7 @@ function ZebraBlinds() {
                                                                 <div className={styles.toggle_disclaimer_inches_inside_mount_width}
                                                                 >
                                                                     <p>INCHES</p>
-                                                                    <svg
-                                                                        className={styles.polygon_3}
-                                                                        width="20"
-                                                                        height="16"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
+                                                                   
                                                                 </div>
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
 
@@ -652,19 +640,6 @@ function ZebraBlinds() {
                                                                 >
                                                                     <p>FRACTIONS</p>
 
-                                                                    <svg
-                                                                        className={styles.polygon_4}
-                                                                        width="20"
-                                                                        height="16"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
                                                                 </div>
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
 
@@ -2433,19 +2408,7 @@ function ZebraBlinds() {
                                                                         INCHES
                                                                     </p>
 
-                                                                    <svg
-                                                                        className={styles.polygon_1}
-                                                                        width="20"
-                                                                        height="16"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
+
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_height_inside_outside_mount}>
@@ -2472,19 +2435,7 @@ function ZebraBlinds() {
                                                                 <div className={styles.toggle_disclaimer_fractions_inside_mount_height}
                                                                 >
                                                                     <p>FRACTIONS</p>
-                                                                    <svg
-                                                                        className={styles.polygon_2}
-                                                                        width="20"
-                                                                        height="16"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
+                                                                    
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_height_inside_mount}>
@@ -4356,19 +4307,7 @@ function ZebraBlinds() {
                                                                         <div className={styles.toggle_disclaimer_inches_width_outside_mount}
                                                                         >
                                                                             <p>INCHES</p>
-                                                                            <svg
-                                                                                className={styles.polygon_7}
-                                                                                width="10"
-                                                                                height="8"
-                                                                                viewBox="0 0 10 8"
-                                                                                fill="none"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                            >
-                                                                                <path
-                                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                                    fill="#da1212"
-                                                                                />
-                                                                            </svg>
+                                                                           
                                                                         </div>
                                                                         <div className={styles.scroller_partition_width_outside_mount}>
 
@@ -4392,19 +4331,7 @@ function ZebraBlinds() {
                                                                     <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
                                                                         <div className={styles.toggle_disclaimer_width_fractions_outside_mount}>
                                                                             <p>FRACTIONS</p>
-                                                                            <svg
-                                                                                className={styles.polygon_8}
-                                                                                width="10"
-                                                                                height="8"
-                                                                                viewBox="0 0 10 8"
-                                                                                fill="none"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                            >
-                                                                                <path
-                                                                                    d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                                    fill="#da1212"
-                                                                                />
-                                                                            </svg>
+                                                                           
                                                                         </div>
 
                                                                         <div className={styles.width_scroll_number_fractions_outside_mount}>
@@ -4455,19 +4382,7 @@ function ZebraBlinds() {
                                                                     <p>
                                                                         INCHES
                                                                     </p>
-                                                                    <svg
-                                                                        className={styles.polygon_5}
-                                                                        width="10"
-                                                                        height="8"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
+                                                                   
 
                                                                 </div>
 
@@ -4496,19 +4411,7 @@ function ZebraBlinds() {
                                                                 <div className={styles.toggle_disclaimer_height_fractions_outside_mount}>
 
                                                                     <p>FRACTIONS</p>
-                                                                    <svg
-                                                                        className={styles.polygon_6}
-                                                                        width="10"
-                                                                        height="8"
-                                                                        viewBox="0 0 10 8"
-                                                                        fill="none"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                        <path
-                                                                            d="M5.05669 0.392578L9.55431 7.40995H0.559065L5.05669 0.392578Z"
-                                                                            fill="#da1212"
-                                                                        />
-                                                                    </svg>
+                          
                                                                 </div>
                                                                 <div className={styles.scroller_partition_fractions_outside_mount}>
                                                                     <div className={styles.height_scroll_number_fractions_outside_mount}>
