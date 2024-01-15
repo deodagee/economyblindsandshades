@@ -2432,6 +2432,7 @@ cursor: pointer;
   flex-direction: column;
   width: 850px;
   height: max-content;
+  margin-bottom: 50px;
 }
 
 .titled_step_combo {
@@ -2964,7 +2965,7 @@ cursor: pointer;
 
 .ellipse_and_type_head_and_bottom_rail {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 5px;
   width: max-content;
   padding: 20px;
@@ -3001,11 +3002,12 @@ cursor: pointer;
 
 .fabric_types_top_and_bottom_main_wrapper {
   display: flex;
+  flex-direction: column;
   align-items: start;
   justify-content: flex-start;
   width: 850px;
   height: max-content;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .fabric_types_top_and_bottom_second_wrapper {
@@ -3030,13 +3032,6 @@ cursor: pointer;
 
 }
 
-.pick_head_rail_color_titles_wrapper {
-  display: flex;
-  width: 850px;
-  align-items: start;
-  justify-content: start;
-  flex-direction: column;
-}
 
 .pick_head_rail_color_subtitle_cassette_type {
   display: flex;
@@ -3198,7 +3193,11 @@ cursor: pointer;
 }
 
 .pick_bottom_rail_color_wrapper {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+
 }
 
 

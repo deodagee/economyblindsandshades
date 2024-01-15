@@ -2623,15 +2623,15 @@ function ZebraBlinds() {
 
 
                                                                                 <span className={styles.wholeNumber}>
-                                                                                {["8"].map((rulerNumber, index) => (
-                                                                                    <div
-                                                                                        key={index}
-                                                                                        onClick={() => handleRulerNumberSelect(rulerNumber)}
-                                                                                        className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
-                                                                                    >
-                                                                                        {rulerNumber}
-                                                                                    </div>
-                                                                                ))}
+                                                                                    {["8"].map((rulerNumber, index) => (
+                                                                                        <div
+                                                                                            key={index}
+                                                                                            onClick={() => handleRulerNumberSelect(rulerNumber)}
+                                                                                            className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
+                                                                                        >
+                                                                                            {rulerNumber}
+                                                                                        </div>
+                                                                                    ))}
                                                                                 </span>
 
                                                                             </div>
@@ -4856,31 +4856,23 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette And Bottom Rail
+                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette
                                                 </div>
+
+
                                             </div>
                                         </div>
                                     </span>
-                                    <div className={styles.ellipse_and_type_head_and_bottom_rail}>
 
-                                        <div className={styles.select_head_rail_subtitle}> Select Your Head Rail Type</div>
-                                        <div>
-                                            Choose Your Type Of Rail, Then Pick A Color For It Along With A Style Choice
-                                        </div>
-                                    </div>
 
                                     <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
                                         <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
-                                            <div className={styles.pick_head_rail_color_titles_wrapper}>
-
-                                                <div className={styles.pick_head_rail_color_subtitle_cassette_type}>Cassette And Bottom Rail:</div>
-                                            </div>
-
-                                            <div className={styles.pick_bottom_rail_color_subtitle0}>Cassette Type:</div>
 
                                             <div className={styles.top_section}>
+                                                <div className={styles.pick_bottom_rail_color_subtitle0}>Cassette Type:</div>
+
                                                 <div className={styles.skip_top_section}>
                                                     <div className={styles.ellipse_and_title_head_rail}>
                                                         <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
@@ -4941,9 +4933,38 @@ function ZebraBlinds() {
                                                     )}
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
 
 
-                                            <div className={styles.pick_bottom_rail_color_wrapper}>
+
+
+                                    <div className={styles.pick_bottom_rail_color_wrapper}>
+
+                                    <div className={styles.select_cassette_head_rail_long_rectangle}
+                                        >
+                                            <div
+                                                className={styles.select_cassette_head_rail_short_rectangle}
+                                            >
+                                                <Image
+                                                    className={styles.iconforselect_cassette_head_rail}
+                                                    alt="iconforselectcassetteheaerail"
+                                                    width={100}
+                                                    height={100}
+                                                    src={"/chevronleft.png"}>
+                                                </Image>
+                                                <div className={styles.select_head_rail_group_title}>
+                                                <span className={styles.select_head_rail_group_title_tag}>5.</span> Bottom Rail
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+           
+                                        <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
+
+                                            <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
                                                 <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
 
                                                 <div className={styles.bottom_section}>
@@ -4987,13 +5008,13 @@ function ZebraBlinds() {
                                                         </div>
                                                     </div>
 
-
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
+
+
                             </div>
                         </div>
 
