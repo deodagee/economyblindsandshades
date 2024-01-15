@@ -602,6 +602,27 @@
   background-color: yellow; /* You can adjust the highlighting color */
 }
 
+.selectedFraction { 
+  display: flex;
+  color: rgb(107, 0, 128);
+  background-color: rgb(0, 255, 191);
+}
+
+.selectedInch { 
+  display: flex;
+  color: rgb(0, 128, 19);
+  background-color: rgb(0, 35, 26);
+}
+
+
+.selectedRuler { 
+  display: flex;
+  color: rgb(39, 16, 44);
+  background-color: rgb(199, 255, 241);
+
+}
+
+
 .selectedNumber { 
   display: flex;
   color: green;

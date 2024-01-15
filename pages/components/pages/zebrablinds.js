@@ -378,29 +378,36 @@ function ZebraBlinds() {
             }
         });
     };
-
     const highlightMatchingFractionOrInch = (value) => {
         const fractionElements = document.querySelectorAll(`.${styles.height_scroll_number_fractions_inside_mount} div`);
         const inchElements = document.querySelectorAll(`.${styles.height_scroll_number_inches_inside_mount} div`);
-
+        const rulerElements = document.querySelectorAll(`.${styles.ruler_numbers_and_label} div`);
+      
         fractionElements.forEach((element) => {
-            if (element.textContent === value) {
-                element.classList.add(styles.selectedFraction);
-            } else {
-                element.classList.remove(styles.selectedFraction);
-            }
+          if (element.textContent === value) {
+            element.classList.add(styles.selectedFraction);
+          } else {
+            element.classList.remove(styles.selectedFraction);
+          }
         });
-
+      
         inchElements.forEach((element) => {
-            if (element.textContent === value) {
-                element.classList.add(styles.selectedInch);
-            } else {
-                element.classList.remove(styles.selectedInch);
-            }
+          if (element.textContent === value) {
+            element.classList.add(styles.selectedInch);
+          } else {
+            element.classList.remove(styles.selectedInch);
+          }
         });
-    };
-
-
+      
+        rulerElements.forEach((element) => {
+          if (element.textContent === value) {
+            element.classList.add(styles.selectedRuler); // Fix the class name here
+          } else {
+            element.classList.remove(styles.selectedRuler); // Fix the class name here
+          }
+        });
+      };
+      
 
 
     return (
@@ -625,13 +632,13 @@ function ZebraBlinds() {
 
                                                                     <div className={styles.width_scroll_number_inches_inside_mount}>
                                                                         <span>
-                                                                            {[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((number) => (
+                                                                        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
                                                                                 <div
-                                                                                    key={number}
-                                                                                    onClick={() => handleInchSelect(number)}
-                                                                                    className={selectedNumber === number ? styles.selectedInch : ''}
+                                                                                    key={index}
+                                                                                    onClick={() => handleInchSelect(inch)}
+                                                                                    className={selectedNumber === inch ? styles.selectedInch : ''}
                                                                                 >
-                                                                                    {number}
+                                                                                    {inch}
                                                                                 </div>
                                                                             ))}
                                                                         </span>
@@ -665,7 +672,13 @@ function ZebraBlinds() {
                                                                     <div className={styles.width_scroll_number_fractions_inside_mount}>
                                                                         <span>
                                                                             {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
-                                                                                <div key={index}>{fraction}</div>
+                                                                                <div
+                                                                                    key={index}
+                                                                                    onClick={() => handleFractionSelect(fraction)}
+                                                                                    className={selectedNumber === fraction ? styles.selectedFraction : ''}
+                                                                                >
+                                                                                    {fraction}
+                                                                                </div>
                                                                             ))}
                                                                         </span>
                                                                     </div>
@@ -682,7 +695,8 @@ function ZebraBlinds() {
 
                                                                         <span className={styles.ruler_line_group}>
                                                                             <span className={styles.line_0}></span>
-                                                                            <div className={styles.ruler_line_number}>8</div>
+                                                                            <div
+                                                                                className={styles.ruler_line_number}>8</div>
                                                                         </span>
 
                                                                         <span className={styles.ruler_line_group}>
@@ -2426,13 +2440,13 @@ function ZebraBlinds() {
 
                                                                     <div className={styles.height_scroll_number_inches_inside_mount}>
                                                                         <span>
-                                                                            {[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((number) => (
+                                                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
                                                                                 <div
-                                                                                    key={number}
-                                                                                    onClick={() => handleInchSelect(number)}
-                                                                                    className={selectedNumber === number ? styles.selectedInch : ''}
+                                                                                    key={index}
+                                                                                    onClick={() => handleInchSelect(inch)}
+                                                                                    className={selectedNumber === inch ? styles.selectedInch : ''}
                                                                                 >
-                                                                                    {number}
+                                                                                    {inch}
                                                                                 </div>
                                                                             ))}
                                                                         </span>
@@ -2488,8 +2502,13 @@ function ZebraBlinds() {
 
                                                                         <span className={styles.ruler_line_group}>
                                                                             <span className={styles.line_0}></span>
-                                                                            <div className={styles.ruler_line_number}>8</div>
-                                                                        </span>
+                                                                            <div
+                                                                                className={styles.ruler_line_number}
+                                                                                onClick={() => handleRulerNumberSelect("8")}
+                                                                            >
+                                                                                8
+                                                                            </div>                                                                      
+                                                                              </span>
 
                                                                         <span className={styles.ruler_line_group}>
                                                                             <span className={styles.line_1}></span>
@@ -4332,13 +4351,13 @@ function ZebraBlinds() {
 
                                                                             <div className={styles.width_scroll_number_inches_outside_mount}>
                                                                                 <span>
-                                                                                    {[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((number) => (
+                                                                                {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
                                                                                         <div
-                                                                                            key={number}
-                                                                                            onClick={() => handleInchSelect(number)}
-                                                                                            className={selectedNumber === number ? styles.selectedInch : ''}
+                                                                                            key={index}
+                                                                                            onClick={() => handleInchSelect(inch)}
+                                                                                            className={selectedNumber === inch ? styles.selectedInch : ''}
                                                                                         >
-                                                                                            {number}
+                                                                                            {inch}
                                                                                         </div>
                                                                                     ))}
                                                                                 </span>
@@ -4368,7 +4387,13 @@ function ZebraBlinds() {
                                                                         <div className={styles.width_scroll_number_fractions_outside_mount}>
                                                                             <span>
                                                                                 {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
-                                                                                    <div key={index}>{fraction}</div>
+                                                                                    <div
+                                                                                        key={index}
+                                                                                        onClick={() => handleFractionSelect(fraction)}
+                                                                                        className={selectedNumber === fraction ? styles.selectedFraction : ''}
+                                                                                    >
+                                                                                        {fraction}
+                                                                                    </div>
                                                                                 ))}
                                                                             </span>
                                                                         </div>
@@ -4426,13 +4451,13 @@ function ZebraBlinds() {
                                                                 <div className={styles.scroller_partition_inches_outside_mount}>
                                                                     <div className={styles.height_scroll_number_inches_outside_mount}>
                                                                         <span>
-                                                                            {[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((number) => (
+                                                                        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
                                                                                 <div
-                                                                                    key={number}
-                                                                                    onClick={() => handleInchSelect(number)}
-                                                                                    className={selectedNumber === number ? styles.selectedInch : ''}
+                                                                                    key={index}
+                                                                                    onClick={() => handleInchSelect(inch)}
+                                                                                    className={selectedNumber === inch ? styles.selectedInch : ''}
                                                                                 >
-                                                                                    {number}
+                                                                                    {inch}
                                                                                 </div>
                                                                             ))}
                                                                         </span>
@@ -4466,7 +4491,13 @@ function ZebraBlinds() {
                                                                     <div className={styles.height_scroll_number_fractions_outside_mount}>
                                                                         <span>
                                                                             {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fraction, index) => (
-                                                                                <div key={index}>{fraction}</div>
+                                                                                <div
+                                                                                    key={index}
+                                                                                    onClick={() => handleFractionSelect(fraction)}
+                                                                                    className={selectedNumber === fraction ? styles.selectedFraction : ''}
+                                                                                >
+                                                                                    {fraction}
+                                                                                </div>
                                                                             ))}
                                                                         </span>
                                                                     </div>
