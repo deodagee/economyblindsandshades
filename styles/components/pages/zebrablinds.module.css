@@ -694,10 +694,14 @@ font-size: 25px;
   font-size: 15px;
   font-weight: 700;
   color: white;
-
+  transition: 0.4s;
 }
 
-
+.ruler_line_number:hover { 
+color: black;
+transition: 0.4s;
+cursor: pointer;
+}
 
 .line_1 { 
   background-color: black;
