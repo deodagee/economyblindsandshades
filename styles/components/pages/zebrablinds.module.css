@@ -602,6 +602,26 @@
   background-color: yellow; /* You can adjust the highlighting color */
 }
 
+.selectedNumber { 
+  display: flex;
+  color: green;
+  background-color: yellow;
+}
+
+.selectedFraction { 
+display: flex;
+color: red;
+background-color: black;
+font-size: 25px;
+}
+
+.selectedRuler { 
+  display: flex;
+  color: black;
+  background-color: green;
+  font-size: 25px;
+}
+
 /* Existing styles for ruler */
 .inches_fractions_boat {
   display: flex;
@@ -628,6 +648,8 @@
   display: flex;
   width: 390px;
   overflow-x: scroll;
+  align-items: center;
+  justify-content: flex-start;
   background-color: brown;
 }
 
@@ -650,15 +672,11 @@
   display: flex;
   font-size: 15px;
   font-weight: 700;
-  color: black;
+  color: white;
+
 }
 
-.line_0 {
-  background-color: black;
-  height: 30px;
-  width: 3px;
-  display: flex;
-}
+
 
 .line_1 { 
   background-color: black;
@@ -685,6 +703,12 @@
   display: flex;
 }
 
+.line_0 {
+  background-color: black;
+  height: 80px;
+  width: 3px;
+  display: flex;
+}
 
 
 .height_inside_mount_sub_title {
@@ -757,7 +781,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -879,7 +903,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1036,7 +1060,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1156,7 +1180,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1475,7 +1499,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1595,7 +1619,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1752,7 +1776,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1867,7 +1891,7 @@
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 60px;
+  width: max-content;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
