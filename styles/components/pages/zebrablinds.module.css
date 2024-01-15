@@ -2161,6 +2161,7 @@ cursor: pointer;
 .materials_image_container_image_itself {
   display: flex;
   width: 200px;
+  border-radius: 0.10rem;
 }
 
 .selectedImage {
@@ -2200,6 +2201,9 @@ cursor: pointer;
   height: auto;
   align-items: center;
   justify-content: center;
+  border-radius: 0.25rem;
+  border-color: black;
+  border-width: 1px;
 }
 
 .imageContainer2_wrapper {
@@ -2239,10 +2243,13 @@ cursor: pointer;
 
 .image_itself1 {
   display: flex;
-  width: 400px;
+  width: 480px;
   height: auto;
   align-items: center;
   justify-content: center;
+  border-radius: 0.25rem;
+  border-color: black;
+  border-width: 1px;
 }
 
 
@@ -3043,11 +3050,11 @@ cursor: pointer;
 
 .selected_head_rail_color {
   border-width: 2px;
-  border-color: rgb(132, 132, 132);
+  border-color: rgb(67, 149, 0);
   padding: 2px;
   transition: 0.2s;
   border-radius: 0.45rem;
-  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
 .top_section {
@@ -3184,13 +3191,13 @@ cursor: pointer;
 
 .selected_bottom_rail_color {
   border-width: 2px;
-  border-color: rgb(132, 132, 132);
+  border-color: rgb(67, 149, 0);
   padding: 2px;
   transition: 0.2s;
   border-radius: 0.45rem;
-  box-shadow: rgb(0, 0, 0) 0px 0px 5px;
-
+  box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
+
 
 .pick_bottom_rail_color_wrapper {
   display: flex;
@@ -3380,7 +3387,7 @@ cursor: pointer;
 
 .answers_answers2 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 200px;
   gap: 10px;
 }

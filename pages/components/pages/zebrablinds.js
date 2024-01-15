@@ -269,20 +269,20 @@ function ZebraBlinds() {
     const Top_Head_Rail_Choices_Fabrics_Aluminum = {
 
         Rounded_Top_Cassette_With_Fabric_Insert: [
-            { key: 'White1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric Top1' },
-            { key: 'Grey1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric Top1' },
-            { key: 'Black1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric Top1' },
-            { key: 'Brown1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric Top1' },
-            { key: 'Beige1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric Top1' },
+            { key: 'White1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric ' },
+            { key: 'Grey1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric ' },
+            { key: 'Black1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric ' },
+            { key: 'Brown1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric ' },
+            { key: 'Beige1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric ' },
             // Add more image data as needed
         ],
 
         Square_Top_Aluminum: [
-            { key: 'White', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum Top1' },
-            { key: 'Grey', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum Top1' },
-            { key: 'Black', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum Top1' },
-            { key: 'Brown', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum Top1' },
-            { key: 'Beige', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum Top1' },
+            { key: 'White', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum ' },
+            { key: 'Grey', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum ' },
+            { key: 'Black', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum ' },
+            { key: 'Brown', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum ' },
+            { key: 'Beige', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum ' },
             // Add more image data as needed
         ]
 
@@ -291,20 +291,20 @@ function ZebraBlinds() {
     const Bottom_Bottom_Rail_Choices_Fabrics_Aluminum = {
 
         Bottom_Rail_Square_With_Fabric_Insert: [
-            { key: 'White1', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric Bottom' },
-            { key: 'Grey1', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric Bottom' },
-            { key: 'Black1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric Bottom' },
-            { key: 'Brown1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric Bottom' },
-            { key: 'Beige1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric Bottom' },
+            { key: 'White1', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric ' },
+            { key: 'Grey1', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric ' },
+            { key: 'Black1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric ' },
+            { key: 'Brown1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric ' },
+            { key: 'Beige1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric ' },
             // Add more image data as needed
         ],
 
         Bottom_Oval_Rail_Aluminum: [
-            { key: 'White', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum Bottom' },
-            { key: 'Grey', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum Bottom' },
-            { key: 'Black', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum Bottom' },
-            { key: 'Brown', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum Bottom' },
-            { key: 'Beige', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum Bottom' },
+            { key: 'White', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum ' },
+            { key: 'Grey', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum ' },
+            { key: 'Black', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum ' },
+            { key: 'Brown', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum ' },
+            { key: 'Beige', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum ' },
             // Add more image data as needed
         ]
     }
@@ -4645,8 +4645,8 @@ function ZebraBlinds() {
                                                                     className={styles.image_itself1}
                                                                     src={selectedMaterial.src}
                                                                     alt='image'
-                                                                    width={100}
-                                                                    height={100}
+                                                                    width={200}
+                                                                    height={200}
                                                                 />
                                                             </div>
                                                             <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
@@ -4657,7 +4657,7 @@ function ZebraBlinds() {
                                                     <div className={styles.image_and_scroller_wrapper}>
                                                         <div className={`${styles.imageContainer2} ${styles.selectedImage3}`}>
                                                             <Image
-                                                                width={100}
+                                                                width={200}
                                                                 height={100}
                                                                 className={styles.image_itself2}
                                                                 src={FirstImageRender[0].src}
@@ -5106,18 +5106,19 @@ function ZebraBlinds() {
                                     </span>
 
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.answers_answers2}>
                                             <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
+
+                                            <div className={styles.answers_answers2}>
                                             {Rounded_Top_Cassette_With_Fabric_Insert_function && (
                                                 <span>
-                                                    Color: {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
+                                                 {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
                                                 </span>
 
                                             )}
                                             {Bottom_Rail_Square_With_Fabric_Insert_function && (
                                                 <span>
-                                                    Color: {Bottom_Rail_Square_With_Fabric_Insert_function.label}
+                                                 {Bottom_Rail_Square_With_Fabric_Insert_function.label}
                                                 </span>
                                             )}
                                         </div>
@@ -5130,17 +5131,17 @@ function ZebraBlinds() {
 
                                     <div className={styles.description_and_answer}>
 
-                                        <div className={styles.answers_answers2}>
                                             <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
-
+                                            
+                                            <div className={styles.answers_answers2}>
                                             {Square_Top_Aluminum_function && (
                                                 <span>
-                                                    Color: {Square_Top_Aluminum_function.label}
+                                                     {Square_Top_Aluminum_function.label}
                                                 </span>
                                             )}
                                             {Bottom_Oval_Rail_Aluminum_function && (
                                                 <span>
-                                                    Color: {Bottom_Oval_Rail_Aluminum_function.label}
+                                                 {Bottom_Oval_Rail_Aluminum_function.label}
                                                 </span>
                                             )}
                                         </div>
