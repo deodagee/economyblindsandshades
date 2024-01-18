@@ -856,6 +856,7 @@ cursor: pointer;
   transition: 0.4s;
   background-color: white;
   font-size: 20px;
+  transition: 0.4s;
 }
 
 
@@ -980,11 +981,13 @@ cursor: pointer;
   transition: 0.4s;
   background-color: white;
   font-size: 20px;
+  transition: 0.7s;
+
 }
 
 .height_scroll_number_fractions_inside_mount:hover {
   transform: scale(0.98);
-  transition: 0.4s;
+  transition: 0.7s;
   height: max-content;
   overflow-y: scroll;
   background-color: white;
@@ -1123,13 +1126,13 @@ cursor: pointer;
 .width_scroll_number_inches_inside_mount {
   position: static;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 0;
   z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
+  width:100px;
+  height: 80px;
   border-width: 2px;
   border-radius: 0.45rem;
   box-shadow: rgb(133, 133, 133) 6px 5px 15px;
@@ -1138,14 +1141,28 @@ cursor: pointer;
   transition: 0.4s;
   background-color: white;
   font-size: 20px;
+
+}
+
+.red_circle_dragger {
+  scroll-behavior: smooth;
+  scroll-margin: 50px;
+  width:100px;
+height: 20px;
+background-color: red;
+background: red;
+position: absolute;
+align-content: center;
+align-items: center;
+top: 0;
+right: 0;
+cursor: grab;
+display: flex;
+margin-top: 35px;
 }
 
 .width_scroll_number_inches_inside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: 400px;
-  overflow-y: scroll;
-  background-color: white;
+
 }
 
 .display_whole_numbers_wrapper_inside_mount_width {

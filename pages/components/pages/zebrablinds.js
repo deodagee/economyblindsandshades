@@ -8,6 +8,8 @@ import HeaderPiece from "../header.js";
 
 
 
+
+
 function ZebraBlinds() {
 
     // Step 1 Ellipse Logic, allows ellipse selection for inside outside moount and renders choice to the bom
@@ -434,10 +436,81 @@ function ZebraBlinds() {
     };
 
 
+    
+    const CustomScroll = () => {
+        const [dragStart, setDragStart] = useState(0);
+        const [scrollLeft, setScrollLeft] = useState(0);
+    
+        const handleDragStart = (e) => {
+            setDragStart(e.clientX || (e.touches && e.touches[0].clientX));
+        };
+    
+        const handleDrag = (e) => {
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            if (clientX !== undefined) {
+                const delta = clientX - dragStart;
+                setScrollLeft((prevScrollLeft) => prevScrollLeft - delta);
+                setDragStart(clientX);
+            }
+        };
+    
+        return (
+            <div
+                className={styles.width_scroll_number_inches_inside_mount}
+                style={{
+                    overflow: 'hidden',
+                    position: 'relative',
+                }}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        position: 'relative',
+                        right: scrollLeft,
+                    }}
+                    draggable="true"
+                    onDragStart={handleDragStart}
+                    onDrag={handleDrag}
+                    onDragEnd={handleDrag}
+                    onTouchStart={handleDragStart} // For mobile devices
+                    onTouchMove={handleDrag} // For mobile devices
+                >
+                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchWidthInsideMount, index) => (
+                        <div
+                            key={index}
+                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                            style={{ marginRight: '10px' }} // Adjust as needed
+                        >
+                            {inchWidthInsideMount}
+                        </div>
+                    ))}
+                </div>
+    
+                {/* Red scrolling circle */}
+                
+                
+                <div className={styles.red_circle_dragger}
+                    draggable="true"
+                    onDragStart={handleDragStart}
+                    onDrag={handleDrag}
+                    onDragEnd={handleDrag}
+                    onTouchStart={handleDragStart} // For mobile devices
+                    onTouchMove={handleDrag} // For mobile devices
+                />
+            </div>
+        );
+    };
+
+
 
     return (
 
         <>
+
+
+
+
             <div className={styles.page}>
                 <div className={styles.header_piece}>
                     <HeaderPiece></HeaderPiece>
@@ -641,21 +714,12 @@ function ZebraBlinds() {
 
                                                                 </div>
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
-
-
-                                                                    <div className={styles.width_scroll_number_inches_inside_mount}>
-                                                                        <span>
-                                                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchWidthInsideMount, index) => (
-                                                                                <div
-                                                                                    key={index}
-                                                                                    onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                                                                    className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                                                                                >
-                                                                                    {inchWidthInsideMount}
-                                                                                </div>
-                                                                            ))}
-                                                                        </span>
+                                                                    <div>
+                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                            <CustomScroll />
+                                                                        </div>
                                                                     </div>
+
                                                                 </div>
                                                             </div>
 
@@ -688,10 +752,13 @@ function ZebraBlinds() {
 
 
                                                         ruler start
+
                                                         <span className={styles.enter_size_boat_bottom}>
                                                             <div className={styles.ruler_for_boat_wrapper}>
+
                                                                 <div className={styles.ruler_for_boat}>
                                                                     <div className={styles.ruler_numbers_and_label}>
+
 
                                                                         <span className={styles.ruler_line_group}>
                                                                             <span className={styles.line_0}></span>
@@ -2564,19 +2631,9 @@ function ZebraBlinds() {
 
                                                                 </div>
 
-                                                                <div className={styles.height_scroll_number_inches_inside_mount}>
-                                                                    <span>
-                                                                        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHeightOutsideMount, index) => (
-                                                                            <div
-                                                                                key={index}
-                                                                                onClick={() => handleInchSelectHeightOutsideMount(inchHeightOutsideMount)}
-                                                                                className={`${styles.inchNumber} ${selectedNumber === inchHeightOutsideMount ? styles.selectedInch : ''}`}
-                                                                            >
-                                                                                {inchHeightOutsideMount}
-                                                                            </div>
-                                                                        ))}
-                                                                    </span>
-                                                                </div>
+                                                                <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                            <CustomScroll />
+                                                                        </div>
 
                                                             </div>
 
@@ -4352,7 +4409,7 @@ function ZebraBlinds() {
                                             alt="first chosen image"
                                             width={100}
                                             height={100}
-                                            src={"/logo.ong"}
+                                            src={"/logo.png"}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
@@ -4465,19 +4522,9 @@ function ZebraBlinds() {
                                                                         </div>
                                                                         <div className={styles.scroller_partition_width_outside_mount}>
 
-                                                                            <div className={styles.width_scroll_number_inches_outside_mount}>
-                                                                                <span>
-                                                                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
-                                                                                        <div
-                                                                                            key={index}
-                                                                                            onClick={() => handleInchSelect(inch)}
-                                                                                            className={selectedNumber === inch ? styles.selectedInch : ''}
-                                                                                        >
-                                                                                            {inch}
-                                                                                        </div>
-                                                                                    ))}
-                                                                                </span>
-                                                                            </div>
+                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                            <CustomScroll />
+                                                                        </div>
                                                                         </div>
                                                                     </div>
 
@@ -4541,19 +4588,9 @@ function ZebraBlinds() {
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_inches_outside_mount}>
-                                                                    <div className={styles.height_scroll_number_inches_outside_mount}>
-                                                                        <span>
-                                                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inch, index) => (
-                                                                                <div
-                                                                                    key={index}
-                                                                                    onClick={() => handleInchSelect(inch)}
-                                                                                    className={selectedNumber === inch ? styles.selectedInch : ''}
-                                                                                >
-                                                                                    {inch}
-                                                                                </div>
-                                                                            ))}
-                                                                        </span>
-                                                                    </div>
+                                                                <div className={styles.width_scroll_number_inches_inside_mount}>
+                                                                            <CustomScroll />
+                                                                        </div>
                                                                 </div>
 
 
@@ -4658,7 +4695,7 @@ function ZebraBlinds() {
                                                         <div className={`${styles.imageContainer2} ${styles.selectedImage3}`}>
                                                             <Image
                                                                 width={200}
-                                                                height={100}
+                                                                height={200}
                                                                 className={styles.image_itself2}
                                                                 src={FirstImageRender[0].src}
                                                                 alt={FirstImageRender[0].label}
@@ -4941,7 +4978,7 @@ function ZebraBlinds() {
 
                                     <div className={styles.pick_bottom_rail_color_wrapper}>
 
-                                    <div className={styles.select_cassette_head_rail_long_rectangle}
+                                        <div className={styles.select_cassette_head_rail_long_rectangle}
                                         >
                                             <div
                                                 className={styles.select_cassette_head_rail_short_rectangle}
@@ -4954,14 +4991,14 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                <span className={styles.select_head_rail_group_title_tag}>5.</span> Bottom Rail
+                                                    <span className={styles.select_head_rail_group_title_tag}>5.</span> Bottom Rail
                                                 </div>
 
 
                                             </div>
                                         </div>
 
-           
+
                                         <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
                                             <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
@@ -5106,19 +5143,19 @@ function ZebraBlinds() {
                                     </span>
 
                                     <div className={styles.description_and_answer}>
-                                            <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
+                                        <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
 
-                                            <div className={styles.answers_answers2}>
+                                        <div className={styles.answers_answers2}>
                                             {Rounded_Top_Cassette_With_Fabric_Insert_function && (
                                                 <span>
-                                                 {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
+                                                    {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
                                                 </span>
 
                                             )}
                                             {Bottom_Rail_Square_With_Fabric_Insert_function && (
                                                 <span>
-                                                 {Bottom_Rail_Square_With_Fabric_Insert_function.label}
+                                                    {Bottom_Rail_Square_With_Fabric_Insert_function.label}
                                                 </span>
                                             )}
                                         </div>
@@ -5131,17 +5168,17 @@ function ZebraBlinds() {
 
                                     <div className={styles.description_and_answer}>
 
-                                            <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
-                                            
-                                            <div className={styles.answers_answers2}>
+                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
+
+                                        <div className={styles.answers_answers2}>
                                             {Square_Top_Aluminum_function && (
                                                 <span>
-                                                     {Square_Top_Aluminum_function.label}
+                                                    {Square_Top_Aluminum_function.label}
                                                 </span>
                                             )}
                                             {Bottom_Oval_Rail_Aluminum_function && (
                                                 <span>
-                                                 {Bottom_Oval_Rail_Aluminum_function.label}
+                                                    {Bottom_Oval_Rail_Aluminum_function.label}
                                                 </span>
                                             )}
                                         </div>
