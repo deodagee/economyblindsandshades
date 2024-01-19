@@ -439,6 +439,10 @@ function ZebraBlinds() {
     const CustomScroll = () => {
         const [dragStart, setDragStart] = useState(0);
         const [scrollLeft, setScrollLeft] = useState(0);
+        const [circlePosition, setCirclePosition] = useState(0);
+        const [isEndReached, setIsEndReached] = useState(false);
+    
+        const maxMovement = 50;
     
         const handleDragStart = (e) => {
             setDragStart(e.clientX || (e.touches && e.touches[0].clientX));
@@ -446,9 +450,39 @@ function ZebraBlinds() {
     
         const handleDrag = (e) => {
             const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    
             if (clientX !== undefined) {
-                const delta = clientX - dragStart;
-                setScrollLeft((prevScrollLeft) => prevScrollLeft + delta);
+                const delta = dragStart - clientX;
+                const limitedDelta = Math.min(maxMovement, Math.max(-maxMovement, delta));
+    
+                const newCirclePosition = circlePosition + limitedDelta;
+                setScrollLeft(scrollLeft - delta); // Adjust the scrollLeft directly
+    
+                // Ensure the red circle stays within the boundaries of the parent container
+                const parentWidth = e.currentTarget.parentElement.clientWidth;
+                const circleWidth = e.currentTarget.clientWidth;
+    
+                if (newCirclePosition < 0) {
+                    setCirclePosition(0);
+                } else if (newCirclePosition > parentWidth - circleWidth) {
+                    setCirclePosition(parentWidth - circleWidth);
+                } else {
+                    setCirclePosition(newCirclePosition);
+                }
+    
+                setDragStart(clientX);
+            }
+        };
+    
+        const handleTopElementScroll = (e) => {
+            // Reverse the direction of scrolling for the top element
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    
+            if (clientX !== undefined) {
+                const delta = dragStart - clientX;
+                const newScrollLeft = scrollLeft + delta; // Adjust the scrollLeft directly
+    
+                setScrollLeft(newScrollLeft);
                 setDragStart(clientX);
             }
         };
@@ -461,6 +495,7 @@ function ZebraBlinds() {
                     position: 'relative',
                 }}
             >
+                {/* Top element */}
                 <div
                     style={{
                         display: 'flex',
@@ -469,17 +504,18 @@ function ZebraBlinds() {
                     }}
                     draggable="true"
                     onDragStart={handleDragStart}
-                    onDrag={handleDrag}
-                    onDragEnd={handleDrag}
-                    onTouchStart={handleDragStart} // For mobile devices
-                    onTouchMove={handleDrag} // For mobile devices
+                    onDrag={handleTopElementScroll}
+                    onDragEnd={handleTopElementScroll}
+                    onTouchStart={handleDragStart}
+                    onTouchMove={handleTopElementScroll}
+                    onTouchEnd={handleTopElementScroll}
                 >
                     {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchWidthInsideMount, index) => (
                         <div
                             key={index}
                             onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
                             className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                            style={{ marginRight: '10px' }} // Adjust as needed
+                            style={{ marginRight: '10px' }}
                         >
                             {inchWidthInsideMount}
                         </div>
@@ -487,19 +523,23 @@ function ZebraBlinds() {
                 </div>
     
                 {/* Red scrolling circle */}
-                
-                
-                <div className={styles.red_circle_dragger}
+                <div
+                    className={isEndReached ? styles.green_circle_dragger : styles.red_circle_dragger}
+                    style={{
+                        center: circlePosition, // Use left instead of center
+                    }}
                     draggable="true"
                     onDragStart={handleDragStart}
                     onDrag={handleDrag}
                     onDragEnd={handleDrag}
-                    onTouchStart={handleDragStart} // For mobile devices
-                    onTouchMove={handleDrag} // For mobile devices
+                    onTouchStart={handleDragStart}
+                    onTouchMove={handleDrag}
+                    onTouchEnd={handleDrag}
                 />
             </div>
         );
     };
+    
 
     return (
 
@@ -712,7 +752,7 @@ function ZebraBlinds() {
                                                                 </div>
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
                                                                     <div>
-                                                                            <CustomScroll />
+                                                                        <CustomScroll />
                                                                     </div>
 
                                                                 </div>
@@ -2626,7 +2666,7 @@ function ZebraBlinds() {
 
                                                                 </div>
 
-                                                                            <CustomScroll />
+                                                                <CustomScroll />
 
                                                             </div>
 
@@ -4579,7 +4619,7 @@ function ZebraBlinds() {
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_inches_outside_mount}>
-                                                                            <CustomScroll />
+                                                                    <CustomScroll />
                                                                 </div>
 
 

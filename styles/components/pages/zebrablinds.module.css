@@ -1126,9 +1126,10 @@
   display: flex;
   width: 100px;
 }
-
 .width_scroll_number_inches_inside_mount {
   position: relative;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   width: 100px;
   height: 50px;
@@ -1136,21 +1137,32 @@
   border-color: orange;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 50px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
 .red_circle_dragger {
+  display: flex;
+
   width: 5px;
   height: 50px;
   background-color: red;
   position: absolute;
   top: 0;
-
+  transition: transform 0.3s ease; /* Add transition for smoother movement */
 }
+
+.green_circle_dragger { 
+  display: flex;
+  width: 5px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
 
 .display_whole_numbers_wrapper_inside_mount_width {
   width: 100px;
