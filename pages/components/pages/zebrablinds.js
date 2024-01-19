@@ -436,7 +436,6 @@ function ZebraBlinds() {
     };
 
 
-    
     const CustomScroll = () => {
         const [dragStart, setDragStart] = useState(0);
         const [scrollLeft, setScrollLeft] = useState(0);
@@ -449,7 +448,7 @@ function ZebraBlinds() {
             const clientX = e.clientX || (e.touches && e.touches[0].clientX);
             if (clientX !== undefined) {
                 const delta = clientX - dragStart;
-                setScrollLeft((prevScrollLeft) => prevScrollLeft - delta);
+                setScrollLeft((prevScrollLeft) => prevScrollLeft + delta);
                 setDragStart(clientX);
             }
         };
@@ -501,8 +500,6 @@ function ZebraBlinds() {
             </div>
         );
     };
-
-
 
     return (
 
@@ -715,9 +712,7 @@ function ZebraBlinds() {
                                                                 </div>
                                                                 <div className={styles.scroller_partition_width_inside_mount}>
                                                                     <div>
-                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
                                                                             <CustomScroll />
-                                                                        </div>
                                                                     </div>
 
                                                                 </div>
@@ -2631,9 +2626,7 @@ function ZebraBlinds() {
 
                                                                 </div>
 
-                                                                <div className={styles.width_scroll_number_inches_inside_mount}>
                                                                             <CustomScroll />
-                                                                        </div>
 
                                                             </div>
 
@@ -4522,9 +4515,7 @@ function ZebraBlinds() {
                                                                         </div>
                                                                         <div className={styles.scroller_partition_width_outside_mount}>
 
-                                                                        <div className={styles.width_scroll_number_inches_inside_mount}>
                                                                             <CustomScroll />
-                                                                        </div>
                                                                         </div>
                                                                     </div>
 
@@ -4588,9 +4579,7 @@ function ZebraBlinds() {
                                                                 </div>
 
                                                                 <div className={styles.scroller_partition_inches_outside_mount}>
-                                                                <div className={styles.width_scroll_number_inches_inside_mount}>
                                                                             <CustomScroll />
-                                                                        </div>
                                                                 </div>
 
 
