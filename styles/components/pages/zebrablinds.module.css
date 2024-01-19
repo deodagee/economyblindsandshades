@@ -647,6 +647,7 @@
   align-items: center;
   justify-content: center;
   padding: 2px;
+  margin: 30px;
 }
 
 .selectedNumber {
@@ -1126,11 +1127,11 @@
   display: flex;
   width: 100px;
 }
+
+
 .width_scroll_number_inches_inside_mount {
-  position: relative;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   width: 100px;
   height: 50px;
   border-width: 2px;
@@ -1140,28 +1141,51 @@
   gap: 50px;
   padding-left: 5px;
   padding-right: 5px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
 }
+
+
 
 .red_circle_dragger {
   display: flex;
-
   width: 5px;
   height: 50px;
   background-color: red;
-  position: absolute;
-  top: 0;
-  transition: transform 0.3s ease; /* Add transition for smoother movement */
+
 }
 
 .green_circle_dragger { 
   display: flex;
   width: 5px;
   height: 50px;
-  background-color: red;
-  position: absolute;
-  top: 0;
-  transition: transform 0.3s ease;
+  background-color: green;
 }
+
+
+/* Target the scrollbar itself in WebKit browsers (like Chrome and Safari) */
+.width_scroll_number_inches_inside_mount::-webkit-scrollbar {
+display: flex;
+}
+
+/* Target the scrollbar thumb (the draggable part) in WebKit browsers */
+.width_scroll_number_inches_inside_mount::-webkit-scrollbar-thumb {
+  background-color: red; /* Set the background color of the scrollbar thumb */
+  border-radius: 5%;
+  border-top-left-radius: 95%;
+  border-top-right-radius: 95%;
+  width: 5px;
+  height: 10px;
+   /* Add border-radius for a rounded appearance */
+}
+
+/* Target the scrollbar track (the area the thumb moves along) in WebKit browsers */
+.width_scroll_number_inches_inside_mount::-webkit-scrollbar-track {
+    width: 100px;
+  background-color: #3a0404; /* Set the background color of the scrollbar track */
+}
+
 
 
 .display_whole_numbers_wrapper_inside_mount_width {

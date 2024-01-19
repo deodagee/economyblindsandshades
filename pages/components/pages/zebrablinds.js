@@ -435,119 +435,66 @@ function ZebraBlinds() {
         });
     };
 
-
     const CustomScroll = () => {
-        const [dragStart, setDragStart] = useState(0);
-        const [scrollLeft, setScrollLeft] = useState(0);
-        const [circlePosition, setCirclePosition] = useState(0);
         const [isEndReached, setIsEndReached] = useState(false);
-    
-        const maxMovement = 50;
-    
-        const handleDragStart = (e) => {
-            setDragStart(e.clientX || (e.touches && e.touches[0].clientX));
+        const [selectedNumber, setSelectedNumber] = useState(null);
+        const [scrollLeft, setScrollLeft] = useState(0);
+      
+        const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
+          setSelectedNumber(inchWidthInsideMount);
         };
-    
-        const handleDrag = (e) => {
-            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-    
-            if (clientX !== undefined) {
-                const delta = dragStart - clientX;
-                const limitedDelta = Math.min(maxMovement, Math.max(-maxMovement, delta));
-    
-                const newCirclePosition = circlePosition + limitedDelta;
-                setScrollLeft(scrollLeft - delta); // Adjust the scrollLeft directly
-    
-                // Ensure the red circle stays within the boundaries of the parent container
-                const parentWidth = e.currentTarget.parentElement.clientWidth;
-                const circleWidth = e.currentTarget.clientWidth;
-    
-                if (newCirclePosition < 0) {
-                    setCirclePosition(0);
-                } else if (newCirclePosition > parentWidth - circleWidth) {
-                    setCirclePosition(parentWidth - circleWidth);
-                } else {
-                    setCirclePosition(newCirclePosition);
-                }
-    
-                setDragStart(clientX);
-            }
+      
+        const handleScroll = (e) => {
+          setScrollLeft(e.currentTarget.scrollLeft);
         };
-    
-        const handleTopElementScroll = (e) => {
-            // Reverse the direction of scrolling for the top element
-            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-    
-            if (clientX !== undefined) {
-                const delta = dragStart - clientX;
-                const newScrollLeft = scrollLeft + delta; // Adjust the scrollLeft directly
-    
-                setScrollLeft(newScrollLeft);
-                setDragStart(clientX);
-            }
-        };
-    
+      
         return (
+          <div
+            className={styles.width_scroll_number_inches_inside_mount} // Don't change my classname
+            style={{
+              overflowX: 'scroll',
+              overflowY: 'hidden', // Don't change this overflow setting
+              position: 'relative',
+              width: '100px', // Don't change this width
+            }}
+            onScroll={handleScroll}
+          >
             <div
-                className={styles.width_scroll_number_inches_inside_mount}
-                style={{
-                    overflow: 'hidden',
-                    position: 'relative',
-                }}
+              style={{
+                width: '100px', // Don't change this width
+                display: 'flex',
+                position: 'absolute',
+              }}
             >
-                {/* Top element */}
+              {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchWidthInsideMount, index) => (
                 <div
-                    style={{
-                        display: 'flex',
-                        position: 'relative',
-                        right: scrollLeft,
-                    }}
-                    draggable="true"
-                    onDragStart={handleDragStart}
-                    onDrag={handleTopElementScroll}
-                    onDragEnd={handleTopElementScroll}
-                    onTouchStart={handleDragStart}
-                    onTouchMove={handleTopElementScroll}
-                    onTouchEnd={handleTopElementScroll}
+                  key={index}
+                  onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                  className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                  style={{ margin: '5px',
+                border_Width: "2px", 
+            borderColor: "grey" }} // Don't change my classname
                 >
-                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchWidthInsideMount, index) => (
-                        <div
-                            key={index}
-                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                            style={{ marginRight: '10px' }}
-                        >
-                            {inchWidthInsideMount}
-                        </div>
-                    ))}
+                  {inchWidthInsideMount}
                 </div>
-    
-                {/* Red scrolling circle */}
-                <div
-                    className={isEndReached ? styles.green_circle_dragger : styles.red_circle_dragger}
-                    style={{
-                        center: circlePosition, // Use left instead of center
-                    }}
-                    draggable="true"
-                    onDragStart={handleDragStart}
-                    onDrag={handleDrag}
-                    onDragEnd={handleDrag}
-                    onTouchStart={handleDragStart}
-                    onTouchMove={handleDrag}
-                    onTouchEnd={handleDrag}
-                />
+              ))}
             </div>
-        );
-    };
-    
 
+            
+      
+            <div
+              className={isEndReached ? styles.green_circle_dragger : styles.red_circle_dragger}
+              style={{
+                transform: `translateX(${scrollLeft}px)`, // Move the red circle based on scrollLeft
+              }} // Don't change my classname
+            />
+          </div>
+        );
+      };
+      
     return (
 
         <>
-
-
-
-
             <div className={styles.page}>
                 <div className={styles.header_piece}>
                     <HeaderPiece></HeaderPiece>
