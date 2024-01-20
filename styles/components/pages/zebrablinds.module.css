@@ -640,24 +640,14 @@
 
 
 .selectedInch {
-  font-size: 20px;
   display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  margin: 30px;
+
 }
 
 .selectedNumber {
   font-size: 20px;
   display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
+ 
 }
 
 .selectedFraction {
@@ -1124,45 +1114,28 @@
 }
 
 .scroller_partition_width_inside_mount {
-  display: flex;
-  width: 100px;
+  display: content;
 }
 
 
 .width_scroll_number_inches_inside_mount {
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 50px;
-  border-width: 2px;
-  border-color: orange;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+display: contents;
+}
 
+.red_reader_dragger_wrapper { 
+  display: contents;
+
+}
+
+.red_reader_dragger {
+  display: contents;
 }
 
 
 
-.red_circle_dragger {
-  display: flex;
-  width: 5px;
-  height: 50px;
-  background-color: red;
-
+.green_reader_dragger { 
+  display: contents;
 }
-
-.green_circle_dragger { 
-  display: flex;
-  width: 5px;
-  height: 50px;
-  background-color: green;
-}
-
 
 /* Target the scrollbar itself in WebKit browsers (like Chrome and Safari) */
 .width_scroll_number_inches_inside_mount::-webkit-scrollbar {
@@ -1244,7 +1217,7 @@ display: flex;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 70px;
+  height: 80px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {
@@ -1277,8 +1250,7 @@ display: flex;
 }
 
 .scroller_partition_width_inside_mount {
-  display: flex;
-  width: 100px;
+  display: content;
 }
 
 .width_scroll_number_fractions_inside_mount {
