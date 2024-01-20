@@ -1568,7 +1568,7 @@ display: flex;
 
 
 .scroller_partition_inches_outside_mount {
-  display: flex;
+  display: contents;
   width: 100px;
 }
 

@@ -407,7 +407,7 @@ function ZebraBlinds() {
     };
     const highlightMatchingFractionOrInch = (value) => {
         const fractionElements = document.querySelectorAll(`.${styles.height_scroll_number_fractions_inside_mount} div`);
-        const inchElements = document.querySelectorAll(`.${styles.height_scroll_number_inches_inside_mount} div`);
+        const inchElements = document.querySelectorAll(`.${styles._scroll_number_} div`);
         const rulerElements = document.querySelectorAll(`.${styles.ruler_numbers_and_label} div`);
 
         fractionElements.forEach((element) => {
@@ -440,100 +440,121 @@ function ZebraBlinds() {
         const [selectedNumber, setSelectedNumber] = useState(null);
         const [scrollLeft, setScrollLeft] = useState(0);
         const [visibleNumber, setVisibleNumber] = useState(null);
-      
+
         const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
-          setSelectedNumber(inchWidthInsideMount);
+            setSelectedNumber(inchWidthInsideMount);
         };
-      
+
         const handleScroll = (e) => {
-          setScrollLeft(e.currentTarget.scrollLeft);
-      
-          // Calculate the index of the visible number based on scroll position
-          const containerWidth = 100; // Adjust this value based on the width of your container
-          const itemWidth = 26; // Adjust this value based on the width of each item
-          const gapWidth =25; // Adjust this value based on the gap between items
-          const margin = 0; // Adjust this value based on the margin of each item
-      
-          // Calculate the total width of each item including the gap and margin
-          const totalItemWidth = itemWidth + gapWidth + margin ;
-      
-          // Calculate the offset of the scroll position
-          const scrollOffset = e.currentTarget.scrollLeft % totalItemWidth;
-      
-          // Calculate the visible index based on the scroll position
-          const visibleIndex = Math.floor((e.currentTarget.scrollLeft + scrollOffset) / totalItemWidth);
-      
-          // Retrieve the number at the center
-          const visibleNumber = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x","x" ][visibleIndex];
-      
-          // Set the visible number in the state
-          setVisibleNumber(visibleNumber);
+            setScrollLeft(e.currentTarget.scrollLeft);
+
+            // Calculate the index of the visible number based on scroll position
+            const containerWidth = 100; // Adjust this value based on the width of your container
+            const itemWidth = 26; // Adjust this value based on the width of each item
+            const gapWidth = 26; // Adjust this value based on the gap between items
+            const margin = 0; // Adjust this value based on the margin of each item
+
+            // Calculate the total width of each item including the gap and margin
+            const totalItemWidth = itemWidth + gapWidth + margin;
+
+            // Calculate the offset of the scroll position
+            const scrollOffset = e.currentTarget.scrollLeft % totalItemWidth;
+
+            // Calculate the visible index based on the scroll position
+            const visibleIndex = Math.floor((e.currentTarget.scrollLeft + scrollOffset) / totalItemWidth);
+
+            // Retrieve the number at the center
+            const visibleNumber = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"][visibleIndex];
+
+            // Set the visible number in the state
+            setVisibleNumber(visibleNumber);
         };
-      
+
         return (
-          <div className={styles.scroller_partition_width_inside_mount}>
-            <div
-              className={styles.width_scroll_number_inches_inside_mount}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: "0.35rem",
-                borderColor: "orange",
-                borderWidth: "2px",
-                overflowX: 'scroll',
-                overflowY: 'hidden',
-                width: '100px',
-                height: "50px",
-                position: "absolute",
-              }}
-              onScroll={handleScroll}
-            >
-              <div
-                style={{
-                  width: '100px',
-                  display: 'flex',
-                  alignItems: "center",
-                  justifyContent: "flex-start",
-                  position: "absolute",
-                }}
-              >
-                {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                    className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+            <div>
+                <div
+                    className={styles._scroll_number_}
                     style={{
-                      margin: "15px",
-                      width: "30px",
-                      fontSize: "20px"
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: "0.35rem",
+                        borderColor: "orange",
+                        borderWidth: "2px",
+                        overflowX: 'hidden',
+                        overflowX: 'scroll',
+                        overflowY: 'hidden',
+                        width: '100px',
+                        height: "50px",
+                        position: "absolute",
+                    }}
+                    onScroll={handleScroll}
+                >
+                    <div
+                        style={{
+                            width: '100px',
+                            display: 'flex',
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                            position: "absolute",
+                            marginLeft: "60%",
+
+                        }}
+                    >
+                        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
+                            <div
+                                key={index}
+                                onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                                className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                style={{
+                                    margin: "15px",
+                                    width: "30px",
+                                    fontSize: "20px",
+
+                                }}
+                            >
+                                {inchWidthInsideMount}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        width: "100px",
+                        height: "50px",
+                        
 
                     }}
-                  >
-                    {inchWidthInsideMount}
-                  </div>
-                ))}
-              </div>
+                >
+                    <div
+                        className={styles.red_reader_dragger}
+                        style={{
+                            backgroundColor: "red",
+                            marginLeft: '10px',
+                            marginRight: '10px',
+                            width: "30px",
+                            borderColor: "grey",
+                            borderWidth: "1px",
+                            height: "50px",
+                            display: 'flex',
+
+                        }}
+                    >
+                        {/* Display the visible number beneath the red_reader_dragger */}
+                    </div>
+                </div>
+                <div
+                    style={{
+                        position: "absolute",
+                    }}
+
+                >{visibleNumber}</div>
             </div>
-      
-            <div
-              className={styles.red_reader_dragger}
-              style={{
-                backgroundColor: "red",
-                margin: '10px',
-                width: "30px",
-                borderColor: "grey",
-                borderWidth: "1px",
-                height: "50px",
-                display: 'flex',
-              }}
-            >
-              {/* Display the visible number beneath the red_reader_dragger */}
-            </div>
-            <div>{visibleNumber}</div>
-          </div>
         );
-      };
+    };
 
     return (
 
@@ -2655,8 +2676,9 @@ function ZebraBlinds() {
 
                                                                 </div>
 
-                                                                <CustomScroll />
-
+                                                                <div>
+                                                                    <CustomScroll />
+                                                                </div>
                                                             </div>
 
                                                             <div className={styles.enter_height_fractions_inside_mount_rectangle_2}
@@ -4543,8 +4565,9 @@ function ZebraBlinds() {
 
                                                                         </div>
 
+                                                                        <div>
                                                                             <CustomScroll />
-\                                                                    </div>
+                                                                        </div>\                                                                    </div>
 
 
                                                                     <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
@@ -4605,8 +4628,9 @@ function ZebraBlinds() {
 
                                                                 </div>
 
+                                                                <div>
                                                                     <CustomScroll />
-
+                                                                </div>
 
                                                             </div>
 
