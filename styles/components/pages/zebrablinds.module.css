@@ -645,7 +645,6 @@
 }
 
 .selectedNumber {
-  font-size: 20px;
   display: flex;
  
 }
@@ -1217,7 +1216,7 @@ display: flex;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: 80px;
+  height: 70px;
 }
 
 .toggle_disclaimer_fractions_inside_mount_width {

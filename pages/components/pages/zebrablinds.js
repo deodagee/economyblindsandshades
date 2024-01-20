@@ -450,8 +450,8 @@ function ZebraBlinds() {
       
           // Calculate the index of the visible number based on scroll position
           const containerWidth = 100; // Adjust this value based on the width of your container
-          const itemWidth = 25; // Adjust this value based on the width of each item
-          const gapWidth = 15; // Adjust this value based on the gap between items
+          const itemWidth = 26; // Adjust this value based on the width of each item
+          const gapWidth =25; // Adjust this value based on the gap between items
           const margin = 0; // Adjust this value based on the margin of each item
       
           // Calculate the total width of each item including the gap and margin
@@ -505,6 +505,9 @@ function ZebraBlinds() {
                     className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
                     style={{
                       margin: "15px",
+                      width: "30px",
+                      fontSize: "20px"
+
                     }}
                   >
                     {inchWidthInsideMount}
@@ -518,7 +521,7 @@ function ZebraBlinds() {
               style={{
                 backgroundColor: "red",
                 margin: '10px',
-                width: "20px",
+                width: "30px",
                 borderColor: "grey",
                 borderWidth: "1px",
                 height: "50px",
@@ -4539,11 +4542,9 @@ function ZebraBlinds() {
                                                                             <p>INCHES</p>
 
                                                                         </div>
-                                                                        <div className={styles.scroller_partition_width_outside_mount}>
 
                                                                             <CustomScroll />
-                                                                        </div>
-                                                                    </div>
+\                                                                    </div>
 
 
                                                                     <div className={styles.enter_width_fractions_outside_mount_rectangle_2}>
@@ -4604,9 +4605,7 @@ function ZebraBlinds() {
 
                                                                 </div>
 
-                                                                <div className={styles.scroller_partition_inches_outside_mount}>
                                                                     <CustomScroll />
-                                                                </div>
 
 
                                                             </div>
