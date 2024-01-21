@@ -49,10 +49,8 @@ function HeaderPiece() {
         <div className={styles.header_wrapper}>
 
           <ol className={styles.header_promo_bar}>
-
             <li>
               <p>
-
                 <Image
                   src={"/factorydirectsavingsversion4.png"}
                   width={200}
@@ -60,9 +58,9 @@ function HeaderPiece() {
                   alt="header_top_image"
                   className={styles.header_top_image}>
 
-                </Image>              </p>
+                </Image>              
+                </p>
             </li>
-
           </ol>
 
           <div className={styles.header_top_bar}>
@@ -112,7 +110,9 @@ function HeaderPiece() {
             </div>
 
             <span className={styles.links_for_top_wrapper}>
+
               <span className={styles.side_links} >
+
                 <div>
                   <Image
                     className={styles.add_to_cart}
@@ -122,18 +122,23 @@ function HeaderPiece() {
                     src={"/cart.png"}>
                   </Image>
                 </div>
+
                 <div>
                   <Link className={styles.top_links_item}
                     href={"/contact"}
                   > Contact
                   </Link>
                 </div>
+
                 <div className={styles.divider_line}
                 ></div>
+
                 <div>
                   <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
                 </div>
+
               </span>
+
             </span>
           </div>
 

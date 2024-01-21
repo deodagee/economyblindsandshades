@@ -252,7 +252,7 @@
   padding: 10px;
 }
 
-.titled_step_combo_head {
+.inside_mount_and_outside_mount_group_titles_wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -531,44 +531,8 @@
   border-radius: 0.45rem;
 }
 
-.enter_size_inside_mount_group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 800px;
-  height: max-content;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 50pxs;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  border-color: #c2c2c2;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  transition: 0.4s;
-}
 
-.enter_size_inside_mount_group:hover {
-  transition: 0.4s;
-  box-shadow: rgb(60, 60, 60) 3px 2px 10px;
-  border-color: #747474;
-}
 
-.enter_size_inside_mount_title {
-  display: flex;
-  font-size: 17px;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: rgb(43, 43, 43);
-}
-
-.enter_height_and_width_inside_mount_group {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: row;
-  height: max-content;
-  gap: 10px;
-}
 
 .enter_height_group_inside_mount {
   display: flex;
@@ -590,6 +554,20 @@
   gap: 10px;
 }
 
+
+/* choose height and width with ruler group
+ruler START LINE */
+
+.step_1_wrapper  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
 .choose_height_image_placeholder {
   display: flex;
   height: 120px;
@@ -597,6 +575,70 @@
   background-color: black;
   margin: 10px;
 }
+
+.width_inside_mount_sub_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 12px;
+  color: rgb(45, 45, 45);
+  font-weight: 700;
+  width: max-content;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+}
+
+.inches_and_fractions_boat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.enter_width_inside_mount_rectangle_1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 173px;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 70px;
+}
+
+.toggle_disclaimer_inches_inside_mount_width {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px;
+  white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_inches_inside_mount_width:hover {
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
+}
+
+._scroll_number_ { 
+  display: contents;
+}
+
 
 /* Add these styles for highlighting */
 .ruler_line_group.selected {
@@ -670,15 +712,9 @@
 }
 
 /* Existing styles for ruler */
-.inches_fractions_boat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
 
-.enter_size_boat_top {
+
+.enter_size_boat_bottom {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -688,7 +724,6 @@
 
 .ruler_for_boat_wrapper {
   display: contents;
-  margin: 5px;
 }
 
 .ruler_for_boat {
@@ -767,7 +802,6 @@
   width: 3px;
   display: flex;
 }
-
 
 .height_inside_mount_sub_title {
   display: flex;
@@ -976,7 +1010,6 @@
   background-color: white;
   font-size: 20px;
   transition: 0.7s;
-
 }
 
 .height_scroll_number_fractions_inside_mount:hover {
@@ -1016,7 +1049,6 @@
   justify-content: flex-start;
 }
 
-
 .singleFraction_height_inside_mount:hover {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -1052,58 +1084,8 @@
   gap: 10px;
 }
 
-.width_inside_mount_sub_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  font-size: 15px;
-  color: rgb(45, 45, 45);
-  font-weight: 700;
-  width: max-content;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-}
 
 
-
-.enter_width_inside_mount_rectangle_1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_inches_inside_mount_width {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_inches_inside_mount_width:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
 
 .polygon_3 {
   display: flex;
@@ -1116,21 +1098,17 @@
   display: content;
 }
 
-
 .width_scroll_number_inches_inside_mount {
 display: contents;
 }
 
 .red_reader_dragger_wrapper { 
   display: contents;
-
 }
 
 .red_reader_dragger {
   display: contents;
 }
-
-
 
 .green_reader_dragger { 
   display: contents;
@@ -1484,561 +1462,6 @@ display: flex;
   flex-direction: row;
   height: max-content;
   gap: 10px;
-}
-
-.enter_height_group_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  width: 390px;
-  background-color: rgb(235, 235, 235);
-  padding: 5px;
-  border-radius: 0.25rem;
-}
-
-.height_and_toggle_outside_mount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.height_outside_mount_sub_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  font-size: 15px;
-  color: rgb(45, 45, 45);
-  font-weight: 700;
-  width: max-content;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-}
-
-
-
-.enter_height_outside_mount_rectangle_1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_inches_height_outside_mount {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_inches_height_outside_mount:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_5 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-
-
-.scroller_partition_inches_outside_mount {
-  display: contents;
-  width: 100px;
-}
-
-.height_scroll_number_inches_outside_mount {
-  position: static;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-}
-
-.height_scroll_number_inches_outside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: 400px;
-  overflow-y: scroll;
-  background-color: white;
-}
-
-.display_whole_numbers_wrapper_outside_mount_height {
-  width: 100px;
-}
-
-.displayWholeNumbers_outside_mount_height {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayWholeNumbers_outside_mount_height_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberInches_height_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.singleNumber_outside_mount_height:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.selectedNumber_height_outside_mount {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.enter_height_fractions_outside_mount_rectangle_2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_height_fractions_outside_mount {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_height_fractions_outside_mount:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_6 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-.scroller_partition_fractions_outside_mount {
-  display: flex;
-  width: 100px;
-}
-
-.height_scroll_number_fractions_outside_mount {
-  position: static;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-}
-
-.height_scroll_number_fractions_outside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: max-content;
-  overflow-y: scroll;
-  background-color: white;
-}
-
-.display_fractions_wrapper_outside_mount_height {
-  width: 100px;
-}
-
-.displayFractions_outside_mount_height {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayFractions_outside_mount_height_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberFractions_height_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-
-.singleFraction_height_outside_mount:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.selectedFraction_outside_mount_height {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-
-.enter_width_group_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  width: 390px;
-  background-color: rgb(235, 235, 235);
-  padding: 5px;
-  border-radius: 0.25rem;
-}
-
-.width_and_toggle_outside_mount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-}
-
-.width_outside_mount_sub_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  font-size: 15px;
-  color: rgb(45, 45, 45);
-  font-weight: 700;
-  width: max-content;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-}
-
-.enter_width_outside_mount_rectangle_1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_inches_width_outside_mount {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_inches_width_outside_mount:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_7 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-.scroller_partition_width_outside_mount {
-  display: flex;
-  width: 100px;
-}
-
-.width_scroll_number_inches_outside_mount {
-  position: static;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-}
-
-.width_scroll_number_inches_outside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: 400px;
-  overflow-y: scroll;
-  background-color: white;
-}
-
-.display_whole_numbers_wrapper_outside_mount_width {
-  width: 100px;
-}
-
-.displayWholeNumbers_outside_mount_width {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayWholeNumbers_outside_mount_width_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberInches_width_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.singleNumber_outside_mount_width:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.selectedNumber_outside_mount_width {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.enter_width_fractions_outside_mount_rectangle_2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_width_fractions_outside_mount {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_width_fractions_outside_mount:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_8 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-.width_scroll_number_fractions_outside_mount {
-  position: static;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-}
-
-.width_scroll_number_fractions_outside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: max-content;
-  overflow-y: scroll;
-  background-color: white;
-}
-
-.display_fractions_wrapper_outside_mount_width {
-  width: 100px;
-}
-
-.displayFractions_outside_mount_width {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayFractions_outside_mount_width_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberFractions_width_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-
-.singleFraction_width_inside_mount:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.selectedFraction_width_outside_mount_width {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
 }
 
 
@@ -3609,153 +3032,3 @@ display: flex;
 
 
 
-
-
-
-/* mobile styling */
-
-@media (min-width: 300px) and (max-width: 1190px) and (orientation: landscape) {
-  .top_title_area {
-    display: flex;
-    width: 480px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin: 10px;
-  }
-
-  .star_group {
-    display: flex;
-    width: 480px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    margin: 0;
-  }
-
-  /* inside mount */
-
-  .inside_mount_group {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .left_inside_mount {
-    display: flex;
-    height: 500px;
-    width: 250px;
-    margin-top: 30px;
-  }
-
-
-  .insidemount_Image {
-    width: 600px;
-  }
-
-  .step_1_inside_mount,
-  .step_2_inside_mount,
-  .step_3_inside_mount {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 50px;
-    width: 500px;
-    height: 100px;
-    background-color: rgb(233, 233, 233);
-  }
-
-  .step_tag_description {
-    display: flex;
-    width: max-content;
-    width: 400px;
-    height: 90px;
-  }
-
-  /* outside mount */
-
-  .outside_mount_group {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .outsidemount_Image {
-    width: 600px;
-
-  }
-
-  .step_1_outside_mount,
-  .step_2_outside_mount,
-  .step_3_outside_mount {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 50px;
-    width: 500px;
-    height: 100px;
-    background-color: rgb(233, 233, 233);
-  }
-
-
-
-
-}
-
-
-@media (min-width: 300px) and (max-width: 1190px) and (orientation: portrait) {
-  .top_title_area {
-    display: flex;
-    width: 480px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin: 10px;
-  }
-
-  .star_group {
-    display: flex;
-    width: 480px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    margin: 0;
-  }
-
-  .inside_mount_group {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .insidemount_Image {
-    width: 600px;
-  }
-
-  .step_1_inside_mount,
-  .step_2_inside_mount,
-  .step_3_inside_mount {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 20px;
-    width: 500px;
-    height: 100px;
-    background-color: rgb(233, 233, 233);
-  }
-
-  .step_tag_description {
-    display: flex;
-    width: max-content;
-    width: 400px;
-    height: 90px;
-  }
-}
-
-
-
-/* mobile styling */
