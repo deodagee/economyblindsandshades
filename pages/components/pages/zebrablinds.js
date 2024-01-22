@@ -594,6 +594,7 @@ function ZebraBlinds() {
 
                         >{visibleNumber}
                         </div>
+                        
                         <div className={styles.enter_inches_group_wrapper}>
 
                         < span className={styles.enter_size_boat_bottom} >
