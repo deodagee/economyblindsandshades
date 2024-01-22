@@ -160,15 +160,504 @@
 
 
 
+.a_distinctive_look_that {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 850px;
+  height: max-content;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.top_divider_line {
+  height: 2px;
+  max-width: 100%;
+  background-color: #434343;
+  margin: 10px;
+}
+
+.inside_mount_and_outside_mount_whole_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 900px;
+  height: max-content;
+  background: linear-gradient(to top, #f0f0f0, #fbfbfb, #f0f0f0);
+  border-radius: 0.25rem;
+  padding-bottom: 20px;
+  padding: 10px;
+}
+
+.inside_mount_and_outside_mount_group_titles_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: max-content;
+  align-self: start;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.select_mount_type_long_rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 850px;
+  height: 35px;
+  border-radius: 2rem;
+  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #f8f8f8);
+  justify-content: start;
+}
+
+.select_mount_type_short_rectangle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #2d2d2d;
+}
+
+.select_mount_type_short_rectangle:hover {
+  cursor: default;
+}
+
+.iconforselect_mount_type {
+  display: none;
+  padding: 2px;
+  width: 15px;
+  height: auto;
+  transform: rotate(90deg);
+  margin: 10px;
+}
+
+.select_mount_type_group_title {
+  gap: 20px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1f1f1;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.select_mount_type_group_title_tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 2rem;
+  margin: 5px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 5px;
+}
+
+
+
+.ellipse_and_type {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+}
+
+
+
+.inside_mount_ellipse {
+  display: flex;
+  background-color: #dddddd;
+  width: 20px;
+  height: 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+
+.outside_mount_ellipse {
+  display: flex;
+  background-color: #dddddd;
+  width: 20px;
+  height: 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+.active_inside_outside_ellipse {
+  background-color: #42dc00e1;
+}
+
+.inside_mount_choice {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+
+
+.outside_mount_choice {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+.inside_mount_group_wrapper {
+  display: content;
+}
+
+
+.inside_mount_group {
+display: content;
+}
+
+.visible_inside_mount {
+  display: contents;
+}
+
+.invisible_inside_mount {
+  display: none;
+}
+
+.first_chosen_inside_mount_selection_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 850px;
+}
+
+.first_chosen_inside_mount_selection {
+  display: flex;
+  width: 100px;
+  height: auto;
+  background-color: black;
+}
+
+.left_right_inside_mount { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left_inside_mount {
+  display: flex;
+  height: 500px;
+  margin-top: 30px;
+}
+
+
+.inside_mount_group_left_side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.inside_mount_measurement_instructions_wrapper { 
+  display: contents;
+}
+
+
+.inside_mount_measurement_instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  height: max-content;
+}
+
+.measurement_instructions_title_inside_mount {
+  font-size: 15px;
+  color: #323232;
+  background-color: #e9e9e9;
+  padding: 5px;
+  border-radius: 0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-color: grey;
+}
+
+.step_1_inside_mount,
+.step_2_inside_mount,
+.step_3_inside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 400px;
+  height: 120px;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.step_tag {
+  display: flex;
+  background-color: black;
+  width: 50px;
+  height: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 0.24rem;
+  color: white;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.step_tag_description_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.step_tag_description {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  width: 300px;
+  background-color: rgb(249, 249, 249);
+  padding: 5px;
+  font-size: 10px;
+  color: black;
+}
+
+.step_tag_description_note {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  width: 300px;
+  background-color: rgb(249, 249, 249);
+  padding: 5px;
+  font-size: 10px;
+  color: black;
+}
+
+
+.right_inside_mount {
+  display: flex;
+  height: 500px;
+  width: max-content;
+  margin-top: 30px;
+}
+
+.inside_mount_group_right_side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inside_mount_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-width: 2px;
+  border-color: #3d3d3d;
+  padding: 5px;
+  border-radius: 0.45rem;
+}
+
+
+.enter_size_inside_mount_group { 
+  display: contents;
+}
+
+.enter_size_inside_mount_title { 
+  display: contents;
+}
+
+
+
+.outside_mount_group_wrapper { 
+  display: contents;
+}
+
+.outside_mount_group {
+  width: 850px;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.first_chosen_outside_mount_selection_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 850px;
+}
+
+.first_chosen_outside_mount_selection {
+  display: flex;
+  width: 350px;
+  height: 200px;
+  background-color: black;
+  margin: 20px;
+  border-radius: 0.15rem;
+}
+
+.left_right_outside_mount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left_outside_mount {
+  display: flex;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.outside_mount_group_left_side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.outside_mount_measurement_instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  height: max-content;
+}
+
+.measurement_instructions_title_outside_mount {
+  font-size: 15px;
+  color: #323232;
+  background-color: #e9e9e9;
+  padding: 5px;
+  border-radius: 0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-color: grey;
+}
+
+.step_1_outside_mount,
+.step_2_outside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 400px;
+  height: 120px;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+/* OUTSIDE MOUNT CLASSNAME= .step_tag */
+
+/* OUTSIDE MOUNT CLASSNAME= .step_tag_description_wrapper */
+
+/* OUTSIDE MOUNT CLASSNAME= .step_tag_description */
+
+/* OUTSIDE MOUNT CLASSNAME= .step_tag_description_note */
+
+.right_outside_mount {
+  display: flex;
+  height: 500px;
+  width: max-content;
+  margin-top: 30px;
+}
+
+.outside_mount_group_right_side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.outsidemount_Image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-width: 2px;
+  border-color: #3d3d3d;
+  padding: 5px;
+  border-radius: 0.45rem;
+}
+
+.enter_size_outside_mount_title {
+  display: flex;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: rgb(43, 43, 43);
+}
+
+.enter_height_and_width_outside_mount_group {
+  display: contents;
+}
+
+.select_color_type_seperator_line {
+  display: flex;
+  height: 3px;
+  width: 98%;
+  margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: black;
+  border-radius: 0.56rem;
+}
+
+.select_color_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+
+
 .step_1_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: green;
-  padding: 2px;
-  width: max-content;
-  height: max-content;
+  height: 500px;
+  width: 800px;
+
 }
 
 
@@ -179,6 +668,7 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+  height: 200px;
 }
 
 .qty_group_part1 {
@@ -290,9 +780,10 @@
 
 .inches_and_fractions_and_ruler {
   display: flex;
-  flex-direction: column;
-  gap: auto;
+  height: max-content;
+  width: max-content;
 }
+
 
 .enter_width_inside_mount_rectangle_1 {
   display: flex;
@@ -309,338 +800,8 @@
 }
 
 
-
-
-
-
-
-.a_distinctive_look_that {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 850px;
-  height: max-content;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  margin: 20px;
-}
-
-.top_divider_line {
-  height: 2px;
-  max-width: 100%;
-  background-color: #434343;
-  margin: 10px;
-}
-
-.inside_mount_and_outside_mount_whole_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 900px;
-  height: max-content;
-  background: linear-gradient(to top, #f0f0f0, #fbfbfb, #f0f0f0);
-  height: max-content;
-  border-radius: 0.25rem;
-  padding-bottom: 20px;
-  padding: 10px;
-}
-
-.inside_mount_and_outside_mount_group_titles_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: max-content;
-  align-self: start;
-  justify-content: flex-start;
-  margin-top: 20px;
-}
-
-.select_mount_type_long_rectangle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 850px;
-  height: 35px;
-  border-radius: 2rem;
-  background: linear-gradient(to right, #a5a5a5, #979797, #eaeaea, #f8f8f8);
-  justify-content: start;
-}
-
-.select_mount_type_short_rectangle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 35px;
-  padding: 10px;
-  border-radius: 2rem;
-  background-color: #2d2d2d;
-}
-
-.select_mount_type_short_rectangle:hover {
-  cursor: default;
-}
-
-.iconforselect_mount_type {
-  display: none;
-  padding: 2px;
-  width: 15px;
-  height: auto;
-  transform: rotate(90deg);
-  margin: 10px;
-}
-
-.select_mount_type_group_title {
-  gap: 20px;
-  display: flex;
-  font-size: 20px;
-  font-weight: 700;
-  color: #f1f1f1;
-  white-space: nowrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.select_mount_type_group_title_tag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 2rem;
-  margin: 5px;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
-  box-shadow: rgb(255, 255, 255) 0px 0px 5px;
-}
-
-
-.ellipse_and_type {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  width: max-content;
-  padding: 20px;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: rgb(243, 243, 243);
-  border-radius: 2rem;
-  height: 20px;
-  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
-}
-
-
-.inside_mount_ellipse {
-  display: flex;
-  background-color: #dddddd;
-  width: 20px;
-  height: 20px;
-  border-radius: 2rem;
-  cursor: pointer;
-  color: black;
-}
-
-
-.inside_mount_choice {
-  white-space: nowrap;
-  font-size: 10px;
-}
-
-
-.outside_mount_ellipse {
-  display: flex;
-  background-color: #dddddd;
-  width: 20px;
-  height: 20px;
-  border-radius: 2rem;
-  cursor: pointer;
-  color: black;
-}
-
-.outside_mount_choice {
-  white-space: nowrap;
-  font-size: 10px;
-}
-
-.inside_mount_group_wraper {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.inside_mount_group {
-display: content;
-}
-
-
-.first_chosen_inside_mount_selection {
-  display: flex;
-  width: 100px;
-  height: auto;
-  background-color: black;
-}
-
-.left_right_inside_mount {
-  width: 850px;
-  height: max-content;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-
-.visible_inside_mount {
-  display: contents;
-}
-
-.invisible_inside_mount {
-  display: none;
-}
-
-
-.active_inside_outside_ellipse {
-  background-color: #42dc00e1;
-  font-size: 12px;
-}
-
-.inside_mount_measurement_instructions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  height: max-content;
-}
-
-.measurement_instructions_title_inside_mount {
-  font-size: 15px;
-  color: #323232;
-  background-color: #e9e9e9;
-  padding: 5px;
-  border-radius: 0.24rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-color: grey;
-}
-
-.step_1_inside_mount,
-.step_2_inside_mount,
-.step_3_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  width: 400px;
-  height: 120px;
-  padding: 10px;
-  background-color: rgb(235, 235, 235);
-}
-
-.step_tag {
-  display: flex;
-  background-color: black;
-  width: 50px;
-  height: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-radius: 0.24rem;
-  color: white;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.step_tag_description_wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.step_tag_description_note {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  text-align: left;
-  width: 300px;
-  background-color: rgb(249, 249, 249);
-  padding: 5px;
-  font-size: 10px;
-  color: black;
-}
-
-.step_tag_description {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  text-align: left;
-  width: 300px;
-  background-color: rgb(249, 249, 249);
-  padding: 5px;
-  font-size: 10px;
-  color: black;
-}
-
-.right_inside_mount {
-  display: flex;
-  height: 500px;
-  width: max-content;
-  margin-top: 30px;
-}
-
-.inside_mount_group_right_side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.insidemount_Image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  border-width: 2px;
-  border-color: #3d3d3d;
-  padding: 5px;
-  border-radius: 0.45rem;
-}
-
-
-
-
-.enter_height_group_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  width: 390px;
-  background-color: rgb(235, 235, 235);
-  padding: 5px;
-  border-radius: 0.25rem;
-}
-
-
-.height_and_toggle_inside_mount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-
 .toggle_disclaimer_inches_inside_mount_width {
   display: flex;
-  position: static;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -678,65 +839,11 @@ display: content;
 }
 
 
-.enter_inches_group_wrapper { 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: max-content;
-  border-radius: 0.56rem;
-  border-color: rgb(255, 0, 0);
-  border-width: 1px;
-  padding: 2px;
-}
-
-
-/* Your existing styles */
-.inchNumber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Your existing styles */
-}
-
-.inchNumber:hover {
-  background-color: grey;
-}
-
-
-/* Your existing styles */
-.fractionNumber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fractionNumber:hover {
-  background-color: grey;
-}
-
-.wholeNumber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wholeNumber:hover {
-  background-color: grey;
-}
-
-.selectedRuler {
-  font-size: 20px;
-  display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-}
-
 /* ruler start */
+
+.enter_inches_group_wrapper { 
+  display: contents;
+}
 
 .enter_size_boat_bottom {
   display: flex;
@@ -745,6 +852,7 @@ display: content;
   align-items: center;
   justify-content: center;
 }
+
 
 .ruler_for_boat_wrapper {
   display: contents;
@@ -782,18 +890,11 @@ display: content;
   background-color: yellow;
 }
 
-.ruler_line_number {
+.line_0 {
+  background-color: black;
+  height: 60px;
+  width: 3px;
   display: flex;
-  font-size: 15px;
-  font-weight: 700;
-  color: white;
-  transition: 0.4s;
-}
-
-.ruler_line_number:hover {
-  color: black;
-  transition: 0.4s;
-  cursor: pointer;
 }
 
 .line_1 {
@@ -824,12 +925,71 @@ display: content;
   display: flex;
 }
 
-.line_0 {
-  background-color: black;
-  height: 60px;
-  width: 3px;
+.ruler_line_number {
   display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  transition: 0.4s;
 }
+
+.ruler_line_number:hover {
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+
+.selectedRuler {
+  font-size: 20px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+/* ruler end */
+
+
+
+
+/* Your existing styles */
+.inchNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Your existing styles */
+}
+
+.inchNumber:hover {
+  background-color: grey;
+}
+
+
+/* Your existing styles */
+.fractionNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fractionNumber:hover {
+  background-color: grey;
+}
+
+.wholeNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wholeNumber:hover {
+  background-color: grey;
+}
+
+
 
 .height_inside_mount_sub_title {
   display: flex;
@@ -862,7 +1022,6 @@ display: content;
 
 .toggle_disclaimer_inches_inside_mount_height {
   display: flex;
-  position: static;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -875,148 +1034,6 @@ display: content;
   gap: 10px;
   transition: 0.3s;
   border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_inches_inside_mount_height:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_1 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-.scroller_partition_height_inside_outside_mount {
-  display: flex;
-  width: 100px;
-}
-
-.height_scroll_number_inches_inside_mount {
-  position: static;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-  transition: 0.4s;
-}
-
-
-.height_scroll_number_inches_inside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.4s;
-  height: 400px;
-  overflow-y: scroll;
-  background-color: white;
-}
-
-.display_whole_numbers_wrapper_inside_mount_height {
-  width: 100px;
-}
-
-.displayWholeNumbers_inside_mount_height {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayWholeNumbers_inside_mount_height_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberInches_height_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.singleNumber_inside_mount_height:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-
-}
-
-.selectedNumber_height_inside_mount {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.enter_height_fractions_inside_mount_rectangle_2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
-
-.toggle_disclaimer_fractions_inside_mount_height {
-  display: flex;
-  position: static;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.toggle_disclaimer_fractions_inside_mount_height:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
-.polygon_2 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-
-.scroller_partition_height_inside_mount {
-  display: flex;
-  width: 100px;
 }
 
 .height_scroll_number_fractions_inside_mount {
@@ -1047,44 +1064,6 @@ display: content;
   overflow-y: scroll;
   background-color: white;
 }
-
-.display_fractions_wrapper_inside_mount_height {
-  width: 100px;
-}
-
-.displayFractions_inside_mount_height {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayFractions_inside_mount_height_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberFractions_height_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.singleFraction_height_inside_mount:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
 
 .enter_width_group_inside_mount {
   display: flex;
@@ -1323,54 +1302,6 @@ display: content;
   border-color: grey;
 }
 
-.outside_mount_group {
-  width: 850px;
-  align-items: center;
-  justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.first_chosen_inside_mount_selection_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 850px;
-}
-
-.first_chosen_inside_mount_selection {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  background-color: black;
-  margin: 20px;
-  border-radius: 0.15rem;
-}
-
-.left_inside_mount {
-  display: flex;
-  height: 500px;
-  margin-top: 30px;
-}
-
-.inside_mount_group_left_side {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 400px;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.left_right_outside_mount {
-  width: 850px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
 
 .visible_outside_mount {
   display: contents;
@@ -1380,84 +1311,15 @@ display: content;
   display: none;
 }
 
-.left_outside_mount {
-  display: flex;
-  height: 500px;
-  margin-top: 30px;
-}
-
-.outside_mount_group_left_side {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 400px;
-  align-items: center;
-  justify-content: center;
-}
 
 
-.outside_mount_measurement_instructions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  height: max-content;
-}
-
-.measurement_instructions_title_outside_mount {
-  font-size: 15px;
-  color: #323232;
-  background-color: #e9e9e9;
-  padding: 5px;
-  border-radius: 0.24rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-color: grey;
-}
-
-.step_1_outside_mount,
-.step_2_outside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  width: 400px;
-  height: 120px;
-  padding: 10px;
-  background-color: rgb(235, 235, 235);
-}
 
 
-.right_outside_mount {
-  display: flex;
-  height: 500px;
-  width: max-content;
-  margin-top: 30px;
-}
 
 
-.outside_mount_group_right_side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
 
-.outsidemount_Image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  border-width: 2px;
-  border-color: #3d3d3d;
-  padding: 5px;
-  border-radius: 0.45rem;
-}
+
 
 .enter_size_outside_mount_group {
   display: contents;
@@ -1470,36 +1332,9 @@ display: content;
   border-color: #747474;
 }
 
-.enter_size_outside_mount_title {
-  display: flex;
-  font-size: 17px;
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: rgb(43, 43, 43);
-}
-
-.enter_height_and_width_outside_mount_group {
-  display: contents;
-
-}
 
 
-.select_color_type_seperator_line {
-  display: flex;
-  height: 3px;
-  width: 98%;
-  margin: 10px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  background-color: black;
-  border-radius: 0.56rem;
-}
 
-.select_color_group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
 
 
 
