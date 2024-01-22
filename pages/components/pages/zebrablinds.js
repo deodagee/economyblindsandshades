@@ -505,7 +505,7 @@ function ZebraBlinds() {
                     CHOOSE WIDTH:
                 </div>
 
-                <div className={styles.inches_and_fractions_boat}>
+                <div className={styles.inches_and_fractions_and_ruler}>
                     <div className={styles.enter_width_inside_mount_rectangle_1}>
                         <div className={styles.toggle_disclaimer_inches_inside_mount_width}
                         >
@@ -594,6 +594,7 @@ function ZebraBlinds() {
 
                         >{visibleNumber}
                         </div>
+                        <div className={styles.enter_inches_group_wrapper}>
 
                         < span className={styles.enter_size_boat_bottom} >
                             <div className={styles.ruler_for_boat_wrapper}>
@@ -2444,16 +2445,18 @@ function ZebraBlinds() {
                                 </div>
                             </div>
                         </span>
+                        </div>
 
 
-                        <div className={styles.enter_width_inside_mount_rectangle_2}>
-                            <div className={styles.toggle_disclaimer_fractions_inside_mount_width}
+
+                        <div className={styles.enter_fractions_group_wrapper}>
+                            <div className={styles.fractions_subtitle}
                             >
                                 <p>FRACTIONS</p>
                             </div>
-                            <div className={styles.scroller_partition_width_inside_mount}>
+                            <div className={styles.fractions_scroller_wrapper}>
 
-                                <div className={styles.width_scroll_number_fractions_inside_mount}>
+                                <div className={styles.fractions_scroller_div}>
                                     <span>
                                         {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
                                             <div
@@ -2521,7 +2524,7 @@ function ZebraBlinds() {
 
                         <div className={styles.top_divider_line}></div>
 
-                        <div className={styles.select_mount_group}>
+                        <div className={styles.inside_mount_and_outside_mount_whole_wrapper}>
 
                             <span className={styles.inside_mount_and_outside_mount_group_titles_wrapper}>
                                 <div className={styles.select_mount_type_long_rectangle}
@@ -2547,7 +2550,6 @@ function ZebraBlinds() {
                                     </div>
                                     <div className={styles.inside_mount_choice}>Inside Mount</div>
 
-
                                     <div
                                         className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
                                         onClick={() => handleClickInside_And_Outside_Ellipses(2)}
@@ -2563,20 +2565,16 @@ function ZebraBlinds() {
                             <div className={styles.inside_mount_group_wraper}>
 
                                 <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
+                                    
                                     <span className={styles.first_chosen_inside_mount_selection_wrapper}>
                                         <Image
                                             alt="first chosen image"
                                             width={100}
                                             height={100}
-                                            src={"/logo.ong"}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
                                     </span>
-                                    <span className={styles.left_right_inside_mount}>
-
-
-
 
                                         <span className={styles.left_inside_mount}>
 
@@ -2628,7 +2626,6 @@ function ZebraBlinds() {
                                                 <Image alt="image" width={400} height={400} className={styles.insidemount_Image} src="/insidemount.png" />
                                             </div>
                                         </span>
-                                    </span>
 
 
                                     <div className={styles.enter_size_inside_mount_group}>
@@ -2650,7 +2647,6 @@ function ZebraBlinds() {
                                             alt="first chosen image"
                                             width={100}
                                             height={100}
-                                            src={"/logo.png"}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
@@ -2704,36 +2700,6 @@ function ZebraBlinds() {
                                     </span>
 
 
-
-                                    <div className={styles.enter_size_outside_mount_group}>
-
-
-                                        <div className={styles.qty_group}>
-                                            <div className={styles.qty_group_part1}>
-                                                <div className={styles.quantity_title}>QUANTITY</div>
-                                                <div className={styles.quantity_rectangle_and_numbers}>
-
-                                                    <div className={styles.quantity_rectangle}>
-                                                        <div className={styles.qty}>QTY</div>
-                                                        <div className={styles.qty_number}>1</div>
-                                                    </div>
-
-                                                    <div>
-                                                        <span>
-                                                            <div className={styles.quantity_is_always_1_wrapper}>
-                                                                <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                                            </div>
-
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className={styles.qty_group_part2}>
-                                                <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                                            </div>
-                                        </div>
-
-
                                         <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
 
                                         <div className={styles.enter_height_and_width_outside_mount_group}>
@@ -2742,7 +2708,6 @@ function ZebraBlinds() {
                                             </div>
 
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

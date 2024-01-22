@@ -159,6 +159,20 @@
 
 
 
+
+.step_1_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  padding: 2px;
+  width: max-content;
+  height: max-content;
+}
+
+
+
 .qty_group {
   display: flex;
   flex-direction: row;
@@ -218,6 +232,39 @@
   display: flex;
 }
 
+.quantity_is_always_1_wrapper {
+  display: flex;
+  width: max-content;
+  border-width: 2px;
+  border-color: grey;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2rem;
+
+}
+
+.quantity_is_always_1 {
+  display: flex;
+  white-space: nowrap;
+
+}
+
+.qty_group_part2 { 
+  display: contents;
+}
+
+
+.quantity_is_always_1_note {
+  font-size: 11px;
+  font-weight: 600;
+  width: max-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(197, 128, 0);
+}
+
+
 
 .a_distinctive_look_that {
   display: flex;
@@ -238,7 +285,7 @@
   margin: 10px;
 }
 
-.select_mount_group {
+.inside_mount_and_outside_mount_whole_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,60 +370,6 @@
   box-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
 
-.inside_mount_group_wraper {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.inside_mount_group {
-  width: 850px;
-  align-items: center;
-  justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.left_right_inside_mount {
-  width: 850px;
-  height: max-content;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.first_chosen_inside_mount_selection {
-  display: flex;
-  width: 100px;
-  height: auto;
-  background-color: black;
-}
-
-.visible_inside_mount {
-  display: contents;
-}
-
-.invisible_inside_mount {
-  display: none;
-}
-
-.left_inside_mount {
-  display: flex;
-  height: 500px;
-  margin-top: 30px;
-}
-
-.inside_mount_group_left_side {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 400px;
-  align-items: center;
-  justify-content: center;
-}
 
 .ellipse_and_type {
   display: flex;
@@ -392,6 +385,7 @@
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
 }
 
+
 .inside_mount_ellipse {
   display: flex;
   background-color: #dddddd;
@@ -401,6 +395,13 @@
   cursor: pointer;
   color: black;
 }
+
+
+.inside_mount_choice {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
 
 .outside_mount_ellipse {
   display: flex;
@@ -412,15 +413,49 @@
   color: black;
 }
 
-.inside_mount_choice {
-  white-space: nowrap;
-  font-size: 10px;
-}
-
 .outside_mount_choice {
   white-space: nowrap;
   font-size: 10px;
 }
+
+.inside_mount_group_wraper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.inside_mount_group {
+display: content;
+}
+
+
+.first_chosen_inside_mount_selection {
+  display: flex;
+  width: 100px;
+  height: auto;
+  background-color: black;
+}
+
+.left_right_inside_mount {
+  width: 850px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.visible_inside_mount {
+  display: contents;
+}
+
+.invisible_inside_mount {
+  display: none;
+}
+
 
 .active_inside_outside_ellipse {
   background-color: #42dc00e1;
@@ -555,17 +590,6 @@
 }
 
 
-/* choose height and width with ruler group
-ruler START LINE */
-
-.step_1_wrapper  {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
 
 
 .choose_height_image_placeholder {
@@ -591,12 +615,11 @@ ruler START LINE */
   padding: 2px;
 }
 
-.inches_and_fractions_boat {
+.inches_and_fractions_and_ruler {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+  gap: auto;
+
 }
 
 .enter_width_inside_mount_rectangle_1 {
@@ -635,15 +658,36 @@ ruler START LINE */
   transition: 0.3s;
 }
 
-._scroll_number_ { 
+._scroll_number_ {
+  display: contents;
+}
+
+.selectedNumber {
+  display: flex;
+}
+
+.selectedInch {
+  display: flex;
+}
+
+
+.red_reader_dragger {
   display: contents;
 }
 
 
-/* Add these styles for highlighting */
-.ruler_line_group.selected {
-  background-color: yellow;
-  /* You can adjust the highlighting color */
+.enter_inches_group_wrapper { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 173px;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 70px;
 }
 
 /* Your existing styles */
@@ -680,27 +724,6 @@ ruler START LINE */
   background-color: grey;
 }
 
-
-.selectedInch {
-  display: flex;
-
-}
-
-.selectedNumber {
-  display: flex;
- 
-}
-
-.selectedFraction {
-  font-size: 20px;
-  display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-}
-
 .selectedRuler {
   font-size: 20px;
   display: flex;
@@ -711,8 +734,7 @@ ruler START LINE */
   padding: 2px;
 }
 
-/* Existing styles for ruler */
-
+/* ruler start */
 
 .enter_size_boat_bottom {
   display: flex;
@@ -752,6 +774,10 @@ ruler START LINE */
   flex-direction: column;
   width: 30px;
   align-items: center;
+}
+
+.ruler_line_group.selected {
+  background-color: yellow;
 }
 
 .ruler_line_number {
@@ -1057,13 +1083,6 @@ ruler START LINE */
   border-color: grey;
 }
 
-.selectedFraction_height_inside_mount {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: rgb(95, 92, 92);
-}
 
 .enter_width_group_inside_mount {
   display: flex;
@@ -1099,41 +1118,32 @@ ruler START LINE */
 }
 
 .width_scroll_number_inches_inside_mount {
-display: contents;
-}
-
-.red_reader_dragger_wrapper { 
   display: contents;
 }
 
-.red_reader_dragger {
-  display: contents;
-}
-
-.green_reader_dragger { 
-  display: contents;
-}
 
 /* Target the scrollbar itself in WebKit browsers (like Chrome and Safari) */
 .width_scroll_number_inches_inside_mount::-webkit-scrollbar {
-display: flex;
+  display: flex;
 }
 
 /* Target the scrollbar thumb (the draggable part) in WebKit browsers */
 .width_scroll_number_inches_inside_mount::-webkit-scrollbar-thumb {
-  background-color: red; /* Set the background color of the scrollbar thumb */
+  background-color: red;
+  /* Set the background color of the scrollbar thumb */
   border-radius: 5%;
   border-top-left-radius: 95%;
   border-top-right-radius: 95%;
   width: 5px;
   height: 10px;
-   /* Add border-radius for a rounded appearance */
+  /* Add border-radius for a rounded appearance */
 }
 
 /* Target the scrollbar track (the area the thumb moves along) in WebKit browsers */
 .width_scroll_number_inches_inside_mount::-webkit-scrollbar-track {
-    width: 100px;
-  background-color: #3a0404; /* Set the background color of the scrollbar track */
+  width: 100px;
+  background-color: #3a0404;
+  /* Set the background color of the scrollbar track */
 }
 
 
@@ -1183,7 +1193,7 @@ display: flex;
   border-color: grey;
 }
 
-.enter_width_inside_mount_rectangle_2 {
+.enter_fractions_group_wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1197,7 +1207,7 @@ display: flex;
   height: 70px;
 }
 
-.toggle_disclaimer_fractions_inside_mount_width {
+.fractions_subtitle {
   display: flex;
   position: static;
   flex-direction: row;
@@ -1214,10 +1224,15 @@ display: flex;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_fractions_inside_mount_width:hover {
+.fractions_subtitle:hover {
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
+
+.fractions_scroller_wrapper {
+  display: content;
+}
+
 
 .polygon_4 {
   display: flex;
@@ -1226,11 +1241,8 @@ display: flex;
   top: 0;
 }
 
-.scroller_partition_width_inside_mount {
-  display: content;
-}
 
-.width_scroll_number_fractions_inside_mount {
+.fractions_scroller_div {
   position: static;
   display: flex;
   align-items: flex-start;
@@ -1250,12 +1262,23 @@ display: flex;
   font-size: 20px;
 }
 
-.width_scroll_number_fractions_inside_mount:hover {
+.fractions_scroller_div:hover {
   transform: scale(0.98);
   transition: 0.4s;
   height: max-content;
   overflow-y: scroll;
   background-color: white;
+}
+
+
+.selectedFraction {
+  font-size: 20px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  background-color: rgb(201, 201, 201);
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
 }
 
 
@@ -1298,14 +1321,6 @@ display: flex;
   border-color: grey;
 }
 
-.selectedFraction_width {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
 .outside_mount_group {
   width: 850px;
   align-items: center;
@@ -1323,11 +1338,28 @@ display: flex;
 
 .first_chosen_inside_mount_selection {
   display: flex;
-  width: 250px;
-  height: auto;
+  width: 350px;
+  height: 200px;
   background-color: black;
   margin: 20px;
+  border-radius: 0.15rem;
 }
+
+.left_inside_mount {
+  display: flex;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.inside_mount_group_left_side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .left_right_outside_mount {
   width: 850px;
@@ -1426,19 +1458,7 @@ display: flex;
 }
 
 .enter_size_outside_mount_group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 800px;
-  height: max-content;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 50pxs;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  border-color: #c2c2c2;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  display: contents;
   transition: 0.4s;
 }
 
@@ -1457,11 +1477,8 @@ display: flex;
 }
 
 .enter_height_and_width_outside_mount_group {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: row;
-  height: max-content;
-  gap: 10px;
+  display: contents;
+
 }
 
 
@@ -2891,32 +2908,7 @@ display: flex;
   height: 15px;
 }
 
-.quantity_is_always_1_wrapper {
-  display: flex;
-  width: max-content;
-  border-width: 2px;
-  border-color: grey;
-  padding: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 2rem;
 
-}
-
-.quantity_is_always_1 {
-  display: flex;
-  white-space: nowrap;
-
-}
-
-.quantity_is_always_1_note {
-  font-size: 11px;
-  font-weight: 600;
-  width: max-content;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: rgb(197, 128, 0);
-}
 
 .review_your_order {
   display: flex;
@@ -3020,15 +3012,3 @@ display: flex;
   width: 30px;
   margin: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
