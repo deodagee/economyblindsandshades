@@ -846,15 +846,15 @@ display: content;
 }
 
 
-.red_reader_dragger_wrapper  { 
+.red_reader_dragger_wrapper {
   display: flex;
-    height: 28px;
+  height: 28px;
   width: 50px;
   margin-top: -48px;
   background-color: rgba(255, 0, 0, 0.192);
   border-color: red;
   border-width: 2px;
-
+  pointer-events: none; /* Make it non-interactive */
 }
 
 
