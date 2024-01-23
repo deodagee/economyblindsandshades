@@ -1076,9 +1076,31 @@
 }
 
 /* ruler end */
+.selected_width_answer_top {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  word-wrap: nowrap;
+}
 
-
-
+.selected_height_answer_top {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  word-wrap: nowrap;
+}
 
 /* Your existing styles */
 .inchNumber {
@@ -1091,7 +1113,6 @@
 .inchNumber:hover {
   background-color: grey;
 }
-
 
 /* Your existing styles */
 .fractionNumber {
@@ -1377,7 +1398,7 @@
   transition: 0.5s;
 }
 
-.materials_image_container:hover { 
+.materials_image_container:hover {
   box-shadow: #3a3a3a 2px 3px 7px;
   border-color: rgb(57, 57, 57);
   border-width: 5px;
@@ -1389,7 +1410,7 @@
 }
 
 
-.images_and_subtitles_color_name { 
+.images_and_subtitles_color_name {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1403,7 +1424,7 @@
   border-radius: 0.10rem;
 }
 
-.selectedImageClass_label { 
+.selectedImageClass_label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1437,7 +1458,7 @@
 }
 
 
-.left_first_image_render_container { 
+.left_first_image_render_container {
   background-color: rgb(212, 212, 212);
   border-width: 2px;
   border-color: rgb(206, 206, 206);
