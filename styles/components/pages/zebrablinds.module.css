@@ -1036,7 +1036,7 @@
   display: flex;
 }
 
-.ruler_line_number {
+.ruler_line_number_inches {
   display: flex;
   font-size: 15px;
   font-weight: 700;
@@ -1044,12 +1044,25 @@
   transition: 0.4s;
 }
 
-.ruler_line_number:hover {
+.ruler_line_number_inches:hover {
   color: black;
   transition: 0.4s;
   cursor: pointer;
 }
 
+.ruler_line_number_fractions {
+  display: flex;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  transition: 0.4s;
+}
+
+.ruler_line_number_fractions:hover {
+  color: black;
+  transition: 0.4s;
+  cursor: pointer;
+}
 
 .selectedRuler {
   font-size: 20px;

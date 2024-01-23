@@ -511,7 +511,7 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_inches}>
                                                         {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -525,9 +525,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                 
+                                                       </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -541,9 +542,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>                                                    </span>
+                                                    <span className={styles.line_2}>                                                
+                                                        </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -557,9 +559,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -573,9 +576,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}>                                                    </span>
+                                                    <span className={styles.line_3}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -589,9 +593,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                    
+                                                    </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -605,9 +610,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>                                                    </span>
+                                                    <span className={styles.line_2}>                                                   
+                                                     </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -621,9 +627,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                 
+                                                       </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -638,7 +645,7 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_inches}>
                                                         {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -730,7 +737,7 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_inches}>
                                                         {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -744,9 +751,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -760,9 +768,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>                                                    </span>
+                                                    <span className={styles.line_2}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -776,9 +785,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -792,9 +802,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}>                                                    </span>
+                                                    <span className={styles.line_3}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -808,9 +819,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                  
+                                                      </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -824,9 +836,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>                                                    </span>
+                                                    <span className={styles.line_2}>                                                 
+                                                       </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -840,9 +853,10 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>                                                    </span>
+                                                    <span className={styles.line_1}>                                                   
+                                                     </span>
 
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_fractions}>
                                                         {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
@@ -857,7 +871,7 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-                                                    <div className={styles.ruler_line_number}>
+                                                    <div className={styles.ruler_line_number_inches}>
                                                         {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
