@@ -506,7 +506,7 @@ function ZebraBlinds() {
                     <div className={styles.width_inside_mount_sub_title}>
                         CHOOSE WIDTH:
                     </div>
-                    
+
 
                     <div className={styles.inches_and_fractions_and_ruler}>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
@@ -518,85 +518,62 @@ function ZebraBlinds() {
 
 
                             <div
-                                className={styles._scroll_number_}
-                                style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    borderRadius: "0.35rem",
-                                    borderColor: "orange",
-                                    borderWidth: "2px",
-                                    overflowX: 'hidden',
-                                    overflowX: 'scroll',
-                                    overflowY: 'hidden',
-                                    width: '100px',
-                                    height: "50px",
-                                    position: "absolute",
-                                }}
-                                onScroll={handleScroll}
+    className={styles._scroll_number_}
+    style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "0.35rem",
+        borderColor: "orange",
+        borderWidth: "2px",
+        overflow: 'auto',  // Enable both horizontal and vertical scrolling
+        width: '100px',
+        height: "60px",
+        scrollbarWidth: 'none',  // Firefox
+        WebkitOverflowScrolling: 'touch',  // Enable smooth scrolling on iOS
+    }}
+    onScroll={handleScroll}
+>
+    <div
+        style={{
+            width: '100px',
+            display: 'flex',
+            alignItems: "center",
+            justifyContent: "flex-start",
+            marginLeft: "60%",
+        }}
+    >
+        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
+            <div
+                key={index}
+                onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                style={{
+                    margin: "15px",
+                    width: "30px",
+                    fontSize: "20px",
+                }}
+            >
+                {inchWidthInsideMount}
+            </div>
+        ))}
+    </div>
+</div>
+
+
+                            <div className={styles.red_reader_dragger_wrapper}
+                      
                             >
-                                <div
-                                    style={{
-                                        width: '100px',
-                                        display: 'flex',
-                                        alignItems: "center",
-                                        justifyContent: "flex-start",
-                                        position: "absolute",
-                                        marginLeft: "60%",
 
-                                    }}
-                                >
-                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
-                                        <div
-                                            key={index}
-                                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                                            style={{
-                                                margin: "15px",
-                                                width: "30px",
-                                                fontSize: "20px",
-
-                                            }}
-                                        >
-                                            {inchWidthInsideMount}
-                                        </div>
-                                    ))}
-                                </div>
+                            <div className={styles.red_reader_dragger}>
                             </div>
-
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    width: "100px",
-                                    height: "50px",
-                                }}
-                            >
-                                <div
-                                    className={styles.red_reader_dragger}
-                                    style={{
-                                        backgroundColor: "red",
-                                        marginLeft: '10px',
-                                        marginRight: '10px',
-                                        width: "30px",
-                                        borderColor: "grey",
-                                        borderWidth: "1px",
-                                        height: "50px",
-                                        display: 'flex',
-                                    }}
-                                >
-                                    {/* Display the visible number beneath the red_reader_dragger */}
-                                </div>
 
                             </div>
 
-                            <div
-                                style={{
-                                    position: "absolute",
-                                }}
-
-                            >{visibleNumber}
+                            <div className={styles.red_reader_dragger_number}>
+                            {visibleNumber}
                             </div>
+
                             ruler start
 
                             <div className={styles.enter_inches_group_wrapper}>
