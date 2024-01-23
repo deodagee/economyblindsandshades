@@ -338,7 +338,11 @@ function ZebraBlinds() {
     const Bottom_Oval_Rail_Aluminum_function = Match_Amluminum_With_Aluminum.find(
         (imageData) => imageData.key === selected_bottom_rail_color
     );
-    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// /////////////////////////////////////
+
+
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+     
 
     const handleRenderClickImageToMergeFabrics = (imageName) => {
         const baseClassName = styles[imageName];
@@ -349,47 +353,18 @@ function ZebraBlinds() {
         const baseClassName = styles[imageName];
         return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
-    //////////////////// /////////////////////////////// //////////////////////////////// //////////////////////////// ///////////////////////////////////
+
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+
     const [selectedNumber, setSelectedNumber] = useState(null);
 
 
-    const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
-        setSelectedNumber(fractionWidthInsideMount);
-        highlightMatchingRulerNumber(fractionWidthInsideMount);
-    };
-    const handleFractionSelectHeightInsideMount = (fractionHeightInsideMount) => {
-        setSelectedNumber(fractionHeightInsideMount);
-        highlightMatchingRulerNumber(fractionHeightInsideMount);
-    };
-    const handleFractionSelectWidthOutsideMount = (fractionWidthOutsideMount) => {
-        setSelectedNumber(fractionWidthOutsideMount);
-        highlightMatchingRulerNumber(fractionWidthOutsideMount);
-    };
-    const handleFractionSelectHeightOutsideMount = (fractionHeightOutsideMount) => {
-        setSelectedNumber(fractionHeightOutsideMount);
-        highlightMatchingRulerNumber(fractionHeightOutsideMount);
-    };
-
-
-    const handleInchSelectHeightOutsideMount = (inchHeightOutsideMount) => {
-        setSelectedNumber(inchHeightOutsideMount);
-        highlightMatchingRulerNumber(inchHeightOutsideMount);
-    };
-
-    const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
-        setSelectedNumber(inchWidthInsideMount);
-        highlightMatchingRulerNumber(inchWidthInsideMount);
-    };
 
     const handleRulerNumberSelectWidthAndHeightInsideMount = (rulerNumberWidthAndHeightInsideMount) => {
         setSelectedNumber(rulerNumberWidthAndHeightInsideMount);
         highlightMatchingFractionOrInch(rulerNumberWidthAndHeightInsideMount);
     };
-    const handleRulerNumberSelectWidthAndHeightOutsideMount = (rulerNumberWidthAndHeightOutsideMount) => {
-        setSelectedNumber(rulerNumberWidthAndHeightOutsideMount);
-        highlightMatchingFractionOrInch(rulerNumberWidthAndHeightOutsideMount);
-    };
-
 
     const highlightMatchingRulerNumber = (value) => {
         const rulerNumberElements = document.querySelectorAll(`.${styles.ruler_line_number}`);
@@ -436,36 +411,16 @@ function ZebraBlinds() {
 
     const CustomScroll = () => {
         const [selectedNumber, setSelectedNumber] = useState(null);
-        const [scrollLeft, setScrollLeft] = useState(0);
-        const [visibleNumber, setVisibleNumber] = useState(null);
 
         const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
             setSelectedNumber(inchWidthInsideMount);
         };
 
-        const handleScroll = (e) => {
-            setScrollLeft(e.currentTarget.scrollLeft);
-
-            // Calculate the index of the visible number based on scroll position
-            const containerWidth = 100; // Adjust this value based on the width of your container
-            const itemWidth = 26; // Adjust this value based on the width of each item
-            const gapWidth = 26; // Adjust this value based on the gap between items
-            const margin = 0; // Adjust this value based on the margin of each item
-
-            // Calculate the total width of each item including the gap and margin
-            const totalItemWidth = itemWidth + gapWidth + margin;
-
-            // Calculate the offset of the scroll position
-            const scrollOffset = e.currentTarget.scrollLeft % totalItemWidth;
-
-            // Calculate the visible index based on the scroll position
-            const visibleIndex = Math.floor((e.currentTarget.scrollLeft + scrollOffset) / totalItemWidth);
-
-
-
-            // Set the visible number in the state
-            setVisibleNumber(visibleNumber);
+        const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
+            setSelectedNumber(fractionWidthInsideMount);
         };
+
+
 
         return (
             <div className={styles.step_1_wrapper}>
@@ -510,40 +465,66 @@ function ZebraBlinds() {
                     <div className={styles.inches_and_fractions_and_ruler_group}>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
 
-                        <div className={styles.enter_inches_group_wrapper}>
-                            <div className={styles.inches_subtitle}
-                            >
-                                <p>INCHES</p>
 
-                            </div>
+                            <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                <div className={styles.enter_inches_group_wrapper}>
+                                    <div className={styles.inches_subtitle}
+                                    >
+                                        <p>INCHES</p>
+
+                                    </div>
 
 
-                            <div className={styles.inches_scroller_wrapper}>
-                            <div className={styles.inches_scroller_div}>
-                                    <span>
-                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
-                                        <div
-                                            key={index}
-                                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                                            
-                                        >
-                                            {inchWidthInsideMount}
+                                    <div className={styles.inches_scroller_wrapper}>
+                                        <div className={styles.inches_scroller_div}>
+                                            <span>
+                                                {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
+                                                    <div
+                                                        key={index}
+                                                        onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                                                        className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+
+                                                    >
+                                                        {inchWidthInsideMount}
+                                                    </div>
+                                                ))}
+                                            </span>
                                         </div>
-                                    ))}
-                                    </span>
-                                </div>
-                                </div>
+                                    </div>
                                 </div>
 
-                            <div className={styles.red_reader_dragger_wrapper}
-                            >
-                                <div className={styles.red_reader_dragger}>
+                                <div className={styles.red_reader_dragger_wrapper}
+                                >
+                                    <div className={styles.red_reader_dragger}>
+                                    </div>
+
                                 </div>
 
+                                <div className={styles.enter_fractions_group_wrapper}>
+                                    <div className={styles.fractions_subtitle}
+                                    >
+                                        <p>FRACTIONS</p>
+                                    </div>
+                                    <div className={styles.fractions_scroller_wrapper}>
+
+                                        <div className={styles.fractions_scroller_div}>
+                                            <span>
+                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                    <div
+                                                        key={index}
+                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
+                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                    >
+                                                        {fractionWidthInsideMount}
+                                                    </div>
+                                                ))}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                           
+
 
                             ruler start
 
@@ -2404,28 +2385,7 @@ function ZebraBlinds() {
 
 
 
-                            <div className={styles.enter_fractions_group_wrapper}>
-                                <div className={styles.fractions_subtitle}
-                                >
-                                    <p>FRACTIONS</p>
-                                </div>
-                                <div className={styles.fractions_scroller_wrapper}>
 
-                                    <div className={styles.fractions_scroller_div}>
-                                        <span>
-                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
-                                                <div
-                                                    key={index}
-                                                    onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                    className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
-                                                >
-                                                    {fractionWidthInsideMount}
-                                                </div>
-                                            ))}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>

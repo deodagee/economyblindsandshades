@@ -817,16 +817,17 @@ display: content;
   background-color: rgb(193, 193, 193);
   padding: 5px;
   gap: 10px;
+  width: 50px;
   transition: 0.3s;
   border-radius: 0.35rem;
 }
 
 .inches_subtitle:hover { 
-  display: content;
+  display: flex;
 }
 
 .inches_scroller_wrapper { 
-  display: content;
+  display: flex;
 
 }
 
@@ -836,7 +837,7 @@ display: content;
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: max-content;
+  width: 50px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -852,9 +853,10 @@ display: content;
 .inches_scroller_div:hover { 
   transform: scale(0.98);
   transition: 0.4s;
-  height: 300px;
+  height: 260px;
   overflow-y: scroll;
   background-color: white;
+  margin-bottom: 100px;
 }
 
 .inches_and_fractions_and_ruler_group {
@@ -876,6 +878,16 @@ display: content;
   height: max-content;
 }
 
+.enter_inches_group_wrapper_and_enter_fractions_group_wrapper { 
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  gap: 50px;
+  height: 150px;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 0.25rem;
+}
 
 .toggle_disclaimer_inches_inside_mount_width {
   display: flex;
@@ -903,12 +915,12 @@ display: content;
 
 }
 
-.selectedNumber {
-  display: flex;
-}
 
 .selectedInch {
+  background-color: black;
+  font-size: 25px;
   display: flex;
+  color: grey;
 }
 
 .red_reader_dragger_wrapper {
@@ -1163,116 +1175,6 @@ display: content;
   background-color: white;
 }
 
-.enter_width_group_inside_mount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  width: 390px;
-  background-color: rgb(235, 235, 235);
-  padding: 5px;
-  border-radius: 0.25rem;
-}
-
-.width_and_toggle_inside_mount {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-
-
-
-.polygon_3 {
-  display: flex;
-  transform: rotate(180deg);
-  width: 10px;
-  top: 0;
-}
-
-.scroller_partition_width_inside_mount {
-  display: content;
-}
-
-.width_scroll_number_inches_inside_mount {
-  display: contents;
-}
-
-
-/* Target the scrollbar itself in WebKit browsers (like Chrome and Safari) */
-.width_scroll_number_inches_inside_mount::-webkit-scrollbar {
-  display: flex;
-}
-
-/* Target the scrollbar thumb (the draggable part) in WebKit browsers */
-.width_scroll_number_inches_inside_mount::-webkit-scrollbar-thumb {
-  background-color: red;
-  /* Set the background color of the scrollbar thumb */
-  border-radius: 5%;
-  border-top-left-radius: 95%;
-  border-top-right-radius: 95%;
-  width: 5px;
-  height: 10px;
-  /* Add border-radius for a rounded appearance */
-}
-
-/* Target the scrollbar track (the area the thumb moves along) in WebKit browsers */
-.width_scroll_number_inches_inside_mount::-webkit-scrollbar-track {
-  width: 100px;
-  background-color: #3a0404;
-  /* Set the background color of the scrollbar track */
-}
-
-
-
-.display_whole_numbers_wrapper_inside_mount_width {
-  width: 100px;
-}
-
-.displayWholeNumbers_inside_mount_width {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayWholeNumbers_inside_mount_width_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-.ScrollNumberInches_width_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.singleNumber_inside_mount_width:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
-.selectedNumber_inside_mount_width {
-  background-color: rgb(88, 0, 0);
-  color: rgb(212, 212, 212);
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
-}
-
 .enter_fractions_group_wrapper {
   display: flex;
   flex-direction: row;
@@ -1299,6 +1201,7 @@ display: content;
   background-color: rgb(193, 193, 193);
   padding: 5px;
   gap: 10px;
+  width: 50px;
   transition: 0.3s;
   border-radius: 0.35rem;
 }
@@ -1309,7 +1212,7 @@ display: content;
 }
 
 .fractions_scroller_wrapper {
-  display: content;
+  display: flex;
 }
 
 
@@ -1327,7 +1230,7 @@ display: content;
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: max-content;
+  width: 50px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1348,17 +1251,12 @@ display: content;
   background-color: white;
 }
 
-
 .selectedFraction {
-  font-size: 20px;
+  background-color: black;
+  font-size: 25px;
   display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
+  color: grey;
 }
-
 
 .display_fractions_wrapper_inside_mount_width {
   width: 100px;
@@ -1369,7 +1267,6 @@ display: content;
   align-items: center;
   justify-content: flex-start;
 }
-
 
 .displayFractions_inside_mount_width {
   margin-top: 15px;
