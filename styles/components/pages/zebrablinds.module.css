@@ -845,17 +845,29 @@ display: content;
   display: flex;
 }
 
-
 .red_reader_dragger_wrapper {
   display: flex;
-  height: 28px;
-  width: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 100px;
   margin-top: -48px;
+  border-color: red;
+  border-width: 2px;
+  pointer-events: none; /* Make it non-interactive */
+}
+
+.red_reader_dragger {
+  display: flex;
+  height: 35px;
+  width: 50px;
   background-color: rgba(255, 0, 0, 0.192);
   border-color: red;
   border-width: 2px;
   pointer-events: none; /* Make it non-interactive */
 }
+
+
 
 
 
