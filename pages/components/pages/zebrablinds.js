@@ -525,52 +525,115 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_2}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_3}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_2}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
@@ -587,8 +650,6 @@ function ZebraBlinds() {
                                                         ))}
                                                     </div>
                                                 </span>
-
-
 
                                             </div>
                                             <div>
@@ -683,52 +744,115 @@ function ZebraBlinds() {
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_2}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_3}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_2}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}>
-                                                        <div className={styles.ruler_line_number}>
-                                                        </div>
-                                                    </span>
+                                                    <span className={styles.line_1}>                                                    </span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
