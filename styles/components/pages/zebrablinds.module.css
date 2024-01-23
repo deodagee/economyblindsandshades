@@ -791,7 +791,73 @@ display: content;
   margin: 5px;
 }
 
-.inches_and_fractions_and_ruler {
+.enter_inches_group_wrapper { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 173px;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 70px;
+}
+
+.inches_subtitle { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px;
+  white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.inches_subtitle:hover { 
+  display: content;
+}
+
+.inches_scroller_wrapper { 
+  display: content;
+
+}
+
+.inches_scroller_div { 
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 0;
+  z-index: 1;
+  width: max-content;
+  height: 60px;
+  overflow: hidden;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
+  border-color: rgb(107, 107, 107);
+  padding: 5px;
+  transition: 0.4s;
+  background-color: white;
+  font-size: 20px;
+}
+
+.inches_scroller_div:hover { 
+  transform: scale(0.98);
+  transition: 0.4s;
+  height: 300px;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.inches_and_fractions_and_ruler_group {
   display: flex;
 }
 
@@ -846,7 +912,7 @@ display: content;
 }
 
 .red_reader_dragger_wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 35px;
@@ -858,7 +924,7 @@ display: content;
 }
 
 .red_reader_dragger {
-  display: flex;
+  display: none;
   height: 35px;
   width: 50px;
   background-color: rgba(255, 0, 0, 0.192);
@@ -867,16 +933,9 @@ display: content;
   pointer-events: none; /* Make it non-interactive */
 }
 
-
-
-
-
-
 /* ruler start */
 
-.enter_inches_group_wrapper { 
-  display: contents;
-}
+
 
 .enter_size_boat_bottom {
   display: flex;

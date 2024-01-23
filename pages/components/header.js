@@ -48,6 +48,7 @@ function HeaderPiece() {
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
 
+
           <ol className={styles.header_promo_bar}>
             <li>
               <p>
@@ -72,7 +73,7 @@ function HeaderPiece() {
                 </Link>
               </li>
             </div>
-
+            
             <div className={styles.icons_group}>
               <div className={styles.icon_and_text}>
                 <Image

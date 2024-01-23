@@ -461,8 +461,7 @@ function ZebraBlinds() {
             // Calculate the visible index based on the scroll position
             const visibleIndex = Math.floor((e.currentTarget.scrollLeft + scrollOffset) / totalItemWidth);
 
-            // Retrieve the number at the center
-            const visibleNumber = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"][visibleIndex];
+
 
             // Set the visible number in the state
             setVisibleNumber(visibleNumber);
@@ -508,71 +507,43 @@ function ZebraBlinds() {
                     </div>
 
 
-                    <div className={styles.inches_and_fractions_and_ruler}>
+                    <div className={styles.inches_and_fractions_and_ruler_group}>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
-                            <div className={styles.toggle_disclaimer_inches_inside_mount_width}
+
+                        <div className={styles.enter_inches_group_wrapper}>
+                            <div className={styles.inches_subtitle}
                             >
                                 <p>INCHES</p>
 
                             </div>
 
 
-                            <div
-    className={styles._scroll_number_}
-    style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "0.35rem",
-        borderColor: "orange",
-        borderWidth: "2px",
-        overflow: 'auto',  // Enable both horizontal and vertical scrolling
-        width: '100px',
-        height: "60px",
-        scrollbarWidth: 'none',  // Firefox
-        WebkitOverflowScrolling: 'touch',  // Enable smooth scrolling on iOS
-    }}
-    onScroll={handleScroll}
->
-    <div
-        style={{
-            width: '100px',
-            display: 'flex',
-            alignItems: "center",
-            justifyContent: "flex-start",
-            marginLeft: "60%",
-        }}
-    >
-        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
-            <div
-                key={index}
-                onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                style={{
-                    margin: "15px",
-                    width: "30px",
-                    fontSize: "20px",
-                }}
-            >
-                {inchWidthInsideMount}
-            </div>
-        ))}
-    </div>
-</div>
-
+                            <div className={styles.inches_scroller_wrapper}>
+                            <div className={styles.inches_scroller_div}>
+                                    <span>
+                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
+                                        <div
+                                            key={index}
+                                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                            
+                                        >
+                                            {inchWidthInsideMount}
+                                        </div>
+                                    ))}
+                                    </span>
+                                </div>
+                                </div>
+                                </div>
 
                             <div className={styles.red_reader_dragger_wrapper}
-                      
                             >
+                                <div className={styles.red_reader_dragger}>
+                                </div>
 
-                            <div className={styles.red_reader_dragger}>
                             </div>
 
-                            </div>
-
-                            <div className={styles.red_reader_dragger_number}>
-                            {visibleNumber}
-                            </div>
+                           
 
                             ruler start
 
