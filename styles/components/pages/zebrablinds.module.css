@@ -792,19 +792,6 @@ display: content;
   margin: 5px;
 }
 
-.enter_inches_group_wrapper { 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 173px;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-  height: 70px;
-}
 
 .inches_subtitle { 
   display: flex;
@@ -885,7 +872,7 @@ display: content;
   justify-content: center;
   width: 550px;
   border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
+  border-color: rgb(128, 33, 33);
   border-width: 1px;
   padding: 2px;
   height: 200px;
@@ -895,12 +882,27 @@ display: content;
   display: flex;
   flex-direction: row;
   width: 500px;
+  height: 150px;
 align-items: center;
 justify-content: center;
   gap: 30px;
   border-color: black;
   border-width: 2px;
   border-radius: 0.25rem;
+}
+
+.enter_inches_group_wrapper  { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 173px;
+  border-radius: 0.56rem;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+  padding: 2px;
+  height: 70px;
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -965,7 +967,13 @@ justify-content: center;
 
 /* ruler start */
 
+.ruler_div { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
+}
 
 .enter_size_boat_bottom {
   display: flex;
@@ -1142,7 +1150,7 @@ justify-content: center;
   justify-content: center;
   width: 550px;
   border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
+  border-color: rgb(128, 33, 33);
   border-width: 1px;
   padding: 2px;
   height: 200px;

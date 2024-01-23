@@ -528,7 +528,7 @@ function ZebraBlinds() {
 
                             ruler start
 
-                            <div className={styles.enter_inches_group_wrapper}>
+                            <div className={styles.ruler_div}>
 
                                 < span className={styles.enter_size_boat_bottom} >
                                     <div className={styles.ruler_for_boat_wrapper}>
