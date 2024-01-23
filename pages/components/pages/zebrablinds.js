@@ -485,7 +485,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.fractions_scroller_div}>
                                             <span >
-                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8",].map((fractionWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
                                                         onClick={() => handleScrolledFractionsWhenClicked(fractionWidthInsideMount)}
@@ -703,7 +703,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.fractions_scroller_div}>
                                             <span >
-                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8",].map((fractionWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
                                                         onClick={() => handleScrolledFractionsWhenClicked(fractionWidthInsideMount)}
