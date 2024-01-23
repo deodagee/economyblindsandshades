@@ -357,24 +357,12 @@ function ZebraBlinds() {
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
-    const [selectedNumber, setSelectedNumber] = useState(null);
-
-
+    const [selectedRulerNumberInch, setselectedRulerNumberInch] = useState(null);
+    const [selectedRulerNumberFraction, setselectedRulerNumberFraction] = useState(null);
 
     const handleRulerNumberSelectWidthAndHeightInsideMount = (rulerNumberWidthAndHeightInsideMount) => {
-        setSelectedNumber(rulerNumberWidthAndHeightInsideMount);
+        setselectedRulerNumberInch(rulerNumberWidthAndHeightInsideMount);
         highlightMatchingFractionOrInch(rulerNumberWidthAndHeightInsideMount);
-    };
-
-    const highlightMatchingRulerNumber = (value) => {
-        const rulerNumberElements = document.querySelectorAll(`.${styles.ruler_line_number}`);
-        rulerNumberElements.forEach((element) => {
-            if (element.textContent === value) {
-                element.classList.add(styles.selectedRuler);
-            } else {
-                element.classList.remove(styles.selectedRuler);
-            }
-        });
     };
 
     const highlightMatchingFractionOrInch = (value) => {
@@ -410,15 +398,17 @@ function ZebraBlinds() {
 
 
     const CustomScroll = () => {
-        const [selectedNumber, setSelectedNumber] = useState(null);
+        const [selectedInch, setselectedInch] = useState(null);
+        const [selectedFraction, setselectedFraction] = useState(null);
 
-        const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
-            setSelectedNumber(inchWidthInsideMount);
+        const handleScrolledInchesWhenClicked = (inchWidthInsideMount) => {
+            setselectedInch(inchWidthInsideMount);
         };
 
-        const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
-            setSelectedNumber(fractionWidthInsideMount);
+        const handleScrolledFractionsWhenClicked = (fractionWidthInsideMount) => {
+            setselectedFraction(fractionWidthInsideMount);
         };
+
 
 
 
@@ -454,12 +444,12 @@ function ZebraBlinds() {
 
                 <div className={styles.bottom_portion_ruler_and_stuff}>
 
-                    
+
 
                     <div className={styles.inches_and_fractions_and_ruler_group}>
-                    <div className={styles.width_inside_mount_sub_title}>
-                        CHOOSE WIDTH:
-                    </div>
+                        <div className={styles.width_inside_mount_sub_title}>
+                            CHOOSE WIDTH:
+                        </div>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                             <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
@@ -475,8 +465,8 @@ function ZebraBlinds() {
                                                 {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
-                                                        onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                                        className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                                        onClick={() => handleScrolledInchesWhenClicked(inchWidthInsideMount)}
+                                                        className={selectedInch === inchWidthInsideMount ? styles.selectedInch : ''}
                                                     >
                                                         {inchWidthInsideMount}
                                                     </div>
@@ -498,8 +488,8 @@ function ZebraBlinds() {
                                                 {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
-                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                        onClick={() => handleScrolledFractionsWhenClicked(fractionWidthInsideMount)}
+                                                        className={selectedFraction === fractionWidthInsideMount ? styles.selectedFraction : ''}
                                                     >
                                                         {fractionWidthInsideMount}
                                                     </div>
@@ -509,6 +499,8 @@ function ZebraBlinds() {
                                     </div>
                                 </div>
                             </div>
+
+
                             <div className={styles.ruler_div}>
 
                                 < span className={styles.enter_size_boat_bottom} >
@@ -519,52 +511,85 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-
                                                     <div className={styles.ruler_line_number}>
-                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
                                                         ))}
                                                     </div>
-
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}></span>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}></span>
+                                                    <span className={styles.line_2}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}></span>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}></span>
+                                                    <span className={styles.line_3}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
                                                     <div className={styles.ruler_line_number}>
-
-
-                                                        <span className={styles.wholeNumber}>
-                                                            {["8"].map((rulerNumber, index) => (
-                                                                <div
-                                                                    key={index}
-                                                                    onClick={() => handleRulerNumberSelect(rulerNumber)}
-                                                                    className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
-                                                                >
-                                                                    {rulerNumber}
-                                                                </div>
-                                                            ))}
-                                                        </span>
-
+                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </span>
+
+
+
                                             </div>
                                             <div>
                                             </div>
@@ -579,9 +604,9 @@ function ZebraBlinds() {
 
 
                     <div className={styles.inches_and_fractions_and_ruler_group}>
-                    <div className={styles.width_inside_mount_sub_title}>
-                        CHOOSE HEIGHT:
-                    </div>
+                        <div className={styles.width_inside_mount_sub_title}>
+                            CHOOSE HEIGHT:
+                        </div>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                             <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
@@ -597,8 +622,8 @@ function ZebraBlinds() {
                                                 {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
-                                                        onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                                        className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                                        onClick={() => handleScrolledInchesWhenClicked(inchWidthInsideMount)}
+                                                        className={selectedInch === inchWidthInsideMount ? styles.selectedInch : ''}
                                                     >
                                                         {inchWidthInsideMount}
                                                     </div>
@@ -620,8 +645,8 @@ function ZebraBlinds() {
                                                 {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
                                                     <div
                                                         key={index}
-                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                        onClick={() => handleScrolledFractionsWhenClicked(fractionWidthInsideMount)}
+                                                        className={selectedFraction === fractionWidthInsideMount ? styles.selectedFraction : ''}
                                                     >
                                                         {fractionWidthInsideMount}
                                                     </div>
@@ -631,6 +656,9 @@ function ZebraBlinds() {
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div className={styles.ruler_div}>
 
                                 < span className={styles.enter_size_boat_bottom} >
@@ -641,52 +669,83 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
-
                                                     <div className={styles.ruler_line_number}>
-                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
                                                         ))}
                                                     </div>
-
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}></span>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_2}></span>
+                                                    <span className={styles.line_2}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_1}></span>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
-                                                    <span className={styles.line_3}></span>
+                                                    <span className={styles.line_3}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}>
+                                                        <div className={styles.ruler_line_number}>
+                                                        </div>
+                                                    </span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
                                                     <div className={styles.ruler_line_number}>
-
-
-                                                        <span className={styles.wholeNumber}>
-                                                            {["8"].map((rulerNumber, index) => (
-                                                                <div
-                                                                    key={index}
-                                                                    onClick={() => handleRulerNumberSelect(rulerNumber)}
-                                                                    className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
-                                                                >
-                                                                    {rulerNumber}
-                                                                </div>
-                                                            ))}
-                                                        </span>
-
+                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedInch === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </span>
+
                                             </div>
                                             <div>
                                             </div>
