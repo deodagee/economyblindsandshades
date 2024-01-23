@@ -248,10 +248,7 @@ function ZebraBlinds() {
                         key={item.label}
                         className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
                         onClick={() => handleSelectMaterial(item.key, item.src, item.label)} // Pass key, src, and label
-                        style={{
-                            border: selectedMaterial && selectedMaterial.src === item.src ? '2px solid black' : '2px solid transparent',
-                            padding: selectedMaterial && selectedMaterial.src === item.src ? '5px' : '0', // Add padding if selected
-                        }}
+                       
                     >
                         <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
                         <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
@@ -1182,27 +1179,27 @@ function ZebraBlinds() {
                                             <div className={styles.selectedImageContainer}>
                                                 {selectedMaterial ? (
                                                     <>
-                                                        <div className={styles.imageContainer2_wrapper}>
-                                                            <div className={`${styles.imageContainer2} ${styles.selectedImage2}`}>
+                                                        <div className={styles.left_imageContainer_wrapper}>
+                                                            <div className={`${styles.left_imageContainer} ${styles.left_imageContainer_styled}`}>
                                                                 <Image
-                                                                    className={styles.image_itself1}
+                                                                    className={styles.left_imageContainer_image_itself1}
                                                                     src={selectedMaterial.src}
                                                                     alt='image'
-                                                                    width={200}
-                                                                    height={200}
+                                                                    width={100}
+                                                                    height={100}
                                                                 />
                                                             </div>
-                                                            <h3 className={styles.images_and_subtitles_color_name}>{selectedMaterial.label}</h3>
+                                                            <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
                                                         </div>
                                                     </>
                                                 ) : (
 
-                                                    <div className={styles.image_and_scroller_wrapper}>
-                                                        <div className={`${styles.imageContainer2} ${styles.selectedImage3}`}>
+                                                    <div className={styles.left_first_image_render_container_wrapper}>
+                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
                                                             <Image
                                                                 width={200}
                                                                 height={200}
-                                                                className={styles.image_itself2}
+                                                                className={styles.left_first_image_render}
                                                                 src={FirstImageRender[0].src}
                                                                 alt={FirstImageRender[0].label}
 
