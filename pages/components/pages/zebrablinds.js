@@ -410,22 +410,18 @@ function ZebraBlinds() {
 
 
     const CustomScroll = () => {
-        
         const [selectedNumber, setSelectedNumber] = useState(null);
-        const [isHovered, setIsHovered] = useState(false);
-        const [isFractionScrollerOpen, setIsFractionScrollerOpen] = useState(true);
-      
-        const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
-          setSelectedNumber(fractionWidthInsideMount);
-          setIsHovered(false);
-          setIsFractionScrollerOpen(false);
-        };
-      
+
         const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
-          setSelectedNumber(inchWidthInsideMount);
-          setIsFractionScrollerOpen(true);
+            setSelectedNumber(inchWidthInsideMount);
         };
-      
+
+        const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
+            setSelectedNumber(fractionWidthInsideMount);
+        };
+
+
+
         return (
             <div className={styles.step_1_wrapper}>
 
@@ -454,30 +450,24 @@ function ZebraBlinds() {
                     </div>
                 </div>
 
-
                 <div className={styles.choose_height_image_placeholder}></div>
-
 
                 <div className={styles.bottom_portion_ruler_and_stuff}>
 
+                    
 
+                    <div className={styles.inches_and_fractions_and_ruler_group}>
                     <div className={styles.width_inside_mount_sub_title}>
                         CHOOSE WIDTH:
                     </div>
-
-
-                    <div className={styles.inches_and_fractions_and_ruler_group}>
                         <div className={styles.enter_width_inside_mount_rectangle_1}>
-
 
                             <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
                                 <div className={styles.enter_inches_group_wrapper}>
                                     <div className={styles.inches_subtitle}
                                     >
                                         <p>INCHES</p>
-
                                     </div>
-
 
                                     <div className={styles.inches_scroller_wrapper}>
                                         <div className={styles.inches_scroller_div}>
@@ -487,7 +477,6 @@ function ZebraBlinds() {
                                                         key={index}
                                                         onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
                                                         className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-
                                                     >
                                                         {inchWidthInsideMount}
                                                     </div>
@@ -497,46 +486,29 @@ function ZebraBlinds() {
                                     </div>
                                 </div>
 
-                                <div className={styles.red_reader_dragger_wrapper}
-                                >
-                                    <div className={styles.red_reader_dragger}>
-                                    </div>
-
-                                </div>
-
                                 <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}>
+                                    <div className={styles.fractions_subtitle}
+                                    >
                                         <p>FRACTIONS</p>
                                     </div>
-                                    <div
-                                        className={`${styles.fractions_scroller_div} ${isHovered ? styles.fractions_scroller_div_hovered : ''}`}
-                                        style={{
-                                            height: isFractionScrollerOpen ? '60px' : '260px',
-                                            overflowY: isFractionScrollerOpen ? 'scroll' : 'hidden',
-                                            
-                                        }}
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}
-                                    >
-                                        <span>
-                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
-                                                <div
-                                                    key={index}
-                                                    onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                    className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
-                                                >
-                                                    {fractionWidthInsideMount}
-                                                </div>
-                                            ))}
-                                        </span>
+                                    <div className={styles.fractions_scroller_wrapper}>
+
+                                        <div className={styles.fractions_scroller_div}>
+                                            <span >
+                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                    <div
+                                                        key={index}
+                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
+                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                    >
+                                                        {fractionWidthInsideMount}
+                                                    </div>
+                                                ))}
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-                            ruler start
-
                             <div className={styles.ruler_div}>
 
                                 < span className={styles.enter_size_boat_bottom} >
@@ -601,11 +573,134 @@ function ZebraBlinds() {
                                 </span>
                             </div>
 
-                            ruler end
+                        </div>
+                    </div>
+
+
+
+                    <div className={styles.inches_and_fractions_and_ruler_group}>
+                    <div className={styles.width_inside_mount_sub_title}>
+                        CHOOSE HEIGHT:
+                    </div>
+                        <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                            <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                <div className={styles.enter_inches_group_wrapper}>
+                                    <div className={styles.inches_subtitle}
+                                    >
+                                        <p>INCHES</p>
+                                    </div>
+
+                                    <div className={styles.inches_scroller_wrapper}>
+                                        <div className={styles.inches_scroller_div}>
+                                            <span>
+                                                {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchWidthInsideMount, index) => (
+                                                    <div
+                                                        key={index}
+                                                        onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                                                        className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                                    >
+                                                        {inchWidthInsideMount}
+                                                    </div>
+                                                ))}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.enter_fractions_group_wrapper}>
+                                    <div className={styles.fractions_subtitle}
+                                    >
+                                        <p>FRACTIONS</p>
+                                    </div>
+                                    <div className={styles.fractions_scroller_wrapper}>
+
+                                        <div className={styles.fractions_scroller_div}>
+                                            <span >
+                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                    <div
+                                                        key={index}
+                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
+                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                    >
+                                                        {fractionWidthInsideMount}
+                                                    </div>
+                                                ))}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={styles.ruler_div}>
+
+                                < span className={styles.enter_size_boat_bottom} >
+                                    <div className={styles.ruler_for_boat_wrapper}>
+
+                                        <div className={styles.ruler_for_boat}>
+                                            <div className={styles.ruler_numbers_and_label}>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_3}></span>
+                                                    <div className={styles.ruler_line_number}>
+
+
+                                                        <span className={styles.wholeNumber}>
+                                                            {["8"].map((rulerNumber, index) => (
+                                                                <div
+                                                                    key={index}
+                                                                    onClick={() => handleRulerNumberSelect(rulerNumber)}
+                                                                    className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
+                                                                >
+                                                                    {rulerNumber}
+                                                                </div>
+                                                            ))}
+                                                        </span>
+
+                                                    </div>
+                                                </span>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
 
                         </div>
                     </div>
+
+
                 </div>
+
             </div>
         );
     };

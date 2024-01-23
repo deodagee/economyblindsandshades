@@ -658,7 +658,7 @@ display: content;
   align-items: center;
   justify-content: center;
   background-color: rgb(247, 247, 247);
-  width: 800px;
+  width: 900px;
   height: max-content;
 }
 
@@ -765,15 +765,15 @@ display: content;
 
 .bottom_portion_ruler_and_stuff { 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   border-color: grey;
   border-width: 2px;
   border-radius: 0.45rem;
-  width: 600px;
+  width: 870px;
   height: 350px;
-  margin-bottom: 10px;
+  gap: 20px;
 }
 
 
@@ -825,7 +825,7 @@ display: content;
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 70px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -862,6 +862,7 @@ display: content;
 
 .inches_and_fractions_and_ruler_group {
   display: flex;
+  flex-direction: column;
 }
 
 
@@ -870,25 +871,25 @@ display: content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 550px;
+  width: 420px;
+  gap: 10px;
   border-radius: 0.56rem;
   border-color: rgb(128, 33, 33);
   border-width: 1px;
-  padding: 2px;
-  height: 200px;
+  padding: 10px;
 }
 
 .enter_inches_group_wrapper_and_enter_fractions_group_wrapper { 
   display: flex;
   flex-direction: row;
-  width: 500px;
-  height: 150px;
+  width: 400px;
 align-items: center;
 justify-content: center;
   gap: 30px;
   border-color: black;
   border-width: 2px;
   border-radius: 0.25rem;
+  padding: 10px;
 }
 
 .enter_inches_group_wrapper  { 
@@ -930,10 +931,7 @@ justify-content: center;
   display: flex;
 }
 
-
-
 /* Add hover effect for all div elements inside fractions_scroller_div */
-
 
 .selectedInch {
   background-color: black;
@@ -942,28 +940,6 @@ justify-content: center;
   color: grey;
 }
 
-
-.red_reader_dragger_wrapper {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 35px;
-  width: 100px;
-  margin-top: -48px;
-  border-color: red;
-  border-width: 2px;
-  pointer-events: none; /* Make it non-interactive */
-}
-
-.red_reader_dragger {
-  display: none;
-  height: 35px;
-  width: 50px;
-  background-color: rgba(255, 0, 0, 0.192);
-  border-color: red;
-  border-width: 2px;
-  pointer-events: none; /* Make it non-interactive */
-}
 
 /* ruler start */
 
@@ -1122,80 +1098,6 @@ justify-content: center;
   background-color: grey;
 }
 
-
-
-.height_inside_mount_sub_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  font-size: 15px;
-  color: rgb(45, 45, 45);
-  font-weight: 700;
-  width: max-content;
-  border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
-  padding: 2px;
-}
-
-.enter_height_inside_mount_rectangle_1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 550px;
-  border-radius: 0.56rem;
-  border-color: rgb(128, 33, 33);
-  border-width: 1px;
-  padding: 2px;
-  height: 200px;
-}
-
-.toggle_disclaimer_inches_inside_mount_height {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(193, 193, 193);
-  padding: 5px;
-  gap: 10px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.height_scroll_number_fractions_inside_mount {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  z-index: 1;
-  width: max-content;
-  height: 60px;
-  overflow: hidden;
-  border-width: 2px;
-  border-radius: 0.45rem;
-  box-shadow: rgb(133, 133, 133) 6px 5px 15px;
-  border-color: rgb(107, 107, 107);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-  transition: 0.7s;
-}
-
-.height_scroll_number_fractions_inside_mount:hover {
-  transform: scale(0.98);
-  transition: 0.7s;
-  height: max-content;
-  overflow-y: scroll;
-  background-color: white;
-}
-
 .enter_fractions_group_wrapper {
   display: flex;
   flex-direction: row;
@@ -1244,7 +1146,6 @@ justify-content: center;
   top: 0;
 }
 
-/* Add these styles to your existing CSS file */
 
 .fractions_scroller_div {
   display: flex;
@@ -1252,7 +1153,7 @@ justify-content: center;
   justify-content: center;
   margin-top: 0;
   z-index: 1;
-  width: 50px;
+  width: 70px;
   height: 60px;
   overflow: hidden;
   border-width: 2px;
@@ -1266,20 +1167,20 @@ justify-content: center;
 }
 
 .fractions_scroller_div:hover {
+  transform: scale(0.98);
   transition: 0.4s;
   height: 260px;
-}
-
-.fractions_scroller_div_hovered {
   overflow-y: scroll;
+  background-color: white;
 }
 
-.fractions_scroller_div div {
+.fractions_scroller_div div { 
   margin: 5px;
   height: 30px;
   align-items: center;
   justify-content: center;
 }
+
 
 .fractions_scroller_div div:hover {
   background-color: rgb(225, 225, 225);
@@ -1292,7 +1193,6 @@ justify-content: center;
   display: flex;
   color: grey;
 }
-
 
 .display_fractions_wrapper_inside_mount_width {
   width: 100px;
