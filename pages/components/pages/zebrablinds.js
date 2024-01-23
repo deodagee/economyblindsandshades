@@ -410,18 +410,22 @@ function ZebraBlinds() {
 
 
     const CustomScroll = () => {
+        
         const [selectedNumber, setSelectedNumber] = useState(null);
-
-        const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
-            setSelectedNumber(inchWidthInsideMount);
-        };
-
+        const [isHovered, setIsHovered] = useState(false);
+        const [isFractionScrollerOpen, setIsFractionScrollerOpen] = useState(true);
+      
         const handleFractionSelectWidthInsideMount = (fractionWidthInsideMount) => {
-            setSelectedNumber(fractionWidthInsideMount);
+          setSelectedNumber(fractionWidthInsideMount);
+          setIsHovered(false);
+          setIsFractionScrollerOpen(false);
         };
-
-
-
+      
+        const handleInchSelectWidthInsideMount = (inchWidthInsideMount) => {
+          setSelectedNumber(inchWidthInsideMount);
+          setIsFractionScrollerOpen(true);
+        };
+      
         return (
             <div className={styles.step_1_wrapper}>
 
@@ -501,25 +505,30 @@ function ZebraBlinds() {
                                 </div>
 
                                 <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}
-                                    >
+                                    <div className={styles.fractions_subtitle}>
                                         <p>FRACTIONS</p>
                                     </div>
-                                    <div className={styles.fractions_scroller_wrapper}>
-
-                                        <div className={styles.fractions_scroller_div}>
-                                            <span >
-                                                {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
-                                                    <div
-                                                        key={index}
-                                                        onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                        className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
-                                                    >
-                                                        {fractionWidthInsideMount}
-                                                    </div>
-                                                ))}
-                                            </span>
-                                        </div>
+                                    <div
+                                        className={`${styles.fractions_scroller_div} ${isHovered ? styles.fractions_scroller_div_hovered : ''}`}
+                                        style={{
+                                            height: isFractionScrollerOpen ? '60px' : '260px',
+                                            overflowY: isFractionScrollerOpen ? 'scroll' : 'hidden',
+                                            
+                                        }}
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                    >
+                                        <span>
+                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                <div
+                                                    key={index}
+                                                    onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
+                                                    className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                >
+                                                    {fractionWidthInsideMount}
+                                                </div>
+                                            ))}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -540,7 +549,7 @@ function ZebraBlinds() {
                                                     <span className={styles.line_0}></span>
 
                                                     <div className={styles.ruler_line_number}>
-                                                        {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}

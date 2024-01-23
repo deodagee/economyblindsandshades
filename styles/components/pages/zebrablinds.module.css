@@ -1244,6 +1244,7 @@ justify-content: center;
   top: 0;
 }
 
+/* Add these styles to your existing CSS file */
 
 .fractions_scroller_div {
   display: flex;
@@ -1265,20 +1266,20 @@ justify-content: center;
 }
 
 .fractions_scroller_div:hover {
-  transform: scale(0.98);
   transition: 0.4s;
   height: 260px;
-  overflow-y: scroll;
-  background-color: white;
 }
 
-.fractions_scroller_div div { 
+.fractions_scroller_div_hovered {
+  overflow-y: scroll;
+}
+
+.fractions_scroller_div div {
   margin: 5px;
   height: 30px;
   align-items: center;
   justify-content: center;
 }
-
 
 .fractions_scroller_div div:hover {
   background-color: rgb(225, 225, 225);
@@ -1291,6 +1292,7 @@ justify-content: center;
   display: flex;
   color: grey;
 }
+
 
 .display_fractions_wrapper_inside_mount_width {
   width: 100px;
