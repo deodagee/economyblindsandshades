@@ -68,7 +68,6 @@
   margin-top: 0;
   margin-left: 550px;
   display: flex;
-  position: static;
   flex-direction: column;
   padding: 20px;
   border-width: 2px;
@@ -340,13 +339,16 @@ display: content;
   align-items: center;
   justify-content: center;
   width: 850px;
+  height: 200px;
 }
 
 .first_chosen_inside_mount_selection {
   display: flex;
-  width: 100px;
-  height: auto;
+  width: 350px;
+  height: 200px;
   background-color: black;
+  margin: 20px;
+  border-radius: 0.15rem;
 }
 
 .left_right_inside_mount { 
@@ -359,7 +361,7 @@ display: content;
 
 .left_inside_mount {
   display: flex;
-  height: 500px;
+  height: 450px;
   margin-top: 30px;
 }
 
@@ -463,7 +465,7 @@ display: content;
 
 .right_inside_mount {
   display: flex;
-  height: 500px;
+  height: 450px;
   width: max-content;
   margin-top: 30px;
 }
@@ -513,6 +515,7 @@ display: content;
   align-items: center;
   justify-content: center;
   width: 850px;
+  height: 200px;
 }
 
 .first_chosen_outside_mount_selection {
@@ -534,7 +537,7 @@ display: content;
 
 .left_outside_mount {
   display: flex;
-  height: 500px;
+  height: 450px;
   margin-top: 30px;
 }
 
@@ -594,7 +597,7 @@ display: content;
 
 .right_outside_mount {
   display: flex;
-  height: 500px;
+  height: 450px;
   width: max-content;
   margin-top: 30px;
 }
@@ -655,8 +658,9 @@ display: content;
   align-items: center;
   justify-content: center;
   background-color: green;
-  height: 500px;
+  height: max-content;
   width: 800px;
+  height: max-content;
 
 }
 
@@ -668,7 +672,6 @@ display: content;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  height: 200px;
 }
 
 .qty_group_part1 {
@@ -762,6 +765,17 @@ display: content;
   margin: 10px;
 }
 
+.bottom_portion_ruler_and_stuff { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: yellow;
+  border-width: 2px;
+  border-radius: 0.45rem;
+  width: 600px;
+  height: 500px;
+}
+
 
 .width_inside_mount_sub_title {
   display: flex;
@@ -780,8 +794,6 @@ display: content;
 
 .inches_and_fractions_and_ruler {
   display: flex;
-  height: max-content;
-  width: max-content;
 }
 
 
@@ -1037,7 +1049,6 @@ display: content;
 }
 
 .height_scroll_number_fractions_inside_mount {
-  position: static;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -1190,7 +1201,6 @@ display: content;
 
 .fractions_subtitle {
   display: flex;
-  position: static;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -1224,7 +1234,6 @@ display: content;
 
 
 .fractions_scroller_div {
-  position: static;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -1648,7 +1657,6 @@ display: content;
 .whole_thing {
   display: flex;
   width: 100vw;
-  position: static;
 }
 
 .materials_page {

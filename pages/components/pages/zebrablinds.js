@@ -500,1986 +500,1989 @@ function ZebraBlinds() {
                 <div className={styles.choose_height_image_placeholder}></div>
 
 
-
-                <div className={styles.width_inside_mount_sub_title}>
-                    CHOOSE WIDTH:
-                </div>
-
-                <div className={styles.inches_and_fractions_and_ruler}>
-                    <div className={styles.enter_width_inside_mount_rectangle_1}>
-                        <div className={styles.toggle_disclaimer_inches_inside_mount_width}
-                        >
-                            <p>INCHES</p>
-
-                        </div>
+                <div className={styles.bottom_portion_ruler_and_stuff}>
 
 
-                        <div
-                            className={styles._scroll_number_}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                borderRadius: "0.35rem",
-                                borderColor: "orange",
-                                borderWidth: "2px",
-                                overflowX: 'hidden',
-                                overflowX: 'scroll',
-                                overflowY: 'hidden',
-                                width: '100px',
-                                height: "50px",
-                                position: "absolute",
-                            }}
-                            onScroll={handleScroll}
-                        >
+                    <div className={styles.width_inside_mount_sub_title}>
+                        CHOOSE WIDTH:
+                    </div>
+                    
+
+                    <div className={styles.inches_and_fractions_and_ruler}>
+                        <div className={styles.enter_width_inside_mount_rectangle_1}>
+                            <div className={styles.toggle_disclaimer_inches_inside_mount_width}
+                            >
+                                <p>INCHES</p>
+
+                            </div>
+
+
                             <div
+                                className={styles._scroll_number_}
                                 style={{
-                                    width: '100px',
-                                    display: 'flex',
+                                    display: "flex",
                                     alignItems: "center",
-                                    justifyContent: "flex-start",
-                                    position: "absolute",
-                                    marginLeft: "60%",
-
-                                }}
-                            >
-                                {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
-                                    <div
-                                        key={index}
-                                        onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
-                                        className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
-                                        style={{
-                                            margin: "15px",
-                                            width: "30px",
-                                            fontSize: "20px",
-
-                                        }}
-                                    >
-                                        {inchWidthInsideMount}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                width: "100px",
-                                height: "50px",
-                            }}
-                        >
-                            <div
-                                className={styles.red_reader_dragger}
-                                style={{
-                                    backgroundColor: "red",
-                                    marginLeft: '10px',
-                                    marginRight: '10px',
-                                    width: "30px",
-                                    borderColor: "grey",
-                                    borderWidth: "1px",
+                                    justifyContent: "center",
+                                    borderRadius: "0.35rem",
+                                    borderColor: "orange",
+                                    borderWidth: "2px",
+                                    overflowX: 'hidden',
+                                    overflowX: 'scroll',
+                                    overflowY: 'hidden',
+                                    width: '100px',
                                     height: "50px",
-                                    display: 'flex',
+                                    position: "absolute",
                                 }}
+                                onScroll={handleScroll}
                             >
-                                {/* Display the visible number beneath the red_reader_dragger */}
+                                <div
+                                    style={{
+                                        width: '100px',
+                                        display: 'flex',
+                                        alignItems: "center",
+                                        justifyContent: "flex-start",
+                                        position: "absolute",
+                                        marginLeft: "60%",
+
+                                    }}
+                                >
+                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "x", "x", "x"].map((inchWidthInsideMount, index) => (
+                                        <div
+                                            key={index}
+                                            onClick={() => handleInchSelectWidthInsideMount(inchWidthInsideMount)}
+                                            className={selectedNumber === inchWidthInsideMount ? styles.selectedInch : ''}
+                                            style={{
+                                                margin: "15px",
+                                                width: "30px",
+                                                fontSize: "20px",
+
+                                            }}
+                                        >
+                                            {inchWidthInsideMount}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
 
-                        </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    width: "100px",
+                                    height: "50px",
+                                }}
+                            >
+                                <div
+                                    className={styles.red_reader_dragger}
+                                    style={{
+                                        backgroundColor: "red",
+                                        marginLeft: '10px',
+                                        marginRight: '10px',
+                                        width: "30px",
+                                        borderColor: "grey",
+                                        borderWidth: "1px",
+                                        height: "50px",
+                                        display: 'flex',
+                                    }}
+                                >
+                                    {/* Display the visible number beneath the red_reader_dragger */}
+                                </div>
 
-                        <div
-                            style={{
-                                position: "absolute",
-                            }}
+                            </div>
 
-                        >{visibleNumber}
-                        </div>
-                        ruler start
+                            <div
+                                style={{
+                                    position: "absolute",
+                                }}
 
-                        <div className={styles.enter_inches_group_wrapper}>
+                            >{visibleNumber}
+                            </div>
+                            ruler start
 
-                            < span className={styles.enter_size_boat_bottom} >
-                                <div className={styles.ruler_for_boat_wrapper}>
+                            <div className={styles.enter_inches_group_wrapper}>
 
-                                    <div className={styles.ruler_for_boat}>
-                                        <div className={styles.ruler_numbers_and_label}>
+                                < span className={styles.enter_size_boat_bottom} >
+                                    <div className={styles.ruler_for_boat_wrapper}>
 
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
+                                        <div className={styles.ruler_for_boat}>
+                                            <div className={styles.ruler_numbers_and_label}>
 
-                                                <div className={styles.ruler_line_number}>
-                                                    {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
 
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_3}></span>
-                                                <div className={styles.ruler_line_number}>
-
-
-                                                    <span className={styles.wholeNumber}>
-                                                        {["8"].map((rulerNumber, index) => (
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
-                                                                onClick={() => handleRulerNumberSelect(rulerNumber)}
-                                                                className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
                                                             >
-                                                                {rulerNumber}
+                                                                {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
                                                         ))}
-                                                    </span>
-
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_4}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_3}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["9"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["10"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>
-                                                    {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                        <div
-                                                            key={index}
-                                                            onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
-                                                            className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
-                                                        >
-                                                            {rulerNumberWidthAndHeightInsideMount}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>11</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>12</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>13</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>14</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>15</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>16</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>17</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>18</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>19</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>20</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>21</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>22</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>23</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>24</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>25</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>26</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>27</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>28</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>29</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>30</div>
-                                            </span>
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>1/2</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>3/4</div>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_2}></span>
-                                                <div className={styles.ruler_line_number}>7/8</div>
-
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_1}></span>
-                                            </span>
-
-                                            <span className={styles.ruler_line_group}>
-                                                <span className={styles.line_0}></span>
-                                                <div className={styles.ruler_line_number}>31</div>
-                                            </span>
-
-                                        </div>
-                                        <div>
+                                                    </div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_3}></span>
+                                                    <div className={styles.ruler_line_number}>
+
+
+                                                        <span className={styles.wholeNumber}>
+                                                            {["8"].map((rulerNumber, index) => (
+                                                                <div
+                                                                    key={index}
+                                                                    onClick={() => handleRulerNumberSelect(rulerNumber)}
+                                                                    className={selectedNumber === rulerNumber ? styles.selectedRuler : ''}
+                                                                >
+                                                                    {rulerNumber}
+                                                                </div>
+                                                            ))}
+                                                        </span>
+
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_4}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_3}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["9"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["10"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                            <div
+                                                                key={index}
+                                                                onClick={() => handleRulerNumberSelectWidthAndHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                                className={selectedNumber === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                            >
+                                                                {rulerNumberWidthAndHeightInsideMount}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>11</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>12</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>13</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>14</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>15</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>16</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>17</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>18</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>19</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>20</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>21</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>22</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>23</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>24</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>25</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>26</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>27</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>28</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>29</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>30</div>
+                                                </span>
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>1/2</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>3/4</div>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_2}></span>
+                                                    <div className={styles.ruler_line_number}>7/8</div>
+
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_1}></span>
+                                                </span>
+
+                                                <span className={styles.ruler_line_group}>
+                                                    <span className={styles.line_0}></span>
+                                                    <div className={styles.ruler_line_number}>31</div>
+                                                </span>
+
+                                            </div>
+                                            <div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </span>
-                        </div>
-
-                        ruler end
-
-
-
-                        <div className={styles.enter_fractions_group_wrapper}>
-                            <div className={styles.fractions_subtitle}
-                            >
-                                <p>FRACTIONS</p>
+                                </span>
                             </div>
-                            <div className={styles.fractions_scroller_wrapper}>
 
-                                <div className={styles.fractions_scroller_div}>
-                                    <span>
-                                        {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
-                                            <div
-                                                key={index}
-                                                onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
-                                                className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
-                                            >
-                                                {fractionWidthInsideMount}
-                                            </div>
-                                        ))}
-                                    </span>
+                            ruler end
+
+
+
+                            <div className={styles.enter_fractions_group_wrapper}>
+                                <div className={styles.fractions_subtitle}
+                                >
+                                    <p>FRACTIONS</p>
+                                </div>
+                                <div className={styles.fractions_scroller_wrapper}>
+
+                                    <div className={styles.fractions_scroller_div}>
+                                        <span>
+                                            {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
+                                                <div
+                                                    key={index}
+                                                    onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
+                                                    className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
+                                                >
+                                                    {fractionWidthInsideMount}
+                                                </div>
+                                            ))}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+
                 </div>
-
-
 
 
             </div>
@@ -2632,15 +2635,16 @@ function ZebraBlinds() {
                                                     </div>
                                                 </span>
                                             </div>
-                                        </span>                           
-                                                 </span>
+                                        </span>
 
 
-                                    <span className={styles.right_inside_mount}>
-                                        <div className={styles.inside_mount_group_right_side}>
-                                            <Image alt="image" width={400} height={400} className={styles.inside_mount_image} src="/insidemount.png" />
-                                        </div>
+                                        <span className={styles.right_inside_mount}>
+                                            <div className={styles.inside_mount_group_right_side}>
+                                                <Image alt="image" width={400} height={400} className={styles.inside_mount_image} src="/insidemount.png" />
+                                            </div>
+                                        </span>
                                     </span>
+
 
 
                                     <div className={styles.enter_size_inside_mount_group}>
@@ -2667,8 +2671,6 @@ function ZebraBlinds() {
                                         </Image>
                                     </span>
                                     <span className={styles.left_right_outside_mount}>
-
-
 
                                         <span className={styles.left_outside_mount}>
 
