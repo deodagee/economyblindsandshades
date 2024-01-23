@@ -657,7 +657,7 @@ display: content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: green;
+  background-color: rgb(247, 247, 247);
   width: 800px;
   height: max-content;
 }
@@ -768,11 +768,12 @@ display: content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-color: yellow;
+  border-color: grey;
   border-width: 2px;
   border-radius: 0.45rem;
   width: 600px;
-  height: 500px;
+  height: 350px;
+  margin-bottom: 10px;
 }
 
 
@@ -857,6 +858,19 @@ display: content;
   overflow-y: scroll;
   background-color: white;
   margin-bottom: 100px;
+  transition: 0.4s;
+}
+
+.inches_scroller_div div { 
+  margin: 5px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+
+}
+.inches_scroller_div div:hover {
+  background-color: rgb(213, 213, 213);
+  transition: 0.4s;
 }
 
 .inches_and_fractions_and_ruler_group {
@@ -869,21 +883,21 @@ display: content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  width: 500px;
+  width: 550px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: max-content;
+  height: 200px;
 }
 
 .enter_inches_group_wrapper_and_enter_fractions_group_wrapper { 
   display: flex;
   flex-direction: row;
-  width: 400px;
-  gap: 50px;
-  height: 150px;
+  width: 500px;
+align-items: center;
+justify-content: center;
+  gap: 30px;
   border-color: black;
   border-width: 2px;
   border-radius: 0.25rem;
@@ -912,8 +926,11 @@ display: content;
 
 ._scroll_number_ {
   display: flex;
-
 }
+
+
+
+/* Add hover effect for all div elements inside fractions_scroller_div */
 
 
 .selectedInch {
@@ -922,6 +939,7 @@ display: content;
   display: flex;
   color: grey;
 }
+
 
 .red_reader_dragger_wrapper {
   display: none;
@@ -1122,13 +1140,12 @@ display: content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  width: 500px;
+  width: 550px;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
-  height: max-content;
+  height: 200px;
 }
 
 .toggle_disclaimer_inches_inside_mount_height {
@@ -1246,9 +1263,22 @@ display: content;
 .fractions_scroller_div:hover {
   transform: scale(0.98);
   transition: 0.4s;
-  height: max-content;
+  height: 260px;
   overflow-y: scroll;
   background-color: white;
+}
+
+.fractions_scroller_div div { 
+  margin: 5px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.fractions_scroller_div div:hover {
+  background-color: rgb(225, 225, 225);
+  transition: 0.4s;
 }
 
 .selectedFraction {

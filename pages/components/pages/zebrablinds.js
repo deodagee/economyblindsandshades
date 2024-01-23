@@ -508,9 +508,9 @@ function ZebraBlinds() {
                                     <div className={styles.fractions_scroller_wrapper}>
 
                                         <div className={styles.fractions_scroller_div}>
-                                            <span>
+                                            <span >
                                                 {["0", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMount, index) => (
-                                                    <div
+                                                    <div 
                                                         key={index}
                                                         onClick={() => handleFractionSelectWidthInsideMount(fractionWidthInsideMount)}
                                                         className={selectedNumber === fractionWidthInsideMount ? styles.selectedFraction : ''}
