@@ -384,10 +384,11 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.choose_height_image_placeholder}></div>
+                <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
+                <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
+
 
                 <div className={styles.bottom_portion_ruler_and_stuff}>
-
-
 
                     <div className={styles.inches_and_fractions_and_ruler_group}>
                         <div className={styles.width_inside_mount_sub_title}>
@@ -852,6 +853,8 @@ function ZebraBlinds() {
                     </div>
 
                 </div>
+                </div>
+
             </div>
         );
     };
