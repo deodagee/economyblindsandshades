@@ -44,7 +44,6 @@ function HeaderPiece() {
 
     <>
 
-
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
 
