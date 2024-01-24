@@ -868,8 +868,8 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.page_wrapper}>
-                <ol className={styles.left_side_of_page}>
-                                    <div className={`${styles.left_side_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
+                <ol className={styles.left_half_of_page}>
+                                    <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
                                         <div className={styles.sliding_gallery_component}>
                                             <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>

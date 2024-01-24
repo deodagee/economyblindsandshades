@@ -7,6 +7,7 @@
   justify-content:center;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 10px;
 }
@@ -22,9 +23,6 @@ top: 0;
   justify-content: flex-start;
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: max-content;
-  margin-top: 20px;
 }
 
 
@@ -65,7 +63,6 @@ top: 0;
   align-items: flex-start;
   justify-content: flex-start;
   width: 65vw;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -1638,14 +1635,14 @@ font-weight: 700;
 }
 
 
-.left_side_of_page { 
+.left_half_of_page { 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 800px;}
 
-.left_side_of_page_wrapper {
+.left_half_of_page_wrapper {
 display: flex;
 }
 
