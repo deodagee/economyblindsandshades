@@ -15,7 +15,7 @@
 display: flex;
 position: fixed;
 top: 0;
-z-index: 1;
+z-index: 2;
 }
 
 .page_wrapper {
@@ -754,9 +754,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-border-color: grey;
-border-width: 2px;
-border-radius: 0.45rem;
 width: 63vw;
 height: 350px;
 }
@@ -809,6 +806,7 @@ height: 350px;
 
 .inches_scroller_wrapper {
   display: flex;
+  z-index: 1;
 
 }
 
@@ -1165,6 +1163,8 @@ font-weight: 700;
 
 .fractions_scroller_wrapper {
   display: flex;
+  z-index: 1;
+
 }
 
 
@@ -1373,14 +1373,22 @@ font-weight: 700;
   flex-direction: column;
   gap: 10px;
   background: linear-gradient(to top, #eeeeee, #f1f1f1, #e6e6e6, #eeeeee);
-  box-shadow: rgb(133, 133, 133) 6px 5px 20px;
+  box-shadow: rgb(167, 167, 167) 3px 5px 15px;
   padding: 10px;
   border-radius: 0.25rem;
-  border-width: 2px;
-  border-color: rgb(227, 227, 227);
+  border-width: 5px;
+  border-color: rgb(123, 123, 123);
   color: rgb(30, 30, 30);
   font-size: 12px;
   white-space: nowrap;
+  transition: 0.4s;
+}
+
+.selectColorImageCollection:hover { 
+  transform: scale(1.005);
+  transition: 0.4s;
+  border-color: rgb(195, 195, 195);
+
 }
 
 .color_section_title {
@@ -2291,11 +2299,13 @@ display: flex;
 
 .fabric_types_top_and_bottom_second_wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60vw;
   flex-direction: column;
   height: max-content;
   border-width: 2px;
-  border-color: rgb(205, 205, 205);
+  border-color: rgb(234, 234, 234);
   border-radius: 0.56rem;
   transition: 0.3s;
 
@@ -2303,7 +2313,7 @@ display: flex;
 
 .fabric_types_top_and_bottom_second_wrapper:hover {
   border-color: rgb(234, 234, 234);
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(79, 79, 79);
   transform: scale(1.002);
   transition: 0.3s;
   border-width: 1px;
@@ -2336,6 +2346,7 @@ display: flex;
   background-color: rgb(237, 237, 237);
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 0.45rem;
 }
 
 .skip_top_section {
@@ -2488,7 +2499,6 @@ display: flex;
   color: brown;
   margin-left: 20px;
   margin: 10px;
-  background-color: rgb(212, 212, 212);
 }
 
 .bottom_section {
@@ -2498,6 +2508,7 @@ display: flex;
   background-color: rgb(237, 237, 237);
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 0.45rem;
 }
 
 .skip_bottom_section {
@@ -2834,7 +2845,21 @@ display: flex;
 }
 
 
-@media (max-width: 768px) {
-  .your-class {
+@media (max-width: 1150px) {
+  .images_and_subtitles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .images_and_subtitles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
   }
 }

@@ -1462,7 +1462,6 @@ function ZebraBlinds() {
                                         <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
                                             <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
-                                                <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
 
                                                 <div className={styles.bottom_section}>
                                                     <div className={styles.skip_bottom_section}>
@@ -1471,7 +1470,13 @@ function ZebraBlinds() {
                                                             {active_skip_bottom_rail_ellipse ? null : (
                                                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                                                     <div className={styles.fabric_list_bottom_list1}>
+                                                                    <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
+
                                                                         <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Bottom Rail</div>
+
+                                                                        <div className={styles.note_skipping_color_for_head_rail}>
+                                                        *Note: If you chose to skip the top cassette color, steel material will be set. 
+                                                    </div>
 
                                                                         {Object.keys(Bottom_Bottom_Rail_Choices_Fabrics_Aluminum).map((key) => (
                                                                             <div className={styles.fabric_list_images_render_bottom} key={key}>
