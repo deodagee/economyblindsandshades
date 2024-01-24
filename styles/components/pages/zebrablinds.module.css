@@ -965,7 +965,8 @@
   font-size: 17px;
   display: flex;
   width: 360px;
-  align-items: center;
+  height: 100px;
+  align-items: flex-start;
   justify-content: flex-start;
   background-color: rgba(19, 108, 96, 0.801);
   border-color: rgb(0, 0, 0);

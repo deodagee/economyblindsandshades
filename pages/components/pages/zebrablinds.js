@@ -612,8 +612,8 @@ function ZebraBlinds() {
                             </div>
 
                             <div className={styles.selected_width_answer_top}>
-                                Window Size: {selectedInchWIDTH} - {selectedFractionWIDTH}
-                                {selectedFractionWIDTH && " Inches High"}
+                                Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                {selectedFractionWIDTH && " Inches Long"}
                             </div>
 
 
@@ -844,8 +844,8 @@ function ZebraBlinds() {
                             </div>
 
                            <div className={styles.selected_width_answer_top}>
-                                Window Size: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
-                                {selectedFractionHEIGHT && " Inches Long"}
+                                Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                {selectedFractionHEIGHT && " Inches High"}
                             </div>
 
                         </div>
