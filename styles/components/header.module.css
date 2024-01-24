@@ -11,7 +11,7 @@
 }
 
 .header_promo_bar {
-  height: 90px;
+  height: 50px;
   width: 100vw;
   background: linear-gradient(to right,#f4f4f4,#f4f4f4,#f4f4f4, #d2d2d2, #e1e1e1, #f4f4f4,  #d2d2d2, #ffffff00);
   align-items: center;
@@ -29,7 +29,7 @@
 
 .header_top_image { 
 display: flex;
-height: 40px;
+height: 30px;
 width: auto;
 margin: 20px;
 }
@@ -51,14 +51,16 @@ margin: 20px;
 
 .header_logo {
   display: flex;
-margin-bottom: 100px;
+margin-bottom: 50px;
 }
 
 .logo_image {
+  position: absolute;
   display: flex;
-  height: 150px; /* Set the fixed height */
+  height: 130px; /* Set the fixed height */
   width: auto; /* Set the fixed width */
-  margin-right: 60px;
+  top: 0;
+  left: 0;
 }
 
 .icons_group {

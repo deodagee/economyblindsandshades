@@ -868,6 +868,54 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.page_wrapper}>
+                <ol className={styles.left_side_of_page}>
+                                    <div className={`${styles.left_side_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
+
+                                        <div className={styles.sliding_gallery_component}>
+                                            <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
+                                                <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
+                                                <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
+                                            <div className={styles.selectedImageContainer}>
+                                                {selectedMaterial ? (
+                                                    <>
+                                                        <div className={styles.left_imageContainer_wrapper}>
+                                                            <div className={`${styles.left_imageContainer} ${styles.left_imageContainer_styled}`}>
+                                                                <Image
+                                                                    className={styles.left_imageContainer_image_itself1}
+                                                                    src={selectedMaterial.src}
+                                                                    alt='image'
+                                                                    width={100}
+                                                                    height={100}
+                                                                />
+                                                            </div>
+                                                            <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
+                                                        </div>
+                                                    </>
+                                                ) : (
+
+                                                    <div className={styles.left_first_image_render_container_wrapper}>
+                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                            <Image
+                                                                width={200}
+                                                                height={200}
+                                                                className={styles.left_first_image_render}
+                                                                src={FirstImageRender[0].src}
+                                                                alt={FirstImageRender[0].label}
+
+                                                            />
+                                                        </div>
+
+                                                    </div>
+
+                                                )}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    
+
+                            </ol>
+
                     <ol className={styles.right_half}>
 
                         <div className={styles.top_title_area}>
@@ -1126,54 +1174,7 @@ function ZebraBlinds() {
                                 <div className={styles.select_color_subtitle}> Select Material</div>
                                 <div>Click On A Color To Choose And Add</div>
                             </div>
-
-
-                            <div>
-                                <div className={styles.materials_page}>
-                                    <div className={`${styles.whole_thing} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
-
-                                        <div className={styles.sliding_gallery_component}>
-                                            <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
-                                                <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
-                                                <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
-                                            <div className={styles.selectedImageContainer}>
-                                                {selectedMaterial ? (
-                                                    <>
-                                                        <div className={styles.left_imageContainer_wrapper}>
-                                                            <div className={`${styles.left_imageContainer} ${styles.left_imageContainer_styled}`}>
-                                                                <Image
-                                                                    className={styles.left_imageContainer_image_itself1}
-                                                                    src={selectedMaterial.src}
-                                                                    alt='image'
-                                                                    width={100}
-                                                                    height={100}
-                                                                />
-                                                            </div>
-                                                            <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
-                                                        </div>
-                                                    </>
-                                                ) : (
-
-                                                    <div className={styles.left_first_image_render_container_wrapper}>
-                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                                                            <Image
-                                                                width={200}
-                                                                height={200}
-                                                                className={styles.left_first_image_render}
-                                                                src={FirstImageRender[0].src}
-                                                                alt={FirstImageRender[0].label}
-
-                                                            />
-                                                        </div>
-
-                                                    </div>
-
-                                                )}
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className={styles.selectColorImageCollection}>
+                            <div className={styles.selectColorImageCollection}>
                                         {Object.keys(colorData).map((color) => (
                                             <div key={color} className={styles[color.toLowerCase()]}>
                                                 <p className={styles.color_section_title}>{color}</p>
@@ -1181,9 +1182,6 @@ function ZebraBlinds() {
                                             </div>
                                         ))}
                                     </div>
-
-                                </div>
-                            </div>
                         </div>
 
                         <div className={styles.select_lift_type_seperator_line}></div>
