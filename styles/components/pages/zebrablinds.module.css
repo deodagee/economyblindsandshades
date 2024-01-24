@@ -934,7 +934,7 @@
 
 .selectedInch {
   background-color: black;
-  font-size: 25px;
+  font-size: 18px;
   display: flex;
   color: grey;
 }
@@ -963,7 +963,7 @@
 }
 
 .ruler_for_boat {
-  font-size: 15px;
+  font-size: 17px;
   display: flex;
   width: 360px;
   align-items: center;
@@ -1040,38 +1040,35 @@
   display: flex;
   font-size: 15px;
   font-weight: 700;
-  color: white;
+  color: rgb(1, 1, 1);
   transition: 0.4s;
 }
 
 .ruler_line_number_inches:hover {
-  color: black;
+  color: rgb(105, 105, 105);
   transition: 0.4s;
   cursor: pointer;
 }
 
 .ruler_line_number_fractions {
   display: flex;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 700;
-  color: white;
+  color: rgb(1, 1, 1);
   transition: 0.4s;
 }
 
 .ruler_line_number_fractions:hover {
-  color: black;
+  color: rgb(105, 105, 105);
   transition: 0.4s;
   cursor: pointer;
 }
 
-.selectedRuler {
-  font-size: 20px;
+.selected_ruler_number {
+  font-size: 16px;
   display: flex;
-  color: rgb(0, 0, 0);
-  background-color: rgb(201, 201, 201);
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
+color: white;
+font-weight: 700;
 }
 
 /* ruler end */
@@ -1226,7 +1223,7 @@
 
 .selectedFraction {
   background-color: black;
-  font-size: 25px;
+  font-size: 18px;
   display: flex;
   color: grey;
 }

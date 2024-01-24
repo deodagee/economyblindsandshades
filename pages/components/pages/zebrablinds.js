@@ -459,7 +459,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -474,7 +474,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -492,7 +492,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -509,7 +509,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -526,7 +526,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -543,7 +543,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -560,7 +560,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -577,7 +577,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -594,7 +594,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -688,7 +688,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -698,12 +698,13 @@ function ZebraBlinds() {
 
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
+
                                                     <div className={styles.ruler_line_number_inches}>
-                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {[selectedInchHEIGHT].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -720,7 +721,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -737,7 +738,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -754,7 +755,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -771,7 +772,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -788,7 +789,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -805,7 +806,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
@@ -822,7 +823,7 @@ function ZebraBlinds() {
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selectedRuler : ''}
+                                                                className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                             >
                                                                 {rulerNumberWidthAndHeightInsideMount}
                                                             </div>
