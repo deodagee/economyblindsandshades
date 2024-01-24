@@ -456,7 +456,7 @@ function ZebraBlinds() {
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_1}></span>
                                                     <div className={styles.ruler_line_number_inches}>
-                                                        {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -689,7 +689,7 @@ function ZebraBlinds() {
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_1}></span>
                                                     <div className={styles.ruler_line_number_inches}>
-                                                        {["0"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}

@@ -770,13 +770,14 @@ height: 350px;
   justify-content: center;
   white-space: nowrap;
   font-size: 12px;
-  color: rgb(45, 45, 45);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   border-radius: 0.56rem;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
   padding: 2px;
   margin: 5px;
+  background-color: rgb(55, 55, 55);
 }
 
 
@@ -789,7 +790,7 @@ height: 350px;
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(238, 238, 238);
   padding: 5px;
   gap: 10px;
   width: 60px;
@@ -815,10 +816,9 @@ height: 350px;
   width: 70px;
   height: 60px;
   overflow: hidden;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 0.45rem;
-  box-shadow: rgb(255, 255, 255) 0.2px 0.5px 3px;
-  border-color: rgb(107, 107, 107);
+  border-color: rgb(138, 138, 138);
   padding: 5px;
   transition: 0.4s;
   background-color: white;
@@ -833,6 +833,8 @@ height: 350px;
   background-color: white;
   margin-bottom: 100px;
   transition: 0.4s;
+  border-width: 1px;
+  border-color: black;
 }
 
 .inches_scroller_div div {
@@ -888,11 +890,10 @@ height: 350px;
   gap: 0;
   width: 173px;
   border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
+  border-color: rgb(22, 22, 22);
+  border-width: 2px;
   padding: 2px;
   height: 70px;
-  background-color: rgba(19, 108, 96, 0.801);
 }
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -1073,6 +1074,7 @@ font-weight: 700;
   align-items: center;
   justify-content: center;
   word-wrap: nowrap;
+  border-radius: 0.25rem;
 }
 
 .selected_height_answer_top {
@@ -1129,11 +1131,10 @@ font-weight: 700;
   gap: 0;
   width: 173px;
   border-radius: 0.56rem;
-  border-color: rgb(185, 185, 185);
-  border-width: 1px;
+  border-color: rgb(22, 22, 22);
+  border-width: 2px;
   padding: 2px;
   height: 70px;
-  background-color: rgba(19, 108, 96, 0.801);
 }
 
 .fractions_subtitle {
@@ -1145,7 +1146,7 @@ font-weight: 700;
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(238, 238, 238);
   padding: 5px;
   gap: 10px;
   width: 60px;
@@ -1181,10 +1182,9 @@ font-weight: 700;
   width: 70px;
   height: 60px;
   overflow: hidden;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 0.45rem;
-  box-shadow: rgb(255, 255, 255) 0.2px 0.5px 3px;
-  border-color: rgb(107, 107, 107);
+  border-color: rgb(138, 138, 138);
   padding: 5px;
   transition: 0.4s;
   background-color: white;
@@ -1196,7 +1196,8 @@ font-weight: 700;
   transition: 0.4s;
   height: 260px;
   overflow-y: scroll;
-  background-color: white;
+  border-width: 1px;
+  border-color: black;
 }
 
 .fractions_scroller_div div {
@@ -1542,7 +1543,7 @@ background-color: rgb(246, 246, 246);
   align-items: center;
   justify-content: center;
   width: 30vw;
-  background: linear-gradient(to right, #ffffff, #d3d3d3, #c0c0c0, #d6d6d6, #ffffff);
+  background: linear-gradient(to bottom, #222222,#3b3b3b, #434343, #3b3b3b, #272727);
   height: 100vh;
   position: fixed;
   left: 0;
@@ -1559,7 +1560,7 @@ display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom, #000000, #122123, #21393c, #122123, #000000);
-  box-shadow: rgb(133, 133, 133) 6px 5px 20px;
+  box-shadow: rgb(0, 0, 0) 3px 2px 15px;
   border-width: 2px;
   border-color: rgb(49, 49, 49);
   border-radius: 0.55rem;
