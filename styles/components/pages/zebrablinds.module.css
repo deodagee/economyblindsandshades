@@ -7,7 +7,6 @@
   justify-content:center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 10px;
 }
@@ -60,7 +59,6 @@ z-index: 1;
 .right_half {
   align-items: flex-start;
   justify-content: flex-start;
-  width: max-content;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -70,7 +68,8 @@ z-index: 1;
   border-right: none;
   border-bottom: none;
   border-radius: 0.35rem;
-  width: 70vw;
+  width: 65vw;
+  margin-top: 200px;
 }
 
 .top_title_area {
@@ -2840,4 +2839,10 @@ display: flex;
   height: auto;
   width: 30px;
   margin: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .your-class {
+  }
 }
