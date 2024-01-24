@@ -1067,7 +1067,6 @@ function ZebraBlinds() {
 
                                     <div className={styles.enter_size_inside_mount_group}>
                                         <div>
-                                            <div className={styles.enter_size_inside_mount_title}>Choose Inside Mount Window Size</div>
                                             <CustomScroll />
                                         </div>
 
