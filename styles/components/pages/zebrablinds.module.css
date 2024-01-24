@@ -939,7 +939,6 @@
   color: grey;
 }
 
-
 /* ruler start */
 
 .ruler_div {
@@ -1073,10 +1072,10 @@ font-weight: 700;
 
 /* ruler end */
 .selected_width_answer_top {
-  width: 100px;
+  width: 300px;
   height: 30px;
   background-color: black;
-  font-size: 10px;
+  font-size: 15px;
   color: white;
   display: flex;
   flex-direction: row;
