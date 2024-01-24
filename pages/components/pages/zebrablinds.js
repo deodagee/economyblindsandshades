@@ -321,7 +321,9 @@ function ZebraBlinds() {
 
         const handleScrolledInchesWhenClickedWIDTH = (inchWidthInsideMountWIDTH) => {
             setselectedInchWIDTH(inchWidthInsideMountWIDTH);
+            setselectedRulerNumberInchWIDTH(inchWidthInsideMountWIDTH);
         };
+
 
         const handleScrolledFractionsWhenClickedWIDTH = (fractionWidthInsideMountWIDTH) => {
             setselectedFractionWIDTH(fractionWidthInsideMountWIDTH);
@@ -468,7 +470,7 @@ function ZebraBlinds() {
                                                 <span className={styles.ruler_line_group}>
                                                     <span className={styles.line_0}></span>
                                                     <div className={styles.ruler_line_number_inches}>
-                                                        {["8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                        {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                             <div
                                                                 key={index}
                                                                 onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -478,6 +480,7 @@ function ZebraBlinds() {
                                                             </div>
                                                         ))}
                                                     </div>
+
                                                 </span>
 
                                                 <span className={styles.ruler_line_group}>
