@@ -320,29 +320,35 @@ function ZebraBlinds() {
 
     const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
     const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
-    const Match_Fabric_With_bottom = [
-        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert,
-        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert,
-    ];
 
+
+    const Match_Fabric_With_bottom = [
+        { key: 'Top', data: Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert },
+        { key: 'Bottom', data: Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert },
+    ];
+    
     const Match_Amluminum_With_Aluminum = [
-        ...Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert,
-        ...Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert,
-    ]
+        { key: 'Top', data: Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum },
+        { key: 'Bottom', data: Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum },
+    ];
+    
 
     const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
-        (imageData) => imageData.key === selected_head_rail_color
-    );
+        (item) => item.key === 'Top' && item.data.some((imageData) => imageData.key === selected_head_rail_color)
+    )?.data.find((imageData) => imageData.key === selected_head_rail_color);
+    
     const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
-        (imageData) => imageData.key === selected_bottom_rail_color
-    );
-
+        (item) => item.key === 'Bottom' && item.data.some((imageData) => imageData.key === selected_bottom_rail_color)
+    )?.data.find((imageData) => imageData.key === selected_bottom_rail_color);
+    
     const Square_Top_Aluminum_function = Match_Amluminum_With_Aluminum.find(
-        (imageData) => imageData.key === selected_head_rail_color
-    );
+        (item) => item.key === 'Top' && item.data.some((imageData) => imageData.key === selected_head_rail_color)
+    )?.data.find((imageData) => imageData.key === selected_head_rail_color);
+    
     const Bottom_Oval_Rail_Aluminum_function = Match_Amluminum_With_Aluminum.find(
-        (imageData) => imageData.key === selected_bottom_rail_color
-    );
+        (item) => item.key === 'Bottom' && item.data.some((imageData) => imageData.key === selected_bottom_rail_color)
+    )?.data.find((imageData) => imageData.key === selected_bottom_rail_color);
+    
 
     const handleRenderClickImageToMergeFabrics = (imageName) => {
         const baseClassName = styles[imageName];
@@ -350,9 +356,10 @@ function ZebraBlinds() {
     };
 
     const handleRenderClickImageToMergeAluminum = (imageName) => {
-        const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+        const baseClassName2 = styles[imageName];
+        return `${baseClassName2} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
     };
+
 
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -1934,9 +1941,6 @@ function ZebraBlinds() {
                                                             <div >
                                                                 {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
                                                                     <div className={styles.fabric_list_images_render_top} key={key}>
-
-
-
                                                                         {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
                                                                             <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
                                                                                 {/* Render the actual image here */}
@@ -2169,19 +2173,23 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
-
                                         <div className={styles.answers_answers2}>
+                                            <div>
                                             {Rounded_Top_Cassette_With_Fabric_Insert_function && (
                                                 <span>
                                                     {Rounded_Top_Cassette_With_Fabric_Insert_function.label}
                                                 </span>
-
                                             )}
-                                            {Bottom_Rail_Square_With_Fabric_Insert_function && (
+                                            </div>
+
+                                            <div>
+                                            {Square_Top_Aluminum_function && (
                                                 <span>
-                                                    {Bottom_Rail_Square_With_Fabric_Insert_function.label}
+                                                    {Square_Top_Aluminum_function.label}
                                                 </span>
                                             )}
+                                            </div>
+                                            
                                         </div>
 
                                     </div>
@@ -2195,16 +2203,22 @@ function ZebraBlinds() {
                                         <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
 
                                         <div className={styles.answers_answers2}>
-                                            {Square_Top_Aluminum_function && (
+
+                                            <div>
+                                        {Bottom_Rail_Square_With_Fabric_Insert_function && (
                                                 <span>
-                                                    {Square_Top_Aluminum_function.label}
+                                                    {Bottom_Rail_Square_With_Fabric_Insert_function.label}
                                                 </span>
                                             )}
+                                            </div>
+                                            
+                                            <div>
                                             {Bottom_Oval_Rail_Aluminum_function && (
                                                 <span>
                                                     {Bottom_Oval_Rail_Aluminum_function.label}
                                                 </span>
                                             )}
+                                            </div>
                                         </div>
 
                                     </div>
