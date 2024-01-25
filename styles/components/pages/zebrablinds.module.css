@@ -348,10 +348,11 @@ top: 200px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .left_inside_mount {
+  width: 30vw;
+  height: auto;
   display: flex;
   height: auto;
   margin-top: 30px;
@@ -404,7 +405,7 @@ top: 200px;
   flex-direction: row;
   gap: 10px;
   width: 28vw;
-  height: 120px;
+  height: auto;
   padding: 10px;
   background-color: rgb(235, 235, 235);
 }
@@ -412,8 +413,6 @@ top: 200px;
 .step_tag {
   display: flex;
   background-color: black;
-  width: 50px;
-  height: 20px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 0.24rem;
@@ -447,7 +446,7 @@ top: 200px;
   align-items: center;
   justify-content: left;
   text-align: left;
-  width: 300px;
+  width: 20vw;
   background-color: rgb(249, 249, 249);
   padding: 5px;
   font-size: 10px;
@@ -456,6 +455,8 @@ top: 200px;
 
 
 .right_inside_mount {
+  width: 30vw;
+  height: auto;
   display: flex;
   height: auto;
   margin-top: 30px;
@@ -518,10 +519,11 @@ top: 200px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .left_outside_mount {
+  width: 30vw;
+  height: auto;
   display: flex;
   height: auto;
   margin-top: 30px;
@@ -568,7 +570,7 @@ top: 200px;
   flex-direction: row;
   gap: 10px;
   width: 28vw;
-  height: 120px;
+  height: auto;
   padding: 10px;
   background-color: rgb(235, 235, 235);
 }
@@ -582,6 +584,8 @@ top: 200px;
 /* OUTSIDE MOUNT CLASSNAME= .step_tag_description_note */
 
 .right_outside_mount {
+  width: 30vw;
+  height: auto;
   display: flex;
   height: auto;
   margin-top: 30px;
@@ -2813,7 +2817,6 @@ margin-right: 1vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
   }
   
 .left_right_inside_mount {
@@ -2821,7 +2824,6 @@ margin-right: 1vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
 }
