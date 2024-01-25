@@ -41,47 +41,65 @@ function ZebraBlinds() {
 
     const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
-    const [wand_left_choice, setwand_left_choice] = useState('');
-    const [wand_right_choice, setwand_right_choice] = useState('');
-    const [wand_left_choice_rendering_content, setwand_left_choice_rendering_content] = useState('');
-    const [wand_right_choice_rendering_content, setwand_right_choice_rendering_content] = useState('');
+    const [active_wand_left_choice, setactive_wand_left_choice] = useState('');
+    const [active_wand_right_choice, setactive_wand_right_choice] = useState('');
+    const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState(null);
+    const [active_wand_right_choice_rendering_content, setactive_wand_right_choice_rendering_content] = useState(null);
 
 
     const handleLiftFeatureEllipsess = (ellipseNumber) => {
-        setactive_wand_cordless_motorized((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
-
-        setwand_left_choice((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
-        setwand_right_choice((prevActiveEllipse) => (prevActiveEllipse === ellipseNumber ? null : ellipseNumber));
-
-
-        // Set the content based on the clicked ellipse number
+        // Reset states based on the clicked ellipse number
         if (ellipseNumber === 1) {
+            setactive_wand_cordless_motorized(1);
+            setactive_wand_left_choice(null);
+            setactive_wand_right_choice(null);
             setactive_wand_cordless_motorizedRenderingContent('wand');
-            
+            setactive_wand_left_choice_rendering_content(null);
+            setactive_wand_right_choice_rendering_content(null);
         } else if (ellipseNumber === 2) {
+            setactive_wand_cordless_motorized(2);
+            setactive_wand_left_choice(null);
+            setactive_wand_right_choice(null);
             setactive_wand_cordless_motorizedRenderingContent('cordless');
-            setwand_right_choice_rendering_content(false);
-            setwand_left_choice_rendering_content(false);
-        }
-        else if (ellipseNumber === 3) {
+            setactive_wand_left_choice_rendering_content(null);
+            setactive_wand_right_choice_rendering_content(false);
+        } else if (ellipseNumber === 3) {
+            setactive_wand_cordless_motorized(3);
+            setactive_wand_left_choice(null);
+            setactive_wand_right_choice(null);
             setactive_wand_cordless_motorizedRenderingContent('motorized');
-            setwand_right_choice_rendering_content(false);
-            setwand_left_choice_rendering_content(false);
-
+            setactive_wand_left_choice_rendering_content(null);
+            setactive_wand_right_choice_rendering_content(false);
         }
-
         else if (ellipseNumber === 4) {
-            setwand_left_choice_rendering_content('left');
+            setactive_wand_cordless_motorized(null);
+            setactive_wand_left_choice(4);
+            setactive_wand_cordless_motorized(1);
 
-            setwand_right_choice_rendering_content(false);
-            setactive_wand_cordless_motorizedRenderingContent(false);
-
-        } else if (ellipseNumber === 5) {
-            setwand_right_choice_rendering_content('right');
-            setwand_left_choice_rendering_content(false);
-            setactive_wand_cordless_motorizedRenderingContent(false);
+            setactive_wand_right_choice(null);
+            setactive_wand_left_choice_rendering_content('left');
+            setactive_wand_cordless_motorizedRenderingContent('wand');
+            setactive_wand_right_choice_rendering_content(false);
+        }
+        else if (ellipseNumber === 5) {
+            setactive_wand_cordless_motorized(null);
+            setactive_wand_left_choice(null);
+            setactive_wand_right_choice(5);
+            setactive_wand_cordless_motorized(1);
+            setactive_wand_left_choice_rendering_content(false);
+            setactive_wand_right_choice_rendering_content('right');
+            setactive_wand_cordless_motorizedRenderingContent('wand');
+        } else {
+            // Reset all states if any other ellipse is selected
+            setactive_wand_cordless_motorized(null);
+            setactive_wand_left_choice(null);
+            setactive_wand_right_choice(null);
+            setactive_wand_cordless_motorizedRenderingContent(null);
+            setactive_wand_left_choice_rendering_content(null);
+            setactive_wand_right_choice_rendering_content(null);
         }
     };
+
 
 
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -90,7 +108,7 @@ function ZebraBlinds() {
     const [showLeftHalf, setShowLeftHalf] = useState(true);
     const [showImageleft, setShowImageleft] = useState(false);
     const [showImageright, setShowImageright] = useState(true);
-    
+
     const leftButtonClass = showImageleft
         ? `${styles.select_chain_left_box_button} ${styles.select_chain_left_box_button_active}`
         : styles.select_chain_left_box_button;
@@ -121,6 +139,13 @@ function ZebraBlinds() {
         setShowImageleft(false);
     };
 
+
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+    //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+
+
+    const [product_title, setproduct_title] = useState("ZEBRA BLINDS SHADES");
+
     const [active_skip_head_rail_ellipse, Set_active_skip_head_rail_ellipse] = useState(false);
     const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
     const [skip_head_rail_image_placeholder, setskip_head_rail_image_placeholder] = useState(false);
@@ -134,7 +159,6 @@ function ZebraBlinds() {
         setskip_bottom_rail_image_placeholder((prevActive) => !prevActive);
     };
 
-    const [product_title, setproduct_title] = useState("ZEBRA BLINDS SHADES");
 
     const [roomDarkeningContent, setRoomDarkeningContent] = useState('');
 
@@ -340,20 +364,16 @@ function ZebraBlinds() {
         const [selectedRulerNumberInchWIDTH, setselectedRulerNumberInchWIDTH] = useState(null);
         const [selectedRulerNumberFractionWIDTH, setselectedRulerNumberFractionWIDTH] = useState(null);
 
-
-
         const [selectedInchWIDTH, setselectedInchWIDTH] = useState(null);
         const [selectedInchHEIGHT, setselectedInchHEIGHT] = useState(null);
 
         const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
         const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
 
-
         const handleScrolledInchesWhenClickedWIDTH = (inchWidthInsideMountWIDTH) => {
             setselectedInchWIDTH(inchWidthInsideMountWIDTH);
             setselectedRulerNumberInchWIDTH(inchWidthInsideMountWIDTH);
         };
-
 
         const handleScrolledFractionsWhenClickedWIDTH = (fractionWidthInsideMountWIDTH) => {
             setselectedFractionWIDTH(fractionWidthInsideMountWIDTH);
@@ -366,7 +386,6 @@ function ZebraBlinds() {
         const handleScrolledFractionsWhenClickedHEIGHT = (fractionWidthInsideMountHEIGHT) => {
             setselectedFractionHEIGHT(fractionWidthInsideMountHEIGHT);
         };
-
 
         const handleSelectedInchAndMatchToScrollerWIDTH = (rulerNumberWidthAndHeightInsideMount) => {
             setselectedRulerNumberInchWIDTH(rulerNumberWidthAndHeightInsideMount);
@@ -413,7 +432,7 @@ function ZebraBlinds() {
                     </div>
                 </div>
 
-                <div className={styles.choose_height_image_placeholder}></div>
+                <div className={styles.choose_width_or_height_image_placeholder}></div>
                 <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
                     <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
 
@@ -1265,33 +1284,22 @@ function ZebraBlinds() {
                                     <div className={styles.select_chainparagraph}>Select Which Side You Want Your Wand To Be Installed.</div>
 
                                     <div className={styles.show_image_chain_buttons}>
-                                        <button
-                                            className={leftButtonClass}
-                                            onClick={() => {
-                                                show_image_left_right_chain_side(true);
-                                                showleftsidechain();
-                                            }}
-                                        >
-                                            <div className={`${styles.select_chain_left_text} ${wand_left_choice === 1 ? styles.select_chain_left_box_button_active : ''}`}
+                                        <button>
+                                            <div className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
                                                 onClick={() => handleLiftFeatureEllipsess(4)}>
                                                 Left
                                             </div>
                                         </button>
 
-                                        <button
-                                            className={rightButtonClass}
-                                            onClick={() => {
-                                                show_image_left_right_chain_side(false);
-                                                showrightsidechain();
-                                            }}
-                                        >
-                                            <div className={`${styles.select_chain_right_text} ${wand_right_choice === 1 ? styles.select_chain_right_box_button_active : ''}`}
+                                        <button>
+                                            <div className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
                                                 onClick={() => handleLiftFeatureEllipsess(5)}>
                                                 Right
-                                            </div>                                       
-                                             </button>
+                                            </div>
+                                        </button>
                                     </div>
                                 </div>
+
 
                                 {showImageright && (
 
@@ -1597,8 +1605,19 @@ function ZebraBlinds() {
 
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.width2_answer}>Window Size:</div>
+
+
+
                                         <div className={styles.answers_answers}>
 
+                                            <div className={styles.selected_width_answer_top}>
+                                                Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                                {selectedFractionHEIGHT && " Inches High"}
+                                            </div>
+                                            <div className={styles.selected_width_answer_top}>
+                                                Window Length: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                                {selectedFractionWIDTH && " Inches Long"}
+                                            </div>
 
                                         </div>
                                     </div>
@@ -1633,17 +1652,18 @@ function ZebraBlinds() {
                                     </span>
 
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.lift_type_answer}>Lift Type:
-                                        <div className={styles.answers_answers}>
-                                            {active_wand_cordless_motorizedRenderingContent ? `Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
-                                        </div>
+                                        <div className={styles.lift_type_answer}>Lift Type:</div>
+                                        <div className={styles.answers_answers3}>
+                                            <div>
+                                                {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                            </div>
+                                            <div>
+                                                {active_wand_left_choice_rendering_content ? `Wand Side: ${active_wand_left_choice_rendering_content}` : "Please Select Wand Side"}
+                                            </div>
+                                            <div>
+                                                {active_wand_right_choice_rendering_content ? `Wand Side: ${active_wand_right_choice_rendering_content}` : ""}
 
-                                        <div className={styles.answers_answers}>
-                                            {wand_left_choice_rendering_content ? `Type: ${wand_left_choice_rendering_content}` : ""}
-                                        </div>
-                                        <div className={styles.answers_answers}>
-                                            {wand_right_choice_rendering_content ? `Type: ${wand_right_choice_rendering_content}` : ""}
-                                        </div>
+                                            </div>
                                         </div>
                                     </div>
 
