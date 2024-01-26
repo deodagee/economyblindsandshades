@@ -58,8 +58,8 @@ function HeaderPiece() {
                   alt="header_top_image"
                   className={styles.header_top_image}>
 
-                </Image>              
-                </p>
+                </Image>
+              </p>
             </li>
           </ol>
 
@@ -72,7 +72,7 @@ function HeaderPiece() {
                 </Link>
               </li>
             </div>
-            
+
             <div className={styles.icons_group}>
               <div className={styles.icon_and_text}>
                 <Image
@@ -146,21 +146,50 @@ function HeaderPiece() {
             <li className={styles.second_menu_bar_item}>
               <Link className={styles.header_link} href={"/"} > Home </Link>
             </li>
-
             <button
-              onClick={drop_the_menu}
-            >
-              <li className={styles.second_menu_bar_item}>
-                <p> Zebra Blinds </p>
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
-              </li>
-            </button>
+                onClick={drop_the_menu}
+              >
+                <li className={styles.second_menu_bar_item}>
+                  <p> Zebra Blinds </p>
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </li>
+              </button>
+
+              
+            <div className={styles.drop_down_wrapper}>
+            
+              {handle_open_menu && (
+
+                <div className={styles.drop_down_menu}>
+                  <ul>
+                    <Link href={"/zebrablinds"}>
+                      <li className={styles.drop_down_menu_item}>
+                        Room Darkening
+                      </li>
+                    </Link>
+                    <li className={styles.drop_down_menu_item}>
+                      Light Filtering
+                    </li>
+                    <li className={styles.drop_down_menu_item}>
+                      Option 3
+                    </li>
+                    <li className={styles.drop_down_menu_item}>
+                      Option 4
+                    </li>
+                    <li className={styles.drop_down_menu_item}>
+                      Option 5
+                    </li>
+                  </ul>
+                </div>
+              )}
+
+            </div>
 
 
             <button>
@@ -217,30 +246,7 @@ function HeaderPiece() {
         </div>
 
 
-        {handle_open_menu && (
 
-          <div className={styles.drop_down_menu}>
-            <ul>
-              <Link href={"/zebrablinds"}>
-                <li className={styles.drop_down_menu_item}>
-                  Room Darkening
-                </li>
-              </Link>
-              <li className={styles.drop_down_menu_item}>
-                Light Filtering
-              </li>
-              <li className={styles.drop_down_menu_item}>
-                Option 3
-              </li>
-              <li className={styles.drop_down_menu_item}>
-                Option 4
-              </li>
-              <li className={styles.drop_down_menu_item}>
-                Option 5
-              </li>
-            </ul>
-          </div>
-        )}
 
       </div>
 
