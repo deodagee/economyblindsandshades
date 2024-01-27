@@ -336,8 +336,8 @@ top: 200px;
 
 .first_chosen_inside_mount_selection {
   display: flex;
-  width: 40vw;
-  height: 20vw;
+  width: 30vw;
+  height: auto;
   background-color: black;
   margin: 20px;
   border-radius: 0.15rem;
@@ -364,7 +364,7 @@ top: 200px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 30vw;
+  width: 50vw;
   height: 35vw;
   margin: 10px;
   align-items: center;
@@ -460,7 +460,7 @@ top: 200px;
 .right_inside_mount {
   width: 30vw;
   height: 35vw;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: auto;
@@ -478,7 +478,7 @@ top: 200px;
 }
 
 .inside_mount_image {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-width: 2px;
@@ -516,8 +516,8 @@ top: 200px;
 
 .first_chosen_outside_mount_selection {
   display: flex;
-  width: 40vw;
-  height: 20vw;
+  width: 30vw;
+  height: auto;
   background-color: black;
   margin: 20px;
   border-radius: 0.15rem;
@@ -542,7 +542,7 @@ top: 200px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 30vw;
+  width: 50vw;
   align-items: center;
   justify-content: center;
 }
@@ -595,7 +595,7 @@ top: 200px;
 .right_outside_mount {
   width: 30vw;
   height: auto;
-  display: flex;
+  display: none;
   height: auto;
   margin-top: 30px;
 }
@@ -608,7 +608,7 @@ top: 200px;
 }
 
 .outsidemount_Image {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-width: 2px;

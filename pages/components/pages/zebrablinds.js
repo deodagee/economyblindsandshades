@@ -547,8 +547,9 @@ function ZebraBlinds() {
                                     <span className={styles.first_chosen_inside_mount_selection_wrapper}>
                                         <Image
                                             alt="first chosen image"
-                                            width={100}
-                                            height={100}
+                                            width={300}
+                                            src={"/insidemountsketch.png"}
+                                            height={300}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
@@ -1134,6 +1135,8 @@ function ZebraBlinds() {
                                         <Image
                                             alt="first chosen image"
                                             width={100}
+                                            src={"/outsidemountsketch.png"}
+
                                             height={100}
                                             className={styles.first_chosen_outside_mount_selection}>
 
@@ -2181,31 +2184,31 @@ function ZebraBlinds() {
                                         <div className={styles.answers_answers2}>
 
 
-                                        <div className={styles.answers_answers2}>
-    {Rounded_Top_Cassette_With_Fabric_Insert_function && (
-        <div className={styles.div1}>
-            <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
-        </div>
-    )}
+                                            <div className={styles.answers_answers2}>
+                                                {Rounded_Top_Cassette_With_Fabric_Insert_function && (
+                                                    <div className={styles.div1}>
+                                                        <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
+                                                    </div>
+                                                )}
 
-    {Square_Top_Aluminum_function && (
-        <div className={styles.div1}>
-            <span>{Square_Top_Aluminum_function.label}</span>
-        </div>
-    )}
+                                                {Square_Top_Aluminum_function && (
+                                                    <div className={styles.div1}>
+                                                        <span>{Square_Top_Aluminum_function.label}</span>
+                                                    </div>
+                                                )}
 
-    {Bottom_Rail_Square_With_Fabric_Insert_function && (
-        <div className={styles.div2}>
-            <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
-        </div>
-    )}
+                                                {Bottom_Rail_Square_With_Fabric_Insert_function && (
+                                                    <div className={styles.div2}>
+                                                        <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
+                                                    </div>
+                                                )}
 
-    {Bottom_Oval_Rail_Aluminum_function && (
-        <div className={styles.div2}>
-            <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
-        </div>
-    )}
-</div>
+                                                {Bottom_Oval_Rail_Aluminum_function && (
+                                                    <div className={styles.div2}>
+                                                        <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
+                                                    </div>
+                                                )}
+                                            </div>
 
                                         </div>
 
@@ -2219,30 +2222,30 @@ function ZebraBlinds() {
 
                                         <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                                         <div className={styles.answers_answers2}>
-    {Rounded_Top_Cassette_With_Fabric_Insert_function && (
-        <div className={styles.div1}>
-            <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
-        </div>
-    )}
+                                            {Rounded_Top_Cassette_With_Fabric_Insert_function && (
+                                                <div className={styles.div1}>
+                                                    <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
+                                                </div>
+                                            )}
 
-    {Square_Top_Aluminum_function && (
-        <div className={styles.div1}>
-            <span>{Square_Top_Aluminum_function.label}</span>
-        </div>
-    )}
+                                            {Square_Top_Aluminum_function && (
+                                                <div className={styles.div1}>
+                                                    <span>{Square_Top_Aluminum_function.label}</span>
+                                                </div>
+                                            )}
 
-    {Bottom_Rail_Square_With_Fabric_Insert_function && (
-        <div className={styles.div2}>
-            <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
-        </div>
-    )}
+                                            {Bottom_Rail_Square_With_Fabric_Insert_function && (
+                                                <div className={styles.div2}>
+                                                    <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
+                                                </div>
+                                            )}
 
-    {Bottom_Oval_Rail_Aluminum_function && (
-        <div className={styles.div2}>
-            <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
-        </div>
-    )}
-</div>
+                                            {Bottom_Oval_Rail_Aluminum_function && (
+                                                <div className={styles.div2}>
+                                                    <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
+                                                </div>
+                                            )}
+                                        </div>
 
                                     </div>
 
