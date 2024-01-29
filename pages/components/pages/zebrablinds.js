@@ -365,6 +365,7 @@ function ZebraBlinds() {
         return classNames.join(' ');
     };
     
+    
     const handleRenderClickImageToMergeAluminum = (imageName) => {
         const baseClassName = styles[imageName];
         const classNames = [baseClassName];
