@@ -352,14 +352,34 @@ function ZebraBlinds() {
 
     const handleRenderClickImageToMergeFabrics = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_head_rail_color ? styles.selected_head_rail_color : ''}`;
+        const classNames = [baseClassName];
+    
+        if (imageName === selected_bottom_rail_color) {
+            classNames.push(styles.selected_bottom_rail_color);
+        }
+    
+        if (imageName === selected_head_rail_color) {
+            classNames.push(styles.selected_head_rail_color);
+        }
+    
+        return classNames.join(' ');
     };
-
+    
     const handleRenderClickImageToMergeAluminum = (imageName) => {
         const baseClassName = styles[imageName];
-        return `${baseClassName} ${imageName === selected_bottom_rail_color ? styles.selected_bottom_rail_color : ''}`;
+        const classNames = [baseClassName];
+    
+        if (imageName === selected_head_rail_color) {
+            classNames.push(styles.selected_head_rail_color);
+        }
+    
+        if (imageName === selected_bottom_rail_color) {
+            classNames.push(styles.selected_bottom_rail_color);
+        }
+    
+        return classNames.join(' ');
     };
-
+    
 
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
