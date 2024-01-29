@@ -547,9 +547,9 @@ function ZebraBlinds() {
                                     <span className={styles.first_chosen_inside_mount_selection_wrapper}>
                                         <Image
                                             alt="first chosen image"
-                                            width={300}
+                                            width={400}
                                             src={"/insidemountsketch.png"}
-                                            height={300}
+                                            height={400}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
@@ -650,7 +650,7 @@ function ZebraBlinds() {
 
                                                 <div className={styles.choose_width_or_height_image_placeholder}></div>
                                                 <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
-                                                    <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
+                                                    <div className={styles.select_your_width_and_height}>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
 
 
                                                     <div className={styles.bottom_portion_ruler_and_stuff}>
@@ -1134,10 +1134,9 @@ function ZebraBlinds() {
 
                                         <Image
                                             alt="first chosen image"
-                                            width={100}
-                                            src={"/outsidemountsketch.png"}
-
-                                            height={100}
+                                            width={400}
+                                            src={"/insidemountsketch.png"}
+                                            height={400}
                                             className={styles.first_chosen_outside_mount_selection}>
 
                                         </Image>

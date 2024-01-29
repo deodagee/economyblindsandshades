@@ -50,7 +50,6 @@ function HeaderPiece() {
 
           <ol className={styles.header_promo_bar}>
             <li>
-              <p>
                 <Image
                   src={"/factorydirectsavingsversion4.png"}
                   width={200}
@@ -59,7 +58,6 @@ function HeaderPiece() {
                   className={styles.header_top_image}>
 
                 </Image>
-              </p>
             </li>
           </ol>
 
