@@ -1800,9 +1800,10 @@ function ZebraBlinds() {
                                         <div className={styles.options_price_seperator}></div>
                                         <div className={styles.free_subtitle}>Free</div>
                                     </span>
-                                    <div className={styles.select_chainparagraph}>Select Which Side You Want Your Wand To Be Installed.</div>
 
                                     <div className={styles.show_image_chain_buttons}>
+                                        <div className={styles.select_chainparagraph}>Select Which Side You Want Your Wand To Be Installed.</div>
+
                                         <button>
                                             <div className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
                                                 onClick={() => handleLiftFeatureEllipsess(4)}>
