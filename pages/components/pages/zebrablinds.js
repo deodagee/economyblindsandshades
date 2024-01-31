@@ -137,6 +137,10 @@ function ZebraBlinds() {
     const [active_skip_bottom_rail_ellipse, Set_active_skip_bottom_rail_ellipse] = useState(null);
     const [skip_head_rail_image_placeholder, setskip_head_rail_image_placeholder] = useState(false);
     const [skip_bottom_rail_image_placeholder, setskip_bottom_rail_image_placeholder] = useState(false);
+    const [steelMaterialChosen, setSteelMaterialChosen] = useState(null);
+
+
+
 
     const handleEllipseClickSkipHeadRailAndBotomRailColor = () => {
         console.log('Ellipse Clicked');
@@ -144,6 +148,8 @@ function ZebraBlinds() {
         setskip_head_rail_image_placeholder((prevActive) => !prevActive);
         Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
         setskip_bottom_rail_image_placeholder((prevActive) => !prevActive);
+        setSteelMaterialChosen(true);
+
     };
 
 
@@ -287,6 +293,8 @@ function ZebraBlinds() {
 
     const handleSelectMaterial = (key, src, label) => {
         setfirstImage_div(false);
+        setSteelMaterialChosen(false);
+
         console.log(`Clicked on file: ${src}`);
         setSelectedMaterial({ key, src, label });
         setselectedFileNameMaterials(`${key} - ${label}`); // Combine key and label
@@ -320,6 +328,8 @@ function ZebraBlinds() {
     const handleImageClickImagesTop = (key) => {
         setfirstImage_div(false);
         setSelectedMaterial(false);
+        setSteelMaterialChosen(false);
+
 
         setSelectedRailType('top'); // Set the selected rail type
 
@@ -346,7 +356,7 @@ function ZebraBlinds() {
         }
     };
 
-    
+
 
 
 
@@ -1954,7 +1964,7 @@ function ZebraBlinds() {
                                                     <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}></div>
                                                     {!active_skip_head_rail_ellipse && (
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-                                                            <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Top Cassette </div>
+                                                            <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Top Rail Will Automatically Select the Same Material in The Bottom Rail Section For You. </div>
                                                             <div className={styles.materials_organized_div_wrapper}>
                                                                 {Object.keys(Top_Head_Rail_Choices_Materials).map((railType, index) => (
                                                                     <div key={index}>
@@ -2025,10 +2035,11 @@ function ZebraBlinds() {
                                                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                                                     <div className={styles.fabric_list_bottom_list1}>
                                                                         <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
-                                                                        <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Bottom Rail</div>
                                                                         <div className={styles.note_skipping_color_for_head_rail}>
                                                                             *Note: If you chose to skip the top cassette color, steel material will be set.
                                                                         </div>
+                                                                        <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Bottom Rail Will Automatically Select the Same Material in The Top Rail Section For You</div>
+
                                                                         <div className={styles.materials_organized_div_wrapper}>
                                                                             {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
                                                                                 <div key={index}>
@@ -2189,6 +2200,9 @@ function ZebraBlinds() {
                                                 </div>
                                             )}
 
+                                            {steelMaterialChosen && <div>steel material chosen</div>}
+
+
                                         </div>
                                     </div>
 
@@ -2213,6 +2227,9 @@ function ZebraBlinds() {
                                                     <p>{selectedImagesBottom}</p>
                                                 </div>
                                             )}
+
+                                            {steelMaterialChosen && <div>steel material chosen</div>}
+
 
                                         </div>
 
