@@ -250,9 +250,9 @@ top: 160px;
   background-color: rgb(255, 255, 255);
   border-radius: 2rem;
   margin: 5px;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
+  font-size: 15px;
+  width: 22px;
+  height: 22px;
   box-shadow: rgb(226, 226, 226) 0px 0px 4px;
   color: black;
 }
@@ -340,7 +340,6 @@ top: 160px;
   display: flex;
   width: 30vw;
   height: auto;
-  background-color: black;
   margin: 20px;
   border-radius: 0.15rem;
 }
@@ -521,7 +520,6 @@ top: 160px;
   display: flex;
   width: 30vw;
   height: auto;
-  background-color: black;
   margin: 20px;
   border-radius: 0.15rem;
 }
@@ -979,7 +977,7 @@ height: 350px;
   font-size: 17px;
   display: flex;
   width: 28vw;
-  height: 100px;
+  height: 90px;
   align-items: flex-start;
   justify-content: flex-start;
   background-color: rgba(19, 108, 96, 0.801);
@@ -1209,14 +1207,14 @@ font-weight: 700;
   border-radius: 0.45rem;
   border-color: rgb(138, 138, 138);
   padding: 5px;
-  transition: 0.4s;
+  transition: 0.2s;
   background-color: white;
   font-size: 20px;
 }
 
 .fractions_scroller_div:hover {
   transform: scale(0.98);
-  transition: 0.4s;
+  transition: 0.2s;
   height: 260px;
   overflow-y: scroll;
   border-width: 1px;
@@ -1233,7 +1231,7 @@ font-weight: 700;
 
 .fractions_scroller_div div:hover {
   background-color: rgb(225, 225, 225);
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .selectedFraction {
@@ -1293,7 +1291,7 @@ font-weight: 700;
 
 .enter_size_outside_mount_group {
   display: contents;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .enter_size_outside_mount_group:hover {
@@ -1359,9 +1357,9 @@ font-weight: 700;
   background-color: rgb(255, 255, 255);
   border-radius: 2rem;
   margin: 5px;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
+  font-size: 15px;
+  width: 22px;
+  height: 22px;
   box-shadow: rgb(226, 226, 226) 0px 0px 4px;
   color: black;
 }
@@ -1459,7 +1457,6 @@ background-color: rgb(246, 246, 246);
 
 .materials_image_container:hover {
   box-shadow: #3a3a3a 2px 3px 7px;
-  border-color: rgb(162, 162, 162);
   border-width: 5px;
   transition: 0.2s;
 }
@@ -1760,9 +1757,9 @@ margin-right: 1vw;
   background-color: rgb(255, 255, 255);
   border-radius: 2rem;
   margin: 5px;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
+  font-size: 15px;
+  width: 22px;
+  height: 22px;
   box-shadow: rgb(226, 226, 226) 0px 0px 4px;
   color: black;
 }
@@ -2192,17 +2189,17 @@ margin-right: 1vw;
 }
 
 .select_head_rail_group_title_tag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2rem;
-  margin: 5px;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
-  box-shadow: rgb(226, 226, 226) 0px 0px 4px;
-  color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(255, 255, 255);
+border-radius: 2rem;
+margin: 5px;
+font-size: 15px;
+width: 22px;
+height: 22px;
+box-shadow: rgb(226, 226, 226) 0px 0px 4px;
+color: black;
 }
 
 
@@ -2405,7 +2402,7 @@ margin-right: 1vw;
 .materials_organized_div_wrapper { 
   display: flex;
   flex-direction: column;
-  width: 59vw;
+  width: max-content;
 margin: 20px;
   align-items: center;
   justify-content: center;

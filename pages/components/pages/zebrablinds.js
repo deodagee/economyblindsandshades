@@ -43,7 +43,7 @@ function ZebraBlinds() {
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
     const [active_wand_left_choice, setactive_wand_left_choice] = useState('');
     const [active_wand_right_choice, setactive_wand_right_choice] = useState('');
-    const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState(null);
+    const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("Selected Wand Side");
     const [active_wand_right_choice_rendering_content, setactive_wand_right_choice_rendering_content] = useState(null);
 
 
@@ -493,7 +493,7 @@ function ZebraBlinds() {
                                             src={"/chevronleft.png"}>
                                         </Image>
                                         <div className={styles.select_mount_type_group_title}>
-                                            <span className={styles.select_mount_type_group_title_tag}>1.</span>
+                                            <span className={styles.select_mount_type_group_title_tag}>1</span>
                                             Choose Your Mount Type</div>
                                     </div>
                                 </div>
@@ -524,9 +524,9 @@ function ZebraBlinds() {
                                     <span className={styles.first_chosen_inside_mount_selection_wrapper}>
                                         <Image
                                             alt="first chosen image"
-                                            width={400}
+                                            width={500}
                                             src={"/insidemountsketch.png"}
-                                            height={400}
+                                            height={500}
                                             className={styles.first_chosen_inside_mount_selection}>
 
                                         </Image>
@@ -1098,7 +1098,8 @@ function ZebraBlinds() {
                                                     </div>
                                                 </div>
 
-                                            </div>                                        </div>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -1111,9 +1112,9 @@ function ZebraBlinds() {
 
                                         <Image
                                             alt="first chosen image"
-                                            width={400}
-                                            src={"/insidemountsketch.png"}
-                                            height={400}
+                                            width={500}
+                                            src={"/outsidemountsketch.png"}
+                                            height={500}
                                             className={styles.first_chosen_outside_mount_selection}>
 
                                         </Image>
@@ -1695,7 +1696,7 @@ function ZebraBlinds() {
                                         height={100}
                                         src={"/chevronleft.png"}>
                                     </Image>
-                                    <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2. </span> Select Color / Material</div>
+                                    <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2 </span> Select Color / Material</div>
                                 </div>
                             </div>
 
@@ -1732,7 +1733,7 @@ function ZebraBlinds() {
                                             src={"/chevronleft.png"}>
                                         </Image>
                                         <div className={styles.select_lift_type_group_title}>
-                                            <span className={styles.select_lift_type_group_title_tag}>3.</span>
+                                            <span className={styles.select_lift_type_group_title_tag}>3</span>
                                             Select Lift Type
                                         </div>
                                     </div>
@@ -1878,7 +1879,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4.</span> Cassette
+                                                    <span className={styles.select_head_rail_group_title_tag}>4</span> Cassette
                                                 </div>
 
 
@@ -1974,7 +1975,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>5.</span> Bottom Rail
+                                                    <span className={styles.select_head_rail_group_title_tag}>5</span> Bottom Rail
                                                 </div>
 
 
@@ -2141,10 +2142,10 @@ function ZebraBlinds() {
                                                 {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
                                             </div>
                                             <div>
-                                                {active_wand_left_choice_rendering_content ? `Wand Side: ${active_wand_left_choice_rendering_content}` : "Please Select Wand Side"}
+                                                {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
                                             </div>
                                             <div>
-                                                {active_wand_right_choice_rendering_content ? `Wand Side: ${active_wand_right_choice_rendering_content}` : ""}
+                                                {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
 
                                             </div>
                                         </div>
@@ -2187,19 +2188,19 @@ function ZebraBlinds() {
 
                                         <div className={styles.answers_answers2}>
 
-                                                {selectedRailType === 'top' && selectedImagesTop && (
-                                                    <div className={styles.answers_answers2}>
-                                                        <p>{selectedImagesTop}</p>
-                                                    </div>
-                                                )}
-                                                
-                                                {selectedRailType === 'bottom' && selectedImagesBottom && (
-                                                    <div className={styles.answers_answers2}>
-                                                        <p>{selectedImagesBottom}</p>
-                                                    </div>
-                                                )}
+                                            {selectedRailType === 'top' && selectedImagesTop && (
+                                                <div className={styles.answers_answers2}>
+                                                    <p>{selectedImagesTop}</p>
+                                                </div>
+                                            )}
 
-                                            </div>
+                                            {selectedRailType === 'bottom' && selectedImagesBottom && (
+                                                <div className={styles.answers_answers2}>
+                                                    <p>{selectedImagesBottom}</p>
+                                                </div>
+                                            )}
+
+                                        </div>
 
                                     </div>
 
