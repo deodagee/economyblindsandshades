@@ -1638,6 +1638,32 @@
   flex-direction: column;
 }
 
+.Top_Piece, .Bottom_Piece { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Top_Piece_title , .Bottom_Piece_title { 
+  display: flex;
+  color: rgb(249, 249, 249);
+  background-color: black;
+  padding: 4px;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 35rem;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+
 .left_first_image_render {
   display: flex;
   width: 25vw;
@@ -1934,8 +1960,7 @@
 .motorized_option_image_placeholder {
   display: flex;
   width: 300px;
-  height: 150px;
-  background-color: grey;
+  height: auto;
 }
 
 .showleftchain_wrapper,
@@ -2240,9 +2265,12 @@
 }
 
 .materials_organized_div {
+  font-size: 11px;
+  white-space: nowrap;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  width: 50vw;
 }
 
 .materials_organized_div_image {
@@ -2657,6 +2685,15 @@
     grid-auto-rows: auto;
     gap: 10px;
   }
+  
+  .materials_organized_div { 
+    font-size: 10px;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 50vw;
+  }
 }
 
 
@@ -2682,6 +2719,15 @@
     justify-content: center;
   }
 
+
+  .materials_organized_div { 
+    font-size: 9px;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 50vw;
+  }
 }
 
 

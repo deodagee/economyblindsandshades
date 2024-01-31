@@ -461,8 +461,11 @@ function ZebraBlinds() {
                                             <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
                                                 <div>
                                                     {selectedImagesTop?.length > 0 && (
-                                                        <div>
-                                                            Top Piece
+                                                        <div className={styles.Top_Piece}>
+
+                                                            <span className= {styles.Top_Piece_title}>
+                                                        Top Rail
+                                                        </span>
                                                             <Image
                                                                 width={200}
                                                                 height={200}
@@ -475,8 +478,11 @@ function ZebraBlinds() {
                                                 </div>
                                                 <div>
                                                     {selectedImagesBottom?.length > 0 && (
-                                                        <div>
-                                                            Bottom Piece
+                                                        <div className={styles.Bottom_Piece}>
+
+                                                            <span className={styles.Bottom_Piece_title}>
+                                                            Bottom Rail
+                                                            </span>
                                                             <Image
                                                                 width={200}
                                                                 height={200}
@@ -1846,14 +1852,15 @@ function ZebraBlinds() {
                                                 />
                                             </div>
                                         )}
+                                        
 
                                         {showImageright && (
                                             <div className={styles.showrightchain_wrapper}>
                                                 <Image
                                                     width={400}
                                                     height={400}
-                                                    className={styles.show_right_chain_image_render}
-                                                    alt="showrightchain"
+                                                    className={styles.show_left_chain_image_render}
+                                                    alt="showleftchain"
                                                     src="/rightside.png"
                                                 />
                                             </div>
@@ -1879,7 +1886,14 @@ function ZebraBlinds() {
                                         <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
                                     </div>
 
-                                    <div className={styles.cord_less_option_image_placeholder}></div>
+                                    <div className={styles.cord_less_option_image_placeholder}>
+                                    <Image
+                                                    width={400}
+                                                    height={400}
+                                                    alt="showrightchain"
+                                                    src="/cordlesslift.png"
+                                                />
+                                    </div>
 
                                 </div>
                             </div>
@@ -1902,7 +1916,14 @@ function ZebraBlinds() {
                                         <div className={styles.motorized_price_value_subtitle}>$100.00</div>
                                     </div>
 
-                                    <div className={styles.motorized_option_image_placeholder}></div>
+                                    <div className={styles.motorized_option_image_placeholder}>
+                                    <Image
+                                                    width={400}
+                                                    height={400}
+                                                    alt="showrightchain"
+                                                    src="/motorizedlift.png"
+                                                />
+                                    </div>
 
                                 </div>
                             </div>
