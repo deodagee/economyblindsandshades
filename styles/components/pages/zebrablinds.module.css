@@ -1764,7 +1764,7 @@ margin-right: 1vw;
   color: black;
 }
 
-.ellipse_and_type_add_lift_feature {
+.select_lift_type_subtitle_wrapper {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -1788,49 +1788,100 @@ margin-right: 1vw;
   margin: 10px;
 }
 
-.select_chain_side_wrapper {
+.select_chain_option1_wrapper , .select_chain_option2_wrapper, .select_chain_option3_wrapper {
+  display: flex;
+  margin-left: 20px;
+  width: 55vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.select_chain_option1_ellipse_and_options, .select_chain_option2_ellipse_and_options, .select_chain_option3_ellipse_and_options {
   display: flex;
   flex-direction: row;
-  align-items: start;
-  justify-content: flex-start;
-  width: 60vw;
-  height: 200px;
-  padding-left: 20px;
+  align-items: center;
+  justify-content: center;
+
 }
 
 
-.select_chain_side_wrapper_subtitle {
+.select_chain_option1_ellipse_wrapper, .select_chain_option2_ellipse_wrapper, .select_chain_option3_ellipse_wrapper { 
+  width: 30px;
+}
+
+.wand_ellipse ,.cord_less_ellipse , .motorized_ellipse{
   display: flex;
-
+  width: 20px;
+  height: 20px;
+  background-color: #9f9f9f;
+  border-radius: 1rem;
 }
 
-.show_image_chain_buttons {
+.active_wand_cordless_motorized {
+  display: flex;
+  background-color: #29b200;
+  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+}
+
+
+.select_chain_option1_options, .select_chain_option2_options, .select_chain_option3_options { 
+  display: flex;
+  width: 30vw;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10%;
+  align-items: center;
+  }
+  
+
+  
+.wand_subtitle , .cord_less_subtitle , .motorized_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 0.45rem;
+  border-color: #8f8f8f;
+  border-width: 1px;
+  white-space: nowrap;
+}
+
+
+.options_price_seperator {
+  height: 3px;
+  width: 20px;
+  background-color: rgb(85, 85, 85);
+  border-radius: 0.60rem;
+}
+
+
+
+.free_subtitle, .cordlift_price_value_subtitle, .motorized_price_value_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 20px;
+  padding: 10px;
+  border-width: 1px;
+  border-radius: 0.45rem;
+  border-color: rgb(218, 218, 218);
+  white-space: nowrap;
+  color: green;
+}
+
+.wand_extra_buttons {
   width: max-content;
   display: flex;
   padding: 20px;
   gap: 10px;
 }
-
-.select_chain_left_box_button, .select_chain_right_box_button  {
-  width: 45px;
-  padding: 2px;
-  background-color: #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.56rem;
-  border-width: 1px;
-  border-color: #c3c3c3;
-}
-
-.select_chain_right_text:hover,
-.select_chain_left_text:hover {
-transform: scale(1.05);
-box-shadow: rgb(30, 30, 30) 0px 0px 3px;
-
-transition: 0.3s;
-}
-
 
 .select_chain_left_text, .select_chain_right_text{
   display: flex;
@@ -1842,6 +1893,15 @@ transition: 0.3s;
   border-radius: 0.35rem;
   border-width: 2px;
   border-color: rgb(169, 169, 169);
+}
+
+
+.select_chain_right_text:hover,
+.select_chain_left_text:hover {
+transform: scale(1.05);
+box-shadow: rgb(30, 30, 30) 0px 0px 3px;
+
+transition: 0.3s;
 }
 
 .active_wand_left_choice, .active_wand_right_choice {
@@ -1856,210 +1916,20 @@ transition: 0.3s;
   border-color: rgb(255, 255, 255);
 }
 
-.select_chain_right_box_button:hover,
-.select_chain_left_box_button:hover {
-  background-color: #ececec;
-  border-color: #ababab;
-}
-
-
-
-
-.show_right_chain_image_render {
+.wand_option_image_placeholder, .cord_less_option_image_placeholder, .motorized_option_image_placeholder { 
   display: flex;
-  width: 200px;
-  height: auto;
-}
-
-.showleftchain_wrapper {
-  display: flex;
-}
-
-.show_left_chain_image_render {
-  display: flex;
-  width: 200px;
-  height: auto;
-}
-
-.select_chain_options {
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 20px;
-  gap: 50px;
-  height: 420px;
-
-}
-
-.wand_option_group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.wand_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
-
-.active_wand_cordless_motorized {
-  display: flex;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.option_subtitles1 {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 5px;
-  height: 40px;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.wand_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  width: 80px;
-  height: 20px;
-  padding: 10px;
-  border-radius: 0.45rem;
-  border-color: #8f8f8f;
-  border-width: 1px;
-  white-space: nowrap;
-}
-
-.free_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 20px;
-  padding: 10px;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(233, 233, 233);
-  white-space: nowrap;
-  color: grey;
-}
-
-.select_chainparagraph {
-  display: flex;
-  font-size: 10px;
-  width: 150px;
-}
-
-.select_chain_options1 {
-  display: flex;
-  margin-left: 20px;
-}
-
-.cord_less_option_group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.option_ellipse_wrapper {
-  width: 30px;
-}
-
-.cord_less_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
-}
-
-.active_wand_cordless_motorized {
-  display: flex;
-  background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
-}
-
-.option_subtitles2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 50px;
-  width: 60vw;
-  height: 200px;
-}
-
-.cord_less_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  width: 80px;
-  height: 20px;
-  padding: 10px;
-  border-radius: 0.45rem;
-  border-color: #8f8f8f;
-  border-width: 1px;
-  white-space: nowrap;
-}
-
-
-.cordlift_price_value_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  height: 20px;
-  padding: 10px;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(218, 218, 218);
-  white-space: nowrap;
-  color: green;
-}
-
-.cord_less_option_image_placeholder {
-  display: flex;
-  width: 200px;
-  height: 140px;
+  width: 300px;
+  height: 150px;
   background-color: grey;
 }
 
-.select_chain_options2 {
+.showleftchain_wrapper, .showrightchain_wrapper {
   display: flex;
-  margin-left: 20px;
 }
 
-.motorized_option_group {
+.show_right_chain_image_render, .show_left_chain_image_render {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
-.motorized_ellipse_wrapper {
-  width: 30px;
-}
-
-.motorized_ellipse {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  background-color: #9f9f9f;
-  border-radius: 1rem;
 }
 
 .active_wand_cordless_motorized {
@@ -2067,60 +1937,6 @@ transition: 0.3s;
   background-color: #29b200;
   box-shadow: rgb(80, 80, 80) 0px 0px 5px;
 }
-
-.option_subtitles3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 50px;
-  width: 60vw;
-  height: 200px;
-}
-
-.motorized_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  width: 80px;
-  height: 20px;
-  padding: 10px;
-  border-radius: 0.45rem;
-  border-color: #8f8f8f;
-  border-width: 1px;
-  white-space: nowrap;
-}
-
-.options_price_seperator {
-  height: 3px;
-  width: 20px;
-  background-color: rgb(85, 85, 85);
-  border-radius: 0.60rem;
-}
-
-.motorized_price_value_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  height: 20px;
-  padding: 10px;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(218, 218, 218);
-  white-space: nowrap;
-  color: green;
-}
-
-.motorized_option_image_placeholder {
-  display: flex;
-  width: 200px;
-  height: 140px;
-  background-color: grey;
-}
-
-
 
 
 /* Start of Fabrics Page */
