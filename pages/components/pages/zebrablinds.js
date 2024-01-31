@@ -231,34 +231,7 @@ function ZebraBlinds() {
         ],
     };
 
-    const [selectedMaterial, setSelectedMaterial] = useState(null);
 
-    const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
-
-    const handleSelectMaterial = (key, src, label) => {
-        console.log(`Clicked on file: ${src}`);
-        setSelectedMaterial({ key, src, label });
-        setselectedFileNameMaterials(`${key} - ${label}`); // Combine key and label
-    };
-
-    const renderColorList = (colorList2) => (
-        <>
-            <div className={styles.images_and_subtitles} key={colorList2[0].key}>
-                {colorList2.map((item) => (
-                    <div
-                        key={item.label}
-                        className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
-                        onClick={() => handleSelectMaterial(item.key, item.src, item.label)} // Pass key, src, and label
-
-                    >
-                        <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
-                        <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
-                        <p className={styles.selectedImageClass_label}>{item.label}</p>
-                    </div>
-                ))}
-            </div>
-        </>
-    );
 
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -306,11 +279,48 @@ function ZebraBlinds() {
 
 
 
+    const [selectedMaterial, setSelectedMaterial] = useState(null);
+    const [firstImage_div, setfirstImage_div] = useState(true);
+
+
+    const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
+
+    const handleSelectMaterial = (key, src, label) => {
+        setfirstImage_div(false);
+        console.log(`Clicked on file: ${src}`);
+        setSelectedMaterial({ key, src, label });
+        setselectedFileNameMaterials(`${key} - ${label}`); // Combine key and label
+    };
+
+    const renderColorList = (colorList2) => (
+        <>
+            <div className={styles.images_and_subtitles} key={colorList2[0].key}>
+                {colorList2.map((item) => (
+                    <div
+                        key={item.label}
+                        className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
+                        onClick={() => handleSelectMaterial(item.key, item.src, item.label)} // Pass key, src, and label
+
+                    >
+                        <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
+                        <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
+                        <p className={styles.selectedImageClass_label}>{item.label}</p>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
+
+
+
     const [selectedImagesTop, setSelectedImagesTop] = useState([]);
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
     const [selectedRailType, setSelectedRailType] = useState(null);
 
     const handleImageClickImagesTop = (key) => {
+        setfirstImage_div(false);
+        setSelectedMaterial(false);
+
         setSelectedRailType('top'); // Set the selected rail type
 
         // Update selected images in the top section
@@ -323,6 +333,8 @@ function ZebraBlinds() {
     };
 
     const handleImageClickImagesBottom = (key) => {
+        setfirstImage_div(false);
+
         setSelectedRailType('bottom'); // Set the selected rail type
 
         // Update selected images in the bottom section
@@ -333,6 +345,8 @@ function ZebraBlinds() {
             setSelectedImagesTop(key === selectedImagesBottom ? null : matchingImage.key);
         }
     };
+
+    
 
 
 
@@ -405,6 +419,18 @@ function ZebraBlinds() {
                                     <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
                                     <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
                                 <div className={styles.selectedImageContainer}>
+                                    {firstImage_div && (
+                                        <div>
+                                            <Image
+                                                width={200}
+                                                height={200}
+                                                className={styles.left_first_image_render}
+                                                src="/rfblinds.jpg"
+                                                alt="Default Image"
+                                            />
+                                        </div>
+                                    )}
+
                                     {selectedMaterial ? (
                                         <>
                                             <div className={styles.left_imageContainer_wrapper}>
@@ -423,7 +449,6 @@ function ZebraBlinds() {
                                     ) : (
                                         <div className={styles.left_first_image_render_container_wrapper}>
                                             <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-
                                                 <div>
                                                     {selectedImagesTop?.length > 0 && (
                                                         <div>
@@ -437,15 +462,11 @@ function ZebraBlinds() {
                                                             />
                                                         </div>
                                                     )}
-
                                                 </div>
-
-
                                                 <div>
-
                                                     {selectedImagesBottom?.length > 0 && (
-                                                        <div> Bottom Piece
-
+                                                        <div>
+                                                            Bottom Piece
                                                             <Image
                                                                 width={200}
                                                                 height={200}
@@ -454,7 +475,6 @@ function ZebraBlinds() {
                                                                 alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
                                                             />
                                                         </div>
-
                                                     )}
                                                 </div>
                                             </div>
