@@ -276,111 +276,67 @@ function ZebraBlinds() {
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
-    const Top_Head_Rail_Choices_Fabrics_Aluminum = {
+    const Top_Head_Rail_Choices_Materials = {
 
         Rounded_Top_Cassette_With_Fabric_Insert: [
-            { key: 'White1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric ' },
-            { key: 'Grey1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric ' },
-            { key: 'Black1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric ' },
-            { key: 'Brown1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric ' },
-            { key: 'Beige1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric ' },
+            { key: 'White With Fabric1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric ' },
+            { key: 'Grey With Fabric1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric ' },
+            { key: 'Black With Fabric1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric ' },
+            { key: 'Brown With Fabric1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric ' },
+            { key: 'Beige With Fabric1', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric ' },
+
+            { key: 'White Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum ' },
+            { key: 'Grey Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum ' },
+            { key: 'Black Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum ' },
+            { key: 'Brown Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum ' },
+            { key: 'Beige Aluminum2', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum ' },
+
+
             // Add more image data as needed
         ],
 
-        Square_Top_Aluminum: [
-            { key: 'White', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum ' },
-            { key: 'Grey', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum ' },
-            { key: 'Black', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum ' },
-            { key: 'Brown', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum ' },
-            { key: 'Beige', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum ' },
-            // Add more image data as needed
-        ]
     }
 
-    const Bottom_Bottom_Rail_Choices_Fabrics_Aluminum = {
+    const Bottom_Bottom_Rail_Choices_Materials = {
 
         Bottom_Rail_Square_With_Fabric_Insert: [
-            { key: 'White1', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric ' },
-            { key: 'Grey1', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric ' },
-            { key: 'Black1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric ' },
-            { key: 'Brown1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric ' },
-            { key: 'Beige1', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric ' },
+            { key: 'White With Fabric2', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric' },
+            { key: 'Grey With Fabric2', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric ' },
+            { key: 'Black With Fabric2', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric ' },
+            { key: 'Brown With Fabric2', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric ' },
+            { key: 'Beige With Fabric2', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric ' },
+
+            { key: 'White Aluminum1', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum ' },
+            { key: 'Grey Aluminum1', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum ' },
+            { key: 'Black Aluminum1', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum ' },
+            { key: 'Brown Aluminum1', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum ' },
+            { key: 'Beige Aluminum1', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum ' },
+
             // Add more image data as needed
         ],
 
-        Bottom_Oval_Rail_Aluminum: [
-            { key: 'White', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum ' },
-            { key: 'Grey', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum ' },
-            { key: 'Black', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum ' },
-            { key: 'Brown', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum ' },
-            { key: 'Beige', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum ' },
-            // Add more image data as needed
-        ]
     }
 
-    const [selected_head_rail_color, Set_selected_head_rail_color] = useState(null);
-    const [selected_bottom_rail_color, Set_selected_bottom_rail_color] = useState(null);
 
 
-    const Match_Fabric_With_bottom = [
-        { key: 'Top', data: Top_Head_Rail_Choices_Fabrics_Aluminum.Rounded_Top_Cassette_With_Fabric_Insert },
-        { key: 'Bottom', data: Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Rail_Square_With_Fabric_Insert },
-    ];
+    const [selectedImagesTop, setSelectedImagesTop] = useState([]);
+    const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
+    const [selectedRailType, setSelectedRailType] = useState(null);
 
-    const Match_Amluminum_With_Aluminum = [
-        { key: 'Top', data: Top_Head_Rail_Choices_Fabrics_Aluminum.Square_Top_Aluminum },
-        { key: 'Bottom', data: Bottom_Bottom_Rail_Choices_Fabrics_Aluminum.Bottom_Oval_Rail_Aluminum },
-    ];
-
-
-    const Rounded_Top_Cassette_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
-        (item) => item.key === 'Top' && item.data.some((imageData) => imageData.key === selected_head_rail_color)
-    )?.data.find((imageData) => imageData.key === selected_head_rail_color);
-
-    const Bottom_Rail_Square_With_Fabric_Insert_function = Match_Fabric_With_bottom.find(
-        (item) => item.key === 'Bottom' && item.data.some((imageData) => imageData.key === selected_bottom_rail_color)
-    )?.data.find((imageData) => imageData.key === selected_bottom_rail_color);
-
-    const Square_Top_Aluminum_function = Match_Amluminum_With_Aluminum.find(
-        (item) => item.key === 'Top' && item.data.some((imageData) => imageData.key === selected_head_rail_color)
-    )?.data.find((imageData) => imageData.key === selected_head_rail_color);
-
-    const Bottom_Oval_Rail_Aluminum_function = Match_Amluminum_With_Aluminum.find(
-        (item) => item.key === 'Bottom' && item.data.some((imageData) => imageData.key === selected_bottom_rail_color)
-    )?.data.find((imageData) => imageData.key === selected_bottom_rail_color);
-
-
-    const handleRenderClickImageToMergeFabrics = (imageName) => {
-        const baseClassName = styles[imageName];
-        const classNames = [baseClassName];
-    
-        if (imageName === selected_bottom_rail_color) {
-            classNames.push(styles.selected_bottom_rail_color);
-        }
-    
-        if (imageName === selected_head_rail_color) {
-            classNames.push(styles.selected_head_rail_color);
-        }
-    
-        return classNames.join(' ');
+    const handleImageClickImagesTop = (key) => {
+        setSelectedImagesTop(key === selectedImagesTop ? null : key);
+        setSelectedRailType('top'); // Set the selected rail type
     };
-    
-    
-    const handleRenderClickImageToMergeAluminum = (imageName) => {
-        const baseClassName = styles[imageName];
-        const classNames = [baseClassName];
-    
-        if (imageName === selected_head_rail_color) {
-            classNames.push(styles.selected_head_rail_color);
-        }
-    
-        if (imageName === selected_bottom_rail_color) {
-            classNames.push(styles.selected_bottom_rail_color);
-        }
-    
-        return classNames.join(' ');
+
+    const handleImageClickImagesBottom = (key) => {
+        setSelectedImagesBottom(key === selectedImagesBottom ? null : key);
+        setSelectedRailType('bottom'); // Set the selected rail type
     };
-    
+
+
+
+
+
 
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
     //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -1960,41 +1916,42 @@ function ZebraBlinds() {
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
                                                             <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Select Top Cassette </div>
 
+                                                            <div className={styles.materials_organized_div_wrapper} >
 
-                                                            <div >
-                                                                {Object.keys(Top_Head_Rail_Choices_Fabrics_Aluminum).map((key) => (
-                                                                    <div className={styles.fabric_list_images_render_top} key={key}>
-                                                                        {Top_Head_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
-                                                                            <div key={imageData.key} className={styles.fabric_list_top_image_and_description}>
-                                                                                {/* Render the actual image here */}
-
-                                                                                <div>
-                                                                                    <Image
-                                                                                        className={handleRenderClickImageToMergeFabrics(imageData.key)}
-                                                                                        width={100}
-                                                                                        height={100}
-                                                                                        src={imageData.src}
-                                                                                        alt={imageData.label}
-                                                                                        onClick={() => {
-                                                                                            if (!active_skip_head_rail_ellipse) {
-                                                                                                console.log(`Click handler for ${imageData.key}`);
-                                                                                                Set_selected_head_rail_color(imageData.key);
-                                                                                            }
-                                                                                        }}
-                                                                                        style={{ pointerEvents: active_skip_head_rail_ellipse ? 'none' : 'auto' }}
-                                                                                    />
-                                                                                </div>
-                                                                                <div className={styles.fabric_list_top_image_description}>
-                                                                                    <div>{imageData.label}</div>
-                                                                                </div>
+                                                                {Object.keys(Top_Head_Rail_Choices_Materials).map(
+                                                                    (railType, index) => (
+                                                                        <div key={index}>
+                                                                            <div className={styles.materials_organized_div}>
+                                                                                {Top_Head_Rail_Choices_Materials[railType].map(
+                                                                                    (choice) => (
+                                                                                        <div
+                                                                                            className={`${styles.materials_organized_div_image} ${selectedImagesTop.includes(choice.key)
+                                                                                                ? styles.selected
+                                                                                                : ""
+                                                                                                }`}
+                                                                                            key={choice.key}
+                                                                                            onClick={() => handleImageClickImagesTop(choice.key)}
+                                                                                        >
+                                                                                            <Image
+                                                                                                width={100}
+                                                                                                height={100}
+                                                                                                src={choice.src}
+                                                                                                alt={choice.label}
+                                                                                            />
+                                                                                            <p>{choice.label}</p>
+                                                                                        </div>
+                                                                                    )
+                                                                                )}
                                                                             </div>
-                                                                        ))}
-                                                                    </div>
-                                                                ))}
+                                                                        </div>
+                                                                    )
+                                                                )}
+
                                                             </div>
                                                         </div>
                                                     )}
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -2044,33 +2001,42 @@ function ZebraBlinds() {
                                                                             *Note: If you chose to skip the top cassette color, steel material will be set.
                                                                         </div>
 
-                                                                        {Object.keys(Bottom_Bottom_Rail_Choices_Fabrics_Aluminum).map((key) => (
-                                                                            <div className={styles.fabric_list_images_render_bottom} key={key}>
-                                                                                {Bottom_Bottom_Rail_Choices_Fabrics_Aluminum[key].map((imageData) => (
-                                                                                    <div key={imageData.key} className={styles.fabric_list_bottom_image_and_description}>
-                                                                                        {/* Render the actual image here */}
-                                                                                        <Image
-                                                                                            className={handleRenderClickImageToMergeAluminum(imageData.key)}
-                                                                                            width={100}
-                                                                                            height={100}
-                                                                                            src={imageData.src}
-                                                                                            alt={imageData.label}
-                                                                                            onClick={() => {
-                                                                                                if (!active_skip_bottom_rail_ellipse) {
-                                                                                                    console.log(`Click handler for ${imageData.key}`);
-                                                                                                    Set_selected_bottom_rail_color(imageData.key);
-                                                                                                }
-                                                                                            }}
-                                                                                            style={{ pointerEvents: active_skip_bottom_rail_ellipse ? 'none' : 'auto' }}
-                                                                                        />
-                                                                                        <div className={styles.fabric_list_bottom_image_description}>
-                                                                                            <div>{imageData.label}</div>
+
+
+                                                                        <div className={styles.materials_organized_div_wrapper} >
+
+                                                                            {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map(
+                                                                                (railType, index) => (
+                                                                                    <div key={index}>
+                                                                                        <div className={styles.materials_organized_div}>
+                                                                                            {Bottom_Bottom_Rail_Choices_Materials[railType].map(
+                                                                                                (choice) => (
+                                                                                                    <div
+                                                                                                        className={`${styles.materials_organized_div_image} ${selectedImagesBottom.includes(choice.key)
+                                                                                                            ? styles.selected
+                                                                                                            : ""
+                                                                                                            }`}
+                                                                                                        key={choice.key}
+                                                                                                        onClick={() => handleImageClickImagesBottom(choice.key)}
+                                                                                                    >
+                                                                                                        <Image
+                                                                                                            width={100}
+                                                                                                            height={100}
+                                                                                                            src={choice.src}
+                                                                                                            alt={choice.label}
+                                                                                                        />
+                                                                                                        <p>{choice.label}</p>
+                                                                                                    </div>
+                                                                                                )
+                                                                                            )}
                                                                                         </div>
                                                                                     </div>
-                                                                                ))}
-                                                                            </div>
-                                                                        ))}
+                                                                                )
+                                                                            )}
+                                                                        </div>
+
                                                                     </div>
+
                                                                 </div>
                                                             )}
                                                         </div>
@@ -2080,18 +2046,15 @@ function ZebraBlinds() {
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
-
-
                             </div>
                         </div>
-
 
                         <div className={styles.select_head_rail_seperator_line}></div>
                         <div className={styles.quantity_seperator_line}></div>
 
                         <div className={styles.quantity_and_add_to_cart_group}>
-
 
                             <div className={styles.review_your_order}>Review Your Blind Selection</div>
                             <div className={styles.review_your_order_seperator_line}></div>
@@ -2127,8 +2090,6 @@ function ZebraBlinds() {
 
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.width2_answer}>Window Size:</div>
-
-
 
                                         <div className={styles.answers_answers}>
 
@@ -2196,42 +2157,24 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
                                         <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
-
-
-
-
-
-                                        <div className={styles.answers_answers2}>
-
+                                        <div className={styles.description_and_answer}>
 
                                             <div className={styles.answers_answers2}>
-                                                {Rounded_Top_Cassette_With_Fabric_Insert_function && (
-                                                    <div className={styles.div1}>
-                                                        <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
+
+                                                {selectedRailType === 'top' && selectedImagesTop && (
+                                                    <div className={styles.answers_answers2}>
+                                                        <p>{selectedImagesTop}</p>
                                                     </div>
                                                 )}
 
-                                                {Square_Top_Aluminum_function && (
-                                                    <div className={styles.div1}>
-                                                        <span>{Square_Top_Aluminum_function.label}</span>
+                                                {selectedRailType === 'bottom' && selectedImagesBottom && (
+                                                    <div className={styles.answers_answers2}>
+                                                        <p>{selectedImagesBottom}</p>
                                                     </div>
                                                 )}
 
-                                                {Bottom_Rail_Square_With_Fabric_Insert_function && (
-                                                    <div className={styles.div2}>
-                                                        <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
-                                                    </div>
-                                                )}
-
-                                                {Bottom_Oval_Rail_Aluminum_function && (
-                                                    <div className={styles.div2}>
-                                                        <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
-                                                    </div>
-                                                )}
                                             </div>
-
                                         </div>
-
                                     </div>
 
                                     <span
@@ -2241,31 +2184,22 @@ function ZebraBlinds() {
                                     <div className={styles.description_and_answer}>
 
                                         <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
+
                                         <div className={styles.answers_answers2}>
-                                            {Rounded_Top_Cassette_With_Fabric_Insert_function && (
-                                                <div className={styles.div1}>
-                                                    <span>{Rounded_Top_Cassette_With_Fabric_Insert_function.label}</span>
-                                                </div>
-                                            )}
 
-                                            {Square_Top_Aluminum_function && (
-                                                <div className={styles.div1}>
-                                                    <span>{Square_Top_Aluminum_function.label}</span>
-                                                </div>
-                                            )}
+                                                {selectedRailType === 'top' && selectedImagesTop && (
+                                                    <div className={styles.answers_answers2}>
+                                                        <p>{selectedImagesTop}</p>
+                                                    </div>
+                                                )}
+                                                
+                                                {selectedRailType === 'bottom' && selectedImagesBottom && (
+                                                    <div className={styles.answers_answers2}>
+                                                        <p>{selectedImagesBottom}</p>
+                                                    </div>
+                                                )}
 
-                                            {Bottom_Rail_Square_With_Fabric_Insert_function && (
-                                                <div className={styles.div2}>
-                                                    <span>{Bottom_Rail_Square_With_Fabric_Insert_function.label}</span>
-                                                </div>
-                                            )}
-
-                                            {Bottom_Oval_Rail_Aluminum_function && (
-                                                <div className={styles.div2}>
-                                                    <span>{Bottom_Oval_Rail_Aluminum_function.label}</span>
-                                                </div>
-                                            )}
-                                        </div>
+                                            </div>
 
                                     </div>
 
@@ -2277,11 +2211,6 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
-
-
-
-
-
                         <div className={styles.shipping_details_group_wrapper}>
                             <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
                             <div className={styles.shipping_details_title_wrapper}>
@@ -2289,8 +2218,6 @@ function ZebraBlinds() {
                                 <div className={styles.total_price_tile}>Total Price</div>
                             </div>
                             <div className={styles.shipping_divider1}></div>
-
-
                             <div className={styles.shipping_tagger}>
 
                                 <div className={styles.shipping}>Shipping</div>
@@ -2300,11 +2227,9 @@ function ZebraBlinds() {
                             </div>
 
                             <div className={styles.shipping_divider2}></div>
-
                             <div className={styles.order_number}>Order Number: 345969654</div>
                             <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
                             <div className={styles.date}>00/00/0000</div>
-
 
                             <div className={styles.add_to_cart_rectangle}></div>
 
@@ -2321,8 +2246,8 @@ function ZebraBlinds() {
                             />
                         </div>
                     </ol>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     )
 }
