@@ -324,6 +324,8 @@ function ZebraBlinds() {
     const [selectedRailType, setSelectedRailType] = useState(null);
 
     const handleImageClickImagesTop = (key) => {
+        setSelectedRailType('top'); // Set the selected rail type
+
         // Update selected images in the top section
         setSelectedImagesTop(key === selectedImagesTop ? null : key);
         // Find and select the corresponding image in the bottom section
@@ -334,6 +336,8 @@ function ZebraBlinds() {
     };
 
     const handleImageClickImagesBottom = (key) => {
+        setSelectedRailType('bottom'); // Set the selected rail type
+
         // Update selected images in the bottom section
         setSelectedImagesBottom(key === selectedImagesBottom ? null : key);
         // Find and select the corresponding image in the top section
