@@ -421,13 +421,17 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.page_wrapper}>
+                    
                     <ol className={styles.left_half_of_page}>
                         <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
                             <div className={styles.sliding_gallery_component}>
+
                                 <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
                                     <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
-                                    <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p></div>
+                                    <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p>
+                                    </div>
+
                                 <div className={styles.selectedImageContainer}>
                                     {firstImage_div && (
                                         <div>
@@ -498,13 +502,10 @@ function ZebraBlinds() {
                                     )}
                                 </div>
 
-
-
                             </div>
                         </div>
-
-
                     </ol>
+
 
                     <ol className={styles.right_half}>
 
