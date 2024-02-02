@@ -467,20 +467,20 @@ function ZebraBlinds() {
                                     ) : (
                                         <>
                                             {selectedImagesTop?.length > 0 && (
-                                                    <div className={styles.left_imageContainer_wrapper}>
-                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                                                            <span className={styles.left_imageContainer_image_itself1_label}>
-                                                                Top Rail
-                                                            </span>
-                                                            <Image
-                                                                width={200}
-                                                                height={200}
-                                                                className={styles.left_first_image_render}
-                                                                src={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.src}
-                                                                alt={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.label}
-                                                            />
-                                                        </div>
+                                                <div className={styles.left_imageContainer_wrapper}>
+                                                    <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                        <span className={styles.left_imageContainer_image_itself1_label}>
+                                                            Top Rail
+                                                        </span>
+                                                        <Image
+                                                            width={200}
+                                                            height={200}
+                                                            className={styles.left_first_image_render}
+                                                            src={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.src}
+                                                            alt={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.label}
+                                                        />
                                                     </div>
+                                                </div>
 
                                             )}
 
@@ -488,21 +488,21 @@ function ZebraBlinds() {
 
                                                 {selectedImagesBottom?.length > 0 && (
 
-                                                        <div className={styles.left_imageContainer_wrapper}>
+                                                    <div className={styles.left_imageContainer_wrapper}>
 
-                                                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                                                                <span className={styles.left_imageContainer_image_itself1_label}>
-                                                                    Bottom Rail
-                                                                </span>
-                                                                <Image
-                                                                    width={200}
-                                                                    height={200}
-                                                                    className={styles.left_first_image_render}
-                                                                    src={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.src}
-                                                                    alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
-                                                                />
-                                                            </div>
+                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                            <span className={styles.left_imageContainer_image_itself1_label}>
+                                                                Bottom Rail
+                                                            </span>
+                                                            <Image
+                                                                width={200}
+                                                                height={200}
+                                                                className={styles.left_first_image_render}
+                                                                src={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.src}
+                                                                alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
+                                                            />
                                                         </div>
+                                                    </div>
 
                                                 )}
                                             </div>
@@ -1748,7 +1748,7 @@ function ZebraBlinds() {
 
 
 
-                        <div className={styles.select_color_type_seperator_line}></div>
+                        <div className={styles.review_your_order_seperator_line}></div>
 
 
 
@@ -1783,7 +1783,7 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
-                        <div className={styles.select_lift_type_seperator_line}></div>
+                        <div className={styles.review_your_order_seperator_line}></div>
 
                         <div className={styles.select_lift_type_group}>
                             <span className={styles.titled_step_combo}>
@@ -2109,15 +2109,38 @@ function ZebraBlinds() {
                             </div>
                         </div>
 
-                        <div className={styles.select_head_rail_seperator_line}></div>
-                        <div className={styles.quantity_seperator_line}></div>
+
+                        <div className={styles.seperator_line_div}>
+                            <div className={styles.review_your_order_seperator_line2}></div>
+                            <div className={styles.review_your_order_seperator_line1}></div>
+                            <div className={styles.review_your_order_seperator_line0}></div>
+
+                            <div className={styles.review_your_order_seperator_line0}></div>
+                            <div className={styles.review_your_order_seperator_line1}></div>
+                            <div className={styles.review_your_order_seperator_line2}></div>
+
+                        </div>
 
                         <div className={styles.quantity_and_add_to_cart_group}>
 
+                            <div className={styles.review_your_order_seperator_line3}></div>
                             <div className={styles.review_your_order}>Review Your Blind Selection</div>
-                            <div className={styles.review_your_order_seperator_line}></div>
 
+                            <span className={styles.my_order_band_wrapper}>
+                                <div className={styles.my_order_band}>
+                                    <span className={styles.my_order_band_element1}>
+                                        My Order
+                                    </span>
+                                    <span className={styles.my_order_band_element2}>
+                                        <Link href={'/zebrablinds'}>
+                                            Restart
+                                        </Link>
+                                    </span>
+
+                                </div>
+                            </span>
                             <div className={styles.review_your_order_bg}>
+
                                 <div className={styles.order_items_list}>
                                     <span
                                         className={styles.bill_divider}>

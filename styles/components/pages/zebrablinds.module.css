@@ -630,7 +630,7 @@
 .select_color_type_seperator_line {
   display: flex;
   height: 3px;
-  width: 98%;
+  width: 60vw;
   margin: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -1628,7 +1628,7 @@
 .select_lift_type_seperator_line {
   display: flex;
   height: 3px;
-  width: 98%;
+  width: 60vw;
   margin: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -2424,7 +2424,7 @@
 .select_head_rail_seperator_line {
   display: flex;
   height: 2px;
-  width: 98%;
+  width: 60vw;
   margin: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -2436,7 +2436,7 @@
 .quantity_seperator_line {
   display: flex;
   height: 2px;
-  width: 98%;
+  width: 50vw;
   margin: 10px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -2495,15 +2495,72 @@
   font-size: 20px;
   font-variant-caps: black;
   font-weight: 700;
+  margin-top: 50px;
+  margin: 10px;
+
 }
 
 .review_your_order_seperator_line {
   display: flex;
   height: 3px;
-  width: 100%;
-  margin: 10px;
+  width: 60vw;
+  margin: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+  background-color: rgb(191, 191, 191);
+  border-radius: 0.56rem;
+}
+
+.seperator_line_div { 
+  display: flex;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  transform: scale(0.5);
+  margin-bottom: 20px;
+
+}
+
+
+.review_your_order_seperator_line0 { 
+  display: flex;
+  height: 2px;
+  width: 20vw;
+  margin-bottom: 5px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 0.56rem;
+}
+
+
+.review_your_order_seperator_line1 { 
+  display: flex;
+  height: 2px;
+  width: 15vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  margin-bottom: 5px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 0.56rem;
+}
+
+.review_your_order_seperator_line2 { 
+  display: flex;
+  height: 2px;
+  width: 10vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  margin-bottom: 5px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 0.56rem;
+}
+
+.review_your_order_seperator_line3 { 
+  display: flex;
+  height: 3px;
+  width: 60vw;
+  margin-bottom: 20px;
   background-color: rgb(191, 191, 191);
   border-radius: 0.56rem;
 }
@@ -2531,6 +2588,59 @@
   font-size: 13px;
   color: black;
   width: 500px;
+}
+
+.my_order_band_wrapper {
+  display: flex;
+  background-color: rgb(68, 68, 68);
+}
+
+.my_order_band {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 60vw;
+  height: 30px;
+}
+
+.my_order_band_element1 {
+  display: flex;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100px;
+  transition: 0.3s;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.my_order_band_element1:hover { 
+color: rgb(228, 228, 228);
+text-decoration: underline;
+}
+
+.my_order_band_element2 {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: auto;
+  width: 100px;
+  color: rgb(183, 0, 0);
+  transition: 0.3s;
+
+}
+
+.my_order_band_element2:hover {
+  background-color: rgb(213, 213, 213);
+  transition: 0.3s;
+  text-decoration: underline;
 }
 
 .bill_divider {
