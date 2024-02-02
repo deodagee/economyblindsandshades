@@ -35,10 +35,6 @@
   border-radius: 0.56rem;
 }
 
-.sliding_gallery_component {
-
-
-}
 
 .slider {
   display: flex;
@@ -1502,19 +1498,18 @@
   background: linear-gradient(to bottom, #eeeeee, #eeeeee, #ffffff, #eeeeee, #eeeeee);
   position: fixed;
   left: 0;
-
 }
 
 .left_half_of_page_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .sliding_gallery_component {
   display: flex;
-  gap: 0;
+  position: fixed;
+  top: 22vh;
   width: 28vw;
   height: 75vh;
   flex-direction: column;
@@ -1523,11 +1518,10 @@
   background: linear-gradient(to bottom, #eeeeee, #eeeeee, #ffffff, #eeeeee, #eeeeee);
   box-shadow: rgb(146, 146, 146) 3px 2px 7px;
   border-width: 1px;
-  border-color: rgb(49, 49, 49);
+  border-color: rgb(195, 195, 195);
   border-radius: 0.55rem;
   background-color: rgb(183, 183, 183);
   padding: 10px;
-  margin-right: 1vw;
 }
 
 
@@ -1536,23 +1530,24 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background-color: rgb(69, 69, 69);
+  background-color: rgb(230, 230, 230);
   width: max-content;
+  height: 10vh;
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 0.35rem;
-  box-shadow: rgb(52, 52, 52) 1px 3px 10px;
+  box-shadow: rgb(157, 157, 157) 1px 1px 6px;
   margin: 5px;
 }
 
 .imageContainer_title1 {
-  color: white;
+  color: rgb(14, 106, 101);
   font-size: 20px;
 }
 
 .imageContainer_title2 {
-  color: white;
+  color: rgb(84, 84, 84);
   font-size: 12px;
 }
 
@@ -1563,120 +1558,57 @@
 }
 
 .selectedImageContainer {
-  width: 320px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.left_imageContainer_wrapper {
   width: 25vw;
+  height: 70vh;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  background-color: rgb(221, 221, 221);
 }
-
-.left_imageContainer {
-  background-color: rgb(212, 212, 212);
-  border-width: 2px;
-  border-color: rgb(206, 206, 206);
-  transition: 0.4s;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.left_imageContainer_image_itself1 {
-  display: flex;
-  width: 320px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  border-color: black;
-  border-width: 1px;
-}
-
-
-
-.left_imageContainer_image_itself1_label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(0, 0, 0);
-  font-size: 12px;
-  background-color: white;
-
-}
-
-.left_first_image_render_container_wrapper {
-  width: auto;
-  height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 
 .left_first_image_render_container {
   background-color: rgb(212, 212, 212);
   border-width: 2px;
   border-color: rgb(206, 206, 206);
   transition: 0.4s;
-  width: 25vw;
-  height: auto;
+  width: 23vw;
+  height: 28vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.Top_Piece, .Bottom_Piece { 
+.left_first_image_render {
   display: flex;
-  flex-direction: column;
+  height: 22vh;
+  width: auto;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-.Top_Piece_title , .Bottom_Piece_title { 
+.left_imageContainer_wrapper {
   display: flex;
+}
+
+
+.left_imageContainer_image_itself1_label {
+  display: flex;
+  height: 3vh;
   color: rgb(249, 249, 249);
   background-color: black;
   padding: 4px;
   border-color: white;
   border-width: 3px;
   border-radius: 35rem;
-  width: 100px;
+  width: 150px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-
+  margin: 1vh;
+  white-space: nowrap;
 }
-
-
-.left_first_image_render {
-  display: flex;
-  width: 25vw;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25rem;
-  border-color: black;
-  border-width: 1px;
-}
-
-
-
 
 .divider_line {
   height: 2px;
@@ -2685,8 +2617,8 @@
     grid-auto-rows: auto;
     gap: 10px;
   }
-  
-  .materials_organized_div { 
+
+  .materials_organized_div {
     font-size: 10px;
     white-space: nowrap;
     display: grid;
@@ -2720,7 +2652,7 @@
   }
 
 
-  .materials_organized_div { 
+  .materials_organized_div {
     font-size: 9px;
     white-space: nowrap;
     display: grid;

@@ -421,7 +421,7 @@ function ZebraBlinds() {
                 </div>
 
                 <div className={styles.page_wrapper}>
-                    
+
                     <ol className={styles.left_half_of_page}>
                         <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
@@ -430,27 +430,31 @@ function ZebraBlinds() {
                                 <div className={styles.imageContainer_titles}><p className={styles.imageContainer_title1}>Image Viewer</p>
                                     <p className={styles.imageContainer_title2}>Selected Images Will Appear Here</p>
                                     <p className={styles.imageContainer_title3}>*All Images Owned by Economy Blinds And Shades Inc.</p>
-                                    </div>
+                                </div>
 
                                 <div className={styles.selectedImageContainer}>
                                     {firstImage_div && (
-                                        <div>
-                                            <Image
-                                                width={200}
-                                                height={200}
-                                                className={styles.left_first_image_render}
-                                                src="/rfblinds.jpg"
-                                                alt="Default Image"
-                                            />
+                                        <div className={styles.left_imageContainer_wrapper}>
+
+                                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                <Image
+                                                    width={200}
+                                                    height={200}
+                                                    className={styles.left_first_image_render}
+                                                    src="/rfblinds.jpg"
+                                                    alt="Default Image"
+                                                />
+                                                <h3 className={styles.left_imageContainer_image_itself1_label}>Welcome</h3>
+                                            </div>
                                         </div>
                                     )}
 
                                     {selectedMaterial ? (
                                         <>
                                             <div className={styles.left_imageContainer_wrapper}>
-                                                <div className={`${styles.left_imageContainer} ${styles.left_imageContainer_styled}`}>
+                                                <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
                                                     <Image
-                                                        className={styles.left_imageContainer_image_itself1}
+                                                        className={styles.left_first_image_render}
                                                         src={selectedMaterial.src}
                                                         alt='image'
                                                         width={100}
@@ -461,15 +465,13 @@ function ZebraBlinds() {
                                             </div>
                                         </>
                                     ) : (
-                                        <div className={styles.left_first_image_render_container_wrapper}>
-                                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                                                <div>
-                                                    {selectedImagesTop?.length > 0 && (
-                                                        <div className={styles.Top_Piece}>
-
-                                                            <span className= {styles.Top_Piece_title}>
-                                                        Top Rail
-                                                        </span>
+                                        <>
+                                            {selectedImagesTop?.length > 0 && (
+                                                    <div className={styles.left_imageContainer_wrapper}>
+                                                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                            <span className={styles.left_imageContainer_image_itself1_label}>
+                                                                Top Rail
+                                                            </span>
                                                             <Image
                                                                 width={200}
                                                                 height={200}
@@ -478,27 +480,33 @@ function ZebraBlinds() {
                                                                 alt={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.label}
                                                             />
                                                         </div>
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    {selectedImagesBottom?.length > 0 && (
-                                                        <div className={styles.Bottom_Piece}>
+                                                    </div>
 
-                                                            <span className={styles.Bottom_Piece_title}>
-                                                            Bottom Rail
-                                                            </span>
-                                                            <Image
-                                                                width={200}
-                                                                height={200}
-                                                                className={styles.left_first_image_render}
-                                                                src={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.src}
-                                                                alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
-                                                            />
+                                            )}
+
+                                            <div>
+
+                                                {selectedImagesBottom?.length > 0 && (
+
+                                                        <div className={styles.left_imageContainer_wrapper}>
+
+                                                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                                                                <span className={styles.left_imageContainer_image_itself1_label}>
+                                                                    Bottom Rail
+                                                                </span>
+                                                                <Image
+                                                                    width={200}
+                                                                    height={200}
+                                                                    className={styles.left_first_image_render}
+                                                                    src={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.src}
+                                                                    alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
+                                                                />
+                                                            </div>
                                                         </div>
-                                                    )}
-                                                </div>
+
+                                                )}
                                             </div>
-                                        </div>
+                                        </>
                                     )}
                                 </div>
 
@@ -1853,7 +1861,7 @@ function ZebraBlinds() {
                                                 />
                                             </div>
                                         )}
-                                        
+
 
                                         {showImageright && (
                                             <div className={styles.showrightchain_wrapper}>
@@ -1888,12 +1896,12 @@ function ZebraBlinds() {
                                     </div>
 
                                     <div className={styles.cord_less_option_image_placeholder}>
-                                    <Image
-                                                    width={400}
-                                                    height={400}
-                                                    alt="showrightchain"
-                                                    src="/cordlesslift.png"
-                                                />
+                                        <Image
+                                            width={400}
+                                            height={400}
+                                            alt="showrightchain"
+                                            src="/cordlesslift.png"
+                                        />
                                     </div>
 
                                 </div>
@@ -1918,12 +1926,12 @@ function ZebraBlinds() {
                                     </div>
 
                                     <div className={styles.motorized_option_image_placeholder}>
-                                    <Image
-                                                    width={400}
-                                                    height={400}
-                                                    alt="showrightchain"
-                                                    src="/motorizedlift.png"
-                                                />
+                                        <Image
+                                            width={400}
+                                            height={400}
+                                            alt="showrightchain"
+                                            src="/motorizedlift.png"
+                                        />
                                     </div>
 
                                 </div>
