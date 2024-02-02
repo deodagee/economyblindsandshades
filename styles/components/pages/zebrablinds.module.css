@@ -2642,6 +2642,7 @@
   background-color: rgb(213, 213, 213);
   transition: 0.3s;
   text-decoration: underline;
+  color: rgb(133, 109, 0);
 }
 
 .bill_divider {
