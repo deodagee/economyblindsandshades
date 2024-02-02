@@ -694,7 +694,6 @@ function ZebraBlinds() {
                                                     </div>
                                                 </div>
 
-                                                <div className={styles.choose_width_or_height_image_placeholder}></div>
                                                 <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
                                                     <div className={styles.select_your_width_and_height}>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
 

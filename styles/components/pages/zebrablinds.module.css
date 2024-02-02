@@ -748,14 +748,6 @@
   color: rgb(197, 128, 0);
 }
 
-.choose_width_or_height_image_placeholder {
-  display: flex;
-  height: 20vh;
-  width: 25vw;
-  background-color: black;
-  margin: 20px;
-}
-
 
 .bottom_portion_ruler_and_stuff_wrapper {
   display: flex;
