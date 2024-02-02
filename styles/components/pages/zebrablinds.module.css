@@ -1531,7 +1531,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(230, 230, 230);
-  width: max-content;
+  width: 20vw;
   height: 10vh;
   padding: 10px;
   padding-left: 15px;
@@ -1544,6 +1544,7 @@
 .imageContainer_title1 {
   color: rgb(14, 106, 101);
   font-size: 20px;
+  font-weight: 800;
 }
 
 .imageContainer_title2 {
@@ -2511,7 +2512,7 @@
   border-radius: 0.56rem;
 }
 
-.seperator_line_div { 
+.seperator_line_div {
   display: flex;
   width: 60vw;
   align-items: center;
@@ -2524,7 +2525,7 @@
 }
 
 
-.review_your_order_seperator_line0 { 
+.review_your_order_seperator_line0 {
   display: flex;
   height: 2px;
   width: 20vw;
@@ -2534,7 +2535,7 @@
 }
 
 
-.review_your_order_seperator_line1 { 
+.review_your_order_seperator_line1 {
   display: flex;
   height: 2px;
   width: 15vw;
@@ -2545,7 +2546,7 @@
   border-radius: 0.56rem;
 }
 
-.review_your_order_seperator_line2 { 
+.review_your_order_seperator_line2 {
   display: flex;
   height: 2px;
   width: 10vw;
@@ -2556,7 +2557,7 @@
   border-radius: 0.56rem;
 }
 
-.review_your_order_seperator_line3 { 
+.review_your_order_seperator_line3 {
   display: flex;
   height: 3px;
   width: 60vw;
@@ -2592,7 +2593,7 @@
 
 .my_order_band_wrapper {
   display: flex;
-  background-color: rgb(68, 68, 68);
+  background-color: #17605c;
 }
 
 .my_order_band {
@@ -2618,9 +2619,9 @@
   color: white;
 }
 
-.my_order_band_element1:hover { 
-color: rgb(228, 228, 228);
-text-decoration: underline;
+.my_order_band_element1:hover {
+  color: rgb(228, 228, 228);
+  text-decoration: underline;
 }
 
 .my_order_band_element2 {
