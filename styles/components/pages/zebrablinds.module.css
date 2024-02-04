@@ -110,10 +110,7 @@
   font-size: 12px;
 }
 
-.price_regular {
-  display: flex;
-  color: green;
-}
+
 
 .price_discount {
   display: flex;
@@ -854,7 +851,7 @@
 }
 
 .inches_scroller_div div:hover {
-  background-color: rgb(213, 213, 213);
+  transform: scale(1.3);
   transition: 0.4s;
 }
 
@@ -932,10 +929,9 @@
 /* Add hover effect for all div elements inside fractions_scroller_div */
 
 .selectedInch {
-  background-color: black;
   font-size: 18px;
   display: flex;
-  color: grey;
+  color: rgb(168, 0, 0);
 }
 
 /* ruler start */
@@ -1219,15 +1215,15 @@
 
 
 .fractions_scroller_div div:hover {
-  background-color: rgb(225, 225, 225);
+
+transform: scale(1.3);
   transition: 0.2s;
 }
 
 .selectedFraction {
-  background-color: black;
   font-size: 18px;
   display: flex;
-  color: grey;
+  color: rgb(143, 0, 0);
 }
 
 .display_fractions_wrapper_inside_mount_width {
@@ -1584,6 +1580,9 @@
 
 .left_imageContainer_wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 

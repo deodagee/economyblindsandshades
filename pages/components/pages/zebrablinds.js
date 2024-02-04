@@ -535,7 +535,6 @@ function ZebraBlinds() {
                             </div>
 
                             <div className={styles.top_prices}>
-                                <p className={styles.price_regular}>$ 00.00 </p>
                                 <p className={styles.price_discount}>SAVE 00%</p>
                             </div>
                         </div>
