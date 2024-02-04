@@ -244,19 +244,21 @@ function ZebraBlinds() {
 
     const Top_Head_Rail_Choices_Materials = {
 
-        Rounded_Top_Cassette_With_Fabric_Insert: [
-            { key: 'White With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/WhiteRoundedTopCassetteWithFabricInsert.jpg', label: 'White  With Fabric ' },
-            { key: 'Grey With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/GreyRoundedTopCassetteWithFabricInsert.jpg', label: 'Grey  With Fabric ' },
-            { key: 'Black With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BlackRoundedTopCassetteWithFabricInsert.jpg', label: 'Black  With Fabric ' },
-            { key: 'Brown With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BrownRoundedTopCassetteWithFabricInsert.jpg', label: 'Brown  With Fabric ' },
-            { key: 'Beige With Fabric', src: '/Cassettes/RoundedTopCassetteWithFabricInsert/BeigeRoundedTopCassetteWithFabricInsert.jpg', label: 'Beige  With Fabric ' },
+        TopRailList: [
 
-            { key: 'White Aluminum', src: '/BottomRail/BottomOvalRailAluminum/WhiteBottomOvalRailAluminum.jpg', label: 'White Aluminum ' },
-            { key: 'Grey Aluminum', src: '/BottomRail/BottomOvalRailAluminum/GreyBottomOvalRailAluminum.jpg', label: 'Grey Aluminum ' },
-            { key: 'Black Aluminum', src: '/BottomRail/BottomOvalRailAluminum/BlackBottomOvalRailAluminum.jpg', label: 'Black Aluminum ' },
-            { key: 'Brown Aluminum', src: '/BottomRail/BottomOvalRailAluminum/BrownBottomOvalRailAluminum.jpg', label: 'Brown Aluminum ' },
-            { key: 'Beige Aluminum', src: '/BottomRail/BottomOvalRailAluminum/BeigeBottomOvalRailAluminum.jpg', label: 'Beige Aluminum ' },
+            { key: 'WhiteF2F', src: '/Fabrics/RoundedWithFabric/WhiteRoundedWithFabric.jpg', label: 'White - Rounded With Fabric' },
+            { key: 'GreyF2F', src: '/Fabrics/RoundedWithFabric/GreyRoundedWithFabric.jpg', label: 'Grey - Rounded With Fabric' },
+            { key: 'BlackF2F', src: '/Fabrics/RoundedWithFabric/BlackRoundedWithFabric.jpg', label: 'Black - Rounded With Fabric' },
+            { key: 'BrownF2F', src: '/Fabrics/RoundedWithFabric/BrownRoundedWithFabric.jpg', label: 'Brown - Rounded With Fabric' },
+            { key: 'BeigeF2F', src: '/Fabrics/RoundedWithFabric/BeigeRoundedWithFabric.jpg', label: 'Beige - Rounded With Fabric' },
 
+            { key: 'WhiteA2O', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum ' },
+            { key: 'GreyA2O', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum ' },
+            { key: 'BlackA2O', src: '/Ovals/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black - Aluminum ' },
+            { key: 'BrownA2O', src: '/Ovals/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown - Aluminum ' },
+            { key: 'BeigeA2O', src: '/Ovals/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige - Aluminum ' },
+
+            
 
             // Add more image data as needed
         ],
@@ -265,18 +267,21 @@ function ZebraBlinds() {
 
     const Bottom_Bottom_Rail_Choices_Materials = {
 
-        Bottom_Rail_Square_With_Fabric_Insert: [
-            { key: 'White With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White With Fabric' },
-            { key: 'Grey With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey With Fabric ' },
-            { key: 'Black With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black With Fabric ' },
-            { key: 'Brown With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown With Fabric ' },
-            { key: 'Beige With Fabric', src: '/BottomRail/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige With Fabric ' },
+        BottomRailList: [
+           
+            { key: 'WhiteA2O', src: '/Ovals/OvalBottomRails/WhiteBottomOvalRail.jpg', label: 'White - Bottom Oval ' },
+            { key: 'GreyA2O', src: '/Ovals/OvalBottomRails/GreyBottomOvalRail.jpg', label: 'Grey - Bottom Oval ' },
+            { key: 'BlackA2O', src: '/Ovals/OvalBottomRails/BlackBottomOvalRail.jpg', label: 'Black - Bottom Oval ' },
+            { key: 'BrownA2O', src: '/Ovals/OvalBottomRails/BrownBottomOvalRail.jpg', label: 'Brown - Bottom Oval ' },
+            { key: 'BeigeA2O', src: '/Ovals/OvalBottomRails/BeigeBottomOvalRail.jpg', label: 'Beige - Bottom Oval ' },
 
-            { key: 'White Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White Aluminum ' },
-            { key: 'Grey Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey Aluminum ' },
-            { key: 'Black Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black Aluminum ' },
-            { key: 'Brown Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown Aluminum ' },
-            { key: 'Beige Aluminum', src: '/Cassettes/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige Aluminum ' },
+            { key: 'WhiteF2F', src: '/Fabrics/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White - Bottom Square With Fabric' },
+            { key: 'GreyF2F', src: '/Fabrics/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey - Bottom Square With Fabric' },
+            { key: 'BlackF2F', src: '/Fabrics/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black - Bottom Square With Fabric' },
+            { key: 'BrownF2F', src: '/Fabrics/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown - Bottom Square With Fabric' },
+            { key: 'BeigeF2F', src: '/Fabrics/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige - Bottom Square With Fabric' },
+
+            
 
             // Add more image data as needed
         ],
@@ -303,7 +308,9 @@ function ZebraBlinds() {
     const renderColorList = (colorList2) => (
         <>
             <div className={styles.images_and_subtitles} key={colorList2[0].key}>
+
                 {colorList2.map((item) => (
+
                     <div
                         key={item.label}
                         className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
@@ -314,7 +321,9 @@ function ZebraBlinds() {
                         <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
                         <p className={styles.selectedImageClass_label}>{item.label}</p>
                     </div>
+
                 ))}
+                
             </div>
         </>
     );
@@ -336,9 +345,9 @@ function ZebraBlinds() {
         // Update selected images in the top section
         setSelectedImagesTop(key === selectedImagesTop ? null : key);
         // Find and select the corresponding image in the bottom section
-        const matchingImage = Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(image => image.key === key);
+        const matchingImage = Top_Head_Rail_Choices_Materials.TopRailList.find(image => image.key === key);
         if (matchingImage) {
-            setSelectedImagesBottom(key === selectedImagesTop ? null : matchingImage.key);
+            setSelectedImagesTop(key === selectedImagesTop ? null : matchingImage.key);
         }
     };
 
@@ -350,9 +359,9 @@ function ZebraBlinds() {
         // Update selected images in the bottom section
         setSelectedImagesBottom(key === selectedImagesBottom ? null : key);
         // Find and select the corresponding image in the top section
-        const matchingImage = Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(image => image.key === key);
+        const matchingImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(image => image.key === key);
         if (matchingImage) {
-            setSelectedImagesTop(key === selectedImagesBottom ? null : matchingImage.key);
+            setSelectedImagesBottom(key === selectedImagesBottom ? null : matchingImage.key);
         }
     };
 
@@ -476,8 +485,8 @@ function ZebraBlinds() {
                                                             width={200}
                                                             height={200}
                                                             className={styles.left_first_image_render}
-                                                            src={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.src}
-                                                            alt={Top_Head_Rail_Choices_Materials.Rounded_Top_Cassette_With_Fabric_Insert.find(item => item.key === selectedImagesTop)?.label}
+                                                            src={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.src}
+                                                            alt={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.label}
                                                         />
                                                     </div>
                                                 </div>
@@ -498,9 +507,9 @@ function ZebraBlinds() {
                                                                 width={200}
                                                                 height={200}
                                                                 className={styles.left_first_image_render}
-                                                                src={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.src}
-                                                                alt={Bottom_Bottom_Rail_Choices_Materials.Bottom_Rail_Square_With_Fabric_Insert.find(item => item.key === selectedImagesBottom)?.label}
-                                                            />
+                                                                src={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.src}
+                                                                alt={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
+                                                                />
                                                         </div>
                                                     </div>
 
@@ -990,16 +999,22 @@ function ZebraBlinds() {
 
                                                                 <div className={styles.ruler_div}>
 
-                                                                    < span className={styles.enter_size_boat_bottom} >
+                                                                    <span className={styles.enter_size_boat_bottom}>
+
                                                                         <div className={styles.ruler_for_boat_wrapper}>
 
                                                                             <div className={styles.ruler_for_boat}>
+
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
                                                                                     <span className={styles.ruler_line_group}>
+
                                                                                         <span className={styles.line_1}></span>
+
                                                                                         <div className={styles.ruler_line_number_inches}>
+
                                                                                             {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1007,33 +1022,43 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
+
                                                                                         <span className={styles.line_0}></span>
 
                                                                                         <div className={styles.ruler_line_number_inches}>
+
                                                                                             {[selectedInchHEIGHT].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
                                                                                                     className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                                                                 >
-
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1041,15 +1066,19 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_2}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_2}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                                                                 <div
                                                                                                     key={index}
@@ -1059,15 +1088,19 @@ function ZebraBlinds() {
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1075,15 +1108,19 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_3}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_3}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                                                                 <div
                                                                                                     key={index}
@@ -1092,16 +1129,20 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1109,16 +1150,21 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_2}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_2}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1126,16 +1172,21 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1143,8 +1194,11 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                 </div>
@@ -1162,17 +1216,13 @@ function ZebraBlinds() {
 
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
 
                             <div className={styles.outside_mount_group_wrapper}>
                                 <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
@@ -1184,9 +1234,10 @@ function ZebraBlinds() {
                                             src={"/outsidemountsketch.png"}
                                             height={500}
                                             className={styles.first_chosen_outside_mount_selection}>
-
                                         </Image>
+
                                     </span>
+
                                     <span className={styles.left_right_outside_mount}>
 
                                         <span className={styles.left_outside_mount}>
@@ -1203,10 +1254,8 @@ function ZebraBlinds() {
                                                         <span className={styles.step_tag_description_wrapper}>
                                                             <p className={styles.step_tag_description}>
                                                                 Horizontal Direction (Width) Measure Width Including Window Trim In The Center
-                                                                (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.
-                                                            </p>
-                                                            <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.
-                                                            </p>
+                                                                (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.</p>
+                                                            <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.</p>
                                                         </span>
                                                     </div>
 
@@ -1233,7 +1282,6 @@ function ZebraBlinds() {
                                         </span>
                                     </span>
 
-
                                     <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
 
                                     <div className={styles.enter_height_and_width_outside_mount_group}>
@@ -1258,17 +1306,18 @@ function ZebraBlinds() {
 
                                                                 </span>
                                                             </div>
-                                                        </div>
+                                                        </div>npm 
                                                     </div>
+
                                                     <div className={styles.qty_group_part2}>
                                                         <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
                                                     </div>
+
                                                 </div>
 
                                                 <div className={styles.choose_width_or_height_image_placeholder}></div>
                                                 <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
                                                     <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
-
 
                                                     <div className={styles.bottom_portion_ruler_and_stuff}>
 
@@ -1325,7 +1374,6 @@ function ZebraBlinds() {
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
 
                                                                 <div className={styles.ruler_div}>
 
@@ -1384,11 +1432,12 @@ function ZebraBlinds() {
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_2}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_2}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
                                                                                             {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1397,15 +1446,18 @@ function ZebraBlinds() {
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
                                                                                             ))}
+
                                                                                         </div>
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1413,16 +1465,20 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_3}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_3}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1430,16 +1486,21 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1447,16 +1508,21 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
+
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_2}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_2}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1464,16 +1530,20 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
+
                                                                                             ))}
+
                                                                                         </div>
                                                                                     </span>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}>
-                                                                                        </span>
+
+                                                                                        <span className={styles.line_1}></span>
 
                                                                                         <div className={styles.ruler_line_number_fractions}>
+
                                                                                             {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
                                                                                                 <div
                                                                                                     key={index}
                                                                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1481,10 +1551,12 @@ function ZebraBlinds() {
                                                                                                 >
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
-                                                                                            ))}
-                                                                                        </div>
-                                                                                    </span>
 
+                                                                                            ))}
+
+                                                                                        </div>
+
+                                                                                    </span>
 
                                                                                 </div>
                                                                                 <div>
@@ -1959,7 +2031,7 @@ function ZebraBlinds() {
                                                     src={"/chevronleft.png"}>
                                                 </Image>
                                                 <div className={styles.select_head_rail_group_title}>
-                                                    <span className={styles.select_head_rail_group_title_tag}>4</span> Cassette
+                                                    <span className={styles.select_head_rail_group_title_tag}>4</span> Top Rail
                                                 </div>
 
 
@@ -1974,7 +2046,7 @@ function ZebraBlinds() {
 
 
                                             <div className={styles.top_section}>
-                                                <div className={styles.pick_bottom_rail_color_subtitle0}>Cassette Type:</div>
+                                                <div className={styles.pick_bottom_rail_color_subtitle0}>Top Rail Casettes:</div>
 
                                                 <div className={styles.skip_top_section}>
                                                     <div className={styles.ellipse_and_title_head_rail}>
@@ -1995,29 +2067,29 @@ function ZebraBlinds() {
                                                         <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
                                                             <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Top Rail Will Automatically Select the Same Material in The Bottom Rail Section For You. </div>
                                                             <div className={styles.materials_organized_div_wrapper}>
-                                                                {Object.keys(Top_Head_Rail_Choices_Materials).map((railType, index) => (
-                                                                    <div key={index}>
-                                                                        <div className={styles.materials_organized_div}>
-                                                                            {Top_Head_Rail_Choices_Materials[railType].map((choice) => (
-                                                                                <div
-                                                                                    className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) ? styles.selectedImage : ''
-                                                                                        }`}
-                                                                                    key={choice.key}
-                                                                                    onClick={() => handleImageClickImagesTop(choice.key)}
-                                                                                >
-                                                                                    <Image
-                                                                                        width={100}
-                                                                                        height={100}
-                                                                                        src={choice.src}
-                                                                                        alt={choice.label}
-                                                                                    />
-                                                                                    <p>{choice.label}</p>
+                                                                            {Object.keys(Top_Head_Rail_Choices_Materials).map((railType, index) => (
+                                                                                <div key={index}>
+                                                                                    <div className={styles.materials_organized_div}>
+                                                                                        {Top_Head_Rail_Choices_Materials[railType].map((choice) => (
+                                                                                            <div
+                                                                                                className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) ? styles.selectedImage : ''
+                                                                                                    }`}
+                                                                                                key={choice.key}
+                                                                                                onClick={() => handleImageClickImagesTop(choice.key)}
+                                                                                            >
+                                                                                                <Image
+                                                                                                    width={100}
+                                                                                                    height={100}
+                                                                                                    src={choice.src}
+                                                                                                    alt={choice.label}
+                                                                                                />
+                                                                                                <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                                                                            </div>
+                                                                                        ))}
+                                                                                    </div>
                                                                                 </div>
                                                                             ))}
                                                                         </div>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
                                                         </div>
                                                     )}
                                                 </div>
@@ -2068,31 +2140,31 @@ function ZebraBlinds() {
                                                                             *Note: If you chose to skip the top cassette color, steel material will be set.
                                                                         </div>
                                                                         <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Bottom Rail Will Automatically Select the Same Material in The Top Rail Section For You</div>
-
                                                                         <div className={styles.materials_organized_div_wrapper}>
-                                                                            {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
-                                                                                <div key={index}>
-                                                                                    <div className={styles.materials_organized_div}>
-                                                                                        {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
-                                                                                            <div
-                                                                                                className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key) ? styles.selectedImage : ''
-                                                                                                    }`}
-                                                                                                key={choice.key}
-                                                                                                onClick={() => handleImageClickImagesBottom(choice.key)}
-                                                                                            >
-                                                                                                <Image
-                                                                                                    width={100}
-                                                                                                    height={100}
-                                                                                                    src={choice.src}
-                                                                                                    alt={choice.label}
-                                                                                                />
-                                                                                                <p>{choice.label}</p>
-                                                                                            </div>
-                                                                                        ))}
-                                                                                    </div>
+                                                                {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
+                                                                    <div key={index}>
+                                                                        <div className={styles.materials_organized_div}>
+                                                                            {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
+                                                                                <div
+                                                                                    className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key) ? styles.selectedImage : ''
+                                                                                        }`}
+                                                                                    key={choice.key}
+                                                                                    onClick={() => handleImageClickImagesBottom(choice.key)}
+                                                                                >
+                                                                                    <Image
+                                                                                        width={100}
+                                                                                        height={100}
+                                                                                        src={choice.src}
+                                                                                        alt={choice.label}
+                                                                                    />
+                                                                                                <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                                                                 </div>
                                                                             ))}
                                                                         </div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             )}

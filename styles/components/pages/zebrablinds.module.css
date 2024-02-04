@@ -2183,7 +2183,6 @@
 .materials_organized_div_wrapper {
   display: flex;
   flex-direction: column;
-  width: max-content;
   margin: 20px;
   align-items: center;
   justify-content: center;
@@ -2203,12 +2202,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 5px;
   transition: 0.3s;
   border-width: 2px;
   border-color: rgb(1, 116, 118);
   border-radius: 0.45rem;
   padding: 2px;
+  width: 100px;
+  overflow: hidden;
 }
 
 .materials_organized_div_image:hover {
@@ -2216,6 +2216,16 @@
   transition: 0.3s;
   box-shadow: rgb(76, 76, 76) 1px 2px 5px;
 }
+.materials_organized_div_image_paragraph {
+  font-size: 10px;
+  height: max-content;
+  width: 100%; /* Set the width to 100% to fit inside the parent container */
+  text-align: center; /* Align text to the center if needed */
+  white-space: normal; /* Allow text to wrap to the next line */
+  overflow: hidden; /* Hide any content that overflows the specified height */
+  margin: 0; /* Remove any default margins */
+}
+
 
 .selectedImage {
   border-color: rgb(0, 0, 0);
@@ -2308,16 +2318,6 @@
   display: flex;
   flex-direction: row;
 }
-
-.image_material_listdiv1,
-.image_material_listdiv2 {
-  display: flex;
-  flex-direction: column;
-  width: 65vw;
-  height: auto;
-  font-size: 12px;
-}
-
 
 .window_name_answer {
   width: 150px;
