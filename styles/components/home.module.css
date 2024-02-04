@@ -268,6 +268,8 @@
 .linkitem:hover {
   color: rgb(88, 0, 0);
   transition: 0.2s;
+  background-color: rgb(233, 233, 233);
+border-radius: 0.15rem;
 }
 
 .are_you_priced_png {

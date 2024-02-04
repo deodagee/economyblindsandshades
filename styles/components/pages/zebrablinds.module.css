@@ -103,19 +103,7 @@
   font-size: 13px;
 }
 
-.top_prices {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  font-size: 12px;
-}
 
-
-
-.price_discount {
-  display: flex;
-  color: brown;
-}
 
 .star_group {
   display: flex;
@@ -807,13 +795,13 @@
   display: flex;
 }
 
-.inches_scroller_wrapper {
+.inches_scroller_wrapper, .fractions_scroller_wrapper {
   display: flex;
   z-index: 1;
-
 }
 
-.inches_scroller_div {
+
+.inches_scroller_div, .fractions_scroller_div {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -830,7 +818,25 @@
   font-size: 20px;
 }
 
-.inches_scroller_div:hover {
+
+.span_visibility_1:hover {
+  display: flex;
+ position: absolute;
+ flex-direction: column;
+  margin-top: -10px;
+  width: 70px;
+  border-radius: 0.45rem;
+  padding: 5px;
+  background-color: white;
+  font-size: 20px;
+  transition: 0.2s;
+  height: 260px;
+  overflow-y: scroll;
+  border-width: 1px;
+  border-color: black;
+}
+
+.fractions_scroller_div:hover , .inches_scroller_div:hover {
   transform: scale(0.98);
   transition: 0.4s;
   height: 260px;
@@ -842,15 +848,19 @@
   border-color: black;
 }
 
-.inches_scroller_div div {
+.fractions_scroller_div div, .inches_scroller_div div {
   margin: 5px;
   height: 30px;
   align-items: center;
   justify-content: center;
-
 }
 
-.inches_scroller_div div:hover {
+.fractions_scroller_div div:hover , .inches_scroller_div div:hover {
+  transform: scale(1.3);
+    transition: 0.2s;
+  }
+
+.fractions_scroller_div div:hover, .inches_scroller_div div:hover {
   transform: scale(1.3);
   transition: 0.4s;
 }
@@ -1165,11 +1175,7 @@
   transition: 0.3s;
 }
 
-.fractions_scroller_wrapper {
-  display: flex;
-  z-index: 1;
 
-}
 
 
 .polygon_4 {
@@ -1179,89 +1185,10 @@
   top: 0;
 }
 
-
-.fractions_scroller_div {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 0;
-  width: 70px;
-  height: 60px;
-  overflow: hidden;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(138, 138, 138);
-  padding: 5px;
-  transition: 0.2s;
-  background-color: white;
-  font-size: 20px;
-}
-
-.fractions_scroller_div:hover {
-  transform: scale(0.98);
-  transition: 0.2s;
-  height: 260px;
-  overflow-y: scroll;
-  border-width: 1px;
-  border-color: black;
-}
-
-.fractions_scroller_div div {
-  margin: 5px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.fractions_scroller_div div:hover {
-
-transform: scale(1.3);
-  transition: 0.2s;
-}
-
 .selectedFraction {
   font-size: 18px;
   display: flex;
   color: rgb(143, 0, 0);
-}
-
-.display_fractions_wrapper_inside_mount_width {
-  width: 100px;
-}
-
-.ScrollNumberFractions_width_inside_mount {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayFractions_inside_mount_width {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 22px;
-  height: 22px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.displayFractions_inside_mount_width_list_of_numbers {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 20px;
-}
-
-
-.singleFraction_width_inside_mount:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 0.24rem;
-  border-width: 1px;
-  border-color: grey;
 }
 
 
@@ -1277,12 +1204,6 @@ transform: scale(1.3);
 .enter_size_outside_mount_group {
   display: contents;
   transition: 0.2s;
-}
-
-.enter_size_outside_mount_group:hover {
-  transition: 0.4s;
-  box-shadow: rgb(60, 60, 60) 3px 2px 10px;
-  border-color: #747474;
 }
 
 .select_color_long_rectangle {
@@ -2360,73 +2281,23 @@ border-radius: 0.20rem;
   flex-direction: row;
 }
 
-.window_name_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
 
-.window_type_answer {
-  width: 150px;
+.window_name_answer, .window_type_answer, .width2_answer, .mount_answer, .materials_answer, .lift_type_answer, .bottom_rail_type_answer, .casette_rail_type_answer {
+  width: 20vw;
   display: flex;
   flex-direction: column;
-}
-
-.width2_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.height2Answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.mount_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.materials_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.head_rail_type_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.lift_type_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-}
-
-.head_rail_type_answer {
-  width: 150px;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 .casette_rail_type_answer_container { 
-  display: flex;
-}
-
-.casette_rail_type_answer {
-  width: 150px;
   display: flex;
   flex-direction: column;
 }
 
 .casette_rail_type_answer_image_render { 
   display: flex;
-  width: 100px;
+  width: 70px;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -2434,17 +2305,14 @@ border-radius: 0.20rem;
 
 .bottom_rail_type_answer_container { 
   display: flex;
-}
-
-.bottom_rail_type_answer {
-  width: 150px;
-  display: flex;
   flex-direction: column;
 }
 
+
+
 .bottom_rail_type_answer_image_render { 
   display: flex;
-  width: 100px;
+  width: 70px;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -2453,10 +2321,10 @@ border-radius: 0.20rem;
 
 .answers_answers {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
+  width: 30vw;
   gap: 10px;
 }
 
@@ -2468,19 +2336,19 @@ border-radius: 0.20rem;
 
 .answers_answers2 {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
+  width: 30vw;
   gap: 10px;
 }
 
 .answers_answers3 {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 200px;
+  width: 30vw;
   gap: 10px;
 }
 
@@ -2513,6 +2381,7 @@ border-radius: 0.20rem;
   align-items: start;
   flex-direction: column;
   padding-left: 20px;
+  transform: scale(0.8);
 }
 
 
@@ -2646,11 +2515,11 @@ border-radius: 0.20rem;
 .order_items_list {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
   color: black;
-  width: 500px;
+  width: 55vw;
 }
 
 .my_order_band_wrapper {
@@ -2710,11 +2579,11 @@ border-radius: 0.20rem;
 .bill_divider {
   display: flex;
   height: 2px;
-  width: 450px;
+  width: 55vw;
   border-radius: 0.24rem;
   margin-bottom: 5px;
   margin-top: 5px;
-  background-color: rgb(71, 71, 71);
+  background-color: rgb(145, 145, 145);
 }
 
 .description_and_answer {
@@ -2722,6 +2591,17 @@ border-radius: 0.20rem;
   flex-direction: row;
   padding-left: 20px;
   gap: 100px;
+  height: 90px;
+  width: 55vw;
+  background-color: rgb(223, 223, 223);
+  transition: 0.3s;
+}
+
+.description_and_answer:hover { 
+  background-color: rgb(236, 236, 236);
+transition: 0.3s;
+box-shadow: rgb(145, 145, 145) 0px 0px 4px;
+
 }
 
 .description_and_answer1 {

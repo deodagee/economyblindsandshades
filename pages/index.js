@@ -122,45 +122,53 @@ export default function HomePage() {
 
             <div className={styles.two_section_div5}>
               <div className={styles.two_section_div5_wrapper}>
+              <Link href={"/zebrablinds"}>
                 <div className={styles.rectangle_1}>
-                  <Link href={"/zebrablinds"}>
                     <span className={styles.linkitem}>
                       1.Zebra Blinds
                       <br />
                     </span>
-                  </Link>
                 </div>
+                </Link>
+
+                <Link href={"/shangrilablinds"}>
+
                 <div className={styles.rectangle_2}>
-                  <Link href={"/shangrilablinds"}>
                     <span className={styles.linkitem}>
                       2.Shangrila Blinds
                       <br />
                     </span>
-                  </Link>
                 </div>
+                </Link>
+
+                <Link href={"/romanblinds"}>
+
                 <div className={styles.rectangle_3}>
-                  <Link href={"/romanblinds"}>
                     <span className={styles.linkitem}>
                       3.Roman Blinds
                       <br />
                     </span>
-                  </Link>
                 </div>
+                </Link>
+                <Link href={"/rollerblinds"}>
+
                 <div className={styles.rectangle_4}>
-                  <Link href={"/rollerblinds"}>
                     <span className={styles.linkitem}>
                       4.Roller Blinds
                       <br />
                     </span>
-                  </Link>
                 </div>
+                </Link>
+
+                <Link href={"/honeycombblinds"}>
+
                 <div className={styles.rectangle_5}>
-                  <Link href={"/honeycombblinds"}>
                     <span className={styles.linkitem}>
                       5.Honeycomb Blinds
                     </span>
-                  </Link>
                 </div>
+                </Link>
+
               </div>
             </div>
           </div>
