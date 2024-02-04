@@ -2068,7 +2068,7 @@ function ZebraBlinds() {
                                                             <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
                                                                 onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
                                                             ><p>Go Back To Choices
-                                                            </p></div>
+                                                                </p></div>
                                                         </div>
                                                     </div>
                                                     {!active_skip_head_rail_ellipse && (
@@ -2324,27 +2324,26 @@ function ZebraBlinds() {
                                     </span>
 
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
 
-                                        <div className={styles.answers_answers2}>
+                                        <>
+                                            {selectedImagesTop?.length > 0 && (
+                                                <div className={styles.left_imageContainer_wrapper}>
+                                                    <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
+                                                        <div className={styles.casette_rail_type_answer}> Cassette Choice:</div>
 
-                                            {selectedRailType === 'top' && selectedImagesTop && (
-                                                <div className={styles.answers_answers2}>
-                                                    <p>{selectedImagesTop}</p>
+                                                        <Image
+                                                            width={200}
+                                                            height={200}
+                                                            className={styles.casette_rail_type_answer_image_render}
+                                                            src={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.src}
+                                                            alt={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.label}
+                                                        />
+                                                    </div>
                                                 </div>
+
                                             )}
-
-                                            {selectedRailType === 'bottom' && selectedImagesBottom && (
-                                                <div className={styles.answers_answers2}>
-                                                    <p>{selectedImagesBottom}</p>
-                                                </div>
-                                            )}
-
-                                            {steelMaterialChosen && <div>steel material chosen</div>}
-
-
-                                        </div>
+                                        </>
                                     </div>
 
                                     <span
@@ -2354,24 +2353,27 @@ function ZebraBlinds() {
 
 
                                     <div className={styles.description_and_answer}>
-                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
-                                        <div className={styles.answers_answers2}>
 
-                                            {selectedRailType === 'top' && selectedImagesTop && (
-                                                <div className={styles.answers_answers2}>
-                                                    <p>{selectedImagesTop}</p>
+                                        <div>
+
+                                            {selectedImagesBottom?.length > 0 && (
+
+                                                <div className={styles.left_imageContainer_wrapper}>
+
+                                                    <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
+                                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
+
+                                                        <Image
+                                                            width={200}
+                                                            height={200}
+                                                            className={styles.bottom_rail_type_answer_image_render}
+                                                            src={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.src}
+                                                            alt={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
+                                                        />
+                                                    </div>
                                                 </div>
+
                                             )}
-
-                                            {selectedRailType === 'bottom' && selectedImagesBottom && (
-                                                <div className={styles.answers_answers2}>
-                                                    <p>{selectedImagesBottom}</p>
-                                                </div>
-                                            )}
-
-                                            {steelMaterialChosen && <div>steel material chosen</div>}
-
-
                                         </div>
 
                                     </div>

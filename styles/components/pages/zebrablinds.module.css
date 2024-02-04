@@ -2415,16 +2415,40 @@ border-radius: 0.20rem;
   flex-direction: column;
 }
 
+.casette_rail_type_answer_container { 
+  display: flex;
+}
+
 .casette_rail_type_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
 }
 
+.casette_rail_type_answer_image_render { 
+  display: flex;
+  width: 100px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_rail_type_answer_container { 
+  display: flex;
+}
+
 .bottom_rail_type_answer {
   width: 150px;
   display: flex;
   flex-direction: column;
+}
+
+.bottom_rail_type_answer_image_render { 
+  display: flex;
+  width: 100px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -2435,6 +2459,11 @@ border-radius: 0.20rem;
   flex-direction: column;
   width: 200px;
   gap: 10px;
+}
+
+.answers_answers2_wrapper { 
+  display: flex;
+  flex-direction: row;
 }
 
 
