@@ -2161,11 +2161,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(78, 73, 73);
-  background-image: url("/whattypeofblindsdoyouinstall.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgb(33, 33, 33);
+  background: linear-gradient(to right, #264a4e, #487d82, #264a4e);
+
+  border-radius: 0.20rem;
   margin: 20px;
 }
 
@@ -2292,7 +2291,6 @@
 
 .skip_bottom_rail_image_placeholder_invisible {
   display: none;
-  width: 59vw;
 }
 
 .skip_bottom_rail_image_placeholder_visible {
@@ -2301,12 +2299,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(78, 73, 73);
-  background-image: url("/whattypeofblindsdoyouinstall.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgb(33, 33, 33);
+  background: linear-gradient(to right, #264a4e, #487d82, #264a4e);
+
+border-radius: 0.20rem;
   margin: 20px;
+}
+
+.gobacktochoices { 
+  background-color: rgb(217, 217, 217);
+  width: 55vw;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.gobacktochoicesellipse {
+  display: flex;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 22px;
+  border-radius: 0.15rem;
+  background-color: rgb(0, 209, 0);
+  animation: pulse 1s infinite alternate; 
+  font-size: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1); /* Initial scale */
+  }
+  to {
+    transform: scale(1.1); /* Scale to 1.05 */
+  }
+}
+
+.gobacktochoicesellipse:hover { 
+  color: rgb(48, 48, 48);
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+.gobacktochoices:hover { 
+  transition: 0.4s;
+  cursor: pointer;
+  color: black;
 }
 
 .answers2_list2 {
