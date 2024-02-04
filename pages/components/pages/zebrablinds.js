@@ -383,10 +383,13 @@ function ZebraBlinds() {
 
 
     const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
-    const [selectedFractionHEIGHT , setselectedFractionHEIGHT] = useState(null);
+    const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
 
     const [selectedInchWIDTH, setselectedInchWIDTH] = useState(null);
     const [selectedInchHEIGHT, setselectedInchHEIGHT] = useState(null);
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     const scrollableDivRef = useRef();
 
@@ -394,8 +397,6 @@ function ZebraBlinds() {
 
     const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
     const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
-
-
 
     const handleScrolledInchesWhenClickedWIDTH = (inchesWidth) => {
         setselectedInchesWidth(inchesWidth);
@@ -459,27 +460,27 @@ function ZebraBlinds() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
-    const [selectedInchHeight, setselectedInchHeight] = useState(null);
+    const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
 
     const handleScrolledInchesWhenClickedHEIGHT = (inchHEIGHT) => {
-        setselectedInchHeight(inchHEIGHT);
+        setselectedInchesHeight(inchHEIGHT);
         setSelectedInchVisibleHeight(false);
 
         const scrollableDiv = scrollableDivRef.current;
 
         setTimeout(() => {
-            const selectedInchDiv = scrollableDiv.querySelector(`.${styles.selectedInch}`);
+            const selectedInchesDiv = scrollableDiv.querySelector(`.${styles.selectedInch}`);
 
-            if (selectedInchDiv) {
-                const selectedInchDivRect = selectedInchDiv.getBoundingClientRect();
+            if (selectedInchesDiv) {
+                const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
                 const scrollPosition =
-                    selectedInchDivRect.top +
+                selectedInchesDivRect.top +
                     scrollableDiv.scrollTop -
-                    (scrollableDiv.offsetHeight - selectedInchDivRect.height) / 2;
+                    (scrollableDiv.offsetHeight - selectedInchesDivRect.height) / 2;
 
                 scrollableDiv.scrollTop = scrollPosition;
             } else {
-                console.warn("Selected fraction div not found in the scrollable div");
+                console.warn("Selected inch  div not found in the scrollable div");
             }
         }, 0);
     };
@@ -841,19 +842,26 @@ function ZebraBlinds() {
                                                                             <p>INCHES</p>
                                                                         </div>
 
-                                                                        <div ref={scrollableDivRef} className={styles.inches_scroller_wrapper}>
-                                                                            <div className={styles.inches_scroller_div}>
-                                                                                <span>
-                                                                                    {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchesWidth, index) => (
-                                                                                        <div
-                                                                                            key={index}
-                                                                                            onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                                                            className={selectedInchWIDTH === inchesWidth ? styles.selectedInch : ''}
-                                                                                        >
-                                                                                            {inchesWidth}
-                                                                                        </div>
-                                                                                    ))}
-                                                                                </span>
+                                                                        <div className={styles.inches_scroller_wrapper}>
+                                                                            <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
+                                                                                {selectedInchesVisibleWidth ? (
+                                                                                    <span className={styles.span_visibility_1}>
+                                                                                        {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
+                                                                                            <div
+                                                                                                key={index}
+                                                                                                onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
+                                                                                                className={selectedInchWIDTH === inchesWidth ? styles.selectedInch : ''}
+                                                                                            >
+                                                                                                {inchesWidth}
+                                                                                            </div>
+                                                                                        ))}
+                                                                                    </span>
+                                                                                ) : (
+                                                                                    <span className={StyleSheet._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
+                                                                                        {selectedInchWIDTH}
+
+                                                                                    </span>
+                                                                                )}
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -872,7 +880,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                                                                className={setselectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                                                                className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
                                                                                             >
                                                                                                 {fractionWidth}
                                                                                             </div>
@@ -881,8 +889,8 @@ function ZebraBlinds() {
 
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                                                                        {setselectedFractionsWidth}
-                                                                                    </span>
+                                                                                    {selectedFractionsWidth}
+                                                                                </span>
                                                                                 )}
                                                                             </div>
                                                                         </div>
@@ -1089,7 +1097,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                                                                className={selectedInchHEIGHT === inchHEIGHT ? styles.selectedInch : ''}
+                                                                                                className={setselectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchHEIGHT}
                                                                                             </div>
@@ -1097,7 +1105,7 @@ function ZebraBlinds() {
                                                                                     </span>
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                                                                        {selectedInchHEIGHT}
+                                                                                        {selectedInchesHeight}
                                                                                     </span>
                                                                                 )}
                                                                             </div>
@@ -1113,13 +1121,13 @@ function ZebraBlinds() {
                                                                             <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
                                                                                 {selectedFractionVisibleHeight ? (
                                                                                     <span className={styles.span_visibility_1}>
-                                                                                        {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthInsideMountHEIGHT, index) => (
+                                                                                        {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
                                                                                             <div
                                                                                                 key={index}
-                                                                                                onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionWidthInsideMountHEIGHT)}
-                                                                                                className={selectedFractionsHeight === fractionWidthInsideMountHEIGHT ? styles.selectedFraction : ''}
+                                                                                                onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
+                                                                                                className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
                                                                                             >
-                                                                                                {fractionWidthInsideMountHEIGHT}
+                                                                                                {fractionHeight}
                                                                                             </div>
                                                                                         ))}
                                                                                     </span>
@@ -1509,7 +1517,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                                                                className={setselectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                                                                className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
                                                                                             >
                                                                                                 {fractionWidth}
                                                                                             </div>
@@ -1518,7 +1526,7 @@ function ZebraBlinds() {
 
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                                                                        {setselectedFractionsWidth}
+                                                                                        {selectedFractionsWidth}
                                                                                     </span>
                                                                                 )}
                                                                             </div>
@@ -1749,7 +1757,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                                                                className={selectedInchHEIGHT === inchHEIGHT ? styles.selectedInch : ''}
+                                                                                                className={setselectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchHEIGHT}
                                                                                             </div>
@@ -1757,8 +1765,8 @@ function ZebraBlinds() {
                                                                                     </span>
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                                                                        {selectedInchHEIGHT}
-                                                                                    </span>
+                                                                                    {selectedInchesHeight}
+                                                                                </span>
                                                                                 )}
                                                                             </div>
                                                                         </div>
@@ -1784,7 +1792,7 @@ function ZebraBlinds() {
                                                                                         ))}
                                                                                     </span>
                                                                                 ) : (
-                                                                                    <span className={styles.fractions_scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
+                                                                                    <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
                                                                                         {selectedFractionsHeight}
                                                                                     </span>
                                                                                 )}

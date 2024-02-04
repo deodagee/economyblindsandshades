@@ -819,38 +819,37 @@
 }
 
 
-.span_visibility_1:hover {
+
+.inches_scroller_div:hover, .fractions_scroller_div:hover {
   display: flex;
- position: absolute;
  flex-direction: column;
-  margin-top: -10px;
+ align-items: center;
+ justify-content: center;
   width: 70px;
   border-radius: 0.45rem;
-  padding: 5px;
   background-color: white;
   font-size: 20px;
   transition: 0.2s;
   height: 260px;
-  overflow-y: scroll;
   border-width: 1px;
   border-color: black;
+  transform: scale(0.8);
 }
 
 .fractions_scroller_div:hover , .inches_scroller_div:hover {
-  transform: scale(0.98);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.4s;
-  height: 260px;
-  overflow-y: scroll;
+  height: max-content;
   background-color: white;
-  margin-bottom: 100px;
   transition: 0.4s;
   border-width: 1px;
   border-color: black;
 }
 
 .fractions_scroller_div div, .inches_scroller_div div {
-  margin: 5px;
-  height: 30px;
+
   align-items: center;
   justify-content: center;
 }
@@ -863,6 +862,11 @@
 .fractions_scroller_div div:hover, .inches_scroller_div div:hover {
   transform: scale(1.3);
   transition: 0.4s;
+}
+
+._scroller_div_span { 
+  display: flex;
+  height: 80px;
 }
 
 .inches_and_fractions_and_ruler_group {
@@ -936,13 +940,7 @@
   display: flex;
 }
 
-/* Add hover effect for all div elements inside fractions_scroller_div */
 
-.selectedInch {
-  font-size: 18px;
-  display: flex;
-  color: rgb(168, 0, 0);
-}
 
 /* ruler start */
 
@@ -1185,7 +1183,7 @@
   top: 0;
 }
 
-.selectedFraction {
+.selectedFraction , .selectedInch {
   font-size: 18px;
   display: flex;
   color: rgb(143, 0, 0);
