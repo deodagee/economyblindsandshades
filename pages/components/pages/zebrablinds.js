@@ -1051,9 +1051,10 @@ function ZebraBlinds() {
                                                                                     <span className={styles.ruler_line_group}>
                                                                                         <span className={styles.line_0}></span>
                                                                                         <div className={styles.ruler_line_number_inches}>
-                                                                                            {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => {
-                                                                                                const nextNumberIndex = index + selectedInchWIDTH + 1;
-                                                                                                const nextNumber = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"][nextNumberIndex];
+                                                                                            {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                                                                 return (
                                                                                                     <div
@@ -1067,7 +1068,6 @@ function ZebraBlinds() {
                                                                                             })}
                                                                                         </div>
                                                                                     </span>
-
 
 
                                                                                 </div>
@@ -1337,6 +1337,27 @@ function ZebraBlinds() {
 
                                                                                         </div>
 
+                                                                                    </span>
+
+                                                                                    <span className={styles.ruler_line_group}>
+                                                                                        <span className={styles.line_0}></span>
+                                                                                        <div className={styles.ruler_line_number_fractions}>
+                                                                                            {[selectedInchHEIGHT].map((selectedInch, index) => {
+                                                                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                                                                return (
+                                                                                                    <div
+                                                                                                        key={index}
+                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_ruler_number : ''}
+                                                                                                    >
+                                                                                                        {nextNumber}
+                                                                                                    </div>
+                                                                                                );
+                                                                                            })}
+                                                                                        </div>
                                                                                     </span>
 
                                                                                 </div>
@@ -1696,6 +1717,26 @@ function ZebraBlinds() {
 
                                                                                     </span>
 
+                                                                                    <span className={styles.ruler_line_group}>
+                                                                                        <span className={styles.line_0}></span>
+                                                                                        <div className={styles.ruler_line_number_inches}>
+                                                                                            {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                                                                return (
+                                                                                                    <div
+                                                                                                        key={index}
+                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_ruler_number : ''}
+                                                                                                    >
+                                                                                                        {nextNumber}
+                                                                                                    </div>
+                                                                                                );
+                                                                                            })}
+                                                                                        </div>
+                                                                                    </span>
                                                                                 </div>
                                                                                 <div>
                                                                                 </div>
@@ -1924,6 +1965,27 @@ function ZebraBlinds() {
                                                                                                     {rulerNumberWidthAndHeightInsideMount}
                                                                                                 </div>
                                                                                             ))}
+                                                                                        </div>
+                                                                                    </span>
+
+                                                                                    <span className={styles.ruler_line_group}>
+                                                                                        <span className={styles.line_0}></span>
+                                                                                        <div className={styles.ruler_line_number_inches}>
+                                                                                            {[selectedInchHEIGHT].map((selectedInch, index) => {
+                                                                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                                                                return (
+                                                                                                    <div
+                                                                                                        key={index}
+                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_ruler_number : ''}
+                                                                                                    >
+                                                                                                        {nextNumber}
+                                                                                                    </div>
+                                                                                                );
+                                                                                            })}
                                                                                         </div>
                                                                                     </span>
 
