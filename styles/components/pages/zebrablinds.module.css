@@ -1090,7 +1090,7 @@
 
 .ruler_line_number_fractions {
   display: flex;
-  font-size: 15px;
+  font-size: 10PX;
   font-weight: 700;
   color: rgb(1, 1, 1);
   transition: 0.4s;
@@ -1102,7 +1102,7 @@
   cursor: pointer;
 }
 
-.selected_ruler_number:nth-child(1) {
+.selected_ruler_number_FRACTION { 
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -1114,7 +1114,27 @@
   margin-top: 3px;
   width: 40px;
   padding: 3px;
-  height: min-content;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  transition: 0.4s;
+}
+
+.selected_ruler_number {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(0, 178, 24);
+  border-radius: 0.95rem;
+  margin-top: 3px;
+  width: 40px;
+  padding: 3px;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  transition: 0.4s;
+
 }
 
 .selected_next_number { 
@@ -1129,7 +1149,16 @@
   margin-top: 3px;
   width: 40px;
   padding: 3px;
-  height: min-content;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  transition: 0.4s;
+
+}
+
+.selected_ruler_number_FRACTION:hover, .selected_ruler_number:hover, .selected_next_number:hover { 
+  box-shadow: rgb(60, 60, 60) 1px 1px 6px;
+  transition: 0.4s;
+
 }
 
 /* ruler end */
