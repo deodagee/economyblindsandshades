@@ -2656,7 +2656,13 @@ function ZebraBlinds() {
                             <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
                             
                             <div className={styles.date}>{futureDate}{" "}{"15 DAY DELIVERY"}</div>
-                            <Link href={'/cart/addtocart_economyblinds'}>
+                            
+                        </div>
+
+
+
+<div className={styles.add_to_cart_rectangle_wrapper}>
+                        <Link href={'/cart/addtocart_economyblinds'}>
 
                             <div className={styles.add_to_cart_rectangle}>
 
