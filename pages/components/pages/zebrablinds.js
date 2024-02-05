@@ -1057,13 +1057,18 @@ function ZebraBlinds() {
                                                                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                                                                 return (
-                                                                                                    <div
-                                                                                                        key={index}
-                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_ruler_number : ''}
-                                                                                                    >
-                                                                                                        {nextNumber}
-                                                                                                    </div>
+
+                                                                                                    <>
+                                                                                                        <div className={styles.selected_next_number}>
+                                                                                                            <div
+                                                                                                                key={index}
+                                                                                                                onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                                                                                className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                                                                            >
+                                                                                                                {nextNumber}
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </>
                                                                                                 );
                                                                                             })}
                                                                                         </div>
@@ -1348,13 +1353,18 @@ function ZebraBlinds() {
                                                                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                                                                 return (
-                                                                                                    <div
-                                                                                                        key={index}
-                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_ruler_number : ''}
-                                                                                                    >
-                                                                                                        {nextNumber}
-                                                                                                    </div>
+
+                                                                                                    <>
+                                                                                                        <div className={styles.selected_next_number}>
+                                                                                                            <div
+                                                                                                                key={index}
+                                                                                                                onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                                                                                className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                                                                            >
+                                                                                                                {nextNumber}
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </>
                                                                                                 );
                                                                                             })}
                                                                                         </div>
@@ -1508,7 +1518,7 @@ function ZebraBlinds() {
                                                                                         ))}
                                                                                     </span>
                                                                                 ) : (
-                                                                                    <span className={StyleSheet._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
+                                                                                    <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
                                                                                         {selectedInchesWidth}
 
                                                                                     </span>
@@ -1726,13 +1736,18 @@ function ZebraBlinds() {
                                                                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                                                                 return (
-                                                                                                    <div
-                                                                                                        key={index}
-                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_ruler_number : ''}
-                                                                                                    >
-                                                                                                        {nextNumber}
-                                                                                                    </div>
+
+
+                                                                                                    <>
+                                                                                                        <div className={styles.selected_next_number}>
+                                                                                                            <div key={index}
+                                                                                                                onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                                                                                className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                                                                            >
+                                                                                                                {nextNumber}
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </>
                                                                                                 );
                                                                                             })}
                                                                                         </div>
@@ -1977,13 +1992,16 @@ function ZebraBlinds() {
                                                                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                                                                 return (
-                                                                                                    <div
-                                                                                                        key={index}
-                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_ruler_number : ''}
-                                                                                                    >
-                                                                                                        {nextNumber}
-                                                                                                    </div>
+                                                                                                    <>
+                                                                                                        <div className={styles.selected_next_number}>
+                                                                                                            <div key={index}
+                                                                                                                onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                                                                                className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                                                                            >
+                                                                                                                {nextNumber}
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </>
                                                                                                 );
                                                                                             })}
                                                                                         </div>

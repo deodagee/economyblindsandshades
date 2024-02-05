@@ -642,6 +642,8 @@
 
 
 .qty_group {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 50vw;
   display: flex;
   flex-direction: row;
@@ -754,6 +756,8 @@
 .select_your_width_and_height {
   display: flex;
   font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 
@@ -874,7 +878,7 @@
   font-size: 20px;
   transition: 0.2s;
   border-width: 1px;
-  border-color: black;
+  border-color: rgb(103, 103, 103);
   background-color: white;
   transform: scale(0.8);
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
@@ -897,7 +901,6 @@
   align-items: center;
   justify-content: center;
   color: rgb(105, 0, 0);
-
 }
 
 .inches_and_fractions_and_ruler_group {
@@ -998,9 +1001,9 @@
   font-size: 17px;
   display: flex;
   width: 28vw;
-  height: 90px;
+  height: 110px;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: rgba(19, 108, 96, 0.801);
   border-color: rgb(0, 0, 0);
   border-width: 2px;
@@ -1099,11 +1102,34 @@
   cursor: pointer;
 }
 
-.selected_ruler_number {
-  font-size: 16px;
+.selected_ruler_number:nth-child(1) {
+  font-size: 15px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-weight: 700;
+  background-color: rgb(0, 178, 24);
+  border-radius: 0.95rem;
+  margin-top: 3px;
+  width: 40px;
+  padding: 3px;
+  height: min-content;
+}
+
+.selected_next_number { 
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(238, 186, 0);
+  border-radius: 0.95rem;
+  margin-top: 3px;
+  width: 40px;
+  padding: 3px;
+  height: min-content;
 }
 
 /* ruler end */
@@ -1120,6 +1146,8 @@
   word-wrap: nowrap;
   border-radius: 0.25rem;
 }
+
+
 
 .selected_height_answer_top {
   width: 100px;
