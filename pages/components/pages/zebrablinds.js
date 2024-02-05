@@ -380,6 +380,17 @@ function ZebraBlinds() {
     const [selectedRulerNumberInchWIDTH, setselectedRulerNumberInchWIDTH] = useState(null);
     const [selectedRulerNumberFractionWIDTH, setselectedRulerNumberFractionWIDTH] = useState(null);
 
+    const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
+    const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
+
+    const [selectedFractionVisibleWidth, setselectedFractionVisibleWidth] = useState(true);
+    const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
+
+    const [selectedFractionVisibleHeight, setSelectedFractionVisibleHeight] = useState(true);
+    const [selectedFractionsHeight, setselectedFractionsHeight] = useState(null);
+
+    const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
+    const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
 
 
     const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
@@ -395,12 +406,10 @@ function ZebraBlinds() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
-    const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
-
     const handleScrolledInchesWhenClickedWIDTH = (inchesWidth) => {
         setselectedInchesWidth(inchesWidth);
         setselectedInchesVisibleWidth(false);
+        setselectedInchWIDTH(inchesWidth);
 
         const scrollableDiv = scrollableDivRef.current;
 
@@ -428,12 +437,10 @@ function ZebraBlinds() {
 
 
 
-    const [selectedFractionVisibleWidth, setselectedFractionVisibleWidth] = useState(true);
-    const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
-
     const handleScrolledFractionsWhenClickedWIDTH = (fractionWidth) => {
         setselectedFractionsWidth(fractionWidth);
         setselectedFractionVisibleWidth(false);
+        setselectedFractionWIDTH(fractionWidth);
 
         const scrollableDiv = scrollableDivRef.current;
 
@@ -459,12 +466,11 @@ function ZebraBlinds() {
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
-    const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
 
     const handleScrolledInchesWhenClickedHEIGHT = (inchHEIGHT) => {
         setselectedInchesHeight(inchHEIGHT);
         setSelectedInchVisibleHeight(false);
+        setselectedInchHEIGHT(inchHEIGHT);
 
         const scrollableDiv = scrollableDivRef.current;
 
@@ -493,12 +499,11 @@ function ZebraBlinds() {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
-    const [selectedFractionVisibleHeight, setSelectedFractionVisibleHeight] = useState(true);
-    const [selectedFractionsHeight, setselectedFractionsHeight] = useState(null);
 
-    const handleScrolledFractionsWhenClickedHEIGHT = (fractionWidthInsideMountHEIGHT) => {
-        setselectedFractionsHeight(fractionWidthInsideMountHEIGHT);
+    const handleScrolledFractionsWhenClickedHEIGHT = (fractionWidth) => {
+        setselectedFractionsHeight(fractionWidth);
         setSelectedFractionVisibleHeight(false);
+        setselectedFractionHEIGHT(fractionWidth);
 
         const scrollableDiv = scrollableDivRef.current;
 
@@ -907,21 +912,6 @@ function ZebraBlinds() {
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
                                                                                     <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}></span>
-                                                                                        <div className={styles.ruler_line_number_inches}>
-                                                                                            {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                                                                <div
-                                                                                                    key={index}
-                                                                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                                                                >
-                                                                                                    {rulerNumberWidthAndHeightInsideMount}
-                                                                                                </div>
-                                                                                            ))}
-                                                                                        </div>
-                                                                                    </span>
-
-                                                                                    <span className={styles.ruler_line_group}>
                                                                                         <span className={styles.line_0}></span>
                                                                                         <div className={styles.ruler_line_number_inches}>
                                                                                             {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => (
@@ -1152,27 +1142,7 @@ function ZebraBlinds() {
 
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
-                                                                                    <span className={styles.ruler_line_group}>
-
-                                                                                        <span className={styles.line_1}></span>
-
-                                                                                        <div className={styles.ruler_line_number_inches}>
-
-                                                                                            {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                                                                <div
-                                                                                                    key={index}
-                                                                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                                                                >
-                                                                                                    {rulerNumberWidthAndHeightInsideMount}
-                                                                                                </div>
-
-                                                                                            ))}
-
-                                                                                        </div>
-
-                                                                                    </span>
+                                                                           
 
                                                                                     <span className={styles.ruler_line_group}>
 
@@ -1542,20 +1512,6 @@ function ZebraBlinds() {
                                                                             <div className={styles.ruler_for_boat}>
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
-                                                                                    <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}></span>
-                                                                                        <div className={styles.ruler_line_number_inches}>
-                                                                                            {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                                                                <div
-                                                                                                    key={index}
-                                                                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                                                                >
-                                                                                                    {rulerNumberWidthAndHeightInsideMount}
-                                                                                                </div>
-                                                                                            ))}
-                                                                                        </div>
-                                                                                    </span>
 
                                                                                     <span className={styles.ruler_line_group}>
                                                                                         <span className={styles.line_0}></span>
@@ -1810,20 +1766,7 @@ function ZebraBlinds() {
                                                                             <div className={styles.ruler_for_boat}>
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
-                                                                                    <span className={styles.ruler_line_group}>
-                                                                                        <span className={styles.line_1}></span>
-                                                                                        <div className={styles.ruler_line_number_inches}>
-                                                                                            {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                                                                <div
-                                                                                                    key={index}
-                                                                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                                                                >
-                                                                                                    {rulerNumberWidthAndHeightInsideMount}
-                                                                                                </div>
-                                                                                            ))}
-                                                                                        </div>
-                                                                                    </span>
+                                                                                 
 
                                                                                     <span className={styles.ruler_line_group}>
                                                                                         <span className={styles.line_0}></span>
@@ -2432,14 +2375,16 @@ function ZebraBlinds() {
 
                                         <div className={styles.answers_answers}>
 
-                                            <div>
-                                                Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
-                                                {selectedFractionHEIGHT && " Inches High"}
+                                        <div>
+                                                Length: {selectedInchesWidth} - {selectedFractionsWidth}
+                                                {selectedFractionsWidth && " Inches Long"}
                                             </div>
+
                                             <div>
-                                                Length: {selectedInchWIDTH} - {selectedFractionWIDTH}
-                                                {selectedFractionWIDTH && " Inches Long"}
+                                                Height: {selectedInchesHeight} - {selectedFractionsHeight}
+                                                {selectedFractionsHeight && " Inches High"}
                                             </div>
+                                            
 
                                         </div>
                                     </div>
