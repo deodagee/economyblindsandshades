@@ -480,7 +480,7 @@ function ZebraBlinds() {
             if (selectedInchesDiv) {
                 const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
                 const scrollPosition =
-                selectedInchesDivRect.top +
+                    selectedInchesDivRect.top +
                     scrollableDiv.scrollTop -
                     (scrollableDiv.offsetHeight - selectedInchesDivRect.height) / 2;
 
@@ -894,8 +894,8 @@ function ZebraBlinds() {
 
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                                                                    {selectedFractionsWidth}
-                                                                                </span>
+                                                                                        {selectedFractionsWidth}
+                                                                                    </span>
                                                                                 )}
                                                                             </div>
                                                                         </div>
@@ -1047,6 +1047,29 @@ function ZebraBlinds() {
                                                                                     </span>
 
 
+
+                                                                                    <span className={styles.ruler_line_group}>
+                                                                                        <span className={styles.line_0}></span>
+                                                                                        <div className={styles.ruler_line_number_inches}>
+                                                                                            {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => {
+                                                                                                const nextNumberIndex = index + selectedInchWIDTH + 1;
+                                                                                                const nextNumber = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"][nextNumberIndex];
+
+                                                                                                return (
+                                                                                                    <div
+                                                                                                        key={index}
+                                                                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_ruler_number : ''}
+                                                                                                    >
+                                                                                                        {nextNumber}
+                                                                                                    </div>
+                                                                                                );
+                                                                                            })}
+                                                                                        </div>
+                                                                                    </span>
+
+
+
                                                                                 </div>
                                                                                 <div>
                                                                                 </div>
@@ -1142,7 +1165,7 @@ function ZebraBlinds() {
 
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
-                                                                           
+
 
                                                                                     <span className={styles.ruler_line_group}>
 
@@ -1721,8 +1744,8 @@ function ZebraBlinds() {
                                                                                     </span>
                                                                                 ) : (
                                                                                     <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                                                                    {selectedInchesHeight}
-                                                                                </span>
+                                                                                        {selectedInchesHeight}
+                                                                                    </span>
                                                                                 )}
                                                                             </div>
                                                                         </div>
@@ -1766,7 +1789,7 @@ function ZebraBlinds() {
                                                                             <div className={styles.ruler_for_boat}>
                                                                                 <div className={styles.ruler_numbers_and_label}>
 
-                                                                                 
+
 
                                                                                     <span className={styles.ruler_line_group}>
                                                                                         <span className={styles.line_0}></span>
@@ -2375,7 +2398,7 @@ function ZebraBlinds() {
 
                                         <div className={styles.answers_answers}>
 
-                                        <div>
+                                            <div>
                                                 Length: {selectedInchesWidth} - {selectedFractionsWidth}
                                                 {selectedFractionsWidth && " Inches Long"}
                                             </div>
@@ -2384,7 +2407,7 @@ function ZebraBlinds() {
                                                 Height: {selectedInchesHeight} - {selectedFractionsHeight}
                                                 {selectedFractionsHeight && " Inches High"}
                                             </div>
-                                            
+
 
                                         </div>
                                     </div>
