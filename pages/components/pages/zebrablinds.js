@@ -2630,13 +2630,12 @@ function ZebraBlinds() {
                         <div className={styles.shipping_details_group_wrapper}>
                             <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
                             <div className={styles.shipping_details_title_wrapper}>
-                                <div className={styles.shipping_details_title}>Shipping Details</div>
+                                <div className={styles.shipping_details_title}>Shipping Details: </div>
                                 <div className={styles.total_price_tile}>Total Price</div>
                             </div>
                             <div className={styles.shipping_divider1}></div>
+
                             <div className={styles.shipping_tagger}>
-
-
                             <div className={styles.shipping_tagger_prt1}>
 
                                 <div className={styles.shipping_title}>Shipping</div>
@@ -2653,9 +2652,13 @@ function ZebraBlinds() {
                             </div>
 
                             <div className={styles.shipping_divider2}></div>
-                            <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
+                            <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
                             
-                            <div className={styles.date}>{futureDate}{" "}{"15 DAY DELIVERY"}</div>
+                            <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
+                            
+                            <p estimated_delivery_date_paragraph>
+                            15 DAY DELIVERY
+                            </p></div>
                             
                         </div>
 
