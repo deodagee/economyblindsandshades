@@ -2724,6 +2724,7 @@
   display: flex;
   flex-direction: row;
   width: 60vw;
+  gap: 5px;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
@@ -2737,8 +2738,84 @@
 .shipping_tagger {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
+.shipping_tagger_prt1 { 
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.shipping_tagger_prt2 { 
+  display: flex;
+  flex-direction: row;
+}
+
+.shipping_title { 
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  color: rgb(97, 97, 97);
+
+}
+
+
+
+.qty_1 { 
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  color: rgb(97, 97, 97);
+}
+
+.total_price { 
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  color: greenyellow;
+}
+
+.estimated_delivery_date { 
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: darkblue;
+}
+
+
+.add_to_cart_rectangle { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  background: linear-gradient(to bottom,#610000, #801212, #921f1fc9, #801212, #610000);
+  width: max-content;
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 5px;
+  border-radius: 0.15rem;
+  transition: 0.4s;
+
+}
+
+.add_to_cart_rectangle:hover { 
+  transform: scale(0.98);
+  background-color: brown;
+  background: linear-gradient(to bottom,#350000, #770000, #530000, #770000, #350000);
+
+  transition: 0.4s;
+    box-shadow: rgb(39, 39, 39) 1px 1px 5px;
+
+}
+
+.add_to_cart_rectangle p  { 
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+}
 .shippingtruck_1 {
   display: flex;
   height: 20px;

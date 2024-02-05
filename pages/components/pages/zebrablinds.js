@@ -548,7 +548,26 @@ function ZebraBlinds() {
     };
 
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    const [futureDate, setFutureDate] = useState(null);
+
+    useEffect(() => {
+      const currentDate = new Date();
+      currentDate.setUTCHours(currentDate.getUTCHours() - 5);
+  
+      const futureDate = new Date(currentDate);
+      futureDate.setDate(currentDate.getDate() + 15);
+  
+      const formattedDate = futureDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      });
+  
+      setFutureDate(formattedDate);
+    }, []);
 
     return (
 
@@ -2617,23 +2636,31 @@ function ZebraBlinds() {
                             <div className={styles.shipping_divider1}></div>
                             <div className={styles.shipping_tagger}>
 
-                                <div className={styles.shipping}>Shipping</div>
+
+                            <div className={styles.shipping_tagger_prt1}>
+
+                                <div className={styles.shipping_title}>Shipping</div>
+                                <div className={styles.shipping_title}>=</div>
+
                                 <div className={styles.shipping_price}>FREE</div>
+                                </div>
+
+                                <div className={styles.shipping_tagger_prt2}>
                                 <div className={styles.qty_1}>Qty 1</div>
                                 <div className={styles.total_price}>$00.00</div>
+                                </div>
+
                             </div>
 
                             <div className={styles.shipping_divider2}></div>
-                            <div className={styles.order_number}>Order Number: 345969654</div>
                             <div className={styles.estimated_delivery_date}>Estimated Delivery Date:</div>
-                            <div className={styles.date}>00/00/0000</div>
+                            
+                            <div className={styles.date}>{futureDate}{" "}{"15 DAY DELIVERY"}</div>
+                            <Link href={'/cart/addtocart_economyblinds'}>
 
-                            <div className={styles.add_to_cart_rectangle}></div>
+                            <div className={styles.add_to_cart_rectangle}>
 
-                            <Link href={'/cart/3353453-55555-xxvfdfd-3345'}>
-                                <div className={styles.add_to_cart}>ADD TO CART</div>
-                            </Link>
-
+                                <p className={styles.add_to_cart}>ADD TO CART</p>
                             <Image alt="image" width={100} height={100} className={styles.paymenticon}
                                 src="/interact.png" />
 
@@ -2641,6 +2668,8 @@ function ZebraBlinds() {
                                 className={styles.paypalicon}
                                 src="/paymenticon.png"
                             />
+                        </div>
+                        </Link>
                         </div>
                     </ol>
                 </div >
