@@ -850,7 +850,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                                                                className={selectedInchWIDTH === inchesWidth ? styles.selectedInch : ''}
+                                                                                                className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchesWidth}
                                                                                             </div>
@@ -858,7 +858,7 @@ function ZebraBlinds() {
                                                                                     </span>
                                                                                 ) : (
                                                                                     <span className={StyleSheet._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                                                                        {selectedInchWIDTH}
+                                                                                        {selectedInchesWidth}
 
                                                                                     </span>
                                                                                 )}
@@ -1097,7 +1097,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                                                                className={setselectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                                                                className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchHEIGHT}
                                                                                             </div>
@@ -1487,7 +1487,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                                                                className={selectedInchWIDTH === inchesWidth ? styles.selectedInch : ''}
+                                                                                                className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchesWidth}
                                                                                             </div>
@@ -1495,7 +1495,7 @@ function ZebraBlinds() {
                                                                                     </span>
                                                                                 ) : (
                                                                                     <span className={StyleSheet._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                                                                        {selectedInchWIDTH}
+                                                                                        {selectedInchesWidth}
 
                                                                                     </span>
                                                                                 )}
@@ -1757,7 +1757,7 @@ function ZebraBlinds() {
                                                                                             <div
                                                                                                 key={index}
                                                                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                                                                className={setselectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                                                                className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
                                                                                             >
                                                                                                 {inchHEIGHT}
                                                                                             </div>
