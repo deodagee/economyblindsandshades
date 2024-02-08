@@ -1,3 +1,49 @@
+.marginBottom50px {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.marginTop50px {
+  display: flex;
+  margin-top: 50px;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput {
+  display: flex;
+  margin: 5px;
+  gap: 5px;
+  flex-direction: row;
+}
+
+.formOutput {
+  display: flex;
+  margin: 5px;
+  gap: 5px;
+  flex-direction: row;
+}
+
+.formButton {
+  display: flex;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 0.95rem;
+  background-color: #00bc00;
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.boolean_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+}
+
 .ol,
 .ul {
   list-style: none;
@@ -50,6 +96,9 @@
   margin: 10px;
 }
 
+
+
+
 /* RIGHT HALF OF SELECT MOUNT GROUP  */
 
 .right_half {
@@ -75,13 +124,12 @@
   margin: 10px;
 }
 
-.product_title {
+.product_title_styles {
   display: flex;
-  align-items: center;
-  justify-content: start;
-  font-size: 25px;
   width: max-content;
   word-wrap: nowrap;
+  font-size: 20px;
+  color: black;
 }
 
 .room_darkening_rectangle {
@@ -96,11 +144,13 @@
   color: white;
 }
 
-.room_darkening_element {
+.product_lightening_styles {
   display: flex;
   width: max-content;
   word-wrap: nowrap;
-  font-size: 13px;
+  font-size: 20px;
+  color: black;
+
 }
 
 
@@ -807,7 +857,7 @@
   transition: 0.6s;
 }
 
-.span_visibility_1:hover { 
+.span_visibility_1:hover {
   display: flex;
   width: 70px;
   background-color: rgb(28, 28, 28);
@@ -1102,7 +1152,7 @@
   cursor: pointer;
 }
 
-.selected_ruler_number_FRACTION { 
+.selected_ruler_number_FRACTION {
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -1137,7 +1187,7 @@
 
 }
 
-.selected_next_number { 
+.selected_next_number {
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -1155,7 +1205,9 @@
 
 }
 
-.selected_ruler_number_FRACTION:hover, .selected_ruler_number:hover, .selected_next_number:hover { 
+.selected_ruler_number_FRACTION:hover,
+.selected_ruler_number:hover,
+.selected_next_number:hover {
   box-shadow: rgb(60, 60, 60) 1px 1px 6px;
   transition: 0.4s;
 
@@ -2042,7 +2094,7 @@
 .fabric_types_top_and_bottom_main_wrapper {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 60vw;
   height: max-content;
@@ -2396,7 +2448,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .casette_rail_type_answer_container {
@@ -2487,7 +2539,7 @@
 .quantity_and_add_to_cart_group {
   display: flex;
   width: 60vw;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   padding-left: 20px;
   transform: scale(0.8);
@@ -2740,10 +2792,10 @@
   font-size: 12px;
   font-weight: 600;
   gap: 5px;
-  
+
 }
 
-.total_price_tile { 
+.total_price_tile {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2757,18 +2809,18 @@
   gap: 10px;
 }
 
-.shipping_tagger_prt1 { 
+.shipping_tagger_prt1 {
   display: flex;
   flex-direction: row;
   gap: 0;
 }
 
-.shipping_tagger_prt2 { 
+.shipping_tagger_prt2 {
   display: flex;
   flex-direction: row;
 }
 
-.shipping_title { 
+.shipping_title {
   margin-left: 5px;
   margin-right: 5px;
   display: flex;
@@ -2778,47 +2830,47 @@
 
 
 
-.qty_1 { 
+.qty_1 {
   margin-left: 5px;
   margin-right: 5px;
   display: flex;
   color: rgb(97, 97, 97);
 }
 
-.total_price { 
+.total_price {
   margin-left: 5px;
   margin-right: 5px;
   display: flex;
   color: rgb(86, 143, 0);
 }
 
-.estimated_delivery_date_title { 
+.estimated_delivery_date_title {
   display: flex;
   flex-direction: row;
   font-size: 12px;
   color: darkblue;
 }
 
-.estimated_delivery_date_render { 
-font-size: 12px;
-display: flex;
-flex-direction: row;
-font-family: Arial, Helvetica, sans-serif;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-background-repeat: grey;
+.estimated_delivery_date_render {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-repeat: grey;
 
 }
 
-.estimated_delivery_date_paragraph { 
+.estimated_delivery_date_paragraph {
   font-size: 10px;
-font-family: 'Courier New', Courier, monospace;
-font-weight: 600;
-white-space: nowrap;
-color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  white-space: nowrap;
+  color: red;
 }
 
 
-.add_to_cart_rectangle_wrapper { 
+.add_to_cart_rectangle_wrapper {
   display: flex;
   width: 65vw;
   align-items: center;
@@ -2826,13 +2878,13 @@ color: red;
   margin-top: 20px;
 }
 
-.add_to_cart_rectangle { 
+.add_to_cart_rectangle {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: brown;
-  background: linear-gradient(to bottom,#610000, #801212, #921f1fc9, #801212, #610000);
+  background: linear-gradient(to bottom, #610000, #801212, #921f1fc9, #801212, #610000);
   width: max-content;
   padding: 3px;
   padding-left: 20px;
@@ -2843,21 +2895,22 @@ color: red;
 
 }
 
-.add_to_cart_rectangle:hover { 
+.add_to_cart_rectangle:hover {
   transform: scale(0.98);
   background-color: brown;
-  background: linear-gradient(to bottom,#350000, #770000, #530000, #770000, #350000);
+  background: linear-gradient(to bottom, #350000, #770000, #530000, #770000, #350000);
 
   transition: 0.4s;
-    box-shadow: rgb(39, 39, 39) 1px 1px 5px;
+  box-shadow: rgb(39, 39, 39) 1px 1px 5px;
 
 }
 
-.add_to_cart_rectangle p  { 
+.add_to_cart_rectangle p {
   font-size: 15px;
   font-weight: 700;
   color: white;
 }
+
 .shippingtruck_1 {
   display: flex;
   height: 20px;

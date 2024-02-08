@@ -4,8 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import MessageBox from "./pages/contact";
 import { useRef } from "react";
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 function HeaderPiece() {
+  /////////////////////////////////////////////////////////////////////////
+  const { data: session } = useSession()
+  /////////////////////////////////////////////////////////////////////////
 
   const [handle_open_menu, set_handle_open_menu] = useState(false);
 
@@ -16,7 +21,11 @@ function HeaderPiece() {
   // Use useRef to store a reference to the dropdown menu div
   const dropdownMenuRef = useRef(null);
 
+
+
   useEffect(() => {
+
+
     // Set overflowY to 'auto' on mount
     document.body.style.overflowY = 'scroll';
 
@@ -44,20 +53,21 @@ function HeaderPiece() {
 
     <>
 
+
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
 
 
           <ol className={styles.header_promo_bar}>
             <li>
-                <Image
-                  src={"/factorydirectsavingsversion4.png"}
-                  width={200}
-                  height={200}
-                  alt="header_top_image"
-                  className={styles.header_top_image}>
+              <Image
+                src={"/factorydirectsavingsversion4.png"}
+                width={200}
+                height={200}
+                alt="header_top_image"
+                className={styles.header_top_image}>
 
-                </Image>
+              </Image>
             </li>
           </ol>
 
@@ -145,23 +155,23 @@ function HeaderPiece() {
               <Link className={styles.header_link} href={"/"} > Home </Link>
             </li>
             <button
-                onClick={drop_the_menu}
-              >
-                <li className={styles.second_menu_bar_item}>
-                  <p> Zebra Blinds </p>
-                  <Image
-                    className={styles.chevron_top_menu}
-                    width={100}
-                    height={100}
-                    src={"/chevronwhite.png"}
-                    alt="chevron_top_menu">
-                  </Image>
-                </li>
-              </button>
+              onClick={drop_the_menu}
+            >
+              <li className={styles.second_menu_bar_item}>
+                <p> Zebra Blinds </p>
+                <Image
+                  className={styles.chevron_top_menu}
+                  width={100}
+                  height={100}
+                  src={"/chevronwhite.png"}
+                  alt="chevron_top_menu">
+                </Image>
+              </li>
+            </button>
 
-              
+
             <div className={styles.drop_down_wrapper}>
-            
+
               {handle_open_menu && (
 
                 <div className={styles.drop_down_menu}>
@@ -240,6 +250,32 @@ function HeaderPiece() {
                 </Image>
               </button>
             </li>
+
+
+            <span className={styles.second_menu_bar_item}>
+            {session ? (
+                  <>
+                    {/* Display user avatar and logout button if authenticated */}
+                    <li className={styles.avatar_and_tag}>
+                      <div>
+                        <button className={styles.button} onClick={() => signOut('google')()}>
+                          <p>Logout</p>
+                        </button>
+                      </div>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    {/* Display sign-in button if not authenticated */}
+                    <li className={styles.avatar_and_tag}>
+                      <button className={styles.button} onClick={() => signIn('google')('')}>
+                        <p>Sign In</p>
+                      </button>
+                    </li>
+                  </>
+                )}
+            </span>
+
           </ul>
         </div>
 
@@ -248,7 +284,9 @@ function HeaderPiece() {
 
       </div>
 
+
     </>
+
 
 
   );
