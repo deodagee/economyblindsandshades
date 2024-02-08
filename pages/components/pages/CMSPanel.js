@@ -1,3 +1,5 @@
+// C:\Users\User\economyblindsandshadesjs\pages\components\pages\CMSPanel.js
+
 import React, { useState } from "react";
 import LocalStorageAPI from "../../../localstorage.js";
 import { useStateContext } from "../../../StateContext.js";

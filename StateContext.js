@@ -1,36 +1,25 @@
-// /economyblindsandshadesjs/pages/components/StateContext.js
+// C:\Users\User\economyblindsandshadesjs\StateContext.js
+
 import React, { createContext, useContext, useState } from "react";
-
-
 
 const StateContext = createContext();
 
 export const StateProvider = ({ children }) => {
   const [productTitle, setProductTitle] = useState('');
-  const [Product_Lightening, setProduct_Lightening] = useState('');
+  const [ProductLightening, setProductLightening] = useState('');
 
-  const updateProductTitle = (newproductTitle) => {
-    setProductTitle(newproductTitle);
+  const updateProductTitle = (newProductTitle) => {
+    setProductTitle(newProductTitle);
   };
 
-  const updateProduct_Lightening = (newProduct_Lightening) => {
-    setProduct_Lightening(newProduct_Lightening);
+  const updateProductLightening = (newProductLightening) => {
+    setProductLightening(newProductLightening);
   };
 
   return (
-<>
-    <span>
-    <StateContext.Provider value={{ productTitle, updateProductTitle }}>
+    <StateContext.Provider value={{ productTitle, updateProductTitle, ProductLightening, updateProductLightening }}>
       {children}
     </StateContext.Provider>
-    </span>
-
-    <span>
-<StateContext.Provider value={{ Product_Lightening, updateProduct_Lightening }}>
-{children}
-</StateContext.Provider>
-</span>
-</>
   );
 };
 

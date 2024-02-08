@@ -1,4 +1,4 @@
-// /economyblindsandshadesjs/pages/components/localstorage.js
+// C:\Users\User\economyblindsandshadesjs\localstorage.js
 
 import React from "react";
 
@@ -8,10 +8,16 @@ const LocalStorageAPI = {
   getValue: (key) => {
     if (isLocalStorageAvailable) {
       const storedValue = localStorage.getItem(key);
-      return storedValue ? JSON.parse(storedValue) : null;
+      try {
+        return storedValue ? JSON.parse(storedValue) : null;
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+        return null;
+      }
     }
     return null;
   },
+  
   setValue: (key, value) => {
     if (isLocalStorageAvailable) {
       localStorage.setItem(key, JSON.stringify(value));

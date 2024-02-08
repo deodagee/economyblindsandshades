@@ -1,4 +1,6 @@
-// pages/_app.js
+// C:\Users\User\economyblindsandshadesjs\pages\_app.js
+
+
 import '../styles/globals.css'
 import React from 'react';
 import App from 'next/app';

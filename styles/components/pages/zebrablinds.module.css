@@ -2701,7 +2701,7 @@ align-self: flex-start;
 .my_order_band {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 60vw;
   height: 30px;
