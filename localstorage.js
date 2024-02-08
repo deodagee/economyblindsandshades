@@ -25,4 +25,7 @@ const LocalStorageAPI = {
   },
 };
 
-export default LocalStorageAPI;
+export default function LocalStorageComponent() {
+  // You can use LocalStorageAPI here if needed
+  return <></>;
+}
