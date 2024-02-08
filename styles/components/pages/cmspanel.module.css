@@ -62,3 +62,20 @@ justify-content: center;
     box-shadow: rgb(0, 0, 0) 0px 0px 4px;
 
 }
+
+
+.warning { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.warning_section { 
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color: orange;
+}

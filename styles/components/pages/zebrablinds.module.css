@@ -118,10 +118,15 @@
   display: flex;
   width: max-content;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   margin: 10px;
+}
+
+.top_title_area span { 
+display: flex;
+align-self: flex-start;
 }
 
 .product_title_styles {
@@ -148,8 +153,13 @@
   display: flex;
   width: max-content;
   word-wrap: nowrap;
-  font-size: 20px;
-  color: black;
+  font-size: 15px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(207, 207, 207);
+  background-color: #350000;
+  border-radius: 45px;
 
 }
 

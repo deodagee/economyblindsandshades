@@ -751,11 +751,11 @@ function ZebraBlinds({ onUpdateTitle, onUpdateAttachment, sensitiveData }) {
 
               <span>
                 <h1 className={styles.product_title_styles}>{productTitle}</h1>
+                </span>
 
-
+                <span>
                 <h1 className={styles.product_lightening_styles}>{productLightening}</h1>
-
-              </span>
+                </span>
 
             </div>
             <div className={styles.star_group}>

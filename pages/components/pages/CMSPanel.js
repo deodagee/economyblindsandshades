@@ -3,8 +3,13 @@ import LocalStorageAPI from "../localstorage";
 import { useStateContext } from "../StateContext";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
 import HeaderPiece from "../header.js";
+import { useSession } from "next-auth/react"
+
 
 const CMSPanel = () => {
+
+  const { data: session } = useSession();
+
   const {
     productTitle,
     updateProductTitle,
@@ -39,52 +44,72 @@ const CMSPanel = () => {
     <>
       <HeaderPiece></HeaderPiece>
 
-      <div className={styles.cmspanel_wrapper}>
-        <div className={styles.cms_panel_section}>
-          <div className={styles.cms_panel_title}>
-            CMS PANEL ECONOMY BLINDS AND SHADES
+      {session ? ( // Check if there is an active session
+        <div className={styles.cmspanel_wrapper}>
+          <div className={styles.cms_panel_section}>
+            <div className={styles.cms_panel_title}>
+              CMS PANEL ECONOMY BLINDS AND SHADES
+            </div>
+          </div>
+
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Product Title:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={productTitle}
+              onChange={handleTitleInputChange}
+            />
+            <button
+              className={styles.button}
+              style={{
+                borderWidth: titleButtonClicked ? "3px" : "4px",
+                borderColor: titleButtonClicked ? 'black' : 'orange'
+              }}
+              onClick={handleSaveproductTitle}
+            >
+              Save
+            </button>
+          </div>
+
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Product Lightening:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={ProductLightening}
+              onChange={handleLighteningInputChange}
+            />
+            <button
+              className={styles.button}
+              style={{
+                borderWidth: lighteningButtonClicked ? "3px" : "4px",
+                borderColor: lighteningButtonClicked ? 'black' : 'orange'
+              }}
+              onClick={handleSaveProductLightening}
+            >
+              Save
+            </button>
           </div>
         </div>
+      ) : (
+        <>
 
-        <div className={styles.cms_panel_section}>
-          <label className={styles.cms_panel_label}>Product Title:</label>
-          <input
-            className={styles.cms_panel_input_box}
-            type="text"
-            value={productTitle}
-            onChange={handleTitleInputChange}
-          />
-          <button
-            className={styles.button}
-            style={{
-              
-              borderWidth: titleButtonClicked ? "3px" : "4px",
-              borderColor: titleButtonClicked ? 'black' : 'orange' }}
-            onClick={handleSaveproductTitle}
-          >
-            Save
-          </button>
+        <div className={styles.warning}>  
+        <p>Please log in to access the CMS panel or contact Admin.           
+        </p>
+        <p className={styles.warning_section}>
+          Admin email 1: astrumstellar@gmail.com
+        </p>
+        <p className={styles.warning_section}>
+          Admin email 2: economyblindsshades@gmail.com
+        </p>
+        <p className={styles.warning_section}>
+          Thank You
+        </p>
         </div>
-
-        <div className={styles.cms_panel_section}>
-          <label className={styles.cms_panel_label}>Product Lightening:</label>
-          <input
-            className={styles.cms_panel_input_box}
-            type="text"
-            value={ProductLightening}
-            onChange={handleLighteningInputChange}
-          />
-          <button
-            className={styles.button}
-            style={{ 
-              borderWidth: lighteningButtonClicked ? "3px" : "4px",
-              borderColor: lighteningButtonClicked ? 'black' : 'orange' }}
-            onClick={handleSaveProductLightening}
-          >
-            Save
-          </button>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
 };
