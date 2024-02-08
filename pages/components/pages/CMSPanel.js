@@ -96,15 +96,16 @@ const CMSPanel = () => {
         <>
 
         <div className={styles.warning}>  
-        <p>Please log in to access the CMS panel or contact Admin.           
+        <p className={styles.warning_section_title}>
+          Please Sign in to access the CMS panel or contact Admin.           
         </p>
         <p className={styles.warning_section}>
-          Admin email 1: astrumstellar@gmail.com
+         <span>Admin email 1: </span>  astrumstellar@gmail.com
         </p>
         <p className={styles.warning_section}>
-          Admin email 2: economyblindsshades@gmail.com
+        <span>Admin email 2: </span>  economyblindsshades@gmail.com
         </p>
-        <p className={styles.warning_section}>
+        <p className={styles.warning_section_thank_you}>
           Thank You
         </p>
         </div>
