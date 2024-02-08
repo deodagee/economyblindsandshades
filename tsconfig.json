@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,9 +22,15 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "pages/components/pages/zebrablinds.js", "pages/components/pages/zebrablinds.js"  ],
+    "**/*.tsx",
+    "pages/components/pages/zebrablinds.js"
+  ],
+  
   "exclude": [
     "node_modules"
   ]
+
+  
 }
+
+

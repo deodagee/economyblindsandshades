@@ -1731,7 +1731,7 @@ align-self: flex-start;
   height: 33px;
   border-radius: 2rem;
   background: linear-gradient(to left, #dfdfdf, #dfdfdf, #dfdfdf, #cfcfcf, #dfdfdf);
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .select_lift_type_short_rectangle {
