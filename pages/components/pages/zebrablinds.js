@@ -5,9 +5,9 @@ import Link from "next/link";
 import Footer from "../footer.js";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react"
-import LocalStorageAPI from "../../../localstorage";
+import {LocalStorageAPI} from "../../../localstorage";
 
-function ZebraBlinds({ onUpdateTitle, onUpdateAttachment, sensitiveData }) {
+function ZebraBlinds() {
 
   const [productTitle, setProductTitle] = React.useState('');
   const [productLightening, setProductLightening] = React.useState('');
@@ -20,71 +20,6 @@ function ZebraBlinds({ onUpdateTitle, onUpdateAttachment, sensitiveData }) {
     setProductLightening(storedProductLightening || '');
   }, []); // Empty dependency array ensures useEffect runs only once on mount
 
-
-  const { data: session } = useSession();
-  const [newTitle, setNewTitle] = useState('');
-  const [newAttachment, setNewAttachment] = useState('');
-  const [defaultTitle, setDefaultTitle] = useState('Default Title');
-  const [defaultAttachment, setDefaultAttachment] = useState('Default Attachment');
-
-  const handleTitleChange = (e) => {
-    setNewTitle(e.target.value);
-  };
-
-  const handleAttachmentChange = (e) => {
-    setNewAttachment(e.target.value);
-  };
-
-  const handleUpdateTitleClick = async () => {
-    if (onUpdateTitle) {
-      // Update the title state before API call
-      setNewTitle(newTitle);
-
-      await onUpdateTitle(newTitle);
-
-      // Update default title based on the changes
-      setDefaultTitle(newTitle);
-
-      // Make a POST request to update the server-side data for title
-      await fetch('/api/adminAPI', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ newTitle }),
-      });
-    }
-  };
-
-  const handleUpdateAttachmentClick = async () => {
-    if (onUpdateAttachment) {
-      // Update the attachment state before API call
-      setNewAttachment(newAttachment);
-
-      await onUpdateAttachment(newAttachment);
-
-      // Update default attachment based on the changes
-      setDefaultAttachment(newAttachment);
-
-      // Make a POST request to update the server-side data for attachment
-      await fetch('/api/adminAPI', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ newAttachment }),
-      });
-    }
-  };
-
-  useEffect(() => {
-    if (session && sensitiveData) {
-      setNewTitle(sensitiveData.title);
-      setNewAttachment(sensitiveData.attachment);
-      setDefaultTitle(sensitiveData.title);
-      setDefaultAttachment(sensitiveData.attachment);
-    }
-  }, [session, sensitiveData]);
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
