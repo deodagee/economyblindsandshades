@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import LocalStorageAPI from "../localstorage";
-import { useStateContext } from "../StateContext";
+import LocalStorageAPI from "../../../localstorage.js";
+import { useStateContext } from "../../../StateContext.js";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
-import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react"
 
 
@@ -42,9 +41,10 @@ const CMSPanel = () => {
 
   return (
     <>
-      <HeaderPiece></HeaderPiece>
 
-      {session ? ( // Check if there is an active session
+    <div>
+
+      {session ? (
         <div className={styles.cmspanel_wrapper}>
           <div className={styles.cms_panel_section}>
             <div className={styles.cms_panel_title}>
@@ -94,7 +94,6 @@ const CMSPanel = () => {
         </div>
       ) : (
         <>
-
         <div className={styles.warning}>  
         <p className={styles.warning_section_title}>
           Please Sign in to access the CMS panel or contact Admin.           
@@ -111,6 +110,7 @@ const CMSPanel = () => {
         </div>
         </>
       )}
+      </div>
     </>
   );
 };

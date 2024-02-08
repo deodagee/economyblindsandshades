@@ -5,7 +5,7 @@ import App from 'next/app';
 import { ChakraProvider } from "@chakra-ui/react";
 import Fonts from "./components/fonts";
 import { SessionProvider } from "next-auth/react";
-import { StateProvider } from './components/StateContext';
+import { StateProvider } from '../StateContext';
 
 
 class MyApp extends App {

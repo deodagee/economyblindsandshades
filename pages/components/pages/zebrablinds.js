@@ -5,7 +5,7 @@ import Link from "next/link";
 import Footer from "../footer.js";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react"
-import LocalStorageAPI from "../localstorage";
+import LocalStorageAPI from "../../../localstorage";
 
 function ZebraBlinds({ onUpdateTitle, onUpdateAttachment, sensitiveData }) {
 
