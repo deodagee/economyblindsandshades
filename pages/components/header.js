@@ -278,9 +278,11 @@ function HeaderPiece() {
                       </button>
                     </li>
                     <li className={styles.avatar_and_tag}>
-                      <button className={styles.button_cms} onClick={() => signIn('google')('')}>
+                      <Link 
+                      href={"/CMSPanel"}
+                      className={styles.button_cms} >
                         <p>Admin</p>
-                      </button>
+                      </Link>
                     </li>
                     
                   </>
