@@ -1107,7 +1107,6 @@
   justify-content: center;
   background-color: #136c60cc;
   background: linear-gradient(to bottom, #0a3d36cc, #30a797cc, #31c4b0cc, #30a797cc, #0b4840cc);
-
   border-color: rgb(0, 0, 0);
   border-width: 2px;
   border-radius: 0.25rem;
@@ -1131,7 +1130,7 @@ transform: scale(0.8);
 .ruler_line_group {
   display: flex;
   flex-direction: column;
-  width: 40px;
+  width: 21px;
   align-items: center;
 }
 
