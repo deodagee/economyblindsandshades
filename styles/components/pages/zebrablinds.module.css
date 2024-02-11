@@ -1105,14 +1105,16 @@
   height: 110px;
   align-items: flex-start;
   justify-content: center;
-  background-color: rgba(19, 108, 96, 0.801);
+  background-color: #136c60cc;
+  background: linear-gradient(to bottom, #0a3d36cc, #30a797cc, #31c4b0cc, #30a797cc, #0b4840cc);
+
   border-color: rgb(0, 0, 0);
   border-width: 2px;
   border-radius: 0.25rem;
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-
+transform: scale(0.8);
 }
 
 .ruler_for_boat::-webkit-scrollbar {
