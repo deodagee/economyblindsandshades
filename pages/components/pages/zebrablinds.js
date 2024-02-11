@@ -161,7 +161,6 @@ const ZebraBlinds = () => {
 
 
 
-
   const handleEllipseClickSkipHeadRailAndBotomRailColor = () => {
     console.log('Ellipse Clicked');
     Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
@@ -171,6 +170,8 @@ const ZebraBlinds = () => {
     setSteelMaterialChosen(true);
 
   };
+
+
 
 
   const [roomDarkeningContent, setRoomDarkeningContent] = useState('');
@@ -381,11 +382,13 @@ const ZebraBlinds = () => {
     setSelectedImagesBottom(key === selectedImagesBottom ? null : key);
     // Find and select the corresponding image in the top section
     const matchingImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(image => image.key === key);
+
     if (matchingImage) {
+
       setSelectedImagesTop(key === selectedImagesBottom ? null : matchingImage.key);
     }
-  };
 
+  };
 
 
 
@@ -2444,6 +2447,7 @@ const ZebraBlinds = () => {
                 <div className={styles.select_color_subtitle}> Select Material</div>
                 <div>Click On A Color To Choose And Add</div>
               </div>
+
               <div className={styles.selectColorImageCollection}>
                 {Object.keys(colorData).map((color) => (
                   <div key={color} className={styles[color.toLowerCase()]}>
@@ -2452,6 +2456,7 @@ const ZebraBlinds = () => {
                   </div>
                 ))}
               </div>
+
             </div>
 
             <div className={styles.review_your_order_seperator_line}></div>
@@ -2656,9 +2661,8 @@ const ZebraBlinds = () => {
                             <div className={styles.skip_head_rail_color}>Skip Cassette Type
                             </div>
                           </div>
-
-
                         </div>
+
                         <div>
                           <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}>
                             <div className={styles.gobacktochoices}>
@@ -2668,9 +2672,10 @@ const ZebraBlinds = () => {
                                 </p></div>
                             </div>
                           </div>
+
                           {!active_skip_head_rail_ellipse && (
                             <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-                              <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Top Rail Will Automatically Select Bottom Rail Material.</div>
+
                               <div className={styles.materials_organized_div_wrapper}>
                                 {Object.keys(Top_Head_Rail_Choices_Materials).map((railType, index) => (
                                   <div key={index}>
@@ -2751,7 +2756,6 @@ const ZebraBlinds = () => {
                                   <div className={styles.fabric_list_bottom_list1}>
                                     <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
 
-                                    <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Bottom Rail Will Automatically Select Top Rail Material.</div>
                                     <div className={styles.materials_organized_div_wrapper}>
                                       {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
                                         <div key={index}>

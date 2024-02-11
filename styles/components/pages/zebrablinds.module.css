@@ -2344,13 +2344,6 @@ transform: scale(0.9);
   margin: 10px;
 }
 
-.pick_head_rail_color_subtitle_oval_with_fabric {
-  display: flex;
-  font-size: 15px;
-  margin-left: 20px;
-  margin: 10px;
-}
-
 .bottom_section {
   display: flex;
   width: 59vw;
