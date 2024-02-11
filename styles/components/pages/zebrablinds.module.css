@@ -2362,7 +2362,7 @@ transform: scale(0.9);
 }
 
 .skip_bottom_section {
-  display: none;
+  display: flex;
   width: 59vw;
   flex-direction: column;
   padding-left: 20px;
