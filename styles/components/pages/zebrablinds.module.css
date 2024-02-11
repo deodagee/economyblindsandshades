@@ -1113,7 +1113,7 @@
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
-transform: scale(0.8);
+transform: scale(0.9);
 }
 
 .ruler_for_boat::-webkit-scrollbar {
