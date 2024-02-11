@@ -1,25 +1,22 @@
 // C:\Users\User\economyblindsandshadesjs\utils\connectMongo.js
 
-import mongoose from "mongoose";
+import { MongoClient } from "mongodb";
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(process.env.MONGO_URI, {
-  serverApi: {
-    version: ServerApiVersion.process.env.MONGO_URI,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+const connectMongo = async () => {
+  const client = new MongoClient(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-async function run() {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      connectTimeoutMS: 30000, // 30 seconds
-    });
+    await client.connect();
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
     throw error; // Throw the error to be caught in your API route.
+  } finally {
+    await client.close();
   }
-}
-run().catch(console.dir);
+};
+
+export default connectMongo;
