@@ -377,6 +377,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
+  background-color: white;
 }
 
 .first_chosen_inside_mount_selection {
@@ -557,6 +558,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
+  background-color: white;
 }
 
 .first_chosen_outside_mount_selection {
