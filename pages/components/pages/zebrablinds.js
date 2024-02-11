@@ -2313,9 +2313,7 @@ const ZebraBlinds = () => {
                             <div className={styles.skip_head_rail_color}>Skip Cassette Type
                             </div>
                           </div>
-                          <div className={styles.note_skipping_color_for_head_rail}>
-                            *Note: Skipping Color will result with steel material
-                          </div>
+
 
                         </div>
                         <div>
@@ -2409,9 +2407,7 @@ const ZebraBlinds = () => {
                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                   <div className={styles.fabric_list_bottom_list1}>
                                     <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
-                                    <div className={styles.note_skipping_color_for_head_rail}>
-                                      *Note: If you chose to skip the top cassette color, steel material will be set.
-                                    </div>
+
                                     <div className={styles.pick_head_rail_color_subtitle_oval_with_fabric}>Selected Bottom Rail Will Automatically Select Top Rail Material.</div>
                                     <div className={styles.materials_organized_div_wrapper}>
                                       {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
@@ -2494,6 +2490,7 @@ const ZebraBlinds = () => {
                     <div className={styles.window_name_answer}>Window Name:
                     </div>
                     <div className={styles.answers_answers}>
+                      {productName1}
                     </div>
                   </div>
 
@@ -2504,6 +2501,7 @@ const ZebraBlinds = () => {
                   <div className={styles.description_and_answer}>
                     <div className={styles.window_type_answer}>Window Type:</div>
                     <div className={styles.answers_answers}>
+                      {productName2}
                     </div>
                   </div>
 

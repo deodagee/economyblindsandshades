@@ -76,7 +76,7 @@ function HeaderPiece() {
             <div>
               <li className={styles.header_logo}>
                 <Link href={'/'}>
-                  <Image className={styles.logo_image} src={"/logodarker.png"} width={400} height={400} alt="economyblindsandshades_logo" />
+                  <Image className={styles.logo_image} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
                 </Link>
               </li>
             </div>

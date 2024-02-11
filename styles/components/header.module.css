@@ -59,10 +59,10 @@
 .logo_image {
   position: absolute;
   display: flex;
-  height: 120px;
+  height: 90px;
   width: auto;
-  top: -10px;
-  left: 0;
+  top: 10px;
+  left: 20px;
 }
 
 .icons_group {
