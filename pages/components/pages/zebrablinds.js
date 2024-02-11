@@ -578,7 +578,7 @@ const ZebraBlinds = () => {
     currentDate.setUTCHours(currentDate.getUTCHours() - 5);
 
     const futureDate = new Date(currentDate);
-    futureDate.setDate(currentDate.getDate() + 15);
+    futureDate.setDate(currentDate.getDate() + 14);
 
     const formattedDate = futureDate.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -587,7 +587,29 @@ const ZebraBlinds = () => {
     });
 
     setFutureDate(formattedDate);
-  }, []);
+  },
+    []);
+
+
+  const [futureDate2, setfutureDate2] = useState(null);
+
+  useEffect(() => {
+    const currentDate2 = new Date();
+    currentDate2.setUTCHours(currentDate2.getUTCHours() - 5);
+
+    const futureDate2 = new Date(currentDate2);
+    futureDate2.setDate(currentDate2.getDate() + 21);
+
+    const formattedDate2 = futureDate2.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
+
+    setfutureDate2(formattedDate2);
+  },
+
+    []);
 
   return (
 
@@ -709,6 +731,17 @@ const ZebraBlinds = () => {
               <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
               <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
               <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+            </div>
+
+
+            <div className={styles.estimated_delivery_date_wrapper}>
+              <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
+              <p>Between</p>
+              <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
+              </div>
+              <p>and</p>
+              <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
+              </div>
             </div>
 
             <div
@@ -2471,11 +2504,7 @@ const ZebraBlinds = () => {
                   <span className={styles.my_order_band_element1}>
                     My Order
                   </span>
-                  <span className={styles.my_order_band_element2}>
-                    <Link href={'/zebrablinds'}>
-                      Restart
-                    </Link>
-                  </span>
+
 
                 </div>
               </span>
@@ -2669,13 +2698,7 @@ const ZebraBlinds = () => {
               </div>
 
               <div className={styles.shipping_divider2}></div>
-              <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
 
-              <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
-
-                <p estimated_delivery_date_paragraph>
-                  15 DAY DELIVERY
-                </p></div>
 
             </div>
 
