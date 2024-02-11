@@ -124,17 +124,18 @@
   margin: 10px;
 }
 
-.top_title_area span { 
-display: flex;
-align-self: flex-start;
+.top_title_area span {
+  display: flex;
+  align-self: flex-start;
 }
 
 .product_title_styles {
   display: flex;
   width: max-content;
   word-wrap: nowrap;
-  font-size: 20px;
+  font-size: 22px;
   color: black;
+  font-weight: 600;
 }
 
 .room_darkening_rectangle {
@@ -147,6 +148,7 @@ align-self: flex-start;
   background-color: rgb(71, 0, 0);
   border-radius: 0.95rem;
   color: white;
+
 }
 
 .product_lightening_styles {
@@ -160,7 +162,8 @@ align-self: flex-start;
   color: rgb(207, 207, 207);
   background-color: #350000;
   border-radius: 45px;
-
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 
@@ -796,6 +799,9 @@ align-self: flex-start;
 }
 
 
+
+/*START OF RULER DIV*/
+
 .bottom_portion_ruler_and_stuff_wrapper {
   display: flex;
   flex-direction: column;
@@ -813,13 +819,10 @@ align-self: flex-start;
   gap: 20px;
 }
 
-.select_your_width_and_height {
+.inches_and_fractions_and_ruler_group {
   display: flex;
-  font-size: 12px;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  flex-direction: column;
 }
-
 
 .width_inside_mount_sub_title {
   display: flex;
@@ -835,137 +838,6 @@ align-self: flex-start;
   padding: 2px;
   margin: 5px;
   background-color: rgb(55, 55, 55);
-}
-
-
-.inches_subtitle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(238, 238, 238);
-  padding: 5px;
-  gap: 10px;
-  width: 60px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.inches_subtitle:hover {
-  display: flex;
-}
-
-.span_visibility_1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: 0.6s;
-}
-
-.span_visibility_1:hover {
-  display: flex;
-  width: 70px;
-  background-color: rgb(28, 28, 28);
-  color: white;
-}
-
-.inches_scroller_wrapper,
-.fractions_scroller_wrapper {
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.inches_scroller_div .span_visibility_1 div:hover {
-  background-color: white;
-  width: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  padding: 3px;
-  transition: 0.3s;
-}
-
-.fractions_scroller_div .span_visibility_1 div:hover {
-  background-color: white;
-  width: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  padding: 3px;
-  transition: 0.3s;
-}
-
-
-/* Original styles for inches_scroller_div and fractions_scroller_div */
-.inches_scroller_div,
-.fractions_scroller_div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 50px;
-  overflow: hidden;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(138, 138, 138);
-  padding: 5px;
-  transition: 0.4s;
-  background-color: white;
-  font-size: 20px;
-}
-
-/* Original hover styles for inches_scroller_div and fractions_scroller_div */
-.inches_scroller_div:hover,
-.fractions_scroller_div:hover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: max-content;
-  border-radius: 0.45rem;
-  font-size: 20px;
-  transition: 0.2s;
-  border-width: 1px;
-  border-color: rgb(103, 103, 103);
-  background-color: white;
-  transform: scale(0.8);
-  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
-
-}
-
-/* Additional styles when span_visibility_1 is visible */
-.span-visibility-1-visible .inches_scroller_div,
-.span-visibility-1-visible .fractions_scroller_div {
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-._scroller_div_span {
-  display: flex;
-  height: 65px;
-  width: 70px;
-  align-items: center;
-  justify-content: center;
-  color: rgb(105, 0, 0);
-}
-
-.inches_and_fractions_and_ruler_group {
-  display: flex;
-  flex-direction: column;
 }
 
 .enter_width_inside_mount_rectangle_1 {
@@ -994,21 +866,21 @@ align-self: flex-start;
   padding: 10px;
 }
 
-.enter_inches_group_wrapper {
+.enter_inches_group_wrapper, .enter_fractions_group_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+  justify-content: flex-start;
+  gap: 15px;
   width: 10vw;
   border-radius: 0.56rem;
   border-color: rgb(22, 22, 22);
   border-width: 2px;
   padding: 2px;
-  height: 120px;
+  height: 100px;
 }
 
-.toggle_disclaimer_inches_inside_mount_width {
+.inches_subtitle, .fractions_subtitle {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1017,25 +889,129 @@ align-self: flex-start;
   font-weight: 600;
   margin: 10px;
   white-space: nowrap;
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(238, 238, 238);
   padding: 5px;
   gap: 10px;
+  width: 60px;
   transition: 0.3s;
   border-radius: 0.35rem;
 }
 
-.toggle_disclaimer_inches_inside_mount_width:hover {
+.inches_subtitle:hover, .fractions_subtitle:hover{
+  display: flex;
   background-color: rgb(159, 159, 159);
   transition: 0.3s;
 }
 
-._scroll_number_ {
+.inches_scroller_wrapper,
+.fractions_scroller_wrapper {
   display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.inches_scroller_div,
+.fractions_scroller_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 50px;
+  overflow: hidden;
+  border-width: 1px;
+  border-radius: 0.45rem;
+  border-color: rgb(138, 138, 138);
+  padding: 5px;
+  transition: 0.4s;
+  background-color: white;
+  font-size: 20px;
 }
 
 
+.inches_scroller_div,
+.fractions_scroller_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  border-radius: 0.45rem;
+  font-size: 20px;
+  transition: 0.2s;
+  border-width: 1px;
+  border-color: rgb(103, 103, 103);
+  background-color: white;
+  transform: scale(0.8);
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+}
 
-/* ruler start */
+.inches_scroller_div:hover,
+.fractions_scroller_div:hover {
+  height: max-content;
+
+  &.span-visible {
+    height: 300px;
+  }
+}
+
+._scroller_div_span {
+
+  &:hover+.inches_scroller_div,
+  &:hover+.fractions_scroller_div {
+    height: 300px;
+  }
+}
+
+
+.span_visibility_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s;
+}
+
+.span_visibility_1 div:hover {
+  background-color: rgb(195, 0, 0);
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 3px;
+  transition: 0.3s;
+}
+
+
+.selectedInch,
+.selectedFraction {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 158, 100);
+  width: 70px;
+}
+
+
+._scroller_div_span {
+  display: flex;
+  height: 65px;
+  width: 70px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(49, 49, 49);
+  font-weight: 700;
+  background-color: rgb(80, 218, 0);
+}
+
+
+/* START OF RULER RENDER */
 
 .ruler_div {
   display: flex;
@@ -1044,7 +1020,7 @@ align-self: flex-start;
   justify-content: center;
 }
 
-.enter_size_boat_bottom {
+.enter_size_boat_span {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -1070,16 +1046,13 @@ align-self: flex-start;
   border-radius: 0.25rem;
   overflow: auto;
   scrollbar-width: none;
-  /* Firefox */
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
 
 }
 
 .ruler_for_boat::-webkit-scrollbar {
   display: none;
 }
-
 
 .ruler_numbers_and_label {
   display: flex;
@@ -1148,37 +1121,6 @@ align-self: flex-start;
   cursor: pointer;
 }
 
-.ruler_line_number_fractions {
-  display: flex;
-  font-size: 10PX;
-  font-weight: 700;
-  color: rgb(1, 1, 1);
-  transition: 0.4s;
-}
-
-.ruler_line_number_fractions:hover {
-  color: rgb(179, 179, 179);
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.selected_ruler_number_FRACTION {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  background-color: rgb(0, 178, 24);
-  border-radius: 0.95rem;
-  margin-top: 3px;
-  width: 40px;
-  padding: 3px;
-  height: 20px;
-  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
-  transition: 0.4s;
-}
-
 .selected_ruler_number {
   font-size: 15px;
   display: flex;
@@ -1197,23 +1139,21 @@ align-self: flex-start;
 
 }
 
-.selected_next_number {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  background-color: rgb(238, 186, 0);
-  border-radius: 0.95rem;
-  margin-top: 3px;
-  width: 40px;
-  padding: 3px;
-  height: 20px;
-  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
-  transition: 0.4s;
 
+.ruler_line_number_fractions {
+  display: flex;
+  font-size: 10PX;
+  font-weight: 700;
+  color: rgb(1, 1, 1);
+  transition: 0.4s;
 }
+
+.ruler_line_number_fractions:hover {
+  color: rgb(179, 179, 179);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
 
 .selected_ruler_number_FRACTION:hover,
 .selected_ruler_number:hover,
@@ -1223,7 +1163,44 @@ align-self: flex-start;
 
 }
 
-/* ruler end */
+
+.selected_ruler_number_FRACTION {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(0, 178, 24);
+  border-radius: 0.95rem;
+  margin-top: 3px;
+  width: 40px;
+  padding: 3px;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  transition: 0.4s;
+}
+
+.selected_next_number {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.95rem;
+  margin-top: 3px;
+  width: 40px;
+  padding: 3px;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  transition: 0.4s;
+  border-width: 1px;
+  
+
+}
+
 .selected_width_answer_top {
   width: 28vw;
   height: 30px;
@@ -1252,6 +1229,50 @@ align-self: flex-start;
   justify-content: center;
   word-wrap: nowrap;
 }
+
+
+.select_your_width_and_height {
+  display: flex;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+.toggle_disclaimer_inches_inside_mount_width {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px;
+  white-space: nowrap;
+  background-color: rgb(193, 193, 193);
+  padding: 5px;
+  gap: 10px;
+  transition: 0.3s;
+  border-radius: 0.35rem;
+}
+
+.toggle_disclaimer_inches_inside_mount_width:hover {
+  background-color: rgb(159, 159, 159);
+  transition: 0.3s;
+}
+
+._scroll_number_ {
+  display: flex;
+}
+
+
+
+
+
+
+
 
 /* Your existing styles */
 .inchNumber {
@@ -1286,42 +1307,6 @@ align-self: flex-start;
   background-color: grey;
 }
 
-.enter_fractions_group_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  width: 10vw;
-  border-radius: 0.56rem;
-  border-color: rgb(22, 22, 22);
-  border-width: 2px;
-  padding: 2px;
-  height: 120px;
-}
-
-.fractions_subtitle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px;
-  white-space: nowrap;
-  background-color: rgb(238, 238, 238);
-  padding: 5px;
-  gap: 10px;
-  width: 60px;
-  transition: 0.3s;
-  border-radius: 0.35rem;
-}
-
-.fractions_subtitle:hover {
-  background-color: rgb(159, 159, 159);
-  transition: 0.3s;
-}
-
 
 
 
@@ -1331,20 +1316,6 @@ align-self: flex-start;
   width: 10px;
   top: 0;
 }
-
-
-
-.selectedFraction,
-.selectedInch {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 158, 100);
-  width: 70px;
-}
-
 
 
 .visible_outside_mount {

@@ -902,7 +902,7 @@ const ZebraBlinds = () => {
                                             ))}
                                           </span>
                                         ) : (
-                                          <span className={StyleSheet._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
+                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
                                             {selectedInchesWidth}
 
                                           </span>
@@ -945,7 +945,7 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.ruler_div}>
 
-                                  < span className={styles.enter_size_boat_bottom} >
+                                  < span className={styles.enter_size_boat_span} >
                                     <div className={styles.ruler_for_boat_wrapper}>
 
                                       <div className={styles.ruler_for_boat}>
@@ -954,7 +954,7 @@ const ZebraBlinds = () => {
                                           <span className={styles.ruler_line_group}>
                                             <span className={styles.line_0}></span>
                                             <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                              {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                 <div
                                                   key={index}
                                                   onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -964,6 +964,7 @@ const ZebraBlinds = () => {
                                                 </div>
                                               ))}
                                             </div>
+
 
                                           </span>
 
@@ -1202,7 +1203,7 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.ruler_div}>
 
-                                  <span className={styles.enter_size_boat_bottom}>
+                                  <span className={styles.enter_size_boat_span}>
 
                                     <div className={styles.ruler_for_boat_wrapper}>
 
@@ -1217,9 +1218,7 @@ const ZebraBlinds = () => {
                                             <span className={styles.line_0}></span>
 
                                             <div className={styles.ruler_line_number_inches}>
-
-                                              {[selectedInchHEIGHT].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
+                                              {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                 <div
                                                   key={index}
                                                   onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
@@ -1227,10 +1226,9 @@ const ZebraBlinds = () => {
                                                 >
                                                   {rulerNumberWidthAndHeightInsideMount}
                                                 </div>
-
                                               ))}
-
                                             </div>
+
 
                                           </span>
 
@@ -1427,6 +1425,7 @@ const ZebraBlinds = () => {
                             </div>
                           </div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -1524,7 +1523,6 @@ const ZebraBlinds = () => {
 
                         </div>
 
-                        <div className={styles.choose_width_or_height_image_placeholder}></div>
                         <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
                           <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
 
@@ -1600,7 +1598,7 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.ruler_div}>
 
-                                  < span className={styles.enter_size_boat_bottom} >
+                                  < span className={styles.enter_size_boat_span} >
                                     <div className={styles.ruler_for_boat_wrapper}>
 
                                       <div className={styles.ruler_for_boat}>
@@ -1609,8 +1607,9 @@ const ZebraBlinds = () => {
 
                                           <span className={styles.ruler_line_group}>
                                             <span className={styles.line_0}></span>
+
                                             <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                              {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                 <div
                                                   key={index}
                                                   onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
@@ -1620,6 +1619,7 @@ const ZebraBlinds = () => {
                                                 </div>
                                               ))}
                                             </div>
+
 
                                           </span>
 
@@ -1879,7 +1879,7 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.ruler_div}>
 
-                                  < span className={styles.enter_size_boat_bottom} >
+                                  < span className={styles.enter_size_boat_span} >
                                     <div className={styles.ruler_for_boat_wrapper}>
 
                                       <div className={styles.ruler_for_boat}>
@@ -1891,17 +1891,17 @@ const ZebraBlinds = () => {
                                             <span className={styles.line_0}></span>
 
                                             <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchHEIGHT].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                              {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                 <div
                                                   key={index}
                                                   onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
                                                   className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                 >
-
                                                   {rulerNumberWidthAndHeightInsideMount}
                                                 </div>
                                               ))}
                                             </div>
+
                                           </span>
 
                                           <span className={styles.ruler_line_group}>

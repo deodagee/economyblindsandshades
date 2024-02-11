@@ -275,7 +275,7 @@ function HeaderPiece() {
                   <>
                     {/* Display sign-in button if not authenticated */}
                     <li className={styles.avatar_and_tag}>
-                      <button className={styles.button} onClick={() => signIn('google')('')}>
+                      <button className={styles.button} onClick={() => signIn('google')()}>
                         <p>Sign In</p>
                       </button>
                     </li>
