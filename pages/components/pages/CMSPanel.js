@@ -1,8 +1,6 @@
 // C:\Users\User\economyblindsandshadesjs\pages\components\pages\CMSPanel.js
 
 
-// C:\Users\User\economyblindsandshadesjs\pages\components\pages\CMSPanel.js
-
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
@@ -85,12 +83,13 @@ const CMSPanel = () => {
     }
   };
 
+  
   return (
     <>
       {session ? (
         <div className={styles.cmspanel_wrapper}>
           <div className={styles.cms_panel_section}>
-            <label className={styles.cms_panel_label}>Post Request Section1:</label>
+            <label className={styles.cms_panel_label}>Change Page Title:</label>
             <input
               className={styles.cms_panel_input_box}
               type="text"
@@ -105,7 +104,7 @@ const CMSPanel = () => {
           </div>
 
           <div className={styles.cms_panel_section}>
-            <label className={styles.cms_panel_label}>Post Request Section2:</label>
+            <label className={styles.cms_panel_label}>Page Title Tag:</label>
             <input
               className={styles.cms_panel_input_box}
               type="text"
