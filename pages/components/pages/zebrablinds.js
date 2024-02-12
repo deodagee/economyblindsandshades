@@ -6,8 +6,36 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react";
+import FooterPage from "../../../pages/components/footer.js"
 
 const ZebraBlinds = () => {
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Adjust the threshold as needed
+      const threshold = 100;
+
+      // Check if we are close to the bottom of the page
+      const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+
+      // Set the state to show or hide the footer
+      setShowFooter(isNearBottom);
+    };
+
+    // Add scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
   const { data: session } = useSession();
   const [productName1, setProductName1] = useState("");
   const [productName2, setProductName2] = useState("");
@@ -362,22 +390,22 @@ const ZebraBlinds = () => {
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
-  
+
     const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key === key);
-  
+
     if (matchingImage1) {
       setClickedImageKeyTop(key === clickedImageKeyTop ? null : key);
       setSelectedImagesTop(key === clickedImageKeyTop ? [] : [key]);
-  
+
       const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key === key);
-  
+
       if (matchingBottomImages && matchingBottomImages.length > 0) {
         const bottomKeys = matchingBottomImages.map(image => image.key2);
         setSelectedImagesBottom(key === clickedImageKeyTop ? [] : bottomKeys);
       }
     }
   };
-  
+
 
   const handleImageClickImagesTop2 = (key2) => {
     setfirstImage_div(false);
@@ -631,13 +659,13 @@ const ZebraBlinds = () => {
 
     <>
       <div className={styles.page}>
-        <div className={styles.header_piece}>
+        <span className={styles.header_piece}>
           <HeaderPiece></HeaderPiece>
-        </div>
+        </span>
 
-        <div className={styles.page_wrapper}>
-
-          <ol className={styles.left_half_of_page}>
+        <span className={styles.page_wrapper}>
+        
+          <ol className={`${styles.left_half_of_page} ${showFooter ? styles.scaleDown : ''}`}>
             <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
               <div className={styles.sliding_gallery_component}>
@@ -757,15 +785,7 @@ const ZebraBlinds = () => {
             </div>
 
 
-            <div className={styles.estimated_delivery_date_wrapper}>
-              <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
-              <p>Between</p>
-              <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
-              </div>
-              <p>and</p>
-              <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
-              </div>
-            </div>
+
 
             <div
               className={styles.a_distinctive_look_that}
@@ -1285,7 +1305,7 @@ const ZebraBlinds = () => {
                                             <span className={styles.line_0}></span>
                                             <div className={styles.ruler_line_number_inches}>
                                               {[selectedInchWIDTH].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
                                                 const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
@@ -1752,7 +1772,7 @@ const ZebraBlinds = () => {
                                             <span className={styles.line_0}></span>
                                             <div className={styles.ruler_line_number_fractions}>
                                               {[selectedInchHEIGHT].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+                                                const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
                                                 const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
                                                 const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
@@ -3010,6 +3030,17 @@ const ZebraBlinds = () => {
 
                   </div>
 
+                  <div className={styles.add_to_cart_rectangle_wrapper}>
+                    <Link href={'/cart/addtocart_economyblinds'}>
+
+                      <div className={styles.add_to_cart_rectangle}>
+
+                        <p className={styles.add_to_cart}>ADD TO CART</p>
+
+                      </div>
+                    </Link>
+                  </div>
+
                   <span
                     className={styles.bill_divider}>
                   </span>
@@ -3018,11 +3049,22 @@ const ZebraBlinds = () => {
               </div>
             </div>
 
+            <div className={styles.estimated_delivery_date_wrapper}>
+              <div className={styles.estimated_delivery_date_group}>
+                <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
+                <p>Between</p>
+                <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
+                </div>
+                <p>and</p>
+                <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
+                </div>
+              </div>
+            </div>
+
             <div className={styles.shipping_details_group_wrapper}>
               <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
               <div className={styles.shipping_details_title_wrapper}>
                 <div className={styles.shipping_details_title}>Shipping Details: </div>
-                <div className={styles.total_price_tile}>Total Price</div>
               </div>
               <div className={styles.shipping_divider1}></div>
 
@@ -3042,32 +3084,44 @@ const ZebraBlinds = () => {
 
               </div>
 
+
+
+            </div>
+
+
+
+
+
+          </ol>
+
+
+
+
+        </span >
+
+      </div >
+
+
+
+      <>
+
+
+        <>
+
+
+          {/* Your other page content */}
+          {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
+            <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+              <div className={styles.shipping_divider2}></div>
+              <FooterPage></FooterPage>
               <div className={styles.shipping_divider2}></div>
 
-
             </div>
+          </span>}
+        </>
+      </>
 
 
-
-            <div className={styles.add_to_cart_rectangle_wrapper}>
-              <Link href={'/cart/addtocart_economyblinds'}>
-
-                <div className={styles.add_to_cart_rectangle}>
-
-                  <p className={styles.add_to_cart}>ADD TO CART</p>
-                  <Image alt="image" width={100} height={100} className={styles.paymenticon}
-                    src="/interact.png" />
-
-                  <Image alt="image" width={100} height={100}
-                    className={styles.paypalicon}
-                    src="/paymenticon.png"
-                  />
-                </div>
-              </Link>
-            </div>
-          </ol>
-        </div >
-      </div >
     </>
   )
 }

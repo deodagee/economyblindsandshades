@@ -1,12 +1,81 @@
-  .footer {
-    background: #000914;
-    height: 80px;
+.Footer_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding: 10px;
     width: 100vw;
+    gap: 15px;
+
+}
+
+.image_and_title {
     display: flex;
-    position: absolute;
+    flex-direction: column;
+    gap: 5px;
+    width: 15vw;
+}
+
+.header_logo {
     display: flex;
-    top: 3000px;
-  }
+    width: 100px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0.14rem;
+}
 
 
-  
+.footer_title_group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.footer_title {
+    display: flex;
+    color: rgb(243, 243, 243);
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+}
+
+.footer_subtitle {
+    display: flex;
+    color: rgb(243, 243, 243);
+    font-weight: 600;
+    font-size: 10px;
+    display: flex;
+}
+
+.footer_subtitle2 {
+    display: flex;
+    color: rgb(0, 217, 134);
+    font-weight: 500;
+    font-size: 10px;
+    display: flex;
+    width: max-content;
+
+}
+
+.footer_link_group {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.footer_link {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    color: rgb(243, 243, 243);
+    font-weight: 600;
+    font-size: 10px;
+    display: flex;
+    width: 15vw;
+    background-color: rgba(67, 67, 67, 0.303);
+    margin: 5px;
+    padding: 3px;
+}
