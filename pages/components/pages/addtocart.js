@@ -84,8 +84,21 @@ const AddToCart = () => {
             <HeaderPiece></HeaderPiece>
             <div className={styles.quantity_and_add_to_cart_group_wrapper}>
 
+            <div className={styles.logo_wrapper}>
+                    <Image
+                    className={styles.logo}
+                    alt="logo"
+                    width={200}
+                    height={200}
+                    src={"/logoeconomyblindsandsshades.png"}
+                    >
 
+                    </Image>
+                    </div>
                 <div className={styles.quantity_and_add_to_cart_group}>
+
+
+
 
                     <div className={styles.review_your_order_seperator_line3}></div>
                     <div className={styles.review_your_order}>Review Your Blind Selection</div>
