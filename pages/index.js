@@ -1,13 +1,40 @@
 // Home.jsx
 import Image from 'next/image';
 import styles from '../styles/components/home.module.css';
-import React from "react";
+import {React, useState, useEffect} from "react";
 import Link from 'next/link';
 import HeaderPiece from "./components/header"
-import Footer from './components/footer';
-
+import FooterPage from './components/footer';
 
 export default function HomePage() {
+
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Adjust the threshold as needed
+      const threshold = 100;
+
+      // Check if we are close to the bottom of the page
+      const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+
+      // Set the state to show or hide the footer
+      setShowFooter(isNearBottom);
+    };
+
+    // Add scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
   return (
     <>
       <HeaderPiece></HeaderPiece>
@@ -172,6 +199,17 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
+            <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+              <div className={styles.shipping_divider2}></div>
+              <FooterPage></FooterPage>
+              <div className={styles.shipping_divider2}></div>
+
+            </div>
+          </span>}
+
+
+          
         </div>
       </div>
     </>
