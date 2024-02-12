@@ -1,3 +1,331 @@
-.Add_To_Cart_div { 
-    display: flex;
+/* AddToCart.module.css */
+
+
+.quantity_and_add_to_cart_group_wrapper { 
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: rgb(248, 248, 248);
+justify-content: center;
+background: linear-gradient(to bottom, #f7f7f7, #d9d9d9, #e7e7e7, #ffffffc9, #f4f4f4, #f7f7f7);
+
 }
+
+
+.addtocart {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin-bottom: 21vh;
+}
+
+.addtocartContainer {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PurchaseTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.addtocartButton {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addtocartButton:hover {
+  background-color: #45a049;
+}
+
+
+.quantity_and_add_to_cart_group {
+    display: flex;
+    width: 45vw;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    transform: scale(0.8);
+  }
+  
+  
+.review_your_order_seperator_line3 {
+    display: flex;
+    height: 3px;
+    width: 45vw;
+    margin-bottom: 20px;
+    background-color: rgb(191, 191, 191);
+    border-radius: 0.56rem;
+  }
+  
+  .review_your_order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-variant-caps: black;
+    font-weight: 700;
+    margin-top: 50px;
+    margin: 10px;
+  
+  }
+
+  
+.my_order_band_wrapper {
+    display: flex;
+    background-color: #17605c;
+    border-radius: 0.45rem;
+  }
+
+  .my_order_band {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45vw;
+    height: 30px;
+  }
+
+
+  .my_order_band_element1 {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100px;
+    transition: 0.3s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .my_order_band_element1:hover {
+    color: rgb(228, 228, 228);
+    text-decoration: underline;
+  }
+  
+  
+  .review_your_order_bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: max-content;
+    border-width: 2px;
+    background-color: #242424;
+    background: linear-gradient(to bottom, #0d0d0d, #121212, #00e1d6c9, #121212, #0d0d0d);
+    background-image: url("/rfblinds.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 20px;
+    padding: 20px;
+    border-width: 2px;
+    border-color: rgb(236, 236, 236);
+    border-radius: 0.45rem;
+  }
+
+  .order_items_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    width: 40vw;
+  }
+
+  
+.bill_divider {
+    display: flex;
+    height: 2px;
+    width: 40vw;
+    border-radius: 0.24rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: rgb(145, 145, 145);
+  }
+
+  .description_and_answer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    gap: 100px;
+    height: 90px;
+    width: 40vw;
+    background-color: rgb(238, 238, 238);
+    transition: 0.3s;
+  }
+  
+  .description_and_answer:hover {
+    background-color: rgb(236, 236, 236);
+    transition: 0.3s;
+    box-shadow: rgb(145, 145, 145) 0px 0px 4px;
+  
+  }
+
+  
+.window_name_answer,
+.window_type_answer,
+.width2_answer,
+.mount_answer,
+.materials_answer,
+.lift_type_answer,
+.bottom_rail_type_answer,
+.casette_rail_type_answer {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.answers_answers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    gap: 10px;
+  }
+
+  .answers_answers2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    gap: 10px;
+  }
+
+  .answers_answers3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    gap: 10px;
+  }
+
+  .left_imageContainer_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .casette_rail_type_answer_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .casette_rail_type_answer_image_render {
+    display: flex;
+    width: 70px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom_rail_type_answer_container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bottom_rail_type_answer_image_render {
+    display: flex;
+    width: 70px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  
+.add_to_cart_rectangle_wrapper {
+    display: flex;
+    width: 30;
+    align-items: center;
+    justify-content: right;
+    margin-top: 10px;
+  }
+
+
+  .add_to_cart_rectangle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50, 201, 0);
+    background: linear-gradient(to bottom, #610000, #801212, #921f1fc9, #801212, #610000);
+    width: max-content;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 5px;
+    border-radius: 0.85rem;
+    transition: 0.4s;
+  
+  }
+  
+  .add_to_cart_rectangle:hover {
+    transform: scale(1.05);
+    background-color: rgb(105, 196, 0);
+    background: linear-gradient(to bottom, #350000, #770000, #530000, #770000, #350000);
+  
+    transition: 0.4s;
+    box-shadow: rgb(39, 39, 39) 1px 1px 5px;
+  
+  }
+  
+  .add_to_cart_rectangle p {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+  }
+  
+
+  .ZebraBlindsFooter_wrapper::after {
+    display: flex;
+    transition: 0.8s;
+  }
+  
+  .ZebraBlindsFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 19vh;
+    background-color: rgb(242, 242, 242);
+    background: linear-gradient(to top, #1c1c1c, #1e1e1e, #171717);
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    border-left: none;
+    border-right: none;
+  border-color: #00765e;
+  border-width: 5px;
+  }
+  
+  .showFooter {
+    opacity: 1;
+    transition: opacity 0.9s ease;
+  }

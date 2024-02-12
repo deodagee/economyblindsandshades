@@ -3046,7 +3046,7 @@ const ZebraBlinds = () => {
                   </div>
 
                   <div className={styles.add_to_cart_rectangle_wrapper}>
-                    <Link href={'/cart/addtocart_economyblinds'}>
+                    <Link href={'/addtocart'}>
 
                       <div className={styles.add_to_cart_rectangle}>
 
