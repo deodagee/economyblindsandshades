@@ -263,51 +263,48 @@ const ZebraBlinds = () => {
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
-  const Top_Head_Rail_Choices_Materials = {
 
-    TopRailList: [
-
-      { key: 'white', src: '/Fabrics/RoundedWithFabric/WhiteRoundedWithFabric.jpg', label: 'White - Rounded With Fabric' },
-      { key: 'grey', src: '/Fabrics/RoundedWithFabric/GreyRoundedWithFabric.jpg', label: 'Grey - Rounded With Fabric' },
-      { key: 'black', src: '/Fabrics/RoundedWithFabric/BlackRoundedWithFabric.jpg', label: 'Black - Rounded With Fabric' },
-      { key: 'brown', src: '/Fabrics/RoundedWithFabric/BrownRoundedWithFabric.jpg', label: 'Brown - Rounded With Fabric' },
-      { key: 'beige', src: '/Fabrics/RoundedWithFabric/BeigeRoundedWithFabric.jpg', label: 'Beige - Rounded With Fabric' },
-
-      { key: 'white', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum ' },
-      { key: 'grey', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum ' },
-      { key: 'black', src: '/Ovals/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black - Aluminum ' },
-      { key: 'brown', src: '/Ovals/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown - Aluminum ' },
-      { key: 'beige', src: '/Ovals/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige - Aluminum ' },
-
-
-
-      // Add more image data as needed
+  const Top_Head_Rail_Choices_Materialskey1 = {
+    TopRailList1: [
+      { key: 'whitetag1', src: '/Fabrics/RoundedWithFabric/WhiteRoundedWithFabric.jpg', label: 'White - Rounded With Fabric' },
+      { key: 'greytag1', src: '/Fabrics/RoundedWithFabric/GreyRoundedWithFabric.jpg', label: 'Grey - Rounded With Fabric' },
+      { key: 'blacktag1', src: '/Fabrics/RoundedWithFabric/BlackRoundedWithFabric.jpg', label: 'Black - Rounded With Fabric' },
+      { key: 'browntag1', src: '/Fabrics/RoundedWithFabric/BrownRoundedWithFabric.jpg', label: 'Brown - Rounded With Fabric' },
+      { key: 'beigetag1', src: '/Fabrics/RoundedWithFabric/BeigeRoundedWithFabric.jpg', label: 'Beige - Rounded With Fabric' },
     ],
+  };
 
-  }
+  const Top_Head_Rail_Choices_Materialskey2 = {
+    TopRailList2: [
+      { key2: 'whitetag2', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum ' },
+      { key2: 'greytag2', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum ' },
+      { key2: 'blacktag2', src: '/Ovals/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black - Aluminum ' },
+      { key2: 'browntag2', src: '/Ovals/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown - Aluminum ' },
+      { key2: 'beigetag2', src: '/Ovals/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige - Aluminum ' },
+    ],
+  };
+
 
   const Bottom_Bottom_Rail_Choices_Materials = {
 
     BottomRailList: [
 
-      { key: 'white', src: '/Fabrics/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White - Bottom Square With Fabric' },
-      { key: 'grey', src: '/Fabrics/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey - Bottom Square With Fabric' },
-      { key: 'black', src: '/Fabrics/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black - Bottom Square With Fabric' },
-      { key: 'brown', src: '/Fabrics/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown - Bottom Square With Fabric' },
-      { key: 'beige', src: '/Fabrics/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige - Bottom Square With Fabric' },
+      { key: 'whitetag1', key2: 'whitetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White - Bottom Square With Fabric' },
+      { key: 'greytag1', key2: 'greytag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey - Bottom Square With Fabric' },
+      { key: 'blacktag1', key2: 'blacktag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black - Bottom Square With Fabric' },
+      { key: 'browntag1', key2: 'browntag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown - Bottom Square With Fabric' },
+      { key: 'beigetag1', key2: 'beigetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige - Bottom Square With Fabric' },
 
 
-      { key: 'white', src: '/Ovals/OvalBottomRails/WhiteBottomOvalRail.jpg', label: 'White - Bottom Oval ' },
-      { key: 'grey', src: '/Ovals/OvalBottomRails/GreyBottomOvalRail.jpg', label: 'Grey - Bottom Oval ' },
-      { key: 'black', src: '/Ovals/OvalBottomRails/BlackBottomOvalRail.jpg', label: 'Black - Bottom Oval ' },
-      { key: 'brown', src: '/Ovals/OvalBottomRails/BrownBottomOvalRail.jpg', label: 'Brown - Bottom Oval ' },
-      { key: 'beige', src: '/Ovals/OvalBottomRails/BeigeBottomOvalRail.jpg', label: 'Beige - Bottom Oval ' },
+      { key: 'whitetag1', key2: 'whitetag2', src: '/Ovals/OvalBottomRails/WhiteBottomOvalRail.jpg', label: 'White - Bottom Oval ' },
+      { key: 'greytag1', key2: 'greytag2', src: '/Ovals/OvalBottomRails/GreyBottomOvalRail.jpg', label: 'Grey - Bottom Oval ' },
+      { key: 'blacktag1', key2: 'blacktag2', src: '/Ovals/OvalBottomRails/BlackBottomOvalRail.jpg', label: 'Black - Bottom Oval ' },
+      { key: 'browntag1', key2: 'browntag2', src: '/Ovals/OvalBottomRails/BrownBottomOvalRail.jpg', label: 'Brown - Bottom Oval ' },
+      { key: 'beigetag1', key2: 'beigetag2', src: '/Ovals/OvalBottomRails/BeigeBottomOvalRail.jpg', label: 'Beige - Bottom Oval ' },
 
-      // Add more image data as needed
     ],
 
   }
-
 
 
   const [selectedMaterial, setSelectedMaterial] = useState(null);
@@ -349,44 +346,54 @@ const ZebraBlinds = () => {
   );
 
 
-
   const [selectedImagesTop, setSelectedImagesTop] = useState([]);
+
   const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
   const [selectedRailType, setSelectedRailType] = useState(null);
 
-  const handleImageClickImagesTop = (key) => {
-    setfirstImage_div(false);
 
-    setSelectedRailType('top'); // Set the selected rail type
-
-    // Update selected images in the top section
-    setSelectedImagesTop(key === selectedImagesTop ? null : key);
-    // Find and select the corresponding image in the bottom section
-    const matchingImage = Top_Head_Rail_Choices_Materials.TopRailList.find(image => image.key === key);
-    if (matchingImage) {
-      setSelectedImagesBottom(key === selectedImagesTop ? null : matchingImage.key);
-
-    }
-  };
-
-  const handleImageClickImagesBottom = (key) => {
+  const handleImageClickImagesTop1 = (key) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
-
-    setSelectedRailType('bottom'); // Set the selected rail type
-
-    // Update selected images in the bottom section
-    setSelectedImagesBottom(key === selectedImagesBottom ? null : key);
-    // Find and select the corresponding image in the top section
-    const matchingImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(image => image.key === key);
-
-    if (matchingImage) {
-
-      setSelectedImagesTop(key === selectedImagesBottom ? null : matchingImage.key);
+    setSelectedRailType('top');
+  
+    setSelectedImagesTop(key === selectedImagesTop ? [] : [key]);
+  
+    const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key === key);
+  
+    if (matchingImage1) {
+      // Assuming key2 in Bottom_Bottom_Rail_Choices_Materials corresponds to key in Top_Head_Rail_Choices_Materialskey1
+      const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key === key);
+  
+      if (matchingBottomImages && matchingBottomImages.length > 0) {
+        const bottomKeys = matchingBottomImages.map(image => image.key2);
+        setSelectedImagesBottom(key === selectedImagesBottom ? [] : bottomKeys);
+      }
     }
-
   };
+  
+
+
+  const handleImageClickImagesTop2 = (key, key2) => {
+    setfirstImage_div(false);
+    setSelectedMaterial(false);
+    setSteelMaterialChosen(false);
+    setSelectedRailType('top');
+
+    setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [key]);
+
+    const matchingImage2 = Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(image => image.key2 === key2);
+
+    if (matchingImage2) {
+      const matchingBottomImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(bottomImage => bottomImage.key2 === key2);
+
+      if (matchingBottomImage) {
+        setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [matchingBottomImage.key2]);
+      }
+    }
+  };
+
 
 
 
@@ -676,12 +683,19 @@ const ZebraBlinds = () => {
                               width={200}
                               height={200}
                               className={styles.left_first_image_render}
-                              src={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.src}
-                              alt={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.label}
+                              src={
+                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                )?.src
+                              }
+                              alt={
+                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                )?.label
+                              }
                             />
                           </div>
                         </div>
-
                       )}
 
                       <div>
@@ -2673,33 +2687,36 @@ const ZebraBlinds = () => {
 
                           {!active_skip_head_rail_ellipse && (
                             <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-
                               <div className={styles.materials_organized_div_wrapper}>
-                                {Object.keys(Top_Head_Rail_Choices_Materials).map((railType, index) => (
-                                  <div key={index}>
-                                    <div className={styles.materials_organized_div}>
-                                      {Top_Head_Rail_Choices_Materials[railType].map((choice) => (
-                                        <div
-                                          className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) ? styles.selectedImage : ''
-                                            }`}
-                                          key={choice.key}
-                                          onClick={() => handleImageClickImagesTop(choice.key)}
-                                        >
-                                          <Image
-                                            width={100}
-                                            height={100}
-                                            src={choice.src}
-                                            alt={choice.label}
-                                          />
-                                          <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
-                                        </div>
-                                      ))}
-                                    </div>
+                                {[
+                                  { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1 },
+                                  { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2 },
+                                ].map((choicesObj, index) => (
+                                  <div key={index} className={styles.materials_organized_div}>
+                                    {choicesObj.list.map((choice, choiceIndex) => (
+                                      <div
+                                        className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) ? styles.selectedImage : ''}`}
+                                        key={choiceIndex}
+                                        onClick={() => {
+                                          if (choicesObj.key === 'TopRailList1') {
+                                            handleImageClickImagesTop1(choice.key);
+                                          } else if (choicesObj.key === 'TopRailList2') {
+                                            handleImageClickImagesTop2(choice.key2);
+                                          }
+                                        }}
+                                      >
+                                        <Image width={100} height={100} src={choice.src} alt={choice.label} />
+                                        <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                      </div>
+                                    ))}
                                   </div>
                                 ))}
                               </div>
                             </div>
                           )}
+
+
+
                         </div>
 
                       </div>
@@ -2756,32 +2773,31 @@ const ZebraBlinds = () => {
 
                                     <div className={styles.materials_organized_div_wrapper}>
                                       {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
-                                        <div key={index}>
-                                          <div className={styles.materials_organized_div}>
-                                            {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
-                                              <div
-                                                className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key) ? styles.selectedImage : ''
-                                                  }`}
-                                                key={choice.key}
-                                                onClick={() => handleImageClickImagesBottom(choice.key)}
-                                              >
-                                                <Image
-                                                  width={100}
-                                                  height={100}
-                                                  src={choice.src}
-                                                  alt={choice.label}
-                                                />
-                                                <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
-                                              </div>
-                                            ))}
-                                          </div>
+                                        <div key={index} className={styles.materials_organized_div}>
+                                          {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
+                                            <div
+                                              className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key2) ? styles.selectedImage : ''}`}
+                                              key={choice.key2}  // Assuming key2 is the unique identifier for each choice
+                                            >
+                                              <Image
+                                                width={100}
+                                                height={100}
+                                                src={choice.src}
+                                                alt={choice.label}
+                                              />
+                                              <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                            </div>
+                                          ))}
                                         </div>
                                       ))}
-                                    </div>
 
+
+
+                                    </div>
                                   </div>
                                 </div>
                               )}
+
                             </div>
                           </div>
 
@@ -2927,20 +2943,30 @@ const ZebraBlinds = () => {
                         <div className={styles.left_imageContainer_wrapper}>
                           <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
                             <p>
-                              {Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.label}
+                              {(
+                                Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                              )?.label}
                             </p>
                             <Image
                               width={200}
                               height={200}
                               className={styles.casette_rail_type_answer_image_render}
-                              src={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.src}
-                              alt={Top_Head_Rail_Choices_Materials.TopRailList.find(item => item.key === selectedImagesTop)?.label}
+                              src={
+                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                )?.src
+                              }
+                              alt={
+                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                )?.label
+                              }
                             />
-
                           </div>
                         </div>
-
                       )}
+
                     </div>
                   </div>
 
