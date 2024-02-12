@@ -347,10 +347,15 @@ const ZebraBlinds = () => {
 
 
   const [selectedImagesTop, setSelectedImagesTop] = useState([]);
-
   const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
   const [selectedRailType, setSelectedRailType] = useState(null);
+  const [clickedImageKeyTop, setClickedImageKeyTop] = useState(null);
+  const [clickedImageKeyBottom, setClickedImageKeyBottom] = useState(null);
 
+  const handleBottomImageClick = (key2) => {
+    setClickedImageKeyBottom(key2 === clickedImageKeyBottom ? null : key2);
+    setSelectedImagesBottom(key2 === clickedImageKeyBottom ? [] : [key2]);
+  };
 
   const handleImageClickImagesTop1 = (key) => {
     setfirstImage_div(false);
@@ -358,43 +363,46 @@ const ZebraBlinds = () => {
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
   
-    setSelectedImagesTop(key === selectedImagesTop ? [] : [key]);
-  
     const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key === key);
   
     if (matchingImage1) {
-      // Assuming key2 in Bottom_Bottom_Rail_Choices_Materials corresponds to key in Top_Head_Rail_Choices_Materialskey1
+      setClickedImageKeyTop(key === clickedImageKeyTop ? null : key);
+      setSelectedImagesTop(key === clickedImageKeyTop ? [] : [key]);
+  
       const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key === key);
   
       if (matchingBottomImages && matchingBottomImages.length > 0) {
         const bottomKeys = matchingBottomImages.map(image => image.key2);
-        setSelectedImagesBottom(key === selectedImagesBottom ? [] : bottomKeys);
+        setSelectedImagesBottom(key === clickedImageKeyTop ? [] : bottomKeys);
       }
     }
   };
   
 
-
-  const handleImageClickImagesTop2 = (key, key2) => {
+  const handleImageClickImagesTop2 = (key2) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
 
-    setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [key]);
+    // Update selectedImagesBottom
+    setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [key2]);
 
     const matchingImage2 = Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(image => image.key2 === key2);
 
     if (matchingImage2) {
+      setSelectedImagesTop(key2 === matchingImage2 ? [] : [key2]);
+
+      // Assuming key in Top_Head_Rail_Choices_Materialskey2 corresponds to key in Bottom_Bottom_Rail_Choices_Materials
       const matchingBottomImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(bottomImage => bottomImage.key2 === key2);
+
+      // Update selectedImagesTop with the clicked image
 
       if (matchingBottomImage) {
         setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [matchingBottomImage.key2]);
       }
     }
   };
-
-
 
 
 
@@ -2695,13 +2703,13 @@ const ZebraBlinds = () => {
                                   <div key={index} className={styles.materials_organized_div}>
                                     {choicesObj.list.map((choice, choiceIndex) => (
                                       <div
-                                        className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) ? styles.selectedImage : ''}`}
+                                        className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) || selectedImagesBottom === choice ? styles.selectedImage : ''}`}
                                         key={choiceIndex}
                                         onClick={() => {
                                           if (choicesObj.key === 'TopRailList1') {
                                             handleImageClickImagesTop1(choice.key);
                                           } else if (choicesObj.key === 'TopRailList2') {
-                                            handleImageClickImagesTop2(choice.key2);
+                                            handleImageClickImagesTop2(choice.key2, choice.key);
                                           }
                                         }}
                                       >
@@ -2709,6 +2717,7 @@ const ZebraBlinds = () => {
                                         <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                       </div>
                                     ))}
+
                                   </div>
                                 ))}
                               </div>
@@ -2766,6 +2775,7 @@ const ZebraBlinds = () => {
                                   </div>
                                 </div>
                               </div>
+
                               {!active_skip_bottom_rail_ellipse && (
                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                   <div className={styles.fabric_list_bottom_list1}>
@@ -2776,8 +2786,9 @@ const ZebraBlinds = () => {
                                         <div key={index} className={styles.materials_organized_div}>
                                           {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
                                             <div
-                                              className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key2) ? styles.selectedImage : ''}`}
-                                              key={choice.key2}  // Assuming key2 is the unique identifier for each choice
+                                              className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key2) ? styles.selectedImage : ''} ${clickedImageKeyBottom === choice.key2 ? styles.clickedImage : ''}`}
+                                              key={choice.key2}
+                                              onClick={() => handleBottomImageClick(choice.key2)}
                                             >
                                               <Image
                                                 width={100}
@@ -2790,14 +2801,10 @@ const ZebraBlinds = () => {
                                           ))}
                                         </div>
                                       ))}
-
-
-
                                     </div>
                                   </div>
                                 </div>
                               )}
-
                             </div>
                           </div>
 
