@@ -381,7 +381,11 @@ const ZebraBlinds = () => {
   const [clickedImageKeyBottom, setClickedImageKeyBottom] = useState(null);
 
   const handleBottomImageClick = (key2) => {
-    setClickedImageKeyBottom(key2 === clickedImageKeyBottom ? null : key2);
+    setfirstImage_div(false);
+    setSelectedMaterial(false);
+    setSteelMaterialChosen(false);
+    setSelectedRailType('top');
+
     setSelectedImagesBottom(key2 === clickedImageKeyBottom ? [] : [key2]);
   };
 
@@ -394,7 +398,6 @@ const ZebraBlinds = () => {
     const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key === key);
 
     if (matchingImage1) {
-      setClickedImageKeyTop(key === clickedImageKeyTop ? null : key);
       setSelectedImagesTop(key === clickedImageKeyTop ? [] : [key]);
 
       const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key === key);
@@ -664,7 +667,7 @@ const ZebraBlinds = () => {
         </span>
 
         <span className={styles.page_wrapper}>
-        
+
           <ol className={`${styles.left_half_of_page} ${showFooter ? styles.scaleDown : ''}`}>
             <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
@@ -721,12 +724,12 @@ const ZebraBlinds = () => {
                               className={styles.left_first_image_render}
                               src={
                                 (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
-                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
                                 )?.src
                               }
                               alt={
                                 (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
-                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
+                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
                                 )?.label
                               }
                             />
@@ -735,11 +738,8 @@ const ZebraBlinds = () => {
                       )}
 
                       <div>
-
                         {selectedImagesBottom?.length > 0 && (
-
                           <div className={styles.left_imageContainer_wrapper}>
-
                             <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
                               <span className={styles.left_imageContainer_image_itself1_label}>
                                 Bottom Rail
@@ -748,14 +748,19 @@ const ZebraBlinds = () => {
                                 width={200}
                                 height={200}
                                 className={styles.left_first_image_render}
-                                src={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.src}
-                                alt={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
+                                src={
+                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.src
+                                }
+                                alt={
+                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.label
+                                }
                               />
                             </div>
                           </div>
-
                         )}
+                        
                       </div>
+
                     </>
                   )}
                 </div>
