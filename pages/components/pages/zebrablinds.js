@@ -380,14 +380,25 @@ const ZebraBlinds = () => {
   const [clickedImageKeyTop, setClickedImageKeyTop] = useState(null);
   const [clickedImageKeyBottom, setClickedImageKeyBottom] = useState(null);
 
-  const handleBottomImageClick = (key2) => {
+  const handleBottomImageClick = (key2, key) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
-    setSelectedRailType('top');
-
-    setSelectedImagesBottom(key2 === clickedImageKeyBottom ? [] : [key2]);
+    setSelectedRailType('bottom');
+  
+    if (key === clickedImageKeyBottom) {
+      setSelectedImagesBottom([]);
+    } else {
+      setSelectedImagesBottom([key]);
+    }
+  
+    if (key2 === clickedImageKeyBottom) {
+      setSelectedImagesBottom([]);
+    } else {
+      setSelectedImagesBottom([key2]);
+    }
   };
+  
 
   const handleImageClickImagesTop1 = (key) => {
     setfirstImage_div(false);
@@ -758,7 +769,6 @@ const ZebraBlinds = () => {
                             </div>
                           </div>
                         )}
-                        
                       </div>
 
                     </>
@@ -2811,9 +2821,9 @@ const ZebraBlinds = () => {
                                         <div key={index} className={styles.materials_organized_div}>
                                           {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
                                             <div
-                                              className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key2) ? styles.selectedImage : ''} ${clickedImageKeyBottom === choice.key2 ? styles.clickedImage : ''}`}
-                                              key={choice.key2}
-                                              onClick={() => handleBottomImageClick(choice.key2)}
+                                              className={`${styles.materials_organized_div_image} ${selectedImagesBottom?.includes(choice.key2) ? styles.selectedImage : ''} ${clickedImageKeyBottom === (choice.key2, choice.key) ? styles.clickedImage : ''}`}
+                                              key={(choice.key2, choice.key)}
+                                              onClick={() => handleBottomImageClick(choice.key2, choice.key)}
                                             >
                                               <Image
                                                 width={100}
