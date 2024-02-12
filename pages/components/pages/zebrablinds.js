@@ -12,6 +12,7 @@ const ZebraBlinds = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -385,20 +386,20 @@ const ZebraBlinds = () => {
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('bottom');
-  
+
     if (key === clickedImageKeyBottom) {
       setSelectedImagesBottom([]);
     } else {
       setSelectedImagesBottom([key]);
     }
-  
+
     if (key2 === clickedImageKeyBottom) {
       setSelectedImagesBottom([]);
     } else {
       setSelectedImagesBottom([key2]);
     }
   };
-  
+
 
   const handleImageClickImagesTop1 = (key) => {
     setfirstImage_div(false);
@@ -427,23 +428,22 @@ const ZebraBlinds = () => {
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
 
-    // Update selectedImagesBottom
     setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [key2]);
-
+    const matchingImage3 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key2 === key2);
     const matchingImage2 = Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(image => image.key2 === key2);
 
-    if (matchingImage2) {
-      setSelectedImagesTop(key2 === matchingImage2 ? [] : [key2]);
+    if (matchingImage2,matchingImage3 ) {
 
-      // Assuming key in Top_Head_Rail_Choices_Materialskey2 corresponds to key in Bottom_Bottom_Rail_Choices_Materials
       const matchingBottomImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(bottomImage => bottomImage.key2 === key2);
 
-      // Update selectedImagesTop with the clicked image
+      if (matchingBottomImage && matchingBottomImage.length > 0) {
+        const bottomKeys2 = matchingBottomImage.map(image => image.key2);
+        setSelectedImagesBottom(key2 === clickedImageKeyTop ? [] : bottomKeys2);
 
-      if (matchingBottomImage) {
-        setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [matchingBottomImage.key2]);
       }
+      
     }
+    
   };
 
 
@@ -2744,7 +2744,7 @@ const ZebraBlinds = () => {
                                           if (choicesObj.key === 'TopRailList1') {
                                             handleImageClickImagesTop1(choice.key);
                                           } else if (choicesObj.key === 'TopRailList2') {
-                                            handleImageClickImagesTop2(choice.key2, choice.key);
+                                            handleImageClickImagesTop2(choice.key2);
                                           }
                                         }}
                                       >
