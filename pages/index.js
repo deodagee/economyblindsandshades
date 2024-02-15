@@ -206,7 +206,6 @@ export default function HomePage() {
           {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
             <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
               <div className={styles.shipping_divider2}></div>
-              <FooterPage></FooterPage>
               <div className={styles.shipping_divider2}></div>
 
             </div>
@@ -216,6 +215,15 @@ export default function HomePage() {
 
         </div>
       </div>
+      
+      {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
+            <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+              <div className={styles.shipping_divider2}></div>
+              <FooterPage></FooterPage>
+              <div className={styles.shipping_divider2}></div>
+
+            </div>
+          </span>}
     </>
   )
 }

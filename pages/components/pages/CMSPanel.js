@@ -5,9 +5,38 @@ import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
 import { useData } from "../../../utils/DataContext";
-
-
+import FooterPage from "../footer";
 const CMSPanel = () => {
+
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+
+      const handleScroll = () => {
+          const scrollPosition = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+
+          // Adjust the threshold as needed
+          const threshold = 100;
+
+          // Check if we are close to the bottom of the page
+          const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+
+          // Set the state to show or hide the footer
+          setShowFooter(isNearBottom);
+      };
+
+      // Add scroll event listener when the component mounts
+      window.addEventListener('scroll', handleScroll);
+
+      // Remove scroll event listener when the component unmounts
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []); // Empty dependency array ensures this effect runs only once
+
+
   const { data: session } = useSession();
   const { postData, updateData } = useData();
   const [productName1, setProductName1] = useState("");
@@ -134,6 +163,15 @@ const CMSPanel = () => {
         </p>
       </div>
       )}
+
+{showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
+                <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+                    <div className={styles.shipping_divider2}></div>
+                    <FooterPage></FooterPage>
+                    <div className={styles.shipping_divider2}></div>
+
+                </div>
+            </span>}
     </>
   );
 };

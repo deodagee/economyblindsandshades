@@ -1,3 +1,35 @@
+.ZebraBlindsFooter_wrapper::after {
+  display: flex;
+  transition: 0.8s;
+}
+
+.ZebraBlindsFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(242, 242, 242);
+  background: linear-gradient(to top, #1c1c1c, #1e1e1e, #171717);
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  border-left: none;
+  border-right: none;
+  border-color: #00765e;
+  border-width: 5px;
+  border-top-width: 30px;
+
+}
+
+.showFooter {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+
 .index_wrapper {
   z-index: 50;
   display: flex;
@@ -341,32 +373,3 @@
 
 }
 
-
-.ZebraBlindsFooter_wrapper::after {
-  display: flex;
-  transition: 0.8s;
-}
-
-.ZebraBlindsFooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 19vh;
-  background-color: rgb(242, 242, 242);
-  background: linear-gradient(to top, #1c1c1c, #1e1e1e, #171717);
-  position: fixed;
-  bottom: 0;
-  z-index: 4;
-  opacity: 0;
-  transition: opacity 0.9s ease;
-  border-left: none;
-  border-right: none;
-  border-color: #00765e;
-  border-width: 5px;
-}
-
-.showFooter {
-  opacity: 1;
-  transition: opacity 0.9s ease;
-}

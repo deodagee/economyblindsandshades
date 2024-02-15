@@ -39,49 +39,9 @@ function FooterPage() {
                     </span>
 
                 </span>
-                <span className={styles.footer_link_group}>
 
-                    <span>
-                        <div className={styles.footer_link}>
-                            Zebra Blinds Shades
-                        </div>
-                        <div className={styles.footer_link}>
-                            Shangrila Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            Roman Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            Roller Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            HoneyComb Blinds
-                        </div>
-                    </span>
 
-                </span>
 
-                <span className={styles.footer_link_group}>
-
-                    <span>
-                        <div className={styles.footer_link}>
-                            Zebra Blinds Shades
-                        </div>
-                        <div className={styles.footer_link}>
-                            Shangrila Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            Roman Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            Roller Blinds
-                        </div>
-                        <div className={styles.footer_link}>
-                            HoneyComb Blinds
-                        </div>
-                    </span>
-
-                </span>
 
                 <span className={styles.footer_title_group}>
 

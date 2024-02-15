@@ -1,21 +1,20 @@
 .Footer_wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-evenly;
     padding-left: 3vw;
     padding-right: 3vw;
     padding: 10px;
     width: 100vw;
     gap: 15px;
-
 }
 
 .image_and_title {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     gap: 5px;
-    width: 15vw;
 }
 
 .header_logo {

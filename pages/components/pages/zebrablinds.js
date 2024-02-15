@@ -18,24 +18,19 @@ const ZebraBlinds = () => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Adjust the threshold as needed
       const threshold = 100;
 
-      // Check if we are close to the bottom of the page
       const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
 
-      // Set the state to show or hide the footer
       setShowFooter(isNearBottom);
     };
 
-    // Add scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
 
-    // Remove scroll event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []); 
 
   const { data: session } = useSession();
   const [productName1, setProductName1] = useState("");
@@ -57,7 +52,6 @@ const ZebraBlinds = () => {
   };
 
   useEffect(() => {
-    // Fetch the latest data when the component mounts
     fetchLatestData();
   }, []);
 
@@ -3138,7 +3132,6 @@ const ZebraBlinds = () => {
         <>
 
 
-          {/* Your other page content */}
           {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
             <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
               <div className={styles.shipping_divider2}></div>
