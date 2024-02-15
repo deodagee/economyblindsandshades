@@ -408,3 +408,50 @@
   display: flex;
   flex-direction: column;
 }
+
+.price_summary_title {
+  color: #002e3c;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.price_summary_title2_group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.price_summary_title2_Spanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18vw;
+}
+
+.check_out_button {
+  background: linear-gradient(to bottom, #fdae39, #ef8f00, #df8600);
+  border-radius: 0.10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin-top: 20px;
+  padding: 2px;
+}
+
+.taxes_title {
+  font-size: 15px;
+  color: red;
+  margin-top: 20px;
+}
+
+
+.countrySelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
