@@ -851,7 +851,7 @@ const ZebraBlinds = () => {
                     <Image
                       alt="first chosen image"
                       width={500}
-                      src={"/insidemountsketch.png"}
+                      src={"/insidemountimage.png"}
                       height={500}
                       className={styles.first_chosen_inside_mount_selection}>
 
@@ -1832,7 +1832,7 @@ const ZebraBlinds = () => {
                     <Image
                       alt="first chosen image"
                       width={500}
-                      src={"/outsidemountsketch.png"}
+                      src={"/outsidemountimage.png"}
                       height={500}
                       className={styles.first_chosen_outside_mount_selection}>
                     </Image>
