@@ -398,17 +398,24 @@ const AddToCart = () => {
                                     <div className={styles.price_summary_wrapper}>
                                         <p className={styles.price_summary_title}>Price Summary</p>
 
-                                        <p className={styles.price_summary_title}>Price before taxes</p>
-                                        <p className={styles.price_summary_title}>Price after taxes</p>
-                                        <p className={styles.price_summary_title}>Shipping: Free</p>
-
+                                        <span className={styles.price_summary_title2_group}>
+                                            <span className={styles.price_summary_title2_Spanner}>
+                                                <p className={styles.price_summary_title2}>Price before taxes</p>
+                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                            </span>
+                                            <p className={styles.price_summary_title2}>Price after taxes</p>
+                                            <p className={styles.price_summary_title2}>Shipping: Free</p>
+                                        </span>
+                                        
                                         <Link href={'/checkoutpage'}>
                                             <p className={styles.check_out_button}>CHECKOUT</p>
                                         </Link>
                                         <div>
-                                            <p className={styles.add_to_cart}>Taxes</p>
+
+                                            <p className={styles.taxes_title}>Taxes</p>
 
                                             <select className={styles.countrySelect} value={selectedCountry} onChange={handleCountryChange}>
+
                                                 <option value="">Select a country</option>
                                                 <option value="canada">Canada</option>
                                                 <option value="us">United States</option>
