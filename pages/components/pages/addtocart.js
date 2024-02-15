@@ -14,30 +14,30 @@ const AddToCart = () => {
     const [showFooter, setShowFooter] = useState(false);
 
     useEffect(() => {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-  
-        // Adjust the threshold as needed
-        const threshold = 100;
-  
-        // Check if we are close to the bottom of the page
-        const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
-  
-        // Set the state to show or hide the footer
-        setShowFooter(isNearBottom);
-      };
-  
-      // Add scroll event listener when the component mounts
-      window.addEventListener('scroll', handleScroll);
-  
-      // Remove scroll event listener when the component unmounts
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // Adjust the threshold as needed
+            const threshold = 100;
+
+            // Check if we are close to the bottom of the page
+            const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+
+            // Set the state to show or hide the footer
+            setShowFooter(isNearBottom);
+        };
+
+        // Add scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Remove scroll event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []); // Empty dependency array ensures this effect runs only once
-  
+
 
     const { data: session } = useSession();
     const [productName1, setProductName1] = useState("");
@@ -84,65 +84,66 @@ const AddToCart = () => {
             <HeaderPiece></HeaderPiece>
             <div className={styles.quantity_and_add_to_cart_group_wrapper}>
 
-            <div className={styles.logo_wrapper}>
+                <div className={styles.logo_wrapper}>
                     <Image
-                    className={styles.logo}
-                    alt="logo"
-                    width={200}
-                    height={200}
-                    src={"/logoeconomyblindsandsshades.png"}
+                        className={styles.logo}
+                        alt="logo"
+                        width={200}
+                        height={200}
+                        src={"/logoeconomyblindsandsshades.png"}
                     >
 
                     </Image>
-                    </div>
+                </div>
+
                 <div className={styles.quantity_and_add_to_cart_group}>
 
+                    <div className={styles.review_your_order_title_group}>
+                        <p>Review Your Blind Selection</p>
+                        <div className={styles.review_your_order_seperator_line3}></div>
+                    </div>
 
-
-
-                    <div className={styles.review_your_order_seperator_line3}></div>
-                    <div className={styles.review_your_order}>Review Your Blind Selection</div>
 
                     <span className={styles.my_order_band_wrapper}>
                         <div className={styles.my_order_band}>
                             <span className={styles.my_order_band_element1}>
                                 My Order
                             </span>
-
-
                         </div>
                     </span>
+
                     <div className={styles.review_your_order_bg}>
 
                         <div className={styles.order_items_list}>
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
 
-                            <div className={styles.description_and_answer}>
-                                <div className={styles.window_name_answer}>Window Name:
+
+                            <div className={styles.column1}>
+
+                                <div className={styles.column_wrapper}>
+                                <div className={styles.description_and_answer}>
+                                    <div className={styles.window_name_answer}>Window:</div>
+                                    <div className={styles.answers_answers}>
+                                        {productName1}
+                                    </div>
                                 </div>
-                                <div className={styles.answers_answers}>
-                                    {productName1}
+
+                                <div className={styles.description_and_answer}>
+                                    <div className={styles.window_type_answer}>Type:</div>
+                                    <div className={styles.answers_answers}>
+                                        {productName2}
+                                    </div>
                                 </div>
+                                </div>
+                                <div className={styles.column_seperator}></div>
+
                             </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
 
+
+                            <div className={styles.column2}>
+                            <div className={styles.column_wrapper}>
                             <div className={styles.description_and_answer}>
-                                <div className={styles.window_type_answer}>Window Type:</div>
-                                <div className={styles.answers_answers}>
-                                    {productName2}
-                                </div>
-                            </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
-
-                            <div className={styles.description_and_answer}>
                                 <div className={styles.width2_answer}>Window Size:</div>
 
                                 <div className={styles.answers_answers}>
@@ -157,15 +158,11 @@ const AddToCart = () => {
                                         {selectedFractionsHeight && " Inches High"}
                                     </div>
 
-
                                 </div>
                             </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
-
                             <div className={styles.description_and_answer}>
+
                                 <div className={styles.mount_answer}>Mount:</div>
 
                                 <div className={styles.answers_answers}>
@@ -174,21 +171,13 @@ const AddToCart = () => {
 
                             </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
 
                             <div className={styles.description_and_answer}>
                                 <div className={styles.materials_answer}>Material:</div>
-
                                 <div className={styles.answers_answers}>
                                     {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Please Select Your Material"}
                                 </div>
                             </div>
-
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
 
                             <div className={styles.description_and_answer}>
                                 <div className={styles.lift_type_answer}>Lift Type:</div>
@@ -201,19 +190,13 @@ const AddToCart = () => {
                                     </div>
                                     <div>
                                         {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-
                                     </div>
                                 </div>
                             </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
-
 
                             <div className={styles.description_and_answer}>
                                 <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
-
                                 <div className={styles.answers_answers2}>
                                     {selectedImagesTop?.length > 0 && (
                                         <div className={styles.left_imageContainer_wrapper}>
@@ -246,12 +229,6 @@ const AddToCart = () => {
                                 </div>
                             </div>
 
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
-
-
-
                             <div className={styles.description_and_answer}>
                                 <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                                 <div className={styles.answers_answers2}>
@@ -276,27 +253,29 @@ const AddToCart = () => {
 
                                     )}
                                 </div>
-
+                            </div>
+                            </div>
+                            <div className={styles.column_seperator}></div>
                             </div>
 
+
+
+                            <div className={styles.column3}>
+                            <div className={styles.column_wrapper}>
                             <div className={styles.add_to_cart_rectangle_wrapper}>
-                                <Link href={'/addtocart'}>
-
+                                <Link href={'/checkoutpage'}>
                                     <div className={styles.add_to_cart_rectangle}>
-
-                                        <p className={styles.add_to_cart}>PURCHASE</p>
-
+                                        <p className={styles.add_to_cart}>COMFIRM PURCHASE</p>
                                     </div>
                                 </Link>
                             </div>
-
-                            <span
-                                className={styles.bill_divider}>
-                            </span>
+                        </div>
+                        </div>
 
                         </div>
                     </div>
                 </div>
+
                 <div className={styles.addtocart}>
                     <div className={styles.addtocartContainer}>
                         <div className={styles.PurchaseTitle}>Go Back</div>
@@ -306,15 +285,21 @@ const AddToCart = () => {
                         >Back</Link>
                     </div>
                 </div>
-            </div>
-            {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
-            <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
-              <div className={styles.shipping_divider2}></div>
-              <FooterPage></FooterPage>
-              <div className={styles.shipping_divider2}></div>
 
             </div>
-          </span>}        </>
+
+
+            {showFooter &&
+                <span className={styles.ZebraBlindsFooter_wrapper}>
+                    <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+                        <div className={styles.shipping_divider2}></div>
+                        <FooterPage></FooterPage>
+                        <div className={styles.shipping_divider2}></div>
+                    </div>
+                </span>
+            }
+
+        </>
     );
 };
 
