@@ -2898,6 +2898,7 @@ const ZebraBlinds = () => {
                   </span>
 
                   <div className={styles.description_and_answer}>
+                   
                     <div className={styles.window_type_answer}>Window Type:</div>
                     <div className={styles.answers_answers}>
                       {productName2}
