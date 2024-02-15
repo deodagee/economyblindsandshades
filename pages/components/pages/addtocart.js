@@ -39,6 +39,23 @@ const AddToCart = () => {
     }, []); // Empty dependency array ensures this effect runs only once
 
 
+    ///////////CHOOSE COUNTRY
+
+    const [selectedCountry, setSelectedCountry] = useState('');
+    const [selectedRegion, setSelectedRegion] = useState('');
+
+    const handleCountryChange = (event) => {
+        setSelectedCountry(event.target.value);
+        setSelectedRegion(''); // Reset selected region when changing the country
+    };
+
+    const handleRegionChange = (event) => {
+        setSelectedRegion(event.target.value);
+    };
+
+
+
+
     const { data: session } = useSession();
     const [productName1, setProductName1] = useState("");
     const [productName2, setProductName2] = useState("");
@@ -386,11 +403,96 @@ const AddToCart = () => {
                                         <p className={styles.price_summary_title}>Shipping: Free</p>
 
                                         <Link href={'/checkoutpage'}>
-                                            <p className={styles.add_to_cart}>COMFIRM PURCHASE</p>
+                                            <p className={styles.check_out_button}>CHECKOUT</p>
                                         </Link>
-                                        <p className={styles.add_to_cart}>Price Summary</p>
-                                        <p className={styles.add_to_cart}>Taxes /  {"choose your country"}</p>
+                                        <div>
+                                            <p className={styles.add_to_cart}>Taxes</p>
 
+                                            <select className={styles.countrySelect} value={selectedCountry} onChange={handleCountryChange}>
+                                                <option value="">Select a country</option>
+                                                <option value="canada">Canada</option>
+                                                <option value="us">United States</option>
+                                            </select>
+
+                                            {selectedCountry === 'canada' && (
+                                                <select className={styles.regionSelect} value={selectedRegion} onChange={handleRegionChange}>
+                                                    <option value="">Select a province</option>
+                                                    <option value="alberta">Alberta</option>
+                                                    <option value="british-columbia">British Columbia</option>
+                                                    <option value="manitoba">Manitoba</option>
+                                                    <option value="new-brunswick">New Brunswick</option>
+                                                    <option value="newfoundland-and-labrador">Newfoundland and Labrador</option>
+                                                    <option value="northwest-territories">Northwest Territories</option>
+                                                    <option value="nova-scotia">Nova Scotia</option>
+                                                    <option value="nunavut">Nunavut</option>
+                                                    <option value="ontario">Ontario</option>
+                                                    <option value="prince-edward-island">Prince Edward Island</option>
+                                                    <option value="quebec">Quebec</option>
+                                                    <option value="saskatchewan">Saskatchewan</option>
+                                                    <option value="yukon">Yukon</option>
+                                                </select>
+                                            )}
+
+                                            {selectedCountry === 'us' && (
+                                                <select className={styles.regionSelect} value={selectedRegion} onChange={handleRegionChange}>
+                                                    <option value="">Select a state</option>
+                                                    <option value="alabama">Alabama</option>
+                                                    <option value="alaska">Alaska</option>
+                                                    <option value="arizona">Arizona</option>
+                                                    <option value="arkansas">Arkansas</option>
+                                                    <option value="california">California</option>
+                                                    <option value="colorado">Colorado</option>
+                                                    <option value="connecticut">Connecticut</option>
+                                                    <option value="delaware">Delaware</option>
+                                                    <option value="florida">Florida</option>
+                                                    <option value="georgia">Georgia</option>
+                                                    <option value="hawaii">Hawaii</option>
+                                                    <option value="idaho">Idaho</option>
+                                                    <option value="illinois">Illinois</option>
+                                                    <option value="indiana">Indiana</option>
+                                                    <option value="iowa">Iowa</option>
+                                                    <option value="kansas">Kansas</option>
+                                                    <option value="kentucky">Kentucky</option>
+                                                    <option value="louisiana">Louisiana</option>
+                                                    <option value="maine">Maine</option>
+                                                    <option value="maryland">Maryland</option>
+                                                    <option value="massachusetts">Massachusetts</option>
+                                                    <option value="michigan">Michigan</option>
+                                                    <option value="minnesota">Minnesota</option>
+                                                    <option value="mississippi">Mississippi</option>
+                                                    <option value="missouri">Missouri</option>
+                                                    <option value="montana">Montana</option>
+                                                    <option value="nebraska">Nebraska</option>
+                                                    <option value="nevada">Nevada</option>
+                                                    <option value="new-hampshire">New Hampshire</option>
+                                                    <option value="new-jersey">New Jersey</option>
+                                                    <option value="new-mexico">New Mexico</option>
+                                                    <option value="new-york">New York</option>
+                                                    <option value="north-carolina">North Carolina</option>
+                                                    <option value="north-dakota">North Dakota</option>
+                                                    <option value="ohio">Ohio</option>
+                                                    <option value="oklahoma">Oklahoma</option>
+                                                    <option value="oregon">Oregon</option>
+                                                    <option value="pennsylvania">Pennsylvania</option>
+                                                    <option value="rhode-island">Rhode Island</option>
+                                                    <option value="south-carolina">South Carolina</option>
+                                                    <option value="south-dakota">South Dakota</option>
+                                                    <option value="tennessee">Tennessee</option>
+                                                    <option value="texas">Texas</option>
+                                                    <option value="utah">Utah</option>
+                                                    <option value="vermont">Vermont</option>
+                                                    <option value="virginia">Virginia</option>
+                                                    <option value="washington">Washington</option>
+                                                    <option value="west-virginia">West Virginia</option>
+                                                    <option value="wisconsin">Wisconsin</option>
+                                                    <option value="wyoming">Wyoming</option>
+                                                </select>
+                                            )}
+
+                                            <div className={styles.selectedRegion}>
+                                                {selectedRegion && `Selected Region: ${selectedRegion}`}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
