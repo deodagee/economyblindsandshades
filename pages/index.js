@@ -1,7 +1,7 @@
 // Home.jsx
 import Image from 'next/image';
 import styles from '../styles/components/home.module.css';
-import {React, useState, useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import Link from 'next/link';
 import HeaderPiece from "./components/header"
 import FooterPage from './components/footer';
@@ -85,6 +85,58 @@ export default function HomePage() {
 
             </div>
 
+            <div className={styles.two_section_div5}>
+              <div className={styles.two_section_div5_wrapper}>
+                <Link href={"/zebrablinds"}>
+                  <div className={styles.rectangle_1}>
+                    <span className={styles.linkitem}>
+                      1.Zebra Blinds
+                      <br />
+                    </span>
+                  </div>
+                </Link>
+
+                <Link href={"/shangrilablinds"}>
+
+                  <div className={styles.rectangle_2}>
+                    <span className={styles.linkitem}>
+                      2.Shangrila Blinds
+                      <br />
+                    </span>
+                  </div>
+                </Link>
+
+                <Link href={"/romanblinds"}>
+
+                  <div className={styles.rectangle_3}>
+                    <span className={styles.linkitem}>
+                      3.Roman Blinds
+                      <br />
+                    </span>
+                  </div>
+                </Link>
+                <Link href={"/rollerblinds"}>
+
+                  <div className={styles.rectangle_4}>
+                    <span className={styles.linkitem}>
+                      4.Roller Blinds
+                      <br />
+                    </span>
+                  </div>
+                </Link>
+
+                <Link href={"/honeycombblinds"}>
+
+                  <div className={styles.rectangle_5}>
+                    <span className={styles.linkitem}>
+                      5.Honeycomb Blinds
+                    </span>
+                  </div>
+                </Link>
+
+              </div>
+            </div>
+
 
             <div className={styles.add}>
 
@@ -95,6 +147,8 @@ export default function HomePage() {
                 Please contact us if you cannot find an answer to your question
               </p>
             </div>
+
+
 
             <div className={styles.two_section_div1}>
 
@@ -147,57 +201,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className={styles.two_section_div5}>
-              <div className={styles.two_section_div5_wrapper}>
-              <Link href={"/zebrablinds"}>
-                <div className={styles.rectangle_1}>
-                    <span className={styles.linkitem}>
-                      1.Zebra Blinds
-                      <br />
-                    </span>
-                </div>
-                </Link>
 
-                <Link href={"/shangrilablinds"}>
-
-                <div className={styles.rectangle_2}>
-                    <span className={styles.linkitem}>
-                      2.Shangrila Blinds
-                      <br />
-                    </span>
-                </div>
-                </Link>
-
-                <Link href={"/romanblinds"}>
-
-                <div className={styles.rectangle_3}>
-                    <span className={styles.linkitem}>
-                      3.Roman Blinds
-                      <br />
-                    </span>
-                </div>
-                </Link>
-                <Link href={"/rollerblinds"}>
-
-                <div className={styles.rectangle_4}>
-                    <span className={styles.linkitem}>
-                      4.Roller Blinds
-                      <br />
-                    </span>
-                </div>
-                </Link>
-
-                <Link href={"/honeycombblinds"}>
-
-                <div className={styles.rectangle_5}>
-                    <span className={styles.linkitem}>
-                      5.Honeycomb Blinds
-                    </span>
-                </div>
-                </Link>
-
-              </div>
-            </div>
           </div>
           {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
             <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
@@ -209,7 +213,7 @@ export default function HomePage() {
           </span>}
 
 
-          
+
         </div>
       </div>
     </>

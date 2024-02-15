@@ -24,20 +24,7 @@
   gap: 10px;
 }
 
-.box {
-  background: linear-gradient(to right, #779499, #415c61, #415c61, #446065);
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  background-image: url("/rfblinds.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-}
 
 .box_prt1 {
   display: flex;
@@ -59,6 +46,22 @@
 
 .intro_piece_image {
   width: 500px;
+  height: 300px;
+}
+
+.box {
+  background: linear-gradient(to right, #779499, #415c61, #415c61, #446065);
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/rfblinds.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .getaquote {
@@ -149,7 +152,7 @@
   height: 400px;
 }
 
-.two_section_div5 { 
+.two_section_div5 {
   width: 100vw;
   height: max-content;
   display: flex;
@@ -164,6 +167,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .whattypeofblindspng {
@@ -192,14 +196,15 @@
   background: #f7f7f7ae;
   border-radius: 5px;
   width: 170px;
-  height: 150px;
+  height: 300px;
   align-items: center;
   justify-content: center;
   display: flex;
   margin: 5px;
-  border-width: 2px;
-  border-color: white;
+  border-width: 3px;
+  border-color: rgb(0, 144, 127);
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+  transition: 0.3s;
 }
 
 
@@ -208,11 +213,37 @@
 .rectangle_3:hover,
 .rectangle_4:hover,
 .rectangle_5:hover {
-  transform: scale(0.95);
-  box-shadow: rgb(152, 152, 152) 1px 1px 7px;
-  transition: 0.2s;
-  background: #f7f7f7ec;
+  transform: scale(1.04);
+  box-shadow: rgb(95, 95, 95) 1px 1px 5px;
+  transition: 0.3s;
 }
+
+.rectangle_1 {
+  background-image: url("/zebrablinds.png");
+  background-position: center;
+  background-size: cover;
+}
+.rectangle_2 {
+  background-image: url("/shangrilablinds.png");
+  background-position: center;
+  background-size: cover;
+}
+.rectangle_3 {
+  background-image: url("/romanblinds.png");
+  background-position: center;
+  background-size: cover;
+}
+.rectangle_4 {
+  background-image: url("/rollerblinds.png");
+  background-position: center;
+  background-size: cover;
+}
+.rectangle_5 {
+  background-image: url("/honeycombblinds.png");
+  background-position: center;
+  background-size: cover;
+}
+
 
 .title {
   white-space: nowrap;
@@ -263,14 +294,17 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   transition: 0.2s;
   font-weight: 700;
+  margin-top: 10px;
 }
+
+
 
 
 .linkitem:hover {
   color: rgb(88, 0, 0);
   transition: 0.2s;
   background-color: rgb(233, 233, 233);
-border-radius: 0.15rem;
+  border-radius: 0.15rem;
 }
 
 .are_you_priced_png {
@@ -328,8 +362,8 @@ border-radius: 0.15rem;
   transition: opacity 0.9s ease;
   border-left: none;
   border-right: none;
-border-color: #00765e;
-border-width: 5px;
+  border-color: #00765e;
+  border-width: 5px;
 }
 
 .showFooter {
