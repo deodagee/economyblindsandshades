@@ -74,6 +74,9 @@ border-width: 5px;
   margin-top: 10px;
   padding: 5px;
   border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-color: rgb(165, 165, 165);
 
 }
@@ -239,6 +242,7 @@ font-size: 15px;
   flex-direction: column;
   border-width: 1px;
   border-color: rgb(168, 168, 168);
+  border-radius: 0.15rem;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
@@ -257,6 +261,13 @@ font-size: 15px;
   width: 20vw;
   height: 45vh;
 
+}
+
+.column1_image { 
+  display: flex;
+  height: auto;
+  width: 150px;
+  margin: 5px;
 }
 
 
@@ -316,6 +327,24 @@ font-size: 15px;
   background-color: #dadada;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.room_name_and_botes_div { 
+  display: flex;
+  flex-direction: column;
+}
+
+.room_name_div { 
+  display: flex;
+}
+
+.notes_div { 
+  padding: 5px;
+  display: flex;
+  height: 15vh;
+  width: 25vw;
+  border-width: 1px;
+  margin-top: 10px;
 }
 
 .description_and_answer_seperator_wrapper {
