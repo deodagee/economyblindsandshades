@@ -399,12 +399,22 @@ const AddToCart = () => {
                                         <p className={styles.price_summary_title}>Price Summary</p>
 
                                         <span className={styles.price_summary_title2_group}>
+                                            
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Price before taxes</p>
                                                 <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
                                             </span>
+
+                                            <span className={styles.price_summary_title2_Spanner}>
                                             <p className={styles.price_summary_title2}>Price after taxes</p>
-                                            <p className={styles.price_summary_title2}>Shipping: Free</p>
+                                            <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                            </span>
+
+                                            <span className={styles.price_summary_title2_Spanner}>
+                                            <p className={styles.price_summary_title2}>Shipping</p>
+                                            <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                            </span>
+
                                         </span>
                                         
                                         <Link href={'/checkoutpage'}>
