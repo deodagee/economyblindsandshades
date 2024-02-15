@@ -48,7 +48,10 @@ function FooterPage() {
 
                     <span>
                         <div className={styles.footer_subtitle}>
+                            <Link
+                            href={"/privacypolicy"}>
                             Privacy Policy
+                            </Link>
                         </div>
                     </span>
                     <span>
@@ -71,7 +74,10 @@ function FooterPage() {
 
                     <span>
                         <div className={styles.footer_subtitle}>
+                            <Link
+                            href={"/contact"}>
                             Contact Us
+                            </Link>
                         </div>
                     </span>
                     <span>
@@ -93,7 +99,10 @@ function FooterPage() {
 
                     <span>
                         <div className={styles.footer_subtitle}>
-                            Mobile
+                            <Link 
+                            href={"/"}>
+                            Home Page
+                            </Link>
                         </div>
                     </span>
                     <span>

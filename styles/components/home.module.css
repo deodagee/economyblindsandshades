@@ -77,16 +77,16 @@
 
 
 .intro_piece_image {
-  width: 500px;
-  height: 300px;
+  width: 40vw;
+  height: 40vh;
 }
 
 .box {
   background: linear-gradient(to right, #779499, #415c61, #415c61, #446065);
   align-items: center;
   justify-content: center;
-  width: 500px;
-  height: 300px;
+  width: 40vw;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   background-image: url("/rfblinds.jpg");
