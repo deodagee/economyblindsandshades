@@ -181,9 +181,19 @@ const AddToCart = () => {
                         <div className={styles.review_your_order_bg_wrapper}>
 
                             <div className={styles.column1}>
-                                <div className={styles.column_wrapper}>
 
+                                <div className={styles.column_wrapper}>
+                                    <Image
+                                        alt="column1_image"
+                                        width={100}
+                                        height={100}
+                                        src={"/rfblinds.jpg"}
+                                        className={styles.column1_image}>
+
+                                    </Image>
                                     <div className={styles.description_and_answer_div}>
+
+
                                         <div className={styles.window_name_answer}>Window:</div>
                                         <div className={styles.description_and_answer_seperator_wrapper}>
                                             <div className={styles.description_and_answer_column_seperator}></div>
@@ -201,6 +211,11 @@ const AddToCart = () => {
                                         <div className={styles.answers_answers}>
                                             {productName2}
                                         </div>
+                                    </div>
+
+                                    <div className={styles.room_name_and_botes_div}>
+                                        <div className={styles.room_name_div}>Room Name: {"room darkening"}</div>
+                                        <div className={styles.notes_div}>Notes:</div>
                                     </div>
                                 </div>
                             </div>
