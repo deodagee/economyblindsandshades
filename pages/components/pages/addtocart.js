@@ -50,7 +50,7 @@ const AddToCart = () => {
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('Inside Mount');
     const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
-    const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("Selected Wand Side:");
+    const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("Wand Side:");
     const [active_wand_right_choice_rendering_content, setactive_wand_right_choice_rendering_content] = useState(null);
     const [selectedImagesTop, setSelectedImagesTop] = useState([]);
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
@@ -213,9 +213,21 @@ const AddToCart = () => {
                                         </div>
                                     </div>
 
-                                    <div className={styles.room_name_and_botes_div}>
-                                        <div className={styles.room_name_div}>Room Name: {"room darkening"}</div>
-                                        <div className={styles.notes_div}>Notes:</div>
+                                    <div className={styles.description_and_answer_div}>
+                                        <div className={styles.room_name_div}>Room Name:</div>
+                                        <div className={styles.description_and_answer_seperator_wrapper}>
+                                            <div className={styles.description_and_answer_column_seperator}></div>
+                                        </div>
+                                        <div className={styles.answers_answers}>
+                                            {"room name"}                                        </div>
+                                    </div>
+
+                                    <div className={styles.notes_div}>
+                                        <div className={styles.notes_div_wrapper}>
+                                            Notes:
+                                            <p className={styles.notes_section} contentEditable="true">
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +267,7 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {InsideOrOutsideRenderingContent ? `Mount Type: ${InsideOrOutsideRenderingContent}` : "Please Select A Mount Type"}
+                                            {InsideOrOutsideRenderingContent ? `Mount Type: ${InsideOrOutsideRenderingContent}` : "Mount Type?"}
                                         </div>
 
                                     </div>
@@ -267,7 +279,7 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Please Select Your Material"}
+                                            {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Material?"}
                                         </div>
                                     </div>
 
@@ -278,7 +290,7 @@ const AddToCart = () => {
                                         </div>
                                         <div className={styles.answers_answers3}>
                                             <div>
-                                                {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                                {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Lift Type?"}
                                             </div>
                                             <div>
                                                 {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
@@ -377,6 +389,8 @@ const AddToCart = () => {
                                             <p className={styles.add_to_cart}>COMFIRM PURCHASE</p>
                                         </Link>
                                         <p className={styles.add_to_cart}>Price Summary</p>
+                                        <p className={styles.add_to_cart}>Taxes /  {"choose your country"}</p>
+
                                     </div>
                                 </div>
                             </div>
