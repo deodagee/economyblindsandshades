@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 19vh;
+  height: 21vh;
   background-color: rgb(242, 242, 242);
   background: linear-gradient(to top, #1c1c1c, #1e1e1e, #171717);
   position: fixed;
@@ -20,6 +20,8 @@
   border-right: none;
   border-color: #00765e;
   border-width: 5px;
+  border-top-width: 30px;
+
 }
 
 .showFooter {
