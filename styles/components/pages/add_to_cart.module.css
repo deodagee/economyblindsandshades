@@ -1,8 +1,39 @@
+.ZebraBlindsFooter_wrapper::after {
+  display: flex;
+  transition: 0.8s;
+}
+
+.ZebraBlindsFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 19vh;
+  background-color: rgb(242, 242, 242);
+  background: linear-gradient(to top, #1c1c1c, #1e1e1e, #171717);
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  border-left: none;
+  border-right: none;
+border-color: #00765e;
+border-width: 5px;
+}
+
+.showFooter {
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+
 .quantity_and_add_to_cart_group_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40vh;
 }
 
 
@@ -38,10 +69,12 @@
   flex-direction: row;
   align-items: center;
   width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 10px;
   padding: 5px;
   border-width: 1px;
-  border-color: black;
+  border-color: rgb(165, 165, 165);
 
 }
 
@@ -65,6 +98,48 @@
   padding-right: 10px;
 }
 
+.progress_bar_and_order_number { 
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.order_number_div { 
+  display: flex;
+  width: max-content;
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.order_number_wrapper { 
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.order_number_wrapper p { 
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(231, 231, 231);
+}
+.order_number_wrapper p:nth-child(2) { 
+  background-color: rgb(239, 143, 0);
+  border-radius: 0.15rem;
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+  transition: 0.3s;
+}
+
+.order_number_wrapper p:nth-child(2):hover { 
+  color: black;
+  transition: 0.3s;
+  background-color: rgb(228, 164, 68);
+
+}
+
 .progress_bar { 
   display: flex;
   flex-direction: row;
@@ -72,13 +147,16 @@
   justify-content: center;
   align-self: flex-end;
   margin-left: 10vw;
+  width: 70vw;
 }
 
 .progress_bar_element { 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 10px;
+  width: 50px;
 
 }
 
@@ -104,6 +182,15 @@ font-size: 15px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+.progress_bar_tag { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 50px;
+  text-align: center;
 }
 
 
@@ -146,6 +233,7 @@ font-size: 15px;
   height: 45vh;
 }
 
+
 .column_wrapper {
   display: flex;
   flex-direction: column;
@@ -154,10 +242,23 @@ font-size: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  width: 26vw;
+  width: 30vw;
+  height: 45vh;
+}  
+
+.column_wrapper3 { 
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-color: rgb(168, 168, 168);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 20vw;
   height: 45vh;
 
 }
+
 
 
 .column_seperator_wrapper {
