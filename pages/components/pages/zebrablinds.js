@@ -294,16 +294,18 @@ const ZebraBlinds = () => {
 
 
   const Top_Head_Rail_Choices_Materialskey1 = {
+
     TopRailList1: [
-      { key: 'whitetag1', src: '/Fabrics/RoundedWithFabric/WhiteRoundedWithFabric.jpg', label: 'White - Rounded With Fabric' },
-      { key: 'greytag1', src: '/Fabrics/RoundedWithFabric/GreyRoundedWithFabric.jpg', label: 'Grey - Rounded With Fabric' },
-      { key: 'blacktag1', src: '/Fabrics/RoundedWithFabric/BlackRoundedWithFabric.jpg', label: 'Black - Rounded With Fabric' },
-      { key: 'browntag1', src: '/Fabrics/RoundedWithFabric/BrownRoundedWithFabric.jpg', label: 'Brown - Rounded With Fabric' },
-      { key: 'beigetag1', src: '/Fabrics/RoundedWithFabric/BeigeRoundedWithFabric.jpg', label: 'Beige - Rounded With Fabric' },
+      { key1: 'whitetag1', src: '/Fabrics/RoundedWithFabric/WhiteRoundedWithFabric.jpg', label: 'White - Rounded With Fabric' },
+      { key1: 'greytag1', src: '/Fabrics/RoundedWithFabric/GreyRoundedWithFabric.jpg', label: 'Grey - Rounded With Fabric' },
+      { key1: 'blacktag1', src: '/Fabrics/RoundedWithFabric/BlackRoundedWithFabric.jpg', label: 'Black - Rounded With Fabric' },
+      { key1: 'browntag1', src: '/Fabrics/RoundedWithFabric/BrownRoundedWithFabric.jpg', label: 'Brown - Rounded With Fabric' },
+      { key1: 'beigetag1', src: '/Fabrics/RoundedWithFabric/BeigeRoundedWithFabric.jpg', label: 'Beige - Rounded With Fabric' },
     ],
   };
 
   const Top_Head_Rail_Choices_Materialskey2 = {
+
     TopRailList2: [
       { key2: 'whitetag2', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum ' },
       { key2: 'greytag2', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum ' },
@@ -318,19 +320,17 @@ const ZebraBlinds = () => {
 
     BottomRailList: [
 
-      { key: 'whitetag1', key2: 'whitetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White - Bottom Square With Fabric' },
-      { key: 'greytag1', key2: 'greytag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey - Bottom Square With Fabric' },
-      { key: 'blacktag1', key2: 'blacktag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black - Bottom Square With Fabric' },
-      { key: 'browntag1', key2: 'browntag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown - Bottom Square With Fabric' },
-      { key: 'beigetag1', key2: 'beigetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige - Bottom Square With Fabric' },
+      { key1: 'whitetag1', key2: 'whitetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/WhiteBottomRailSquareWithFabricInsert.jpg', label: 'White - Bottom Square With Fabric' },
+      { key1: 'greytag1', key2: 'greytag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/GreyBottomRailSquareWithFabricInsert.jpg', label: 'Grey - Bottom Square With Fabric' },
+      { key1: 'blacktag1', key2: 'blacktag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BlackBottomRailSquareWithFabricInsert.jpg', label: 'Black - Bottom Square With Fabric' },
+      { key1: 'browntag1', key2: 'browntag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BrownBottomRailSquareWithFabricInsert.jpg', label: 'Brown - Bottom Square With Fabric' },
+      { key1: 'beigetag1', key2: 'beigetag2', src: '/Fabrics/BottomRailSquareWithFabricInsert/BeigeBottomRailSquareWithFabricInsert.jpg', label: 'Beige - Bottom Square With Fabric' },
 
-
-      { key: 'whitetag1', key2: 'whitetag2', src: '/Ovals/OvalBottomRails/WhiteBottomOvalRail.jpg', label: 'White - Bottom Oval ' },
-      { key: 'greytag1', key2: 'greytag2', src: '/Ovals/OvalBottomRails/GreyBottomOvalRail.jpg', label: 'Grey - Bottom Oval ' },
-      { key: 'blacktag1', key2: 'blacktag2', src: '/Ovals/OvalBottomRails/BlackBottomOvalRail.jpg', label: 'Black - Bottom Oval ' },
-      { key: 'browntag1', key2: 'browntag2', src: '/Ovals/OvalBottomRails/BrownBottomOvalRail.jpg', label: 'Brown - Bottom Oval ' },
-      { key: 'beigetag1', key2: 'beigetag2', src: '/Ovals/OvalBottomRails/BeigeBottomOvalRail.jpg', label: 'Beige - Bottom Oval ' },
-
+      { key1: 'whitetag1', key2: 'whitetag2', src: '/Ovals/OvalBottomRails/WhiteBottomOvalRail.jpg', label: 'White - Bottom Oval ' },
+      { key1: 'greytag1', key2: 'greytag2', src: '/Ovals/OvalBottomRails/GreyBottomOvalRail.jpg', label: 'Grey - Bottom Oval ' },
+      { key1: 'blacktag1', key2: 'blacktag2', src: '/Ovals/OvalBottomRails/BlackBottomOvalRail.jpg', label: 'Black - Bottom Oval ' },
+      { key1: 'browntag1', key2: 'browntag2', src: '/Ovals/OvalBottomRails/BrownBottomOvalRail.jpg', label: 'Brown - Bottom Oval ' },
+      { key1: 'beigetag1', key2: 'beigetag2', src: '/Ovals/OvalBottomRails/BeigeBottomOvalRail.jpg', label: 'Beige - Bottom Oval ' },
     ],
 
   }
@@ -338,7 +338,6 @@ const ZebraBlinds = () => {
 
   const [selectedMaterial, setSelectedMaterial] = useState(null);
   const [firstImage_div, setfirstImage_div] = useState(true);
-
 
   const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
 
@@ -352,6 +351,7 @@ const ZebraBlinds = () => {
   };
 
   const renderColorList = (colorList2) => (
+
     <>
       <div className={styles.images_and_subtitles} key={colorList2[0].key}>
 
@@ -381,73 +381,67 @@ const ZebraBlinds = () => {
   const [clickedImageKeyTop, setClickedImageKeyTop] = useState(null);
   const [clickedImageKeyBottom, setClickedImageKeyBottom] = useState(null);
 
-  const handleBottomImageClick = (key2, key) => {
+
+  const handleBottomImageClick = (key2) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('bottom');
-
-    if (key === clickedImageKeyBottom) {
-      setSelectedImagesBottom([]);
-    } else {
-      setSelectedImagesBottom([key]);
-    }
-
-    if (key2 === clickedImageKeyBottom) {
-      setSelectedImagesBottom([]);
-    } else {
-      setSelectedImagesBottom([key2]);
+  
+    const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key2 === key2);
+  
+    if (matchingBottomImages && matchingBottomImages.length > 0) {
+      // Sort matchingBottomImages to prioritize the first image
+      matchingBottomImages.sort((a, b) => a.key2.localeCompare(b.key2));
+      const selectedImage = matchingBottomImages[0];
+  
+      // Update selectedImagesBottom
+      setSelectedImagesBottom(selectedImage ? [selectedImage.key2] : []);
     }
   };
+  
 
-
-  const handleImageClickImagesTop1 = (key) => {
+  const handleImageClickImagesTop1 = (key1) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
-
-    const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key === key);
-
+  
+    const matchingImage1 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key1 === key1);
+  
     if (matchingImage1) {
-      setSelectedImagesTop(key === clickedImageKeyTop ? [] : [key]);
-
-      const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key === key);
-
+      setSelectedImagesTop(key1 === clickedImageKeyTop ? [] : [key1]);
+  
+      const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key1 === key1);
+  
       if (matchingBottomImages && matchingBottomImages.length > 0) {
-        const bottomKeys = matchingBottomImages.map(image => image.key2);
-        setSelectedImagesBottom(key === clickedImageKeyTop ? [] : bottomKeys);
+        // Sort matchingBottomImages to prioritize the first image
+        matchingBottomImages.sort((a, b) => a.key2.localeCompare(b.key2));
+        const bottomKeys = [matchingBottomImages[0].key2]; // Take only the first image
+        setSelectedImagesBottom(key1 === selectedImagesBottom ? [] : bottomKeys);
       }
     }
   };
 
-
+  
   const handleImageClickImagesTop2 = (key2) => {
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
     setSelectedRailType('top');
-
-    setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : [key2]);
-    const matchingImage3 = Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(image => image.key2 === key2);
-    const matchingImage2 = Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(image => image.key2 === key2);
-
-    if (matchingImage2,matchingImage3 ) {
-
-      const matchingBottomImage = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(bottomImage => bottomImage.key2 === key2);
-
-      if (matchingBottomImage && matchingBottomImage.length > 0) {
-        const bottomKeys2 = matchingBottomImage.map(image => image.key2);
-        setSelectedImagesBottom(key2 === clickedImageKeyTop ? [] : bottomKeys2);
-
-      }
-      
+  
+    setSelectedImagesTop(key2 === clickedImageKeyTop ? [] : [key2]);
+  
+    const matchingBottomImages = Bottom_Bottom_Rail_Choices_Materials.BottomRailList.filter(image => image.key2 === key2);
+  
+    if (matchingBottomImages && matchingBottomImages.length > 0) {
+      // Sort matchingBottomImages to prioritize the first image
+      matchingBottomImages.sort((a, b) => a.key2.localeCompare(b.key2));
+      const bottomKeys = [matchingBottomImages[0].key2]; // Take only the first image
+      setSelectedImagesBottom(key2 === selectedImagesBottom ? [] : bottomKeys);
     }
-    
   };
-
-
-
+  
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -734,7 +728,7 @@ const ZebraBlinds = () => {
                               height={200}
                               className={styles.left_first_image_render}
                               src={
-                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
+                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
                                   Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
                                 )?.src
                               }
@@ -755,17 +749,21 @@ const ZebraBlinds = () => {
                               <span className={styles.left_imageContainer_image_itself1_label}>
                                 Bottom Rail
                               </span>
-                              <Image
-                                width={200}
-                                height={200}
-                                className={styles.left_first_image_render}
-                                src={
-                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.src
-                                }
-                                alt={
-                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.label
-                                }
-                              />
+                              {selectedImagesBottom.map((selectedKey, index) => (
+                                <div key={index}>
+                                  <Image
+                                    width={200}
+                                    height={200}
+                                    className={styles.left_first_image_render}
+                                    src={
+                                      Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedKey)?.src
+                                    }
+                                    alt={
+                                      Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedKey)?.label
+                                    }
+                                  />
+                                </div>
+                              ))}
                             </div>
                           </div>
                         )}
@@ -982,7 +980,7 @@ const ZebraBlinds = () => {
                                       <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                         {selectedInchesVisibleWidth ? (
                                           <span className={styles.span_visibility_1}>
-                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
+                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
                                               <div
                                                 key={index}
                                                 onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
@@ -1381,7 +1379,7 @@ const ZebraBlinds = () => {
                                       <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                         {selectedInchVisiblehEIGHT ? (
                                           <span className={styles.span_visibility_1}>
-                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
+                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
                                               <div
                                                 key={index}
                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
@@ -1946,7 +1944,7 @@ const ZebraBlinds = () => {
                                       <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                         {selectedInchesVisibleWidth ? (
                                           <span className={styles.span_visibility_1}>
-                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
+                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
                                               <div
                                                 key={index}
                                                 onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
@@ -2229,7 +2227,7 @@ const ZebraBlinds = () => {
                                       <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                         {selectedInchVisiblehEIGHT ? (
                                           <span className={styles.span_visibility_1}>
-                                            {["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
+                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
                                               <div
                                                 key={index}
                                                 onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
@@ -2728,36 +2726,37 @@ const ZebraBlinds = () => {
                             </div>
                           </div>
 
-                          {!active_skip_head_rail_ellipse && (
-                            <div className={styles.fabric_list_top} style={{ marginTop: active_skip_head_rail_ellipse ? '-100px' : '0' }}>
-                              <div className={styles.materials_organized_div_wrapper}>
-                                {[
-                                  { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1 },
-                                  { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2 },
-                                ].map((choicesObj, index) => (
-                                  <div key={index} className={styles.materials_organized_div}>
-                                    {choicesObj.list.map((choice, choiceIndex) => (
-                                      <div
-                                        className={`${styles.materials_organized_div_image} ${selectedImagesTop?.includes(choice.key) || selectedImagesBottom === choice ? styles.selectedImage : ''}`}
-                                        key={choiceIndex}
-                                        onClick={() => {
-                                          if (choicesObj.key === 'TopRailList1') {
-                                            handleImageClickImagesTop1(choice.key);
-                                          } else if (choicesObj.key === 'TopRailList2') {
-                                            handleImageClickImagesTop2(choice.key2);
-                                          }
-                                        }}
-                                      >
-                                        <Image width={100} height={100} src={choice.src} alt={choice.label} />
-                                        <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
-                                      </div>
-                                    ))}
-
-                                  </div>
-                                ))}
-                              </div>
+                          {[
+                            { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1, type: 'Top' },
+                            { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2, type: 'Top' },
+                          ].map((choicesObj, index) => (
+                            <div key={index} className={styles.materials_organized_div}>
+                              {choicesObj.list.map((choice, choiceIndex) => (
+                                <div
+                                  className={`${styles.materials_organized_div_image} ${(choicesObj.key === 'TopRailList1' && selectedImagesTop?.includes(choice.key1)) ||
+                                    (choicesObj.key === 'TopRailList2' && selectedImagesTop?.includes(choice.key2)) ||
+                                    (choicesObj.type === 'Bottom' && selectedImagesBottom?.includes(choice.key2))
+                                    ? styles.selectedImage
+                                    : ''
+                                    }`}
+                                  key={choiceIndex}
+                                  onClick={() => {
+                                    if (choicesObj.key === 'TopRailList1') {
+                                      handleImageClickImagesTop1(choice.key1);
+                                    } else if (choicesObj.key === 'TopRailList2') {
+                                      handleImageClickImagesTop2(choice.key2);
+                                    }
+                                  }}
+                                >
+                                  <Image width={100} height={100} src={choice.src} alt={choice.label} />
+                                  <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                </div>
+                              ))}
                             </div>
-                          )}
+                          ))}
+
+
+
 
 
 
@@ -2898,7 +2897,7 @@ const ZebraBlinds = () => {
                   </span>
 
                   <div className={styles.description_and_answer}>
-                   
+
                     <div className={styles.window_type_answer}>Window Type:</div>
                     <div className={styles.answers_answers}>
                       {productName2}
@@ -3034,8 +3033,12 @@ const ZebraBlinds = () => {
                               width={200}
                               height={200}
                               className={styles.bottom_rail_type_answer_image_render}
-                              src={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.src}
-                              alt={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
+                              src={
+                                Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.src
+                              }
+                              alt={
+                                Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key2 === selectedImagesBottom[0])?.label
+                              }
                             />
 
                           </div>
@@ -3045,6 +3048,26 @@ const ZebraBlinds = () => {
                     </div>
 
                   </div>
+
+                  <span
+                    className={styles.bill_divider}>
+                  </span>
+
+
+                  <div className={styles.description_and_answer}>
+                    <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
+
+                    <div className={styles.answers_answers}>
+
+                      <p>Between</p>
+                      <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
+                      </div>
+                      <p>and</p>
+                      <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
+                      </div>
+                    </div>
+                  </div>
+
 
                   <div className={styles.add_to_cart_rectangle_wrapper}>
                     <Link href={'/addtocart'}>
@@ -3065,17 +3088,7 @@ const ZebraBlinds = () => {
               </div>
             </div>
 
-            <div className={styles.estimated_delivery_date_wrapper}>
-              <div className={styles.estimated_delivery_date_group}>
-                <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
-                <p>Between</p>
-                <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
-                </div>
-                <p>and</p>
-                <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
-                </div>
-              </div>
-            </div>
+
 
             <div className={styles.shipping_details_group_wrapper}>
               <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
