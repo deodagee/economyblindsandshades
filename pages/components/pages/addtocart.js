@@ -115,46 +115,64 @@ const AddToCart = () => {
                                 Go Back
                             </span>
                         </div>
-                        <div className={styles.progress_bar}>
-                            
-                            <div className={styles.progress_bar_element}>
-                            <span className={styles.progress_bar_circle_and_number}>
-                                <p className={styles.progress_bar_number}>
-                                    1
-                                </p>
-                            </span>
-                            <p>start</p>     
-                            </div>                
 
+                        <div className={styles.progress_bar_and_order_number}>
+                            <div className={styles.order_number_div}>
+                                <div >
+                                    <span className={styles.order_number_wrapper}>
+                                        <p>
+                                            Your Order Number: {"23423424534234"}
+                                        </p>
+                                        <p>
+                                            Checkout
+                                        </p>
 
-                            <span className={styles.progress_bar_line}>
-                            </span>
-
-                            <div className={styles.progress_bar_element}>
-                            <span className={styles.progress_bar_circle_and_number}>
-                                <p className={styles.progress_bar_number}>
-                                    2
-                                </p> 
-                                  </span>
-                                  <p>middle</p>     
-                                  </div>                
-
-
-                            <span className={styles.progress_bar_line}>
-                            </span>
-
-
-                            <div className={styles.progress_bar_element}>
-                            <span className={styles.progress_bar_circle_and_number}>
-                                <p className={styles.progress_bar_number}>
-                                    3
-                                </p>                    
                                     </span>
-                                    <p>end</p>     
-                                    </div>                
+                                </div>
+                            </div>
+
+
+                            <div className={styles.progress_bar}>
+
+                                <div className={styles.progress_bar_element}>
+                                    <span className={styles.progress_bar_circle_and_number}>
+                                        <p className={styles.progress_bar_number}>
+                                            1
+                                        </p>
+                                    </span>
+                                    <p className={styles.progress_bar_tag}
+                                    >Shopping Cart</p>
+                                </div>
+
+
+                                <span className={styles.progress_bar_line}>
+                                </span>
+
+                                <div className={styles.progress_bar_element}>
+                                    <span className={styles.progress_bar_circle_and_number}>
+                                        <p className={styles.progress_bar_number}>
+                                            2
+                                        </p>
+                                    </span>
+                                    <p className={styles.progress_bar_tag}
+                                    >Secure Checkout</p>
+                                </div>
+
+                                <span className={styles.progress_bar_line}>
+                                </span>
+                                <div className={styles.progress_bar_element}>
+                                    <span className={styles.progress_bar_circle_and_number}>
+                                        <p className={styles.progress_bar_number}>
+                                            3
+                                        </p>
+                                    </span>
+                                    <p className={styles.progress_bar_tag}
+                                    >Order Confimation</p>
+                                </div>
 
 
 
+                            </div>
                         </div>
                     </span>
 
@@ -332,7 +350,7 @@ const AddToCart = () => {
 
 
                             <div className={styles.column3}>
-                                <div className={styles.column_wrapper}>
+                                <div className={styles.column_wrapper3}>
                                     <div className={styles.price_summary_wrapper}>
                                         <p className={styles.price_summary_title}>Price Summary</p>
 
