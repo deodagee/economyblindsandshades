@@ -1092,8 +1092,8 @@
 .ruler_for_boat {
   font-size: 17px;
   display: flex;
-  width: 28vw;
-  height: 110px;
+  width: 250px;
+  height: 90px;
   align-items: flex-start;
   justify-content: center;
   background-color: #136c60cc;
@@ -2323,7 +2323,9 @@
 }
 
 .clickedImage {
-  border: 2px solid green;
+  display: flex;
+  border-width: 5px;
+  border-color: green;
 }
 
 .fabric_list_top_list1 {
