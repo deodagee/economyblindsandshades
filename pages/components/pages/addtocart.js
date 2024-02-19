@@ -520,7 +520,6 @@ const AddToCart = () => {
 
                 <div className={styles.addtocart}>
                     <div className={styles.addtocartContainer}>
-                        <div className={styles.PurchaseTitle}>Go Back</div>
                         <Link
                             className={styles.addtocartButton}
                             href={"/zebrablinds"}
