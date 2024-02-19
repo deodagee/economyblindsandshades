@@ -708,8 +708,8 @@ const ZebraBlinds = () => {
                             <div className={styles.left_first_image_render_wrapper}>
 
                             <Image
-                              width={200}
-                              height={200}
+                              width={100}
+                              height={100}
                               className={styles.left_first_image_render}
                               src={
                                 (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
@@ -735,8 +735,8 @@ const ZebraBlinds = () => {
 
                             <div className={styles.left_first_image_render_wrapper}>
                             <Image
-                              width={200}
-                              height={200}
+                              width={100}
+                              height={100}
                               className={styles.left_first_image_render}
                               src={
                                 (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
@@ -758,6 +758,8 @@ const ZebraBlinds = () => {
           </ol>
 
           <ol className={styles.right_half}>
+
+            <div className={styles.right_half_top}>
 
             <div className={styles.top_title_area}>
               <span>
@@ -787,6 +789,7 @@ const ZebraBlinds = () => {
               A distinctive look that makes a statement, this revolutionary sheer shade
               adds personality to any room. These zebra shades are made with two pieces
               of fabric, which both have alternating panels/bands:
+            </div>
             </div>
 
 
