@@ -2701,6 +2701,8 @@ const ZebraBlinds = () => {
                             </div>
                           </div>
 
+                          
+                          <div className={styles.materials_organized_div_wrapper}>
                           {[
                             { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1, type: 'Top' },
                             { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2, type: 'Top' },
@@ -2722,13 +2724,23 @@ const ZebraBlinds = () => {
                                     }
                                   }}
                                 >
-                                  <Image width={100} height={100} src={choice.src} alt={choice.label} />
+
+                                  <div className={styles.railimage_wrapper}>
+                                    <Image
+                                      className={styles.railimage}
+                                      width={100}
+                                      height={100}
+                                      src={choice.src}
+                                      alt={choice.label} />
+                                  </div>
                                   <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                 </div>
                               ))}
                             </div>
                           ))}
                         </div>
+                        </div>
+
 
                       </div>
                     </div>
@@ -2790,8 +2802,8 @@ const ZebraBlinds = () => {
                                           {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
                                             <div
                                               className={`${styles.materials_organized_div_image} 
-                      ${selectedImagesBottom?.includes(choice.key3) ? styles.selectedImage : ''} 
-                      ${clickedImageKeyBottom === choice.key3 ? styles.clickedImage : ''}`}
+                                                ${selectedImagesBottom?.includes(choice.key3) ? styles.selectedImage : ''} 
+                                                ${clickedImageKeyBottom === choice.key3 ? styles.clickedImage : ''}`}
                                               key={choice.key3}
                                               onClick={() => handleBottomImageClick(choice.key3)}
                                               // Allow selection only if key1 or key2 matches clickedImageKeyTop
@@ -2800,12 +2812,17 @@ const ZebraBlinds = () => {
                                                 opacity: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 1 : 0.5,
                                               }}
                                             >
-                                              <Image
-                                                width={100}
-                                                height={100}
-                                                src={choice.src}
-                                                alt={choice.label}
-                                              />
+
+                                              <div className={styles.railimage_wrapper}>
+                                                <Image
+                                                  className={styles.railimage}
+                                                  width={100}
+                                                  height={100}
+                                                  src={choice.src}
+                                                  alt={choice.label}
+                                                />
+
+                                              </div>
                                               <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                             </div>
                                           ))}
