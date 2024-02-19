@@ -1673,12 +1673,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+}
+
+.left_first_image_render_wrapper { 
+  display: flex;
+  width: 15vw;
+  height: 15vw;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  
 }
 
 .left_first_image_render {
   display: flex;
-  height: 22vh;
-  width: auto;
+
   align-items: center;
   justify-content: center;
 }
@@ -1706,6 +1716,8 @@
   margin: 1vh;
   white-space: nowrap;
 }
+
+
 
 .divider_line {
   height: 2px;
