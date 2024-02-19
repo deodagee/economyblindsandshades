@@ -2782,9 +2782,8 @@ const ZebraBlinds = () => {
                                 <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
                                   <div className={styles.fabric_list_bottom_list1}>
                                     <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
-                                    {showSorryMessage && (
-                                      <p className={styles.sorryMessage}>Sorry, pick from the head rail first to choose from this selection.</p>
-                                    )}
+                                    <p className={styles.sorryMessage}>First pick a selection from the TOP rail to select the appropriate BOTTOM rail.</p>
+
                                     <div className={styles.materials_organized_div_wrapper}>
                                       {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
                                         <div key={index} className={styles.materials_organized_div}>
