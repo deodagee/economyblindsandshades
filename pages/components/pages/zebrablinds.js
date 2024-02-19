@@ -705,6 +705,8 @@ const ZebraBlinds = () => {
                             <span className={styles.left_imageContainer_image_itself1_label}>
                               Top Rail
                             </span>
+                            <div className={styles.left_first_image_render_wrapper}>
+
                             <Image
                               width={200}
                               height={200}
@@ -721,6 +723,7 @@ const ZebraBlinds = () => {
                               }
                             />
                           </div>
+                          </div>
                         </div>
                       )}
                       {selectedImagesBottom?.length > 0 && (
@@ -729,6 +732,8 @@ const ZebraBlinds = () => {
                             <span className={styles.left_imageContainer_image_itself1_label}>
                               Bottom Rail
                             </span>
+
+                            <div className={styles.left_first_image_render_wrapper}>
                             <Image
                               width={200}
                               height={200}
@@ -740,6 +745,7 @@ const ZebraBlinds = () => {
                                 (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).label
                               }
                             />
+                            </div>
                           </div>
                         </div>
                       )}
