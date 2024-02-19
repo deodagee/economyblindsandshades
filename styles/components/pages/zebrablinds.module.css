@@ -1092,7 +1092,7 @@
 .ruler_for_boat {
   font-size: 17px;
   display: flex;
-  width: 250px;
+  width: max-content;
   height: 90px;
   align-items: flex-start;
   justify-content: center;
