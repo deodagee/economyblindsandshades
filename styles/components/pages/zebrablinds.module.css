@@ -142,8 +142,8 @@
   border-width: 2px;
   width: 68vw;
   position: absolute;
-  right: 0;
-  top: 160px;
+  right: 10px;
+  top: 190px;
 }
 
 .right_half_top { 
@@ -151,8 +151,7 @@
   flex-direction: column;
 
   background-color: #d2d2d2;
-  background: linear-gradient(to top, #d2d2d2, #dadada, rgb(221, 221, 221));
-
+  background: linear-gradient(to bottom, #d2d2d2, #dadada, #e8e8e8);
 padding: 10px;
 
 }
@@ -254,9 +253,12 @@ padding: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   margin: 20px;
-  background-color: #007476;
+  background-color: #323232;
   padding: 20px;
   color: rgb(228, 228, 228);
+  border-radius: 0.15rem;
+  background: linear-gradient(to bottom, #292929, #353535, #343434, #343434, #454545);
+
 }
 
 .top_divider_line {
@@ -410,7 +412,7 @@ padding: 10px;
   font-size: 10px;
 }
 
-.inside_mount_group_wrapper {
+.inside_mount_group_wrapper, .outside_mount_group_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -420,9 +422,6 @@ padding: 10px;
 }
 
 
-.inside_mount_group {
-  display: content;
-}
 
 .visible_inside_mount {
   display: contents;
@@ -438,7 +437,13 @@ padding: 10px;
   justify-content: center;
   height: auto;
   background-color: white;
-  width: 30vw;
+  width: 40vw;
+  height: auto;
+  border-color: black;
+  border-width: 3px;
+  padding: 20px;
+
+
 }
 
 .first_chosen_inside_mount_selection {
@@ -466,7 +471,7 @@ padding: 10px;
 }
 
 
-.inside_mount_group_left_side {
+.inside_mount_group_left_side, .outside_mount_group_left_side {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -477,12 +482,13 @@ padding: 10px;
   justify-content: center;
 }
 
-.inside_mount_measurement_instructions_wrapper {
+
+.mount_measurement_instructions_wrapper {
   display: contents;
 }
 
 
-.inside_mount_measurement_instructions {
+.mount_measurement_instructions {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,7 +496,7 @@ padding: 10px;
   height: max-content;
 }
 
-.measurement_instructions_title_inside_mount {
+.measurement_instructions_title {
   font-size: 15px;
   color: #323232;
   background-color: #e9e9e9;
@@ -503,6 +509,7 @@ padding: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   border-color: grey;
+  width: 20vw;
 }
 
 .step_1_inside_mount,
@@ -601,22 +608,7 @@ padding: 10px;
 }
 
 
-.outside_mount_group_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3vh;
-  background-color: white;
-}
 
-.outside_mount_group {
-  width: 60vw;
-  align-items: center;
-  justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .first_chosen_outside_mount_selection_wrapper {
   display: flex;
@@ -624,7 +616,11 @@ padding: 10px;
   justify-content: center;
   height: auto;
   background-color: white;
-  width: 30vw;
+  width: 40vw;
+  height: auto;
+  border-color: black;
+  border-width: 3px;
+  padding: 20px;
 
 }
 
@@ -650,41 +646,14 @@ padding: 10px;
   height: auto;
   margin-top: 30px;
 }
-
-.outside_mount_group_left_side {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 50vw;
-  height: max-content;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
+.right_outside_mount {
+  width: 30vw;
+  height: auto;
+  display: none;
+  height: auto;
+  margin-top: 30px;
 }
 
-
-.outside_mount_measurement_instructions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  height: max-content;
-}
-
-.measurement_instructions_title_outside_mount {
-  font-size: 15px;
-  color: #323232;
-  background-color: #e9e9e9;
-  padding: 5px;
-  border-radius: 0.24rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-color: grey;
-}
 
 .step_1_outside_mount,
 .step_2_outside_mount {
@@ -707,13 +676,6 @@ padding: 10px;
 
 /* OUTSIDE MOUNT CLASSNAME= .step_tag_description_note */
 
-.right_outside_mount {
-  width: 30vw;
-  height: auto;
-  display: none;
-  height: auto;
-  margin-top: 30px;
-}
 
 .outside_mount_group_right_side {
   display: flex;
@@ -1595,7 +1557,7 @@ padding: 10px;
   background: linear-gradient(to bottom, #222222, #3b3b3b, #434343, #3b3b3b, #272727);
   background: linear-gradient(to bottom, #eeeeee, #eeeeee, #ffffff, #eeeeee, #eeeeee);
   position: fixed;
-  left: 0;
+  left: -10px;
   transition: transform 0.6s ease;
 
 }

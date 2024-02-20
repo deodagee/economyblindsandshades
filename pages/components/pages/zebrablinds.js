@@ -855,9 +855,9 @@ const ZebraBlinds = () => {
 
                       <div className={styles.inside_mount_group_left_side}>
 
-                        <span className={styles.inside_mount_measurement_instructions_wrapper}>
-                          <div className={styles.inside_mount_measurement_instructions}>
-                            <p className={styles.measurement_instructions_title_inside_mount}>
+                        <span className={styles.mount_measurement_instructions_wrapper}>
+                          <div className={styles.mount_measurement_instructions}>
+                            <p className={styles.measurement_instructions_title}>
                               Measurement Instructions:
                             </p>
                           </div>
@@ -1834,9 +1834,11 @@ const ZebraBlinds = () => {
                     <span className={styles.left_outside_mount}>
 
                       <div className={styles.outside_mount_group_left_side}>
-                        <div className={styles.outside_mount_measurement_instructions}>
+                      <span className={styles.mount_measurement_instructions_wrapper}>
 
-                          <p className={styles.measurement_instructions_title_outside_mount}>
+                        <div className={styles.mount_measurement_instructions}>
+
+                          <p className={styles.measurement_instructions_title}>
                             Measurement Instructions:
                           </p>
 
@@ -1863,6 +1865,7 @@ const ZebraBlinds = () => {
                             </span>
                           </div>
                         </div>
+                        </span>
                       </div>
                     </span>
 
