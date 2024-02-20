@@ -1070,6 +1070,9 @@ padding: 10px;
   font-size: 17px;
   display: flex;
   width: max-content;
+  padding-left: 10px;
+  padding-right: 10px;
+
   height: 90px;
   align-items: flex-start;
   justify-content: center;
