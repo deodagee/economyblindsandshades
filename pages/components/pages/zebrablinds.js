@@ -788,7 +788,7 @@ const ZebraBlinds = () => {
               >
                 A distinctive look that makes a statement, this revolutionary sheer shade
                 adds personality to any room. These zebra shades are made with two pieces
-                of fabric, which both have alternating panels/bands:
+                of fabric, which both have alternating panels/bands.
               </div>
             </div>
 
