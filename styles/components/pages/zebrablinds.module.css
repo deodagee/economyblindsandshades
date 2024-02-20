@@ -236,11 +236,6 @@ padding: 10px;
 }
 
 
-
-
-
-
-
 .a_distinctive_look_that {
   display: flex;
   align-items: center;
@@ -418,11 +413,8 @@ padding: 10px;
   justify-content: center;
   margin-top: 20px;
   background-color: white;
-  border-width: 2px;
-  border-color: rgb(213, 213, 213);
   padding: 20px;
-  border-left: none;
-  border-right: none;
+
 }
 
 
