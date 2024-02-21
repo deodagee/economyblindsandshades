@@ -358,16 +358,28 @@
     background: linear-gradient(to right, #f4f4f4, #f4f4f4, #f4f4f4, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e);
   
   }
+
+  
+
   
   .header_top_promo_bar {
     height: 60px;
-    width: 100vw;
+    width: max-content;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e);
     background-color: #264a4e;
     display: flex;
     padding: 10px;
+  }
+
+  .header_top_image {
+    display: flex;
+    height: 30px;
+    width: auto;
+    margin: 0;
+    margin-top: 0;
+    margin-left: 30vw;
   }
 
   
