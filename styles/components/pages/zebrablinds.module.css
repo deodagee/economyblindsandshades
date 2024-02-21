@@ -3088,4 +3088,120 @@ justify-content: space-evenly;
     width: 70px;
     border-radius: 0.10rem;
   }
+
+  .fabric_types_top_and_bottom_main_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95vw;
+    height: max-content;
+    margin-top: 30px;
+  }
+  
+  .fabric_types_top_and_bottom_second_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    flex-direction: column;
+    height: max-content;
+    border-width: 2px;
+    border-color: rgb(234, 234, 234);
+    border-radius: 0.56rem;
+    transition: 0.3s;
+  
+  }
+  
+  .top_section {
+    display: flex;
+    width: 93vw;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.45rem;
+  }
+  
+  .skip_top_section {
+    display: none;
+    width: 98vw;
+    flex-direction: column;
+    padding-left: 20px;
+    align-self: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .bottom_section {
+  display: flex;
+  width: 93vw;
+  flex-direction: column;
+  background-color: rgb(237, 237, 237);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.45rem;
+}
+
+.skip_bottom_section {
+  display: flex;
+  width: 98vw;
+  flex-direction: column;
+  padding-left: 20px;
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+  .skip_head_rail_image_placeholder_invisible {
+    display: none;
+    width: 98vw;
+  }
+
+  .railimage_wrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s;
+    background-color: white;
+    padding: 5px;
+    padding: 10px;
+    width: 70px;
+    height: auto;
+  }
+  
+  .railimage { 
+    display: flex;
+    width: 50px;
+    height:auto;
+  }
+  
+
+  /* Start of Fabrics Page */
+.select_head_rail_group {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+}
+
+  .gobacktochoices {
+    background-color: rgb(217, 217, 217);
+    width: 96vw;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .materials_organized_div {
+    font-size: 11px;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: max-content;
+    margin: 20px;
+  }
+  
   }
