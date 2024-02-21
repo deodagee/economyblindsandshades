@@ -758,6 +758,7 @@ const ZebraBlinds = () => {
           </ol>
 
           <ol className={styles.right_half}>
+            <span className={styles.right_half_wrapper}>
 
             <div className={styles.right_half_top}>
 
@@ -773,11 +774,13 @@ const ZebraBlinds = () => {
               </div>
 
               <div className={styles.star_group}>
+                <span className={styles.star_group_wrapper}>
                 <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
                 <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
                 <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
                 <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
                 <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+                </span>
               </div>
 
 
@@ -3437,30 +3440,18 @@ const ZebraBlinds = () => {
 
               </div>
 
-
-
             </div>
-
-
-
-
+            </span>
 
           </ol>
-
-
-
 
         </span >
 
       </div >
 
 
-
       <>
-
-
         <>
-
 
           {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
             <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
@@ -3472,7 +3463,6 @@ const ZebraBlinds = () => {
           </span>}
         </>
       </>
-
 
     </>
   )

@@ -364,7 +364,7 @@
   
   .header_top_promo_bar {
     height: 60px;
-    width: max-content;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e, #264a4e);
