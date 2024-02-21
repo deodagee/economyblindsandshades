@@ -221,6 +221,15 @@ padding: 10px;
 
 }
 
+.star_group_wrapper { 
+  width: 60vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 0;
+}
+
 .star_6,
 .star_7,
 .star_8,
@@ -2925,6 +2934,7 @@ justify-content: space-evenly;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: row;
     margin-left: 20px;
   }
 
