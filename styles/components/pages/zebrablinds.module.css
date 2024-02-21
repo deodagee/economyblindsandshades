@@ -305,23 +305,6 @@ padding: 10px;
   justify-content: flex-start;
 }
 
-.select_mount_type_short_rectangle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 35px;
-  padding: 10px;
-  border-radius: 2rem;
-  background-color: #1b3538;
-  border-width: 2px;
-  border-color: white;
-}
-
-.select_mount_type_short_rectangle:hover {
-  cursor: default;
-}
 
 .iconforselect_mount_type {
   display: none;
@@ -701,6 +684,7 @@ padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-left: 20px;
 }
 
 .step_1_wrapper {
@@ -1345,19 +1329,20 @@ justify-content: space-evenly;
   display: none;
 }
 
-
 .enter_size_outside_mount_group {
   display: contents;
   transition: 0.2s;
 }
 
-
-.select_color_short_rectangle {
+.select_color_short_rectangle, 
+.select_mount_type_short_rectangle, 
+.select_cassette_head_rail_short_rectangle,
+.select_lift_type_short_rectangle {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 400px;
   height: 35px;
   padding: 10px;
   border-radius: 2rem;
@@ -1366,7 +1351,10 @@ justify-content: space-evenly;
   border-color: white;
 }
 
-.select_color_short_rectangle:hover {
+.select_color_short_rectangle:hover, 
+.select_mount_type_short_rectangle:hover, 
+.select_cassette_head_rail_short_rectangle:hover, 
+.select_lift_type_short_rectangle:hover {
   cursor: default;
 }
 
@@ -1727,25 +1715,6 @@ justify-content: space-evenly;
 
 
 
-
-.select_lift_type_short_rectangle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 35px;
-  padding: 10px;
-  border-radius: 2rem;
-  background-color: #1b3538;
-  border-width: 2px;
-  border-color: white;
-}
-
-.select_lift_type_short_rectangle:hover {
-  cursor: default;
-}
-
 .iconforselectlifttype {
   display: none;
   padding: 2px;
@@ -1994,23 +1963,7 @@ justify-content: space-evenly;
 
 
 
-.select_cassette_head_rail_short_rectangle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 35px;
-  padding: 10px;
-  border-radius: 2rem;
-  background-color: #1b3538;
-  border-width: 2px;
-  border-color: white;
-}
 
-.select_cassette_head_rail_short_rectangle:hover {
-  cursor: default;
-}
 
 .iconforselect_cassette_head_rail {
   display: none;
@@ -2598,7 +2551,7 @@ justify-content: space-evenly;
 .review_your_order_seperator_line {
   display: flex;
   height: 3px;
-  width: 80vw;
+  width: 65vw;
   margin: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -2903,13 +2856,13 @@ justify-content: space-evenly;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 90vw;
     height: max-content;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
-    margin: 20px;
+    margin-left: -10px;
     padding: 20px;
     color: rgb(222, 107, 0);
     border-radius: 0.15rem;
@@ -2924,7 +2877,6 @@ justify-content: space-evenly;
     align-items: center;
     gap: 5px;
     margin-left: 0;
-    background-color: beige;
     width: 90vw;
     margin-left: 10px;
   }
@@ -2957,16 +2909,16 @@ justify-content: space-evenly;
     width: 100vw;
     position: absolute;
     right: 10px;
-    top: 190px;
+    top: 150px;
   }
   
   
   .right_half_top { 
     display: flex;
     flex-direction: column;
-  width: 100vw;
-    background-color: #f5f5f5;
+  width: 90vw;
   padding: 10px;
+  margin-left: 20px;
   
   }
   
@@ -2979,7 +2931,10 @@ justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     margin: 10px;
-    margin-left: 20px;
+    margin-left: -10px;
+    background-color: rgb(232, 232, 232);
+    width: 90vw;
+    padding: 10px;
   }
   
 
@@ -3017,16 +2972,7 @@ justify-content: space-evenly;
   }
   
 
-  .top_title_area {
-    display: flex;
-    width: 300px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 10px;
-    margin-left: 20px;
-  }
+
   
   
   
@@ -3048,7 +2994,8 @@ justify-content: space-evenly;
   }
 
 
-  .first_chosen_outside_mount_selection_wrapper, .first_chosen_inside_mount_selection_wrapper {
+  .first_chosen_outside_mount_selection_wrapper, 
+  .first_chosen_inside_mount_selection_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3062,13 +3009,60 @@ justify-content: space-evenly;
   
   }
   
-  .first_chosen_outside_mount_selection, .first_chosen_inside_mount_selection {
+  .first_chosen_outside_mount_selection, 
+  .first_chosen_inside_mount_selection {
     display: flex;
     width: 70vw;
     height: auto;
     margin: 20px;
     border-radius: 0.15rem;
   }
+
+  .select_mount_type_long_rectangle,
+.select_cassette_head_rail_long_rectangle,
+.select_lift_type_long_rectangle,
+.select_color_long_rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 33px;
+  border-radius: 2rem;
+  background: linear-gradient(to left, #dfdfdf, #dfdfdf, #dfdfdf, #cfcfcf, #dfdfdf);
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.ellipse_and_type {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin-left: 20px;
+}
+
+.ellipse_and_type_select_material {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 75vw;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin: 20px;
+  margin-left: 20px;
+}
   
 
   .step_1_inside_mount,
@@ -3133,7 +3127,7 @@ justify-content: space-evenly;
 .qty_group {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 90vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   gap: 10px;

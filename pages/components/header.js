@@ -69,6 +69,7 @@ function HeaderPiece() {
 
               </Image>
             </li>
+
           </ol>
 
           <div className={styles.header_middle_bar}>
@@ -121,15 +122,7 @@ function HeaderPiece() {
 
               <span className={styles.side_links} >
 
-                <div>
-                  <Image
-                    className={styles.add_to_cart}
-                    alt="add_to_cart"
-                    width={100}
-                    height={100}
-                    src={"/cart.png"}>
-                  </Image>
-                </div>
+
 
                 <div>
                   <Link className={styles.top_links_item}
@@ -151,145 +144,164 @@ function HeaderPiece() {
           </div>
 
           <ul className={styles.second_menu_bar_bottom}>
-          <span className={styles.bottom_bar}>
-            <li className={styles.second_menu_bar_item}>
-              <Link className={styles.header_link} href={"/"} > Home </Link>
-            </li>
-            <button
-              onClick={drop_the_menu}
-            >
+            <span className={styles.bottom_bar}>
               <li className={styles.second_menu_bar_item}>
-                <p> Zebra Blinds </p>
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
+                <Link className={styles.header_link} href={"/"} > Home </Link>
               </li>
-            </button>
-
-
-            <div className={styles.drop_down_wrapper}>
-
-              {handle_open_menu && (
-
-                <div className={styles.drop_down_menu}>
-                  <ul>
-                    <Link href={"/zebrablinds"}>
-                      <li className={styles.drop_down_menu_item}>
-                        Room Darkening
-                      </li>
-                    </Link>
-                    <li className={styles.drop_down_menu_item}>
-                      Light Filtering
-                    </li>
-                    <li className={styles.drop_down_menu_item}>
-                      Option 3
-                    </li>
-                    <li className={styles.drop_down_menu_item}>
-                      Option 4
-                    </li>
-                    <li className={styles.drop_down_menu_item}>
-                      Option 5
-                    </li>
-                  </ul>
-                </div>
-              )}
-
-            </div>
-
-
-            <button>
-              <li className={styles.second_menu_bar_item}>Shangrila Blinds
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
-              </li>
-            </button>
-
-
-            <button>
-              <li className={styles.second_menu_bar_item}>Roman Blinds
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
-              </li>
-            </button>
-
-
-            <button>
-              <li className={styles.second_menu_bar_item}>Roller Blinds
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
-              </li>
-            </button>
-
-
-            <li className={styles.second_menu_bar_item}>HoneyComb Blinds
-              <button>
-                <Image
-                  className={styles.chevron_top_menu}
-                  width={100}
-                  height={100}
-                  src={"/chevronwhite.png"}
-                  alt="chevron_top_menu">
-                </Image>
+              <button
+                onClick={drop_the_menu}
+              >
+                <li className={styles.second_menu_bar_item}>
+                  <p> Zebra Blinds </p>
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </li>
               </button>
-            </li>
-</span>
+
+
+              <div className={styles.drop_down_wrapper}>
+
+                {handle_open_menu && (
+
+                  <div className={styles.drop_down_menu}>
+                    <ul>
+                      <Link href={"/zebrablinds"}>
+                        <li className={styles.drop_down_menu_item}>
+                          Room Darkening
+                        </li>
+                      </Link>
+                      <li className={styles.drop_down_menu_item}>
+                        Light Filtering
+                      </li>
+                      <li className={styles.drop_down_menu_item}>
+                        Option 3
+                      </li>
+                      <li className={styles.drop_down_menu_item}>
+                        Option 4
+                      </li>
+                      <li className={styles.drop_down_menu_item}>
+                        Option 5
+                      </li>
+                    </ul>
+                  </div>
+                )}
+
+              </div>
+
+
+              <button>
+                <li className={styles.second_menu_bar_item}>Shangrila Blinds
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </li>
+              </button>
+
+
+              <button>
+                <li className={styles.second_menu_bar_item}>Roman Blinds
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </li>
+              </button>
+
+
+              <button>
+                <li className={styles.second_menu_bar_item}>Roller Blinds
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </li>
+              </button>
+
+
+              <li className={styles.second_menu_bar_item}>HoneyComb Blinds
+                <button>
+                  <Image
+                    className={styles.chevron_top_menu}
+                    width={100}
+                    height={100}
+                    src={"/chevronwhite.png"}
+                    alt="chevron_top_menu">
+                  </Image>
+                </button>
+              </li>
+            </span>
 
             <span className={styles.login_cms_group}>
-            {session ? (
-                  <>
-                    {/* Display user avatar and logout button if authenticated */}
-                    <li className={styles.avatar_and_tag}>
-                      <div>
-                        <button className={styles.button} onClick={() => signOut('google')()}>
-                          <p>Logout</p>
-                        </button>
-                      </div>
-                    </li>
-                    <li className={styles.avatar_and_tag}>
-                      <Link 
-                      href={"/CMSPanel"}
-                      className={styles.button_cms} >
-                        <p>Admin</p>
-                      </Link>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    {/* Display sign-in button if not authenticated */}
-                    <li className={styles.avatar_and_tag}>
-                      <button className={styles.button} onClick={() => signIn('google')()}>
-                        <p>Sign In</p>
+              <div className={styles.hamburger_icon}>
+                <span className={styles.hamburger_line}></span>
+                <span className={styles.hamburger_line}></span>
+                <span className={styles.hamburger_line}></span>
+
+
+              </div>
+              {session ? (
+                <>
+                  {/* Display user avatar and logout button if authenticated */}
+                  <li className={styles.avatar_and_tag}>
+                    <div>
+                      <button className={styles.button} onClick={() => signOut('google')()}>
+                        <p>Logout</p>
                       </button>
-                    </li>
-                    <li className={styles.avatar_and_tag}>
-                      <Link 
-                      href={"/CMSPanel"}
-                      className={styles.button_cms} >
-                        <p>Admin</p>
-                      </Link>
-                    </li>
-                    
-                  </>
-                )}
+                    </div>
+                  </li>
+                 
+                  <div>
+
+                    <div className={styles.add_to_cart_wrapper}>
+                    <Image
+                      className={styles.add_to_cart}
+                      alt="add_to_cart"
+                      width={100}
+                      height={100}
+                      src={"/cart.png"}>
+                    </Image>
+                    </div>
+                  </div>
+
+                </>
+              ) : (
+                <>
+                  {/* Display sign-in button if not authenticated */}
+                  <li className={styles.avatar_and_tag}>
+                    <button className={styles.button} onClick={() => signIn('google')()}>
+                      <p>Sign In</p>
+                    </button>
+                  </li>
+         
+                  <div>
+                  <div className={styles.add_to_cart_wrapper}>
+                    <Image
+                      className={styles.add_to_cart}
+                      alt="add_to_cart"
+                      width={100}
+                      height={100}
+                      src={"/cart.png"}>
+                    </Image>
+                    </div>
+                  </div>
+
+                </>
+              )}
             </span>
 
           </ul>
