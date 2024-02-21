@@ -58,7 +58,7 @@ function HeaderPiece() {
         <div className={styles.header_wrapper}>
 
 
-          <ol className={styles.header_promo_bar}>
+          <ol className={styles.header_top_promo_bar}>
             <li>
               <Image
                 src={"/factorydirectsavingsversion4.png"}
@@ -71,7 +71,7 @@ function HeaderPiece() {
             </li>
           </ol>
 
-          <div className={styles.header_top_bar}>
+          <div className={styles.header_middle_bar}>
 
             <div>
               <li className={styles.header_logo}>
@@ -150,7 +150,8 @@ function HeaderPiece() {
             </span>
           </div>
 
-          <ul className={styles.second_menu_bar}>
+          <ul className={styles.second_menu_bar_bottom}>
+          <span className={styles.bottom_bar}>
             <li className={styles.second_menu_bar_item}>
               <Link className={styles.header_link} href={"/"} > Home </Link>
             </li>
@@ -250,9 +251,9 @@ function HeaderPiece() {
                 </Image>
               </button>
             </li>
+</span>
 
-
-            <span className={styles.second_menu_bar_item}>
+            <span className={styles.login_cms_group}>
             {session ? (
                   <>
                     {/* Display user avatar and logout button if authenticated */}
