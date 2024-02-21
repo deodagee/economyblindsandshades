@@ -416,28 +416,7 @@ padding: 10px;
   display: none;
 }
 
-.first_chosen_inside_mount_selection_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  background-color: white;
-  width: 40vw;
-  height: auto;
-  border-color: black;
-  border-width: 3px;
-  padding: 20px;
 
-
-}
-
-.first_chosen_inside_mount_selection {
-  display: flex;
-  width: 30vw;
-  height: auto;
-  margin: 20px;
-  border-radius: 0.15rem;
-}
 
 .left_right_inside_mount {
   display: flex;
@@ -494,7 +473,7 @@ padding: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   border-color: grey;
-  width: 20vw;
+  width: max-content;
 }
 
 .step_1_inside_mount,
@@ -597,7 +576,7 @@ padding: 10px;
 
 
 
-.first_chosen_outside_mount_selection_wrapper {
+.first_chosen_outside_mount_selection_wrapper, .first_chosen_inside_mount_selection_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -611,13 +590,14 @@ padding: 10px;
 
 }
 
-.first_chosen_outside_mount_selection {
+.first_chosen_outside_mount_selection, .first_chosen_inside_mount_selection {
   display: flex;
   width: 30vw;
   height: auto;
   margin: 20px;
   border-radius: 0.15rem;
 }
+
 
 .left_right_outside_mount {
   display: flex;
@@ -797,7 +777,8 @@ padding: 10px;
 }
 
 .qty_group_part2 {
-  display: contents;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -2236,7 +2217,6 @@ justify-content: space-evenly;
 .materials_organized_div_wrapper {
   display: flex;
   flex-direction: column;
-  margin: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -2504,6 +2484,19 @@ justify-content: space-evenly;
   justify-content: flex-start;
   width: 24.5vw;
   gap: 10px;
+}
+
+.between_dates { 
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: center;
+  font-size: 10px;
+
+}
+
+.between_dates p { 
+  color: rgb(255, 42, 0);
 }
 
 
@@ -2879,6 +2872,9 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: column;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
+
   }
   
   .star_group {
@@ -2940,6 +2936,103 @@ justify-content: space-evenly;
     padding: 10px;
   }
 
+
+  .first_chosen_outside_mount_selection_wrapper, .first_chosen_inside_mount_selection_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: white;
+    width: 80vw;
+    height: auto;
+    border-color: black;
+    border-width: 3px;
+    padding: 20px;
+  
+  }
+  
+  .first_chosen_outside_mount_selection, .first_chosen_inside_mount_selection {
+    display: flex;
+    width: 70vw;
+    height: auto;
+    margin: 20px;
+    border-radius: 0.15rem;
+  }
+  
+
+  .step_1_inside_mount,
+.step_2_inside_mount,
+.step_3_inside_mount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 80vw;
+  height: auto;
+  padding: 10px;
+  background-color: rgb(235, 235, 235);
+}
+
+.step_tag {
+  width: 50px;
+  font-size: 12px;
+  display: flex;
+  background-color: black;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 0.24rem;
+  color: white;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.step_tag_description_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.step_tag_description {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  width: 250px;
+  background-color: rgb(249, 249, 249);
+  padding: 5px;
+  font-size: 11px;
+  color: black;
+}
+
+.step_tag_description_note {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  width: 35vw;
+  background-color: rgb(249, 249, 249);
+  padding: 5px;
+  font-size: 10px;
+  color: rgb(209, 0, 0);
+}
+
+.qty_group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty_group_part2 {
+  display: contents;
+}
   .bottom_portion_ruler_and_stuff_wrapper {
     display: flex;
     flex-direction: column;
@@ -2966,6 +3059,15 @@ justify-content: space-evenly;
     justify-content: center;
     gap: 20px;
 
+  }
+
+  .review_your_order_seperator_line {
+    display: flex;
+    height: 3px;
+    width: 80vw;
+    margin: 20px;
+    background-color: rgb(191, 191, 191);
+    border-radius: 0.56rem;
   }
 
   .inches_and_fractions_and_ruler_group {
@@ -3022,21 +3124,13 @@ justify-content: space-evenly;
     gap: 10px;
   }
   
-  .materials_organized_div {
-    font-size: 11px;
-    white-space: nowrap;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 50vw;
-    margin: 20px;
-  }
+
   
   .review_your_order_bg {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 90vw;
     height: max-content;
     border-width: 2px;
     background-color: rgb(241, 241, 241);
@@ -3045,6 +3139,49 @@ justify-content: space-evenly;
     border-width: 2px;
     border-color: rgb(217, 217, 217);
   }
+
+  .order_items_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: black;
+    width: 90vw;
+  }
+  .description_and_answer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    gap: 100px;
+    height: 70px;
+    width: 80vw;
+    background-color: rgb(223, 223, 223);
+    transition: 0.3s;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answers_answers, .answers_answers2, .answers_answers3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    gap: 0;
+    white-space: nowrap;
+  }
+  
+  .between_dates { 
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-self: center;
+    font-size: 10px;
+  }
+
+
 
 /* select lift type */
 
@@ -3193,6 +3330,7 @@ justify-content: space-evenly;
     justify-content: center;
     display: flex;
   }
+
   
   .materials_organized_div {
     font-size: 11px;
@@ -3200,8 +3338,18 @@ justify-content: space-evenly;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    width: max-content;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
+  }
+
+  .quantity_and_add_to_cart_group {
+    display: flex;
+    width: 90vw;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 0;
+    transform: scale(0.8);
   }
   
   }

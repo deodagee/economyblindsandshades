@@ -1898,7 +1898,7 @@ const ZebraBlinds = () => {
 
                                 </span>
                               </div>
-                            </div>npm
+                            </div>
                           </div>
 
                           <div className={styles.qty_group_part2}>
@@ -3380,12 +3380,15 @@ const ZebraBlinds = () => {
 
                     <div className={styles.answers_answers}>
 
+
+                      <div className={styles.between_dates}>
                       <p>Between</p>
                       <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
                       </div>
                       <p>and</p>
                       <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
                       </div>
+                    </div>
                     </div>
                   </div>
 
