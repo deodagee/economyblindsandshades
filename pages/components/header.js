@@ -232,22 +232,11 @@ function HeaderPiece() {
                   </Image>
               </li>
               </button>
-            </span>
 
-            <span className={styles.login_cms_group}>
-              <div className={styles.hamburger_icon}>
-                <span className={styles.hamburger_line}></span>
-                <span className={styles.hamburger_line}></span>
-                <span className={styles.hamburger_line}></span>
-
-
-              </div>
-
-
-              <div className={styles.sign_in_and_sign_out}>
+              <div className={styles.second_menu_bar_item}>
               {session ? (
                 <>
-                  <li className={styles.avatar_and_tag}>
+                  <li className={styles.sign_in_and_sign_out_buttons}>
                     <div>
                       <button className={styles.button} onClick={() => signOut('google')()}>
                         <p>Logout</p>
@@ -271,7 +260,7 @@ function HeaderPiece() {
                 </>
               ) : (
                 <>
-                  <li className={styles.avatar_and_tag}>
+                  <li className={styles.sign_in_and_sign_out_buttons}>
                     <button className={styles.button} onClick={() => signIn('google')()}>
                       <p>Sign In</p>
                     </button>
@@ -293,6 +282,19 @@ function HeaderPiece() {
               )}
               </div>
             </span>
+
+
+            <div className={styles.hamburger_icon}>
+                <span className={styles.hamburger_line}></span>
+                <span className={styles.hamburger_line}></span>
+                <span className={styles.hamburger_line}></span>
+
+
+              </div>
+
+
+
+
 
           </ul>
          </div>
