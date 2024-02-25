@@ -57,30 +57,19 @@ function HeaderPiece() {
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
 
-
-          <ol className={styles.header_top_promo_bar}>
-            <li>
-              <Image
-                src={"/factorydirectsavingsversion4.png"}
-                width={200}
-                height={200}
-                alt="header_top_image"
-                className={styles.header_top_image}>
-
-              </Image>
-            </li>
-
-          </ol>
-
-          <div className={styles.header_middle_bar}>
-
-            <div>
-              <li className={styles.header_logo}>
+<div className={styles.logo_and_header_1st_and_2nd_bar}>
+        <div className={styles.header_logo}>
+              <li className={styles.header_logo_wrapper}>
                 <Link href={'/'}>
                   <Image className={styles.logo_image} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
                 </Link>
               </li>
             </div>
+        <div className={styles.header_1st_and_2nd_bar}>
+          
+          <div className={styles.first_bar}>
+
+
 
             <div className={styles.icons_group}>
               <div className={styles.icon_and_text}>
@@ -143,8 +132,8 @@ function HeaderPiece() {
             </span>
           </div>
 
-          <ul className={styles.second_menu_bar_bottom}>
-            <span className={styles.bottom_bar}>
+          <ul className={styles.second_bar}>
+            <span className={styles.second_bar_wrapper}>
               <li className={styles.second_menu_bar_item}>
                 <Link className={styles.header_link} href={"/"} > Home </Link>
               </li>
@@ -232,9 +221,8 @@ function HeaderPiece() {
                 </li>
               </button>
 
-
+              <button>
               <li className={styles.second_menu_bar_item}>HoneyComb Blinds
-                <button>
                   <Image
                     className={styles.chevron_top_menu}
                     width={100}
@@ -242,8 +230,8 @@ function HeaderPiece() {
                     src={"/chevronwhite.png"}
                     alt="chevron_top_menu">
                   </Image>
-                </button>
               </li>
+              </button>
             </span>
 
             <span className={styles.login_cms_group}>
@@ -254,9 +242,11 @@ function HeaderPiece() {
 
 
               </div>
+
+
+              <div className={styles.sign_in_and_sign_out}>
               {session ? (
                 <>
-                  {/* Display user avatar and logout button if authenticated */}
                   <li className={styles.avatar_and_tag}>
                     <div>
                       <button className={styles.button} onClick={() => signOut('google')()}>
@@ -281,7 +271,6 @@ function HeaderPiece() {
                 </>
               ) : (
                 <>
-                  {/* Display sign-in button if not authenticated */}
                   <li className={styles.avatar_and_tag}>
                     <button className={styles.button} onClick={() => signIn('google')()}>
                       <p>Sign In</p>
@@ -302,13 +291,27 @@ function HeaderPiece() {
 
                 </>
               )}
+              </div>
             </span>
 
           </ul>
+         </div>
+
+         </div>
+         <ol className={styles.header_promo_bar}>
+            <li>
+              <Image
+                src={"/factorydirectsavingsversion4.png"}
+                width={200}
+                height={200}
+                alt="header_top_image"
+                className={styles.promo_image}>
+
+              </Image>
+            </li>
+
+          </ol>
         </div>
-
-
-
 
       </div>
 
