@@ -301,11 +301,11 @@ const ZebraBlinds = () => {
   const Top_Head_Rail_Choices_Materialskey2 = {
 
     TopRailList2: [
-      { key2: 'whitetag2', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum ' },
-      { key2: 'greytag2', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum ' },
-      { key2: 'blacktag2', src: '/Ovals/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black - Aluminum ' },
-      { key2: 'browntag2', src: '/Ovals/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown - Aluminum ' },
-      { key2: 'beigetag2', src: '/Ovals/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige - Aluminum ' },
+      { key2: 'whitetag2', src: '/Ovals/SquareTopCassetteAluminum/WhiteSquareTopCassetteAluminum.jpg', label: 'White - Aluminum Squared ' },
+      { key2: 'greytag2', src: '/Ovals/SquareTopCassetteAluminum/GreySquareTopCassetteAluminum.jpg', label: 'Grey - Aluminum Squared ' },
+      { key2: 'blacktag2', src: '/Ovals/SquareTopCassetteAluminum/BlackSquareTopCassetteAluminum.jpg', label: 'Black - Aluminum Squared ' },
+      { key2: 'browntag2', src: '/Ovals/SquareTopCassetteAluminum/BrownSquareTopCassetteAluminum.jpg', label: 'Brown - Aluminum Squared ' },
+      { key2: 'beigetag2', src: '/Ovals/SquareTopCassetteAluminum/BeigeSquareTopCassetteAluminum.jpg', label: 'Beige - Aluminum Squared ' },
     ],
   };
 
