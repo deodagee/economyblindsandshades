@@ -72,6 +72,7 @@ function HeaderPiece() {
 
 
             <div className={styles.icons_group}>
+
               <div className={styles.icon_and_text}>
                 <Image
                   className={styles.icons_for_top}
@@ -109,9 +110,7 @@ function HeaderPiece() {
 
             <span className={styles.links_for_top_wrapper}>
 
-              <span className={styles.side_links} >
-
-
+              <span className={styles.icon_and_text} >
 
                 <div>
                   <Link className={styles.top_links_item}
@@ -134,9 +133,11 @@ function HeaderPiece() {
 
           <ul className={styles.second_bar}>
             <span className={styles.second_bar_wrapper}>
+
               <li className={styles.second_menu_bar_item}>
                 <Link className={styles.header_link} href={"/"} > Home </Link>
               </li>
+
               <button
                 onClick={drop_the_menu}
               >
@@ -158,26 +159,16 @@ function HeaderPiece() {
                 {handle_open_menu && (
 
                   <div className={styles.drop_down_menu}>
+                    
                     <ul>
                       <Link href={"/zebrablinds"}>
                         <li className={styles.drop_down_menu_item}>
                           Room Darkening
                         </li>
                       </Link>
-                      <li className={styles.drop_down_menu_item}>
-                        Light Filtering
-                      </li>
-                      <li className={styles.drop_down_menu_item}>
-                        Option 3
-                      </li>
-                      <li className={styles.drop_down_menu_item}>
-                        Option 4
-                      </li>
-                      <li className={styles.drop_down_menu_item}>
-                        Option 5
-                      </li>
                     </ul>
                   </div>
+                  
                 )}
 
               </div>
@@ -233,7 +224,7 @@ function HeaderPiece() {
               </li>
               </button>
 
-              <div className={styles.second_menu_bar_item}>
+              <div className={styles.second_menu_bar_item2}>
               {session ? (
                 <>
                   <li className={styles.sign_in_and_sign_out_buttons}>

@@ -656,7 +656,7 @@ const ZebraBlinds = () => {
         <span className={styles.page_wrapper}>
 
           <ol className={`${styles.left_half_of_page} ${showFooter ? styles.scaleDown : ''}`}>
-            <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
+            =             <div className={`${styles.left_half_of_page_wrapper} ${showLeftHalf ? styles.imagevisible : styles.imagehidden}`}>
 
               <div className={styles.sliding_gallery_component}>
 
@@ -760,2687 +760,2690 @@ const ZebraBlinds = () => {
           <ol className={styles.right_half}>
             <span className={styles.right_half_wrapper}>
 
-            <div className={styles.right_half_top}>
+              <div className={styles.right_half_top}>
 
-              <div className={styles.top_title_area}>
-                <span>
-                  <h1 className={styles.product_title_styles}>
-                    {productName1}
-                  </h1>
-                  <h1 className={styles.product_lightening_styles}>
-                    {productName2}
-                  </h1>
-                </span>
-              </div>
+                <div className={styles.top_title_area}>
+                  <span>
+                    <h1 className={styles.product_title_styles}>
+                      {productName1}
+                    </h1>
+                    <h1 className={styles.product_lightening_styles}>
+                      {productName2}
+                    </h1>
+                  </span>
+                </div>
 
-              <div className={styles.star_group}>
-                <span className={styles.star_group_wrapper}>
-                <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
-                <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
-                <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
-                <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
-                <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
-                </span>
-              </div>
-
-
+                <div className={styles.star_group}>
+                  <span className={styles.star_group_wrapper}>
+                    <Image alt="star" width={100} height={100} className={styles.star_6} src="/star.png" />
+                    <Image alt="star" width={100} height={100} className={styles.star_7} src="/star.png" />
+                    <Image alt="star" width={100} height={100} className={styles.star_8} src="/star.png" />
+                    <Image alt="star" width={100} height={100} className={styles.star_9} src="/star.png" />
+                    <Image alt="star" width={100} height={100} className={styles.star_10} src="/star.png" />
+                  </span>
+                </div>
 
 
-              <div
-                className={styles.a_distinctive_look_that}
-              >
-                A distinctive look that makes a statement, this revolutionary sheer shade
-                adds personality to any room. These zebra shades are made with two pieces
-                of fabric, which both have alternating panels/bands.
-              </div>
-            </div>
 
 
-            <div className={styles.top_divider_line}></div>
-
-            <div className={styles.inside_mount_and_outside_mount_whole_wrapper}>
-
-              <span className={styles.inside_mount_and_outside_mount_group_titles_wrapper}>
-                <div className={styles.select_mount_type_long_rectangle}
+                <div
+                  className={styles.a_distinctive_look_that}
                 >
-                  <div className={styles.select_mount_type_short_rectangle}>
+                  A distinctive look that makes a statement, this revolutionary sheer shade
+                  adds personality to any room. These zebra shades are made with two pieces
+                  of fabric, which both have alternating panels/bands.
+                </div>
+              </div>
+
+
+              <div className={styles.top_divider_line}></div>
+
+              <div className={styles.inside_mount_and_outside_mount_whole_wrapper}>
+
+                <span className={styles.inside_mount_and_outside_mount_group_titles_wrapper}>
+                  <div className={styles.select_mount_type_long_rectangle}
+                  >
+                    <div className={styles.select_mount_type_short_rectangle}>
+                      <Image
+                        className={styles.iconforselect_mount_type}
+                        alt="iconforselectcolor"
+                        width={100}
+                        height={100}
+                        src={"/chevronleft.png"}>
+                      </Image>
+                      <div className={styles.select_mount_type_group_title}>
+                        <span className={styles.select_mount_type_group_title_tag}>1</span>
+                        Choose Your Mount Type</div>
+                    </div>
+                  </div>
+                  <div className={styles.ellipse_and_type}>
+                    <div
+                      className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
+                      onClick={() => handleClickInside_And_Outside_Ellipses(1)}
+                    >
+                    </div>
+                    <div className={styles.inside_mount_choice}>Inside Mount</div>
+
+                    <div
+                      className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
+                      onClick={() => handleClickInside_And_Outside_Ellipses(2)}
+                    >
+                    </div>
+                    <div className={styles.outside_mount_choice}>Outside Mount</div>
+                  </div>
+
+                </span>
+
+
+
+                <div className={styles.inside_mount_group_wrapper}>
+
+                  <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
+
+                    <span className={styles.first_chosen_inside_mount_selection_wrapper}>
+                      <Image
+                        alt="first chosen image"
+                        width={500}
+                        src={"/insidemountimage.png"}
+                        height={500}
+                        className={styles.first_chosen_inside_mount_selection}>
+
+                      </Image>
+                    </span>
+
+                    <span className={styles.left_right_inside_mount}>
+
+
+                      <span className={styles.left_inside_mount}>
+
+                        <div className={styles.inside_mount_group_left_side}>
+
+                          <span className={styles.mount_measurement_instructions_wrapper}>
+                            <div className={styles.mount_measurement_instructions}>
+                              <p className={styles.measurement_instructions_title}>
+                                Measurement Instructions:
+                              </p>
+                            </div>
+
+                            <div
+                              className={styles.step_1_inside_mount}
+                            >
+                              <p className={styles.step_tag}> Step 1:</p>
+                              <span className={styles.step_tag_description_wrapper}>
+                                <p className={styles.step_tag_description}>
+                                  Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
+                                  (If You Do Not Have 3” Ledge Follow Outside Mount Process).
+                                </p>
+                              </span>
+                            </div>
+
+                            <div
+                              className={styles.step_2_inside_mount}>
+                              <p className={styles.step_tag}>  Step 2:</p>
+                              <span className={styles.step_tag_description_wrapper}>
+                                <p className={styles.step_tag_description}>
+                                  Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
+                                  (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
+                                </p>
+                              </span>
+                            </div>
+
+
+                            <div
+                              className={styles.step_3_inside_mount}
+                            >
+                              <p className={styles.step_tag}> Step 3: </p>
+                              <span className={styles.step_tag_description_wrapper}>
+                                <p className={styles.step_tag_description}>
+                                  Vertical Direction (Height) Measure Inside Window Frame Centre.
+                                  (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                </p>
+                              </span>
+
+                            </div>
+                          </span>
+                        </div>
+                      </span>
+
+
+                      <span className={styles.right_inside_mount}>
+                        <div className={styles.inside_mount_group_right_side}>
+                          <Image alt="image" width={400} height={400} className={styles.inside_mount_image} src="/insidemount.png" />
+                        </div>
+                      </span>
+                    </span>
+
+
+
+                    <div className={styles.enter_size_inside_mount_group}>
+                      <div>
+                        <div className={styles.step_1_wrapper}>
+
+                          <div className={styles.qty_group}>
+                            <div className={styles.qty_group_part1}>
+                              <div className={styles.quantity_title}>QUANTITY</div>
+                              <div className={styles.quantity_rectangle_and_numbers}>
+
+                                <div className={styles.quantity_rectangle}>
+                                  <div className={styles.qty}>QTY</div>
+                                  <div className={styles.qty_number}>1</div>
+                                </div>
+
+                                <div>
+                                  <span>
+                                    <div className={styles.quantity_is_always_1_wrapper}>
+                                      <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                    </div>
+
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div className={styles.qty_group_part2}>
+                              <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                            </div>
+                          </div>
+
+                          <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
+                            <div className={styles.select_your_width_and_height}>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
+
+
+                            <div className={styles.bottom_portion_ruler_and_stuff}>
+
+                              <div className={styles.inches_and_fractions_and_ruler_group}>
+                                <div className={styles.width_inside_mount_sub_title}>
+                                  CHOOSE WIDTH:
+                                </div>
+                                <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                  <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                    <div className={styles.enter_inches_group_wrapper}>
+                                      <div className={styles.inches_subtitle}
+                                      >
+                                        <p>INCHES</p>
+                                      </div>
+
+                                      <div className={styles.inches_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
+                                          {selectedInchesVisibleWidth ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesWidth, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
+                                                  className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
+                                                >
+                                                  {inchesWidth}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
+                                              {selectedInchesWidth}
+
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className={styles.enter_fractions_group_wrapper}>
+                                      <div className={styles.fractions_subtitle}
+                                      >
+                                        <p>FRACTIONS</p>
+                                      </div>
+                                      <div className={styles.fractions_scroller_wrapper}>
+
+                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleWidth ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
+                                                  className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                >
+                                                  {fractionWidth}
+                                                </div>
+                                              ))}
+                                            </span>
+
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
+                                              {selectedFractionsWidth}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div className={styles.ruler_div}>
+
+                                    < span className={styles.enter_size_boat_span} >
+                                      <div className={styles.ruler_for_boat_wrapper}>
+
+                                        <div className={styles.ruler_for_boat}>
+                                          <div className={styles.ruler_numbers_and_label}>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_0}></span>
+
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                  const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                  return (
+
+                                                    <>
+                                                      <div className={styles.selected_next_number}>
+                                                        <div
+                                                          key={index}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                          className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                        >
+                                                          {nextNumber}
+                                                        </div>
+                                                      </div>
+                                                    </>
+                                                  );
+                                                })}
+                                              </div>
+                                            </span>
+
+
+                                          </div>
+
+
+                                          <div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+
+                                  <div className={styles.selected_width_answer_top}>
+                                    Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                    {selectedFractionWIDTH && " Inches Long"}
+                                  </div>
+
+
+                                </div>
+                              </div>
+
+
+
+                              <div className={styles.inches_and_fractions_and_ruler_group}>
+                                <div className={styles.width_inside_mount_sub_title}>
+                                  CHOOSE HEIGHT:
+                                </div>
+                                <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                  <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                    <div className={styles.enter_inches_group_wrapper}>
+                                      <div className={styles.inches_subtitle}
+                                      >
+                                        <p>INCHES</p>
+                                      </div>
+
+                                      <div className={styles.inches_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
+                                          {selectedInchVisiblehEIGHT ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31","32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchHEIGHT, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
+                                                  className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                >
+                                                  {inchHEIGHT}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
+                                              {selectedInchesHeight}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className={styles.enter_fractions_group_wrapper}>
+                                      <div className={styles.fractions_subtitle}
+                                      >
+                                        <p>FRACTIONS</p>
+                                      </div>
+                                      <div className={styles.fractions_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleHeight ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
+                                                  className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
+                                                >
+                                                  {fractionHeight}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
+                                              {selectedFractionsHeight}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div className={styles.ruler_div}>
+
+                                    <span className={styles.enter_size_boat_span}>
+
+                                      <div className={styles.ruler_for_boat_wrapper}>
+
+                                        <div className={styles.ruler_for_boat}>
+
+                                          <div className={styles.ruler_numbers_and_label}>
+
+
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_0}></span>
+
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[selectedInchHEIGHT].map((selectedInch, index) => {
+                                                  const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
+
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                  return (
+
+                                                    <>
+                                                    
+                                                      <div className={styles.selected_next_number}>
+                                                        <div
+                                                          key={index}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                          className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                        >
+                                                          {nextNumber}
+                                                        </div>
+                                                      </div>
+                                                    </>
+                                                  );
+                                                })}
+                                              </div>
+                                            </span>
+
+                                          </div>
+                                          <div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+
+                                  <div className={styles.selected_width_answer_top}>
+                                    Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                    {selectedFractionHEIGHT && " Inches High"}
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.outside_mount_group_wrapper}>
+                  <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
+                    <span className={styles.first_chosen_outside_mount_selection_wrapper}>
+
+                      <Image
+                        alt="first chosen image"
+                        width={500}
+                        src={"/outsidemountimage.png"}
+                        height={500}
+                        className={styles.first_chosen_outside_mount_selection}>
+                      </Image>
+
+                    </span>
+
+                    <span className={styles.left_right_outside_mount}>
+
+                      <span className={styles.left_outside_mount}>
+
+                        <div className={styles.outside_mount_group_left_side}>
+                          <span className={styles.mount_measurement_instructions_wrapper}>
+
+                            <div className={styles.mount_measurement_instructions}>
+
+                              <p className={styles.measurement_instructions_title}>
+                                Measurement Instructions:
+                              </p>
+
+                              <div className={styles.step_1_outside_mount}>
+                                <p className={styles.step_tag}> Step 1: </p>
+                                <span className={styles.step_tag_description_wrapper}>
+                                  <p className={styles.step_tag_description}>
+                                    Horizontal Direction (Width) Measure Width Including Window Trim In The Center
+                                    (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.</p>
+                                  <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.</p>
+                                </span>
+                              </div>
+
+                              <div
+                                className={styles.step_2_outside_mount}
+                              >
+                                <p className={styles.step_tag}> Step 2: </p>
+                                <span className={styles.step_tag_description_wrapper}>
+                                  <p className={styles.step_tag_description}>
+                                    Vertical Direction (Height) Measure Height Including Window Trim In The Center
+                                    (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                  </p>
+                                  <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
+                                </span>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </span>
+
+                      <span className={styles.right_outside_mount}>
+                        <div className={styles.outside_mount_group_right_side}>
+                          <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
+                        </div>
+                      </span>
+                    </span>
+
+                    <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
+
+                    <div className={styles.enter_height_and_width_outside_mount_group}>
+                      <div>
+                        <div className={styles.step_1_wrapper}>
+
+                          <div className={styles.qty_group}>
+                            <div className={styles.qty_group_part1}>
+                              <div className={styles.quantity_title}>QUANTITY</div>
+                              <div className={styles.quantity_rectangle_and_numbers}>
+
+                                <div className={styles.quantity_rectangle}>
+                                  <div className={styles.qty}>QTY</div>
+                                  <div className={styles.qty_number}>1</div>
+                                </div>
+
+                                <div>
+                                  <span>
+                                    <div className={styles.quantity_is_always_1_wrapper}>
+                                      <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
+                                    </div>
+
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className={styles.qty_group_part2}>
+                              <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
+                            </div>
+
+                          </div>
+
+                          <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
+                            <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
+
+                            <div className={styles.bottom_portion_ruler_and_stuff}>
+
+                              <div className={styles.inches_and_fractions_and_ruler_group}>
+                                <div className={styles.width_inside_mount_sub_title}>
+                                  CHOOSE WIDTH:
+                                </div>
+                                <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                  <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                    <div className={styles.enter_inches_group_wrapper}>
+                                      <div className={styles.inches_subtitle}
+                                      >
+                                        <p>INCHES</p>
+                                      </div>
+
+                                      <div className={styles.inches_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
+                                          {selectedInchesVisibleWidth ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31","32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesWidth, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
+                                                  className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
+                                                >
+                                                  {inchesWidth}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
+                                              {selectedInchesWidth}
+
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className={styles.enter_fractions_group_wrapper}>
+                                      <div className={styles.fractions_subtitle}
+                                      >
+                                        <p>FRACTIONS</p>
+                                      </div>
+                                      <div className={styles.fractions_scroller_wrapper}>
+
+                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleWidth ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
+                                                  className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                >
+                                                  {fractionWidth}
+                                                </div>
+                                              ))}
+                                            </span>
+
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
+                                              {selectedFractionsWidth}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className={styles.ruler_div}>
+
+                                    < span className={styles.enter_size_boat_span} >
+                                      <div className={styles.ruler_for_boat_wrapper}>
+
+                                        <div className={styles.ruler_for_boat}>
+                                          <div className={styles.ruler_numbers_and_label}>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+
+
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}>
+                                              </span>
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                  const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31","32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                  return (
+
+
+                                                    <>
+                                                      <div className={styles.selected_next_number}>
+                                                        <div key={index}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
+                                                          className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                        >
+                                                          {nextNumber}
+                                                        </div>
+                                                      </div>
+                                                    </>
+                                                  );
+                                                })}
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+
+                                  <div className={styles.selected_width_answer_top}>
+                                    Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                    {selectedFractionWIDTH && " Inches Long"}
+                                  </div>
+
+
+                                </div>
+                              </div>
+
+
+
+                              <div className={styles.inches_and_fractions_and_ruler_group}>
+                                <div className={styles.width_inside_mount_sub_title}>
+                                  CHOOSE HEIGHT:
+                                </div>
+                                <div className={styles.enter_width_inside_mount_rectangle_1}>
+
+                                  <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
+                                    <div className={styles.enter_inches_group_wrapper}>
+                                      <div className={styles.inches_subtitle}
+                                      >
+                                        <p>INCHES</p>
+                                      </div>
+
+                                      <div className={styles.inches_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
+                                          {selectedInchVisiblehEIGHT ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31","32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchHEIGHT, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
+                                                  className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                >
+                                                  {inchHEIGHT}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
+                                              {selectedInchesHeight}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className={styles.enter_fractions_group_wrapper}>
+                                      <div className={styles.fractions_subtitle}
+                                      >
+                                        <p>FRACTIONS</p>
+                                      </div>
+                                      <div className={styles.fractions_scroller_wrapper}>
+                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleHeight ? (
+                                            <span className={styles.span_visibility_1}>
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
+                                                <div
+                                                  key={index}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
+                                                  className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
+                                                >
+                                                  {fractionHeight}
+                                                </div>
+                                              ))}
+                                            </span>
+                                          ) : (
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
+                                              {selectedFractionsHeight}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <div className={styles.ruler_div}>
+
+                                    < span className={styles.enter_size_boat_span} >
+                                      <div className={styles.ruler_for_boat_wrapper}>
+
+                                        <div className={styles.ruler_for_boat}>
+                                          <div className={styles.ruler_numbers_and_label}>
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_3}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_1}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_2}>
+                                              </span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+                                                {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+                                                ))}
+                                              </div>
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_3}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_2}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+
+                                            <span className={styles.ruler_line_group}>
+
+                                              <span className={styles.line_1}></span>
+
+                                              <div className={styles.ruler_line_number_fractions}>
+
+                                                {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
+
+                                                  <div
+                                                    key={index}
+                                                    onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                  >
+                                                    {rulerNumberWidthAndHeightInsideMount}
+                                                  </div>
+
+                                                ))}
+
+                                              </div>
+
+                                            </span>
+
+
+
+
+
+
+                                            <span className={styles.ruler_line_group}>
+                                              <span className={styles.line_0}></span>
+                                              <div className={styles.ruler_line_number_inches}>
+                                                {[selectedInchHEIGHT].map((selectedInch, index) => {
+                                                  const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
+                                                  return (
+                                                    <>
+                                                      <div className={styles.selected_next_number}>
+                                                        <div key={index}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
+                                                          className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                        >
+                                                          {nextNumber}
+                                                        </div>
+                                                      </div>
+                                                    </>
+                                                  );
+                                                })}
+                                              </div>
+                                            </span>
+
+                                          </div>
+                                          <div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+
+                                  <div className={styles.selected_width_answer_top}>
+                                    Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                    {selectedFractionHEIGHT && " Inches High"}
+                                  </div>
+
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div className={styles.review_your_order_seperator_line}></div>
+
+
+
+              <div className={styles.select_color_group}>
+
+
+                <div className={styles.select_color_long_rectangle}
+                >
+                  <div className={styles.select_color_short_rectangle}>
                     <Image
-                      className={styles.iconforselect_mount_type}
+                      className={styles.iconforselectcolor}
                       alt="iconforselectcolor"
                       width={100}
                       height={100}
                       src={"/chevronleft.png"}>
                     </Image>
-                    <div className={styles.select_mount_type_group_title}>
-                      <span className={styles.select_mount_type_group_title_tag}>1</span>
-                      Choose Your Mount Type</div>
+                    <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2 </span> Select Color / Material</div>
                   </div>
                 </div>
-                <div className={styles.ellipse_and_type}>
+
+                <div className={styles.ellipse_and_type_select_material}>
+                  <div className={styles.select_color_subtitle}> Select Material</div>
+                  <div>Click On A Color To Choose And Add</div>
+                </div>
+
+                <div className={styles.selectColorImageCollection}>
+                  {Object.keys(colorData).map((color) => (
+                    <div key={color} className={styles[color.toLowerCase()]}>
+                      <p className={styles.color_section_title}>{color}</p>
+                      {renderColorList(colorData[color])}
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+
+              <div className={styles.review_your_order_seperator_line}></div>
+
+              <div className={styles.select_lift_type_group}>
+                <span className={styles.titled_step_combo}>
+
                   <div
-                    className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                    onClick={() => handleClickInside_And_Outside_Ellipses(1)}
+                    className={styles.select_lift_type_long_rectangle}
                   >
-                  </div>
-                  <div className={styles.inside_mount_choice}>Inside Mount</div>
-
-                  <div
-                    className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                    onClick={() => handleClickInside_And_Outside_Ellipses(2)}
-                  >
-                  </div>
-                  <div className={styles.outside_mount_choice}>Outside Mount</div>
-                </div>
-
-              </span>
-
-
-
-              <div className={styles.inside_mount_group_wrapper}>
-
-                <div className={`${styles.inside_mount_group} ${inside_mount_group_visible ? styles.visible_inside_mount : styles.invisible_inside_mount}`}>
-
-                  <span className={styles.first_chosen_inside_mount_selection_wrapper}>
-                    <Image
-                      alt="first chosen image"
-                      width={500}
-                      src={"/insidemountimage.png"}
-                      height={500}
-                      className={styles.first_chosen_inside_mount_selection}>
-
-                    </Image>
-                  </span>
-
-                  <span className={styles.left_right_inside_mount}>
-
-
-                    <span className={styles.left_inside_mount}>
-
-                      <div className={styles.inside_mount_group_left_side}>
-
-                        <span className={styles.mount_measurement_instructions_wrapper}>
-                          <div className={styles.mount_measurement_instructions}>
-                            <p className={styles.measurement_instructions_title}>
-                              Measurement Instructions:
-                            </p>
-                          </div>
-
-                          <div
-                            className={styles.step_1_inside_mount}
-                          >
-                            <p className={styles.step_tag}> Step 1:</p>
-                            <span className={styles.step_tag_description_wrapper}>
-                              <p className={styles.step_tag_description}>
-                                Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
-                                (If You Do Not Have 3” Ledge Follow Outside Mount Process).
-                              </p>
-                            </span>
-                          </div>
-
-                          <div
-                            className={styles.step_2_inside_mount}>
-                            <p className={styles.step_tag}>  Step 2:</p>
-                            <span className={styles.step_tag_description_wrapper}>
-                              <p className={styles.step_tag_description}>
-                                Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
-                                (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
-                              </p>
-                            </span>
-                          </div>
-
-
-                          <div
-                            className={styles.step_3_inside_mount}
-                          >
-                            <p className={styles.step_tag}> Step 3: </p>
-                            <span className={styles.step_tag_description_wrapper}>
-                              <p className={styles.step_tag_description}>
-                                Vertical Direction (Height) Measure Inside Window Frame Centre.
-                                (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
-                              </p>
-                            </span>
-
-                          </div>
-                        </span>
-                      </div>
-                    </span>
-
-
-                    <span className={styles.right_inside_mount}>
-                      <div className={styles.inside_mount_group_right_side}>
-                        <Image alt="image" width={400} height={400} className={styles.inside_mount_image} src="/insidemount.png" />
-                      </div>
-                    </span>
-                  </span>
-
-
-
-                  <div className={styles.enter_size_inside_mount_group}>
-                    <div>
-                      <div className={styles.step_1_wrapper}>
-
-                        <div className={styles.qty_group}>
-                          <div className={styles.qty_group_part1}>
-                            <div className={styles.quantity_title}>QUANTITY</div>
-                            <div className={styles.quantity_rectangle_and_numbers}>
-
-                              <div className={styles.quantity_rectangle}>
-                                <div className={styles.qty}>QTY</div>
-                                <div className={styles.qty_number}>1</div>
-                              </div>
-
-                              <div>
-                                <span>
-                                  <div className={styles.quantity_is_always_1_wrapper}>
-                                    <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                  </div>
-
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className={styles.qty_group_part2}>
-                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                          </div>
-                        </div>
-
-                        <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
-                          <div className={styles.select_your_width_and_height}>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
-
-
-                          <div className={styles.bottom_portion_ruler_and_stuff}>
-
-                            <div className={styles.inches_and_fractions_and_ruler_group}>
-                              <div className={styles.width_inside_mount_sub_title}>
-                                CHOOSE WIDTH:
-                              </div>
-                              <div className={styles.enter_width_inside_mount_rectangle_1}>
-
-                                <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
-                                  <div className={styles.enter_inches_group_wrapper}>
-                                    <div className={styles.inches_subtitle}
-                                    >
-                                      <p>INCHES</p>
-                                    </div>
-
-                                    <div className={styles.inches_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                        {selectedInchesVisibleWidth ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
-                                              >
-                                                {inchesWidth}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                            {selectedInchesWidth}
-
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}
-                                    >
-                                      <p>FRACTIONS</p>
-                                    </div>
-                                    <div className={styles.fractions_scroller_wrapper}>
-
-                                      <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
-                                        {selectedFractionVisibleWidth ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
-                                              >
-                                                {fractionWidth}
-                                              </div>
-                                            ))}
-                                          </span>
-
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                            {selectedFractionsWidth}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                <div className={styles.ruler_div}>
-
-                                  < span className={styles.enter_size_boat_span} >
-                                    <div className={styles.ruler_for_boat_wrapper}>
-
-                                      <div className={styles.ruler_for_boat}>
-                                        <div className={styles.ruler_numbers_and_label}>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_0}></span>
-
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
-                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
-
-                                                return (
-
-                                                  <>
-                                                    <div className={styles.selected_next_number}>
-                                                      <div
-                                                        key={index}
-                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
-                                                      >
-                                                        {nextNumber}
-                                                      </div>
-                                                    </div>
-                                                  </>
-                                                );
-                                              })}
-                                            </div>
-                                          </span>
-
-
-                                        </div>
-
-
-                                        <div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </span>
-                                </div>
-
-                                <div className={styles.selected_width_answer_top}>
-                                  Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
-                                  {selectedFractionWIDTH && " Inches Long"}
-                                </div>
-
-
-                              </div>
-                            </div>
-
-
-
-                            <div className={styles.inches_and_fractions_and_ruler_group}>
-                              <div className={styles.width_inside_mount_sub_title}>
-                                CHOOSE HEIGHT:
-                              </div>
-                              <div className={styles.enter_width_inside_mount_rectangle_1}>
-
-                                <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
-                                  <div className={styles.enter_inches_group_wrapper}>
-                                    <div className={styles.inches_subtitle}
-                                    >
-                                      <p>INCHES</p>
-                                    </div>
-
-                                    <div className={styles.inches_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                        {selectedInchVisiblehEIGHT ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
-                                              >
-                                                {inchHEIGHT}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                            {selectedInchesHeight}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}
-                                    >
-                                      <p>FRACTIONS</p>
-                                    </div>
-                                    <div className={styles.fractions_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
-                                        {selectedFractionVisibleHeight ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
-                                                className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
-                                              >
-                                                {fractionHeight}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
-                                            {selectedFractionsHeight}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                <div className={styles.ruler_div}>
-
-                                  <span className={styles.enter_size_boat_span}>
-
-                                    <div className={styles.ruler_for_boat_wrapper}>
-
-                                      <div className={styles.ruler_for_boat}>
-
-                                        <div className={styles.ruler_numbers_and_label}>
-
-
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_0}></span>
-
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[selectedInchHEIGHT].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
-                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
-
-                                                return (
-
-                                                  <>
-                                                    <div className={styles.selected_next_number}>
-                                                      <div
-                                                        key={index}
-                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
-                                                      >
-                                                        {nextNumber}
-                                                      </div>
-                                                    </div>
-                                                  </>
-                                                );
-                                              })}
-                                            </div>
-                                          </span>
-
-                                        </div>
-                                        <div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </span>
-                                </div>
-
-                                <div className={styles.selected_width_answer_top}>
-                                  Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
-                                  {selectedFractionHEIGHT && " Inches High"}
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
+                    <div
+                      className={styles.select_lift_type_short_rectangle}
+                    >
+                      <Image
+                        className={styles.iconforselectlifttype}
+                        alt="iconforselectlifttype"
+                        width={100}
+                        height={100}
+                        src={"/chevronleft.png"}>
+                      </Image>
+                      <div className={styles.select_lift_type_group_title}>
+                        <span className={styles.select_lift_type_group_title_tag}>3</span>
+                        Select Lift Type
                       </div>
                     </div>
                   </div>
+                </span>
+
+                <div className={styles.select_lift_type_subtitle_wrapper}>
+                  <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
+                  <div>
+                    Select Wand, Cordless Or Motorized
+                  </div>
                 </div>
-              </div>
 
-              <div className={styles.outside_mount_group_wrapper}>
-                <div className={`${styles.outside_mount_group} ${outside_mount_group_visible ? styles.visible_outside_mount : styles.invisible_outside_mount}`}>
-                  <span className={styles.first_chosen_outside_mount_selection_wrapper}>
+                <div className={styles.select_chain_option1_wrapper}>
 
-                    <Image
-                      alt="first chosen image"
-                      width={500}
-                      src={"/outsidemountimage.png"}
-                      height={500}
-                      className={styles.first_chosen_outside_mount_selection}>
-                    </Image>
+                  <div className={styles.select_chain_option1_ellipse_and_options}>
+                    <div className={styles.select_chain_option1_ellipse_wrapper}>
+                      <span
+                        className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                        onClick={() => handleLiftFeatureEllipsess(1)}
+                      ></span>
+                    </div>
 
-                  </span>
+                    <div className={styles.select_chain_option1_options}>
+                      <div className={styles.wand_subtitle}>Wand</div>
+                      <div className={styles.options_price_seperator}></div>
+                      <div className={styles.free_subtitle}>Free</div>
 
-                  <span className={styles.left_right_outside_mount}>
-
-                    <span className={styles.left_outside_mount}>
-
-                      <div className={styles.outside_mount_group_left_side}>
-                        <span className={styles.mount_measurement_instructions_wrapper}>
-
-                          <div className={styles.mount_measurement_instructions}>
-
-                            <p className={styles.measurement_instructions_title}>
-                              Measurement Instructions:
-                            </p>
-
-                            <div className={styles.step_1_outside_mount}>
-                              <p className={styles.step_tag}> Step 1: </p>
-                              <span className={styles.step_tag_description_wrapper}>
-                                <p className={styles.step_tag_description}>
-                                  Horizontal Direction (Width) Measure Width Including Window Trim In The Center
-                                  (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.</p>
-                                <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.</p>
-                              </span>
-                            </div>
-
-                            <div
-                              className={styles.step_2_outside_mount}
-                            >
-                              <p className={styles.step_tag}> Step 2: </p>
-                              <span className={styles.step_tag_description_wrapper}>
-                                <p className={styles.step_tag_description}>
-                                  Vertical Direction (Height) Measure Height Including Window Trim In The Center
-                                  (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
-                                </p>
-                                <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
-                              </span>
-                            </div>
+                      <div className={styles.wand_extra_buttons}>
+                        <button>
+                          <div className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
+                            onClick={() => handleLiftFeatureEllipsess(4)}>
+                            Left
                           </div>
-                        </span>
+                        </button>
+
+                        <button>
+
+                          <div className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
+                            onClick={() => handleLiftFeatureEllipsess(5)}>
+                            Right
+                          </div>
+                        </button>
+
                       </div>
-                    </span>
-
-                    <span className={styles.right_outside_mount}>
-                      <div className={styles.outside_mount_group_right_side}>
-                        <Image alt="image" width={400} height={400} className={styles.outsidemount_Image} src="/outsidemount.png" />
-                      </div>
-                    </span>
-                  </span>
-
-                  <div className={styles.enter_size_outside_mount_title}>Choose Outside Mount Window Size:</div>
-
-                  <div className={styles.enter_height_and_width_outside_mount_group}>
-                    <div>
-                      <div className={styles.step_1_wrapper}>
-
-                        <div className={styles.qty_group}>
-                          <div className={styles.qty_group_part1}>
-                            <div className={styles.quantity_title}>QUANTITY</div>
-                            <div className={styles.quantity_rectangle_and_numbers}>
-
-                              <div className={styles.quantity_rectangle}>
-                                <div className={styles.qty}>QTY</div>
-                                <div className={styles.qty_number}>1</div>
-                              </div>
-
-                              <div>
-                                <span>
-                                  <div className={styles.quantity_is_always_1_wrapper}>
-                                    <div className={styles.quantity_is_always_1}>Quantity is always 1</div>
-                                  </div>
-
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className={styles.qty_group_part2}>
-                            <div className={styles.quantity_is_always_1_note}>Not all Windows are identical in size – Each window will need to be measured & entered individually to avoid errors.</div>
-                          </div>
-
+                    </div>
+                    <div className={styles.wand_option_image_placeholder}>
+                      {showImageleft && (
+                        <div className={styles.showleftchain_wrapper}>
+                          <Image
+                            width={400}
+                            height={400}
+                            className={styles.show_left_chain_image_render}
+                            alt="showleftchain"
+                            src="/leftside.png"
+                          />
                         </div>
-
-                        <div className={styles.bottom_portion_ruler_and_stuff_wrapper}>
-                          <div>Select Your Width And Height. Double Check To Make Sure the Measurments are correct for the Width And the Height</div>
-
-                          <div className={styles.bottom_portion_ruler_and_stuff}>
-
-                            <div className={styles.inches_and_fractions_and_ruler_group}>
-                              <div className={styles.width_inside_mount_sub_title}>
-                                CHOOSE WIDTH:
-                              </div>
-                              <div className={styles.enter_width_inside_mount_rectangle_1}>
-
-                                <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
-                                  <div className={styles.enter_inches_group_wrapper}>
-                                    <div className={styles.inches_subtitle}
-                                    >
-                                      <p>INCHES</p>
-                                    </div>
-
-                                    <div className={styles.inches_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                        {selectedInchesVisibleWidth ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31",].map((inchesWidth, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
-                                              >
-                                                {inchesWidth}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                            {selectedInchesWidth}
-
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}
-                                    >
-                                      <p>FRACTIONS</p>
-                                    </div>
-                                    <div className={styles.fractions_scroller_wrapper}>
-
-                                      <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
-                                        {selectedFractionVisibleWidth ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
-                                              >
-                                                {fractionWidth}
-                                              </div>
-                                            ))}
-                                          </span>
-
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                            {selectedFractionsWidth}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div className={styles.ruler_div}>
-
-                                  < span className={styles.enter_size_boat_span} >
-                                    <div className={styles.ruler_for_boat_wrapper}>
-
-                                      <div className={styles.ruler_for_boat}>
-                                        <div className={styles.ruler_numbers_and_label}>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-
-
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}>
-                                            </span>
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchWIDTH].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
-                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
-
-                                                return (
-
-
-                                                  <>
-                                                    <div className={styles.selected_next_number}>
-                                                      <div key={index}
-                                                        onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                        className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
-                                                      >
-                                                        {nextNumber}
-                                                      </div>
-                                                    </div>
-                                                  </>
-                                                );
-                                              })}
-                                            </div>
-                                          </span>
-                                        </div>
-                                        <div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </span>
-                                </div>
-
-                                <div className={styles.selected_width_answer_top}>
-                                  Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
-                                  {selectedFractionWIDTH && " Inches Long"}
-                                </div>
-
-
-                              </div>
-                            </div>
-
-
-
-                            <div className={styles.inches_and_fractions_and_ruler_group}>
-                              <div className={styles.width_inside_mount_sub_title}>
-                                CHOOSE HEIGHT:
-                              </div>
-                              <div className={styles.enter_width_inside_mount_rectangle_1}>
-
-                                <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
-                                  <div className={styles.enter_inches_group_wrapper}>
-                                    <div className={styles.inches_subtitle}
-                                    >
-                                      <p>INCHES</p>
-                                    </div>
-
-                                    <div className={styles.inches_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                        {selectedInchVisiblehEIGHT ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"].map((inchHEIGHT, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
-                                              >
-                                                {inchHEIGHT}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                            {selectedInchesHeight}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div className={styles.enter_fractions_group_wrapper}>
-                                    <div className={styles.fractions_subtitle}
-                                    >
-                                      <p>FRACTIONS</p>
-                                    </div>
-                                    <div className={styles.fractions_scroller_wrapper}>
-                                      <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
-                                        {selectedFractionVisibleHeight ? (
-                                          <span className={styles.span_visibility_1}>
-                                            {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
-                                              <div
-                                                key={index}
-                                                onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
-                                                className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
-                                              >
-                                                {fractionHeight}
-                                              </div>
-                                            ))}
-                                          </span>
-                                        ) : (
-                                          <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
-                                            {selectedFractionsHeight}
-                                          </span>
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                <div className={styles.ruler_div}>
-
-                                  < span className={styles.enter_size_boat_span} >
-                                    <div className={styles.ruler_for_boat_wrapper}>
-
-                                      <div className={styles.ruler_for_boat}>
-                                        <div className={styles.ruler_numbers_and_label}>
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_3}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["3/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_1}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_2}>
-                                            </span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-                                              {["1/2"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-                                              ))}
-                                            </div>
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_3}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["5/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["3/4"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_2}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {["7/8"].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-
-                                          <span className={styles.ruler_line_group}>
-
-                                            <span className={styles.line_1}></span>
-
-                                            <div className={styles.ruler_line_number_fractions}>
-
-                                              {[].map((rulerNumberWidthAndHeightInsideMount, index) => (
-
-                                                <div
-                                                  key={index}
-                                                  onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                  className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
-                                                >
-                                                  {rulerNumberWidthAndHeightInsideMount}
-                                                </div>
-
-                                              ))}
-
-                                            </div>
-
-                                          </span>
-
-
-
-
-
-
-                                          <span className={styles.ruler_line_group}>
-                                            <span className={styles.line_0}></span>
-                                            <div className={styles.ruler_line_number_inches}>
-                                              {[selectedInchHEIGHT].map((selectedInch, index) => {
-                                                const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-                                                const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
-                                                const nextNumber = yourArrayOfNumbers[nextNumberIndex];
-
-                                                return (
-                                                  <>
-                                                    <div className={styles.selected_next_number}>
-                                                      <div key={index}
-                                                        onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                        className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
-                                                      >
-                                                        {nextNumber}
-                                                      </div>
-                                                    </div>
-                                                  </>
-                                                );
-                                              })}
-                                            </div>
-                                          </span>
-
-                                        </div>
-                                        <div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </span>
-                                </div>
-
-                                <div className={styles.selected_width_answer_top}>
-                                  Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
-                                  {selectedFractionHEIGHT && " Inches High"}
-                                </div>
-
-                              </div>
-                            </div>
-
-                          </div>
+                      )}
+
+
+                      {showImageright && (
+                        <div className={styles.showrightchain_wrapper}>
+                          <Image
+                            width={400}
+                            height={400}
+                            className={styles.show_left_chain_image_render}
+                            alt="showleftchain"
+                            src="/rightside.png"
+                          />
                         </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
 
-                      </div>
+
+                <div className={styles.select_chain_option2_wrapper}>
+                  <div className={styles.select_chain_option2_ellipse_and_options}>
+                    <div className={styles.select_chain_option2_ellipse_wrapper}>
+                      <span
+                        className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
+                        onClick={() => handleLiftFeatureEllipsess(2)}
+                      ></span>
+                    </div>
+
+
+                    <div className={styles.select_chain_option2_options}>
+                      <div className={styles.cord_less_subtitle}>Cord Less</div>
+                      <div className={styles.options_price_seperator}></div>
+                      <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
+                    </div>
+
+                    <div className={styles.cord_less_option_image_placeholder}>
+                      <Image
+                        width={400}
+                        height={400}
+                        alt="showrightchain"
+                        src="/cordlesslift.png"
+                      />
                     </div>
 
                   </div>
                 </div>
-              </div>
-            </div>
 
 
-
-            <div className={styles.review_your_order_seperator_line}></div>
-
-
-
-            <div className={styles.select_color_group}>
-
-
-              <div className={styles.select_color_long_rectangle}
-              >
-                <div className={styles.select_color_short_rectangle}>
-                  <Image
-                    className={styles.iconforselectcolor}
-                    alt="iconforselectcolor"
-                    width={100}
-                    height={100}
-                    src={"/chevronleft.png"}>
-                  </Image>
-                  <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2 </span> Select Color / Material</div>
-                </div>
-              </div>
-
-              <div className={styles.ellipse_and_type_select_material}>
-                <div className={styles.select_color_subtitle}> Select Material</div>
-                <div>Click On A Color To Choose And Add</div>
-              </div>
-
-              <div className={styles.selectColorImageCollection}>
-                {Object.keys(colorData).map((color) => (
-                  <div key={color} className={styles[color.toLowerCase()]}>
-                    <p className={styles.color_section_title}>{color}</p>
-                    {renderColorList(colorData[color])}
-                  </div>
-                ))}
-              </div>
-
-            </div>
-
-            <div className={styles.review_your_order_seperator_line}></div>
-
-            <div className={styles.select_lift_type_group}>
-              <span className={styles.titled_step_combo}>
-
-                <div
-                  className={styles.select_lift_type_long_rectangle}
-                >
-                  <div
-                    className={styles.select_lift_type_short_rectangle}
-                  >
-                    <Image
-                      className={styles.iconforselectlifttype}
-                      alt="iconforselectlifttype"
-                      width={100}
-                      height={100}
-                      src={"/chevronleft.png"}>
-                    </Image>
-                    <div className={styles.select_lift_type_group_title}>
-                      <span className={styles.select_lift_type_group_title_tag}>3</span>
-                      Select Lift Type
+                <div className={styles.select_chain_option3_wrapper}>
+                  <div className={styles.select_chain_option3_ellipse_and_options}>
+                    <div className={styles.select_chain_option3_ellipse_wrapper}>
+                      <span
+                        className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                          styles.active_wand_cordless_motorized : ''}`}
+                        onClick={() => handleLiftFeatureEllipsess(3)}
+                      ></span>
                     </div>
-                  </div>
-                </div>
-              </span>
 
-              <div className={styles.select_lift_type_subtitle_wrapper}>
-                <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
-                <div>
-                  Select Wand, Cordless Or Motorized
-                </div>
-              </div>
+                    <div className={styles.select_chain_option3_options}>
 
-              <div className={styles.select_chain_option1_wrapper}>
-
-                <div className={styles.select_chain_option1_ellipse_and_options}>
-                  <div className={styles.select_chain_option1_ellipse_wrapper}>
-                    <span
-                      className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                      onClick={() => handleLiftFeatureEllipsess(1)}
-                    ></span>
-                  </div>
-
-                  <div className={styles.select_chain_option1_options}>
-                    <div className={styles.wand_subtitle}>Wand</div>
-                    <div className={styles.options_price_seperator}></div>
-                    <div className={styles.free_subtitle}>Free</div>
-
-                    <div className={styles.wand_extra_buttons}>
-                      <button>
-                        <div className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
-                          onClick={() => handleLiftFeatureEllipsess(4)}>
-                          Left
-                        </div>
-                      </button>
-
-                      <button>
-
-                        <div className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
-                          onClick={() => handleLiftFeatureEllipsess(5)}>
-                          Right
-                        </div>
-                      </button>
-
+                      <div className={styles.motorized_subtitle}>Motorized</div>
+                      <div className={styles.options_price_seperator}></div>
+                      <div className={styles.motorized_price_value_subtitle}>$100.00</div>
                     </div>
-                  </div>
-                  <div className={styles.wand_option_image_placeholder}>
-                    {showImageleft && (
-                      <div className={styles.showleftchain_wrapper}>
-                        <Image
-                          width={400}
-                          height={400}
-                          className={styles.show_left_chain_image_render}
-                          alt="showleftchain"
-                          src="/leftside.png"
-                        />
-                      </div>
-                    )}
 
+                    <div className={styles.motorized_option_image_placeholder}>
+                      <Image
+                        width={400}
+                        height={400}
+                        alt="showrightchain"
+                        src="/motorizedlift.png"
+                      />
+                    </div>
 
-                    {showImageright && (
-                      <div className={styles.showrightchain_wrapper}>
-                        <Image
-                          width={400}
-                          height={400}
-                          className={styles.show_left_chain_image_render}
-                          alt="showleftchain"
-                          src="/rightside.png"
-                        />
-                      </div>
-                    )}
                   </div>
                 </div>
+
+
               </div>
 
 
-              <div className={styles.select_chain_option2_wrapper}>
-                <div className={styles.select_chain_option2_ellipse_and_options}>
-                  <div className={styles.select_chain_option2_ellipse_wrapper}>
-                    <span
-                      className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
-                      onClick={() => handleLiftFeatureEllipsess(2)}
-                    ></span>
-                  </div>
 
-
-                  <div className={styles.select_chain_option2_options}>
-                    <div className={styles.cord_less_subtitle}>Cord Less</div>
-                    <div className={styles.options_price_seperator}></div>
-                    <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
-                  </div>
-
-                  <div className={styles.cord_less_option_image_placeholder}>
-                    <Image
-                      width={400}
-                      height={400}
-                      alt="showrightchain"
-                      src="/cordlesslift.png"
-                    />
-                  </div>
-
-                </div>
-              </div>
-
-
-              <div className={styles.select_chain_option3_wrapper}>
-                <div className={styles.select_chain_option3_ellipse_and_options}>
-                  <div className={styles.select_chain_option3_ellipse_wrapper}>
-                    <span
-                      className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
-                        styles.active_wand_cordless_motorized : ''}`}
-                      onClick={() => handleLiftFeatureEllipsess(3)}
-                    ></span>
-                  </div>
-
-                  <div className={styles.select_chain_option3_options}>
-
-                    <div className={styles.motorized_subtitle}>Motorized</div>
-                    <div className={styles.options_price_seperator}></div>
-                    <div className={styles.motorized_price_value_subtitle}>$100.00</div>
-                  </div>
-
-                  <div className={styles.motorized_option_image_placeholder}>
-                    <Image
-                      width={400}
-                      height={400}
-                      alt="showrightchain"
-                      src="/motorizedlift.png"
-                    />
-                  </div>
-
-                </div>
-              </div>
-
-
-            </div>
-
-
-
-            <div>
               <div>
-                <div className={styles.select_head_rail_group}>
+                <div>
+                  <div className={styles.select_head_rail_group}>
 
-                  <span className={styles.titled_step_combo}>
-                    <div className={styles.select_cassette_head_rail_long_rectangle}
-                    >
-                      <div
-                        className={styles.select_cassette_head_rail_short_rectangle}
+                    <span className={styles.titled_step_combo}>
+                      <div className={styles.select_cassette_head_rail_long_rectangle}
                       >
-                        <Image
-                          className={styles.iconforselect_cassette_head_rail}
-                          alt="iconforselectcassetteheaerail"
-                          width={100}
-                          height={100}
-                          src={"/chevronleft.png"}>
-                        </Image>
-                        <div className={styles.select_head_rail_group_title}>
-                          <span className={styles.select_head_rail_group_title_tag}>4</span> Top Rail
-                        </div>
-
-
-                      </div>
-                    </div>
-                  </span>
-
-
-                  <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
-
-                    <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
-
-
-                      <div className={styles.top_section}>
-                        <div className={styles.pick_bottom_rail_color_subtitle0}>Top Rail Casettes:</div>
-
-                        <div className={styles.skip_top_section}>
-                          <div className={styles.ellipse_and_title_head_rail}>
-                            <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                              onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
-                            ></div>
-                            <div className={styles.skip_head_rail_color}>Skip Cassette Type
-                            </div>
-                          </div>
-                        </div>
-
-                        <div>
-                          <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}>
-                            <div className={styles.gobacktochoices}>
-                              <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
-                              ><p>Go Back To Choices
-                                </p></div>
-                            </div>
+                        <div
+                          className={styles.select_cassette_head_rail_short_rectangle}
+                        >
+                          <Image
+                            className={styles.iconforselect_cassette_head_rail}
+                            alt="iconforselectcassetteheaerail"
+                            width={100}
+                            height={100}
+                            src={"/chevronleft.png"}>
+                          </Image>
+                          <div className={styles.select_head_rail_group_title}>
+                            <span className={styles.select_head_rail_group_title_tag}>4</span> Top Rail
                           </div>
 
 
-                          <div className={styles.materials_organized_div_wrapper}>
-                            {[
-                              { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1, type: 'Top' },
-                              { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2, type: 'Top' },
-                            ].map((choicesObj, index) => (
-                              <div key={index} className={styles.materials_organized_div}>
-                                {choicesObj.list.map((choice, choiceIndex) => (
-                                  <div
-                                    className={`${styles.materials_organized_div_image} ${(choicesObj.key === 'TopRailList1' && selectedImagesTop?.includes(choice.key1)) ||
-                                      (choicesObj.key === 'TopRailList2' && selectedImagesTop?.includes(choice.key2))
-                                      ? styles.selectedImage
-                                      : ''
-                                      }`}
-                                    key={choiceIndex}
-                                    onClick={() => {
-                                      if (choicesObj.key === 'TopRailList1') {
-                                        handleImageClickImagesTop1(choice.key1);
-                                      } else if (choicesObj.key === 'TopRailList2') {
-                                        handleImageClickImagesTop2(choice.key2);
-                                      }
-                                    }}
-                                  >
-
-                                    <div className={styles.railimage_wrapper}>
-                                      <Image
-                                        className={styles.railimage}
-                                        width={100}
-                                        height={100}
-                                        src={choice.src}
-                                        alt={choice.label} />
-                                    </div>
-                                    <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
-                                  </div>
-                                ))}
-                              </div>
-                            ))}
-                          </div>
                         </div>
-
-
                       </div>
-                    </div>
-                  </div>
-
-
-
-
-                  <div className={styles.pick_bottom_rail_color_wrapper}>
-
-                    <div className={styles.select_cassette_head_rail_long_rectangle}
-                    >
-                      <div
-                        className={styles.select_cassette_head_rail_short_rectangle}
-                      >
-                        <Image
-                          className={styles.iconforselect_cassette_head_rail}
-                          alt="iconforselectcassetteheaerail"
-                          width={100}
-                          height={100}
-                          src={"/chevronleft.png"}>
-                        </Image>
-                        <div className={styles.select_head_rail_group_title}>
-                          <span className={styles.select_head_rail_group_title_tag}>5</span> Bottom Rail
-                        </div>
-
-
-                      </div>
-                    </div>
+                    </span>
 
 
                     <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
                       <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
-                        <div className={styles.bottom_section}>
-                          <div className={styles.skip_bottom_section}>
-                            <div>
-                              <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}>
-                                <div className={styles.gobacktochoices}>
-                                  <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                    onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
-                                  >
-                                    <p>Go Back To Choices
-                                    </p>
-                                  </div>
-                                </div>
+
+                        <div className={styles.top_section}>
+                          <div className={styles.pick_bottom_rail_color_subtitle0}>Top Rail Casettes:</div>
+
+                          <div className={styles.skip_top_section}>
+                            <div className={styles.ellipse_and_title_head_rail}>
+                              <div className={`${styles.skip_head_rail_ellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
+                              ></div>
+                              <div className={styles.skip_head_rail_color}>Skip Cassette Type
                               </div>
-
-                              {!active_skip_bottom_rail_ellipse && (
-                                <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
-                                  <div className={styles.fabric_list_bottom_list1}>
-                                    <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
-                                    <p className={styles.sorryMessage}>First pick a selection from the TOP rail to select the appropriate BOTTOM rail.</p>
-
-                                    <div className={styles.materials_organized_div_wrapper}>
-                                      {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
-                                        <div key={index} className={styles.materials_organized_div}>
-                                          {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
-                                            <div
-                                              className={`${styles.materials_organized_div_image} 
-                                                ${selectedImagesBottom?.includes(choice.key3) ? styles.selectedImage : ''} 
-                                                ${clickedImageKeyBottom === choice.key3 ? styles.clickedImage : ''}`}
-                                              key={choice.key3}
-                                              onClick={() => handleBottomImageClick(choice.key3)}
-                                              // Allow selection only if key1 or key2 matches clickedImageKeyTop
-                                              style={{
-                                                pointerEvents: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 'auto' : 'none',
-                                                opacity: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 1 : 0.5,
-                                              }}
-                                            >
-
-                                              <div className={styles.railimage_wrapper}>
-                                                <Image
-                                                  className={styles.railimage}
-                                                  width={100}
-                                                  height={100}
-                                                  src={choice.src}
-                                                  alt={choice.label}
-                                                />
-
-                                              </div>
-                                              <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
-                                            </div>
-                                          ))}
-                                        </div>
-                                      ))}
-
-                                    </div>
-
-                                  </div>
-                                </div>
-                              )}
-
-
                             </div>
                           </div>
 
+                          <div>
+                            <div className={`${styles.skip_head_rail_image_placeholder_invisible} ${skip_head_rail_image_placeholder ? styles.skip_head_rail_image_placeholder_visible : ''}`}>
+                              <div className={styles.gobacktochoices}>
+                                <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                  onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
+                                ><p>Go Back To Choices
+                                  </p></div>
+                              </div>
+                            </div>
+
+
+                            <div className={styles.materials_organized_div_wrapper}>
+                              {[
+                                { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1, type: 'Top' },
+                                { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2, type: 'Top' },
+                              ].map((choicesObj, index) => (
+                                <div key={index} className={styles.materials_organized_div}>
+                                  {choicesObj.list.map((choice, choiceIndex) => (
+                                    <div
+                                      className={`${styles.materials_organized_div_image} ${(choicesObj.key === 'TopRailList1' && selectedImagesTop?.includes(choice.key1)) ||
+                                        (choicesObj.key === 'TopRailList2' && selectedImagesTop?.includes(choice.key2))
+                                        ? styles.selectedImage
+                                        : ''
+                                        }`}
+                                      key={choiceIndex}
+                                      onClick={() => {
+                                        if (choicesObj.key === 'TopRailList1') {
+                                          handleImageClickImagesTop1(choice.key1);
+                                        } else if (choicesObj.key === 'TopRailList2') {
+                                          handleImageClickImagesTop2(choice.key2);
+                                        }
+                                      }}
+                                    >
+
+                                      <div className={styles.railimage_wrapper}>
+                                        <Image
+                                          className={styles.railimage}
+                                          width={100}
+                                          height={100}
+                                          src={choice.src}
+                                          alt={choice.label} />
+                                      </div>
+                                      <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                    </div>
+                                  ))}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
 
 
-            <div className={styles.seperator_line_div}>
-              <div className={styles.review_your_order_seperator_line2}></div>
-              <div className={styles.review_your_order_seperator_line1}></div>
-              <div className={styles.review_your_order_seperator_line0}></div>
-
-              <div className={styles.review_your_order_seperator_line0}></div>
-              <div className={styles.review_your_order_seperator_line1}></div>
-              <div className={styles.review_your_order_seperator_line2}></div>
-
-            </div>
-
-            <div className={styles.quantity_and_add_to_cart_group}>
-
-              <div className={styles.review_your_order_seperator_line3}></div>
-              <div className={styles.review_your_order}>Review Your Blind Selection</div>
-
-              <span className={styles.my_order_band_wrapper}>
-                <div className={styles.my_order_band}>
-                  <span className={styles.my_order_band_element1}>
-                    My Order
-                  </span>
 
 
-                </div>
-              </span>
-              <div className={styles.review_your_order_bg}>
+                    <div className={styles.pick_bottom_rail_color_wrapper}>
 
-                <div className={styles.order_items_list}>
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
+                      <div className={styles.select_cassette_head_rail_long_rectangle}
+                      >
+                        <div
+                          className={styles.select_cassette_head_rail_short_rectangle}
+                        >
+                          <Image
+                            className={styles.iconforselect_cassette_head_rail}
+                            alt="iconforselectcassetteheaerail"
+                            width={100}
+                            height={100}
+                            src={"/chevronleft.png"}>
+                          </Image>
+                          <div className={styles.select_head_rail_group_title}>
+                            <span className={styles.select_head_rail_group_title_tag}>5</span> Bottom Rail
+                          </div>
 
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.window_name_answer}>Window Name:
-                    </div>
-                    <div className={styles.answers_answers}>
-                      {productName1}
-                    </div>
-                  </div>
 
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
-
-                  <div className={styles.description_and_answer}>
-
-                    <div className={styles.window_type_answer}>Window Type:</div>
-                    <div className={styles.answers_answers}>
-                      {productName2}
-                    </div>
-                  </div>
-
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
-
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.width2_answer}>Window Size:</div>
-
-                    <div className={styles.answers_answers}>
-
-                      <div>
-                        Length: {selectedInchesWidth} - {selectedFractionsWidth}
-                        {selectedFractionsWidth && " Inches Long"}
-                      </div>
-
-                      <div>
-                        Height: {selectedInchesHeight} - {selectedFractionsHeight}
-                        {selectedFractionsHeight && " Inches High"}
+                        </div>
                       </div>
 
 
-                    </div>
-                  </div>
+                      <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
+                        <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.mount_answer}>Mount:</div>
+                          <div className={styles.bottom_section}>
+                            <div className={styles.skip_bottom_section}>
+                              <div>
+                                <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}>
+                                  <div className={styles.gobacktochoices}>
+                                    <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                      onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
+                                    >
+                                      <p>Go Back To Choices
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
 
-                    <div className={styles.answers_answers}>
-                      {InsideOrOutsideRenderingContent ? `Mount Type: ${InsideOrOutsideRenderingContent}` : "Please Select A Mount Type"}
-                    </div>
+                                {!active_skip_bottom_rail_ellipse && (
+                                  <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
+                                    <div className={styles.fabric_list_bottom_list1}>
+                                      <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
+                                      <p className={styles.sorryMessage}>First pick a selection from the TOP rail to select the appropriate BOTTOM rail.</p>
 
-                  </div>
+                                      <div className={styles.materials_organized_div_wrapper}>
+                                        {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
+                                          <div key={index} className={styles.materials_organized_div}>
+                                            {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
+                                              <div
+                                                className={`${styles.materials_organized_div_image} 
+                                                ${selectedImagesBottom?.includes(choice.key3) ? styles.selectedImage : ''} 
+                                                ${clickedImageKeyBottom === choice.key3 ? styles.clickedImage : ''}`}
+                                                key={choice.key3}
+                                                onClick={() => handleBottomImageClick(choice.key3)}
+                                                // Allow selection only if key1 or key2 matches clickedImageKeyTop
+                                                style={{
+                                                  pointerEvents: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 'auto' : 'none',
+                                                  opacity: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 1 : 0.5,
+                                                }}
+                                              >
 
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
+                                                <div className={styles.railimage_wrapper}>
+                                                  <Image
+                                                    className={styles.railimage}
+                                                    width={100}
+                                                    height={100}
+                                                    src={choice.src}
+                                                    alt={choice.label}
+                                                  />
 
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.materials_answer}>Material:</div>
+                                                </div>
+                                                <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        ))}
 
-                    <div className={styles.answers_answers}>
-                      {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Please Select Your Material"}
-                    </div>
-                  </div>
+                                      </div>
 
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
-
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.lift_type_answer}>Lift Type:</div>
-                    <div className={styles.answers_answers3}>
-                      <div>
-                        {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
-                      </div>
-                      <div>
-                        {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
-                      </div>
-                      <div>
-                        {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-
-                      </div>
-                    </div>
-                  </div>
-
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
+                                    </div>
+                                  </div>
+                                )}
 
 
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
+                              </div>
+                            </div>
 
-                    <div className={styles.answers_answers2}>
-                      {selectedImagesTop?.length > 0 && (
-                        <div className={styles.left_imageContainer_wrapper}>
-                          <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
-                            <p>
-                              {
-                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
-                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
-                                )?.label
-                              }
-                            </p>
-                            <Image
-                              width={200}
-                              height={200}
-                              className={styles.casette_rail_type_answer_image_render}
-                              src={
-                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
-                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
-                                )?.src
-                              }
-                              alt={
-                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
-                                  Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
-                                )?.label
-                              }
-                            />
                           </div>
                         </div>
-                      )}
+                      </div>
                     </div>
+
                   </div>
-
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
+                </div>
+              </div>
 
 
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
-                    <div className={styles.answers_answers2}>
-                      {selectedImagesBottom?.length > 0 && (
-                        <div className={styles.left_imageContainer_wrapper}>
-                          <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
-                            <p>
-                              {Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label}
-                            </p>
-                            <Image
-                              width={200}
-                              height={200}
-                              className={styles.bottom_rail_type_answer_image_render}
-                              src={
-                                Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.src
-                              }
-                              alt={
-                                Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label
-                              }
-                            />
+              <div className={styles.seperator_line_div}>
+                <div className={styles.review_your_order_seperator_line2}></div>
+                <div className={styles.review_your_order_seperator_line1}></div>
+                <div className={styles.review_your_order_seperator_line0}></div>
+
+                <div className={styles.review_your_order_seperator_line0}></div>
+                <div className={styles.review_your_order_seperator_line1}></div>
+                <div className={styles.review_your_order_seperator_line2}></div>
+
+              </div>
+
+              <div className={styles.quantity_and_add_to_cart_group}>
+
+                <div className={styles.review_your_order_seperator_line3}></div>
+                <div className={styles.review_your_order}>Review Your Blind Selection</div>
+
+                <span className={styles.my_order_band_wrapper}>
+                  <div className={styles.my_order_band}>
+                    <span className={styles.my_order_band_element1}>
+                      My Order
+                    </span>
+
+
+                  </div>
+                </span>
+                <div className={styles.review_your_order_bg}>
+
+                  <div className={styles.order_items_list}>
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.window_name_answer}>Window Name:
+                      </div>
+                      <div className={styles.answers_answers}>
+                        {productName1}
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+
+                      <div className={styles.window_type_answer}>Window Type:</div>
+                      <div className={styles.answers_answers}>
+                        {productName2}
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.width2_answer}>Window Size:</div>
+
+                      <div className={styles.answers_answers}>
+
+                        <div>
+                          Length: {selectedInchesWidth} - {selectedFractionsWidth}
+                          {selectedFractionsWidth && " Inches Long"}
+                        </div>
+
+                        <div>
+                          Height: {selectedInchesHeight} - {selectedFractionsHeight}
+                          {selectedFractionsHeight && " Inches High"}
+                        </div>
+
+
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.mount_answer}>Mount:</div>
+
+                      <div className={styles.answers_answers}>
+                        {InsideOrOutsideRenderingContent ? `Mount Type: ${InsideOrOutsideRenderingContent}` : "Please Select A Mount Type"}
+                      </div>
+
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.materials_answer}>Material:</div>
+
+                      <div className={styles.answers_answers}>
+                        {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Please Select Your Material"}
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.lift_type_answer}>Lift Type:</div>
+                      <div className={styles.answers_answers3}>
+                        <div>
+                          {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                        </div>
+                        <div>
+                          {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                        </div>
+                        <div>
+                          {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
+
+                      <div className={styles.answers_answers2}>
+                        {selectedImagesTop?.length > 0 && (
+                          <div className={styles.left_imageContainer_wrapper}>
+                            <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
+                              <p>
+                                {
+                                  (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
+                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
+                                  )?.label
+                                }
+                              </p>
+                              <Image
+                                width={200}
+                                height={200}
+                                className={styles.casette_rail_type_answer_image_render}
+                                src={
+                                  (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
+                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
+                                  )?.src
+                                }
+                                alt={
+                                  (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
+                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
+                                  )?.label
+                                }
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
+                      <div className={styles.answers_answers2}>
+                        {selectedImagesBottom?.length > 0 && (
+                          <div className={styles.left_imageContainer_wrapper}>
+                            <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
+                              <p>
+                                {Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label}
+                              </p>
+                              <Image
+                                width={200}
+                                height={200}
+                                className={styles.bottom_rail_type_answer_image_render}
+                                src={
+                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.src
+                                }
+                                alt={
+                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label
+                                }
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
+
+                    <div className={styles.description_and_answer}>
+                      <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
+
+                      <div className={styles.answers_answers}>
+
+
+                        <div className={styles.between_dates}>
+                          <p>Between</p>
+                          <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
+                          </div>
+                          <p>and</p>
+                          <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
                           </div>
                         </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
-
-
-                  <div className={styles.description_and_answer}>
-                    <div className={styles.estimated_delivery_date_title}>Estimated Delivery Date:</div>
-
-                    <div className={styles.answers_answers}>
-
-
-                      <div className={styles.between_dates}>
-                      <p>Between</p>
-                      <div className={styles.estimated_delivery_date_render}>{futureDate}{" "}
-                      </div>
-                      <p>and</p>
-                      <div className={styles.estimated_delivery_date_render}>{futureDate2}{" "}
                       </div>
                     </div>
+
+
+                    <div className={styles.add_to_cart_rectangle_wrapper}>
+                      <Link href={'/addtocart'}>
+
+                        <div className={styles.add_to_cart_rectangle}>
+
+                          <p className={styles.add_to_cart}>ADD TO CART</p>
+
+                        </div>
+                      </Link>
                     </div>
+
+                    <span
+                      className={styles.bill_divider}>
+                    </span>
+
                   </div>
-
-
-                  <div className={styles.add_to_cart_rectangle_wrapper}>
-                    <Link href={'/addtocart'}>
-
-                      <div className={styles.add_to_cart_rectangle}>
-
-                        <p className={styles.add_to_cart}>ADD TO CART</p>
-
-                      </div>
-                    </Link>
-                  </div>
-
-                  <span
-                    className={styles.bill_divider}>
-                  </span>
-
                 </div>
               </div>
-            </div>
 
 
 
-            <div className={styles.shipping_details_group_wrapper}>
-              <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
-              <div className={styles.shipping_details_title_wrapper}>
-                <div className={styles.shipping_details_title}>Shipping Details: </div>
-              </div>
-              <div className={styles.shipping_divider1}></div>
-
-              <div className={styles.shipping_tagger}>
-                <div className={styles.shipping_tagger_prt1}>
-
-                  <div className={styles.shipping_title}>Shipping</div>
-                  <div className={styles.shipping_title}>=</div>
-
-                  <div className={styles.shipping_price}>FREE</div>
+              <div className={styles.shipping_details_group_wrapper}>
+                <Image alt="image" width={100} height={100} className={styles.shippingtruck_1} src="/shippingtruck.png" />
+                <div className={styles.shipping_details_title_wrapper}>
+                  <div className={styles.shipping_details_title}>Shipping Details: </div>
                 </div>
+                <div className={styles.shipping_divider1}></div>
 
-                <div className={styles.shipping_tagger_prt2}>
-                  <div className={styles.qty_1}>Qty 1</div>
-                  <div className={styles.total_price}>$00.00</div>
+                <div className={styles.shipping_tagger}>
+                  <div className={styles.shipping_tagger_prt1}>
+
+                    <div className={styles.shipping_title}>Shipping</div>
+                    <div className={styles.shipping_title}>=</div>
+
+                    <div className={styles.shipping_price}>FREE</div>
+                  </div>
+
+                  <div className={styles.shipping_tagger_prt2}>
+                    <div className={styles.qty_1}>Qty 1</div>
+                    <div className={styles.total_price}>$00.00</div>
+                  </div>
+
                 </div>
 
               </div>
-
-            </div>
             </span>
 
           </ol>
