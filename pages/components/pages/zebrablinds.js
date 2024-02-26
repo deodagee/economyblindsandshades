@@ -2365,6 +2365,7 @@ const ZebraBlinds = () => {
                                                 >
                                                   {inchHEIGHT}
                                                 </div>
+                                                
                                               ))}
                                             </span>
                                           ) : (
@@ -2374,7 +2375,13 @@ const ZebraBlinds = () => {
                                           )}
                                         </div>
                                       </div>
+                                      <div className={styles.click_to_choose}>
+                                      Click To Choose
+                                      </div>
                                     </div>
+                                    
+                                    
+
 
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
