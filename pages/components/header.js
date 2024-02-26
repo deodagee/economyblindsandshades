@@ -110,7 +110,7 @@ function HeaderPiece() {
 
             <span className={styles.links_for_top_wrapper}>
 
-              <span className={styles.icon_and_text} >
+              <span className={styles.icon_and_text_contact_and_privacy} >
 
                 <div>
                   <Link className={styles.top_links_item}

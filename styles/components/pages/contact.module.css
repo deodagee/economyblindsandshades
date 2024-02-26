@@ -95,12 +95,14 @@ start of page
     border-radius: 0.35rem;
     border-width: 1px;
     box-shadow: rgb(155, 155, 155) 1px 1px 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .center_piece_left_side {
     display: flex;
-    width: 70%;
-    height: 30vh;
+    width: 52.5vw;
+    height: 50vh;
     flex-direction: column;
 }
 
@@ -154,7 +156,7 @@ start of page
     display: flex;
 }
 
-.notes_section_title { 
+.notes_section_title {
     display: flex;
     margin: 20px;
     color: #009eaf;
@@ -162,26 +164,58 @@ start of page
 
 .notes_section {
     padding: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: flow-root;
     border-width: 1px;
     border-color: #888888;
     border-radius: 0.10rem;
     margin-top: 10px;
     margin: 20px;
     color: #007497;
-    height: 170px;
+    height: 15vh;
     width: 50vw;
-    overflow: hidden;
+    overflow: auto;
+    white-space: pre-wrap;
 }
 
 .center_piece_right_side {
     display: flex;
-    width: 30%;
+    width: 21vw;
     height: 50vh;
     flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
 }
+
+.center_piece_right_side_wrapper { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/slidingcomponent3.png");
+    background-blend-mode: hard-light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 21vw;
+}
+
+.right_side_promo { 
+    display: flex;
+    height: 16vh;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(113, 113, 113, 0.697);
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 
 .two_section_div5 {
     width: 100vw;
@@ -190,35 +224,35 @@ start of page
     align-items: center;
     justify-content: center;
     margin: 20px;
-  }
-  
-  .two_section_div5_wrapper {
+}
+
+.two_section_div5_wrapper {
     width: 70vw;
     display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-  }
-  
+}
 
-  .rectangle_1,
+
+.rectangle_1,
 .rectangle_2,
 .rectangle_3,
 .rectangle_4,
 .rectangle_5 {
-  background: #f7f7f7ae;
-  border-radius: 5px;
-  width: 170px;
-  height: 300px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 5px;
-  border-width: 3px;
-  border-color: rgb(0, 144, 127);
-  box-shadow: rgb(197, 197, 197) 5px 5px 10px;
-  transition: 0.3s;
+    background: #f7f7f7ae;
+    border-radius: 5px;
+    width: 170px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    border-width: 3px;
+    border-color: rgb(0, 144, 127);
+    box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+    transition: 0.3s;
 }
 
 
@@ -227,9 +261,9 @@ start of page
 .rectangle_3:hover,
 .rectangle_4:hover,
 .rectangle_5:hover {
-  transform: scale(1.04);
-  box-shadow: rgb(95, 95, 95) 1px 1px 5px;
-  transition: 0.3s;
+    transform: scale(1.04);
+    box-shadow: rgb(95, 95, 95) 1px 1px 5px;
+    transition: 0.3s;
 }
 
 
@@ -237,29 +271,33 @@ start of page
     background-image: url("/zebrablinds.png");
     background-position: center;
     background-size: cover;
-  }
-  .rectangle_2 {
+}
+
+.rectangle_2 {
     background-image: url("/shangrilablinds.png");
     background-position: center;
     background-size: cover;
-  }
-  .rectangle_3 {
+}
+
+.rectangle_3 {
     background-image: url("/romanblinds.png");
     background-position: center;
     background-size: cover;
-  }
-  .rectangle_4 {
+}
+
+.rectangle_4 {
     background-image: url("/rollerblinds.png");
     background-position: center;
     background-size: cover;
-  }
-  .rectangle_5 {
+}
+
+.rectangle_5 {
     background-image: url("/honeycombblinds.png");
     background-position: center;
     background-size: cover;
-  }
+}
 
-  .linkitem {
+.linkitem {
     width: 150px;
     display: flex;
     word-wrap: break-word;
@@ -271,13 +309,12 @@ start of page
     transition: 0.2s;
     font-weight: 700;
     margin-top: 10px;
-  }
-  
+}
 
-  .linkitem:hover {
+
+.linkitem:hover {
     color: rgb(88, 0, 0);
     transition: 0.2s;
     background-color: rgb(233, 233, 233);
     border-radius: 0.15rem;
-  }
-  
+}
