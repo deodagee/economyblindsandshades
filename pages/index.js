@@ -49,25 +49,19 @@ export default function HomePage() {
         <div className={styles.EconomyBlindsAndShades}>
           <div className={styles.home_wrapper}>
 
-            <div className={styles.intro_piece}>
-              <Image alt='intro_piece_image' className={styles.intro_piece_image} src={"/indexcomponent2.png"} width={300} height={300}></Image>
 
-              <div className={styles.box}>
-                <div className={styles.box_prt1}>
-                  <p className={styles.welcome}>Welcome</p>
-                </div>
-                <div className={styles.box_prt2}>
+            <div className={styles.box}>
 
-                  <Link href={"/getaquote"}><p className={styles.getaquote}>Get A Quote</p></Link>
-
-                  <Link href={"/learnmore"}><p className={styles.learnmore}>Learn More</p></Link>
-                </div>
+              <div className={styles.box_prt1}>
+                <p className={styles.welcome}>Welcome</p>
               </div>
-            </div>
 
+              <div className={styles.box_prt2}>
 
-            <div className={styles.middle_social}>
+                <Link href={"/getaquote"}><p className={styles.getaquote}>Get A Quote</p></Link>
 
+                <Link href={"/learnmore"}><p className={styles.learnmore}>Learn More</p></Link>
+              </div>
               <div className={styles.socials_div}>
 
                 <Link href="https://www.facebook.com/economyblindsandshadesinc">
@@ -82,8 +76,8 @@ export default function HomePage() {
                 </Link>
 
               </div>
-
             </div>
+
 
             <div className={styles.two_section_div5}>
               <div className={styles.two_section_div5_wrapper}>
@@ -215,15 +209,15 @@ export default function HomePage() {
 
         </div>
       </div>
-      
-      {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
-            <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
-              <div className={styles.shipping_divider2}></div>
-              <FooterPage></FooterPage>
-              <div className={styles.shipping_divider2}></div>
 
-            </div>
-          </span>}
+      {showFooter && <span className={styles.ZebraBlindsFooter_wrapper}>
+        <div className={`${styles.ZebraBlindsFooter} ${showFooter ? styles.showFooter : ''}`}>
+          <div className={styles.shipping_divider2}></div>
+          <FooterPage></FooterPage>
+          <div className={styles.shipping_divider2}></div>
+
+        </div>
+      </span>}
     </>
   )
 }

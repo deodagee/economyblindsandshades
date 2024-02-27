@@ -183,7 +183,6 @@ const ZebraBlinds = () => {
   const [steelMaterialChosen, setSteelMaterialChosen] = useState(null);
 
 
-
   const handleEllipseClickSkipHeadRailAndBotomRailColor = () => {
     console.log('Ellipse Clicked');
     Set_active_skip_head_rail_ellipse((prevActive) => !prevActive);
@@ -191,10 +190,7 @@ const ZebraBlinds = () => {
     Set_active_skip_bottom_rail_ellipse((prevActive) => !prevActive);
     setskip_bottom_rail_image_placeholder((prevActive) => !prevActive);
     setSteelMaterialChosen(true);
-
   };
-
-
 
 
   const [roomDarkeningContent, setRoomDarkeningContent] = useState('');

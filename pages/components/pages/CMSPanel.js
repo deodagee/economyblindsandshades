@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
 import { useData } from "../../../utils/DataContext";
 import FooterPage from "../footer";
+
 const CMSPanel = () => {
 
   const [showFooter, setShowFooter] = useState(false);
