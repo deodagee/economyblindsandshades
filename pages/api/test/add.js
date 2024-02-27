@@ -1,6 +1,6 @@
 // C:\Users\User\economyblindsandshadesjs\pages\api\test\add.js
 
-import connectMongo from "../../../utils/connectMongoexample";
+import connectMongo from "../../../utils/connectMongo";
 import Test from "../../../models/testmodel";
 
 export default async function addTest(req, res) {
