@@ -121,32 +121,67 @@
 
 }
 
+.gridbox_one_and_gridbox_two { 
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridbox_one, .gridbox_two { 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+height: max-content;
+  width: 100vw;
+}
+
 .two_section_div1,
 .two_section_div2,
 .two_section_div3,
 .two_section_div4 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to right, rgb(255, 255, 255), rgb(241, 241, 241), rgb(255, 255, 255));
+width: max-content;
+height: 800px;
+border-width: 1px;
+border-color: rgb(192, 192, 192);
+margin: 10px;
+box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+border-radius: 0.75rem;
+transition: 0.3s;
+}
+
+.two_section_div1:hover,
+.two_section_div2:hover,
+.two_section_div3:hover,
+.two_section_div4:hover  {
+
+  transform: scale(1.02);
+  transition: 0.3s;
 
 }
 
+
 .two_section_div1 {
-  height: 300px;
+  height: max-content;
 }
 
 .two_section_div2 {
-  height: 300px;
+  height: max-content;
 }
 
 .two_section_div3 {
-  height: 300px;
+  height: max-content;
 }
 
 .two_section_div4 {
-  height: 400px;
+  height: max-content;
 }
 
 .two_section_div5 {
@@ -165,23 +200,6 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-}
-
-.whattypeofblindspng {
-  width: 500px;
-  height: 500px;
-  display: flex;
-  height: auto;
-  margin: 5px;
-}
-
-.what_type_of_blinds_text {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
 }
 
 
@@ -250,12 +268,11 @@
 }
 
 .description {
-  margin-top: 10px;
-  width: 450px;
-  color: black;
-  font-size: 11px;
-  font-family: Inter;
-  font-weight: 400;
+display: flex;
+font-size: 10px;
+width: 80%;
+margin: 10px;
+color: rgb(49, 49, 49);
 }
 
 .links {
@@ -304,16 +321,20 @@
   border-radius: 0.15rem;
 }
 
-.are_you_priced_png {
-  width: 500px;
-  height: 500px;
+.box_grid_image {
+  width: auto;
+  height: 300px;
   display: flex;
   height: auto;
   margin: 5px;
 }
 
-.are_you_priced_text {
+.box_grid_text {
   width: 500px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.108);
+  color: white;
+  border-radius: 0.45rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -142,57 +142,63 @@ export default function HomePage() {
               </p>
             </div>
 
+            <div className={styles.gridbox_one_and_gridbox_two}>
+              <div className={styles.gridbox_one}>
+                <div className={styles.two_section_div1}>
 
+                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/howsooncanibookanestimate.png" />
 
-            <div className={styles.two_section_div1}>
+                  <div className={styles.box_grid_text}>
+                    <div className={styles.title}>How soon can I book an estimate?</div>
+                    <div className={styles.description}>
+                      We can usually be out at potential clients homes, within 24 hours of initial contact.
+                    </div>
+                  </div>
+                </div>
 
-              <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/howsooncanibookanestimate.png" />
+                <div className={styles.two_section_div2}>
 
-              <div className={styles.are_you_priced_text}>
-                <div className={styles.title}>How soon can I book an estimate?</div>
-                <div className={styles.description}>
-                  We can usually be out at potential clients homes, within 24 hours of initial contact.
+                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/aretheoptionsaffordableandstylish.png" />
+
+                  <div className={styles.box_grid_text}>
+                    <div className={styles.title}>Are the options affordable and stylish?</div>
+                    <div className={styles.description}>
+                      We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className={styles.two_section_div2}>
+              <div className={styles.gridbox_two}>
+                <div className={styles.two_section_div3}>
 
-              <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/aretheoptionsaffordableandstylish.png" />
+                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/areyoupricedcompetitively.png" />
 
-              <div className={styles.are_you_priced_text}>
-                <div className={styles.title}>Are the options affordable and stylish?</div>
-                <div className={styles.description}>
-                  We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
+                  <div className={styles.box_grid_text}>
+                    <div className={styles.title}>Are you priced competitively?</div>
+                    <div className={styles.description}>
+                      We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
+                    </div>
+                  </div>
+                </div>
+
+
+              <div className={styles.two_section_div4}>
+                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
+                <div className={styles.box_grid_text}>
+                  <div className={styles.title}>What Type Of Blinds Do You Install?</div>
+                  <div className={styles.description}>
+                    At Economy Blinds & Shades Inc., we offer a wide range of blinds to suit your unique style and needs. Our expert installation team can install the following types of blinds:
+                  </div>
+                  <div className={styles.description}>
+                    Each type of blind offers its own set of benefits and aesthetics, allowing you to choose the perfect window treatment that complements your interior decor and lifestyle. Our team is here to help you make an informed decision and ensure a seamless installation process. See a full description of our blinds below.
+                  </div>
                 </div>
               </div>
-            </div>
-
-
-            <div className={styles.two_section_div3}>
-
-              <Image width={300} height={300} alt='center_image' className={styles.are_you_priced_png} src="/areyoupricedcompetitively.png" />
-
-              <div className={styles.are_you_priced_text}>
-                <div className={styles.title}>Are you priced competitively?</div>
-                <div className={styles.description}>
-                  We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
-                </div>
               </div>
-            </div>
 
 
-            <div className={styles.two_section_div4}>
-              <Image width={300} height={300} alt='center_image' className={styles.whattypeofblindspng} src="/whattypeofblindsdoyouinstall.png" />
-              <div className={styles.what_type_of_blinds_text}>
-                <div className={styles.title}>What Type Of Blinds Do You Install?</div>
-                <div className={styles.description}>
-                  At Economy Blinds & Shades Inc., we offer a wide range of blinds to suit your unique style and needs. Our expert installation team can install the following types of blinds:
-                </div>
-                <div className={styles.description}>
-                  Each type of blind offers its own set of benefits and aesthetics, allowing you to choose the perfect window treatment that complements your interior decor and lifestyle. Our team is here to help you make an informed decision and ensure a seamless installation process. See a full description of our blinds below.
-                </div>
-              </div>
+
             </div>
 
 
