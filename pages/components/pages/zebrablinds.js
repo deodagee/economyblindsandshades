@@ -7,6 +7,7 @@ import Link from "next/link";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react";
 import FooterPage from "../../../pages/components/footer.js"
+import { useRouter } from 'next/router';
 
 const ZebraBlinds = () => {
   const [showFooter, setShowFooter] = useState(false);
@@ -62,6 +63,8 @@ const ZebraBlinds = () => {
   useEffect(() => {
     fetchLatestData();
   }, []);
+
+
 
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -179,6 +182,62 @@ const ZebraBlinds = () => {
 
     setTotalPriceCalculated(newTotalPrice);
   };
+
+  const getTotalPrice = () => {
+    let totalPrice = 0;
+
+    switch (active_inside_outside_ellipse) {
+      case 1:
+        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMS : 0) + (active_wand_right_choice === 5 ? WandPriceCMS : 0);
+        break;
+      case 2:
+        totalPrice = totalpricecalculated;
+        break;
+      // Add cases for other ellipses if needed
+      default:
+        break;
+    }
+
+    return totalPrice;
+  };
+
+  const handleAddToCart = async () => {
+    await fetchLatestData();
+
+    // Calculate the total price based on the state
+    const newTotalPrice = getTotalPrice();
+
+    const apiUrl = '/api/saveData';
+
+    const data = {
+      name: session.name,
+      productName1: session.productName1,
+      productName2: session.productName2,
+      WandPriceCMS: session.WandPriceCMS,
+      cordlesspriceCMS: session.cordlesspriceCMS,
+      motorizedpriceCMS: session.motorizedpriceCMS,
+      totalpricecalculated: newTotalPrice,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log('Data saved successfully:', result);
+
+      // Navigate to the Add to Cart page with the newTotalPrice value
+      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
+    } else {
+      console.error('Error saving data:', response.statusText);
+    }
+  };
+
 
 
 
@@ -3422,15 +3481,14 @@ const ZebraBlinds = () => {
 
 
                     <div className={styles.add_to_cart_rectangle_wrapper}>
-                      <Link href={'/addtocart'}>
-
-                        <div className={styles.add_to_cart_rectangle}>
+                      <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
+                        <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
                           <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
-
                           <p className={styles.add_to_cart}>ADD TO CART</p>
-
-                        </div>
+                        </button>
                       </Link>
+
+
                     </div>
 
                     <span

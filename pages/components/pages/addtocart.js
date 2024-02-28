@@ -2,42 +2,45 @@
 
 
 import React, { useState, useEffect, useRef } from "react";
+import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/add_to_cart.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSession } from "next-auth/react";
 import HeaderPiece from "../../components/header.js"
 import FooterPage from "../../../pages/components/footer.js"
+import { useRouter } from 'next/router';
 
 const AddToCart = () => {
 
+    const router = useRouter();
+const { totalpricecalculated } = router.query;
+
+// Convert to a number if needed, as it might be a string from the query
+const totalPrice = parseFloat(totalpricecalculated || 0);
+
+
     const [showFooter, setShowFooter] = useState(false);
 
+  
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-
-            // Adjust the threshold as needed
-            const threshold = 100;
-
-            // Check if we are close to the bottom of the page
-            const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
-
-            // Set the state to show or hide the footer
-            setShowFooter(isNearBottom);
-        };
-
-        // Add scroll event listener when the component mounts
-        window.addEventListener('scroll', handleScroll);
-
-        // Remove scroll event listener when the component unmounts
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []); // Empty dependency array ensures this effect runs only once
-
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+  
+        const threshold = 100;
+  
+        const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+  
+        setShowFooter(isNearBottom);
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     ///////////CHOOSE COUNTRY
 
@@ -57,9 +60,6 @@ const AddToCart = () => {
 
 
     const { data: session } = useSession();
-    const [productName1, setProductName1] = useState("");
-    const [productName2, setProductName2] = useState("");
-
     const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
     const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
     const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
@@ -72,27 +72,36 @@ const AddToCart = () => {
     const [selectedImagesTop, setSelectedImagesTop] = useState([]);
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
 
-
+    const [productName1, setProductName1] = useState("");
+    const [productName2, setProductName2] = useState("");
+    const [WandPriceCMS, setWandPriceCMS] = useState("");
+    const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
+    const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
+  
+  
     const fetchLatestData = async () => {
-        try {
-            const response = await fetch("/api/getLatestData");
-            const result = await response.json();
-            const latestData = result.data;
-
-            if (latestData) {
-                setProductName1(latestData.productName1 || "");
-                setProductName2(latestData.productName2 || "");
-            }
-        } catch (error) {
-            console.error("Error fetching latest data:", error);
+      try {
+        const response = await fetch("/api/getLatestData");
+        const result = await response.json();
+        const latestData = result.data;
+  
+        if (latestData) {
+          setProductName1(latestData.productName1 || "");
+          setProductName2(latestData.productName2 || "");
+          setWandPriceCMS(latestData.WandPriceCMS || "");
+          setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
+          setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+  
         }
+      } catch (error) {
+        console.error("Error fetching latest data:", error);
+      }
     };
-
+  
     useEffect(() => {
-        // Fetch the latest data when the component mounts
-        fetchLatestData();
+      fetchLatestData();
     }, []);
-
+  
 
     return (
 
@@ -414,6 +423,10 @@ const AddToCart = () => {
                                             <p className={styles.price_summary_title2}>Shipping</p>
                                             <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
                                             </span>
+
+                                            <span className={styles.price_summary_title2_Spanner}>
+                                            <p className={styles.price_summary_title2}>Total</p>
+                                            <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>                                            </span>
 
                                         </span>
                                         

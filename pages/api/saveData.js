@@ -23,9 +23,7 @@ export default async function saveData(req, res) {
       WandPriceCMS: data.WandPriceCMS,
       cordlesspriceCMS: data.cordlesspriceCMS,
       motorizedpriceCMS: data.motorizedpriceCMS,
-
-
-      
+      totalpricecalculated: data.totalpricecalculated,
     });
     console.log("CREATED DOCUMENT");
 
