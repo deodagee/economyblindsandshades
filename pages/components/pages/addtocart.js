@@ -13,33 +13,33 @@ import { useRouter } from 'next/router';
 const AddToCart = () => {
 
     const router = useRouter();
-const { totalpricecalculated } = router.query;
+    const { totalpricecalculated } = router.query;
 
-// Convert to a number if needed, as it might be a string from the query
-const totalPrice = parseFloat(totalpricecalculated || 0);
+    // Convert to a number if needed, as it might be a string from the query
+    const totalPrice = parseFloat(totalpricecalculated || 0);
 
 
     const [showFooter, setShowFooter] = useState(false);
 
-  
+
     useEffect(() => {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-  
-        const threshold = 100;
-  
-        const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
-  
-        setShowFooter(isNearBottom);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            const threshold = 100;
+
+            const isNearBottom = scrollPosition + windowHeight >= documentHeight - threshold;
+
+            setShowFooter(isNearBottom);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     ///////////CHOOSE COUNTRY
@@ -74,34 +74,37 @@ const totalPrice = parseFloat(totalpricecalculated || 0);
 
     const [productName1, setProductName1] = useState("");
     const [productName2, setProductName2] = useState("");
+    const [roomname, setroomname] = useState("");
     const [WandPriceCMS, setWandPriceCMS] = useState("");
     const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
     const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
-  
-  
+
+
     const fetchLatestData = async () => {
-      try {
-        const response = await fetch("/api/getLatestData");
-        const result = await response.json();
-        const latestData = result.data;
-  
-        if (latestData) {
-          setProductName1(latestData.productName1 || "");
-          setProductName2(latestData.productName2 || "");
-          setWandPriceCMS(latestData.WandPriceCMS || "");
-          setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
-          setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
-  
+        try {
+            const response = await fetch("/api/getLatestData");
+            const result = await response.json();
+            const latestData = result.data;
+
+            if (latestData) {
+                setProductName1(latestData.productName1 || "");
+                setProductName2(latestData.productName2 || "");
+                setroomname(latestData.roomname || "");
+
+                setWandPriceCMS(latestData.WandPriceCMS || "");
+                setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
+                setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+
+            }
+        } catch (error) {
+            console.error("Error fetching latest data:", error);
         }
-      } catch (error) {
-        console.error("Error fetching latest data:", error);
-      }
     };
-  
+
     useEffect(() => {
-      fetchLatestData();
+        fetchLatestData();
     }, []);
-  
+
 
     return (
 
@@ -245,7 +248,8 @@ const totalPrice = parseFloat(totalpricecalculated || 0);
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {"room name"}                                        </div>
+                                            {roomname}
+                                        </div>
                                     </div>
 
                                     <div className={styles.notes_div}>
@@ -408,28 +412,28 @@ const totalPrice = parseFloat(totalpricecalculated || 0);
                                         <p className={styles.price_summary_title}>Price Summary</p>
 
                                         <span className={styles.price_summary_title2_group}>
-                                            
+
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Price before taxes</p>
                                                 <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
-                                            <p className={styles.price_summary_title2}>Price after taxes</p>
-                                            <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                                <p className={styles.price_summary_title2}>Price after taxes</p>
+                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
-                                            <p className={styles.price_summary_title2}>Shipping</p>
-                                            <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                                <p className={styles.price_summary_title2}>Shipping</p>
+                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
-                                            <p className={styles.price_summary_title2}>Total</p>
-                                            <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>                                            </span>
+                                                <p className={styles.price_summary_title2}>Total</p>
+                                                <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>                                            </span>
 
                                         </span>
-                                        
+
                                         <Link href={'/checkoutpage'}>
                                             <p className={styles.check_out_button}>CHECKOUT</p>
                                         </Link>

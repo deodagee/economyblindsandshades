@@ -28,6 +28,10 @@ const testSchema = new Schema({
     type: String,
     required: true,
   },
+  roomname: {
+    type: String,
+    required: true,
+  },
 
 });
 

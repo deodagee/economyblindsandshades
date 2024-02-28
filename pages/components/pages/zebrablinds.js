@@ -36,6 +36,7 @@ const ZebraBlinds = () => {
   const { data: session } = useSession();
   const [productName1, setProductName1] = useState("");
   const [productName2, setProductName2] = useState("");
+  const [roomname, setroomname] = useState("");
   const [WandPriceCMS, setWandPriceCMS] = useState("");
   const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
   const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
@@ -50,6 +51,7 @@ const ZebraBlinds = () => {
       if (latestData) {
         setProductName1(latestData.productName1 || "");
         setProductName2(latestData.productName2 || "");
+        setroomname(latestData.roomname || "");
         setWandPriceCMS(latestData.WandPriceCMS || "");
         setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
         setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
@@ -213,6 +215,7 @@ const ZebraBlinds = () => {
       name: session.name,
       productName1: session.productName1,
       productName2: session.productName2,
+      roomname: session.roomname,
       WandPriceCMS: session.WandPriceCMS,
       cordlesspriceCMS: session.cordlesspriceCMS,
       motorizedpriceCMS: session.motorizedpriceCMS,
@@ -839,14 +842,20 @@ const ZebraBlinds = () => {
               <div className={styles.right_half_top}>
 
                 <div className={styles.top_title_area}>
-                  <span>
+
+                <span className={styles.product_title_styles_styles_and_product_roomname}>
                     <h1 className={styles.product_title_styles}>
                       {productName1}
                     </h1>
+                    <h1 className={styles.product_roomname}>
+                     <p>Room Name:</p> <p>{roomname}</p>
+                    </h1>
+                    </span>
+                  
                     <h1 className={styles.product_lightening_styles}>
                       {productName2}
                     </h1>
-                  </span>
+
                 </div>
 
                 <div className={styles.star_group}>

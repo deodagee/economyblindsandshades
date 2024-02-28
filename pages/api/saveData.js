@@ -21,6 +21,7 @@ export default async function saveData(req, res) {
       productName1: data.productName1,
       productName2: data.productName2,
       WandPriceCMS: data.WandPriceCMS,
+      roomname: data.roomname,
       cordlesspriceCMS: data.cordlesspriceCMS,
       motorizedpriceCMS: data.motorizedpriceCMS,
       totalpricecalculated: data.totalpricecalculated,

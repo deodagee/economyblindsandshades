@@ -42,6 +42,7 @@ const CMSPanel = () => {
   const { postData, updateData } = useData();
   const [productName1, setProductName1] = useState("");
   const [productName2, setProductName2] = useState("");
+  const [roomname, setroomname] = useState("");
   const [WandPriceCMS, setWandPriceCMS] = useState("");
   const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
   const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
@@ -57,6 +58,7 @@ const CMSPanel = () => {
       if (latestData) {
         setProductName1(latestData.productName1 || "");
         setProductName2(latestData.productName2 || "");
+        setroomname(latestData.roomname || "");
         setWandPriceCMS(latestData.WandPriceCMS || "");
         setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
         setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
@@ -85,6 +87,7 @@ const CMSPanel = () => {
           name: `standard_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          roomname: roomname,
           WandPriceCMS: WandPriceCMS,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
@@ -116,6 +119,7 @@ const CMSPanel = () => {
           productName1: productName1,
           productName2: productName2,
           WandPriceCMS: WandPriceCMS,
+          roomname: roomname,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
         }),
@@ -144,6 +148,7 @@ const CMSPanel = () => {
           name: `unique_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          roomname: roomname,
           WandPriceCMS: WandPriceCMS,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
@@ -173,6 +178,7 @@ const CMSPanel = () => {
           name: `unique_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          roomname: roomname,
           WandPriceCMS: WandPriceCMS,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
@@ -202,6 +208,37 @@ const CMSPanel = () => {
           name: `unique_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          roomname: roomname,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
+
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Response from server:", result);
+        // Call updateData with the updated data
+        updateData && updateData(result.data);
+      }
+    } catch (error) {
+      console.error("Error saving new name:", error);
+    }
+  };
+
+  const handleSave6 = async () => {
+    try {
+      const response = await fetch("/api/test/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `unique_${Date.now()}`, // Append timestamp for uniqueness
+          productName1: productName1,
+          productName2: productName2,
+          roomname: roomname,
           WandPriceCMS: WandPriceCMS,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
@@ -255,6 +292,21 @@ const CMSPanel = () => {
             </div>
           </div>
 
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Room Name:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={roomname}
+              onChange={(e) => setroomname(e.target.value)}
+            />
+            <button className={styles.button} onClick={handleSave6}>
+              Save
+            </button>
+            <div className={styles.key_locker2}>
+            <h1 >{postData && postData.roomname}</h1>
+            </div>
+          </div>
 
           <div className={styles.cms_panel_section}>
             <label className={styles.cms_panel_label}>Change Wand Price:</label>
@@ -304,6 +356,8 @@ const CMSPanel = () => {
             <h1 >{postData && postData.motorizedpriceCMS}</h1>
             </div>
           </div>
+
+
 
         </div>
 
