@@ -1,27 +1,33 @@
-// C:\Users\User\economyblindsandshadesjs\pages\api/saveData.js
+// C:\Users\User\economyblindsandshadesjs\pages\api\test\add.js
 
 import connectMongo from "../../utils/connectMongo";
-import Test from "../../models/testmodel";
+import Test from "../../models/structuremodel";
 
-export default async function saveData(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-
-  const { data } = req.body;
-
+export default async function addTest(req, res) {
   try {
     console.log("CONNECTING TO MONGO");
     await connectMongo();
     console.log("CONNECTED TO MONGO");
 
-    // Save the data to the database using the Test model
-    const newData = new Test({ name: data.name, /* add other fields if necessary */ });
-    await newData.save();
+    // Retrieve the posted data from req.body
+    const postData = req.body;
 
-    res.status(200).json({ message: 'Data saved successfully' });
+    console.log("POSTED DATA:", postData);
+
+    console.log("CREATING DOCUMENT");
+    const test = await Test.create(postData);
+    console.log("CREATED DOCUMENT");
+
+    // Pass the posted data as a prop to the component
+    res.json({ message: "Test document created successfully", data: test, postData });
   } catch (error) {
-    console.error("Error in saveData:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error("Error in addTest:", error);
+
+    // Check if the error is a duplicate key error
+    if (error.code === 11000 || error.code === 11001) {
+      res.status(400).json({ error: "Duplicate key error: The 'name' value already exists." });
+    } else {
+      res.status(500).json({ error: "Internal Server Error" });
+    }
   }
 }
