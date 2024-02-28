@@ -1,23 +1,27 @@
 // C:\Users\User\economyblindsandshadesjs\pages\api/saveData.js
 
-export default async function handler(req, res) {
-    const { method, body } = req;
-  
-    if (method === 'POST') {
-      const { productTitle, productLightening } = JSON.parse(body);
-  
-      // Store the data on the server (you need to implement this part)
-      // Example: Save data to a database
-  
-      return res.status(200).json({ success: true });
-    } else if (method === 'GET') {
-      // Retrieve the data from the server (you need to implement this part)
-      // Example: Retrieve data from a database
-  
-      const data = { productTitle: '...', productLightening: '...' };
-      return res.status(200).json(data);
-    }
-  
-    return res.status(405).end();
+import connectMongo from "../../utils/connectMongo";
+import Test from "../../models/testmodel";
+
+export default async function saveData(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
-  
+
+  const { data } = req.body;
+
+  try {
+    console.log("CONNECTING TO MONGO");
+    await connectMongo();
+    console.log("CONNECTED TO MONGO");
+
+    // Save the data to the database using the Test model
+    const newData = new Test({ name: data.name, /* add other fields if necessary */ });
+    await newData.save();
+
+    res.status(200).json({ message: 'Data saved successfully' });
+  } catch (error) {
+    console.error("Error in saveData:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}
