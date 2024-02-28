@@ -1,4 +1,5 @@
 //C:\Users\User\economyblindsandshadesjs\utils\DataContext.js
+
 import { createContext, useContext, useState } from 'react';
 
 const DataContext = createContext();

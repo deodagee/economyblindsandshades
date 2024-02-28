@@ -1,7 +1,7 @@
 // C:\Users\User\economyblindsandshadesjs\pages\api\getLatestData.js
 
 import connectMongo from "../../utils/connectMongo";
-import Test from "../../models/testmodel";
+import Test from "../../models/structuremodel";
 
 export default async function getLatestData(req, res) {
   try {

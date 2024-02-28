@@ -35,6 +35,10 @@ const ZebraBlinds = () => {
   const { data: session } = useSession();
   const [productName1, setProductName1] = useState("");
   const [productName2, setProductName2] = useState("");
+  const [WandPriceCMS, setWandPriceCMS] = useState("");
+  const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
+  const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
+
 
   const fetchLatestData = async () => {
     try {
@@ -45,6 +49,10 @@ const ZebraBlinds = () => {
       if (latestData) {
         setProductName1(latestData.productName1 || "");
         setProductName2(latestData.productName2 || "");
+        setWandPriceCMS(latestData.WandPriceCMS || "");
+        setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
+        setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+
       }
     } catch (error) {
       console.error("Error fetching latest data:", error);
@@ -65,24 +73,6 @@ const ZebraBlinds = () => {
   const [outside_mount_group_visible, setOutsideMountGroupVisible] = useState(false);
   const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('Inside Mount');
 
-  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
-
-    if (ellipseNumber === 1) {
-      setActiveInsideOutsideEllipse(ellipseNumber);
-      setInsideOrOutsideRenderingContent('Inside Mount');
-      setInsideMountGroupVisible(true);
-      setOutsideMountGroupVisible(false);
-
-    } else if (ellipseNumber === 2) {
-      setActiveInsideOutsideEllipse(ellipseNumber);
-      setInsideOrOutsideRenderingContent('Outside Mount');
-      setInsideMountGroupVisible(false);
-      setOutsideMountGroupVisible(true);
-    }
-  };
-
-  //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
-  //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
   const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
   const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
@@ -93,6 +83,23 @@ const ZebraBlinds = () => {
   const [showImageright, setShowImageright] = useState(false);
   const [showImageleft, setShowImageleft] = useState(true);
 
+  const [totalpricecalculated, setTotalPriceCalculated] = useState(0);
+
+
+  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
+    if (ellipseNumber === 1) {
+      setActiveInsideOutsideEllipse(1);
+      setInsideOrOutsideRenderingContent('Inside Mount');
+      setInsideMountGroupVisible(true);
+      setOutsideMountGroupVisible(false);
+    } else if (ellipseNumber === 2) {
+      setActiveInsideOutsideEllipse(2);
+      setInsideOrOutsideRenderingContent('Outside Mount');
+      setInsideMountGroupVisible(false);
+      setOutsideMountGroupVisible(true);
+    }
+  };
+
   const handleLiftFeatureEllipsess = (ellipseNumber) => {
     // Reset states based on the clicked ellipse number
     if (ellipseNumber === 1) {
@@ -102,7 +109,8 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent('wand');
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(null);
-
+      setShowImageleft(true);
+      setShowImageright(false);
     } else if (ellipseNumber === 2) {
       setactive_wand_cordless_motorized(2);
       setactive_wand_left_choice(null);
@@ -110,7 +118,8 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent('cordless');
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(false);
-
+      setShowImageleft(false);
+      setShowImageright(false);
     } else if (ellipseNumber === 3) {
       setactive_wand_cordless_motorized(3);
       setactive_wand_left_choice(null);
@@ -118,35 +127,27 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent('motorized');
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(false);
-
-    }
-    else if (ellipseNumber === 4) {
+      setShowImageleft(false);
+      setShowImageright(false);
+    } else if (ellipseNumber === 4) {
       setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(4);
-      setactive_wand_cordless_motorized(1);
       setactive_wand_right_choice(null);
-      setactive_wand_left_choice_rendering_content('Left wand choice');
       setactive_wand_cordless_motorizedRenderingContent('wand');
+      setactive_wand_left_choice_rendering_content('Left wand choice');
       setactive_wand_right_choice_rendering_content(false);
-
       setShowImageleft(true);
       setShowImageright(false);
-
-    }
-    else if (ellipseNumber === 5) {
+    } else if (ellipseNumber === 5) {
       setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(null);
       setactive_wand_right_choice(5);
-      setactive_wand_cordless_motorized(1);
+      setactive_wand_cordless_motorizedRenderingContent('wand');
       setactive_wand_left_choice_rendering_content(false);
       setactive_wand_right_choice_rendering_content('Right wand choice');
-      setactive_wand_cordless_motorizedRenderingContent('wand');
-
       setShowImageleft(false);
       setShowImageright(true);
-
-    }
-    else {
+    } else {
       // Reset all states if any other ellipse is selected
       setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(null);
@@ -154,15 +155,30 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent(null);
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(null);
+      setShowImageleft(false);
+      setShowImageright(false);
     }
+
+    let newTotalPrice = 0;
+
+    switch (ellipseNumber) {
+      case 1:
+        newTotalPrice = WandPriceCMS;
+        break;
+      case 2:
+        newTotalPrice = cordlesspriceCMS;
+        break;
+      case 3:
+        newTotalPrice = motorizedpriceCMS;
+        break;
+      default:
+    }
+
+    newTotalPrice += (active_wand_left_choice === 4) ? WandPriceCMS : "";
+    newTotalPrice += (active_wand_right_choice === 5) ? WandPriceCMS : "";
+
+    setTotalPriceCalculated(newTotalPrice);
   };
-
-
-
-
-
-
-
 
 
 
@@ -370,6 +386,8 @@ const ZebraBlinds = () => {
   const [clickedImageKeyTop, setClickedImageKeyTop] = useState(null);
   const [clickedImageKeyBottom, setClickedImageKeyBottom] = useState(null);
   const [showSorryMessage, setShowSorryMessage] = useState(false);
+  const [bottomImagesEnabled, setBottomImagesEnabled] = useState(false);
+
 
   const handleBottomImageClick = (key3) => {
     setfirstImage_div(false);
@@ -381,16 +399,15 @@ const ZebraBlinds = () => {
       return;
     }
 
-    setShowSorryMessage(false); // Reset the sorry message visibility
-
-    // Toggle selection only if the clicked image is different from the current selection
+    setShowSorryMessage(false);
+    setBottomImagesEnabled(true); // Enable displaying Bottom images
     setSelectedImagesBottom(selectedImagesBottom[0] === key3 ? selectedImagesBottom : [key3]);
   };
 
   const handleImageClickImagesTop1 = (key1) => {
+    setBottomImagesEnabled(false);
     setClickedImageKeyTop(key1);
     setShowSorryMessage(false);
-
     setfirstImage_div(false);
     setSelectedMaterial(false);
     setSteelMaterialChosen(false);
@@ -405,6 +422,7 @@ const ZebraBlinds = () => {
   };
 
   const handleImageClickImagesTop2 = (key2) => {
+    setBottomImagesEnabled(false);
     setClickedImageKeyTop(key2);
     setShowSorryMessage(false);
 
@@ -722,29 +740,32 @@ const ZebraBlinds = () => {
                           </div>
                         </div>
                       )}
-                      {selectedImagesBottom?.length > 0 && (
-                        <div className={styles.left_imageContainer_wrapper}>
-                          <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                            <span className={styles.left_imageContainer_image_itself1_label}>
-                              Bottom Rail
-                            </span>
-
-                            <div className={styles.left_first_image_render_wrapper}>
-                              <Image
-                                width={100}
-                                height={100}
-                                className={styles.left_first_image_render}
-                                src={
-                                  (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
-                                }
-                                alt={
-                                  (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).label
-                                }
-                              />
+                      {
+                        bottomImagesEnabled && selectedImagesBottom?.length > 0 && (
+                          <div className={styles.left_imageContainer_wrapper}>
+                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                              <span className={styles.left_imageContainer_image_itself1_label}>
+                                Bottom Rail
+                              </span>
+                              <div className={styles.left_first_image_render_wrapper}>
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  className={styles.left_first_image_render}
+                                  src={
+                                    (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
+                                  }
+                                  alt={
+                                    (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).label
+                                  }
+                                />
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      )}
+                        )
+                      }
+
+
                     </>
 
                   )}
@@ -867,7 +888,7 @@ const ZebraBlinds = () => {
                               <p className={styles.step_tag}> Step 1:</p>
                               <span className={styles.step_tag_description_wrapper}>
                                 <p className={styles.step_tag_description}>
-                                  Depth Of Window Frame Ledge Must Have 3”. (As Shown In Below Picture Green Lines)
+                                  Depth Of Window Frame Ledge Must Have 3”. (As Shown In Picture Above With The Orange Lines)
                                   (If You Do Not Have 3” Ledge Follow Outside Mount Process).
                                 </p>
                               </span>
@@ -879,7 +900,7 @@ const ZebraBlinds = () => {
                               <span className={styles.step_tag_description_wrapper}>
                                 <p className={styles.step_tag_description}>
                                   Horizontal Direction (Width) Measure Inside Window Frame In 3 Places Top/Middle//Bottom
-                                  (As Shown In Below Picture Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
+                                  (As Shown In Picture Above With The Orange Lines) The Smallest Of The 3 Measurements Is The Number You Will Input For Size On Width.
                                 </p>
                               </span>
                             </div>
@@ -892,7 +913,7 @@ const ZebraBlinds = () => {
                               <span className={styles.step_tag_description_wrapper}>
                                 <p className={styles.step_tag_description}>
                                   Vertical Direction (Height) Measure Inside Window Frame Centre.
-                                  (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                  (As Shown In Picture Above With The Orange Liness) This Number You Will Input For Size On Height.
                                 </p>
                               </span>
 
@@ -1847,7 +1868,7 @@ const ZebraBlinds = () => {
                                 <span className={styles.step_tag_description_wrapper}>
                                   <p className={styles.step_tag_description}>
                                     Horizontal Direction (Width) Measure Width Including Window Trim In The Center
-                                    (As Shown In Below Picture Orange Lines) This Number You Will Input For Size On Width.</p>
+                                    (As Shown In Picture Above With The Orange Lines) This Number You Will Input For Size On Width.</p>
                                   <p className={styles.step_tag_description_note}>Note: We Will Add 2” Per Side To Allow Overlap Of Trim.</p>
                                 </span>
                               </div>
@@ -1859,7 +1880,7 @@ const ZebraBlinds = () => {
                                 <span className={styles.step_tag_description_wrapper}>
                                   <p className={styles.step_tag_description}>
                                     Vertical Direction (Height) Measure Height Including Window Trim In The Center
-                                    (As Shown In Below Picture Purple Lines) This Number You Will Input For Size On Height.
+                                    (As Shown In Picture Above With The Orange Lines) This Number You Will Input For Size On Height.
                                   </p>
                                   <p className={styles.step_tag_description_note}>Note: We Will Add 5-1/2” On Height To Allow Overlap Of Trim & Space For Top Cassette.</p>
                                 </span>
@@ -2870,9 +2891,9 @@ const ZebraBlinds = () => {
                     </div>
 
                     <div className={styles.select_chain_option1_options}>
-                      <div className={styles.wand_subtitle}>Wand</div>
+                      <div className={styles.wand_subtitle}> <span className={styles.price_bar}>${WandPriceCMS}</span></div><span className={styles.priced_item}>Wand</span>
                       <div className={styles.options_price_seperator}></div>
-                      <div className={styles.free_subtitle}>Free</div>
+                      <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
 
                       <div className={styles.wand_extra_buttons}>
                         <button>
@@ -2933,9 +2954,9 @@ const ZebraBlinds = () => {
 
 
                     <div className={styles.select_chain_option2_options}>
-                      <div className={styles.cord_less_subtitle}>Cord Less</div>
+                      <div className={styles.cord_less_subtitle}> <span className={styles.price_bar}>${cordlesspriceCMS}</span></div><span className={styles.priced_item}>Cord Less</span>
                       <div className={styles.options_price_seperator}></div>
-                      <div className={styles.cordlift_price_value_subtitle}>$05.00</div>
+                      <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}</div>
                     </div>
 
                     <div className={styles.cord_less_option_image_placeholder}>
@@ -2962,10 +2983,10 @@ const ZebraBlinds = () => {
                     </div>
 
                     <div className={styles.select_chain_option3_options}>
+                      <div className={styles.motorized_subtitle}> <span className={styles.price_bar}>${motorizedpriceCMS}</span></div><span className={styles.priced_item}>Motorized</span>
 
-                      <div className={styles.motorized_subtitle}>Motorized</div>
                       <div className={styles.options_price_seperator}></div>
-                      <div className={styles.motorized_price_value_subtitle}>$100.00</div>
+                      <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}</div>
                     </div>
 
                     <div className={styles.motorized_option_image_placeholder}>
@@ -3404,6 +3425,7 @@ const ZebraBlinds = () => {
                       <Link href={'/addtocart'}>
 
                         <div className={styles.add_to_cart_rectangle}>
+                          <div className={styles.total_price}>TOTAL: {totalpricecalculated}</div>
 
                           <p className={styles.add_to_cart}>ADD TO CART</p>
 
@@ -3439,7 +3461,7 @@ const ZebraBlinds = () => {
 
                   <div className={styles.shipping_tagger_prt2}>
                     <div className={styles.qty_1}>Qty 1</div>
-                    <div className={styles.total_price}>$00.00</div>
+                    <div className={styles.total_price}>TOTAL: {totalpricecalculated}</div>
                   </div>
 
                 </div>

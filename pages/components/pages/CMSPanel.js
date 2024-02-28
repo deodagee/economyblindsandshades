@@ -42,6 +42,11 @@ const CMSPanel = () => {
   const { postData, updateData } = useData();
   const [productName1, setProductName1] = useState("");
   const [productName2, setProductName2] = useState("");
+  const [WandPriceCMS, setWandPriceCMS] = useState("");
+  const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
+  const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
+
+
 
   const fetchLatestData = async () => {
     try {
@@ -52,6 +57,12 @@ const CMSPanel = () => {
       if (latestData) {
         setProductName1(latestData.productName1 || "");
         setProductName2(latestData.productName2 || "");
+        setWandPriceCMS(latestData.WandPriceCMS || "");
+        setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+        setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
+
+
+
       }
     } catch (error) {
       console.error("Error fetching latest data:", error);
@@ -74,6 +85,11 @@ const CMSPanel = () => {
           name: `standard_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
+
+
         }),
       });
 
@@ -99,6 +115,9 @@ const CMSPanel = () => {
           name: `unique_${Date.now()}`, // Append timestamp for uniqueness
           productName1: productName1,
           productName2: productName2,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
         }),
       });
 
@@ -113,11 +132,99 @@ const CMSPanel = () => {
     }
   };
 
+
+  const handleSave3 = async () => {
+    try {
+      const response = await fetch("/api/test/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `unique_${Date.now()}`, // Append timestamp for uniqueness
+          productName1: productName1,
+          productName2: productName2,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
+
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Response from server:", result);
+        // Call updateData with the updated data
+        updateData && updateData(result.data);
+      }
+    } catch (error) {
+      console.error("Error saving new name:", error);
+    }
+  };
+
+  const handleSave4 = async () => {
+    try {
+      const response = await fetch("/api/test/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `unique_${Date.now()}`, // Append timestamp for uniqueness
+          productName1: productName1,
+          productName2: productName2,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
+
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Response from server:", result);
+        // Call updateData with the updated data
+        updateData && updateData(result.data);
+      }
+    } catch (error) {
+      console.error("Error saving new name:", error);
+    }
+  };
+
+  const handleSave5 = async () => {
+    try {
+      const response = await fetch("/api/test/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `unique_${Date.now()}`, // Append timestamp for uniqueness
+          productName1: productName1,
+          productName2: productName2,
+          WandPriceCMS: WandPriceCMS,
+          cordlesspriceCMS: cordlesspriceCMS,
+          motorizedpriceCMS: motorizedpriceCMS,
+
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Response from server:", result);
+        // Call updateData with the updated data
+        updateData && updateData(result.data);
+      }
+    } catch (error) {
+      console.error("Error saving new name:", error);
+    }
+  };
   
   return (
     <>
       {session ? (
         <div className={styles.cmspanel_wrapper}>
+
           <div className={styles.cms_panel_section}>
             <label className={styles.cms_panel_label}>Change Page Title:</label>
             <input
@@ -129,12 +236,11 @@ const CMSPanel = () => {
             <button className={styles.button} onClick={handleSave1}>
               Save
             </button>
-
             <h1 className={styles.key_locker1}>{postData && postData.productName1}</h1>
           </div>
 
           <div className={styles.cms_panel_section}>
-            <label className={styles.cms_panel_label}>Page Title Tag:</label>
+            <label className={styles.cms_panel_label}>Change Page Title Tag:</label>
             <input
               className={styles.cms_panel_input_box}
               type="text"
@@ -144,10 +250,64 @@ const CMSPanel = () => {
             <button className={styles.button} onClick={handleSave2}>
               Save
             </button>
-
-            <h1 className={styles.key_locker2}>{postData && postData.productName2}</h1>
+            <div className={styles.key_locker2}>
+            <h1 >{postData && postData.productName2}</h1>
+            </div>
           </div>
+
+
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Change Wand Price:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={WandPriceCMS}
+              onChange={(e) => setWandPriceCMS(e.target.value)}
+            />
+            <button className={styles.button} onClick={handleSave3}>
+              Save
+            </button>
+            <div className={styles.key_locker2}>
+            <h1 >{postData && postData.WandPriceCMS}</h1>
+          </div>
+          </div>
+
+
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Change Cordless Price:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={cordlesspriceCMS}
+              onChange={(e) => setcordlesspriceCMS(e.target.value)}
+            />
+            <button className={styles.button} onClick={handleSave4}>
+              Save
+            </button>
+            <div className={styles.key_locker2}>
+            <h1 >{postData && postData.cordlesspriceCMS}</h1>
+            </div>
+          </div>
+
+          <div className={styles.cms_panel_section}>
+            <label className={styles.cms_panel_label}>Change Motorized Price:</label>
+            <input
+              className={styles.cms_panel_input_box}
+              type="text"
+              value={motorizedpriceCMS}
+              onChange={(e) => setmotorizedpriceCMS(e.target.value)}
+            />
+            <button className={styles.button} onClick={handleSave5}>
+              Save
+            </button>
+            <div className={styles.key_locker2}>
+            <h1 >{postData && postData.motorizedpriceCMS}</h1>
+            </div>
+          </div>
+
         </div>
+
+
       ) : (
         <div className={styles.warning}>
         <p className={styles.warning_section_title}>

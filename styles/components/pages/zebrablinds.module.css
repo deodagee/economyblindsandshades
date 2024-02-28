@@ -1827,9 +1827,22 @@
   display: flex;
   width: 20px;
   height: 20px;
-  background-color: #9f9f9f;
+  background-color: #d2d2d2;
   border-radius: 1rem;
+  transition: 0.1s;
+  box-shadow: #5c5c5c 0px 0px 2px;
 }
+
+.wand_ellipse:hover,
+.cord_less_ellipse:hover,
+.motorized_ellipse:hover {
+  transform: scale(0.95);
+  transition: 0.1s;
+  background-color: #5b5b5b;
+  box-shadow: #5c5c5c 0px 0px 5px;
+
+}
+
 
 .active_wand_cordless_motorized {
   display: flex;
@@ -1845,11 +1858,22 @@
   width: 30vw;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10%;
+  gap: 30px;
   align-items: center;
 }
 
 
+.postedwandprice { 
+  display: flex;
+  padding: 2px;
+  width: 100px;
+  height: 20px;
+  color: black;
+  font-size: 20px;
+  border-width: 1px;
+  border-color: black;
+
+}
 
 .wand_subtitle,
 .cord_less_subtitle,
@@ -1858,13 +1882,45 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  width: 80px;
+  width: 50px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 0.45rem;
+  box-shadow: rgb(101, 101, 101) 0px 0px 2px;
+  border-color: #004d0a;
+  border-width: 2px;
+  white-space: nowrap;
+  transition: 0.1s;
+}
+
+.wand_subtitle:hover,
+.cord_less_subtitle:hover,
+.motorized_subtitle:hover {
+  transform: scale(0.95);
+  transition: 0.1s;
+  background-color: #ffffff;
+  box-shadow: #333333 0px 0px 4px;
+
+}
+
+.priced_item { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  width: 100px;
   height: 20px;
   padding: 10px;
   border-radius: 0.45rem;
   border-color: #8f8f8f;
   border-width: 1px;
   white-space: nowrap;
+}
+
+.price_bar { 
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 
