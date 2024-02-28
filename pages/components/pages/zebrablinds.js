@@ -3425,7 +3425,7 @@ const ZebraBlinds = () => {
                       <Link href={'/addtocart'}>
 
                         <div className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
 
                           <p className={styles.add_to_cart}>ADD TO CART</p>
 
@@ -3461,7 +3461,7 @@ const ZebraBlinds = () => {
 
                   <div className={styles.shipping_tagger_prt2}>
                     <div className={styles.qty_1}>Qty 1</div>
-                    <div className={styles.total_price}>TOTAL: {totalpricecalculated}</div>
+                    <div className={styles.total_price}>TOTAL:$ {totalpricecalculated}</div>
                   </div>
 
                 </div>
