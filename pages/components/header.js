@@ -62,13 +62,13 @@ function HeaderPiece() {
 
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
-        <div className={styles.header_logo_mobile}>
-              <li className={styles.header_logo_wrapper}>
-                <Link href={'/'}>
-                  <Image className={styles.logo_image_mobile} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
-                </Link>
-              </li>
-            </div>
+          <div className={styles.header_logo_mobile}>
+            <li className={styles.header_logo_wrapper}>
+              <Link href={'/'}>
+                <Image className={styles.logo_image_mobile} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
+              </Link>
+            </li>
+          </div>
 
           <div className={styles.logo_and_header_1st_and_2nd_bar}>
             <div className={styles.header_logo}>
@@ -124,19 +124,15 @@ function HeaderPiece() {
 
                   <span className={styles.icon_and_text_contact_and_privacy} >
 
-                    <div>
-                      <Link className={styles.top_links_item}
-                        href={"/contact"}
-                      > Contact
-                      </Link>
-                    </div>
+                    <Link className={styles.top_links_item}
+                      href={"/contact"}
+                    > Contact
+                    </Link>
 
                     <div className={styles.divider_line}
                     ></div>
 
-                    <div>
-                      <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
-                    </div>
+                    <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
 
                   </span>
 
@@ -146,9 +142,28 @@ function HeaderPiece() {
               <ul className={styles.second_bar}>
                 <span className={styles.second_bar_wrapper}>
 
-                  <li className={styles.second_menu_bar_item}>
-                    <Link className={styles.header_link} href={"/"} > Home </Link>
-                  </li>
+                  <div className={styles.hamburger_icon}>
+                    <span className={styles.hamburger_line}></span>
+                    <span className={styles.hamburger_line}></span>
+                    <span className={styles.hamburger_line}></span>
+                  </div>
+
+                  <Link className={styles.header_link_one} href={"/"} >
+                    <li className={styles.second_menu_bar_item_one}>
+                      <span>
+                        <Image
+                          alt="homebutton"
+                          width={100}
+                          height={100}
+                          src={"/homebutton.png"}
+                          className={styles.home_button}>
+                        </Image>
+                      </span>
+                      <span>
+                      <div className={styles.home_button_text}>Home</div>
+                      </span>
+                    </li>
+                  </Link>
 
                   <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu1')}>
                     <div className={styles.tag_and_chevron}>
@@ -342,7 +357,7 @@ function HeaderPiece() {
                       <div className={styles.drop_down_wrapper}>
                         {openMenu.menu5 && (
                           <>
-                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                            <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                               <div className={styles.drop_down_wrapper_list}>
                                 <ul>
                                   <Link href={"/"}>
@@ -407,7 +422,7 @@ function HeaderPiece() {
                               alt="add_to_cart"
                               width={100}
                               height={100}
-                              src={"/cart.png"}>
+                              src={"/cartblack.png"}>
                             </Image>
                           </div>
                         </div>
@@ -416,19 +431,6 @@ function HeaderPiece() {
                     )}
                   </div>
                 </span>
-
-
-                <div className={styles.hamburger_icon}>
-                  <span className={styles.hamburger_line}></span>
-                  <span className={styles.hamburger_line}></span>
-                  <span className={styles.hamburger_line}></span>
-
-
-                </div>
-
-
-
-
 
               </ul>
             </div>
