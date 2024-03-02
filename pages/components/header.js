@@ -62,6 +62,13 @@ function HeaderPiece() {
 
       <div ref={dropdownMenuRef} >
         <div className={styles.header_wrapper}>
+        <div className={styles.header_logo_mobile}>
+              <li className={styles.header_logo_wrapper}>
+                <Link href={'/'}>
+                  <Image className={styles.logo_image_mobile} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
+                </Link>
+              </li>
+            </div>
 
           <div className={styles.logo_and_header_1st_and_2nd_bar}>
             <div className={styles.header_logo}>
@@ -73,9 +80,8 @@ function HeaderPiece() {
             </div>
             <div className={styles.header_1st_and_2nd_bar}>
 
+
               <div className={styles.first_bar}>
-
-
 
                 <div className={styles.icons_group}>
 

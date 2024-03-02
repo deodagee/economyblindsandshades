@@ -16,7 +16,6 @@ export default function HomePage() {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Adjust the threshold as needed
       const threshold = 100;
 
       // Check if we are close to the bottom of the page
@@ -138,7 +137,7 @@ export default function HomePage() {
                 Best Option for beautiful and affordable blinds and shades!
               </p>
               <p className={styles.add2}>
-                Please contact us if you cannot find an answer to your question
+                Please contact us if you cannot find an answer to your question(s).
               </p>
             </div>
 

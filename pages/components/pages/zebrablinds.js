@@ -179,8 +179,6 @@ const ZebraBlinds = () => {
       default:
     }
 
-    newTotalPrice += (active_wand_left_choice === 4) ? WandPriceCMS : "";
-    newTotalPrice += (active_wand_right_choice === 5) ? WandPriceCMS : "";
 
     setTotalPriceCalculated(newTotalPrice);
   };
@@ -843,18 +841,18 @@ const ZebraBlinds = () => {
 
                 <div className={styles.top_title_area}>
 
-                <span className={styles.product_title_styles_styles_and_product_roomname}>
+                  <span className={styles.product_title_styles_styles_and_product_roomname}>
                     <h1 className={styles.product_title_styles}>
                       {productName1}
                     </h1>
                     <h1 className={styles.product_roomname}>
-                     <p>Room Name:</p> <p>{roomname}</p>
+                      <p>Room Name:</p> <p>{roomname}</p>
                     </h1>
-                    </span>
-                  
-                    <h1 className={styles.product_lightening_styles}>
-                      {productName2}
-                    </h1>
+                  </span>
+
+                  <h1 className={styles.product_lightening_styles}>
+                    {productName2}
+                  </h1>
 
                 </div>
 
@@ -2965,21 +2963,24 @@ const ZebraBlinds = () => {
 
                       <div className={styles.wand_extra_buttons}>
                         <button>
-                          <div className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
-                            onClick={() => handleLiftFeatureEllipsess(4)}>
+                          <div
+                            className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
+                            onClick={() => handleLiftFeatureEllipsess(4)}
+                          >
                             Left
                           </div>
                         </button>
 
                         <button>
-
-                          <div className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
-                            onClick={() => handleLiftFeatureEllipsess(5)}>
+                          <div
+                            className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
+                            onClick={() => handleLiftFeatureEllipsess(5)}
+                          >
                             Right
                           </div>
                         </button>
-
                       </div>
+
                     </div>
                     <div className={styles.wand_option_image_placeholder}>
                       {showImageleft && (
