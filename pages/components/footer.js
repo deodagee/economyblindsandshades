@@ -12,7 +12,7 @@ function FooterPage() {
 
                 <span className={styles.image_and_title}>
                     <span>
-                        <div className={styles.footer_title}>
+                        <div className={styles.footer_subtitle1}>
                             Economy Blinds And Shades
                         </div>
                     </span>
@@ -23,18 +23,23 @@ function FooterPage() {
                     </li>
                 </span>
 
-                <span className={styles.footer_title_group}>
+                <span className={styles.footer_subtitle_group}>
 
 
                     <span>
                         <div className={styles.footer_subtitle}>
-                            Elevate Your Space, Illuminate Your Style.
+                        Title
                         </div>
                     </span>
 
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            We Can Ship To Your Location
+                            Details
+                        </div>
+                    </span>
+                    <span>
+                        <div className={styles.footer_subtitle2}>
+                            Details
                         </div>
                     </span>
 
@@ -43,71 +48,76 @@ function FooterPage() {
 
 
 
-                <span className={styles.footer_title_group}>
+                <span className={styles.footer_subtitle_group}>
 
 
                     <span>
                         <div className={styles.footer_subtitle}>
                             <Link
                             href={"/privacypolicy"}>
-                            Privacy Policy
+                            Title
                             </Link>
                         </div>
                     </span>
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            Locations
+                        Details
                         </div>
                     </span>
 
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            Shipping Info
+                        Details
                         </div>
                     </span>
 
                 </span>
 
 
-                <span className={styles.footer_title_group}>
+                <span className={styles.footer_subtitle_group}>
 
 
                     <span>
                         <div className={styles.footer_subtitle}>
                             <Link
                             href={"/contact"}>
-                            Contact Us
+                            Title
                             </Link>
                         </div>
                     </span>
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            Special Orders
+                        Details
                         </div>
                     </span>
 
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            More
+                        Details
                         </div>
                     </span>
 
                 </span>
 
-                <span className={styles.footer_title_group}>
+                <span className={styles.footer_subtitle_group}>
 
 
                     <span>
                         <div className={styles.footer_subtitle}>
                             <Link 
                             href={"/"}>
-                            Home Page
+                            Home
                             </Link>
                         </div>
                     </span>
                     <span>
                         <div className={styles.footer_subtitle2}>
-                            Other
+                        Details
+                        </div>
+                    </span>
+                    <span>
+                        <div className={styles.footer_subtitle2}>
+                            Details
                         </div>
                     </span>
 
