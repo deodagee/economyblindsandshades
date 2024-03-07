@@ -748,7 +748,7 @@ const ZebraBlinds = () => {
                           width={200}
                           height={200}
                           className={styles.left_first_image_render}
-                          src="/rfblinds.jpg"
+                          src="/imageslider1.png"
                           alt="Default Image"
                         />
                         <h3 className={styles.left_imageContainer_image_itself1_label}>Welcome</h3>
