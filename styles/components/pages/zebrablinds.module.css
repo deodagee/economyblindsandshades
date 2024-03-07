@@ -195,7 +195,7 @@
 
 }
 
-.product_title_styles_styles_and_product_roomname { 
+.product_title_styles_styles_and_product_roomname {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -220,7 +220,7 @@
 
 }
 
-.product_roomname { 
+.product_roomname {
   display: flex;
   width: max-content;
   align-items: center;
@@ -1893,7 +1893,7 @@
 }
 
 
-.postedwandprice { 
+.postedwandprice {
   display: flex;
   padding: 2px;
   width: 100px;
@@ -1933,7 +1933,7 @@
 
 }
 
-.priced_item { 
+.priced_item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1947,7 +1947,7 @@
   white-space: nowrap;
 }
 
-.price_bar { 
+.price_bar {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -3001,7 +3001,7 @@
     width: 100vw;
     position: absolute;
     right: 10px;
-    top: 150px;
+    top: 200px;
   }
 
 
@@ -3036,6 +3036,7 @@
     width: 150px;
     align-items: center;
     justify-content: flex-start;
+    white-space: nowrap;
     word-wrap: nowrap;
     color: black;
     font-weight: 600;
@@ -3045,6 +3046,7 @@
   .product_lightening_styles {
     display: flex;
     width: 150px;
+    white-space: nowrap;
     word-wrap: nowrap;
     padding: 5px;
     padding-left: 20px;
