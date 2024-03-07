@@ -1674,8 +1674,8 @@
 
 .left_first_image_render_wrapper {
   display: flex;
-  width: 15vw;
-  height: 15vw;
+  width: 23vw;
+  height: auto;
   align-items: center;
   background-color: white;
   justify-content: center;
@@ -1684,7 +1684,8 @@
 
 .left_first_image_render {
   display: flex;
-
+  width: 23vw;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
