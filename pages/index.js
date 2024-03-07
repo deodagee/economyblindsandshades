@@ -49,33 +49,52 @@ export default function HomePage() {
           <div className={styles.home_wrapper}>
 
 
-            <div className={styles.box}>
+<div className={styles.three_icons}>
+<span className={styles.three_icons_wrapper}>
 
-              <div className={styles.box_prt1}>
-                <p className={styles.welcome}>Welcome</p>
-              </div>
+<div className={styles.three_icons_prt1}>
+  <Image
+    className={styles.three_icons_ICON_wrapper}
+  alt='threeicon'
+  width={100}
+  height={100}
+  src={"/freedelivery.png"}>
+  </Image>
+  <p className={styles.three_icons_ICON_wrapper_text}>A TRUSTED BRAND, TRUSTED PARTNERS</p>
+<p className={styles.three_icons_ICON_wrapper_description}>Economy Blinds & Shades over the years demonstrates the highest level of craftsmanship to fit all budgets.
+We take pride in a high-quality product backed by reliable reputation.</p>
+  </div>
 
-              <div className={styles.box_prt2}>
+  <div className={styles.three_icons_prt2}>
+  <Image
+  className={styles.three_icons_ICON_wrapper}
+  alt='threeicon'
+  width={100}
+  height={100}
+  src={"/freeshippingicon1.png"}>
+  </Image>
+  <p className={styles.three_icons_ICON_wrapper_text}>FREE DELIVERY NO MINIMUM PURCHASE NECESSARY</p>
+<p className={styles.three_icons_ICON_wrapper_description}>All of our blinds & shades are delivered free of charge.
 
-                <Link href={"/getaquote"}><p className={styles.getaquote}>Get A Quote</p></Link>
+This is another good reason to choose Economy Blinds & Shades for your beautiful window covering.</p>
+  </div>
 
-                <Link href={"/learnmore"}><p className={styles.learnmore}>Learn More</p></Link>
-              </div>
-              <div className={styles.socials_div}>
+  <div className={styles.three_icons_prt3}>
+  <Image
+    className={styles.three_icons_ICON_wrapper}
+  alt='threeicon'
+  width={100}
+  height={100}
+  src={"/trustedbrand.png"}>
+  </Image>
+  <p className={styles.three_icons_ICON_wrapper_text}>QUALITY & SUPERIOR PRODUCT</p>
+<p className={styles.three_icons_ICON_wrapper_description}>Customer satisfaction is most important to us, We hand pick high quality fabrics & materials to fit your custom-made window specified needs.</p>
 
-                <Link href="https://www.facebook.com/economyblindsandshadesinc">
-                  <Image alt='facebook' width={100} height={100} src={"/facebookicon.png"} className={styles.social_icons}>
-                  </Image>
-                </Link>
+  </div>
+  
+</span>
 
-                <Link href="https://www.instagram.com/economyblindsandshadesinc
-">
-                  <Image alt='instagram' width={100} height={100} src={"/instagramicon.png"} className={styles.social_icons}>
-                  </Image>
-                </Link>
-
-              </div>
-            </div>
+</div>
 
 
             <div className={styles.two_section_div5}>
@@ -83,7 +102,7 @@ export default function HomePage() {
                 <Link href={"/zebrablinds"}>
                   <div className={styles.rectangle_1}>
                     <span className={styles.linkitem}>
-                      1.Zebra Blinds
+                      Zebra Blinds
                       <br />
                     </span>
                   </div>
@@ -93,7 +112,7 @@ export default function HomePage() {
 
                   <div className={styles.rectangle_2}>
                     <span className={styles.linkitem}>
-                      2.Shangrila Blinds
+                      Shangrila Blinds
                       <br />
                     </span>
                   </div>
@@ -103,7 +122,7 @@ export default function HomePage() {
 
                   <div className={styles.rectangle_3}>
                     <span className={styles.linkitem}>
-                      3.Roman Blinds
+                    Roman Blinds
                       <br />
                     </span>
                   </div>
@@ -112,7 +131,7 @@ export default function HomePage() {
 
                   <div className={styles.rectangle_4}>
                     <span className={styles.linkitem}>
-                      4.Roller Blinds
+                    Roller Blinds
                       <br />
                     </span>
                   </div>
@@ -122,7 +141,7 @@ export default function HomePage() {
 
                   <div className={styles.rectangle_5}>
                     <span className={styles.linkitem}>
-                      5.Honeycomb Blinds
+                    Honeycomb Blinds
                     </span>
                   </div>
                 </Link>
