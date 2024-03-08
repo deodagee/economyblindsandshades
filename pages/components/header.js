@@ -161,11 +161,27 @@ function HeaderPiece() {
                     <div className={styles.side_menu_container}>
                     <div className={styles.side_menu}>
 
+
+                    <Link href={"/zebrablinds"}>
                       <p className={styles.side_menu_item}>Zebra Blinds</p>
+                      </Link>
+
+                      <Link href={"/"}>
                       <p className={styles.side_menu_item}>Shangrila Blinds</p>
+                      </Link>
+
+                      <Link href={"/"}>
                       <p className={styles.side_menu_item}>Roman Blinds</p>
+                      </Link>
+
+                      <Link href={"/"}>
                       <p className={styles.side_menu_item}>Roller Blinds</p>
+                      </Link>
+
+                      <Link href={"/"}>
                       <p className={styles.side_menu_item}>HoneyComb Blinds</p>
+                      </Link>
+
 
                     </div>
                     </div>
