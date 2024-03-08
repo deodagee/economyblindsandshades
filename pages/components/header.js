@@ -10,6 +10,13 @@ import { useSession, signIn, signOut } from "next-auth/react"
 function HeaderPiece() {
   /////////////////////////////////////////////////////////////////////////
   const { data: session } = useSession()
+
+  const [isSideMenuOpen, setSideMenuOpen] = useState(false);
+
+  const toggleSideMenu = () => {
+    setSideMenuOpen(!isSideMenuOpen);
+  };
+
   /////////////////////////////////////////////////////////////////////////
   const [openMenu, setOpenMenu] = useState({
     menu1: false,
@@ -142,10 +149,27 @@ function HeaderPiece() {
               <ul className={styles.second_bar}>
                 <span className={styles.second_bar_wrapper}>
 
-                  <div className={styles.hamburger_icon}>
+
+<div className={styles.burger_and_menu}>
+                  <div className={styles.hamburger_icon} onClick={toggleSideMenu}>
                     <span className={styles.hamburger_line}></span>
                     <span className={styles.hamburger_line}></span>
                     <span className={styles.hamburger_line}></span>
+                  </div>
+
+                  {isSideMenuOpen && (
+                    <div className={styles.side_menu_container}>
+                    <div className={styles.side_menu}>
+
+                      <p className={styles.side_menu_item}>Zebra Blinds</p>
+                      <p className={styles.side_menu_item}>Shangrila Blinds</p>
+                      <p className={styles.side_menu_item}>Roman Blinds</p>
+                      <p className={styles.side_menu_item}>Roller Blinds</p>
+                      <p className={styles.side_menu_item}>HoneyComb Blinds</p>
+
+                    </div>
+                    </div>
+                  )}
                   </div>
 
                   <Link className={styles.header_link_one} href={"/"} >
@@ -160,7 +184,7 @@ function HeaderPiece() {
                         </Image>
                       </span>
                       <span>
-                      <div className={styles.home_button_text}>Home</div>
+                        <div className={styles.home_button_text}>Home</div>
                       </span>
                     </li>
                   </Link>
