@@ -174,7 +174,7 @@ function HeaderPiece() {
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
-                        src={"/chevronwhite.png"}
+                        src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
                     </div>
@@ -229,7 +229,7 @@ function HeaderPiece() {
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
-                        src={"/chevronwhite.png"}
+                        src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
                     </div>
@@ -269,7 +269,7 @@ function HeaderPiece() {
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
-                        src={"/chevronwhite.png"}
+                        src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
                     </div>
@@ -309,7 +309,7 @@ function HeaderPiece() {
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
-                        src={"/chevronwhite.png"}
+                        src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
                     </div>
@@ -350,7 +350,7 @@ function HeaderPiece() {
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
-                        src={"/chevronwhite.png"}
+                        src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
 
@@ -401,7 +401,7 @@ function HeaderPiece() {
                               alt="add_to_cart"
                               width={100}
                               height={100}
-                              src={"/cart.png"}>
+                              src={"/cartblack.png"}>
                             </Image>
                           </div>
                         </div>
