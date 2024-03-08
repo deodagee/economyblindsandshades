@@ -167,9 +167,23 @@ This is another good reason to choose Economy Blinds & Shades for your beautiful
                   <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/howsooncanibookanestimate.png" />
 
                   <div className={styles.box_grid_text}>
-                    <div className={styles.title}>How soon can I book an estimate?</div>
+                    <div className={styles.title}>How To Measure</div>
                     <div className={styles.description}>
-                      We can usually be out at potential clients homes, within 24 hours of initial contact.
+                      <span>
+                    Always use a steel tape measure.
+                    </span>
+                    <span>
+                    - For inside mount measurements, enter the exact frame-to-frame dimensions of your window and we will make the deductions. 
+                    </span>
+                    <span>
+                    Measure to the nearest 1/8 &quot; of an inch. If your dimension is at 1/16 &quot; of an inch, round it down.
+                    </span>
+                    <span>
+                      -For outside mount measurements, add 2” past the trim on the width & 5” past the trim on the height.
+                    </span>
+                    <span>
+                    Full Reference instructions at the top of each order page
+                    </span>
                     </div>
                   </div>
                 </div>
@@ -205,12 +219,7 @@ This is another good reason to choose Economy Blinds & Shades for your beautiful
                 <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
                 <div className={styles.box_grid_text}>
                   <div className={styles.title}>What Type Of Blinds Do You Install?</div>
-                  <div className={styles.description}>
-                    At Economy Blinds & Shades Inc., we offer a wide range of blinds to suit your unique style and needs. Our expert installation team can install the following types of blinds:
-                  </div>
-                  <div className={styles.description}>
-                    Each type of blind offers its own set of benefits and aesthetics, allowing you to choose the perfect window treatment that complements your interior decor and lifestyle. Our team is here to help you make an informed decision and ensure a seamless installation process. See a full description of our blinds below.
-                  </div>
+
                 </div>
               </div>
               </div>
