@@ -870,12 +870,12 @@ const ZebraBlinds = () => {
 
 
                 <div
-                  className={styles.a_distinctive_look_that}
-                >
+                  className={styles.a_distinctive_look_that}>
                   A distinctive look that makes a statement, this revolutionary sheer shade
                   adds personality to any room. These zebra shades are made with two pieces
                   of fabric, which both have alternating panels/bands.
                 </div>
+
               </div>
 
 
@@ -884,33 +884,29 @@ const ZebraBlinds = () => {
               <div className={styles.inside_mount_and_outside_mount_whole_wrapper}>
 
                 <span className={styles.inside_mount_and_outside_mount_group_titles_wrapper}>
-                  <div className={styles.select_mount_type_long_rectangle}
-                  >
+
+                  <div className={styles.select_mount_type_long_rectangle}>
+
                     <div className={styles.select_mount_type_short_rectangle}>
-                      <Image
-                        className={styles.iconforselect_mount_type}
-                        alt="iconforselectcolor"
-                        width={100}
-                        height={100}
-                        src={"/chevronleft.png"}>
-                      </Image>
-                      <div className={styles.select_mount_type_group_title}>
-                        <span className={styles.select_mount_type_group_title_tag}>1</span>
-                        Choose Your Mount Type</div>
+
+                      <div className={styles.select_mount_type_title}>
+                        <span className={styles.select_mount_type_title_tag}>1</span>
+                        Choose Your Mount Type
+                        </div>
+
                     </div>
                   </div>
+
                   <div className={styles.ellipse_and_type}>
                     <div
                       className={`${styles.inside_mount_ellipse} ${active_inside_outside_ellipse === 1 ? styles.active_inside_outside_ellipse : ''}`}
-                      onClick={() => handleClickInside_And_Outside_Ellipses(1)}
-                    >
+                      onClick={() => handleClickInside_And_Outside_Ellipses(1)}>
                     </div>
                     <div className={styles.inside_mount_choice}>Inside Mount</div>
 
                     <div
                       className={`${styles.outside_mount_ellipse} ${active_inside_outside_ellipse === 2 ? styles.active_inside_outside_ellipse : ''}`}
-                      onClick={() => handleClickInside_And_Outside_Ellipses(2)}
-                    >
+                      onClick={() => handleClickInside_And_Outside_Ellipses(2)}>
                     </div>
                     <div className={styles.outside_mount_choice}>Outside Mount</div>
                   </div>
@@ -2876,24 +2872,25 @@ const ZebraBlinds = () => {
 
 
 
+
               <div className={styles.review_your_order_seperator_line}></div>
 
 
 
               <div className={styles.select_color_group}>
 
+              <div className={styles.select_color_group_whole_wrapper}>
 
+              <span className={styles.select_color_group_titles_wrapper}>
                 <div className={styles.select_color_long_rectangle}
                 >
                   <div className={styles.select_color_short_rectangle}>
-                    <Image
-                      className={styles.iconforselectcolor}
-                      alt="iconforselectcolor"
-                      width={100}
-                      height={100}
-                      src={"/chevronleft.png"}>
-                    </Image>
-                    <div className={styles.select_color_title}> <span className={styles.select_color_group_title_tag}>2 </span> Select Color / Material</div>
+
+                    <div className={styles.select_color_title}>
+                       <span className={styles.select_color_group_title_tag}>2</span>
+                     Select Color / Material
+                    </div>
+
                   </div>
                 </div>
 
@@ -2901,6 +2898,8 @@ const ZebraBlinds = () => {
                   <div className={styles.select_color_subtitle}> Select Material</div>
                   <div>Click On A Color To Choose And Add</div>
                 </div>
+
+                </span>
 
                 <div className={styles.selectColorImageCollection}>
                   {Object.keys(colorData).map((color) => (
@@ -2912,43 +2911,41 @@ const ZebraBlinds = () => {
                 </div>
 
               </div>
+              </div>
 
               <div className={styles.review_your_order_seperator_line}></div>
 
-              <div className={styles.select_lift_type_group}>
-                <span className={styles.titled_step_combo}>
+              <div className={styles.select_lift_type_group_whole_wrapper}>
 
-                  <div
-                    className={styles.select_lift_type_long_rectangle}
-                  >
-                    <div
-                      className={styles.select_lift_type_short_rectangle}
-                    >
-                      <Image
-                        className={styles.iconforselectlifttype}
-                        alt="iconforselectlifttype"
-                        width={100}
-                        height={100}
-                        src={"/chevronleft.png"}>
-                      </Image>
-                      <div className={styles.select_lift_type_group_title}>
-                        <span className={styles.select_lift_type_group_title_tag}>3</span>
+                <span className={styles.select_lift_type_group_titles_wrapper}>
+
+                  <div className={styles.select_lift_type_long_rectangle}>
+
+                    <div className={styles.select_lift_type_short_rectangle}>
+                        
+                      <div className={styles.select_lift_type_title}>
+                        <span className={styles.select_lift_type_title_tag}>3</span>
                         Select Lift Type
                       </div>
+
                     </div>
                   </div>
-                </span>
 
-                <div className={styles.select_lift_type_subtitle_wrapper}>
+                  <div className={styles.ellipse_and_type_select_lift}>
                   <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                   <div>
                     Select Wand, Cordless Or Motorized
                   </div>
                 </div>
 
+                </span>
+
+
+
                 <div className={styles.select_chain_option1_wrapper}>
 
                   <div className={styles.select_chain_option1_ellipse_and_options}>
+
                     <div className={styles.select_chain_option1_ellipse_wrapper}>
                       <span
                         className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
@@ -2956,64 +2953,81 @@ const ZebraBlinds = () => {
                       ></span>
                     </div>
 
-                    <div className={styles.select_chain_option1_options}>
-                      <div className={styles.wand_subtitle}> <span className={styles.price_bar}>${WandPriceCMS}</span></div><span className={styles.priced_item}>Wand</span>
-                      <div className={styles.options_price_seperator}></div>
-                      <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
 
-                      <div className={styles.wand_extra_buttons}>
-                        <button>
-                          <div
-                            className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
-                            onClick={() => handleLiftFeatureEllipsess(4)}
-                          >
-                            Left
-                          </div>
-                        </button>
+                    <div className={styles.select_chain_options___side_wrapper}>
+                    <div className={styles.select_chain_options___side}>
+                      <div className={styles.select_chain_option1_options}>
 
-                        <button>
-                          <div
-                            className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
-                            onClick={() => handleLiftFeatureEllipsess(5)}
-                          >
-                            Right
-                          </div>
-                        </button>
+                        <div className={styles.wand_subtitle}> 
+                        <span className={styles.price_bar}>${WandPriceCMS}</span>
+                        </div>
+
+                        <span className={styles.priced_item}>Wand</span>
+
+                        <div className={styles.options_price_seperator}></div>
+                        <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
+
+                        <div className={styles.wand_extra_buttons}>
+                          <button>
+                            <div
+                              className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(4)}
+                            >
+                              Left
+                            </div>
+                          </button>
+
+                          <button>
+                            <div
+                              className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(5)}
+                            >
+                              Right
+                            </div>
+                          </button>
+                        </div>
+
+                        </div>
                       </div>
 
-                    </div>
-                    <div className={styles.wand_option_image_placeholder}>
-                      {showImageleft && (
-                        <div className={styles.showleftchain_wrapper}>
-                          <Image
-                            width={400}
-                            height={400}
-                            className={styles.show_left_chain_image_render}
-                            alt="showleftchain"
-                            src="/leftside.png"
-                          />
-                        </div>
-                      )}
+                      <div className={styles.select_chain_options___side}>
+                      <div className={styles.wand_option_image_placeholder}>
+                        {showImageleft && (
+                          <div className={styles.showleftchain_wrapper}>
+                            <Image
+                              width={400}
+                              height={400}
+                              className={styles.show_left_chain_image_render}
+                              alt="showleftchain"
+                              src="/leftside.png"
+                            />
+                          </div>
+                        )}
 
 
-                      {showImageright && (
-                        <div className={styles.showrightchain_wrapper}>
-                          <Image
-                            width={400}
-                            height={400}
-                            className={styles.show_left_chain_image_render}
-                            alt="showleftchain"
-                            src="/rightside.png"
-                          />
-                        </div>
-                      )}
-                    </div>
+                        {showImageright && (
+                          <div className={styles.showrightchain_wrapper}>
+                            <Image
+                              width={400}
+                              height={400}
+                              className={styles.show_left_chain_image_render}
+                              alt="showleftchain"
+                              src="/rightside.png"
+                            />
+                          </div>
+                        )}
+                      </div>
+                      </div>
+                      </div>
+
                   </div>
                 </div>
 
 
                 <div className={styles.select_chain_option2_wrapper}>
                   <div className={styles.select_chain_option2_ellipse_and_options}>
+
+
                     <div className={styles.select_chain_option2_ellipse_wrapper}>
                       <span
                         className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
@@ -3022,12 +3036,26 @@ const ZebraBlinds = () => {
                     </div>
 
 
+
+                    <div className={styles.select_chain_options___side_wrapper}>
+                    <div className={styles.select_chain_options___side}>
+
                     <div className={styles.select_chain_option2_options}>
-                      <div className={styles.cord_less_subtitle}> <span className={styles.price_bar}>${cordlesspriceCMS}</span></div><span className={styles.priced_item}>Cord Less</span>
+
+                      <div className={styles.cord_less_subtitle}> 
+                      <span className={styles.price_bar}>${cordlesspriceCMS}</span>
+                      </div>
+
+                      <span className={styles.priced_item}>Cord Less</span>
+
                       <div className={styles.options_price_seperator}></div>
-                      <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}</div>
+                      
+                      <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}
+                      </div>
+                    </div>
                     </div>
 
+                    <div className={styles.select_chain_options___side}>
                     <div className={styles.cord_less_option_image_placeholder}>
                       <Image
                         width={400}
@@ -3036,6 +3064,9 @@ const ZebraBlinds = () => {
                         src="/cordlesslift.png"
                       />
                     </div>
+                    </div>
+                    </div>
+
 
                   </div>
                 </div>
@@ -3043,6 +3074,7 @@ const ZebraBlinds = () => {
 
                 <div className={styles.select_chain_option3_wrapper}>
                   <div className={styles.select_chain_option3_ellipse_and_options}>
+
                     <div className={styles.select_chain_option3_ellipse_wrapper}>
                       <span
                         className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
@@ -3051,13 +3083,26 @@ const ZebraBlinds = () => {
                       ></span>
                     </div>
 
+
+                    <div className={styles.select_chain_options___side_wrapper}>
+                    <div className={styles.select_chain_options___side}>
+
                     <div className={styles.select_chain_option3_options}>
-                      <div className={styles.motorized_subtitle}> <span className={styles.price_bar}>${motorizedpriceCMS}</span></div><span className={styles.priced_item}>Motorized</span>
+
+                      <div className={styles.motorized_subtitle}> 
+                      <span className={styles.price_bar}>${motorizedpriceCMS}</span>
+                      </div>
+
+                      <span className={styles.priced_item}>Motorized</span>
 
                       <div className={styles.options_price_seperator}></div>
-                      <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}</div>
+
+                      <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}
+                      </div>
+                    </div>
                     </div>
 
+                    <div className={styles.select_chain_options___side}>
                     <div className={styles.motorized_option_image_placeholder}>
                       <Image
                         width={400}
@@ -3065,21 +3110,21 @@ const ZebraBlinds = () => {
                         alt="showrightchain"
                         src="/motorizedlift.png"
                       />
+
                     </div>
+                    </div>
+                    </div>
+
 
                   </div>
                 </div>
-
-
               </div>
-
-
 
               <div>
                 <div>
                   <div className={styles.select_head_rail_group}>
 
-                    <span className={styles.titled_step_combo}>
+                    <span className={styles.titled_step_combo2}>
                       <div className={styles.select_cassette_head_rail_long_rectangle}
                       >
                         <div
@@ -3095,8 +3140,6 @@ const ZebraBlinds = () => {
                           <div className={styles.select_head_rail_group_title}>
                             <span className={styles.select_head_rail_group_title_tag}>4</span> Top Rail
                           </div>
-
-
                         </div>
                       </div>
                     </span>
