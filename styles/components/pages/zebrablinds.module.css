@@ -1535,9 +1535,11 @@
 }
 
 .materials_image_container:hover {
+  transform: scale(2);
   box-shadow: #3a3a3a 2px 3px 7px;
   border-width: 5px;
-  transition: 0.2s;
+  transition: 0.8s;
+  background-color: white;
 }
 
 .selectedImage {
@@ -2508,35 +2510,54 @@
   align-items: flex-start;
 }
 
+
+
+.materials_answer_image { 
+display: flex;
+height: 90px;
+gap: 5px;
+align-items: center;
+justify-content: center;
+}
+
+.materials_answer_image_label { 
+  display: flex;
+}
+
+.materials_answer_image_itself { 
+display: flex;
+height: 50px;
+width: auto;
+}
+
 .casette_rail_type_answer_container {
   display: flex;
-  flex-direction: row;
+  height: 90px;
+  gap: 5px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .casette_rail_type_answer_image_render {
   display: flex;
-  width: 70px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+  height: 50px;
+  width: auto;
 }
 
 .bottom_rail_type_answer_container {
   display: flex;
-  flex-direction: column;
+  height: 90px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
 .bottom_rail_type_answer_image_render {
   display: flex;
-  width: 70px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+  height: 50px;
+  width: auto;
 }
 
 .answers_answers,
@@ -3654,3 +3675,4 @@
   }
 
 }
+
