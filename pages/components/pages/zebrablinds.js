@@ -563,8 +563,8 @@ const ZebraBlinds = () => {
               className={styles.left_first_image_render}
               src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
               alt='matcher-image'
-              width={100}
-              height={100}
+              width={300}
+              height={300}
             />
           </div>
           <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
@@ -902,8 +902,8 @@ const ZebraBlinds = () => {
                           className={styles.left_first_image_render}
                           src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
                           alt='image'
-                          width={200}
-                          height={200}
+                          width={300}
+                          height={300}
                         />
 
                       </div>
@@ -919,8 +919,8 @@ const ZebraBlinds = () => {
                             </span>
                             <div className={styles.left_first_image_render_wrapper}>
                               <Image
-                                width={100}
-                                height={100}
+                                width={200}
+                                height={200}
                                 className={styles.left_first_image_render}
                                 src={
                                   (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
@@ -945,8 +945,8 @@ const ZebraBlinds = () => {
                             </span>
                             <div className={styles.left_first_image_render_wrapper}>
                               <Image
-                                width={100}
-                                height={100}
+                                width={200}
+                                height={200}
                                 className={styles.left_first_image_render}
                                 src={
                                   (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
