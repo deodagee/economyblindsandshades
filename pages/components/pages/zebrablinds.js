@@ -283,6 +283,7 @@ const ZebraBlinds = () => {
   ];
 
   const colorData = {
+
     White: [
       { key: "White", src: '/WHITE/ETB2001WHITE.png', label: "ETB2-001" },
       { key: "White", src: '/WHITE/ETB4001WHITE.png', label: "ETB4-001" },
@@ -298,6 +299,7 @@ const ZebraBlinds = () => {
       { key: "White", src: '/WHITE/ETB16001WHITE.png', label: "ETB16-001" },
       { key: "White", src: '/WHITE/ETB1001WHITE.png', label: "ETB1-001" },
     ],
+
     Grey: [
       { key: "Grey", src: '/GREY/ETB1004GREY.png', label: "ETB1-004" },
       { key: "Grey", src: '/GREY/ETB2003GREY.png', label: "ETB2-003" },
@@ -316,6 +318,7 @@ const ZebraBlinds = () => {
       { key: "Grey", src: '/GREY/ETB14003GREY.png', label: "ETB14-003" },
       { key: "Grey", src: '/GREY/ETB14005GREY.png', label: "ETB14-005" },
     ],
+
     Black: [
       { key: "Black", src: '/BLACK/ETB1006BLACK.png', label: "ETB1-006" },
       { key: "Black", src: '/BLACK/ETB4003BLACK.png', label: "ETB4-003" },
@@ -325,10 +328,12 @@ const ZebraBlinds = () => {
       { key: "Black", src: '/BLACK/ETB8005BLACK.png', label: "ETB8-005" },
       { key: "Black", src: '/BLACK/ETB9003BLACK.png', label: "ETB9-003" },
     ],
+
     Bronze: [
       { key: "Bronze", src: '/BRONZE/ETB1005BRONZE.png', label: "ETB1-005" },
       { key: "Bronze", src: '/BRONZE/ETB3006BRONZE.png', label: "ETB3-006" },
     ],
+
     Brown: [
       { key: "Brown", src: '/BROWN/ETB2004BROWN.png', label: "ETB2-004" },
       { key: "Brown", src: '/BROWN/ETB3007BROWN.png', label: "ETB3-007" },
@@ -351,6 +356,84 @@ const ZebraBlinds = () => {
       { key: "Beige", src: '/BEIGE/ETB10001BEIGE.png', label: "ETB10-001" },
       { key: "Beige", src: '/BEIGE/ETB11003BEIGE.png', label: "ETB11-003" },
     ],
+
+  };
+
+  const colorDataMatcher = {
+
+    White: [
+      { key: "White", src: '/WHITEMATCHER/ETB2001WHITE.png', label: "ETB2-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB4001WHITE.png', label: "ETB4-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB4002WHITE.png', label: "ETB4-002" },
+      { key: "White", src: '/WHITEMATCHER/ETB5001WHITE.png', label: "ETB5-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB5002WHITE.png', label: "ETB5-002" },
+      { key: "White", src: '/WHITEMATCHER/ETB6001WHITE.png', label: "ETB6-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB8001WHITE.png', label: "ETB8-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB8002WHITE.png', label: "ETB8-002" },
+      { key: "White", src: '/WHITEMATCHER/ETB9001WHITE.png', label: "ETB9-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB14001WHITE.png', label: "ETB14-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB15001WHITE.png', label: "ETB15-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB16001WHITE.png', label: "ETB16-001" },
+      { key: "White", src: '/WHITEMATCHER/ETB1001WHITE.png', label: "ETB1-001" },
+    ],
+
+    Grey: [
+      { key: "Grey", src: '/GREYMATCHER/ETB1004GREY.png', label: "ETB1-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB2003GREY.png', label: "ETB2-003" },
+      { key: "Grey", src: '/GREYMATCHER/ETB3004GREY.png', label: "ETB3-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB3005GREY.png', label: "ETB3-005" },
+      { key: "Grey", src: '/GREYMATCHER/ETB5004GREY.png', label: "ETB5-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB6002GREY.png', label: "ETB6-002" },
+      { key: "Grey", src: '/GREYMATCHER/ETB7002GREY.png', label: "ETB7-002" },
+      { key: "Grey", src: '/GREYMATCHER/ETB8004GREY.png', label: "ETB8-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB9002GREY.png', label: "ETB9-002" },
+      { key: "Grey", src: '/GREYMATCHER/ETB10002GREY.png', label: "ETB10-002" },
+      { key: "Grey", src: '/GREYMATCHER/ETB11001GREY.png', label: "ETB11-001" },
+      { key: "Grey", src: '/GREYMATCHER/ETB11002GREY.png', label: "ETB11-002" },
+      { key: "Grey", src: '/GREYMATCHER/ETB11004GREY.png', label: "ETB11-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB14004GREY.png', label: "ETB14-004" },
+      { key: "Grey", src: '/GREYMATCHER/ETB14003GREY.png', label: "ETB14-003" },
+      { key: "Grey", src: '/GREYMATCHER/ETB14005GREY.png', label: "ETB14-005" },
+    ],
+
+    Black: [
+      { key: "Black", src: '/BLACKMATCHER/ETB1006BLACK.png', label: "ETB1-006" },
+      { key: "Black", src: '/BLACKMATCHER/ETB4003BLACK.png', label: "ETB4-003" },
+      { key: "Black", src: '/BLACKMATCHER/ETB4004BLACK.png', label: "ETB4-004" },
+      { key: "Black", src: '/BLACKMATCHER/ETB5006BLACK.png', label: "ETB5-006" },
+      { key: "Black", src: '/BLACKMATCHER/ETB5007BLACK.png', label: "ETB5-007" },
+      { key: "Black", src: '/BLACKMATCHER/ETB8005BLACK.png', label: "ETB8-005" },
+      { key: "Black", src: '/BLACKMATCHER/ETB9003BLACK.png', label: "ETB9-003" },
+    ],
+
+    Bronze: [
+      { key: "Bronze", src: '/BRONZEMATCHER/ETB1005BRONZE.png', label: "ETB1-005" },
+      { key: "Bronze", src: '/BRONZEMATCHER/ETB3006BRONZE.png', label: "ETB3-006" },
+    ],
+
+    Brown: [
+      { key: "Brown", src: '/BROWNMATCHER/ETB2004BROWN.png', label: "ETB2-004" },
+      { key: "Brown", src: '/BROWNMATCHER/ETB3007BROWN.png', label: "ETB3-007" },
+      { key: "Brown", src: '/BROWNMATCHER/ETB5005BROWN.png', label: "ETB5-005" },
+      { key: "Brown", src: '/BROWNMATCHER/ETB6004BROWN.png', label: "ETB6-004" },
+      { key: "Brown", src: '/BROWNMATCHER/ETB7003BROWN.png', label: "ETB7-003" },
+      { key: "Brown", src: '/BROWNMATCHER/ETB9004BROWN.png', label: "ETB9-004" },
+    ],
+
+    Beige: [
+      { key: "Beige", src: '/BEIGEMATCHER/ETB1003BEIGE.png', label: "ETB1-003" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB2002BEIGE.png', label: "ETB2-002" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB3001BEIGE.png', label: "ETB3-001" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB3002BEIGE.png', label: "ETB3-002" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB3003BEIGE.png', label: "ETB3-003" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB5003BEIGE.png', label: "ETB5-003" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB6003BEIGE.png', label: "ETB6-003" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB7001BEIGE.png', label: "ETB7-001" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB8003BEIGE.png', label: "ETB8-003" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB10001BEIGE.png', label: "ETB10-001" },
+      { key: "Beige", src: '/BEIGEMATCHER/ETB11003BEIGE.png', label: "ETB11-003" },
+    ],
+
   };
 
 
@@ -404,41 +487,97 @@ const ZebraBlinds = () => {
 
   const [selectedMaterial, setSelectedMaterial] = useState(null);
   const [firstImage_div, setfirstImage_div] = useState(true);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColorImages, setSelectedColorImages] = useState([]);
+  const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null); // Add this line
 
-  const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
 
-  const handleSelectMaterial = (key, src, label) => {
+  const handleSelectMaterial = (color, key, src, label) => {
     setfirstImage_div(false);
-    setSteelMaterialChosen(false);
 
     console.log(`Clicked on file: ${src}`);
-    setSelectedMaterial({ key, src, label });
-    setselectedFileNameMaterials(`${key} - ${label}`); // Combine key and label
+
+    // Use getColorMatcherImage to get the matched image
+    const matchingSrc = getColorMatcherImage(label);
+
+    if (matchingSrc) {
+      const updatedMaterial = {
+        key,
+        src: matchingSrc,
+        label,
+      };
+
+      setSelectedMaterial(updatedMaterial);
+      setSelectedColorImages([{ src: matchingSrc }]);
+      setselectedFileNameMaterials(`${key} - ${label}`);
+    } else {
+      // Handle the case when no matching image is found
+      console.error("No matching image found for label:", label);
+    }
   };
 
-  const renderColorList = (colorList2) => (
+  // Update getColorMatcherImage to search for the label across all colors
+  const getColorMatcherImage = (label) => {
+    for (const color in colorDataMatcher) {
+      const matchingColorData = colorDataMatcher[color];
+      const matchingImage = matchingColorData.find((item) => item.label === label);
+      if (matchingImage) {
+        return matchingImage.src;
+      }
+    }
+    return null;
+  };
 
+
+
+  // No changes needed in the render functions
+
+
+  const renderColorList = (colorDataArray) => (
     <>
-      <div className={styles.images_and_subtitles} key={colorList2[0].key}>
-
-        {colorList2.map((item) => (
-
+      <div className={styles.images_and_subtitles} key={selectedColor}>
+        {colorDataArray.map((item) => (
           <div
             key={item.label}
             className={`${styles.materials_image_container} ${selectedMaterial && selectedMaterial.src === item.src ? styles.selectedImage : ''}`}
-            onClick={() => handleSelectMaterial(item.key, item.src, item.label)} // Pass key, src, and label
-
+            onClick={() => {
+              console.log("Selected color:", selectedColor);
+              handleSelectMaterial(selectedColor, item.key, item.src, item.label);
+            }}
           >
             <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
             <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
             <p className={styles.selectedImageClass_label}>{item.label}</p>
           </div>
-
         ))}
-
       </div>
     </>
   );
+
+  const renderMatcherImage = () => (
+    <>
+      {selectedMaterial ? (
+        <div className={styles.left_imageContainer_wrapper}>
+          <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+            <Image
+              className={styles.left_first_image_render}
+              src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
+              alt='matcher-image'
+              width={100}
+              height={100}
+            />
+          </div>
+          <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
+        </div>
+      ) : (
+        // Render default content if no material is selected
+        <></>
+      )}
+    </>
+  );
+
+
+
 
 
   const [selectedImagesTop, setSelectedImagesTop] = useState([]);
@@ -745,10 +884,10 @@ const ZebraBlinds = () => {
 
                       <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
                         <Image
-                          width={200}
-                          height={200}
+                          width={500}
+                          height={500}
                           className={styles.left_first_image_render}
-                          src="/imageslider1.png"
+                          src="/GREYMATCHER/ETB5004GREY.png"
                           alt="Default Image"
                         />
                         <h3 className={styles.left_imageContainer_image_itself1_label}>Welcome</h3>
@@ -757,20 +896,19 @@ const ZebraBlinds = () => {
                   )}
 
                   {selectedMaterial ? (
-                    <>
-                      <div className={styles.left_imageContainer_wrapper}>
-                        <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                          <Image
-                            className={styles.left_first_image_render}
-                            src={selectedMaterial.src}
-                            alt='image'
-                            width={100}
-                            height={100}
-                          />
-                        </div>
-                        <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
+                    <div className={styles.left_imageContainer_wrapper}>
+                      <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                        <Image
+                          className={styles.left_first_image_render}
+                          src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
+                          alt='image'
+                          width={200}
+                          height={200}
+                        />
+
                       </div>
-                    </>
+                      <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
+                    </div>
                   ) : (
                     <>
                       {selectedImagesTop?.length > 0 && (
@@ -780,7 +918,6 @@ const ZebraBlinds = () => {
                               Top Rail
                             </span>
                             <div className={styles.left_first_image_render_wrapper}>
-
                               <Image
                                 width={100}
                                 height={100}
@@ -800,35 +937,32 @@ const ZebraBlinds = () => {
                           </div>
                         </div>
                       )}
-                      {
-                        bottomImagesEnabled && selectedImagesBottom?.length > 0 && (
-                          <div className={styles.left_imageContainer_wrapper}>
-                            <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
-                              <span className={styles.left_imageContainer_image_itself1_label}>
-                                Bottom Rail
-                              </span>
-                              <div className={styles.left_first_image_render_wrapper}>
-                                <Image
-                                  width={100}
-                                  height={100}
-                                  className={styles.left_first_image_render}
-                                  src={
-                                    (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
-                                  }
-                                  alt={
-                                    (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).label
-                                  }
-                                />
-                              </div>
+                      {bottomImagesEnabled && selectedImagesBottom?.length > 0 && (
+                        <div className={styles.left_imageContainer_wrapper}>
+                          <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
+                            <span className={styles.left_imageContainer_image_itself1_label}>
+                              Bottom Rail
+                            </span>
+                            <div className={styles.left_first_image_render_wrapper}>
+                              <Image
+                                width={100}
+                                height={100}
+                                className={styles.left_first_image_render}
+                                src={
+                                  (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).src
+                                }
+                                alt={
+                                  (Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0]) || {}).label
+                                }
+                              />
                             </div>
                           </div>
-                        )
-                      }
-
-
+                        </div>
+                      )}
+                      {renderMatcherImage()}
                     </>
-
                   )}
+
                 </div>
               </div>
             </div>
@@ -892,7 +1026,7 @@ const ZebraBlinds = () => {
                       <div className={styles.select_mount_type_title}>
                         <span className={styles.select_mount_type_title_tag}>1</span>
                         Choose Your Mount Type
-                        </div>
+                      </div>
 
                     </div>
                   </div>
@@ -2879,39 +3013,40 @@ const ZebraBlinds = () => {
 
               <div className={styles.select_color_group}>
 
-              <div className={styles.select_color_group_whole_wrapper}>
+                <div className={styles.select_color_group_whole_wrapper}>
 
-              <span className={styles.select_color_group_titles_wrapper}>
-                <div className={styles.select_color_long_rectangle}
-                >
-                  <div className={styles.select_color_short_rectangle}>
+                  <span className={styles.select_color_group_titles_wrapper}>
+                    <div className={styles.select_color_long_rectangle}
+                    >
+                      <div className={styles.select_color_short_rectangle}>
 
-                    <div className={styles.select_color_title}>
-                       <span className={styles.select_color_group_title_tag}>2</span>
-                     Select Color / Material
+                        <div className={styles.select_color_title}>
+                          <span className={styles.select_color_group_title_tag}>2</span>
+                          Select Color / Material
+                        </div>
+
+                      </div>
                     </div>
 
+                    <div className={styles.ellipse_and_type_select_material}>
+                      <div className={styles.select_color_subtitle}> Select Material</div>
+                      <div>Click On A Color To Choose And Add</div>
+                    </div>
+
+                  </span>
+
+                  <div className={styles.selectColorImageCollection}>
+                    {Object.keys(colorData).map((color) => (
+                      <div key={color} className={styles[color.toLowerCase()]}>
+                        <p className={styles.color_section_title}>{color}</p>
+                        {renderColorList(colorData[color])}
+                      </div>
+                    ))}
                   </div>
+
                 </div>
-
-                <div className={styles.ellipse_and_type_select_material}>
-                  <div className={styles.select_color_subtitle}> Select Material</div>
-                  <div>Click On A Color To Choose And Add</div>
-                </div>
-
-                </span>
-
-                <div className={styles.selectColorImageCollection}>
-                  {Object.keys(colorData).map((color) => (
-                    <div key={color} className={styles[color.toLowerCase()]}>
-                      <p className={styles.color_section_title}>{color}</p>
-                      {renderColorList(colorData[color])}
-                    </div>
-                  ))}
-                </div>
-
               </div>
-              </div>
+
 
               <div className={styles.review_your_order_seperator_line}></div>
 
@@ -2922,7 +3057,7 @@ const ZebraBlinds = () => {
                   <div className={styles.select_lift_type_long_rectangle}>
 
                     <div className={styles.select_lift_type_short_rectangle}>
-                        
+
                       <div className={styles.select_lift_type_title}>
                         <span className={styles.select_lift_type_title_tag}>3</span>
                         Select Lift Type
@@ -2932,11 +3067,11 @@ const ZebraBlinds = () => {
                   </div>
 
                   <div className={styles.ellipse_and_type_select_lift}>
-                  <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
-                  <div>
-                    Select Wand, Cordless Or Motorized
+                    <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
+                    <div>
+                      Select Wand, Cordless Or Motorized
+                    </div>
                   </div>
-                </div>
 
                 </span>
 
@@ -2955,70 +3090,70 @@ const ZebraBlinds = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                    <div className={styles.select_chain_options___side}>
-                      <div className={styles.select_chain_option1_options}>
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.select_chain_option1_options}>
 
-                        <div className={styles.wand_subtitle}> 
-                        <span className={styles.price_bar}>${WandPriceCMS}</span>
-                        </div>
+                          <div className={styles.wand_subtitle}>
+                            <span className={styles.price_bar}>${WandPriceCMS}</span>
+                          </div>
 
-                        <span className={styles.priced_item}>Wand</span>
+                          <span className={styles.priced_item}>Wand</span>
 
-                        <div className={styles.options_price_seperator}></div>
-                        <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
+                          <div className={styles.options_price_seperator}></div>
+                          <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
 
-                        <div className={styles.wand_extra_buttons}>
-                          <button>
-                            <div
-                              className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(4)}
-                            >
-                              Left
-                            </div>
-                          </button>
+                          <div className={styles.wand_extra_buttons}>
+                            <button>
+                              <div
+                                className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
+                                onClick={() => handleLiftFeatureEllipsess(4)}
+                              >
+                                Left
+                              </div>
+                            </button>
 
-                          <button>
-                            <div
-                              className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(5)}
-                            >
-                              Right
-                            </div>
-                          </button>
-                        </div>
+                            <button>
+                              <div
+                                className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
+                                onClick={() => handleLiftFeatureEllipsess(5)}
+                              >
+                                Right
+                              </div>
+                            </button>
+                          </div>
 
                         </div>
                       </div>
 
                       <div className={styles.select_chain_options___side}>
-                      <div className={styles.wand_option_image_placeholder}>
-                        {showImageleft && (
-                          <div className={styles.showleftchain_wrapper}>
-                            <Image
-                              width={400}
-                              height={400}
-                              className={styles.show_left_chain_image_render}
-                              alt="showleftchain"
-                              src="/leftside.png"
-                            />
-                          </div>
-                        )}
+                        <div className={styles.wand_option_image_placeholder}>
+                          {showImageleft && (
+                            <div className={styles.showleftchain_wrapper}>
+                              <Image
+                                width={400}
+                                height={400}
+                                className={styles.show_left_chain_image_render}
+                                alt="showleftchain"
+                                src="/leftside.png"
+                              />
+                            </div>
+                          )}
 
 
-                        {showImageright && (
-                          <div className={styles.showrightchain_wrapper}>
-                            <Image
-                              width={400}
-                              height={400}
-                              className={styles.show_left_chain_image_render}
-                              alt="showleftchain"
-                              src="/rightside.png"
-                            />
-                          </div>
-                        )}
+                          {showImageright && (
+                            <div className={styles.showrightchain_wrapper}>
+                              <Image
+                                width={400}
+                                height={400}
+                                className={styles.show_left_chain_image_render}
+                                alt="showleftchain"
+                                src="/rightside.png"
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      </div>
-                      </div>
+                    </div>
 
                   </div>
                 </div>
@@ -3038,33 +3173,33 @@ const ZebraBlinds = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                    <div className={styles.select_chain_options___side}>
+                      <div className={styles.select_chain_options___side}>
 
-                    <div className={styles.select_chain_option2_options}>
+                        <div className={styles.select_chain_option2_options}>
 
-                      <div className={styles.cord_less_subtitle}> 
-                      <span className={styles.price_bar}>${cordlesspriceCMS}</span>
+                          <div className={styles.cord_less_subtitle}>
+                            <span className={styles.price_bar}>${cordlesspriceCMS}</span>
+                          </div>
+
+                          <span className={styles.priced_item}>Cord Less</span>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}
+                          </div>
+                        </div>
                       </div>
 
-                      <span className={styles.priced_item}>Cord Less</span>
-
-                      <div className={styles.options_price_seperator}></div>
-                      
-                      <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.cord_less_option_image_placeholder}>
+                          <Image
+                            width={400}
+                            height={400}
+                            alt="showrightchain"
+                            src="/cordlesslift.png"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    </div>
-
-                    <div className={styles.select_chain_options___side}>
-                    <div className={styles.cord_less_option_image_placeholder}>
-                      <Image
-                        width={400}
-                        height={400}
-                        alt="showrightchain"
-                        src="/cordlesslift.png"
-                      />
-                    </div>
-                    </div>
                     </div>
 
 
@@ -3085,34 +3220,34 @@ const ZebraBlinds = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                    <div className={styles.select_chain_options___side}>
+                      <div className={styles.select_chain_options___side}>
 
-                    <div className={styles.select_chain_option3_options}>
+                        <div className={styles.select_chain_option3_options}>
 
-                      <div className={styles.motorized_subtitle}> 
-                      <span className={styles.price_bar}>${motorizedpriceCMS}</span>
+                          <div className={styles.motorized_subtitle}>
+                            <span className={styles.price_bar}>${motorizedpriceCMS}</span>
+                          </div>
+
+                          <span className={styles.priced_item}>Motorized</span>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}
+                          </div>
+                        </div>
                       </div>
 
-                      <span className={styles.priced_item}>Motorized</span>
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.motorized_option_image_placeholder}>
+                          <Image
+                            width={400}
+                            height={400}
+                            alt="showrightchain"
+                            src="/motorizedlift.png"
+                          />
 
-                      <div className={styles.options_price_seperator}></div>
-
-                      <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}
+                        </div>
                       </div>
-                    </div>
-                    </div>
-
-                    <div className={styles.select_chain_options___side}>
-                    <div className={styles.motorized_option_image_placeholder}>
-                      <Image
-                        width={400}
-                        height={400}
-                        alt="showrightchain"
-                        src="/motorizedlift.png"
-                      />
-
-                    </div>
-                    </div>
                     </div>
 
 
@@ -3414,9 +3549,22 @@ const ZebraBlinds = () => {
                     <div className={styles.description_and_answer}>
                       <div className={styles.materials_answer}>Material:</div>
 
-                      <div className={styles.answers_answers}>
-                        {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Please Select Your Material"}
+
+                      <div className={`${styles.materials_answer_image} ${styles.materials_answer_image_styled}`}>
+                        <h3 className={styles.materials_answer_image_label}>
+                          Material: {selectedMaterial ? selectedMaterial.label : ''}
+                        </h3>
+
+                        <Image
+                          className={styles.materials_answer_image_itself}
+                          src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
+                          alt='image'
+                          width={200}
+                          height={200}
+                        />
                       </div>
+
+
                     </div>
 
                     <span
