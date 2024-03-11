@@ -49,105 +49,116 @@ export default function HomePage() {
           <div className={styles.home_wrapper}>
 
 
-<div className={styles.three_icons}>
-<span className={styles.three_icons_wrapper}>
 
-<div className={styles.three_icons_prt1}>
-  <Image
-    className={styles.three_icons_ICON_wrapper}
-  alt='threeicon'
-  width={100}
-  height={100}
-  src={"/freedelivery.png"}>
-  </Image>
-  <p className={styles.three_icons_ICON_wrapper_text}>A TRUSTED BRAND, TRUSTED PARTNERS</p>
-<p className={styles.three_icons_ICON_wrapper_description}>Economy Blinds & Shades over the years demonstrates the highest level of craftsmanship to fit all budgets.
-We take pride in a high-quality product backed by reliable reputation.</p>
-  </div>
-
-  <div className={styles.three_icons_prt2}>
-  <Image
-  className={styles.three_icons_ICON_wrapper}
-  alt='threeicon'
-  width={100}
-  height={100}
-  src={"/freeshippingicon1.png"}>
-  </Image>
-  <p className={styles.three_icons_ICON_wrapper_text}>FREE DELIVERY NO MINIMUM PURCHASE NECESSARY</p>
-<p className={styles.three_icons_ICON_wrapper_description}>All of our blinds & shades are delivered free of charge.
-
-This is another good reason to choose Economy Blinds & Shades for your beautiful window covering.</p>
-  </div>
-
-  <div className={styles.three_icons_prt3}>
-  <Image
-    className={styles.three_icons_ICON_wrapper}
-  alt='threeicon'
-  width={100}
-  height={100}
-  src={"/trustedbrand.png"}>
-  </Image>
-  <p className={styles.three_icons_ICON_wrapper_text}>QUALITY & SUPERIOR PRODUCT</p>
-<p className={styles.three_icons_ICON_wrapper_description}>Customer satisfaction is most important to us, We hand pick high quality fabrics & materials to fit your custom-made window specified needs.</p>
-
-  </div>
-  
-</span>
-
-</div>
 
 
             <div className={styles.two_section_div5}>
+
               <div className={styles.two_section_div5_wrapper}>
+
+              <div className={styles.rectangle_1}>
+              <p className={styles.router_tab}>
+              Zeebra Blinds
+              </p>
+
                 <Link href={"/zebrablinds"}>
-                  <div className={styles.rectangle_1}>
                     <span className={styles.linkitem}>
-                      Zebra Blinds
+                      Room Lightening
                       <br />
                     </span>
-                  </div>
                 </Link>
 
-                <Link href={"/shangrilablinds"}>
-
-                  <div className={styles.rectangle_2}>
+                <Link href={"/"}>
                     <span className={styles.linkitem}>
-                      Shangrila Blinds
+                      Room Darkening
                       <br />
                     </span>
-                  </div>
                 </Link>
 
-                <Link href={"/romanblinds"}>
+                </div>
 
-                  <div className={styles.rectangle_3}>
+
+                <div className={styles.rectangle_4}>
+                <p className={styles.router_tab}>
+                Roller Blinds
+                </p>
+
+                <Link href={"/"}>
                     <span className={styles.linkitem}>
-                    Roman Blinds
+                      Room Lightening
                       <br />
                     </span>
-                  </div>
                 </Link>
-                <Link href={"/rollerblinds"}>
-
-                  <div className={styles.rectangle_4}>
+                <Link href={"/"}>
                     <span className={styles.linkitem}>
-                    Roller Blinds
+                      Room Darkening
                       <br />
                     </span>
-                  </div>
                 </Link>
+                </div>
 
-                <Link href={"/honeycombblinds"}>
-
-                  <div className={styles.rectangle_5}>
+                <div className={styles.rectangle_3}>
+                <p className={styles.router_tab}>
+                Roman Blinds
+                </p>
+                <Link href={"/"}>
                     <span className={styles.linkitem}>
-                    Honeycomb Blinds
+                      Room Lightening
+                      <br />
                     </span>
-                  </div>
                 </Link>
+                <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      Room Darkening
+                      <br />
+                    </span>
+                </Link>
+                </div>
+
+                <div className={styles.rectangle_5}>
+                <p className={styles.router_tab}>
+                Honeycomb Blinds
+                </p>
+                <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      Room Lightening
+                      <br />
+                    </span>
+                </Link>
+                <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      Room Darkening
+                      <br />
+                    </span>
+                </Link>
+                </div>
+
+                <div className={styles.rectangle_2}>
+<p className={styles.router_tab}>
+                  Shangrila Blinds
+</p>
+                <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      Room Lightening
+                      <br />
+                    </span>
+                </Link>
+                <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      Room Darkening
+                      <br />
+                    </span>
+                </Link>
+                </div>
+
+
+
+
 
               </div>
             </div>
+
+
 
 
             <div className={styles.add}>
@@ -170,20 +181,20 @@ This is another good reason to choose Economy Blinds & Shades for your beautiful
                     <div className={styles.title}>How To Measure</div>
                     <div className={styles.description}>
                       <span>
-                    Always use a steel tape measure.
-                    </span>
-                    <span>
-                    - For inside mount measurements, enter the exact frame-to-frame dimensions of your window and we will make the deductions. 
-                    </span>
-                    <span>
-                    Measure to the nearest 1/8 &quot; of an inch. If your dimension is at 1/16 &quot; of an inch, round it down.
-                    </span>
-                    <span>
-                      -For outside mount measurements, add 2” past the trim on the width & 5” past the trim on the height.
-                    </span>
-                    <span>
-                    Full Reference instructions at the top of each order page
-                    </span>
+                        Always use a steel tape measure.
+                      </span>
+                      <span>
+                        - For inside mount measurements, enter the exact frame-to-frame dimensions of your window and we will make the deductions.
+                      </span>
+                      <span>
+                        Measure to the nearest 1/8 &quot; of an inch. If your dimension is at 1/16 &quot; of an inch, round it down.
+                      </span>
+                      <span>
+                        -For outside mount measurements, add 2” past the trim on the width & 5” past the trim on the height.
+                      </span>
+                      <span>
+                        Full Reference instructions at the top of each order page
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -215,16 +226,64 @@ This is another good reason to choose Economy Blinds & Shades for your beautiful
                 </div>
 
 
-              <div className={styles.two_section_div4}>
-                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
-                <div className={styles.box_grid_text}>
-                  <div className={styles.title}>What Type Of Blinds Do You Install?</div>
+                <div className={styles.two_section_div4}>
+                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
+                  <div className={styles.box_grid_text}>
+                    <div className={styles.title}>What Type Of Blinds Do You Install?</div>
 
+                  </div>
                 </div>
               </div>
-              </div>
 
 
+
+            </div>
+
+
+            <div className={styles.three_icons}>
+              <span className={styles.three_icons_wrapper}>
+
+                <div className={styles.three_icons_prt1}>
+                  <Image
+                    className={styles.three_icons_ICON_wrapper}
+                    alt='threeicon'
+                    width={100}
+                    height={100}
+                    src={"/freedelivery.png"}>
+                  </Image>
+                  <p className={styles.three_icons_ICON_wrapper_text}>A TRUSTED BRAND, TRUSTED PARTNERS</p>
+                  <p className={styles.three_icons_ICON_wrapper_description}>Economy Blinds & Shades over the years demonstrates the highest level of craftsmanship to fit all budgets.
+                    We take pride in a high-quality product backed by reliable reputation.</p>
+                </div>
+
+                <div className={styles.three_icons_prt2}>
+                  <Image
+                    className={styles.three_icons_ICON_wrapper}
+                    alt='threeicon'
+                    width={100}
+                    height={100}
+                    src={"/freeshippingicon1.png"}>
+                  </Image>
+                  <p className={styles.three_icons_ICON_wrapper_text}>FREE DELIVERY NO MINIMUM PURCHASE NECESSARY</p>
+                  <p className={styles.three_icons_ICON_wrapper_description}>All of our blinds & shades are delivered free of charge.
+
+                    This is another good reason to choose Economy Blinds & Shades for your beautiful window covering.</p>
+                </div>
+
+                <div className={styles.three_icons_prt3}>
+                  <Image
+                    className={styles.three_icons_ICON_wrapper}
+                    alt='threeicon'
+                    width={100}
+                    height={100}
+                    src={"/trustedbrand.png"}>
+                  </Image>
+                  <p className={styles.three_icons_ICON_wrapper_text}>QUALITY & SUPERIOR PRODUCT</p>
+                  <p className={styles.three_icons_ICON_wrapper_description}>Customer satisfaction is most important to us, We hand pick high quality fabrics & materials to fit your custom-made window specified needs.</p>
+
+                </div>
+
+              </span>
 
             </div>
 
