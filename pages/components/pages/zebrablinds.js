@@ -546,7 +546,7 @@ const ZebraBlinds = () => {
             }}
           >
             <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
-            <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={100} height={100} />
+            <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={300} height={300} />
             <p className={styles.selectedImageClass_label}>{item.label}</p>
           </div>
         ))}
