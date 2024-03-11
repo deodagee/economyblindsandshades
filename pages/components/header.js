@@ -150,42 +150,42 @@ function HeaderPiece() {
                 <span className={styles.second_bar_wrapper}>
 
 
-<div className={styles.burger_and_menu}>
-                  <div className={styles.hamburger_icon} onClick={toggleSideMenu}>
-                    <span className={styles.hamburger_line}></span>
-                    <span className={styles.hamburger_line}></span>
-                    <span className={styles.hamburger_line}></span>
-                  </div>
-
-                  {isSideMenuOpen && (
-                    <div className={styles.side_menu_container}>
-                    <div className={styles.side_menu}>
-
-
-                    <Link href={"/zebrablinds"}>
-                      <p className={styles.side_menu_item}>Zebra Blinds</p>
-                      </Link>
-
-                      <Link href={"/"}>
-                      <p className={styles.side_menu_item}>Shangrila Blinds</p>
-                      </Link>
-
-                      <Link href={"/"}>
-                      <p className={styles.side_menu_item}>Roman Blinds</p>
-                      </Link>
-
-                      <Link href={"/"}>
-                      <p className={styles.side_menu_item}>Roller Blinds</p>
-                      </Link>
-
-                      <Link href={"/"}>
-                      <p className={styles.side_menu_item}>HoneyComb Blinds</p>
-                      </Link>
-
-
+                  <div className={styles.burger_and_menu}>
+                    <div className={styles.hamburger_icon} onClick={toggleSideMenu}>
+                      <span className={styles.hamburger_line}></span>
+                      <span className={styles.hamburger_line}></span>
+                      <span className={styles.hamburger_line}></span>
                     </div>
-                    </div>
-                  )}
+
+                    {isSideMenuOpen && (
+                      <div className={styles.side_menu_container}>
+                        <div className={styles.side_menu}>
+
+
+                          <Link href={"/zebrablinds"}>
+                            <p className={styles.side_menu_item}>Zebra Blinds</p>
+                          </Link>
+
+                          <Link href={"/"}>
+                            <p className={styles.side_menu_item}>Shangrila Blinds</p>
+                          </Link>
+
+                          <Link href={"/"}>
+                            <p className={styles.side_menu_item}>Roman Blinds</p>
+                          </Link>
+
+                          <Link href={"/"}>
+                            <p className={styles.side_menu_item}>Roller Blinds</p>
+                          </Link>
+
+                          <Link href={"/"}>
+                            <p className={styles.side_menu_item}>HoneyComb Blinds</p>
+                          </Link>
+
+
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   <Link className={styles.header_link_one} href={"/"} >

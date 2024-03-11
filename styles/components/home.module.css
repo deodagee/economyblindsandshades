@@ -494,3 +494,146 @@ color:rgb(0, 83, 73);
   }
 
 }
+
+
+@media (min-width: 200px) and (max-width: 600px) and (orientation: landscape) {
+
+  .three_icons { 
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 100px;
+  }
+
+  
+  .three_icons_wrapper { 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+    width: 90vw;
+  }
+
+  
+.three_icons_prt1, .three_icons_prt2, .three_icons_prt3 { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 80vw;
+}
+
+.three_icons_ICON_wrapper_text { 
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  }
+  
+  .three_icons_ICON_wrapper_description { 
+    font-size: 15px;
+    text-align: center;
+  }
+  
+
+
+  .EconomyBlindsAndShades {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 17px;
+    display: flex;
+
+  }
+
+
+
+  .rectangle_1,
+  .rectangle_2,
+  .rectangle_3,
+  .rectangle_4,
+  .rectangle_5 {
+    background: #f7f7f7ae;
+    border-radius: 5px;
+    width: 70vw;
+    height: 25vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    border-width: 3px;
+    border-color: rgb(0, 144, 127);
+    box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+    transition: 0.3s;
+  }
+
+  .rectangle_1 {
+    background-image: url("/zebrablinds.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .rectangle_2 {
+    background-image: url("/shangrilablinds.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .rectangle_3 {
+    background-image: url("/romanblinds.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .rectangle_4 {
+    background-image: url("/rollerblinds.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .rectangle_5 {
+    background-image: url("/honeycombblinds.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  .gridbox_one,
+  .gridbox_two {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: 90vw;
+
+  }
+
+  .box_grid_text {
+    width: 75vw;
+    height: 200px;
+    border-color: rgb(228, 228, 228);
+    border-width: 1px;
+    color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .title {
+    white-space: nowrap;
+    color: rgb(146, 83, 0);
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+}
