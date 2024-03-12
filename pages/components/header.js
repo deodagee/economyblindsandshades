@@ -27,16 +27,7 @@ function HeaderPiece() {
     menu5: false,
   });
 
-  const dropTheMenu = (menu) => {
-    setOpenMenu((prevOpenMenu) => ({
-      menu1: false,
-      menu2: false,
-      menu3: false,
-      menu4: false,
-      menu5: false,
-      [menu]: !prevOpenMenu[menu],
-    }));
-  };
+
 
   const handleMouseEnter = (menu) => {
     setOpenMenu((prevOpenMenu) => ({
@@ -203,8 +194,8 @@ function HeaderPiece() {
                     )}
                   </div>
 
-                  <Link className={styles.header_link_one} href={"/"} >
-                    <li className={styles.second_menu_bar_item_one}>
+                  <Link className={styles.header_link_home_button} href={"/"} >
+                    <li className={styles.home_button_wrapper}>
                       <span>
                         <Image
                           alt="homebutton"
@@ -214,10 +205,10 @@ function HeaderPiece() {
                           className={styles.home_button}>
                         </Image>
                       </span>
-                      <span>
-                        <div className={styles.home_button_text}>Home</div>
-                      </span>
                     </li>
+                    <span className={styles.home_button_text}>
+                      <div >Home</div>
+                    </span>
                   </Link>
 
                   <button
