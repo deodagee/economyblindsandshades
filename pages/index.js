@@ -52,6 +52,23 @@ export default function HomePage() {
 
             <div className={styles.two_section_div5}>
 
+              <h1>
+               Welcome
+                <br />
+                <br />
+              </h1>
+              <h1>
+                Shop And Browse
+                <br />
+                <br />
+                <br />
+
+              </h1>
+
+
+
+
+
               <div className={styles.different_blinds_top}>
 
                 <div className={styles.rectangle_1}>
@@ -64,14 +81,18 @@ export default function HomePage() {
                   <span className={styles.linkitem_wrapper}>
                     <Link href={"/zebrablinds"}>
                       <span className={styles.linkitem}>
-                        Room Lightening
+                        <span>
+                          Room Lightening
+                        </span>
                         <br />
                       </span>
                     </Link>
 
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Darkening
+                        <span>
+                          Room Darkening
+                        </span>
                         <br />
                       </span>
                     </Link>
@@ -81,42 +102,55 @@ export default function HomePage() {
 
 
                 <div className={styles.rectangle_4}>
+
                   <p className={styles.router_tab}>
                     Roller Blinds
                   </p>
 
 
                   <span className={styles.linkitem_wrapper}>
-                    <Link href={"/"}>
+                    <Link href={"/zebrablinds"}>
                       <span className={styles.linkitem}>
-                        Room Lightening
+                        <span>
+                          Room Lightening
+                        </span>
                         <br />
                       </span>
                     </Link>
+
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Darkening
+                        <span>
+                          Room Darkening
+                        </span>
                         <br />
                       </span>
                     </Link>
                   </span>
+
                 </div>
 
                 <div className={styles.rectangle_3}>
                   <p className={styles.router_tab}>
-                    Roman Blinds
+                    <span>
+                      Roman Blinds
+                    </span>
                   </p>
 
                   <span className={styles.linkitem_wrapper}>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Lightening
+                        <span>
+                          Room Lightening
+                        </span>
                         <br />
                       </span>
                     </Link>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Darkening
+                        <span>
+                          Room Darkening
+                        </span>
                         <br />
                       </span>
                     </Link>
@@ -125,19 +159,25 @@ export default function HomePage() {
 
                 <div className={styles.rectangle_5}>
                   <p className={styles.router_tab}>
-                    Honeycomb Blinds
+                    <span>
+                      Honeycomb Blinds
+                    </span>
                   </p>
 
                   <span className={styles.linkitem_wrapper}>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Lightening
+                        <span>
+                          Room Lightening
+                        </span>
                         <br />
                       </span>
                     </Link>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Darkening
+                        <span>
+                          Room Darkening
+                        </span>
                         <br />
                       </span>
                     </Link>
@@ -146,19 +186,25 @@ export default function HomePage() {
 
                 <div className={styles.rectangle_2}>
                   <p className={styles.router_tab}>
-                    Shangrila Blinds
+                    <span>
+                      Shangrila Blinds
+                    </span>
                   </p>
 
                   <span className={styles.linkitem_wrapper}>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Lightening
+                        <span>
+                          Room Lightening
+                        </span>
                         <br />
                       </span>
                     </Link>
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
-                        Room Darkening
+                        <span>
+                          Room Darkening
+                        </span>
                         <br />
                       </span>
                     </Link>
