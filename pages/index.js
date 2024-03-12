@@ -261,7 +261,9 @@ export default function HomePage() {
                 <div className={styles.box_grid_text}>
                   <div className={styles.title}>Are the options affordable and stylish?</div>
                   <div className={styles.description}>
+                  <span>
                     We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
+                    </span>
                   </div>
                 </div>
               </div>
@@ -273,7 +275,9 @@ export default function HomePage() {
                 <div className={styles.box_grid_text}>
                   <div className={styles.title}>Are you priced competitively?</div>
                   <div className={styles.description}>
+                  <span>
                     We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
+                    </span>
                   </div>
                 </div>
               </div>
