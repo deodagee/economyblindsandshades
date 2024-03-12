@@ -337,8 +337,9 @@
   align-items: flex-start;
   justify-content: center;
   position: absolute;
-  top: 25px;
+  top: 24px;
   width: calc(100vw / 9);
+  background-color: white;
   box-shadow: rgb(49, 49, 49) 0px 0px 4px;
   border-color: white;
   border-width: 1px;

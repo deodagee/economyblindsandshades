@@ -18,6 +18,7 @@ function HeaderPiece() {
   };
 
   /////////////////////////////////////////////////////////////////////////
+
   const [openMenu, setOpenMenu] = useState({
     menu1: false,
     menu2: false,
@@ -34,6 +35,20 @@ function HeaderPiece() {
       menu4: false,
       menu5: false,
       [menu]: !prevOpenMenu[menu],
+    }));
+  };
+
+  const handleMouseEnter = (menu) => {
+    setOpenMenu((prevOpenMenu) => ({
+      ...prevOpenMenu,
+      [menu]: true,
+    }));
+  };
+
+  const handleMouseLeave = (menu) => {
+    setOpenMenu((prevOpenMenu) => ({
+      ...prevOpenMenu,
+      [menu]: false,
     }));
   };
 
@@ -205,7 +220,10 @@ function HeaderPiece() {
                     </li>
                   </Link>
 
-                  <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu1')}>
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu1')}
+                    onMouseLeave={() => handleMouseLeave('menu1')}>
                     <div className={styles.tag_and_chevron}>
                       <li>
                         Zebra Blinds
@@ -261,168 +279,149 @@ function HeaderPiece() {
                   </button>
 
 
-                  <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu2')}>
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu2')}
+                    onMouseLeave={() => handleMouseLeave('menu2')}
+                  >
                     <div className={styles.tag_and_chevron}>
-                      <li>Shangrila Blinds
-                      </li>
+                      <li>Shangrila Blinds</li>
                       <Image
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
                         src={"/chevronblack.png"}
-                        alt="chevron_top_menu">
-                      </Image>
+                        alt="chevron_top_menu"
+                      />
                     </div>
-
                     <div className={styles.drop_down_wrapper}>
                       {openMenu.menu2 && (
-                        <>
-                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                            <div className={styles.drop_down_wrapper_list}>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                            </div>
+                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                          <div className={styles.drop_down_wrapper_list}>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
                           </div>
-                        </>
+                        </div>
                       )}
                     </div>
                   </button>
 
-
-                  <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu3')}>
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu3')}
+                    onMouseLeave={() => handleMouseLeave('menu3')}
+                  >
                     <div className={styles.tag_and_chevron}>
-                      <li >Roman Blinds
-                      </li>
+                      <li>Roman Blinds</li>
                       <Image
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
                         src={"/chevronblack.png"}
-                        alt="chevron_top_menu">
-                      </Image>
+                        alt="chevron_top_menu"
+                      />
                     </div>
-
                     <div className={styles.drop_down_wrapper}>
                       {openMenu.menu3 && (
-                        <>
-                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                            <div className={styles.drop_down_wrapper_list}>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                            </div>
+                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                          <div className={styles.drop_down_wrapper_list}>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
                           </div>
-                        </>
+                        </div>
                       )}
                     </div>
-
                   </button>
 
-                  <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu4')}>
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu4')}
+                    onMouseLeave={() => handleMouseLeave('menu4')}
+                  >
                     <div className={styles.tag_and_chevron}>
-                      <li>Roller Blinds
-                      </li>
+                      <li>Roller Blinds</li>
                       <Image
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
                         src={"/chevronblack.png"}
-                        alt="chevron_top_menu">
-                      </Image>
+                        alt="chevron_top_menu"
+                      />
                     </div>
-
                     <div className={styles.drop_down_wrapper}>
                       {openMenu.menu4 && (
-                        <>
-                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                            <div className={styles.drop_down_wrapper_list}>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-
-                            </div>
+                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                          <div className={styles.drop_down_wrapper_list}>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
                           </div>
-                        </>
+                        </div>
                       )}
-
                     </div>
                   </button>
 
-                  <button className={styles.second_menu_bar_item} onClick={() => dropTheMenu('menu5')}>
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu5')}
+                    onMouseLeave={() => handleMouseLeave('menu5')}
+                  >
                     <div className={styles.tag_and_chevron}>
-                      <li>HoneyComb Blinds
-                      </li>
+                      <li>HoneyComb Blinds</li>
                       <Image
                         className={styles.chevron_top_menu}
                         width={100}
                         height={100}
                         src={"/chevronblack.png"}
-                        alt="chevron_top_menu">
-                      </Image>
-
-                      <div className={styles.drop_down_wrapper}>
-                        {openMenu.menu5 && (
-                          <>
-                            <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                              <div className={styles.drop_down_wrapper_list}>
-                                <ul>
-                                  <Link href={"/"}>
-                                    <li className={styles.drop_down_menu_item}>
-                                      Option
-                                    </li>
-                                  </Link>
-                                </ul>
-                                <ul>
-                                  <Link href={"/"}>
-                                    <li className={styles.drop_down_menu_item}>
-                                      Option
-                                    </li>
-                                  </Link>
-                                </ul>
-
-                              </div>
-                            </div>
-                          </>
-                        )}
-                      </div>
+                        alt="chevron_top_menu"
+                      />
+                    </div>
+                    <div className={styles.drop_down_wrapper}>
+                      {openMenu.menu5 && (
+                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                          <div className={styles.drop_down_wrapper_list}>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </button>
 
+
                   <div className={styles.second_menu_bar_item2}>
+
                     {session ? (
                       <>
                         <li className={styles.sign_in_and_sign_out_buttons}>

@@ -50,110 +50,120 @@ export default function HomePage() {
 
 
 
-
-
             <div className={styles.two_section_div5}>
 
-              <div className={styles.two_section_div5_wrapper}>
+              <div className={styles.different_blinds_top}>
 
-              <div className={styles.rectangle_1}>
-              <p className={styles.router_tab}>
-              Zeebra Blinds
-              </p>
+                <div className={styles.rectangle_1}>
 
-                <Link href={"/zebrablinds"}>
-                    <span className={styles.linkitem}>
-                      Room Lightening
-                      <br />
-                    </span>
-                </Link>
+                  <p className={styles.router_tab}>
+                    Zeebra Blinds
+                  </p>
 
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Darkening
-                      <br />
-                    </span>
-                </Link>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/zebrablinds"}>
+                      <span className={styles.linkitem}>
+                        Room Lightening
+                        <br />
+                      </span>
+                    </Link>
+
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Darkening
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
 
                 </div>
 
 
                 <div className={styles.rectangle_4}>
-                <p className={styles.router_tab}>
-                Roller Blinds
-                </p>
+                  <p className={styles.router_tab}>
+                    Roller Blinds
+                  </p>
 
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Lightening
-                      <br />
-                    </span>
-                </Link>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Darkening
-                      <br />
-                    </span>
-                </Link>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Lightening
+                        <br />
+                      </span>
+                    </Link>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Darkening
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
                 </div>
 
                 <div className={styles.rectangle_3}>
-                <p className={styles.router_tab}>
-                Roman Blinds
-                </p>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Lightening
-                      <br />
-                    </span>
-                </Link>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Darkening
-                      <br />
-                    </span>
-                </Link>
+                  <p className={styles.router_tab}>
+                    Roman Blinds
+                  </p>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Lightening
+                        <br />
+                      </span>
+                    </Link>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Darkening
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
                 </div>
 
                 <div className={styles.rectangle_5}>
-                <p className={styles.router_tab}>
-                Honeycomb Blinds
-                </p>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Lightening
-                      <br />
-                    </span>
-                </Link>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Darkening
-                      <br />
-                    </span>
-                </Link>
+                  <p className={styles.router_tab}>
+                    Honeycomb Blinds
+                  </p>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Lightening
+                        <br />
+                      </span>
+                    </Link>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Darkening
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
                 </div>
 
                 <div className={styles.rectangle_2}>
-<p className={styles.router_tab}>
-                  Shangrila Blinds
-</p>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Lightening
-                      <br />
-                    </span>
-                </Link>
-                <Link href={"/"}>
-                    <span className={styles.linkitem}>
-                      Room Darkening
-                      <br />
-                    </span>
-                </Link>
+                  <p className={styles.router_tab}>
+                    Shangrila Blinds
+                  </p>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Lightening
+                        <br />
+                      </span>
+                    </Link>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        Room Darkening
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
                 </div>
-
-
-
-
 
               </div>
             </div>
@@ -172,70 +182,64 @@ export default function HomePage() {
             </div>
 
             <div className={styles.gridbox_one_and_gridbox_two}>
-              <div className={styles.gridbox_one}>
-                <div className={styles.two_section_div1}>
+              <div className={styles.two_section_div1}>
 
-                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/howsooncanibookanestimate.png" />
+                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/howsooncanibookanestimate.png" />
 
-                  <div className={styles.box_grid_text}>
-                    <div className={styles.title}>How To Measure</div>
-                    <div className={styles.description}>
-                      <span>
-                        Always use a steel tape measure.
-                      </span>
-                      <span>
-                        - For inside mount measurements, enter the exact frame-to-frame dimensions of your window and we will make the deductions.
-                      </span>
-                      <span>
-                        Measure to the nearest 1/8 &quot; of an inch. If your dimension is at 1/16 &quot; of an inch, round it down.
-                      </span>
-                      <span>
-                        -For outside mount measurements, add 2” past the trim on the width & 5” past the trim on the height.
-                      </span>
-                      <span>
-                        Full Reference instructions at the top of each order page
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.two_section_div2}>
-
-                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/aretheoptionsaffordableandstylish.png" />
-
-                  <div className={styles.box_grid_text}>
-                    <div className={styles.title}>Are the options affordable and stylish?</div>
-                    <div className={styles.description}>
-                      We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
-                    </div>
+                <div className={styles.box_grid_text}>
+                  <div className={styles.title}>How To Measure</div>
+                  <div className={styles.description}>
+                    <span>
+                      Always use a steel tape measure.
+                    </span>
+                    <span>
+                      - For inside mount measurements, enter the exact frame-to-frame dimensions of your window and we will make the deductions.
+                    </span>
+                    <span>
+                      Measure to the nearest 1/8 &quot; of an inch. If your dimension is at 1/16 &quot; of an inch, round it down.
+                    </span>
+                    <span>
+                      -For outside mount measurements, add 2” past the trim on the width & 5” past the trim on the height.
+                    </span>
+                    <span>
+                      Full Reference instructions at the top of each order page
+                    </span>
                   </div>
                 </div>
               </div>
 
-              <div className={styles.gridbox_two}>
-                <div className={styles.two_section_div3}>
+              <div className={styles.two_section_div2}>
 
-                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/areyoupricedcompetitively.png" />
+                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/aretheoptionsaffordableandstylish.png" />
 
-                  <div className={styles.box_grid_text}>
-                    <div className={styles.title}>Are you priced competitively?</div>
-                    <div className={styles.description}>
-                      We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
-                    </div>
+                <div className={styles.box_grid_text}>
+                  <div className={styles.title}>Are the options affordable and stylish?</div>
+                  <div className={styles.description}>
+                    We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
                   </div>
                 </div>
+              </div>
 
+              <div className={styles.two_section_div3}>
 
-                <div className={styles.two_section_div4}>
-                  <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
-                  <div className={styles.box_grid_text}>
-                    <div className={styles.title}>What Type Of Blinds Do You Install?</div>
+                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/areyoupricedcompetitively.png" />
 
+                <div className={styles.box_grid_text}>
+                  <div className={styles.title}>Are you priced competitively?</div>
+                  <div className={styles.description}>
+                    We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
                   </div>
                 </div>
               </div>
 
 
+              <div className={styles.two_section_div4}>
+                <Image width={300} height={300} alt='center_image' className={styles.box_grid_image} src="/whattypeofblindsdoyouinstall.png" />
+                <div className={styles.box_grid_text}>
+                  <div className={styles.title}>What Type Of Blinds Do You Install?</div>
+
+                </div>
+              </div>
 
             </div>
 
