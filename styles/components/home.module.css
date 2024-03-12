@@ -105,13 +105,17 @@
   width: 10vw;
   display: flex;
   align-self: flex-start;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   padding: 5px;
-  color: rgb(60, 60, 60);
+  color: #ffffff;
   font-weight: 600;
   background-color: #f7f7f7ae;
   white-space: nowrap;
   border-top-left-radius: 3px;
+  background: linear-gradient(to top, #1e4b41dc, #255e51e0, #3f937fda);
+
 }
 
 .linkitem_wrapper {
