@@ -478,6 +478,16 @@
   }
   
   @media (min-width: 200px) and (max-width: 600px) and (orientation: portrait) {
+
+    .logo_and_header_1st_and_2nd_bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100px;
+      width: 100vw;
+      margin-bottom: 50px;
+    }
+    
     .icons_group {
       display: flex;
     }
@@ -521,8 +531,7 @@
     }
   
     .header_logo_mobile {
-      display: flex;
-      display: flex;
+      display: none;
       height: 50px;
       width: 100vw;
       padding: 10px;
@@ -533,7 +542,7 @@
     }
   
     .logo_image_mobile {
-      display: flex;
+      display: none;
       height: 50px;
       width: auto;
     }
@@ -753,7 +762,7 @@
 
 @media (min-width: 200px) and (max-width: 700px) and (orientation: portrait) {
     .Footer_wrapper {
-        display: flex;
+        display: none;
         flex-direction: row;
         align-items: start;
         justify-content: center;
@@ -785,7 +794,7 @@
 
     
     .header_logo {
-        display: flex;
+        display: none;
         width: 70px;
         height: auto;
         background-color: white;
