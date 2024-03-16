@@ -40,6 +40,9 @@ const ZebraBlinds = () => {
   const [WandPriceCMS, setWandPriceCMS] = useState("");
   const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
   const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
+  const [inchPriceCMS, setInchPriceCMS] = useState(0);
+  const [fractionPriceCMS, setFractionPriceCMS] = useState(0);
+
 
 
   const fetchLatestData = async () => {
@@ -55,6 +58,8 @@ const ZebraBlinds = () => {
         setWandPriceCMS(latestData.WandPriceCMS || "");
         setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
         setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+        setFractionPriceCMS(latestData.fractionPriceCMS || "");
+        setInchPriceCMS(latestData.inchPriceCMS || "");
 
       }
     } catch (error) {
@@ -667,6 +672,10 @@ const ZebraBlinds = () => {
   const [selectedInchHEIGHT, setselectedInchHEIGHT] = useState(null);
 
 
+
+
+
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
   const scrollableDivRef = useRef();
@@ -734,6 +743,7 @@ const ZebraBlinds = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
   const handleScrolledInchesWhenClickedHEIGHT = (inchHEIGHT) => {
     setselectedInchesHeight(inchHEIGHT);
     setSelectedInchVisibleHeight(false);
@@ -758,9 +768,6 @@ const ZebraBlinds = () => {
     }, 0);
   };
 
-  const handleNewSpanClickInchesWhenClickedHEIGHT = () => {
-    setSelectedInchVisibleHeight((prev) => !prev);
-  };
 
 
 
@@ -814,6 +821,10 @@ const ZebraBlinds = () => {
     setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
   };
 
+
+  const handleNewSpanClickInchesWhenClickedHEIGHT = () => {
+    setSelectedInchVisibleHeight((prev) => !prev);
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1180,7 +1191,8 @@ const ZebraBlinds = () => {
                                         <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                           {selectedInchesVisibleWidth ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesWidth, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidth, index) => (
+
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
@@ -1568,6 +1580,9 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
 
+
+
+
                                   <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
                                     <div className={styles.enter_inches_group_wrapper}>
                                       <div className={styles.inches_subtitle}
@@ -1578,6 +1593,7 @@ const ZebraBlinds = () => {
                                       <div className={styles.inches_scroller_wrapper}>
                                         <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                           {selectedInchVisiblehEIGHT ? (
+
                                             <span className={styles.span_visibility_1}>
                                               {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchHEIGHT, index) => (
                                                 <div
@@ -1595,8 +1611,14 @@ const ZebraBlinds = () => {
                                             </span>
                                           )}
                                         </div>
+
+
                                       </div>
+
+
+
                                     </div>
+
 
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
@@ -1608,6 +1630,7 @@ const ZebraBlinds = () => {
                                           {selectedFractionVisibleHeight ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
+
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
@@ -1615,6 +1638,7 @@ const ZebraBlinds = () => {
                                                 >
                                                   {fractionHeight}
                                                 </div>
+
                                               ))}
                                             </span>
                                           ) : (
@@ -2148,7 +2172,7 @@ const ZebraBlinds = () => {
                                         <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
                                           {selectedInchesVisibleWidth ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesWidth, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidth, index) => (
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
@@ -3038,8 +3062,15 @@ const ZebraBlinds = () => {
                   <div className={styles.selectColorImageCollection}>
                     {Object.keys(colorData).map((color) => (
                       <div key={color} className={styles[color.toLowerCase()]}>
-                        <p className={styles.color_section_title}>{color}</p>
-                        {renderColorList(colorData[color])}
+
+                        <div className={styles.selectColorImageCollection_wrapper} >
+                          <span>
+                            <p className={styles.color_section_title}>{color}</p>
+                          </span>
+                          <span>
+                            {renderColorList(colorData[color])}
+                          </span>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -3597,30 +3628,38 @@ const ZebraBlinds = () => {
 
                       <div className={styles.answers_answers2}>
                         {selectedImagesTop?.length > 0 && (
+
                           <div className={styles.left_imageContainer_wrapper}>
+
                             <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
-                              <p>
+
+                              <p className={styles.casette_rail_type_answer_container_text}>
                                 {
                                   (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
                                     Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
                                   )?.label
                                 }
                               </p>
-                              <Image
-                                width={200}
-                                height={200}
-                                className={styles.casette_rail_type_answer_image_render}
-                                src={
-                                  (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
-                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
-                                  )?.src
-                                }
-                                alt={
-                                  (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
-                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
-                                  )?.label
-                                }
-                              />
+
+
+                              <div className={styles.casette_rail_type_answer_image_render_wrapper}>
+                                <Image
+                                  width={200}
+                                  height={200}
+                                  className={styles.casette_rail_type_answer_image_render}
+                                  src={
+                                    (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
+                                      Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
+                                    )?.src
+                                  }
+                                  alt={
+                                    (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key1 === selectedImagesTop[0]) ||
+                                      Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key2 === selectedImagesTop[0])
+                                    )?.label
+                                  }
+                                />
+                              </div>
+
                             </div>
                           </div>
                         )}
@@ -3636,22 +3675,29 @@ const ZebraBlinds = () => {
                       <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                       <div className={styles.answers_answers2}>
                         {selectedImagesBottom?.length > 0 && (
+
                           <div className={styles.left_imageContainer_wrapper}>
+
                             <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
-                              <p>
+
+                            <p className={styles.bottom_rail_type_answer_container_text}>
                                 {Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label}
                               </p>
-                              <Image
-                                width={200}
-                                height={200}
-                                className={styles.bottom_rail_type_answer_image_render}
-                                src={
-                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.src
-                                }
-                                alt={
-                                  Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label
-                                }
-                              />
+
+                              <div className={styles.bottom_rail_type_answer_image_render_wrapper}>
+                                <Image
+                                  width={200}
+                                  height={200}
+                                  className={styles.bottom_rail_type_answer_image_render}
+                                  src={
+                                    Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.src
+                                  }
+                                  alt={
+                                    Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label
+                                  }
+                                />
+                              </div>
+
                             </div>
                           </div>
                         )}

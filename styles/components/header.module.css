@@ -80,6 +80,15 @@
 .icons_for_top_text {
   font-size: 14px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.4s;
+  color: rgb(0, 0, 0);
+}
+
+.icons_for_top_text:hover { 
+  text-decoration: underline;
+  transition: 0.4s;
+  font-size: 15px;
+  color: rgb(56, 56, 56);
 }
 
 .links_for_top_wrapper {
@@ -101,18 +110,23 @@
   height: 20px;
 }
 
-
-.top_links {
+.top_links_item {
   color: black;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-content: flex-end;
   justify-content: flex-end;
   width: max-content;
+  transition: 0.4s;
   margin-right: 20px;
 }
 
+.top_links_item:hover { 
+  text-decoration: underline;
+  transition: 0.4s;
+  color: rgb(54, 54, 54);
+}
 
 .divider_line {
   display: flex;

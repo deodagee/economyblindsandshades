@@ -1,10 +1,9 @@
-
 .ZebraBlindsFooter_wrapper::after {
     display: flex;
     transition: 0.8s;
-  }
-  
-  .ZebraBlindsFooter {
+}
+
+.ZebraBlindsFooter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,33 +21,33 @@
     border-color: #00765e;
     border-width: 5px;
     border-top-width: 30px;
-  
-  }
-  
-  .showFooter {
-    opacity: 1;
-    transition: opacity 0.9s ease;
-  }
-  
-  
-  .cmspanel_wrapper { 
-display: flex;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-align-items: center;
-justify-content: center;
-flex-direction: column;
-width: 100vw;
-margin: 10px;
-margin-top: 5vh;
-gap: 20px;
+
 }
 
-.cms_panel_section { 
+.showFooter {
+    opacity: 1;
+    transition: opacity 0.9s ease;
+}
+
+
+.cmspanel_wrapper {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    margin: 10px;
+    margin-top: 5vh;
+    gap: 20px;
+}
+
+.cms_panel_section {
     display: flex;
     flex-direction: column;
     align-items: center;
-justify-content: space-between;
+    justify-content: space-between;
     gap: 5px;
     padding: 10px;
     width: 20vw;
@@ -58,7 +57,7 @@ justify-content: space-between;
 
 }
 
-.cms_panel_label { 
+.cms_panel_label {
     display: flex;
     font-size: 15px;
     color: black;
@@ -66,6 +65,51 @@ justify-content: space-between;
     width: 200px;
     align-items: center;
     justify-content: center;
+}
+
+.inches_scroller_div {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.span_visibility_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+    height: 500px;
+    margin-top: 10px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    transition: 0.6s;
+    padding: 25px;
+}
+
+.span_visibility_1 div:hover {
+    background-color: rgb(195, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 3px;
+    transition: 0.3s;
+}
+
+.inchesWidth { 
+    display: flex;
+    font-size: 12px;
+    color: rgb(124, 0, 0);
+margin: 20px;
+}
+
+.selectedInch {
+    display: flex;
+    font-size: 12px;
+    color: rgb(124, 0, 0);
+margin: 20px;
 }
 
 .cms_panel_input_box {
@@ -77,10 +121,10 @@ justify-content: space-between;
     border-color: grey;
     align-items: center;
     justify-content: flex-start;
-    background-color: #eaeaea; 
+    background-color: #eaeaea;
 }
 
-.button { 
+.button {
     width: 50px;
     height: 25px;
     display: flex;
@@ -92,19 +136,17 @@ justify-content: space-between;
     border-color: orange;
 }
 
-
-.button:hover { 
+.button:hover {
     transform: scale(1.02);
     transition: 0.3s;
     box-shadow: rgb(0, 0, 0) 0px 0px 4px;
-
 }
 
 
-.warning { 
+.warning {
     background-color: rgb(236, 236, 236);
     margin-top: 10vh;
-padding: 20px;
+    padding: 20px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -113,7 +155,7 @@ padding: 20px;
     gap: 5px;
 }
 
-.warning_section_title { 
+.warning_section_title {
     display: flex;
     width: max-content;
     align-items: center;
@@ -124,7 +166,7 @@ padding: 20px;
     color: rgb(77, 50, 0);
 }
 
-.warning_section { 
+.warning_section {
     word-wrap: nowrap;
     display: flex;
     width: max-content;
@@ -137,10 +179,10 @@ padding: 20px;
     gap: 1vw;
     margin-top: 30px;
     margin-bottom: 30px;
-    
+
 }
 
-.warning_section span { 
+.warning_section span {
     color: black;
     font-size: 15px;
     font-weight: 500;
@@ -151,7 +193,7 @@ padding: 20px;
     padding-right: 10px;
 }
 
-.warning_section_thank_you { 
+.warning_section_thank_you {
     word-wrap: nowrap;
     display: flex;
     width: max-content;
@@ -161,19 +203,21 @@ padding: 20px;
     font-size: 15px;
     color: rgb(0, 0, 0);
     gap: 1vw;
-    margin-top: 30px;}
+    margin-top: 30px;
+}
 
 
-    .key_locker1, .key_locker2 { 
-        display: flex;
-        background-color: rgb(224, 224, 224);
-        width: 200px;
-        height: 25px;
-        color: rgb(75, 75, 75);
-        border-radius: 0.25rem;
-        border-color: orange;
-        align-items: center;
-        justify-content: center;
-        font: 10px;
-        box-shadow: #000000 0px 0px 4px;
-    }
+.key_locker1,
+.key_locker2 {
+    display: flex;
+    background-color: rgb(224, 224, 224);
+    width: 200px;
+    height: 25px;
+    color: rgb(75, 75, 75);
+    border-radius: 0.25rem;
+    border-color: orange;
+    align-items: center;
+    justify-content: center;
+    font: 10px;
+    box-shadow: #000000 0px 0px 4px;
+}
