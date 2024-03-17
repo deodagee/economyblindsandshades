@@ -121,6 +121,7 @@ const ZebraBlinds = () => {
       setactive_wand_right_choice_rendering_content(null);
       setShowImageleft(true);
       setShowImageright(false);
+
     } else if (ellipseNumber === 2) {
       setactive_wand_cordless_motorized(2);
       setactive_wand_left_choice(null);
@@ -128,8 +129,7 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent('cordless');
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(false);
-      setShowImageleft(false);
-      setShowImageright(false);
+
     } else if (ellipseNumber === 3) {
       setactive_wand_cordless_motorized(3);
       setactive_wand_left_choice(null);
@@ -137,8 +137,8 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent('motorized');
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(false);
-      setShowImageleft(false);
-      setShowImageright(false);
+
+
     } else if (ellipseNumber === 4) {
       setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(4);
@@ -148,6 +148,7 @@ const ZebraBlinds = () => {
       setactive_wand_right_choice_rendering_content(false);
       setShowImageleft(true);
       setShowImageright(false);
+
     } else if (ellipseNumber === 5) {
       setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(null);
@@ -165,8 +166,7 @@ const ZebraBlinds = () => {
       setactive_wand_cordless_motorizedRenderingContent(null);
       setactive_wand_left_choice_rendering_content(null);
       setactive_wand_right_choice_rendering_content(null);
-      setShowImageleft(false);
-      setShowImageright(false);
+
     }
 
     let newTotalPrice = 0;
@@ -175,12 +175,15 @@ const ZebraBlinds = () => {
       case 1:
         newTotalPrice = WandPriceCMS;
         break;
+
       case 2:
         newTotalPrice = cordlesspriceCMS;
         break;
+
       case 3:
         newTotalPrice = motorizedpriceCMS;
         break;
+
       default:
     }
 
@@ -3112,51 +3115,35 @@ const ZebraBlinds = () => {
 
                   <div className={styles.select_chain_option1_ellipse_and_options}>
 
-                    <div className={styles.select_chain_option1_ellipse_wrapper}>
-                      <span
-                        className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                        onClick={() => handleLiftFeatureEllipsess(1)}
-                      ></span>
-                    </div>
+
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
+
                       <div className={styles.select_chain_options___side}>
                         <div className={styles.select_chain_option1_options}>
+
+                          <div className={styles.select_chain_option1_ellipse_wrapper}>
+                            <span
+                              className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(1)}
+                            ></span>
+                          </div>
 
                           <div className={styles.wand_subtitle}>
                             <span className={styles.price_bar}>${WandPriceCMS}</span>
                           </div>
 
+                          <div className={styles.options_price_seperator}></div>
+
                           <span className={styles.priced_item}>Wand</span>
 
-                          <div className={styles.options_price_seperator}></div>
-                          <div className={styles.free_subtitle}>$ {WandPriceCMS}</div>
-
-                          <div className={styles.wand_extra_buttons}>
-                            <button>
-                              <div
-                                className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
-                                onClick={() => handleLiftFeatureEllipsess(4)}
-                              >
-                                Left
-                              </div>
-                            </button>
-
-                            <button>
-                              <div
-                                className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
-                                onClick={() => handleLiftFeatureEllipsess(5)}
-                              >
-                                Right
-                              </div>
-                            </button>
-                          </div>
 
                         </div>
                       </div>
 
                       <div className={styles.select_chain_options___side}>
+
                         <div className={styles.wand_option_image_placeholder}>
                           {showImageleft && (
                             <div className={styles.showleftchain_wrapper}>
@@ -3170,7 +3157,6 @@ const ZebraBlinds = () => {
                             </div>
                           )}
 
-
                           {showImageright && (
                             <div className={styles.showrightchain_wrapper}>
                               <Image
@@ -3183,6 +3169,27 @@ const ZebraBlinds = () => {
                             </div>
                           )}
                         </div>
+
+                        <div className={styles.wand_extra_buttons}>
+                          <button>
+                            <div
+                              className={`${styles.select_chain_left_text} ${active_wand_left_choice === 4 ? styles.active_wand_left_choice : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(4)}
+                            >
+                              Left
+                            </div>
+                          </button>
+
+                          <button>
+                            <div
+                              className={`${styles.select_chain_right_text} ${active_wand_right_choice === 5 ? styles.active_wand_right_choice : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(5)}
+                            >
+                              Right
+                            </div>
+                          </button>
+                        </div>
+
                       </div>
                     </div>
 
@@ -3194,30 +3201,29 @@ const ZebraBlinds = () => {
                   <div className={styles.select_chain_option2_ellipse_and_options}>
 
 
-                    <div className={styles.select_chain_option2_ellipse_wrapper}>
-                      <span
-                        className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
-                        onClick={() => handleLiftFeatureEllipsess(2)}
-                      ></span>
-                    </div>
-
-
 
                     <div className={styles.select_chain_options___side_wrapper}>
                       <div className={styles.select_chain_options___side}>
 
+
+
                         <div className={styles.select_chain_option2_options}>
+
+                          <div className={styles.select_chain_option2_ellipse_wrapper}>
+                            <span
+                              className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(2)}
+                            ></span>
+                          </div>
 
                           <div className={styles.cord_less_subtitle}>
                             <span className={styles.price_bar}>${cordlesspriceCMS}</span>
                           </div>
 
-                          <span className={styles.priced_item}>Cord Less</span>
-
                           <div className={styles.options_price_seperator}></div>
 
-                          <div className={styles.cordlift_price_value_subtitle}>$ {cordlesspriceCMS}
-                          </div>
+                          <span className={styles.priced_item}>Cord Less</span>
+
                         </div>
                       </div>
 
@@ -3233,7 +3239,6 @@ const ZebraBlinds = () => {
                       </div>
                     </div>
 
-
                   </div>
                 </div>
 
@@ -3241,30 +3246,29 @@ const ZebraBlinds = () => {
                 <div className={styles.select_chain_option3_wrapper}>
                   <div className={styles.select_chain_option3_ellipse_and_options}>
 
-                    <div className={styles.select_chain_option3_ellipse_wrapper}>
-                      <span
-                        className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
-                          styles.active_wand_cordless_motorized : ''}`}
-                        onClick={() => handleLiftFeatureEllipsess(3)}
-                      ></span>
-                    </div>
-
 
                     <div className={styles.select_chain_options___side_wrapper}>
                       <div className={styles.select_chain_options___side}>
 
                         <div className={styles.select_chain_option3_options}>
 
+                          <div className={styles.select_chain_option3_ellipse_wrapper}>
+                            <span
+                              className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                                styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(3)}
+                            ></span>
+                          </div>
+
                           <div className={styles.motorized_subtitle}>
                             <span className={styles.price_bar}>${motorizedpriceCMS}</span>
                           </div>
 
-                          <span className={styles.priced_item}>Motorized</span>
-
                           <div className={styles.options_price_seperator}></div>
 
-                          <div className={styles.motorized_price_value_subtitle}>$ {motorizedpriceCMS}
-                          </div>
+
+                          <span className={styles.priced_item}>Motorized</span>
+
                         </div>
                       </div>
 
@@ -3280,7 +3284,6 @@ const ZebraBlinds = () => {
                         </div>
                       </div>
                     </div>
-
 
                   </div>
                 </div>
@@ -3345,13 +3348,15 @@ const ZebraBlinds = () => {
                                 { key: 'TopRailList1', list: Top_Head_Rail_Choices_Materialskey1.TopRailList1, type: 'Top' },
                                 { key: 'TopRailList2', list: Top_Head_Rail_Choices_Materialskey2.TopRailList2, type: 'Top' },
                               ].map((choicesObj, index) => (
+
                                 <div key={index} className={styles.materials_organized_div}>
                                   {choicesObj.list.map((choice, choiceIndex) => (
                                     <div
-                                      className={`${styles.materials_organized_div_image} ${(choicesObj.key === 'TopRailList1' && selectedImagesTop?.includes(choice.key1)) ||
-                                        (choicesObj.key === 'TopRailList2' && selectedImagesTop?.includes(choice.key2))
-                                        ? styles.selectedImage
-                                        : ''
+                                      className={`${styles.materials_organized_div_image} 
+                                      ${(choicesObj.key === 'TopRailList1' && selectedImagesTop?.includes(choice.key1)) ||
+                                          (choicesObj.key === 'TopRailList2' && selectedImagesTop?.includes(choice.key2))
+                                          ? styles.selectedImage
+                                          : ''
                                         }`}
                                       key={choiceIndex}
                                       onClick={() => {
@@ -3370,7 +3375,9 @@ const ZebraBlinds = () => {
                                           height={100}
                                           src={choice.src}
                                           alt={choice.label} />
+
                                       </div>
+
                                       <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                     </div>
                                   ))}
@@ -3413,66 +3420,66 @@ const ZebraBlinds = () => {
                         <div className={styles.fabric_types_top_and_bottom_second_wrapper}>
 
                           <div className={styles.bottom_section}>
-                            <div className={styles.skip_bottom_section}>
-                              <div>
-                                <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}>
-                                  <div className={styles.gobacktochoices}>
-                                    <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
-                                      onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
-                                    >
-                                      <p>Go Back To Choices
-                                      </p>
-                                    </div>
+                            <div>
+                              <div className={`${styles.skip_bottom_rail_image_placeholder_invisible} ${skip_bottom_rail_image_placeholder ? styles.skip_bottom_rail_image_placeholder_visible : ''}`}>
+                                <div className={styles.gobacktochoices}>
+                                  <div className={`${styles.gobacktochoicesellipse} ${active_skip_head_rail_ellipse ? styles.active_skip_head_rail_ellipse : ''}`}
+                                    onClick={handleEllipseClickSkipHeadRailAndBotomRailColor}
+                                  >
+                                    <p>Go Back To Choices
+                                    </p>
                                   </div>
                                 </div>
+                              </div>
 
-                                {!active_skip_bottom_rail_ellipse && (
-                                  <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
-                                    <div className={styles.fabric_list_bottom_list1}>
-                                      <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
-                                      <p className={styles.sorryMessage}>First pick a selection from the TOP rail to select the appropriate BOTTOM rail.</p>
+                              {!active_skip_bottom_rail_ellipse && (
+                                <div className={styles.fabric_list_bottom} style={{ marginTop: active_skip_bottom_rail_ellipse ? '-100px' : '0' }}>
+                                  <div className={styles.fabric_list_bottom_list1}>
+                                    <div className={styles.pick_bottom_rail_color_subtitle1}>Bottom Rail Type:</div>
+                                    <p className={styles.sorryMessage}>First pick a selection from the TOP rail to select the appropriate BOTTOM rail.</p>
 
-                                      <div className={styles.materials_organized_div_wrapper}>
-                                        {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
-                                          <div key={index} className={styles.materials_organized_div}>
-                                            {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
-                                              <div
-                                                className={`${styles.materials_organized_div_image} 
-                                                ${selectedImagesBottom?.includes(choice.key3) ? styles.selectedImage : ''} 
+                                    <div className={styles.materials_organized_div_wrapper}>
+                                      {Object.keys(Bottom_Bottom_Rail_Choices_Materials).map((railType, index) => (
+                                        <div key={index} className={styles.materials_organized_div}>
+                                          {Bottom_Bottom_Rail_Choices_Materials[railType].map((choice) => (
+                                            <div
+                                              className={`${styles.materials_organized_div_image} 
+                                                ${selectedImagesBottom?.includes(choice.key3)
+                                                  ? styles.selectedImage
+                                                  : ''
+                                                } 
                                                 ${clickedImageKeyBottom === choice.key3 ? styles.clickedImage : ''}`}
-                                                key={choice.key3}
-                                                onClick={() => handleBottomImageClick(choice.key3)}
-                                                // Allow selection only if key1 or key2 matches clickedImageKeyTop
-                                                style={{
-                                                  pointerEvents: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 'auto' : 'none',
-                                                  opacity: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 1 : 0.5,
-                                                }}
-                                              >
+                                              key={choice.key3}
+                                              onClick={() => handleBottomImageClick(choice.key3)}
+                                              style={{
+                                                pointerEvents: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 'auto' : 'none',
+                                                opacity: (clickedImageKeyTop === choice.key1 || clickedImageKeyTop === choice.key2) ? 1 : 0.5,
+                                              }}
+                                            >
 
-                                                <div className={styles.railimage_wrapper}>
-                                                  <Image
-                                                    className={styles.railimage}
-                                                    width={100}
-                                                    height={100}
-                                                    src={choice.src}
-                                                    alt={choice.label}
-                                                  />
+                                              <div className={styles.railimage_wrapper}>
+                                                <Image
+                                                  className={styles.railimage}
+                                                  width={100}
+                                                  height={100}
+                                                  src={choice.src}
+                                                  alt={choice.label}
+                                                />
 
-                                                </div>
-                                                <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
                                               </div>
-                                            ))}
-                                          </div>
-                                        ))}
-
-                                      </div>
+                                              <p className={styles.materials_organized_div_image_paragraph}>{choice.label}</p>
+                                            </div>
+                                          ))}
+                                        </div>
+                                      ))}
 
                                     </div>
+
                                   </div>
-                                )}
+                                </div>
+                              )}
 
 
-                              </div>
                             </div>
 
                           </div>
@@ -3680,7 +3687,7 @@ const ZebraBlinds = () => {
 
                             <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
 
-                            <p className={styles.bottom_rail_type_answer_container_text}>
+                              <p className={styles.bottom_rail_type_answer_container_text}>
                                 {Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key3 === selectedImagesBottom[0])?.label}
                               </p>
 

@@ -1074,7 +1074,7 @@
   gap: 5px;
 }
 
-.prices_for_inches_and_fractions_section { 
+.prices_for_inches_and_fractions_section {
   display: flex;
   width: max-content;
   height: max-content;
@@ -1085,7 +1085,7 @@
   text-align: left;
 }
 
-.prices_for_inches_and_fractions_text { 
+.prices_for_inches_and_fractions_text {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1094,7 +1094,7 @@
   background-color: black;
 }
 
-.prices_for_inches_and_fractions_label { 
+.prices_for_inches_and_fractions_label {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1104,7 +1104,7 @@
   background-color: black;
 }
 
-.prices_for_inches_and_fractions_input { 
+.prices_for_inches_and_fractions_input {
   display: flex;
   width: 50px;
   border-color: red;
@@ -1541,7 +1541,7 @@
 
 }
 
-.selectColorImageCollection_wrapper { 
+.selectColorImageCollection_wrapper {
   display: flex;
   flex-direction: column;
 
@@ -1733,23 +1733,20 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }
 
 .left_first_image_render_wrapper {
   display: flex;
-  width: 23vw;
-  height: auto;
+  width: 20vw;
+  height: 28vh;
   align-items: center;
   background-color: white;
   justify-content: center;
-
 }
 
 .left_first_image_render {
   display: flex;
-  width: 23vw;
-  height: auto;
+
   align-items: center;
   justify-content: center;
 }
@@ -1889,6 +1886,20 @@
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-width: 1px;
+  border-color: rgb(235, 235, 235);
+  border-radius: 0.35rem;
+  padding: 10px;
+  box-shadow: rgb(191, 191, 191) 1px 2px 2px;
+  transition: 0.3s;
+}
+
+.select_chain_option1_wrapper:hover,
+.select_chain_option2_wrapper:hover,
+.select_chain_option3_wrapper:hover {
+  transform: scale(0.99);
+  transition: 0.3s;
+  box-shadow: rgb(133, 133, 133) 2px 2px 5px;
 }
 
 
@@ -1897,7 +1908,7 @@
 .select_chain_option3_ellipse_and_options {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -1906,6 +1917,9 @@
 .select_chain_option2_ellipse_wrapper,
 .select_chain_option3_ellipse_wrapper {
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wand_ellipse,
@@ -1923,18 +1937,15 @@
 .wand_ellipse:hover,
 .cord_less_ellipse:hover,
 .motorized_ellipse:hover {
-  transform: scale(0.95);
   transition: 0.1s;
-  background-color: #5b5b5b;
-  box-shadow: #5c5c5c 0px 0px 5px;
+  box-shadow: #e3e3e3 0px 0px 5px;
 
 }
-
 
 .active_wand_cordless_motorized {
   display: flex;
   background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+  box-shadow: #303030 0px 0px 5px;
 }
 
 .select_chain_options___side_wrapper {
@@ -1944,7 +1955,9 @@
 
 .select_chain_options___side {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .select_chain_options___side:nth-child(1) {
@@ -2002,7 +2015,6 @@
 .wand_subtitle:hover,
 .cord_less_subtitle:hover,
 .motorized_subtitle:hover {
-  transform: scale(0.95);
   transition: 0.1s;
   background-color: #ffffff;
   box-shadow: #333333 0px 0px 4px;
@@ -2012,7 +2024,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   width: 100px;
   height: 20px;
   padding: 10px;
@@ -2020,6 +2032,12 @@
   border-color: #8f8f8f;
   border-width: 1px;
   white-space: nowrap;
+}
+
+.priced_item:hover {
+  background-color: #dddddd;
+  color: black;
+
 }
 
 .price_bar {
@@ -2033,24 +2051,6 @@
   width: 20px;
   background-color: rgb(85, 85, 85);
   border-radius: 0.60rem;
-}
-
-.free_subtitle,
-.cordlift_price_value_subtitle,
-.motorized_price_value_subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 20px;
-  padding: 10px;
-  border-width: 1px;
-  border-radius: 0.45rem;
-  border-color: rgb(113, 113, 113);
-  box-shadow: rgb(255, 255, 255) 0px 0px 3px;
-
-  white-space: nowrap;
-  color: green;
 }
 
 .wand_extra_buttons {
@@ -2110,12 +2110,13 @@
 .show_left_chain_image_render {
   display: flex;
 
+
 }
 
 .active_wand_cordless_motorized {
   display: flex;
   background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
+  box-shadow: #303030 0px 0px 5px;
 }
 
 .select_head_rail_group {
@@ -2356,6 +2357,8 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   width: 50vw;
+  align-items: center;
+  justify-content: center;
   margin: 20px;
 }
 
@@ -2368,8 +2371,8 @@
   border-width: 2px;
   border-color: rgb(1, 116, 118);
   border-radius: 0.45rem;
-  padding: 2px;
-  width: 120px;
+  padding: 5px;
+  width: 150px;
   height: max-content;
   gap: 10px;
   overflow: hidden;
@@ -2391,7 +2394,8 @@
   padding: 5px;
   padding: 10px;
   width: 100px;
-  height: auto;
+  height: 75px;
+  border-radius: 0.45rem;
 }
 
 .railimage {
@@ -2401,7 +2405,7 @@
 }
 
 .materials_organized_div_image_paragraph {
-  font-size: 8px;
+  font-size: 12px;
   height: max-content;
   width: 80%;
   height: 50px;
@@ -2410,12 +2414,14 @@
   overflow: hidden;
   margin: 0;
   padding: 5px;
-  background-color: rgb(21, 21, 21);
+  background: linear-gradient(to top, #c5c5c5, #e6e6e6, #f2f2f2);
   border-radius: 0.45rem;
   align-items: center;
   justify-content: center;
   display: flex;
-  color: white;
+  color: rgb(56, 56, 56);
+  border-width: 1px;
+  border-color: white;
 }
 
 
@@ -2452,9 +2458,19 @@
 .pick_bottom_rail_color_subtitle0 {
   display: flex;
   font-size: 15px;
-  color: brown;
-  margin-left: 20px;
   margin: 10px;
+  background: linear-gradient(to top, #c5c5c5, #e6e6e6, #f2f2f2);
+  padding: 5px;
+  padding-left: 20px;
+  color: rgb(37, 37, 37);
+  border-radius: 45px;
+}
+
+.sorryMessage {
+  width: 59vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottom_section {
@@ -2466,17 +2482,6 @@
   margin-bottom: 10px;
   border-radius: 0.45rem;
 }
-
-.skip_bottom_section {
-  display: flex;
-  width: 59vw;
-  flex-direction: column;
-  padding-left: 20px;
-  align-self: flex-start;
-  justify-content: flex-start;
-  margin-top: 10px;
-}
-
 
 .skip_bottom_rail_image_placeholder_invisible {
   display: none;
@@ -2587,7 +2592,8 @@
   gap: 5px;
   width: 100px;
   white-space: wrap;
-  font-size: small;}
+  font-size: small;
+}
 
 .materials_answer_image_itself {
   display: flex;
@@ -2595,7 +2601,8 @@
   height: 50px;
 }
 
-.casette_rail_type_answer_container, .bottom_rail_type_answer_container {
+.casette_rail_type_answer_container,
+.bottom_rail_type_answer_container {
   display: flex;
   height: 90px;
   width: 200px;
@@ -2604,22 +2611,25 @@
   justify-content: center;
 }
 
-.casette_rail_type_answer_container_text, .bottom_rail_type_answer_container_text { 
-display: flex;
-flex-direction: row;
-gap: 5px;
-width: 100px;
-white-space: wrap;
-font-size: small;
+.casette_rail_type_answer_container_text,
+.bottom_rail_type_answer_container_text {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100px;
+  white-space: wrap;
+  font-size: small;
 }
 
-.casette_rail_type_answer_image_render_wrapper, .bottom_rail_type_answer_image_render_wrapper { 
+.casette_rail_type_answer_image_render_wrapper,
+.bottom_rail_type_answer_image_render_wrapper {
   display: flex;
   width: 100px;
   height: 50px;
 }
 
-.casette_rail_type_answer_image_render, .bottom_rail_type_answer_image_render {
+.casette_rail_type_answer_image_render,
+.bottom_rail_type_answer_image_render {
   display: flex;
   background-color: white;
   padding: 10px;
@@ -3467,7 +3477,7 @@ font-size: small;
 
   .images_and_subtitles {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     gap: 10px;
   }
