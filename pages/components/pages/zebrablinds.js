@@ -43,8 +43,6 @@ const ZebraBlinds = () => {
   const [inchPriceCMS, setInchPriceCMS] = useState(0);
   const [fractionPriceCMS, setFractionPriceCMS] = useState(0);
 
-
-
   const fetchLatestData = async () => {
     try {
       const response = await fetch("/api/getLatestData");
@@ -3528,8 +3526,9 @@ const ZebraBlinds = () => {
                       <div className={styles.window_name_answer}>Window Name:
                       </div>
                       <div className={styles.answers_answers}>
-                        {productName1}
+                        {productName1.charAt(0).toUpperCase() + productName1.slice(1)}
                       </div>
+
                     </div>
 
                     <span
@@ -3540,8 +3539,9 @@ const ZebraBlinds = () => {
 
                       <div className={styles.window_type_answer}>Window Type:</div>
                       <div className={styles.answers_answers}>
-                        {productName2}
+                        {productName2.charAt(0).toUpperCase() + productName2.slice(1)}
                       </div>
+
                     </div>
 
                     <span
@@ -3587,6 +3587,7 @@ const ZebraBlinds = () => {
                     <div className={styles.description_and_answer}>
                       <div className={styles.materials_answer}>Material:</div>
 
+                      <div className={styles.answers_answers3}>
 
                       <div className={`${styles.materials_answer_image} ${styles.materials_answer_image_styled}`}>
                         <h3 className={styles.materials_answer_image_label}>
@@ -3601,7 +3602,7 @@ const ZebraBlinds = () => {
                           height={200}
                         />
                       </div>
-
+                      </div>
 
                     </div>
 

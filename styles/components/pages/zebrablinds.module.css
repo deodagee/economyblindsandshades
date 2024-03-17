@@ -1746,7 +1746,6 @@
 
 .left_first_image_render {
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -1757,7 +1756,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .left_imageContainer_image_itself1_label {
   display: flex;
@@ -2671,7 +2669,6 @@
   border-radius: 0.56rem;
 }
 
-/* End of Fabrics Page */
 .quantity_seperator_line {
   display: flex;
   height: 2px;
@@ -2703,7 +2700,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .questiomark {
@@ -2723,8 +2719,6 @@
   height: 15px;
 }
 
-
-
 .review_your_order {
   display: flex;
   align-items: center;
@@ -2734,7 +2728,6 @@
   font-weight: 700;
   margin-top: 50px;
   margin: 10px;
-
 }
 
 .review_your_order_seperator_line {
