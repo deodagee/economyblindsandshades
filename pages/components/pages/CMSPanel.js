@@ -48,16 +48,19 @@ const CMSPanel = () => {
   const [inchPriceCMS, setInchPriceCMS] = useState(0);
   const [fractionPriceCMS, setFractionPriceCMS] = useState(0);
 
+  const [inchPrices, setInchPrices] = useState({});
+  const [fractionPrices, setfractionPrices] = useState({});
+
+
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const scrollableDivRef = useRef();
+  const scrollableDivRefInches = useRef();
 
   useEffect(() => {
-    console.log("scrollableDivRef.current:", scrollableDivRef.current);
-  }, []); 
-  
-  ////////////////////////////////////////////////////////////////////////////////////////////////
+    console.log("scrollableDivRefInches.current:", scrollableDivRefInches.current);
+  }, []);
 
 
   const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
@@ -70,31 +73,94 @@ const CMSPanel = () => {
     setselectedInchesVisibleWidth(false);
     setselectedInchWIDTH(inchesWidth);
 
-    const scrollableDiv = scrollableDivRef.current;
+    const scrollableDivInches = scrollableDivRefInches.current;
 
-    setTimeout(() => {
+    if (scrollableDivInches) {
+      setTimeout(() => {
+        const selectedInchesDiv = scrollableDivInches.querySelector(`.${styles.selectedInch}`);
 
-      const selectedInchesDiv = scrollableDiv.querySelector(`.${styles.selectedInch}`);
+        if (selectedInchesDiv) {
+          const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
+          const scrollPosition =
+            selectedInchesDivRect.top +
+            scrollableDivInches.scrollTop -
+            (scrollableDivInches.offsetHeight - selectedInchesDivRect.height) / 2;
 
-      if (selectedInchesDiv) {
-        const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
-        const scrollPosition =
-          selectedInchesDivRect.top +
-          scrollableDiv.scrollTop -
-          (scrollableDiv.offsetHeight - selectedInchesDivRect.height) / 2;
-
-        scrollableDiv.scrollTop = scrollPosition;
-      } else {
-        console.warn("Selected inch div not found in the scrollable div");
-      }
-    }, 0);
+          scrollableDivInches.scrollTop = scrollPosition;
+        } else {
+          console.warn("Selected inch div not found in the scrollable div");
+        }
+      }, 0);
+    }
   };
+
+  const handleInchPriceChangeINCHES = (price) => {
+    const updatedInchPrices = { ...inchPrices, [selectedInchesWidth]: parseFloat(price) };
+    setInchPrices(updatedInchPrices);
+    setInchPriceCMS(parseFloat(price));
+  };
+
   const handleNewSpanClickInchessWhenClickedWidth = () => {
     setselectedInchesVisibleWidth((prev) => !prev);
   };
 
 
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  const scrollableDivRefFractions = useRef();
+
+  useEffect(() => {
+    console.log("scrollableDivRefFractions.current:", scrollableDivRefFractions.current);
+  }, []);
+
+
+  const [selectedFractionVisibleWidth, setselectedFractionVisibleWidth] = useState(true);
+  const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
+  const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
+
+  const handleScrolledFractionsWhenClickedWIDTH = (fractionWidth) => {
+    setselectedFractionsWidth(fractionWidth);
+    setselectedFractionVisibleWidth(false);
+    setselectedFractionWIDTH(fractionWidth);
+
+    const scrollableDivFractions = scrollableDivRefFractions.current;
+
+    if (scrollableDivFractions) {
+      setTimeout(() => {
+        const selectedFractionDiv = scrollableDivFractions.querySelector(`.${styles.selectedFraction}`);
+
+        if (selectedFractionDiv) {
+          const selectedFractionDivRect = selectedFractionDiv.getBoundingClientRect();
+          const scrollPosition =
+            selectedFractionDivRect.top +
+            scrollableDivFractions.scrollTop -
+            (scrollableDivFractions.offsetHeight - selectedFractionDivRect.height) / 2;
+
+          scrollableDivFractions.scrollTop = scrollPosition;
+        } else {
+          console.warn("Selected fraction div not found in the scrollable div");
+        }
+      }, 0);
+    }
+  };
+
+
+  const handleFractionPriceChangeFRACTIONS = (price) => {
+    const updatedFractionPrices = { ...fractionPrices, [selectedFractionsWidth]: parseFloat(price) };
+    setfractionPrices(updatedFractionPrices);
+    setFractionPriceCMS(parseFloat(price));
+  };
+
+  const handleNewSpanClickFractionsWhenClickedWidth = () => {
+    setselectedFractionVisibleWidth((prev) => !prev);
+  };
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
   const fetchLatestData = async () => {
@@ -388,13 +454,13 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={productName1}
               onChange={(e) => setProductName1(e.target.value)}
             />
             <button className={styles.button} onClick={handleSave1}>
               Save
             </button>
-            <h1 className={styles.key_locker1}>{postData && postData.productName1}</h1>
+            <h1 className={styles.key_locker1}>{postData && postData.productName1}
+            </h1>
           </div>
 
           <div className={styles.cms_panel_section}>
@@ -402,14 +468,14 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={productName2}
               onChange={(e) => setProductName2(e.target.value)}
             />
             <button className={styles.button} onClick={handleSave2}>
               Save
             </button>
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.productName2}</h1>
+              <h1 >{postData && postData.productName2}
+              </h1>
             </div>
           </div>
 
@@ -418,14 +484,14 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={roomname}
               onChange={(e) => setroomname(e.target.value)}
             />
             <button className={styles.button} onClick={handleSave6}>
               Save
             </button>
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.roomname}</h1>
+              <h1 >{postData && postData.roomname}
+              </h1>
             </div>
           </div>
 
@@ -434,14 +500,14 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={WandPriceCMS}
               onChange={(e) => setWandPriceCMS(e.target.value)}
             />
             <button className={styles.button} onClick={handleSave3}>
               Save
             </button>
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.WandPriceCMS}</h1>
+              <h1 >{postData && postData.WandPriceCMS}
+              </h1>
             </div>
           </div>
 
@@ -451,14 +517,14 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={cordlesspriceCMS}
               onChange={(e) => setcordlesspriceCMS(e.target.value)}
             />
             <button className={styles.button} onClick={handleSave4}>
               Save
             </button>
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.cordlesspriceCMS}</h1>
+              <h1 >{postData && postData.cordlesspriceCMS}
+              </h1>
             </div>
           </div>
 
@@ -469,7 +535,6 @@ const CMSPanel = () => {
             <input
               className={styles.cms_panel_input_box}
               type="text"
-              value={motorizedpriceCMS}
               onChange={(e) => setmotorizedpriceCMS(e.target.value)}
             />
             <button
@@ -478,17 +543,19 @@ const CMSPanel = () => {
               Save
             </button>
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.motorizedpriceCMS}</h1>
+              <h1 >{postData && postData.motorizedpriceCMS}
+              </h1>
             </div>
           </div>
 
 
           <div className={styles.cms_panel_section}>
+
             <label className={styles.cms_panel_label}>
               Change Inches Prices:
             </label>
 
-            {selectedInchesVisibleWidth ? (
+            <div className={styles.span_visibility_1_wrapper}>
               <span className={styles.span_visibility_1}>
                 {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidth, index) => (
                   <div
@@ -500,45 +567,85 @@ const CMSPanel = () => {
                   </div>
                 ))}
               </span>
-            ) : (
+            </div>
+
+            {selectedInchesVisibleWidth ? (
               <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
                 {selectedInchesWidth}
-
               </span>
-            )}
+            ) : null}
 
-            <input className={styles.cms_panel_input_box}
-              type="text"
-              value={inchPriceCMS}
-              onChange={(e) => setInchPriceCMS(e.target.value)} />
+
+            <input
+              className={styles.cms_panel_input_box}
+              type="number" // Change type to number for editing the price
+              onChange={(e) => handleInchPriceChangeINCHES(e.target.value)} // Handle changes to the inch price
+            />
+
             <button
               className={styles.button}
               onClick={handleSave7}>
               Save
             </button>
+
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.inchPriceCMS}</h1>
+              <h1> Price: ${inchPrices[selectedInchesWidth]}
+               </h1>
             </div>
+
           </div>
 
+
+
+
           <div className={styles.cms_panel_section}>
+
             <label className={styles.cms_panel_label}>
               Change Fractions Prices:
             </label>
 
-            <input className={styles.prices_for_inches_and_fractions_input}
-              type="text"
-              value={fractionPriceCMS}
-              onChange={(e) => setFractionPriceCMS(e.target.value)} />
+            <div className={styles.span_visibility_1_wrapper}>
+              <span className={styles.span_visibility_1}>
+
+                {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
+                    className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                  >
+                    {fractionWidth}
+                  </div>
+                ))}
+              </span>
+            </div>
+
+            {selectedFractionVisibleWidth ? (
+              <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
+                {selectedFractionsWidth}
+              </span>
+            ) : null}
+
+
+            <input
+              className={styles.cms_panel_input_box}
+              type="number" // Change type to number for editing the price
+              onChange={(e) => handleFractionPriceChangeFRACTIONS(e.target.value)} // Handle changes to the fraction price
+            />
+
             <button
               className={styles.button}
               onClick={handleSave8}>
               Save
             </button>
+
             <div className={styles.key_locker2}>
-              <h1 >{postData && postData.fractionPriceCMS}</h1>
+              <h1> Price: ${fractionPrices[selectedFractionsWidth]}
+              </h1>
             </div>
+
           </div>
+
+
 
         </div>
 

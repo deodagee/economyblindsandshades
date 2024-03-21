@@ -298,7 +298,11 @@
   margin: 10px;
 }
 
-.inside_mount_and_outside_mount_whole_wrapper {
+
+.select_cassette_head_rail_whole_wrapper, 
+.inside_mount_and_outside_mount_whole_wrapper, 
+.select_color_group_whole_wrapper, 
+.select_lift_type_group_whole_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,7 +314,10 @@
   padding: 10px;
 }
 
-.inside_mount_and_outside_mount_group_titles_wrapper {
+.select_cassette_head_rail_group_titles_wrapper,
+.inside_mount_and_outside_mount_group_titles_wrapper,
+.select_color_group_titles_wrapper,
+.select_lift_type_group_titles_wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -333,9 +340,6 @@
   background: linear-gradient(to left, #dfdfdf, #dfdfdf, #dfdfdf, #cfcfcf, #dfdfdf);
   justify-content: flex-start;
 }
-
-
-
 
 .select_mount_type_title {
   gap: 20px;
@@ -363,8 +367,6 @@
   color: black;
 }
 
-
-
 .ellipse_and_type {
   display: flex;
   flex-direction: row;
@@ -379,8 +381,6 @@
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
 }
 
-
-
 .inside_mount_ellipse {
   display: flex;
   background-color: #dddddd;
@@ -390,7 +390,6 @@
   cursor: pointer;
   color: black;
 }
-
 
 .outside_mount_ellipse {
   display: flex;
@@ -411,8 +410,6 @@
   font-size: 10px;
 }
 
-
-
 .outside_mount_choice {
   white-space: nowrap;
   font-size: 10px;
@@ -427,9 +424,7 @@
   margin-top: 20px;
   background-color: white;
   padding: 20px;
-
 }
-
 
 
 .visible_inside_mount {
@@ -439,8 +434,6 @@
 .invisible_inside_mount {
   display: none;
 }
-
-
 
 .left_right_inside_mount {
   display: flex;
@@ -458,7 +451,6 @@
   height: auto;
 }
 
-
 .inside_mount_group_left_side,
 .outside_mount_group_left_side {
   display: flex;
@@ -471,11 +463,9 @@
   justify-content: center;
 }
 
-
 .mount_measurement_instructions_wrapper {
   display: contents;
 }
-
 
 .mount_measurement_instructions {
   display: flex;
@@ -528,8 +518,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
 
 .step_tag_description_wrapper {
   display: flex;
@@ -715,25 +703,6 @@
   margin-left: 20px;
 }
 
-.select_color_group_whole_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 65vw;
-  height: max-content;
-  border-radius: 0.25rem;
-  padding-bottom: 20px;
-  padding: 10px;
-}
-
-.select_color_group_titles_wrapper {
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-  align-self: flex-start;
-  justify-content: flex-start;
-}
 
 .step_1_wrapper {
   display: flex;
@@ -1451,8 +1420,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 400px;
+  justify-content: flex-start;
+  width: 350px;
   height: 35px;
   padding: 10px;
   border-radius: 2rem;
@@ -1461,12 +1430,14 @@
   border-color: white;
 }
 
+
 .select_color_short_rectangle:hover,
 .select_mount_type_short_rectangle:hover,
 .select_cassette_head_rail_short_rectangle:hover,
 .select_lift_type_short_rectangle:hover {
   cursor: default;
 }
+
 
 .select_color_title {
   gap: 20px;
@@ -1505,6 +1476,7 @@
   background-color: rgb(243, 243, 243);
   border-radius: 2rem;
   height: 20px;
+  margin-top: 20px;
   box-shadow: rgb(133, 133, 133) 1px 2px 5px;
 }
 
@@ -1532,6 +1504,7 @@
   font-size: 12px;
   white-space: nowrap;
   transition: 0.2s;
+  margin-top: 20px;
 }
 
 .selectColorImageCollection:hover {
@@ -1799,28 +1772,6 @@
   margin-bottom: 20px;
   background-color: black;
   border-radius: 0.56rem;
-}
-
-.select_lift_type_group_whole_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 65vw;
-  height: max-content;
-  border-radius: 0.25rem;
-  padding-bottom: 20px;
-  padding: 10px;
-}
-
-.select_lift_type_group_titles_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: max-content;
-  align-self: flex-start;
-  justify-content: flex-start;
-  margin-top: 20px;
 }
 
 
@@ -2123,16 +2074,6 @@
   width: 60vw;
 }
 
-.titled_step_combo2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 60vw;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 20px;
-}
-
 .iconforselect_cassette_head_rail {
   display: none;
   padding: 2px;
@@ -2167,6 +2108,31 @@
   box-shadow: rgb(226, 226, 226) 0px 0px 4px;
   color: black;
 }
+
+.ellipse_and_type_select_color {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: max-content;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(243, 243, 243);
+  border-radius: 2rem;
+  height: 20px;
+  box-shadow: rgb(133, 133, 133) 1px 2px 5px;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.select_color_type_subtitle {
+  display: flex;
+  font-size: 15px;
+  color: brown;
+  margin-left: 20px;
+  margin: 10px;
+}
+
 
 .ellipse_and_type_head_and_bottom_rail {
   display: flex;
@@ -3090,16 +3056,13 @@
     top: 200px;
   }
 
-
   .right_half_top {
     display: flex;
     flex-direction: column;
     width: 90vw;
     padding: 10px;
     margin-left: 20px;
-
   }
-
 
   .top_title_area {
     display: flex;
@@ -3114,8 +3077,6 @@
     width: 90vw;
     padding: 10px;
   }
-
-
 
   .product_title_styles {
     display: flex;
@@ -3152,17 +3113,13 @@
   }
 
 
-
-
-
-
-
   .left_half_of_page {
     display: none;
   }
 
-  .inside_mount_and_outside_mount_whole_wrapper,
-  .select_color_group_whole_wrapper,
+  .select_cassette_head_rail_whole_wrapper, 
+  .inside_mount_and_outside_mount_whole_wrapper, 
+  .select_color_group_whole_wrapper, 
   .select_lift_type_group_whole_wrapper {
     display: flex;
     flex-direction: column;
@@ -3188,7 +3145,6 @@
     border-color: black;
     border-width: 3px;
     padding: 20px;
-
   }
 
   .first_chosen_outside_mount_selection,
@@ -3199,8 +3155,6 @@
     margin: 20px;
     border-radius: 0.15rem;
   }
-
-
 
   .select_mount_type_long_rectangle,
   .select_cassette_head_rail_long_rectangle,
@@ -3225,6 +3179,25 @@
     gap: 10px;
     align-items: center;
   }
+
+  .select_chain_option1_wrapper,
+  .select_chain_option2_wrapper,
+  .select_chain_option3_wrapper {
+    display: flex;
+    margin-left: 20px;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 0.35rem;
+    padding: 10px;
+    box-shadow: rgb(191, 191, 191) 1px 2px 2px;
+    transition: 0.3s;
+  }
+  
 
   .select_chain_option1_ellipse_and_options,
   .select_chain_option2_ellipse_and_options,
@@ -3256,7 +3229,6 @@
     order: 1;
   }
 
-
   .ellipse_and_type {
     display: flex;
     flex-direction: row;
@@ -3271,6 +3243,7 @@
     box-shadow: rgb(133, 133, 133) 1px 2px 5px;
     margin-left: 20px;
   }
+
 
   .ellipse_and_type_select_material {
     display: flex;

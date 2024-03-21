@@ -665,12 +665,11 @@ const ZebraBlinds = () => {
   const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
   const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
 
-
-  const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
-  const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
-
   const [selectedInchWIDTH, setselectedInchWIDTH] = useState(null);
   const [selectedInchHEIGHT, setselectedInchHEIGHT] = useState(null);
+  
+  const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
+  const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
 
 
 
@@ -921,8 +920,11 @@ const ZebraBlinds = () => {
                       </div>
                       <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
                     </div>
+
                   ) : (
+
                     <>
+
                       {selectedImagesTop?.length > 0 && (
                         <div className={styles.left_imageContainer_wrapper}>
                           <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
@@ -945,10 +947,12 @@ const ZebraBlinds = () => {
                                   )?.label
                                 }
                               />
+
                             </div>
                           </div>
                         </div>
                       )}
+
                       {bottomImagesEnabled && selectedImagesBottom?.length > 0 && (
                         <div className={styles.left_imageContainer_wrapper}>
                           <div className={`${styles.left_first_image_render_container} ${styles.left_first_image_render_container_styled}`}>
@@ -972,7 +976,9 @@ const ZebraBlinds = () => {
                         </div>
                       )}
                       {renderMatcherImage()}
+
                     </>
+
                   )}
 
                 </div>
@@ -1569,6 +1575,9 @@ const ZebraBlinds = () => {
                                     {selectedFractionWIDTH && " Inches Long"}
                                   </div>
 
+                                  <div className={styles.added_price_ruler}>
+                                    price: 
+                                  </div>
 
                                 </div>
                               </div>
@@ -2044,6 +2053,11 @@ const ZebraBlinds = () => {
                                   <div className={styles.selected_width_answer_top}>
                                     Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
                                     {selectedFractionHEIGHT && " Inches High"}
+                                  </div>
+
+                                  
+                                  <div className={styles.added_price_ruler}>
+                                    price: 
                                   </div>
 
                                 </div>
@@ -2572,6 +2586,11 @@ const ZebraBlinds = () => {
                                     {selectedFractionWIDTH && " Inches Long"}
                                   </div>
 
+                                  
+                                  <div className={styles.added_price_ruler}>
+                                    price: 
+                                  </div>
+
 
                                 </div>
                               </div>
@@ -3015,6 +3034,10 @@ const ZebraBlinds = () => {
                                     {selectedFractionHEIGHT && " Inches High"}
                                   </div>
 
+                                  <div className={styles.added_price_ruler}>
+                                    price: 
+                                  </div>
+
                                 </div>
                               </div>
 
@@ -3053,7 +3076,7 @@ const ZebraBlinds = () => {
                       </div>
                     </div>
 
-                    <div className={styles.ellipse_and_type_select_material}>
+                    <div className={styles.ellipse_and_type}>
                       <div className={styles.select_color_subtitle}> Select Material</div>
                       <div>Click On A Color To Choose And Add</div>
                     </div>
@@ -3098,7 +3121,7 @@ const ZebraBlinds = () => {
                     </div>
                   </div>
 
-                  <div className={styles.ellipse_and_type_select_lift}>
+                  <div className={styles.ellipse_and_type}>
                     <div className={styles.select_lift_type_subtitle}>Add Lift Feature</div>
                     <div>
                       Select Wand, Cordless Or Motorized
@@ -3287,11 +3310,12 @@ const ZebraBlinds = () => {
                 </div>
               </div>
 
-              <div>
-                <div>
-                  <div className={styles.select_head_rail_group}>
 
-                    <span className={styles.titled_step_combo2}>
+
+              <div>
+                <div className={styles.select_head_rail_group}>
+                  <div className={styles.select_cassette_head_rail_whole_wrapper}>
+                    <span className={styles.select_cassette_head_rail_group_titles_wrapper}>
                       <div className={styles.select_cassette_head_rail_long_rectangle}
                       >
                         <div
@@ -3307,10 +3331,13 @@ const ZebraBlinds = () => {
                           <div className={styles.select_head_rail_group_title}>
                             <span className={styles.select_head_rail_group_title_tag}>4</span> Top Rail
                           </div>
+
                         </div>
                       </div>
+                      <div className={styles.ellipse_and_type}>
+                        <div className={styles.select_color_type_subtitle}>Select Top Rail Types</div>
+                      </div>
                     </span>
-
 
                     <div className={styles.fabric_types_top_and_bottom_main_wrapper}>
 
@@ -3389,8 +3416,6 @@ const ZebraBlinds = () => {
                     </div>
 
 
-
-
                     <div className={styles.pick_bottom_rail_color_wrapper}>
 
                       <div className={styles.select_cassette_head_rail_long_rectangle}
@@ -3410,6 +3435,9 @@ const ZebraBlinds = () => {
                           </div>
 
                         </div>
+                      </div>
+                      <div className={styles.ellipse_and_type}>
+                        <div className={styles.select_color_type_subtitle}>Select Bottom Rail Types</div>
                       </div>
 
 
@@ -3589,19 +3617,19 @@ const ZebraBlinds = () => {
 
                       <div className={styles.answers_answers3}>
 
-                      <div className={`${styles.materials_answer_image} ${styles.materials_answer_image_styled}`}>
-                        <h3 className={styles.materials_answer_image_label}>
-                          Material: {selectedMaterial ? selectedMaterial.label : ''}
-                        </h3>
+                        <div className={`${styles.materials_answer_image} ${styles.materials_answer_image_styled}`}>
+                          <h3 className={styles.materials_answer_image_label}>
+                            Material: {selectedMaterial ? selectedMaterial.label : ''}
+                          </h3>
 
-                        <Image
-                          className={styles.materials_answer_image_itself}
-                          src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
-                          alt='image'
-                          width={200}
-                          height={200}
-                        />
-                      </div>
+                          <Image
+                            className={styles.materials_answer_image_itself}
+                            src={selectedColorImages.length > 0 ? selectedColorImages[0].src : ''}
+                            alt='image'
+                            width={200}
+                            height={200}
+                          />
+                        </div>
                       </div>
 
                     </div>
