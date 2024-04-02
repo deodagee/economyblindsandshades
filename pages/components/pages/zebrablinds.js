@@ -40,8 +40,12 @@ const ZebraBlinds = () => {
   const [WandPriceCMS, setWandPriceCMS] = useState("");
   const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
   const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
-  const [inchPriceCMS, setInchPriceCMS] = useState(0);
   const [fractionPriceCMS, setFractionPriceCMS] = useState(0);
+
+  const [inchPricesAfterWidthInsideMount, setinchPricesAfterWidthInsideMount] = useState({});
+  const [inchPricesAfterHeightInsideMount, setinchPricesAfterHeightInsideMount] = useState({});
+  const [inchPricesAfterWidthOutsideMount, setinchPricesAfterWidthOutsideMount] = useState({});
+  const [inchPricesAfterHeightOutsideMount, setinchPricesAfterHeightOutsideMount] = useState({});
 
   const fetchLatestData = async () => {
     try {
@@ -57,7 +61,10 @@ const ZebraBlinds = () => {
         setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
         setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
         setFractionPriceCMS(latestData.fractionPriceCMS || "");
-        setInchPriceCMS(latestData.inchPriceCMS || "");
+        setinchPricesAfterWidthInsideMount(latestData.inchPricesAfterWidthInsideMount || "");
+        setinchPricesAfterHeightInsideMount(latestData.inchPricesAfterHeightInsideMount || "");
+        setinchPricesAfterWidthOutsideMount(latestData.inchPricesAfterWidthOutsideMount || "");
+        setinchPricesAfterHeightOutsideMount(latestData.inchPricesAfterHeightOutsideMount || "");
 
       }
     } catch (error) {
@@ -68,8 +75,6 @@ const ZebraBlinds = () => {
   useEffect(() => {
     fetchLatestData();
   }, []);
-
-
 
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -582,10 +587,6 @@ const ZebraBlinds = () => {
     </>
   );
 
-
-
-
-
   const [selectedImagesTop, setSelectedImagesTop] = useState([]);
   const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
   const [clickedImageKeyTop, setClickedImageKeyTop] = useState(null);
@@ -645,72 +646,196 @@ const ZebraBlinds = () => {
   };
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
-  //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+  const [selectedRulerNumberInchWidthInsideMount, setselectedRulerNumberInchWidthInsideMount] = useState(null);
+  const [selectedRulerNumberInchHeightInsideMount, setselectedRulerNumberInchHeightInsideMount] = useState(null);
 
-
-  const [selectedRulerNumberInchHEIGHT, setselectedRulerNumberInchHEIGHT] = useState(null);
   const [selectedRulerNumberFractionHEIGHT, setselectedRulerNumberFractionHEIGHT] = useState(null);
-  const [selectedRulerNumberInchWIDTH, setselectedRulerNumberInchWIDTH] = useState(null);
   const [selectedRulerNumberFractionWIDTH, setselectedRulerNumberFractionWIDTH] = useState(null);
-
-  const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
-  const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
 
   const [selectedFractionVisibleWidth, setselectedFractionVisibleWidth] = useState(true);
   const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
-
   const [selectedFractionVisibleHeight, setSelectedFractionVisibleHeight] = useState(true);
   const [selectedFractionsHeight, setselectedFractionsHeight] = useState(null);
-
-  const [selectedInchesVisibleWidth, setselectedInchesVisibleWidth] = useState(true);
-  const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
-
-  const [selectedInchWIDTH, setselectedInchWIDTH] = useState(null);
-  const [selectedInchHEIGHT, setselectedInchHEIGHT] = useState(null);
-  
   const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
   const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
 
+  const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
+  const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
 
+  const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
 
+  const [selectedInchesWidthInsideMount, setselectedInchesWidthInsideMount] = useState(null);
 
+  const [selectedInchesHeightInsideMount, setselectedInchesHeightInsideMount] = useState(null);
 
+  const [selectedInchesWidthOutsideMount, setselectedInchesWidthOutsideMount] = useState(null);
+
+  const [selectedInchesHeightOutsideMount, setselectedInchesHeightOutsideMount] = useState(null);
+
+  const [selectedInchesVisibleWidthInsideMount, setselectedInchesVisibleWidthInsideMount] = useState(true);
+  const [selectedInchesVisibleHeightInsideMount, setselectedInchesVisibleHeightInsideMount] = useState(true);
+  const [selectedInchesVisibleWidthOutsideMount, setselectedInchesVisibleWidthOutsideMount] = useState(true);
+  const [selectedInchesVisibleHeightOutsideMount, setselectedInchesVisibleHeightOutsideMount] = useState(true);
+
+  const [selectedInchWidthInsideMount, setselectedInchWidthInsideMount] = useState(null);
+  const [selectedInchHeightInsideMount, setselectedInchHeightInsideMount] = useState(null);
+  const [selectedInchWidthOutsideMount, setselectedInchWidthOutsideMount] = useState(null);
+  const [selectedInchHeightOutsideMount, setselectedInchHeightOutsideMount] = useState(null);
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  const scrollableDivRefFractions = useRef();
+
+  const scrollableDivRefWidthInsideMount = useRef();
+  const scrollableDivRefHeightInsideMount = useRef();
+  const scrollableDivRefWidthOutsideMount = useRef();
+  const scrollableDivRefHeightOutsideMount = useRef();
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const scrollableDivRef = useRef();
+  const handleScrolledInchesWhenClickedWidthInsideMount = (inchesWidthInsideMount) => {
+    setselectedInchesWidthInsideMount(inchesWidthInsideMount);
+    setselectedInchesVisibleWidthInsideMount(false);
+    setselectedInchWidthInsideMount(inchesWidthInsideMount);
 
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-
-  const handleScrolledInchesWhenClickedWIDTH = (inchesWidth) => {
-    setselectedInchesWidth(inchesWidth);
-    setselectedInchesVisibleWidth(false);
-    setselectedInchWIDTH(inchesWidth);
-
-    const scrollableDiv = scrollableDivRef.current;
+    const scrollableDivWidthInsideMount = scrollableDivRefWidthInsideMount.current;
 
     setTimeout(() => {
-      const selectedInchesDiv = scrollableDiv.querySelector(`.${styles.selectedInch}`);
+      const selectedInchesDivWidthInsideMount = scrollableDivWidthInsideMount.querySelector(`.${styles.selectedInch}`);
 
-      if (selectedInchesDiv) {
-        const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
+      if (selectedInchesDivWidthInsideMount) {
+        const selectedInchesDivRectWidthInsideMount = selectedInchesDivWidthInsideMount.getBoundingClientRect();
         const scrollPosition =
-          selectedInchesDivRect.top +
-          scrollableDiv.scrollTop -
-          (scrollableDiv.offsetHeight - selectedInchesDivRect.height) / 2;
+          selectedInchesDivRectWidthInsideMount.top +
+          scrollableDivWidthInsideMount.scrollTopWidthInsideMount -
+          (scrollableDivWidthInsideMount.offsetWidthInsideMount - selectedInchesDivRectWidthInsideMount.height) / 2;
 
-        scrollableDiv.scrollTop = scrollPosition;
+        scrollableDivWidthInsideMount.scrollTopWidthInsideMount = scrollPosition;
       } else {
         console.warn("Selected inch div not found in the scrollable div");
       }
     }, 0);
   };
-  const handleNewSpanClickInchessWhenClickedWidth = () => {
-    setselectedInchesVisibleWidth((prev) => !prev);
+
+  const handleNewSpanClickedWidthInsideMount = () => {
+    setselectedInchesVisibleWidthInsideMount((prev) => !prev);
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  const handleScrolledInchesWhenClickedHeightInsideMount = (inchesHeightInsideMount) => {
+    setselectedInchesHeightInsideMount(inchesHeightInsideMount);
+    setselectedInchesVisibleHeightInsideMount(false);
+    setselectedInchHeightInsideMount(inchesHeightInsideMount);
+
+    const scrollableDivHeightInsideMount = scrollableDivRefHeightInsideMount.current;
+
+    setTimeout(() => {
+      const selectedInchesDivHeightInsideMount = scrollableDivHeightInsideMount.querySelector(`.${styles.selectedInch}`);
+
+      if (selectedInchesDivHeightInsideMount) {
+        const selectedInchesDivRectHeightInsideMount = selectedInchesDivHeightInsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedInchesDivRectHeightInsideMount.top +
+          scrollableDivHeightInsideMount.scrollTopHeightInsideMount -
+          (scrollableDivHeightInsideMount.offsetHeightInsideMount - selectedInchesDivRectHeightInsideMount.height) / 2;
+
+        scrollableDivHeightInsideMount.scrollTopHeightInsideMount = scrollPosition;
+      } else {
+        console.warn("Selected inch  div not found in the scrollable div");
+      }
+    }, 0);
+  };
+
+  const handleNewSpanClickedHeightInsideMount = () => {
+    setselectedInchesVisibleHeightInsideMount((prev) => !prev);
+  };
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const handleScrolledInchesWhenClickedWidthOutsideMount = (inchesWidthOutsideMount) => {
+    setselectedInchesWidthOutsideMount(inchesWidthOutsideMount);
+    setselectedInchesVisibleWidthOutsideMount(false);
+    setselectedInchWidthOutsideMount(inchesWidthOutsideMount);
+
+    const scrollableDivWidthOutsideMount = scrollableDivRefWidthOutsideMount.current;
+
+    setTimeout(() => {
+      const selectedInchesDivWidthOutsideMount = scrollableDivWidthOutsideMount.querySelector(`.${styles.selectedInch}`);
+
+      if (selectedInchesDivWidthOutsideMount) {
+        const selectedInchesDivRectWidthOutsideMount = selectedInchesDivWidthOutsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedInchesDivRectWidthOutsideMount.top +
+          scrollableDivWidthOutsideMount.scrollTopWidthOutsideMount -
+          (scrollableDivWidthOutsideMount.offsetWidthOutsideMount - selectedInchesDivRectWidthOutsideMount.height) / 2;
+
+        scrollableDivWidthOutsideMount.scrollTopWidthOutsideMount = scrollPosition;
+      } else {
+        console.warn("Selected inch  div not found in the scrollable div");
+      }
+    }, 0);
+  };
+
+  const handleNewSpanClickedWidthOutsideMount = () => {
+    setselectedInchesVisibleWidthOutsideMount((prev) => !prev);
+  };
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+  const handleScrolledInchesWhenClickedHeightOutsideMount = (inchesHeightOutsideMount) => {
+    setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
+    setselectedInchesVisibleHeightOutsideMount(false);
+    setselectedInchHeightOutsideMount(inchesHeightOutsideMount);
+
+    const scrollableDivHeightOutsideMount = scrollableDivRefHeightOutsideMount.current;
+
+    setTimeout(() => {
+      const selectedInchesDivHeightOutsideMount = scrollableDivHeightOutsideMount.querySelector(`.${styles.selectedInch}`);
+
+      if (selectedInchesDivHeightOutsideMount) {
+        const selectedInchesDivRectHeightOutsideMount = selectedInchesDivHeightOutsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedInchesDivRectHeightOutsideMount.top +
+          scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount -
+          (scrollableDivHeightOutsideMount.offsetHeightOutsideMount - selectedInchesDivRectHeightOutsideMount.height) / 2;
+
+        scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount = scrollPosition;
+      } else {
+        console.warn("Selected inch  div not found in the scrollable div");
+      }
+    }, 0);
+  };
+
+  const handleNewSpanClickedHeightOutsideMount = () => {
+    setselectedInchesVisibleHeightOutsideMount((prev) => !prev);
+  };
+
+
+  const handleSelectedInchAndMatchToScrollerWidthInsideMount = (rulerNumberWidthInsideMount) => {
+    setselectedRulerNumberInchWidthInsideMount(rulerNumberWidthInsideMount);
+  };
+
+  const handleSelectedInchAndMatchToScrollerHeightInsideMount = (rulerNumberHeightInsideMount) => {
+    setselectedRulerNumberInchHeightInsideMount(rulerNumberHeightInsideMount);
+  };
+
+
+  const handleSelectedInchAndMatchToScrollerWidthOutsideMount = (rulerNumberWidthOutsideMount) => {
+    setselectedRulerNumberInchWidthOtusideMount(rulerNumberWidthOutsideMount);
+  };
+  const handleSelectedInchAndMatchToScrollerHeightOutsideMount = (rulerNumberHeightOutsideMount) => {
+    setselectedRulerNumberInchHeightOutsideMount(rulerNumberHeightOutsideMount);
+  };
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   const handleScrolledFractionsWhenClickedWIDTH = (fractionWidth) => {
@@ -718,19 +843,19 @@ const ZebraBlinds = () => {
     setselectedFractionVisibleWidth(false);
     setselectedFractionWIDTH(fractionWidth);
 
-    const scrollableDiv = scrollableDivRef.current;
+    const scrollableDivFractions = scrollableDivRefFractions.current;
 
     setTimeout(() => {
-      const selectedFractionDiv = scrollableDiv.querySelector(`.${styles.selectedFraction}`);
+      const selectedFractionDiv = scrollableDivFractions.querySelector(`.${styles.selectedFraction}`);
 
       if (selectedFractionDiv) {
         const selectedFractionDivRect = selectedFractionDiv.getBoundingClientRect();
         const scrollPosition =
           selectedFractionDivRect.top +
-          scrollableDiv.scrollTop -
-          (scrollableDiv.offsetHeight - selectedFractionDivRect.height) / 2;
+          scrollableDivFractions.scrollTopFractions -
+          (scrollableDivFractions.offsetHeightFractions - selectedFractionDivRect.height) / 2;
 
-        scrollableDiv.scrollTop = scrollPosition;
+        scrollableDivFractions.scrollTopFractions = scrollPosition;
       } else {
         console.warn("Selected fraction div not found in the scrollable div");
       }
@@ -744,54 +869,24 @@ const ZebraBlinds = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledInchesWhenClickedHEIGHT = (inchHEIGHT) => {
-    setselectedInchesHeight(inchHEIGHT);
-    setSelectedInchVisibleHeight(false);
-    setselectedInchHEIGHT(inchHEIGHT);
-
-    const scrollableDiv = scrollableDivRef.current;
-
-    setTimeout(() => {
-      const selectedInchesDiv = scrollableDiv.querySelector(`.${styles.selectedInch}`);
-
-      if (selectedInchesDiv) {
-        const selectedInchesDivRect = selectedInchesDiv.getBoundingClientRect();
-        const scrollPosition =
-          selectedInchesDivRect.top +
-          scrollableDiv.scrollTop -
-          (scrollableDiv.offsetHeight - selectedInchesDivRect.height) / 2;
-
-        scrollableDiv.scrollTop = scrollPosition;
-      } else {
-        console.warn("Selected inch  div not found in the scrollable div");
-      }
-    }, 0);
-  };
-
-
-
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
   const handleScrolledFractionsWhenClickedHEIGHT = (fractionWidth) => {
     setselectedFractionsHeight(fractionWidth);
     setSelectedFractionVisibleHeight(false);
     setselectedFractionHEIGHT(fractionWidth);
 
-    const scrollableDiv = scrollableDivRef.current;
+    const scrollableDivFractions = scrollableDivRefFractions.current;
 
     setTimeout(() => {
-      const selectedFractionDiv = scrollableDiv.querySelector(`.${styles.selectedFraction}`);
+      const selectedFractionDiv = scrollableDivFractions.querySelector(`.${styles.selectedFraction}`);
 
       if (selectedFractionDiv) {
         const selectedFractionDivRect = selectedFractionDiv.getBoundingClientRect();
         const scrollPosition =
           selectedFractionDivRect.top +
-          scrollableDiv.scrollTop -
-          (scrollableDiv.offsetHeight - selectedFractionDivRect.height) / 2;
+          scrollableDivFractions.scrollTopFractions -
+          (scrollableDivFractions.offsetHeightFractions - selectedFractionDivRect.height) / 2;
 
-        scrollableDiv.scrollTop = scrollPosition;
+        scrollableDivFractions.scrollTopFractions = scrollPosition;
       } else {
         console.warn("Selected fraction div not found in the scrollable div");
       }
@@ -804,26 +899,11 @@ const ZebraBlinds = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-  const handleSelectedInchAndMatchToScrollerWIDTH = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberInchWIDTH(rulerNumberWidthAndHeightInsideMount);
-  };
-
   const handleSelectedFractionhAndMatchToScrollerWIDTH = (rulerNumberWidthAndHeightInsideMount) => {
     setselectedRulerNumberFractionWIDTH(rulerNumberWidthAndHeightInsideMount);
   };
-
-  const handleSelectedInchAndMatchToScrollerHEIGHT = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberInchHEIGHT(rulerNumberWidthAndHeightInsideMount);
-  };
-
   const handleSelectedFractionhAndMatchToScrollerHEIGHT = (rulerNumberWidthAndHeightInsideMount) => {
     setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
-  };
-
-
-  const handleNewSpanClickInchesWhenClickedHEIGHT = () => {
-    setSelectedInchVisibleHeight((prev) => !prev);
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1183,7 +1263,14 @@ const ZebraBlinds = () => {
 
                               <div className={styles.inches_and_fractions_and_ruler_group}>
                                 <div className={styles.width_inside_mount_sub_title}>
-                                  CHOOSE WIDTH:
+                                  CHOOSE WIDTH INSIDE MOUNT:
+                                </div>
+                                <div className={styles.key_locker2}>
+                                  <h1>
+                                    Price Width Inside Mount: ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
+                                      ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
+                                      : "no price set for this value"}
+                                  </h1>
                                 </div>
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
 
@@ -1191,27 +1278,30 @@ const ZebraBlinds = () => {
                                     <div className={styles.enter_inches_group_wrapper}>
                                       <div className={styles.inches_subtitle}
                                       >
-                                        <p>INCHES</p>
+                                        <p>INCHES WIDTH INSIDE MOUNT</p>
                                       </div>
 
+
                                       <div className={styles.inches_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                          {selectedInchesVisibleWidth ? (
+
+                                        <div ref={scrollableDivRefWidthInsideMount} className={styles.inches_scroller_div}>
+
+                                          {selectedInchesVisibleWidthInsideMount ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidth, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthInsideMount, index) => (
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                  className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
+                                                  onClick={() => handleScrolledInchesWhenClickedWidthInsideMount(inchesWidthInsideMount)}
+                                                  className={selectedInchesWidthInsideMount === inchesWidthInsideMount ? styles.selectedInch : ''}
                                                 >
-                                                  {inchesWidth}
+                                                  {inchesWidthInsideMount}
                                                 </div>
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                              {selectedInchesWidth}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickedWidthInsideMount}>
+                                              {selectedInchesWidthInsideMount}
 
                                             </span>
                                           )}
@@ -1219,17 +1309,19 @@ const ZebraBlinds = () => {
                                       </div>
                                     </div>
 
+
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
                                       >
-                                        <p>FRACTIONS</p>
+                                        <p>FRACTIONS WIDTH INSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
 
-                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
                                           {selectedFractionVisibleWidth ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
@@ -1250,7 +1342,6 @@ const ZebraBlinds = () => {
                                     </div>
                                   </div>
 
-
                                   <div className={styles.ruler_div}>
 
                                     < span className={styles.enter_size_boat_span} >
@@ -1259,16 +1350,18 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
 
+                                            RULER WIDTH INSIDE MOUNT
+
                                             <span className={styles.ruler_line_group}>
 
                                               <span className={styles.line_0}></span>
 
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                {[selectedInchWidthInsideMount || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                   <div
                                                     key={index}
-                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerWidthInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1532,14 +1625,14 @@ const ZebraBlinds = () => {
                                               </div>
                                             </span>
 
-
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                {[selectedInchHeightInsideMount].map((selectedInchHeightInsideMount, index) => {
                                                   const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
-                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInchHeightInsideMount) + 1;
                                                   const nextNumber = yourArrayOfNumbers[nextNumberIndex];
+
 
                                                   return (
 
@@ -1547,8 +1640,8 @@ const ZebraBlinds = () => {
                                                       <div className={styles.selected_next_number}>
                                                         <div
                                                           key={index}
-                                                          onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                          className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerWidthInsideMount(nextNumber)}
+                                                          className={selectedInchHeightInsideMount === nextNumber ? styles.selected_next_number : ''}
                                                         >
                                                           {nextNumber}
                                                         </div>
@@ -1558,10 +1651,7 @@ const ZebraBlinds = () => {
                                                 })}
                                               </div>
                                             </span>
-
-
                                           </div>
-
 
                                           <div>
                                           </div>
@@ -1571,72 +1661,67 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                    Window Width Inside Mount: {selectedInchWidthInsideMount} - {selectedFractionWIDTH}
                                     {selectedFractionWIDTH && " Inches Long"}
-                                  </div>
-
-                                  <div className={styles.added_price_ruler}>
-                                    price: 
                                   </div>
 
                                 </div>
                               </div>
 
-
-
                               <div className={styles.inches_and_fractions_and_ruler_group}>
                                 <div className={styles.width_inside_mount_sub_title}>
-                                  CHOOSE HEIGHT:
+                                  CHOOSE HEIGHT INSIDE MOUNT:
+                                </div>
+                                <div className={styles.key_locker2}>
+
+                                  <h1>
+                                    Price Height Inside Mount: ${inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount] !== undefined
+                                      ? inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount]
+                                      : "no price set for this value"}
+                                  </h1>
+
                                 </div>
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
-
-
-
 
                                   <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
                                     <div className={styles.enter_inches_group_wrapper}>
                                       <div className={styles.inches_subtitle}
                                       >
-                                        <p>INCHES</p>
+                                        <p>INCHES HEIGHT INSIDE MOUNT</p>
                                       </div>
 
                                       <div className={styles.inches_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                          {selectedInchVisiblehEIGHT ? (
+                                        <div ref={scrollableDivRefHeightInsideMount} className={styles.inches_scroller_div}>
+                                          {selectedInchesVisibleHeightInsideMount ? (
 
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchHEIGHT, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesHeightInsideMount, index) => (
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                  className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                  onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
+                                                  className={selectedInchesHeight === inchesHeightInsideMount ? styles.selectedInch : ''}
                                                 >
-                                                  {inchHEIGHT}
+                                                  {inchesHeightInsideMount}
                                                 </div>
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                              {selectedInchesHeight}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickedHeightInsideMount}>
+                                              {selectedInchesHeightInsideMount}
                                             </span>
                                           )}
                                         </div>
-
-
                                       </div>
-
-
-
                                     </div>
 
 
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
                                       >
-                                        <p>FRACTIONS</p>
+                                        <p>FRACTIONS HEIGHT INSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
                                           {selectedFractionVisibleHeight ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
@@ -1672,18 +1757,18 @@ const ZebraBlinds = () => {
 
                                           <div className={styles.ruler_numbers_and_label}>
 
-
+                                            RULER HEIGHT INSIDE MOUNT
 
                                             <span className={styles.ruler_line_group}>
 
                                               <span className={styles.line_0}></span>
 
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                {[selectedInchHeightInsideMount || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                   <div
                                                     key={index}
-                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerHeightInsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2017,10 +2102,11 @@ const ZebraBlinds = () => {
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_fractions}>
 
-                                                {[selectedInchHEIGHT].map((selectedInch, index) => {
+
+                                                {[selectedInchHeightInsideMount].map((selectedInchHeightInsideMount, index) => {
                                                   const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
 
-                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInchHeightInsideMount) + 1;
                                                   const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                   return (
@@ -2030,8 +2116,8 @@ const ZebraBlinds = () => {
                                                       <div className={styles.selected_next_number}>
                                                         <div
                                                           key={index}
-                                                          onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                          className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerHeightInsideMount(nextNumber)}
+                                                          className={selectedInchHeightInsideMount === nextNumber ? styles.selected_next_number : ''}
                                                         >
                                                           {nextNumber}
                                                         </div>
@@ -2051,13 +2137,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                    Window Height Inside Mount: {selectedInchHeightInsideMount} - {selectedFractionHEIGHT}
                                     {selectedFractionHEIGHT && " Inches High"}
-                                  </div>
-
-                                  
-                                  <div className={styles.added_price_ruler}>
-                                    price: 
                                   </div>
 
                                 </div>
@@ -2171,50 +2252,67 @@ const ZebraBlinds = () => {
                             <div className={styles.bottom_portion_ruler_and_stuff}>
 
                               <div className={styles.inches_and_fractions_and_ruler_group}>
+
                                 <div className={styles.width_inside_mount_sub_title}>
-                                  CHOOSE WIDTH:
+                                  CHOOSE WIDTH OUTSIDE MOUNT:
                                 </div>
+
+                                <div className={styles.key_locker2}>
+                                  <h1>
+                                    Price Width Outside Mount: ${inchPricesAfterWidthOutsideMount
+                                    [selectedInchesWidthOutsideMount] !== undefined
+                                      ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
+                                      : "no price set for this value"}
+                                  </h1>
+                                </div>
+
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                                   <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
                                     <div className={styles.enter_inches_group_wrapper}>
+
                                       <div className={styles.inches_subtitle}
                                       >
-                                        <p>INCHES</p>
+                                        <p>INCHES WIDTH OUTSIDE MOUNT</p>
                                       </div>
 
                                       <div className={styles.inches_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                          {selectedInchesVisibleWidth ? (
+                                        <div ref={scrollableDivRefWidthOutsideMount} className={styles.inches_scroller_div}>
+                                          {selectedInchesVisibleWidthOutsideMount ? (
+
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidth, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthOutsideMount, index) => (
+
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedWIDTH(inchesWidth)}
-                                                  className={selectedInchesWidth === inchesWidth ? styles.selectedInch : ''}
+                                                  onClick={() => handleScrolledInchesWhenClickedWidthOutsideMount(inchesWidthOutsideMount)}
+                                                  className={selectedInchesWidth === inchesWidthOutsideMount ? styles.selectedInch : ''}
                                                 >
-                                                  {inchesWidth}
+                                                  {inchesWidthOutsideMount}
                                                 </div>
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchessWhenClickedWidth}>
-                                              {selectedInchesWidth}
-
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickedWidthOutsideMount}
+                                            >
+                                              {selectedInchesWidthOutsideMount}
                                             </span>
                                           )}
                                         </div>
+                                      </div>
+                                      <div className={styles.click_to_choose}>
+                                        Click To Choose
                                       </div>
                                     </div>
 
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
                                       >
-                                        <p>FRACTIONS</p>
+                                        <p>FRACTIONS WIDTH OUTSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
 
-                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
                                           {selectedFractionVisibleWidth ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
@@ -2246,23 +2344,22 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
 
+                                            RULER WIDTH OUTSIDE MOUNT
 
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
 
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchWIDTH || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                {[selectedInchWidthOutsideMount || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                   <div
                                                     key={index}
-                                                    onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedInchWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerWidthOutsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
                                                 ))}
                                               </div>
-
-
                                             </span>
 
 
@@ -2551,9 +2648,9 @@ const ZebraBlinds = () => {
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchWIDTH].map((selectedInch, index) => {
+                                                {[selectedInchWidthOutsideMount].map((selectedInchWidthOutsideMount, index) => {
                                                   const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
-                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInchWidthOutsideMount) + 1;
                                                   const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                   return (
@@ -2562,8 +2659,8 @@ const ZebraBlinds = () => {
                                                     <>
                                                       <div className={styles.selected_next_number}>
                                                         <div key={index}
-                                                          onClick={() => handleSelectedInchAndMatchToScrollerWIDTH(nextNumber)}
-                                                          className={selectedInchWIDTH === nextNumber ? styles.selected_next_number : ''}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerWidthOutsideMount(nextNumber)}
+                                                          className={selectedInchWidthOutsideMount === nextNumber ? styles.selected_next_number : ''}
                                                         >
                                                           {nextNumber}
                                                         </div>
@@ -2582,52 +2679,55 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Width: {selectedInchWIDTH} - {selectedFractionWIDTH}
+                                    Window Width Outside Mount: {selectedInchWidthOutsideMount} - {selectedFractionWIDTH}
                                     {selectedFractionWIDTH && " Inches Long"}
                                   </div>
-
-                                  
-                                  <div className={styles.added_price_ruler}>
-                                    price: 
-                                  </div>
-
 
                                 </div>
                               </div>
 
 
-
                               <div className={styles.inches_and_fractions_and_ruler_group}>
                                 <div className={styles.width_inside_mount_sub_title}>
-                                  CHOOSE HEIGHT:
+                                  CHOOSE HEIGHT OUTSIDE MOUNT:
                                 </div>
+                                <div className={styles.key_locker2}>
+                                  <h1>
+                                    Price Height Outside Mount: ${inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
+                                      ? inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount]
+                                      : "no price set for this value"}
+                                  </h1>
+                                </div>
+
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
 
                                   <div className={styles.enter_inches_group_wrapper_and_enter_fractions_group_wrapper}>
                                     <div className={styles.enter_inches_group_wrapper}>
                                       <div className={styles.inches_subtitle}
                                       >
-                                        <p>INCHES</p>
+                                        <p>INCHES HEIGHT OUTSIDE MOUNT</p>
                                       </div>
 
                                       <div className={styles.inches_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.inches_scroller_div}>
-                                          {selectedInchVisiblehEIGHT ? (
+                                        <div ref={scrollableDivRefHeightOutsideMount} className={styles.inches_scroller_div}>
+                                          {selectedInchesVisibleHeightOutsideMount ? (
+
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchHEIGHT, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesHeightOutsideMount, index) => (
+
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedHEIGHT(inchHEIGHT)}
-                                                  className={selectedInchesHeight === inchHEIGHT ? styles.selectedInch : ''}
+                                                  onClick={() => handleScrolledInchesWhenClickedHeightOutsideMount(inchesHeightOutsideMount)}
+                                                  className={selectedInchesHeight === inchesHeightOutsideMount ? styles.selectedInch : ''}
                                                 >
-                                                  {inchHEIGHT}
+                                                  {inchesHeightOutsideMount}
                                                 </div>
 
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickInchesWhenClickedHEIGHT}>
-                                              {selectedInchesHeight}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickedHeightOutsideMount}>
+                                              {selectedInchesHeightOutsideMount}
                                             </span>
                                           )}
                                         </div>
@@ -2643,10 +2743,10 @@ const ZebraBlinds = () => {
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
                                       >
-                                        <p>FRACTIONS</p>
+                                        <p>FRACTIONS HEIGHT OUTSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
-                                        <div ref={scrollableDivRef} className={styles.fractions_scroller_div}>
+                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
                                           {selectedFractionVisibleHeight ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
@@ -2678,22 +2778,22 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
 
+                                            RULER HEIGHT OUTSIDE MOUNT
 
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
 
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchHEIGHT || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
+                                                {[selectedInchHeightOutsideMount || '0'].map((rulerNumberWidthAndHeightInsideMount, index) => (
                                                   <div
                                                     key={index}
-                                                    onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedInchHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
+                                                    onClick={() => handleSelectedInchAndMatchToScrollerHeightOutsideMount(rulerNumberWidthAndHeightInsideMount)}
+                                                    className={selectedInchHeightOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
                                                 ))}
                                               </div>
-
                                             </span>
 
                                             <span className={styles.ruler_line_group}>
@@ -2987,30 +3087,24 @@ const ZebraBlinds = () => {
                                                   </div>
 
                                                 ))}
-
                                               </div>
-
                                             </span>
-
-
-
-
 
 
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_inches}>
-                                                {[selectedInchHEIGHT].map((selectedInch, index) => {
+                                                {[selectedInchHeightOutsideMount].map((selectedInchHeightOutsideMount, index) => {
                                                   const yourArrayOfNumbers = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
-                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInch) + 1;
+                                                  const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInchHeightOutsideMount) + 1;
                                                   const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
                                                   return (
                                                     <>
                                                       <div className={styles.selected_next_number}>
                                                         <div key={index}
-                                                          onClick={() => handleSelectedInchAndMatchToScrollerHEIGHT(nextNumber)}
-                                                          className={selectedInchHEIGHT === nextNumber ? styles.selected_next_number : ''}
+                                                          onClick={() => handleSelectedInchAndMatchToScrollerHeightOutsideMount(nextNumber)}
+                                                          className={selectedInchHeightOutsideMount === nextNumber ? styles.selected_next_number : ''}
                                                         >
                                                           {nextNumber}
                                                         </div>
@@ -3030,12 +3124,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Height: {selectedInchHEIGHT} - {selectedFractionHEIGHT}
+                                    Window Height Outside Mount: {selectedInchHeightOutsideMount} - {selectedFractionHEIGHT}
                                     {selectedFractionHEIGHT && " Inches High"}
-                                  </div>
-
-                                  <div className={styles.added_price_ruler}>
-                                    price: 
                                   </div>
 
                                 </div>
