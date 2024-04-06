@@ -1372,8 +1372,6 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
 
-                                            RULER WIDTH INSIDE MOUNT
-
                                             <span className={styles.ruler_line_group}>
 
                                               <span className={styles.line_0}></span>
@@ -1778,8 +1776,6 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
 
                                           <div className={styles.ruler_numbers_and_label}>
-
-                                            RULER HEIGHT INSIDE MOUNT
 
                                             <span className={styles.ruler_line_group}>
 
@@ -2366,8 +2362,6 @@ const ZebraBlinds = () => {
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
 
-                                            RULER WIDTH OUTSIDE MOUNT
-
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
 
@@ -2735,6 +2729,7 @@ const ZebraBlinds = () => {
                                           {selectedInchesVisibleHeightOutsideMount ? (
 
                                             <span className={styles.span_visibility_1}>
+
                                               {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesHeightOutsideMount, index) => (
 
                                                 <div
@@ -2746,21 +2741,25 @@ const ZebraBlinds = () => {
                                                 </div>
 
                                               ))}
+
                                             </span>
+
                                           ) : (
+
                                             <span className={styles._scroller_div_span} onClick={handleNewSpanClickedHeightOutsideMount}>
                                               {selectedInchesHeightOutsideMount}
                                             </span>
+
                                           )}
+
                                         </div>
                                       </div>
+
                                       <div className={styles.click_to_choose}>
                                         Click To Choose
                                       </div>
+
                                     </div>
-
-
-
 
                                     <div className={styles.enter_fractions_group_wrapper}>
                                       <div className={styles.fractions_subtitle}
@@ -2790,7 +2789,7 @@ const ZebraBlinds = () => {
                                       </div>
                                     </div>
                                   </div>
-
+                                  
 
                                   <div className={styles.ruler_div}>
 
@@ -2799,8 +2798,6 @@ const ZebraBlinds = () => {
 
                                         <div className={styles.ruler_for_boat}>
                                           <div className={styles.ruler_numbers_and_label}>
-
-                                            RULER HEIGHT OUTSIDE MOUNT
 
                                             <span className={styles.ruler_line_group}>
                                               <span className={styles.line_0}></span>
@@ -2817,6 +2814,7 @@ const ZebraBlinds = () => {
                                                 ))}
                                               </div>
                                             </span>
+
 
                                             <span className={styles.ruler_line_group}>
 
