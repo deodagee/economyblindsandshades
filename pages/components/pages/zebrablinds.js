@@ -31,6 +31,7 @@ const ZebraBlinds = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
   }, []);
 
   const { data: session } = useSession();
@@ -38,14 +39,18 @@ const ZebraBlinds = () => {
   const [productName2, setProductName2] = useState("");
   const [roomname, setroomname] = useState("");
   const [WandPriceCMS, setWandPriceCMS] = useState("");
-  const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
   const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
-  const [fractionPriceCMS, setFractionPriceCMS] = useState(0);
+  const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
 
   const [inchPricesAfterWidthInsideMount, setinchPricesAfterWidthInsideMount] = useState({});
   const [inchPricesAfterHeightInsideMount, setinchPricesAfterHeightInsideMount] = useState({});
   const [inchPricesAfterWidthOutsideMount, setinchPricesAfterWidthOutsideMount] = useState({});
   const [inchPricesAfterHeightOutsideMount, setinchPricesAfterHeightOutsideMount] = useState({});
+
+  const [newSetPriceInchesWidthInsideMount, setnewSetPriceInchesWidthInsideMount] = useState(null);
+  const [newSetPriceInchesHeightInsideMount, setnewSetPriceInchesHeightInsideMount] = useState(null);
+  const [newSetPriceInchesWidthOutsideMount, setnewSetPriceInchesWidthOutsideMount] = useState(null);
+  const [newSetPriceInchesHeightOutsideMount, setnewSetPriceInchesHeightOutsideMount] = useState(null);
 
   const fetchLatestData = async () => {
     try {
@@ -58,19 +63,42 @@ const ZebraBlinds = () => {
         setProductName2(latestData.productName2 || "");
         setroomname(latestData.roomname || "");
         setWandPriceCMS(latestData.WandPriceCMS || "");
-        setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
         setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
-        setFractionPriceCMS(latestData.fractionPriceCMS || "");
-        setinchPricesAfterWidthInsideMount(latestData.inchPricesAfterWidthInsideMount || "");
-        setinchPricesAfterHeightInsideMount(latestData.inchPricesAfterHeightInsideMount || "");
-        setinchPricesAfterWidthOutsideMount(latestData.inchPricesAfterWidthOutsideMount || "");
-        setinchPricesAfterHeightOutsideMount(latestData.inchPricesAfterHeightOutsideMount || "");
+        setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
+
+        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMount || "{}");
+
+        setinchPricesAfterWidthInsideMount(inchPricesWidthInsideMount);
+
+        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMount || "{}");
+        setinchPricesAfterWidthOutsideMount(inchPricesWidthOutsideMount);
+
+        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMount || "{}");
+        setinchPricesAfterHeightInsideMount(inchPricesHeightInsideMount);
+
+        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMount || "{}");
+        setinchPricesAfterHeightOutsideMount(inchPricesHeightOutsideMount);
+
+
+
+        const lastSetPriceWidthInsideMount = inchPricesWidthInsideMount[selectedInchesWidthInsideMount];
+        setnewSetPriceInchesWidthInsideMount(lastSetPriceWidthInsideMount);
+
+        const lastSetPriceWidthOutsideMount = inchPricesWidthOutsideMount[selectedInchesWidthOutsideMount];
+        setnewSetPriceInchesWidthOutsideMount(lastSetPriceWidthOutsideMount);
+
+        const lastSetPriceHeightInsideMount = inchPricesHeightInsideMount[selectedInchesHeightInsideMount];
+        setnewSetPriceInchesHeightInsideMount(lastSetPriceHeightInsideMount);
+
+        const lastSetPriceHeightOutsideMount = inchPricesHeightOutsideMount[selectedInchesHeightOutsideMount];
+        setnewSetPriceInchesHeightOutsideMount(lastSetPriceHeightOutsideMount);
 
       }
     } catch (error) {
       console.error("Error fetching latest data:", error);
     }
   };
+
 
   useEffect(() => {
     fetchLatestData();
@@ -80,12 +108,10 @@ const ZebraBlinds = () => {
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
 
-
   const [active_inside_outside_ellipse, setActiveInsideOutsideEllipse] = useState(1);
   const [inside_mount_group_visible, setInsideMountGroupVisible] = useState(true);
   const [outside_mount_group_visible, setOutsideMountGroupVisible] = useState(false);
   const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('Inside Mount');
-
 
   const [active_wand_cordless_motorized, setactive_wand_cordless_motorized] = useState(null);
   const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
@@ -211,46 +237,6 @@ const ZebraBlinds = () => {
 
     return totalPrice;
   };
-
-  const handleAddToCart = async () => {
-    await fetchLatestData();
-
-    // Calculate the total price based on the state
-    const newTotalPrice = getTotalPrice();
-
-    const apiUrl = '/api/saveData';
-
-    const data = {
-      name: session.name,
-      productName1: session.productName1,
-      productName2: session.productName2,
-      roomname: session.roomname,
-      WandPriceCMS: session.WandPriceCMS,
-      cordlesspriceCMS: session.cordlesspriceCMS,
-      motorizedpriceCMS: session.motorizedpriceCMS,
-      totalpricecalculated: newTotalPrice,
-    };
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
-  };
-
-
 
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
@@ -659,10 +645,7 @@ const ZebraBlinds = () => {
   const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
   const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
 
-  const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
-  const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
 
-  const [selectedInchVisiblehEIGHT, setSelectedInchVisibleHeight] = useState(true);
 
   const [selectedInchesWidthInsideMount, setselectedInchesWidthInsideMount] = useState(null);
 
@@ -948,6 +931,45 @@ const ZebraBlinds = () => {
   },
 
     []);
+
+  const handleAddToCart = async () => {
+    await fetchLatestData();
+
+    // Calculate the total price based on the state
+    const newTotalPrice = getTotalPrice();
+
+    const apiUrl = '/api/saveData';
+
+    const data = {
+      name: session.name,
+      productName1: session.productName1,
+      productName2: session.productName2,
+      roomname: session.roomname,
+      WandPriceCMS: session.WandPriceCMS,
+      cordlesspriceCMS: session.cordlesspriceCMS,
+      motorizedpriceCMS: session.motorizedpriceCMS,
+      totalpricecalculated: newTotalPrice,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data }),
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      console.log('Data saved successfully:', result);
+
+      // Navigate to the Add to Cart page with the newTotalPrice value
+      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
+    } else {
+      console.error('Error saving data:', response.statusText);
+    }
+  };
+
 
   return (
 
@@ -1699,7 +1721,7 @@ const ZebraBlinds = () => {
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
-                                                  className={selectedInchesHeight === inchesHeightInsideMount ? styles.selectedInch : ''}
+                                                  className={selectedInchesHeightInsideMount === inchesHeightInsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesHeightInsideMount}
                                                 </div>
@@ -2286,7 +2308,7 @@ const ZebraBlinds = () => {
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedWidthOutsideMount(inchesWidthOutsideMount)}
-                                                  className={selectedInchesWidth === inchesWidthOutsideMount ? styles.selectedInch : ''}
+                                                  className={selectedInchesWidthOutsideMount === inchesWidthOutsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesWidthOutsideMount}
                                                 </div>
@@ -2718,7 +2740,7 @@ const ZebraBlinds = () => {
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedHeightOutsideMount(inchesHeightOutsideMount)}
-                                                  className={selectedInchesHeight === inchesHeightOutsideMount ? styles.selectedInch : ''}
+                                                  className={selectedInchesHeightOutsideMount === inchesHeightOutsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesHeightOutsideMount}
                                                 </div>
@@ -3672,15 +3694,24 @@ const ZebraBlinds = () => {
                       <div className={styles.answers_answers}>
 
                         <div>
-                          Length: {selectedInchesWidth} - {selectedFractionsWidth}
+                          Width: {selectedInchesWidthInsideMount} - {selectedFractionsWidth}
                           {selectedFractionsWidth && " Inches Long"}
                         </div>
 
                         <div>
-                          Height: {selectedInchesHeight} - {selectedFractionsHeight}
+                          Width: {selectedInchesWidthOutsideMount} - {selectedFractionsWidth}
+                          {selectedFractionsWidth && " Inches Long"}
+                        </div>
+
+                        <div>
+                          Height: {selectedInchesHeightInsideMount} - {selectedFractionsHeight}
                           {selectedFractionsHeight && " Inches High"}
                         </div>
 
+                        <div>
+                          Height: {selectedInchesHeightOutsideMount} - {selectedFractionsHeight}
+                          {selectedFractionsHeight && " Inches High"}
+                        </div>
 
                       </div>
                     </div>
@@ -3927,3 +3958,6 @@ const ZebraBlinds = () => {
 
 
 export default ZebraBlinds;
+
+
+
