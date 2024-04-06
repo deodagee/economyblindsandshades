@@ -25,7 +25,12 @@ export default async function saveData(req, res) {
       cordlesspriceCMS: data.cordlesspriceCMS,
       motorizedpriceCMS: data.motorizedpriceCMS,
       totalpricecalculated: data.totalpricecalculated,
+      inchPricesAfterWidthInsideMount: data.inchPricesAfterWidthInsideMount,
+      inchPricesAfterHeightInsideMount: data.inchPricesAfterHeightInsideMount,
+      inchPricesAfterWidthOutsideMount: data.inchPricesAfterWidthOutsideMount,
+      inchPricesAfterHeightOutsideMount: data.inchPricesAfterHeightOutsideMount,
     });
+
     console.log("CREATED DOCUMENT");
 
     res.status(200).json({ message: 'Data saved successfully', data: savedData });
