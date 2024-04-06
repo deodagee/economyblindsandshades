@@ -3,7 +3,7 @@
 import { Schema, model, models } from "mongoose";
 
 const testSchema = new Schema({
-  
+
   name: {
     type: String,
     required: true,
@@ -32,6 +32,22 @@ const testSchema = new Schema({
     type: String,
     required: true,
   },
+  inchPricesAfterWidthInsideMount: {
+    type: String,
+    required: true,
+  },
+  inchPricesAfterHeightInsideMount: {
+    type: String,
+    required: true,
+  },
+  inchPricesAfterWidthOutsideMount: {
+    type: String,
+    required: true,
+  },
+  inchPricesAfterHeightOutsideMount: {
+    type: String,
+    required: true,
+  }
 
 });
 
