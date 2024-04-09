@@ -98,30 +98,40 @@ const CMSPanel = () => {
 
   const handleScrolledInchesWhenClickedWidthInsideMount = (inchesWidthInsideMount) => {
     setselectedInchesWidthInsideMount(inchesWidthInsideMount);
-    console.log("Selected inches width inside mount:", inchesWidthInsideMount);
-  
-    const newSetPriceInchesWidthInsideMount = inchPricesAfterWidthInsideMount[inchesWidthInsideMount];
-    setnewSetPriceInchesWidthInsideMount(newSetPriceInchesWidthInsideMount);
-    console.log("Previous Price:", newSetPriceInchesWidthInsideMount);
-  
-    const scrollableDivInchesdWidthInsideMount = scrollableDivRefInchesWidthInsideMount.current;
-  
-    if (scrollableDivInchesdWidthInsideMount) {
-      setTimeout(() => {
-        const selectedInchesDivdWidthInsideMount = scrollableDivInchesdWidthInsideMount.querySelector(`.${styles.selectedInch}`);
-  
-        if (selectedInchesDivdWidthInsideMount) {
-          const scrollPosition = selectedInchesDivdWidthInsideMount.offsetTop - (scrollableDivInchesdWidthInsideMount.offsetHeight - selectedInchesDivdWidthInsideMount.offsetHeight) / 2;
-  
-          scrollableDivInchesdWidthInsideMount.scrollTop = scrollPosition;
-        } else {
-          console.warn("Selected inch div not found in the scrollable div");
-        }
-      }, 0);
+
+    if (inchesWidthInsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesWidthInsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesWidthInsideMount);
+    }
+
+    // Retrieve the price associated with the selected inch
+    const newSetPriceWidthInsideMount = inchPricesAfterWidthInsideMount[inchesWidthInsideMount];
+    setnewSetPriceInchesWidthInsideMount(newSetPriceWidthInsideMount !== undefined ? newSetPriceWidthInsideMount : "");
+
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceWidthInsideMount === undefined && inchesWidthInsideMount % 5 !== 0) {
+      let prevInchWidthInsideMount = inchesWidthInsideMount - 1;
+      while (prevInchWidthInsideMount % 5 !== 0) {
+        prevInchWidthInsideMount--;
+      }
+
+      const nearestMultipleOf5PriceWidthInsideMount = inchPricesAfterWidthInsideMount[prevInchWidthInsideMount];
+      setnewSetPriceInchesWidthInsideMount(nearestMultipleOf5PriceWidthInsideMount !== undefined ? nearestMultipleOf5PriceWidthInsideMount : "");
+
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceWidthInsideMount);
+      let nextInchWidthInsideMount = prevInchWidthInsideMount + 1;
+      while (nextInchWidthInsideMount < inchesWidthInsideMount) {
+        nextInchWidthInsideMount++;
+      }
+    } else if (inchesWidthInsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterWidthInsideMount[inchesWidthInsideMount]);
     }
   };
   
-
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,32 +149,41 @@ const CMSPanel = () => {
     });
   };
 
+
   const handleScrolledInchesWhenClickedHeightInsideMount = (inchesHeightInsideMount) => {
     setselectedInchesHeightInsideMount(inchesHeightInsideMount);
-    console.log("Selected inches width inside mount:", inchesHeightInsideMount);
 
-    const newSetPriceInchesHeightInsideMount = inchPricesAfterHeightInsideMount[inchesHeightInsideMount];
-    setnewSetPriceInchesHeightInsideMount(newSetPriceInchesHeightInsideMount);
-    console.log("Previous Price:", newSetPriceInchesHeightInsideMount);
+    if (inchesHeightInsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesHeightInsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesHeightInsideMount);
+    }
 
-    const scrollableDivInchesdHeightInsideMount = scrollableDivRefInchesHeightInsideMount.current;
+    // Retrieve the price associated with the selected inch
+    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMount[inchesHeightInsideMount];
+    setnewSetPriceInchesHeightInsideMount(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
 
-    if (scrollableDivInchesdHeightInsideMount) {
-      setTimeout(() => {
-        const selectedInchesDivdHeightInsideMount = scrollableDivInchesdHeightInsideMount.querySelector(`.${styles.selectedInch}`);
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceHeightInsideMount === undefined && inchesHeightInsideMount % 5 !== 0) {
+      let prevInchHeightInsideMount = inchesHeightInsideMount - 1;
+      while (prevInchHeightInsideMount % 5 !== 0) {
+        prevInchHeightInsideMount--;
+      }
 
-        if (selectedInchesDivdHeightInsideMount) {
-          const selectedInchesDivRectHeightInsideMount = selectedInchesDivdHeightInsideMount.getBoundingClientRect();
-          const scrollPosition =
-            selectedInchesDivRectHeightInsideMount.top +
-            scrollableDivInchesdHeightInsideMount.scrollTop -
-            (scrollableDivInchesdHeightInsideMount.offsetHeight - selectedInchesDivRectHeightInsideMount.height) / 2;
+      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMount[prevInchHeightInsideMount];
+      setnewSetPriceInchesHeightInsideMount(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
 
-          scrollableDivInchesdHeightInsideMount.scrollTop = scrollPosition;
-        } else {
-          console.warn("Selected inch div not found in the scrollable div");
-        }
-      }, 0);
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightInsideMount);
+      let nextInchHeightInsideMount = prevInchHeightInsideMount + 1;
+      while (nextInchHeightInsideMount < inchesHeightInsideMount) {
+        nextInchHeightInsideMount++;
+      }
+      
+    } else if (inchesHeightInsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMount[inchesHeightInsideMount]);
     }
   };
 
@@ -181,33 +200,40 @@ const CMSPanel = () => {
     });
   };
 
-
   const handleScrolledInchesWhenClickedWidthOutsideMount = (inchesWidthOutsideMount) => {
     setselectedInchesWidthOutsideMount(inchesWidthOutsideMount);
-    console.log("Selected inches width inside mount:", inchesWidthOutsideMount);
 
-    const newSetPriceInchesWidthOutsideMount = inchPricesAfterWidthOutsideMount[inchesWidthOutsideMount];
-    setnewSetPriceInchesWidthOutsideMount(newSetPriceInchesWidthOutsideMount);
-    console.log("Previous Price:", newSetPriceInchesWidthOutsideMount);
+    if (inchesWidthOutsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesWidthOutsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesWidthOutsideMount);
+    }
 
-    const scrollableDivInchesdWidthOutsideMount = scrollableDivRefInchesWidthOutsideMount.current;
+    // Retrieve the price associated with the selected inch
+    const newSetPriceinchesWidthOutsideMount = inchPricesAfterWidthOutsideMount[inchesWidthOutsideMount];
+    setnewSetPriceInchesWidthOutsideMount(newSetPriceinchesWidthOutsideMount !== undefined ? newSetPriceinchesWidthOutsideMount : "");
 
-    if (scrollableDivInchesdWidthOutsideMount) {
-      setTimeout(() => {
-        const selectedInchesDivdWidthOutsideMount = scrollableDivInchesdWidthOutsideMount.querySelector(`.${styles.selectedInch}`);
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceinchesWidthOutsideMount === undefined && inchesWidthOutsideMount % 5 !== 0) {
+      let prevInchinchesWidthOutsideMount = inchesWidthOutsideMount - 1;
+      while (prevInchinchesWidthOutsideMount % 5 !== 0) {
+        prevInchinchesWidthOutsideMount--;
+      }
 
-        if (selectedInchesDivdWidthOutsideMount) {
-          const selectedInchesDivRectWidthOutsideMount = selectedInchesDivdWidthOutsideMount.getBoundingClientRect();
-          const scrollPosition =
-            selectedInchesDivRectWidthOutsideMount.top +
-            scrollableDivInchesdWidthOutsideMount.scrollTop -
-            (scrollableDivInchesdWidthOutsideMount.offsetHeight - selectedInchesDivRectWidthOutsideMount.height) / 2;
+      const nearestMultipleOf5PriceinchesWidthOutsideMount = inchPricesAfterWidthOutsideMount[prevInchinchesWidthOutsideMount];
+      setnewSetPriceInchesWidthOutsideMount(nearestMultipleOf5PriceinchesWidthOutsideMount !== undefined ? nearestMultipleOf5PriceinchesWidthOutsideMount : "");
 
-          scrollableDivInchesdWidthOutsideMount.scrollTop = scrollPosition;
-        } else {
-          console.warn("Selected inch div not found in the scrollable div");
-        }
-      }, 0);
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceinchesWidthOutsideMount);
+      let nextInchWidthOutsideMount = prevInchinchesWidthOutsideMount + 1;
+      while (nextInchWidthOutsideMount < inchesWidthOutsideMount) {
+        nextInchWidthOutsideMount++;
+      }
+      
+    } else if (inchesWidthOutsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterWidthOutsideMount[inchesWidthOutsideMount]);
     }
   };
 
@@ -224,34 +250,44 @@ const CMSPanel = () => {
     });
   };
 
+
   const handleScrolledInchesWhenClickedHeightOutsideMount = (inchesHeightOutsideMount) => {
     setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
-    console.log("Selected inches width inside mount:", inchesHeightOutsideMount);
 
-    const newSetPriceInchesHeightOutsideMount = inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount];
-    setnewSetPriceInchesHeightOutsideMount(newSetPriceInchesHeightOutsideMount);
-    console.log("Previous Price:", newSetPriceInchesHeightOutsideMount);
+    if (inchesHeightOutsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesHeightOutsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesHeightOutsideMount);
+    }
 
-    const scrollableDivInchesdHeightOutsideMount = scrollableDivRefInchesHeightOutsideMount.current;
+    // Retrieve the price associated with the selected inch
+    const newSetPriceinchesHeightOutsideMount = inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount];
+    setnewSetPriceInchesHeightOutsideMount(newSetPriceinchesHeightOutsideMount !== undefined ? newSetPriceinchesHeightOutsideMount : "");
 
-    if (scrollableDivInchesdHeightOutsideMount) {
-      setTimeout(() => {
-        const selectedInchesDivdHeightOutsideMount = scrollableDivInchesdHeightOutsideMount.querySelector(`.${styles.selectedInch}`);
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceinchesHeightOutsideMount === undefined && inchesHeightOutsideMount % 5 !== 0) {
+      let prevInchinchesHeightOutsideMount = inchesHeightOutsideMount - 1;
+      while (prevInchinchesHeightOutsideMount % 5 !== 0) {
+        prevInchinchesHeightOutsideMount--;
+      }
 
-        if (selectedInchesDivdHeightOutsideMount) {
-          const selectedInchesDivRectHeightOutsideMount = selectedInchesDivdHeightOutsideMount.getBoundingClientRect();
-          const scrollPosition =
-            selectedInchesDivRectHeightOutsideMount.top +
-            scrollableDivInchesdHeightOutsideMount.scrollTop -
-            (scrollableDivInchesdHeightOutsideMount.offsetHeight - selectedInchesDivRectHeightOutsideMount.height) / 2;
+      const nearestMultipleOf5PriceinchesHeightOutsideMount = inchPricesAfterHeightOutsideMount[prevInchinchesHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMount(nearestMultipleOf5PriceinchesHeightOutsideMount !== undefined ? nearestMultipleOf5PriceinchesHeightOutsideMount : "");
 
-          scrollableDivInchesdHeightOutsideMount.scrollTop = scrollPosition;
-        } else {
-          console.warn("Selected inch div not found in the scrollable div");
-        }
-      }, 0);
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceinchesHeightOutsideMount);
+      let nextInchHeightOutsideMount = prevInchinchesHeightOutsideMount + 1;
+      while (nextInchHeightOutsideMount < inchesHeightOutsideMount) {
+        nextInchHeightOutsideMount++;
+      }
+      
+    } else if (inchesHeightOutsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount]);
     }
   };
+
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
