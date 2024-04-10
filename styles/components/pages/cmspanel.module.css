@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 5px;
     padding: 10px;
     width: 20vw;
@@ -250,6 +250,69 @@
 }
 
 
+.key_locker1,
+.key_locker2 {
+    display: flex;
+    background-color: rgb(224, 224, 224);
+    width: 200px;
+    height: 25px;
+    color: rgb(75, 75, 75);
+    border-radius: 0.25rem;
+    border-color: orange;
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+    font: 10px;
+    box-shadow: #000000 0px 0px 4px;
+}
+
+.show_price {
+    display: flex;
+    background-color: rgb(224, 224, 224);
+    width: 200px;
+    height: 25px;
+    color: rgb(75, 75, 75);
+    border-radius: 0.25rem;
+    border-color: orange;
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+    font: 10px;
+    box-shadow: #000000 0px 0px 4px;
+}
+
+.show_price_ruler_number h1 {
+    display: flex;
+    background-color: rgb(224, 224, 224);
+    width: 100px;
+    height: 25px;
+    color: rgb(75, 75, 75);
+    border-radius: 0.25rem;
+    border-color: rgb(222, 145, 0);
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+    font: 10px;
+    box-shadow: #000000 0px 0px 4px;
+}
+
+.show_price_ruler_number_green h1 {
+    display: flex;
+    background-color: rgb(41, 138, 0);
+    width: 100px;
+    height: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border-radius: 0.25rem;
+    border-color: rgb(222, 145, 0);
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+    font: 10px;
+    box-shadow: #000000 0px 0px 4px;
+}
+
+
 .warning {
     background-color: rgb(236, 236, 236);
     margin-top: 10vh;
@@ -311,67 +374,4 @@
     color: rgb(0, 0, 0);
     gap: 1vw;
     margin-top: 30px;
-}
-
-
-.key_locker1,
-.key_locker2 {
-    display: flex;
-    background-color: rgb(224, 224, 224);
-    width: 200px;
-    height: 25px;
-    color: rgb(75, 75, 75);
-    border-radius: 0.25rem;
-    border-color: orange;
-    border-width: 2px;
-    align-items: center;
-    justify-content: center;
-    font: 10px;
-    box-shadow: #000000 0px 0px 4px;
-}
-
-.show_price {
-    display: flex;
-    background-color: rgb(224, 224, 224);
-    width: 200px;
-    height: 25px;
-    color: rgb(75, 75, 75);
-    border-radius: 0.25rem;
-    border-color: orange;
-    border-width: 2px;
-    align-items: center;
-    justify-content: center;
-    font: 10px;
-    box-shadow: #000000 0px 0px 4px;
-}
-
-.show_price_ruler_number h1 {
-    display: flex;
-    background-color: rgb(224, 224, 224);
-    width: 100px;
-    height: 25px;
-    color: rgb(75, 75, 75);
-    border-radius: 0.25rem;
-    border-color: rgb(222, 145, 0);
-    border-width: 2px;
-    align-items: center;
-    justify-content: center;
-    font: 10px;
-    box-shadow: #000000 0px 0px 4px;
-}
-
-.show_price_ruler_number_green h1 {
-    display: flex;
-    background-color: rgb(41, 138, 0);
-    width: 100px;
-    height: 25px;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    border-radius: 0.25rem;
-    border-color: rgb(222, 145, 0);
-    border-width: 2px;
-    align-items: center;
-    justify-content: center;
-    font: 10px;
-    box-shadow: #000000 0px 0px 4px;
 }
