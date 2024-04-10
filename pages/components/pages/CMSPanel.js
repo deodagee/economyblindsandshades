@@ -517,6 +517,12 @@ const CMSPanel = () => {
                         : ""}
                     </h1>
                   </div>
+
+                  Previously Entered Price
+                  <div className={styles.show_price_ruler_number_green}>
+                    <h1></h1>
+                  </div>
+
                 </div>
 
                 <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
@@ -616,6 +622,12 @@ const CMSPanel = () => {
                         : ""}
                     </h1>
                   </div>
+
+                  Previously Entered Price
+                  <div className={styles.show_price_ruler_number_green}>
+                    <h1></h1>
+                  </div>
+
                 </div>
 
                 <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
