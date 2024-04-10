@@ -387,7 +387,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setProductName1(e.target.value)}
               />
-
+              Last Entered Value
               <h1 className={styles.key_locker1}>{postData && postData.productName1}
               </h1>
 
@@ -400,6 +400,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setProductName2(e.target.value)}
               />
+              Last Entered Value
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.productName2}
@@ -414,6 +415,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setroomname(e.target.value)}
               />
+              Last Entered Value
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.roomname}
@@ -428,6 +430,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setWandPriceCMS(e.target.value)}
               />
+              Last Entered Value
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.WandPriceCMS}
@@ -443,6 +446,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setcordlesspriceCMS(e.target.value)}
               />
+              Last Entered Value
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.cordlesspriceCMS}
@@ -461,6 +465,7 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setmotorizedpriceCMS(e.target.value)}
               />
+              Last Entered Value
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.motorizedpriceCMS}
