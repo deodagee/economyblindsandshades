@@ -232,9 +232,14 @@
 .button {
     margin-top: 20px;
     margin-left: 20px;
-    width: 50px;
-    height: 25px;
+    width: max-content;
+    height: max-content;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
+    font-size: 30px;
     align-items: center;
     justify-content: center;
     border-radius: 0.45rem;
