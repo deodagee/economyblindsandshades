@@ -76,67 +76,60 @@ const CMSPanel = () => {
   const [selectedInchesWidthOutsideMount, setselectedInchesWidthOutsideMount] = useState(null);
   const [selectedInchesHeightOutsideMount, setselectedInchesHeightOutsideMount] = useState(null);
 
+  const [selectedInchesVisibleWidthInsideMount, setselectedInchesVisibleWidthInsideMount] = useState(true);
+  const [selectedInchesVisibleHeightInsideMount, setselectedInchesVisibleHeightInsideMount] = useState(true);
+  const [selectedInchesVisibleWidthOutsideMount, setselectedInchesVisibleWidthOutsideMount] = useState(true);
+  const [selectedInchesVisibleHeightOutsideMount, setselectedInchesVisibleHeightOutsideMount] = useState(true);
+
   const [newSetPriceInchesWidthInsideMount, setnewSetPriceInchesWidthInsideMount] = useState(null);
   const [newSetPriceInchesHeightInsideMount, setnewSetPriceInchesHeightInsideMount] = useState(null);
   const [newSetPriceInchesWidthOutsideMount, setnewSetPriceInchesWidthOutsideMount] = useState(null);
   const [newSetPriceInchesHeightOutsideMount, setnewSetPriceInchesHeightOutsideMount] = useState(null);
 
 
+  const [selectedInchWidthInsideMount, setselectedInchWidthInsideMount] = useState(null);
+  const [selectedInchHeightInsideMount, setselectedInchHeightInsideMount] = useState(null);
+  const [selectedInchWidthOutsideMount, setselectedInchWidthOutsideMount] = useState(null);
+  const [selectedInchHeightOutsideMount, setselectedInchHeightOutsideMount] = useState(null);
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-  const handleInchPriceChangeWidthInsideMount = (selectedInchesWidthInsideMount, newPriceWidthInsideMount) => {
-    console.log("Selected inches width inside mount (for price change):", selectedInchesWidthInsideMount);
-    console.log("New price:", newPriceWidthInsideMount);
-
-    setinchPricesAfterWidthInsideMount(prevPricesWidthInsideMount => {
-      const updatedPricesWidthInsideMount = { ...prevPricesWidthInsideMount };
-      updatedPricesWidthInsideMount[selectedInchesWidthInsideMount] = parseFloat(newPriceWidthInsideMount);
-      return updatedPricesWidthInsideMount;
-    });
-  };
 
   const handleScrolledInchesWhenClickedWidthInsideMount = (inchesWidthInsideMount) => {
     setselectedInchesWidthInsideMount(inchesWidthInsideMount);
+    setselectedInchesVisibleWidthInsideMount(false);
+    setselectedInchWidthInsideMount(inchesWidthInsideMount);
 
-    if (inchesWidthInsideMount % 5 === 0) {
-      // Log when a multiple of 5 is clicked
-      console.log("Selected multiple of 5:", inchesWidthInsideMount);
-    } else {
-      // Log when a subsequent number of a multiple of 5 is clicked
-      console.log("Selected subsequent number of multiple of 5:", inchesWidthInsideMount);
-    }
+    const scrollableDivInchesdWidthInsideMount = scrollableDivRefInchesWidthInsideMount.current;
 
-    // Retrieve the price associated with the selected inch
-    const newSetPriceWidthInsideMount = inchPricesAfterWidthInsideMount[inchesWidthInsideMount];
-    setnewSetPriceInchesWidthInsideMount(newSetPriceWidthInsideMount !== undefined ? newSetPriceWidthInsideMount : "");
+    if (scrollableDivInchesdWidthInsideMount) {
+      setTimeout(() => {
+        const selectedInchesDivdWidthInsideMount = scrollableDivInchesdWidthInsideMount.querySelector(`.${styles.selectedInch}`);
 
-    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
-    if (newSetPriceWidthInsideMount === undefined && inchesWidthInsideMount % 5 !== 0) {
-      let prevInchWidthInsideMount = inchesWidthInsideMount - 1;
-      while (prevInchWidthInsideMount % 5 !== 0) {
-        prevInchWidthInsideMount--;
-      }
+        if (selectedInchesDivdWidthInsideMount) {
+          const selectedInchesDivRectWidthInsideMount = selectedInchesDivdWidthInsideMount.getBoundingClientRect();
+          const scrollPosition =
+            selectedInchesDivRectWidthInsideMount.top +
+            scrollableDivInchesdWidthInsideMount.scrollTop -
+            (scrollableDivInchesdWidthInsideMount.offsetHeight - selectedInchesDivRectWidthInsideMount.height) / 2;
 
-      const nearestMultipleOf5PriceWidthInsideMount = inchPricesAfterWidthInsideMount[prevInchWidthInsideMount];
-      setnewSetPriceInchesWidthInsideMount(nearestMultipleOf5PriceWidthInsideMount !== undefined ? nearestMultipleOf5PriceWidthInsideMount : "");
-
-      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceWidthInsideMount);
-      let nextInchWidthInsideMount = prevInchWidthInsideMount + 1;
-      while (nextInchWidthInsideMount < inchesWidthInsideMount) {
-        nextInchWidthInsideMount++;
-      }
-    } else if (inchesWidthInsideMount % 5 === 0) {
-      // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterWidthInsideMount[inchesWidthInsideMount]);
+          scrollableDivInchesdWidthInsideMount.scrollTop = scrollPosition;
+        } else {
+          console.warn("Selected inch div not found in the scrollable div");
+        }
+      }, 0);
     }
   };
-  
 
+  const handleInchPriceChangeWidthInsideMount = (inchesWidthInsideMount, price) => {
+    const updatedInchPricesWidthInsideMount = { ...inchPricesAfterWidthInsideMount, [inchesWidthInsideMount]: parseFloat(price) };
+    setinchPricesAfterWidthInsideMount(updatedInchPricesWidthInsideMount);
+  };
+
+  const handleNewSpanClickedWidthInsideMount = () => {
+    setselectedInchesVisibleWidthInsideMount((prev) => !prev);
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
   const handleInchPriceChangeHeightInsideMount = (selectedInchesHeightInsideMount, newPriceHeightInsideMount) => {
     console.log("Selected inches width inside mount (for price change):", selectedInchesHeightInsideMount);
@@ -180,7 +173,7 @@ const CMSPanel = () => {
       while (nextInchHeightInsideMount < inchesHeightInsideMount) {
         nextInchHeightInsideMount++;
       }
-      
+
     } else if (inchesHeightInsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
       console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMount[inchesHeightInsideMount]);
@@ -189,53 +182,41 @@ const CMSPanel = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const handleInchPriceChangeWidthOutsideMount = (selectedInchesWidthOutsideMount, newPriceWidthOutsideMount) => {
-    console.log("Selected inches width inside mount (for price change):", selectedInchesWidthOutsideMount);
-    console.log("New price:", newPriceWidthOutsideMount);
-
-    setinchPricesAfterWidthOutsideMount(prevPricesWidthOutsideMount => {
-      const updatedPricesWidthOutsideMount = { ...prevPricesWidthOutsideMount };
-      updatedPricesWidthOutsideMount[selectedInchesWidthOutsideMount] = parseFloat(newPriceWidthOutsideMount);
-      return updatedPricesWidthOutsideMount;
-    });
-  };
-
   const handleScrolledInchesWhenClickedWidthOutsideMount = (inchesWidthOutsideMount) => {
     setselectedInchesWidthOutsideMount(inchesWidthOutsideMount);
+    setselectedInchesVisibleWidthOutsideMount(false);
+    setselectedInchWidthOutsideMount(inchesWidthOutsideMount);
 
-    if (inchesWidthOutsideMount % 5 === 0) {
-      // Log when a multiple of 5 is clicked
-      console.log("Selected multiple of 5:", inchesWidthOutsideMount);
-    } else {
-      // Log when a subsequent number of a multiple of 5 is clicked
-      console.log("Selected subsequent number of multiple of 5:", inchesWidthOutsideMount);
-    }
+    const scrollableDivInchesWidthOutsideMount = scrollableDivRefInchesWidthOutsideMount.current;
 
-    // Retrieve the price associated with the selected inch
-    const newSetPriceinchesWidthOutsideMount = inchPricesAfterWidthOutsideMount[inchesWidthOutsideMount];
-    setnewSetPriceInchesWidthOutsideMount(newSetPriceinchesWidthOutsideMount !== undefined ? newSetPriceinchesWidthOutsideMount : "");
+    if (scrollableDivInchesWidthOutsideMount) {
+      setTimeout(() => {
+        const selectedInchesDivWidthOutsideMount = scrollableDivInchesWidthOutsideMount.querySelector(`.${styles.selectedInch}`);
 
-    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
-    if (newSetPriceinchesWidthOutsideMount === undefined && inchesWidthOutsideMount % 5 !== 0) {
-      let prevInchinchesWidthOutsideMount = inchesWidthOutsideMount - 1;
-      while (prevInchinchesWidthOutsideMount % 5 !== 0) {
-        prevInchinchesWidthOutsideMount--;
-      }
+        if (selectedInchesDivWidthOutsideMount) {
+          const selectedInchesDivRectWidthOutsideMount = selectedInchesDivWidthOutsideMount.getBoundingClientRect();
+          const scrollPosition =
+            selectedInchesDivRectWidthOutsideMount.top +
+            scrollableDivInchesWidthOutsideMount.scrollTop -
+            (scrollableDivInchesWidthOutsideMount.offsetHeight - selectedInchesDivRectWidthOutsideMount.height) / 2;
 
-      const nearestMultipleOf5PriceinchesWidthOutsideMount = inchPricesAfterWidthOutsideMount[prevInchinchesWidthOutsideMount];
-      setnewSetPriceInchesWidthOutsideMount(nearestMultipleOf5PriceinchesWidthOutsideMount !== undefined ? nearestMultipleOf5PriceinchesWidthOutsideMount : "");
-
-      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceinchesWidthOutsideMount);
-      let nextInchWidthOutsideMount = prevInchinchesWidthOutsideMount + 1;
-      while (nextInchWidthOutsideMount < inchesWidthOutsideMount) {
-        nextInchWidthOutsideMount++;
-      }
-      
-    } else if (inchesWidthOutsideMount % 5 === 0) {
-      // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterWidthOutsideMount[inchesWidthOutsideMount]);
+          scrollableDivInchesWidthOutsideMount.scrollTop = scrollPosition;
+        } else {
+          console.warn("Selected inch div not found in the scrollable div");
+        }
+      }, 0);
     }
   };
+
+  const handleInchPriceChangeWidthOutsideMount = (inchesWidthOutsideMount, price) => {
+    const updatedInchPricesWidthOutsideMount = { ...inchPricesAfterWidthInsideMount, [inchesWidthOutsideMount]: parseFloat(price) };
+    setinchPricesAfterWidthInsideMount(updatedInchPricesWidthOutsideMount);
+  };
+
+  const handleNewSpanClickedWidthOutsideMount = () => {
+    setselectedInchesVisibleWidthOutsideMount((prev) => !prev);
+  };
+
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -281,7 +262,7 @@ const CMSPanel = () => {
       while (nextInchHeightOutsideMount < inchesHeightOutsideMount) {
         nextInchHeightOutsideMount++;
       }
-      
+
     } else if (inchesHeightOutsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
       console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount]);
@@ -318,7 +299,7 @@ const CMSPanel = () => {
 
         const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMount || "{}");
         setinchPricesAfterHeightOutsideMount(inchPricesHeightOutsideMount);
-        
+
 
         const lastSetPriceWidthInsideMount = inchPricesWidthInsideMount[selectedInchesWidthInsideMount];
         setnewSetPriceInchesWidthInsideMount(lastSetPriceWidthInsideMount);
@@ -487,187 +468,199 @@ const CMSPanel = () => {
               </div>
             </div>
 
+            <div className={styles.cms_panel_section_ruler_numbers_wrapper_WRAPPER}>
+              INSIDE MOUNT ZEBRABLINDS ROOM LIGHTENING
 
-            <div className={styles.cms_panel_section}>
+              <div className={styles.cms_panel_section_ruler_numbers_wrapper}>
+                <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
+                  <label className={styles.cms_panel_label}>
+                    Width
+                  </label>
 
-              <label className={styles.cms_panel_label}>
-                Change Inches Prices Width Inside Mount:
-              </label>
+                  <div className={styles.span_visibility_1_wrapper}>
+                    <span className={styles.span_visibility_1}>
+                      {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthInsideMount, index) => (
+                        <div
+                          key={index}
+                          onClick={() => handleScrolledInchesWhenClickedWidthInsideMount(inchesWidthInsideMount)}
+                          className={`${selectedInchesWidthInsideMount === inchesWidthInsideMount ? styles.selectedInch : ''} ${styles.numberStyle}`}
+                        >
+                          {inchesWidthInsideMount}
+                        </div>
+                      ))}
+                    </span>
+                  </div>
 
-              <div className={styles.span_visibility_1_wrapper}>
+                  {selectedInchesVisibleWidthInsideMount ? (
+                    <span className={styles._scroller_div_span} onClick={handleNewSpanClickedWidthInsideMount}>
+                      {selectedInchesWidthInsideMount}
+                    </span>
+                  ) : null}
+                  Enter A price
+                  <input
+                    className={styles.cms_panel_input_box_ruler_number}
+                    type="number"
+                    onChange={(e) => handleInchPriceChangeWidthInsideMount(selectedInchesWidthInsideMount, e.target.value)}
+                  />
 
-                <span className={styles.span_visibility_1}>
-                  {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthInsideMount, index) => (
-                    <div
-                      key={index}
-                      onClick={() => handleScrolledInchesWhenClickedWidthInsideMount(inchesWidthInsideMount)}
-                      className={selectedInchesWidthInsideMount === inchesWidthInsideMount ? styles.selectedInch : ''}
-                    >
-                      {inchesWidthInsideMount}
-                    </div>
-                  ))}
-                </span>
+                  Live Display
+
+                  <div className={styles.show_price_ruler_number}>
+                    <h1>
+                      Price: ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
+                        ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
+                        : ""}
+                    </h1>
+                  </div>
+                </div>
+
+                <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
+                  <label className={styles.cms_panel_label}>
+                    Height
+                  </label>
+
+                  <div className={styles.span_visibility_1_wrapper}>
+                    <span className={styles.span_visibility_1}>
+                      {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesHeightInsideMount, index) => (
+                        <div
+                          key={index}
+                          onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
+                          className={`${selectedInchesHeightInsideMount === inchesHeightInsideMount ? styles.selectedInch : ''} ${styles.numberStyle}`}
+                        >
+                          {inchesHeightInsideMount}
+                        </div>
+                      ))}
+                    </span>
+                  </div>
+
+                  Enter A price
+                  <input
+                    className={styles.cms_panel_input_box_ruler_number}
+                    type="number"
+                    onChange={(e) => handleInchPriceChangeHeightInsideMount(selectedInchesHeightInsideMount, e.target.value)}
+                  />
+
+                  Live Display
+
+                  <div className={styles.show_price_ruler_number}>
+                    <h1>
+                      ${inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount] !== undefined
+                        ? inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount]
+                        : ""}
+                    </h1>
+                  </div>
+
+                  Previously Entered Price
+                  <div className={styles.show_price_ruler_number_green}>
+                    <h1>
+                      ${newSetPriceInchesHeightInsideMount !== undefined
+                        ? newSetPriceInchesHeightInsideMount
+                        : ""}
+                    </h1>
+                  </div>
+
+                </div>
               </div>
-
-              <input
-                className={styles.cms_panel_input_box}
-                type="number"
-                onChange={(e) => handleInchPriceChangeWidthInsideMount(selectedInchesWidthInsideMount, e.target.value)}
-              />
-
-              <div className={styles.show_price}>
-                <h1>
-                  Entered Price: ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
-                    ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
-                    : ""}
-                </h1>
-              </div>
-
-              <div className={styles.show_price}>
-                <h1>
-                  Last Saved Price: ${newSetPriceInchesWidthInsideMount !== undefined
-                    ? newSetPriceInchesWidthInsideMount
-                    : ""}
-                </h1>
-              </div>
-
             </div>
 
 
-            <div className={styles.cms_panel_section}>
+            <div className={styles.cms_panel_section_ruler_numbers_wrapper_WRAPPER}>
+              OUTSIDE MOUNT ZEBRABLINDS ROOM LIGHTENING
 
-              <label className={styles.cms_panel_label}>
-                Change Inches Prices Height Inside Mount:
-              </label>
+              <div className={styles.cms_panel_section_ruler_numbers_wrapper}>
 
-              <div className={styles.span_visibility_1_wrapper}>
-                <span className={styles.span_visibility_1}>
-                  {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesHeightInsideMount, index) => (
-                    <div
-                      key={index}
-                      onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
-                      className={selectedInchesHeightInsideMount === inchesHeightInsideMount ? styles.selectedInch : ''}
-                    >
-                      {inchesHeightInsideMount}
-                    </div>
-                  ))}
-                </span>
+
+                <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
+                  <label className={styles.cms_panel_label}>
+                    Width
+                  </label>
+
+                  <div className={styles.span_visibility_1_wrapper}>
+                    <span className={styles.span_visibility_1}>
+                      {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthOutsideMount, index) => (
+                        <div
+                          key={index}
+                          onClick={() => handleScrolledInchesWhenClickedWidthOutsideMount(inchesWidthOutsideMount)}
+                          className={`${selectedInchesWidthOutsideMount === inchesWidthOutsideMount ? styles.selectedInch : ''} ${styles.numberStyle}`}
+                        >
+                          {inchesWidthOutsideMount}
+                        </div>
+                      ))}
+                    </span>
+                  </div>
+
+
+                  {selectedInchesVisibleWidthOutsideMount ? (
+                    <span className={styles._scroller_div_span} onClick={handleNewSpanClickedWidthOutsideMount}>
+                      {selectedInchesWidthOutsideMount}
+                    </span>
+                  ) : null}
+
+                  Enter A price
+                  <input
+                    className={styles.cms_panel_input_box_ruler_number}
+                    type="number"
+                    onChange={(e) => handleInchPriceChangeWidthOutsideMount(selectedInchesWidthOutsideMount, e.target.value)}
+                  />
+
+                  Live Display
+                  <div className={styles.show_price_ruler_number}>
+                    <h1>
+                      Price: ${inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount] !== undefined
+                        ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
+                        : ""}
+                    </h1>
+                  </div>
+                </div>
+
+                <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
+                  <label className={styles.cms_panel_label}>
+                    Height
+                  </label>
+
+                  <div className={styles.span_visibility_1_wrapper}>
+                    <span className={styles.span_visibility_1}>
+                      {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesHeightOutsideMount, index) => (
+                        <div
+                          key={index}
+                          onClick={() => handleScrolledInchesWhenClickedHeightOutsideMount(inchesHeightOutsideMount)}
+                          className={`${selectedInchesHeightOutsideMount === inchesHeightOutsideMount ? styles.selectedInch : ''} ${styles.numberStyle}`}
+                        >
+                          {inchesHeightOutsideMount}
+                        </div>
+                      ))}
+                    </span>
+                  </div>
+                  Enter A price
+                  <input
+                    className={styles.cms_panel_input_box_ruler_number}
+                    type="number"
+                    onChange={(e) => handleInchPriceChangeHeightOutsideMount(selectedInchesHeightOutsideMount, e.target.value)}
+                  />
+
+                  Live Display
+                  <div className={styles.show_price_ruler_number}>
+                    <h1>
+                      ${inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
+                        ? inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount]
+                        : ""}
+                    </h1>
+                  </div>
+
+                  Previously Entered Price
+
+                  <div className={styles.show_price_ruler_number_green}>
+                    <h1>
+                      ${newSetPriceInchesHeightOutsideMount !== undefined
+                        ? newSetPriceInchesHeightOutsideMount
+                        : ""}
+                    </h1>
+                  </div>
+
+                </div>
               </div>
-
-              <input
-                className={styles.cms_panel_input_box}
-                type="number"
-                onChange={(e) => handleInchPriceChangeHeightInsideMount(selectedInchesHeightInsideMount, e.target.value)}
-              />
-
-              <div className={styles.show_price}>
-                <h1>
-                  Entered Price: ${inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount] !== undefined
-                    ? inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount]
-                    : ""}
-                </h1>
-              </div>
-
-              <div className={styles.show_price}>
-                <h1>
-                  Last Saved Price: ${newSetPriceInchesHeightInsideMount !== undefined
-                    ? newSetPriceInchesHeightInsideMount
-                    : ""}
-                </h1>
-              </div>
-
             </div>
 
-
-            <div className={styles.cms_panel_section}>
-
-              <label className={styles.cms_panel_label}>
-                Change Inches Prices Width Outside Mount:
-              </label>
-
-              <div className={styles.span_visibility_1_wrapper}>
-                <span className={styles.span_visibility_1}>
-                  {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesWidthOutsideMount, index) => (
-                    <div
-                      key={index}
-                      onClick={() => handleScrolledInchesWhenClickedWidthOutsideMount(inchesWidthOutsideMount)}
-                      className={selectedInchesWidthOutsideMount === inchesWidthOutsideMount ? styles.selectedInch : ''}
-                    >
-                      {inchesWidthOutsideMount}
-                    </div>
-                  ))}
-                </span>
-              </div>
-
-
-              <input
-                className={styles.cms_panel_input_box}
-                type="number"
-                onChange={(e) => handleInchPriceChangeWidthOutsideMount(selectedInchesWidthOutsideMount, e.target.value)}
-              />
-
-              <div className={styles.show_price}>
-                <h1>
-                  Entered Price: ${inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount] !== undefined
-                    ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
-                    : ""}
-                </h1>
-              </div>
-
-              <div className={styles.show_price}>
-                <h1>
-                  Last Saved Price: ${newSetPriceInchesWidthOutsideMount !== undefined
-                    ? newSetPriceInchesWidthOutsideMount
-                    : ""}
-                </h1>
-              </div>
-
-            </div>
-
-
-            <div className={styles.cms_panel_section}>
-
-              <label className={styles.cms_panel_label}>
-                Change Inches Prices Height Outside Mount:
-              </label>
-
-              <div className={styles.span_visibility_1_wrapper}>
-                <span className={styles.span_visibility_1}>
-                  {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesHeightOutsideMount, index) => (
-                    <div
-                      key={index}
-                      onClick={() => handleScrolledInchesWhenClickedHeightOutsideMount(inchesHeightOutsideMount)}
-                      className={selectedInchesHeightOutsideMount === inchesHeightOutsideMount ? styles.selectedInch : ''}
-                    >
-                      {inchesHeightOutsideMount}
-                    </div>
-                  ))}
-                </span>
-              </div>
-
-              <input
-                className={styles.cms_panel_input_box}
-                type="number"
-                onChange={(e) => handleInchPriceChangeHeightOutsideMount(selectedInchesHeightOutsideMount, e.target.value)}
-              />
-
-              <div className={styles.show_price}>
-                <h1>
-                  Entered Price: ${inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
-                    ? inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount]
-                    : ""}
-                </h1>
-              </div>
-
-              <div className={styles.show_price}>
-                <h1>
-                  Last Saved Price: ${newSetPriceInchesHeightOutsideMount !== undefined
-                    ? newSetPriceInchesHeightOutsideMount
-                    : ""}
-                </h1>
-              </div>
-
-            </div>
           </div>
         </div>
 
