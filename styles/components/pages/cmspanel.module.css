@@ -86,7 +86,7 @@
     box-shadow: rgb(0, 0, 0) 0px 0px 4px;
 }
 
-.arrowdowngreencircle { 
+.arrowdowngreencircle {
     display: flex;
     width: 20px;
 }
@@ -156,10 +156,10 @@
 
 }
 
-.cms_panel_section_ruler_numbers_first_title:hover{ 
+.cms_panel_section_ruler_numbers_first_title:hover {
     box-shadow: #212121 0px 0px 4px;
-transition: 0.2s;
-transform: scale(0.98);
+    transition: 0.2s;
+    transform: scale(0.98);
 }
 
 
@@ -200,6 +200,14 @@ transform: scale(0.98);
     border-width: 1px;
     border-color: rgb(63, 63, 63);
     border-radius: 0.25rem;
+    transition: 0.2s;
+}
+
+.cmspanel_wrapper :hover {
+    border-width: 2px;
+    transform: scale(0.98);
+    transition: 0.2s;
+    box-shadow: #7c7c7c 0px 0px 4px;
 }
 
 .cms_panel_label {
