@@ -327,8 +327,17 @@ const CMSPanel = () => {
   }, []);
 
 
+  const [isSavedtext, setIsSavedtext] = useState(false);
+
   const handleSaveOptions = async () => {
     try {
+      const button = document.getElementById("save_button");
+
+      button.style.transform = "scale(0.94)";
+      button.style.transition = "transform 0.2s";
+      button.style.borderColor = "grey";
+      button.style.backgroundColor = "#f1f1f1";
+
       const response = await fetch("/api/test/add", {
         method: "POST",
         headers: {
@@ -342,27 +351,27 @@ const CMSPanel = () => {
           roomname: roomname,
           cordlesspriceCMS: cordlesspriceCMS,
           motorizedpriceCMS: motorizedpriceCMS,
-          inchPricesAfterWidthInsideMount: JSON.stringify(inchPricesAfterWidthInsideMount, (key, value) => {
-            return value;
-          }),
-          inchPricesAfterHeightInsideMount: JSON.stringify(inchPricesAfterHeightInsideMount, (key, value) => {
-            return value;
-          }),
-          inchPricesAfterWidthOutsideMount: JSON.stringify(inchPricesAfterWidthOutsideMount, (key, value) => {
-            return value;
-          }),
-          inchPricesAfterHeightOutsideMount: JSON.stringify(inchPricesAfterHeightOutsideMount, (key, value) => {
-            return value;
-          }),
+          inchPricesAfterWidthInsideMount: JSON.stringify(inchPricesAfterWidthInsideMount),
+          inchPricesAfterHeightInsideMount: JSON.stringify(inchPricesAfterHeightInsideMount),
+          inchPricesAfterWidthOutsideMount: JSON.stringify(inchPricesAfterWidthOutsideMount),
+          inchPricesAfterHeightOutsideMount: JSON.stringify(inchPricesAfterHeightOutsideMount),
         }),
       });
 
       if (response.ok) {
         const result = await response.json();
         console.log("Response from server:", result);
-
         updateData && updateData(result.data);
+        setIsSavedtext(true); // Set the state to true when saved
       }
+
+      setTimeout(() => {
+        button.style.transform = "scale(1)";
+        button.style.borderWidth = "2px";
+        button.style.borderColor = "orange";
+        button.style.backgroundColor = "white";
+        setIsSavedtext(false); // Reset the state after 700 milliseconds
+      }, 700);
     } catch (error) {
       console.error("Error saving new name:", error);
     }
@@ -377,16 +386,23 @@ const CMSPanel = () => {
 
         <div className={styles.CMSPanel_Page_Wrapper}>
           <div className={styles.save_button_wrapper}>
-            <button className={styles.save_button} onClick={handleSaveOptions}>
+            
+            <button id="save_button" className={styles.save_button} onClick={handleSaveOptions}>
               Save
             </button>
+
+            {isSavedtext && 
+            <>
+            <p className={styles.save_button_confirmation_text}>Saved</p>
             <Image
-              className={styles.arrowdowngreencircle}
-              alt="arrowdowngreencircle"
-              src={"/arrowdowngreencircle.png"}
-              width={500}
-              height={500}
-            ></Image>
+            className={styles.arrowdowngreencircle}
+            alt="arrowdowngreencircle"
+            src={"/arrowdowngreencircle.png"}
+            width={500}
+            height={500}
+          ></Image>
+          </>
+          }
           </div>
 
           <div className={styles.section_tag}>
