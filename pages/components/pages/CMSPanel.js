@@ -381,7 +381,7 @@ const CMSPanel = () => {
               Save
             </button>
             <Image
-             className={styles.arrowdowngreencircle}
+              className={styles.arrowdowngreencircle}
               alt="arrowdowngreencircle"
               src={"/arrowdowngreencircle.png"}
               width={500}
@@ -408,6 +408,9 @@ const CMSPanel = () => {
                 onChange={(e) => setProductName1(e.target.value)}
               />
 
+              <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
 
               <label className={styles.cms_panel_label}>
                 Last Entered Value
@@ -423,8 +426,15 @@ const CMSPanel = () => {
               <input
                 className={styles.cms_panel_input_box}
                 type="text"
-                onChange={(e) => setProductName2(e.target.value)}
+                onChange
+
+                ={(e) => setProductName2(e.target.value)}
               />
+
+
+              <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
 
               <label className={styles.cms_panel_label}>
                 Last Entered Value
@@ -447,6 +457,10 @@ const CMSPanel = () => {
 
 
               <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
+
+              <label className={styles.cms_panel_label}>
                 Last Entered Value
               </label>
 
@@ -464,6 +478,10 @@ const CMSPanel = () => {
                 onChange={(e) => setWandPriceCMS(e.target.value)}
               />
 
+
+              <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
 
               <label className={styles.cms_panel_label}>
                 Last Entered Value
@@ -484,6 +502,10 @@ const CMSPanel = () => {
                 onChange={(e) => setcordlesspriceCMS(e.target.value)}
               />
 
+
+              <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
 
               <label className={styles.cms_panel_label}>
                 Last Entered Value
@@ -507,6 +529,11 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setmotorizedpriceCMS(e.target.value)}
               />
+
+
+              <label className={styles.cms_panel_label}>
+                Entered Value
+              </label>
 
               <label className={styles.cms_panel_label}>
                 Last Entered Value
