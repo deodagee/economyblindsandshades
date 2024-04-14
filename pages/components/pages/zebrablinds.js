@@ -698,13 +698,11 @@ const ZebraBlinds = () => {
       }
     }, 0);
   };
-
   const handleNewSpanClickedWidthInsideMount = () => {
     setselectedInchesVisibleWidthInsideMount((prev) => !prev);
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
   const handleScrolledInchesWhenClickedHeightInsideMount = (inchesHeightInsideMount) => {
     setselectedInchesHeightInsideMount(inchesHeightInsideMount);
     setselectedInchesVisibleHeightInsideMount(false);
@@ -724,10 +722,44 @@ const ZebraBlinds = () => {
 
         scrollableDivHeightInsideMount.scrollTopHeightInsideMount = scrollPosition;
       } else {
-        console.warn("Selected inch  div not found in the scrollable div");
+        console.warn("Selected inch div not found in the scrollable div");
       }
     }, 0);
+
+    if (inchesHeightInsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesHeightInsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesHeightInsideMount);
+    }
+
+    // Retrieve the price associated with the selected inch
+    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMount[inchesHeightInsideMount];
+    setnewSetPriceInchesHeightInsideMount(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
+
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceHeightInsideMount === undefined && inchesHeightInsideMount % 5 !== 0) {
+      let prevInchHeightInsideMount = inchesHeightInsideMount - 1;
+      while (prevInchHeightInsideMount % 5 !== 0) {
+        prevInchHeightInsideMount--;
+      }
+
+      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMount[prevInchHeightInsideMount];
+      setnewSetPriceInchesHeightInsideMount(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
+
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightInsideMount);
+      let nextInchHeightInsideMount = prevInchHeightInsideMount + 1;
+      while (nextInchHeightInsideMount < inchesHeightInsideMount) {
+        nextInchHeightInsideMount++;
+      }
+
+    } else if (inchesHeightInsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMount[inchesHeightInsideMount]);
+    }
   };
+
 
   const handleNewSpanClickedHeightInsideMount = () => {
     setselectedInchesVisibleHeightInsideMount((prev) => !prev);
@@ -765,28 +797,43 @@ const ZebraBlinds = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+
   const handleScrolledInchesWhenClickedHeightOutsideMount = (inchesHeightOutsideMount) => {
-    setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
-    setselectedInchesVisibleHeightOutsideMount(false);
-    setselectedInchHeightOutsideMount(inchesHeightOutsideMount);
+    setselectedInchesHeightInsideMount(inchesHeightOutsideMount);
 
-    const scrollableDivHeightOutsideMount = scrollableDivRefHeightOutsideMount.current;
 
-    setTimeout(() => {
-      const selectedInchesDivHeightOutsideMount = scrollableDivHeightOutsideMount.querySelector(`.${styles.selectedInch}`);
+    if (inchesHeightOutsideMount % 5 === 0) {
+      // Log when a multiple of 5 is clicked
+      console.log("Selected multiple of 5:", inchesHeightOutsideMount);
+    } else {
+      // Log when a subsequent number of a multiple of 5 is clicked
+      console.log("Selected subsequent number of multiple of 5:", inchesHeightOutsideMount);
+    }
 
-      if (selectedInchesDivHeightOutsideMount) {
-        const selectedInchesDivRectHeightOutsideMount = selectedInchesDivHeightOutsideMount.getBoundingClientRect();
-        const scrollPosition =
-          selectedInchesDivRectHeightOutsideMount.top +
-          scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount -
-          (scrollableDivHeightOutsideMount.offsetHeightOutsideMount - selectedInchesDivRectHeightOutsideMount.height) / 2;
+    // Retrieve the price associated with the selected inch
+    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount];
+    setnewSetPriceInchesHeightOutsideMount(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
 
-        scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount = scrollPosition;
-      } else {
-        console.warn("Selected inch  div not found in the scrollable div");
+    // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
+    if (newSetPriceHeightOutsideMount === undefined && inchesHeightOutsideMount % 5 !== 0) {
+      let prevInchHeightOutsideMount = inchesHeightOutsideMount - 1;
+      while (prevInchHeightOutsideMount % 5 !== 0) {
+        prevInchHeightOutsideMount--;
       }
-    }, 0);
+
+      const nearestMultipleOf5PriceinchesHeightOutsideMount = inchPricesAfterHeightOutsideMount[prevInchHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMount(nearestMultipleOf5PriceinchesHeightOutsideMount !== undefined ? nearestMultipleOf5PriceinchesHeightOutsideMount : "");
+
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceinchesHeightOutsideMount);
+      let nextInchHeightOutsideMount = prevInchHeightOutsideMount + 1;
+      while (nextInchHeightOutsideMount < inchesHeightOutsideMount) {
+        nextInchHeightOutsideMount++;
+      }
+
+    } else if (inchesHeightOutsideMount % 5 === 0) {
+      // Log the price of the multiple of 5 when clicked
+      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount]);
+    }
   };
 
   const handleNewSpanClickedHeightOutsideMount = () => {
@@ -801,7 +848,6 @@ const ZebraBlinds = () => {
   const handleSelectedInchAndMatchToScrollerHeightInsideMount = (rulerNumberHeightInsideMount) => {
     setselectedRulerNumberInchHeightInsideMount(rulerNumberHeightInsideMount);
   };
-
 
   const handleSelectedInchAndMatchToScrollerWidthOutsideMount = (rulerNumberWidthOutsideMount) => {
     setselectedRulerNumberInchWidthOtusideMount(rulerNumberWidthOutsideMount);
@@ -1289,7 +1335,7 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Inside Mount: ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
+                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
                                       ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
                                       : "no price set for this value"}
                                   </h1>
@@ -1695,8 +1741,8 @@ const ZebraBlinds = () => {
                                 <div className={styles.key_locker2}>
 
                                   <h1>
-                                    Price Height Inside Mount: ${inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount] !== undefined
-                                      ? inchPricesAfterHeightInsideMount[selectedInchesHeightInsideMount]
+                                    Price Height Inside Mount: ($) {newSetPriceInchesHeightInsideMount !== undefined
+                                      ? newSetPriceInchesHeightInsideMount
                                       : "no price set for this value"}
                                   </h1>
 
@@ -1712,10 +1758,10 @@ const ZebraBlinds = () => {
 
                                       <div className={styles.inches_scroller_wrapper}>
                                         <div ref={scrollableDivRefHeightInsideMount} className={styles.inches_scroller_div}>
-                                          {selectedInchesVisibleHeightInsideMount ? (
-
+                                        {selectedInchesVisibleHeightInsideMount ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"].map((inchesHeightInsideMount, index) => (
+                                              {["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110"].map((inchesHeightInsideMount, index) => (
+
                                                 <div
                                                   key={index}
                                                   onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
@@ -1728,8 +1774,10 @@ const ZebraBlinds = () => {
                                           ) : (
                                             <span className={styles._scroller_div_span} onClick={handleNewSpanClickedHeightInsideMount}>
                                               {selectedInchesHeightInsideMount}
+
                                             </span>
                                           )}
+
                                         </div>
                                       </div>
                                     </div>
@@ -2120,7 +2168,6 @@ const ZebraBlinds = () => {
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_fractions}>
 
-
                                                 {[selectedInchHeightInsideMount].map((selectedInchHeightInsideMount, index) => {
                                                   const yourArrayOfNumbers = ["0", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91"];
 
@@ -2277,7 +2324,7 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Outside Mount: ${inchPricesAfterWidthOutsideMount
+                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMount
                                     [selectedInchesWidthOutsideMount] !== undefined
                                       ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
                                       : "no price set for this value"}
@@ -2709,7 +2756,7 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Height Outside Mount: ${inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
+                                    Price Height Outside Mount: ($) {inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
                                       ? inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount]
                                       : "no price set for this value"}
                                   </h1>
@@ -2789,7 +2836,7 @@ const ZebraBlinds = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  
+
 
                                   <div className={styles.ruler_div}>
 
@@ -3956,6 +4003,5 @@ const ZebraBlinds = () => {
 
 
 export default ZebraBlinds;
-
 
 
