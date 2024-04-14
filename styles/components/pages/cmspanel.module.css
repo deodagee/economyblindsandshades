@@ -29,35 +29,148 @@
     transition: opacity 0.9s ease;
 }
 
+.CMSPanel_Page_Wrapper {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-width: 3px;
+    border-radius: 0.25rem;
+    border-color: rgb(222, 222, 222);
+    margin: 20px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    overflow: hidden;
+}
+
+.save_button_wrapper {
+    height: max-content;
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    width: 95vw;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-width: 2px;
+    border-color: rgb(192, 192, 192);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    gap: 5px;
+
+}
+
+.save_button {
+    margin-left: 20px;
+    width: max-content;
+    height: max-content;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.45rem;
+    border-width: 2px;
+    border-color: orange;
+    transition: 0.2s;
+}
+
+.save_button:hover {
+    transform: scale(0.95);
+    transition: 0.2s;
+    box-shadow: rgb(0, 0, 0) 0px 0px 4px;
+}
+
+.arrowdowngreencircle { 
+    display: flex;
+    width: 20px;
+}
+
+.section_tag {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: start;
+    margin-top: 20px;
+    gap: 10px;
+    width: 95vw;
+    background-color: rgb(233, 233, 233);
+    padding-left: 20px;
+    border-width: 2px;
+    border-color: rgb(216, 216, 216);
+    border-left: none;
+    border-right: none;
+}
+
+.section_tag_title {
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.section_tag_branch {
+    display: flex;
+    font-size: 15px;
+}
+
+
 .cmspanel_wrapper {
     display: flex;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
+    width: 95vw;
     flex-direction: column;
-    width: 100vw;
-    margin: 10px;
-    margin-top: 5vh;
+    margin-top: 20px;
+    margin: 20px;
     gap: 20px;
+    margin-bottom: 20vh;
 }
 
 .cms_panel_section_ruler_numbers_wrapper_WRAPPER {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20vw;
+    justify-content: center;
+    width: 15vw;
+    height: 550px;
+}
+
+.cms_panel_section_ruler_numbers_first_title {
+    display: flex;
+    white-space: wrap;
+    font-size: 13px;
+    background-color: rgb(231, 231, 231);
+    padding: 5px;
+    border-radius: 0.35rem;
+    margin: 5px;
+    height: 50px;
+    box-shadow: #a2a2a2 0px 0px 4px;
+    transition: 0.2s;
 
 }
+
+.cms_panel_section_ruler_numbers_first_title:hover{ 
+    box-shadow: #212121 0px 0px 4px;
+transition: 0.2s;
+transform: scale(0.98);
+}
+
 
 .cms_panel_section_ruler_numbers_wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5px;
     padding: 10px;
-    width: 20vw;
+    width: 15vw;
     height: 500px;
     border-width: 1px;
     border-color: rgb(63, 63, 63);
@@ -68,24 +181,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 5px;
-    padding: 10px;
-    width: 9vw;
+    width: 6vw;
     height: 450px;
     border-width: 1px;
-    border-color: rgb(218, 218, 218);
+    border-color: rgb(115, 115, 115);
 }
 
 .cms_panel_section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     gap: 5px;
     padding: 10px;
-    width: 20vw;
-    height: 300px;
+    width: 15vw;
+    height: 200px;
     border-width: 1px;
     border-color: rgb(63, 63, 63);
     border-radius: 0.25rem;
@@ -95,8 +206,8 @@
     display: flex;
     font-size: 15px;
     color: black;
-    height: 30px;
-    width: 200px;
+    height: max-content;
+    width: max-content;
     align-items: center;
     justify-content: center;
 }
@@ -110,7 +221,11 @@
 
 .span_visibility_1_wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
+    width: 5vw;
+    background-color: black;
 }
 
 .span_visibility_1 {
@@ -123,52 +238,35 @@
     overflow-y: scroll;
     overflow-x: hidden;
     transition: 0.6s;
+    padding: 20px;
 }
 
 .local_root {
     --primary: #f1f1f1;
     --secondary: rgba(253, 31, 31, 0.6);
     --tertiary: rgba(253, 31, 31, 0.6);
-    margin-right: 20px;
 }
 
 .local_root * {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary) var(--primary);
-    margin-right: 20px;
 
 }
 
 .local_root *::-webkit-scrollbar {
     width: 0;
-    margin-right: 20px;
 
 }
 
 .local_root *::-webkit-scrollbar-track {
     background: var(--primary);
     border-radius: 0;
-    margin-right: 20px;
 }
 
 
 .span_visibility_1 div {
     border-width: 1px;
     border-color: green;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-.span_visibility_1 div:hover {
-    background-color: rgba(195, 0, 0, 0.631);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    padding: 3px;
-    transition: 0.3s;
-    border-width: 1px;
-    border-color: rgb(0, 59, 0);
     margin-left: 2px;
     margin-right: 2px;
 }
@@ -180,33 +278,33 @@
     margin: 20px;
 }
 
-.selectedInch {
-    display: flex;
-    color: rgb(255, 255, 255);
-    margin: 5px;
-    padding: 5px;
-    width: 70px;
-    align-items: center;
-    justify-content: center;
-    border-width: 1px;
-    border-color: green;
-    margin-left: 2px;
-    margin-right: 2px;
-    background-color: black;
-}
-
 .numberStyle {
     width: 60px;
-    padding: 10px;
+    padding: 2px;
     border-color: red;
     align-items: center;
     display: flex;
     justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.selectedInch {
+    margin: 2px;
+    color: red;
+}
+
+
+.span_visibility_1 :hover {
+    color: black;
+    background-color: white;
 }
 
 .cms_panel_input_box {
     display: flex;
-    width: 200px;
+    width: 14vw;
     height: 30px;
     border-radius: 0.45rem;
     border-width: 3px;
@@ -214,53 +312,49 @@
     align-items: center;
     justify-content: flex-start;
     background-color: #eaeaea;
+    overflow: hidden;
 }
 
+.enter_a_price {
+    display: flex;
+    width: 5vw;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+    font-weight: 600;
+}
 
 .cms_panel_input_box_ruler_number {
     display: flex;
-    width: 100px;
-    height: 30px;
+    width: 5vw;
+    align-items: center;
+    justify-content: flex-start;
+    height: max-content;
+
     border-radius: 0.45rem;
     border-width: 3px;
     border-color: grey;
-    align-items: center;
-    justify-content: flex-start;
+
     background-color: #eaeaea;
 }
 
-.button {
-    margin-top: 20px;
-    margin-left: 20px;
-    width: max-content;
-    height: max-content;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+
+.live_display {
     display: flex;
-    font-size: 30px;
+    width: 5vw;
     align-items: center;
-    justify-content: center;
-    border-radius: 0.45rem;
-    transition: 0.3s;
-    border-width: 2px;
-    border-color: orange;
+    justify-content: flex-start;
+    font-size: 10px;
+    font-weight: 600;
 }
-
-.button:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
-    box-shadow: rgb(0, 0, 0) 0px 0px 4px;
-}
-
 
 .key_locker1,
 .key_locker2 {
     display: flex;
     background-color: rgb(224, 224, 224);
-    width: 200px;
-    height: 25px;
+    width: 14vw;
+    height: 30px;
     color: rgb(75, 75, 75);
     border-radius: 0.25rem;
     border-color: orange;
@@ -289,8 +383,8 @@
 .show_price_ruler_number h1 {
     display: flex;
     background-color: rgb(224, 224, 224);
-    width: 100px;
-    height: 25px;
+    width: 5vw;
+    height: max-content;
     color: rgb(75, 75, 75);
     border-radius: 0.25rem;
     border-color: rgb(222, 145, 0);
@@ -298,13 +392,25 @@
     align-items: center;
     justify-content: center;
     font: 10px;
+    overflow: hidden;
+    white-space: nowrap;
     box-shadow: #000000 0px 0px 4px;
 }
+
+.previously_entered_price {
+    display: flex;
+    width: 5vw;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+    font-weight: 600;
+}
+
 
 .show_price_ruler_number_green h1 {
     display: flex;
     background-color: rgb(41, 138, 0);
-    width: 100px;
+    width: 5vw;
     height: 25px;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -316,7 +422,6 @@
     font: 10px;
     box-shadow: #000000 0px 0px 4px;
 }
-
 
 .warning {
     background-color: rgb(236, 236, 236);
