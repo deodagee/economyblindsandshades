@@ -6,6 +6,8 @@ import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/cmspanel.module.css';
 import { useData } from "../../../utils/DataContext";
 import FooterPage from "../footer";
+import Image from "next/image";
+
 
 const CMSPanel = () => {
 
@@ -373,10 +375,28 @@ const CMSPanel = () => {
     <>
       {session ? (
 
-        <div>
-          <button className={styles.button} onClick={handleSaveOptions}>
-            Save
-          </button>
+        <div className={styles.CMSPanel_Page_Wrapper}>
+          <div className={styles.save_button_wrapper}>
+            <button className={styles.save_button} onClick={handleSaveOptions}>
+              Save
+            </button>
+            <Image
+             className={styles.arrowdowngreencircle}
+              alt="arrowdowngreencircle"
+              src={"/arrowdowngreencircle.png"}
+              width={500}
+              height={500}
+            ></Image>
+          </div>
+
+          <div className={styles.section_tag}>
+            <h1 className={styles.section_tag_title} >
+              Section:
+            </h1>
+            <h1 className={styles.section_tag_branch}>
+              Zebra Blinds (Room Lightening)
+            </h1>
+          </div>
 
           <div className={styles.cmspanel_wrapper}>
 
@@ -387,7 +407,12 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setProductName1(e.target.value)}
               />
-              Last Entered Value
+
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
+
               <h1 className={styles.key_locker1}>{postData && postData.productName1}
               </h1>
 
@@ -400,7 +425,11 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setProductName2(e.target.value)}
               />
-              Last Entered Value
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
+
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.productName2}
@@ -415,7 +444,11 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setroomname(e.target.value)}
               />
-              Last Entered Value
+
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.roomname}
@@ -430,7 +463,11 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setWandPriceCMS(e.target.value)}
               />
-              Last Entered Value
+
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.WandPriceCMS}
@@ -446,7 +483,12 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setcordlesspriceCMS(e.target.value)}
               />
-              Last Entered Value
+
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
+
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.cordlesspriceCMS}
@@ -465,7 +507,11 @@ const CMSPanel = () => {
                 type="text"
                 onChange={(e) => setmotorizedpriceCMS(e.target.value)}
               />
-              Last Entered Value
+
+              <label className={styles.cms_panel_label}>
+                Last Entered Value
+              </label>
+
 
               <div className={styles.key_locker2}>
                 <h1 >{postData && postData.motorizedpriceCMS}
@@ -474,7 +520,10 @@ const CMSPanel = () => {
             </div>
 
             <div className={styles.cms_panel_section_ruler_numbers_wrapper_WRAPPER}>
-              INSIDE MOUNT ZEBRABLINDS ROOM LIGHTENING
+
+              <div className={styles.cms_panel_section_ruler_numbers_first_title}>
+                ZEBRABLINDS ROOM LIGHTENING / INSIDE MOUNT
+              </div>
 
               <div className={styles.cms_panel_section_ruler_numbers_wrapper}>
                 <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
@@ -501,24 +550,36 @@ const CMSPanel = () => {
                       {selectedInchesWidthInsideMount}
                     </span>
                   ) : null}
-                  Enter A price
+
+
+                  <div className={styles.enter_a_price}>
+                    Enter Price
+                  </div>
+
                   <input
                     className={styles.cms_panel_input_box_ruler_number}
                     type="number"
                     onChange={(e) => handleInchPriceChangeWidthInsideMount(selectedInchesWidthInsideMount, e.target.value)}
                   />
 
-                  Live Display
+
+
+                  <div className={styles.live_display}>
+                    Live Display
+                  </div>
 
                   <div className={styles.show_price_ruler_number}>
                     <h1>
-                      Price: ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
+                      ${inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
                         ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
                         : ""}
                     </h1>
                   </div>
 
-                  Previously Entered Price
+                  <div className={styles.previously_entered_price}>
+                    Price Before
+                  </div>
+
                   <div className={styles.show_price_ruler_number_green}>
                     <h1></h1>
                   </div>
@@ -544,14 +605,20 @@ const CMSPanel = () => {
                     </span>
                   </div>
 
-                  Enter A price
+                  <div className={styles.enter_a_price}>
+                    Enter Price
+                  </div>
+
                   <input
                     className={styles.cms_panel_input_box_ruler_number}
                     type="number"
                     onChange={(e) => handleInchPriceChangeHeightInsideMount(selectedInchesHeightInsideMount, e.target.value)}
                   />
 
-                  Live Display
+                  <div className={styles.live_display}>
+                    Live Display
+                  </div>
+
 
                   <div className={styles.show_price_ruler_number}>
                     <h1>
@@ -561,7 +628,10 @@ const CMSPanel = () => {
                     </h1>
                   </div>
 
-                  Previously Entered Price
+                  <div className={styles.previously_entered_price}>
+                    Price Before
+                  </div>
+
                   <div className={styles.show_price_ruler_number_green}>
                     <h1>
                       ${newSetPriceInchesHeightInsideMount !== undefined
@@ -576,12 +646,18 @@ const CMSPanel = () => {
 
 
             <div className={styles.cms_panel_section_ruler_numbers_wrapper_WRAPPER}>
-              OUTSIDE MOUNT ZEBRABLINDS ROOM LIGHTENING
+
+
+              <div className={styles.cms_panel_section_ruler_numbers_first_title}>
+                ZEBRABLINDS ROOM LIGHTENING / OUTSIDE MOUNT
+              </div>
+
 
               <div className={styles.cms_panel_section_ruler_numbers_wrapper}>
 
 
                 <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
+
                   <label className={styles.cms_panel_label}>
                     Width
                   </label>
@@ -607,23 +683,33 @@ const CMSPanel = () => {
                     </span>
                   ) : null}
 
-                  Enter A price
+                  <div className={styles.enter_a_price}>
+                    Enter Price
+                  </div>
+
                   <input
                     className={styles.cms_panel_input_box_ruler_number}
                     type="number"
                     onChange={(e) => handleInchPriceChangeWidthOutsideMount(selectedInchesWidthOutsideMount, e.target.value)}
                   />
 
-                  Live Display
+                  <div className={styles.live_display}>
+                    Live Display
+                  </div>
+
                   <div className={styles.show_price_ruler_number}>
                     <h1>
-                      Price: ${inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount] !== undefined
+                      ${inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount] !== undefined
                         ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
                         : ""}
                     </h1>
                   </div>
 
-                  Previously Entered Price
+                  <div className={styles.previously_entered_price}>
+                    Price Before
+                  </div>
+
+
                   <div className={styles.show_price_ruler_number_green}>
                     <h1></h1>
                   </div>
@@ -648,14 +734,22 @@ const CMSPanel = () => {
                       ))}
                     </span>
                   </div>
-                  Enter A price
+
+                  <div className={styles.enter_a_price}>
+                    Enter Price
+                  </div>
+
                   <input
                     className={styles.cms_panel_input_box_ruler_number}
                     type="number"
                     onChange={(e) => handleInchPriceChangeHeightOutsideMount(selectedInchesHeightOutsideMount, e.target.value)}
                   />
 
-                  Live Display
+                  <div className={styles.live_display}>
+                    Live Display
+                  </div>
+
+
                   <div className={styles.show_price_ruler_number}>
                     <h1>
                       ${inchPricesAfterHeightOutsideMount[selectedInchesHeightOutsideMount] !== undefined
@@ -664,7 +758,10 @@ const CMSPanel = () => {
                     </h1>
                   </div>
 
-                  Previously Entered Price
+                  <div className={styles.previously_entered_price}>
+                    Price Before
+                  </div>
+
 
                   <div className={styles.show_price_ruler_number_green}>
                     <h1>
