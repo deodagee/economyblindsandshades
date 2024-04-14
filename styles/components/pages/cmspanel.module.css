@@ -81,9 +81,19 @@
 }
 
 .save_button:hover {
-    transform: scale(0.95);
+    transform: scale(1.02);
+    background-color: hsl(0, 0%, 95%);
     transition: 0.2s;
-    box-shadow: rgb(0, 0, 0) 0px 0px 4px;
+    box-shadow: rgb(227, 227, 227) 0px 0px 4px;
+}
+
+.save_button_confirmation_text { 
+    display: flex;
+    margin-left: 20px;
+    width: max-content;
+    height: max-content;
+    font-weight: 600;
+
 }
 
 .arrowdowngreencircle {
