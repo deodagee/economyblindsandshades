@@ -1,4 +1,3 @@
-//ORIGINAL
 // C:\Users\User\economyblindsandshadesjs\pages\components\pages\zebrablinds.js
 
 import styles from '../../../styles/components/pages/zebrablinds.module.css';
@@ -636,24 +635,29 @@ const ZebraBlinds = () => {
   const [selectedRulerNumberInchWidthInsideMount, setselectedRulerNumberInchWidthInsideMount] = useState(null);
   const [selectedRulerNumberInchHeightInsideMount, setselectedRulerNumberInchHeightInsideMount] = useState(null);
 
-  const [selectedRulerNumberFractionHEIGHT, setselectedRulerNumberFractionHEIGHT] = useState(null);
-  const [selectedRulerNumberFractionWIDTH, setselectedRulerNumberFractionWIDTH] = useState(null);
+  const [selectedRulerNumberFractionWidthInsideMount, setselectedRulerNumberFractionWidthInsideMount] = useState(null);
+  const [selectedRulerNumberFractionHeightInsideMount, setselectedRulerNumberFractionHeightInsideMount] = useState(null);
+  const [selectedRulerNumberFractionWidthOutsideMount, setselectedRulerNumberFractionWidthOutsideMount] = useState(null);
+  const [selectedRulerNumberFractionHeightOutsideMount, setselectedRulerNumberFractionHeightOutsideMount] = useState(null);
 
-  const [selectedFractionVisibleWidth, setselectedFractionVisibleWidth] = useState(true);
-  const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
-  const [selectedFractionVisibleHeight, setSelectedFractionVisibleHeight] = useState(true);
-  const [selectedFractionsHeight, setselectedFractionsHeight] = useState(null);
-  const [selectedFractionWIDTH, setselectedFractionWIDTH] = useState(null);
-  const [selectedFractionHEIGHT, setselectedFractionHEIGHT] = useState(null);
+  const [selectedFractionVisibleWidthInsideMount, setselectedFractionVisibleWidthInsideMount] = useState(true);
+  const [selectedFractionVisibleWidthOutsideMount, setselectedFractionVisibleWidthOutsideMount] = useState(true);
+  const [selectedFractionVisibleHeightInsideMount, setSelectedFractionVisibleHeightInsideMount] = useState(true);
+  const [selectedFractionVisibleHeightOutsideMount, setselectedFractionVisibleHeightOutsideMount] = useState(true);
 
+  const [selectedFractionsWidthInsideMount, setselectedFractionsWidthInsideMount] = useState(null);
+  const [selectedFractionsWidthOutsideMount, setselectedFractionsWidthOutsideMount] = useState(null);
+  const [selectedFractionsHeightInsideMount, setselectedFractionsHeightInsideMount] = useState(null);
+  const [selectedFractionsHeightOutsideMount, setselectedFractionsHeightOutsideMount] = useState(null);
 
+  const [selectedFractionWidthInsideMount, setselectedFractionWidthInsideMount] = useState(null);
+  const [selectedFractionHeightInsideMount, setselectedFractionHeightInsideMount] = useState(null);
+  const [selectedFractionWidthOutsideMount, setselectedFractionWidthOutsideMount] = useState(null);
+  const [selectedFractionHeightOutsideMount, setselectedFractionHeightOutsideMount] = useState(null);
 
   const [selectedInchesWidthInsideMount, setselectedInchesWidthInsideMount] = useState(null);
-
   const [selectedInchesHeightInsideMount, setselectedInchesHeightInsideMount] = useState(null);
-
   const [selectedInchesWidthOutsideMount, setselectedInchesWidthOutsideMount] = useState(null);
-
   const [selectedInchesHeightOutsideMount, setselectedInchesHeightOutsideMount] = useState(null);
 
   const [selectedInchesVisibleWidthInsideMount, setselectedInchesVisibleWidthInsideMount] = useState(true);
@@ -667,7 +671,10 @@ const ZebraBlinds = () => {
   const [selectedInchHeightOutsideMount, setselectedInchHeightOutsideMount] = useState(null);
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-  const scrollableDivRefFractions = useRef();
+  const scrollableDivRefFractionsWidthInsideMount = useRef();
+  const scrollableDivRefFractionsWidthOutsideMount = useRef();
+  const scrollableDivRefFractionsHeightInsideMount = useRef();
+  const scrollableDivRefFractionsHeightOutsideMount = useRef();
 
   const scrollableDivRefWidthInsideMount = useRef();
   const scrollableDivRefHeightInsideMount = useRef();
@@ -675,6 +682,7 @@ const ZebraBlinds = () => {
   const scrollableDivRefHeightOutsideMount = useRef();
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
+
 
   const handleScrolledInchesWhenClickedWidthInsideMount = (inchesWidthInsideMount) => {
     setselectedInchesWidthInsideMount(inchesWidthInsideMount);
@@ -886,74 +894,150 @@ const ZebraBlinds = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedWIDTH = (fractionWidth) => {
-    setselectedFractionsWidth(fractionWidth);
-    setselectedFractionVisibleWidth(false);
-    setselectedFractionWIDTH(fractionWidth);
+  const handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNT = (fractionHeightInsideMount) => {
+    setselectedFractionsHeightInsideMount(fractionHeightInsideMount);
+    setSelectedFractionVisibleHeightInsideMount(false);
+    setselectedFractionHeightInsideMount(fractionHeightInsideMount);
 
-    const scrollableDivFractions = scrollableDivRefFractions.current;
+    const scrollableDivFractionsHeightInsideMount = scrollableDivRefFractionsHeightInsideMount.current;
 
     setTimeout(() => {
-      const selectedFractionDiv = scrollableDivFractions.querySelector(`.${styles.selectedFraction}`);
+      const selectedFractionDivHeightInsideMount = scrollableDivFractionsHeightInsideMount.querySelector(`.${styles.selectedFraction}`);
 
-      if (selectedFractionDiv) {
-        const selectedFractionDivRect = selectedFractionDiv.getBoundingClientRect();
+      if (selectedFractionDivHeightInsideMount) {
+        const selectedFractionDivRectHeightInsideMount = selectedFractionDivHeightInsideMount.getBoundingClientRect();
         const scrollPosition =
-          selectedFractionDivRect.top +
-          scrollableDivFractions.scrollTopFractions -
-          (scrollableDivFractions.offsetHeightFractions - selectedFractionDivRect.height) / 2;
+          selectedFractionDivRectHeightInsideMount.top +
+          scrollableDivFractionsHeightInsideMount.scrollTopFractionsHeightInsideMount -
+          (scrollableDivFractionsHeightInsideMount.offsetHeightFractionsHeightInsideMount - selectedFractionDivRectHeightInsideMount.height) / 2;
 
-        scrollableDivFractions.scrollTopFractions = scrollPosition;
+        scrollableDivFractionsHeightInsideMount.scrollTopFractionsHeightInsideMount = scrollPosition;
       } else {
         console.warn("Selected fraction div not found in the scrollable div");
       }
     }, 0);
   };
-  const handleNewSpanClickFractionsWhenClickedWidth = () => {
-    setselectedFractionVisibleWidth((prev) => !prev);
+  const handleNewSpanClickFractionsWhenClickedHEIGHTINSIDEMOUNT = () => {
+    setSelectedFractionVisibleHeightInsideMount((prev) => !prev);
   };
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedHEIGHT = (fractionWidth) => {
-    setselectedFractionsHeight(fractionWidth);
-    setSelectedFractionVisibleHeight(false);
-    setselectedFractionHEIGHT(fractionWidth);
+  const handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNT = (fractionHeightOutsideMount) => {
+    setselectedFractionsHeightOutsideMount(fractionHeightOutsideMount);
+    setselectedFractionVisibleHeightOutsideMount(false);
+    setselectedFractionHeightOutsideMount(fractionHeightOutsideMount);
 
-    const scrollableDivFractions = scrollableDivRefFractions.current;
+    const scrollableDivFractionsHeightOutsideMount = scrollableDivRefFractionsHeightOutsideMount.current;
 
     setTimeout(() => {
-      const selectedFractionDiv = scrollableDivFractions.querySelector(`.${styles.selectedFraction}`);
+      const selectedFractionDivHeightOutsideMount = scrollableDivFractionsHeightOutsideMount.querySelector(`.${styles.selectedFraction}`);
 
-      if (selectedFractionDiv) {
-        const selectedFractionDivRect = selectedFractionDiv.getBoundingClientRect();
+      if (selectedFractionDivHeightOutsideMount) {
+        const selectedFractionDivRectHeightOutsideMount = selectedFractionDivHeightOutsideMount.getBoundingClientRect();
         const scrollPosition =
-          selectedFractionDivRect.top +
-          scrollableDivFractions.scrollTopFractions -
-          (scrollableDivFractions.offsetHeightFractions - selectedFractionDivRect.height) / 2;
+          selectedFractionDivRectHeightOutsideMount.top +
+          scrollableDivFractionsHeightOutsideMount.scrollTopFractionsHeightOutsideMount -
+          (scrollableDivFractionsHeightOutsideMount.offsetHeightFractionsHeightOutsideMount - selectedFractionDivRectHeightOutsideMount.height) / 2;
 
-        scrollableDivFractions.scrollTopFractions = scrollPosition;
+        scrollableDivFractionsHeightOutsideMount.scrollTopFractionsHeightOutsideMount = scrollPosition;
       } else {
         console.warn("Selected fraction div not found in the scrollable div");
       }
     }, 0);
   };
-  const handleNewSpanClickFractionsWhenClickedHEIGHT = () => {
-    setSelectedFractionVisibleHeight((prev) => !prev);
+  const handleNewSpanClickFractionsWhenClickedHEIGHTOUTSIDEMOUNT = () => {
+    setselectedFractionVisibleHeightOutsideMount((prev) => !prev);
   };
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const handleSelectedFractionhAndMatchToScrollerWIDTH = (rulerNumberWidthAndHeightInsideMount) => {
+
+  const handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNT = (fractionWidthWidthInsideMount) => {
+    setselectedFractionsWidthInsideMount(fractionWidthWidthInsideMount);
+    setselectedFractionVisibleWidthInsideMount(false);
+    setselectedFractionWidthInsideMount(fractionWidthWidthInsideMount);
+
+    const scrollableDivFractionsWidthInsideMount = scrollableDivRefFractionsWidthInsideMount.current;
+
+    setTimeout(() => {
+      const selectedFractionDivWidthInsideMount = scrollableDivFractionsWidthInsideMount.querySelector(`.${styles.selectedFraction}`);
+
+      if (selectedFractionDivWidthInsideMount) {
+        const selectedFractionDivRectWidthInsideMount = selectedFractionDivWidthInsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedFractionDivRectWidthInsideMount.top +
+          scrollableDivFractionsWidthInsideMount.scrollTopFractionsWidthInsideMount -
+          (scrollableDivFractionsWidthInsideMount.offsetHeightFractionsWidthInsideMount - selectedFractionDivRectWidthInsideMount.height) / 2;
+
+        scrollableDivFractionsWidthInsideMount.scrollTopFractionsWidthInsideMount = scrollPosition;
+      } else {
+        console.warn("Selected fraction div not found in the scrollable div");
+      }
+    }, 0);
+  };
+  const handleNewSpanClickFractionsWhenClickedWIDTHINSIDEMOUNT = () => {
+    setselectedFractionVisibleWidthInsideMount((prev) => !prev);
+  };
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  const handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNT = (fractionWidthOutsideMount) => {
+    setselectedFractionsWidthOutsideMount(fractionWidthOutsideMount);
+    setselectedFractionVisibleWidthOutsideMount(false);
+    setselectedFractionWidthOutsideMount(fractionWidthOutsideMount);
+
+    const scrollableDivFractionsWidthOutsideMount = scrollableDivRefFractionsWidthOutsideMount.current;
+
+    setTimeout(() => {
+      const selectedFractionDivWidthOutsideMount = scrollableDivFractionsWidthOutsideMount.querySelector(`.${styles.selectedFraction}`);
+
+      if (selectedFractionDivWidthOutsideMount) {
+        const selectedFractionDivRectWidthOutsideMount = selectedFractionDivWidthOutsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedFractionDivRectWidthOutsideMount.top +
+          scrollableDivFractionsWidthOutsideMount.scrollTopFractionsWidthOutsideMount -
+          (scrollableDivFractionsWidthOutsideMount.offsetHeightFractionsWidthOutsideMount - selectedFractionDivRectWidthOutsideMount.height) / 2;
+
+        scrollableDivFractionsWidthOutsideMount.scrollTopFractionsWidthOutsideMount = scrollPosition;
+      } else {
+        console.warn("Selected fraction div not found in the scrollable div");
+      }
+    }, 0);
+  };
+  const handleNewSpanClickFractionsWhenClickedWIDTHOUTSIDEMOUNT = () => {
+    setselectedFractionVisibleWidthOutsideMount((prev) => !prev);
+  };
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  const handleSelectedFractionhAndMatchToScrollerWIDTHINSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
     setselectedRulerNumberFractionWIDTH(rulerNumberWidthAndHeightInsideMount);
   };
-  const handleSelectedFractionhAndMatchToScrollerHEIGHT = (rulerNumberWidthAndHeightInsideMount) => {
+
+
+  const handleSelectedFractionhAndMatchToScrollerHEIGHTINSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
+    setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
+  };
+
+  const handleSelectedFractionhAndMatchToScrollerWIDTHOUTSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
+    setselectedRulerNumberFractionWIDTH(rulerNumberWidthAndHeightInsideMount);
+  };
+
+
+  const handleSelectedFractionhAndMatchToScrollerHEIGHTOUTSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
     setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
   };
 
@@ -1407,24 +1491,24 @@ const ZebraBlinds = () => {
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
 
-                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
-                                          {selectedFractionVisibleWidth ? (
+                                        <div ref={scrollableDivRefFractionsWidthInsideMount} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleWidthInsideMount ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthWidthInsideMount, index) => (
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                  className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNT(fractionWidthWidthInsideMount)}
+                                                  className={selectedFractionsWidthInsideMount === fractionWidthWidthInsideMount ? styles.selectedFraction : ''}
                                                 >
-                                                  {fractionWidth}
+                                                  {fractionWidthWidthInsideMount}
                                                 </div>
                                               ))}
                                             </span>
 
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                              {selectedFractionsWidth}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWIDTHINSIDEMOUNT}>
+                                              {selectedFractionsWidthInsideMount}
                                             </span>
                                           )}
                                         </div>
@@ -1467,7 +1551,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1484,7 +1568,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1501,7 +1585,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1518,7 +1602,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1535,7 +1619,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1552,7 +1636,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1569,7 +1653,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1586,7 +1670,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1603,7 +1687,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1620,7 +1704,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1637,7 +1721,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1654,7 +1738,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1671,7 +1755,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1688,7 +1772,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1705,7 +1789,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1749,8 +1833,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Width Inside Mount: {selectedInchWidthInsideMount} - {selectedFractionWIDTH}
-                                    {selectedFractionWIDTH && " Inches Long"}
+                                    Window Width Inside Mount: {selectedInchWidthInsideMount} - {selectedFractionWidthInsideMount}
+                                    {selectedFractionWidthInsideMount && " Inches Long"}
                                   </div>
 
                                 </div>
@@ -1814,15 +1898,15 @@ const ZebraBlinds = () => {
                                         <p>FRACTIONS HEIGHT INSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
-                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
-                                          {selectedFractionVisibleHeight ? (
+                                        <div ref={scrollableDivRefFractionsHeightInsideMount} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleHeightInsideMount ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
-                                                  className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNT(fractionHeight)}
+                                                  className={selectedFractionsHeightInsideMount === fractionHeight ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionHeight}
                                                 </div>
@@ -1830,8 +1914,8 @@ const ZebraBlinds = () => {
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
-                                              {selectedFractionsHeight}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHTINSIDEMOUNT}>
+                                              {selectedFractionsHeightInsideMount}
                                             </span>
                                           )}
                                         </div>
@@ -1878,7 +1962,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1899,7 +1983,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1920,7 +2004,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1941,7 +2025,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1962,7 +2046,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -1984,7 +2068,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2006,7 +2090,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2027,7 +2111,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2048,7 +2132,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2070,7 +2154,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2092,7 +2176,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2113,7 +2197,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2134,7 +2218,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2156,7 +2240,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2178,7 +2262,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2227,8 +2311,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Height Inside Mount: {selectedInchHeightInsideMount} - {selectedFractionHEIGHT}
-                                    {selectedFractionHEIGHT && " Inches High"}
+                                    Window Height Inside Mount: {selectedInchHeightInsideMount} - {selectedFractionHeightInsideMount}
+                                    {selectedFractionHeightInsideMount && " Inches High"}
                                   </div>
 
                                 </div>
@@ -2402,23 +2486,23 @@ const ZebraBlinds = () => {
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
 
-                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
-                                          {selectedFractionVisibleWidth ? (
+                                        <div ref={scrollableDivRefFractionsWidthOutsideMount} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleWidthOutsideMount ? (
                                             <span className={styles.span_visibility_1}>
-                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidth, index) => (
+                                              {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthOutsideMount, index) => (
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTH(fractionWidth)}
-                                                  className={selectedFractionsWidth === fractionWidth ? styles.selectedFraction : ''}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNT(fractionWidthOutsideMount)}
+                                                  className={selectedFractionsWidthOutsideMount === fractionWidthOutsideMount ? styles.selectedFraction : ''}
                                                 >
-                                                  {fractionWidth}
+                                                  {fractionWidthOutsideMount}
                                                 </div>
                                               ))}
                                             </span>
 
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWidth}>
-                                              {selectedFractionsWidth}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedWIDTHOUTSIDEMOUNT}>
+                                              {selectedFractionsWidthOutsideMount}
                                             </span>
                                           )}
                                         </div>
@@ -2460,7 +2544,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2477,7 +2561,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2495,7 +2579,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2515,7 +2599,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2536,7 +2620,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2558,7 +2642,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2580,7 +2664,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2601,7 +2685,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2621,7 +2705,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2638,7 +2722,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2656,7 +2740,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2673,7 +2757,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2690,7 +2774,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2707,7 +2791,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2724,7 +2808,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerWIDTH(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionWIDTH === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionWidthOutsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2767,8 +2851,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Width Outside Mount: {selectedInchWidthOutsideMount} - {selectedFractionWIDTH}
-                                    {selectedFractionWIDTH && " Inches Long"}
+                                    Window Width Outside Mount: {selectedInchWidthOutsideMount} - {selectedFractionWidthOutsideMount}
+                                    {selectedFractionWidthOutsideMount && " Inches Long"}
                                   </div>
 
                                 </div>
@@ -2839,22 +2923,22 @@ const ZebraBlinds = () => {
                                         <p>FRACTIONS HEIGHT OUTSIDE MOUNT</p>
                                       </div>
                                       <div className={styles.fractions_scroller_wrapper}>
-                                        <div ref={scrollableDivRefFractions} className={styles.fractions_scroller_div}>
-                                          {selectedFractionVisibleHeight ? (
+                                        <div ref={scrollableDivRefFractionsHeightOutsideMount} className={styles.fractions_scroller_div}>
+                                          {selectedFractionVisibleHeightOutsideMount ? (
                                             <span className={styles.span_visibility_1}>
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHT(fractionHeight)}
-                                                  className={selectedFractionsHeight === fractionHeight ? styles.selectedFraction : ''}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNT(fractionHeight)}
+                                                  className={selectedFractionsHeightOutsideMount === fractionHeight ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionHeight}
                                                 </div>
                                               ))}
                                             </span>
                                           ) : (
-                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHT}>
-                                              {selectedFractionsHeight}
+                                            <span className={styles._scroller_div_span} onClick={handleNewSpanClickFractionsWhenClickedHEIGHTOUTSIDEMOUNT}>
+                                              {selectedFractionsHeightOutsideMount}
                                             </span>
                                           )}
                                         </div>
@@ -2899,7 +2983,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2919,7 +3003,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2936,7 +3020,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2953,7 +3037,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2970,7 +3054,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -2987,7 +3071,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3004,7 +3088,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3021,7 +3105,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3041,7 +3125,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3062,7 +3146,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3083,7 +3167,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3106,7 +3190,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3128,7 +3212,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3150,7 +3234,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3173,7 +3257,7 @@ const ZebraBlinds = () => {
                                                   <div
                                                     key={index}
                                                     onClick={() => handleSelectedFractionhAndMatchToScrollerHEIGHT(rulerNumberWidthAndHeightInsideMount)}
-                                                    className={selectedFractionHEIGHT === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
+                                                    className={selectedFractionsHeightInsideMount === rulerNumberWidthAndHeightInsideMount ? styles.selected_ruler_number_FRACTION : ''}
                                                   >
                                                     {rulerNumberWidthAndHeightInsideMount}
                                                   </div>
@@ -3216,8 +3300,8 @@ const ZebraBlinds = () => {
                                   </div>
 
                                   <div className={styles.selected_width_answer_top}>
-                                    Window Height Outside Mount: {selectedInchHeightOutsideMount} - {selectedFractionHEIGHT}
-                                    {selectedFractionHEIGHT && " Inches High"}
+                                    Window Height Outside Mount: {selectedInchHeightOutsideMount} - {selectedFractionHeightOutsideMount}
+                                    {selectedFractionHeightOutsideMount && " Inches High"}
                                   </div>
 
                                 </div>
@@ -3764,23 +3848,24 @@ const ZebraBlinds = () => {
                       <div className={styles.answers_answers}>
 
                         <div>
-                          Width: {selectedInchesWidthInsideMount} - {selectedFractionsWidth}
-                          {selectedFractionsWidth && " Inches Long"}
+                          Width: {selectedInchesWidthInsideMount} - {selectedFractionsWidthInsideMount}
+                          {selectedFractionsWidthInsideMount && " Inches Long"}
                         </div>
 
                         <div>
-                          Width: {selectedInchesWidthOutsideMount} - {selectedFractionsWidth}
-                          {selectedFractionsWidth && " Inches Long"}
+                          Height: {selectedInchesHeightInsideMount} - {selectedFractionsHeightInsideMount}
+                          {selectedFractionsHeightInsideMount && " Inches High"}
+                        </div>
+
+
+                        <div>
+                          Width: {selectedInchesWidthOutsideMount} - {selectedFractionsWidthOutsideMount}
+                          {selectedFractionsWidthOutsideMount && " Inches Long"}
                         </div>
 
                         <div>
-                          Height: {selectedInchesHeightInsideMount} - {selectedFractionsHeight}
-                          {selectedFractionsHeight && " Inches High"}
-                        </div>
-
-                        <div>
-                          Height: {selectedInchesHeightOutsideMount} - {selectedFractionsHeight}
-                          {selectedFractionsHeight && " Inches High"}
+                          Height: {selectedInchesHeightOutsideMount} - {selectedFractionsHeightOutsideMount}
+                          {selectedFractionsHeightOutsideMount && " Inches High"}
                         </div>
 
                       </div>
