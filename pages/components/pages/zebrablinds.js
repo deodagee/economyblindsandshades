@@ -160,6 +160,7 @@ const ZebraBlinds = () => {
       setactive_wand_right_choice_rendering_content(false);
 
     } else if (ellipseNumber === 3) {
+      setactive_wand_cordless_motorized(1);
       setactive_wand_cordless_motorized(3);
       setactive_wand_left_choice(null);
       setactive_wand_right_choice(null);
@@ -169,7 +170,7 @@ const ZebraBlinds = () => {
 
 
     } else if (ellipseNumber === 4) {
-      setactive_wand_cordless_motorized(null);
+      setactive_wand_cordless_motorized(1);
       setactive_wand_left_choice(4);
       setactive_wand_right_choice(null);
       setactive_wand_cordless_motorizedRenderingContent('wand');
@@ -179,7 +180,6 @@ const ZebraBlinds = () => {
       setShowImageright(false);
 
     } else if (ellipseNumber === 5) {
-      setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(null);
       setactive_wand_right_choice(5);
       setactive_wand_cordless_motorizedRenderingContent('wand');
@@ -189,7 +189,6 @@ const ZebraBlinds = () => {
       setShowImageright(true);
     } else {
       // Reset all states if any other ellipse is selected
-      setactive_wand_cordless_motorized(null);
       setactive_wand_left_choice(null);
       setactive_wand_right_choice(null);
       setactive_wand_cordless_motorizedRenderingContent(null);
