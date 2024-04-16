@@ -796,11 +796,27 @@ const ZebraBlinds = () => {
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
   const handleScrolledInchesWhenClickedHeightOutsideMount = (inchesHeightOutsideMount) => {
-    setselectedInchesHeightInsideMount(inchesHeightOutsideMount);
+    setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
+    setselectedInchesVisibleHeightOutsideMount(false);
 
+    const scrollableDivHeightOutsideMount= scrollableDivRefHeightOutsideMount.current;
+
+    setTimeout(() => {
+      const selectedInchesDivHeightOutsideMount = scrollableDivHeightOutsideMount.querySelector(`.${styles.selectedInch}`);
+
+      if (selectedInchesDivHeightOutsideMount) {
+        const selectedInchesDivRectHeightOutsideMount = selectedInchesDivHeightOutsideMount.getBoundingClientRect();
+        const scrollPosition =
+          selectedInchesDivRectHeightOutsideMount.top +
+          scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount -
+          (scrollableDivHeightOutsideMount.offsetHeightOutsideMount - selectedInchesDivRectHeightOutsideMount.height) / 2;
+
+        scrollableDivHeightOutsideMount.scrollTopHeightOutsideMount = scrollPosition;
+      } else {
+        console.warn("Selected inch div not found in the scrollable div");
+      }
+    }, 0);
 
     if (inchesHeightOutsideMount % 5 === 0) {
       // Log when a multiple of 5 is clicked
@@ -821,10 +837,10 @@ const ZebraBlinds = () => {
         prevInchHeightOutsideMount--;
       }
 
-      const nearestMultipleOf5PriceinchesHeightOutsideMount = inchPricesAfterHeightOutsideMount[prevInchHeightOutsideMount];
-      setnewSetPriceInchesHeightOutsideMount(nearestMultipleOf5PriceinchesHeightOutsideMount !== undefined ? nearestMultipleOf5PriceinchesHeightOutsideMount : "");
+      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMount[prevInchHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMount(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
 
-      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceinchesHeightOutsideMount);
+      console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightOutsideMount);
       let nextInchHeightOutsideMount = prevInchHeightOutsideMount + 1;
       while (nextInchHeightOutsideMount < inchesHeightOutsideMount) {
         nextInchHeightOutsideMount++;
@@ -839,6 +855,9 @@ const ZebraBlinds = () => {
   const handleNewSpanClickedHeightOutsideMount = () => {
     setselectedInchesVisibleHeightOutsideMount((prev) => !prev);
   };
+
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   const handleSelectedInchAndMatchToScrollerWidthInsideMount = (rulerNumberWidthInsideMount) => {
