@@ -898,14 +898,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 600;
   margin-bottom: 20px;
   white-space: nowrap;
   background-color: rgb(238, 238, 238);
   padding: 5px;
   gap: 10px;
-  width: 60px;
+  width: max-content;
   transition: 0.3s;
   border-radius: 0.35rem;
 }
