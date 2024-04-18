@@ -1121,6 +1121,15 @@ const ZebraBlinds = () => {
     }
   };
 
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // Function to calculate sum of prices
+  const calculateSumTotal = () => {
+    const priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMount) || 0;
+    const priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]) || 0;
+    return priceHeightInsideMount + priceWidthInsideMount;
+  };
+
 
   return (
 
@@ -1845,13 +1854,11 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
 
-
                                   <h1>
-                                    Price Height Outside Mount: ($)                     <h1>
-                                      ${newSetPriceInchesHeightInsideMount !== undefined
-                                        ? newSetPriceInchesHeightInsideMount
-                                        : "no price set"}
-                                    </h1>
+                                    Price Height Inside Mount: ($)
+                                    {newSetPriceInchesHeightInsideMount !== undefined
+                                      ? newSetPriceInchesHeightInsideMount
+                                      : "no price set"}
                                   </h1>
 
                                 </div>
@@ -2312,6 +2319,11 @@ const ZebraBlinds = () => {
                                   <div className={styles.selected_width_answer_top}>
                                     Window Height Inside Mount: {selectedInchHeightInsideMount} - {selectedFractionHeightInsideMount}
                                     {selectedFractionHeightInsideMount && " Inches High"}
+                                  </div>
+
+
+                                  <div>
+                                    Sum Total: ${calculateSumTotal()}
                                   </div>
 
                                 </div>
@@ -3924,7 +3936,6 @@ const ZebraBlinds = () => {
                         </div>
                         <div>
                           {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-
                         </div>
                       </div>
                     </div>
@@ -4081,8 +4092,9 @@ const ZebraBlinds = () => {
                   </div>
 
                 </div>
-
               </div>
+
+
             </span>
 
           </ol>
