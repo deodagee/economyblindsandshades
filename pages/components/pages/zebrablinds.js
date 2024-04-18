@@ -632,7 +632,7 @@ const ZebraBlinds = () => {
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
 
-  
+
 
   const [activeDimensionsinsideMount, setActiveDimensionsinsideMount] = useState("insideMount");
   const [activeDimensionsoutsideMount, setActiveDimensionsoutsideMount] = useState("outsideMount");
@@ -1045,6 +1045,15 @@ const ZebraBlinds = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  // Function to calculate sum of prices
+  const calculateSumTotal = () => {
+    const priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMount) || 0;
+    const priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]) || 0;
+    return priceHeightInsideMount + priceWidthInsideMount;
+  };
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
 
   const [futureDate, setFutureDate] = useState(null);
 
@@ -1086,6 +1095,10 @@ const ZebraBlinds = () => {
 
     []);
 
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   const handleAddToCart = async () => {
     await fetchLatestData();
 
@@ -1125,13 +1138,6 @@ const ZebraBlinds = () => {
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-
-  // Function to calculate sum of prices
-  const calculateSumTotal = () => {
-    const priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMount) || 0;
-    const priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]) || 0;
-    return priceHeightInsideMount + priceWidthInsideMount;
-  };
 
 
 
@@ -2324,17 +2330,50 @@ const ZebraBlinds = () => {
                                     Window Height Inside Mount: {selectedInchHeightInsideMount} - {selectedFractionHeightInsideMount}
                                     {selectedFractionHeightInsideMount && " Inches High"}
                                   </div>
-
-
-                                  <div>
-                                    Sum Total: ${calculateSumTotal()}
-                                  </div>
-
                                 </div>
                               </div>
                             </div>
-                          </div>
 
+
+                            <div className={styles.sum_total_and_tag}>
+                              <div className={styles.sum_total}>
+                                ${calculateSumTotal().toFixed(2)}
+                              </div>
+                              <div className={styles.sum_total_tag_1}>
+                                For size:
+                                {activeDimensionsinsideMount === "insideMount" && (
+                                  <>
+                                    <div>
+                                      {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                      {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                    </div>
+                                    <p>X</p>
+                                    <div>
+                                      {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                      {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                    </div>
+                                  </>
+                                )}
+
+                                {activeDimensionsoutsideMount === "outsideMount" && (
+                                  <>
+                                    <div>
+                                      {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                      {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                    </div>
+                                    X
+                                    <div>
+                                      {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                      {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                    </div>
+                                  </>
+                                )}
+                              </div>
+
+                            </div>
+
+
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4101,7 +4140,6 @@ const ZebraBlinds = () => {
 
                   <div className={styles.shipping_tagger_prt2}>
                     <div className={styles.qty_1}>Qty 1</div>
-                    <div className={styles.total_price}>TOTAL:$ {totalpricecalculated}</div>
                   </div>
 
                 </div>
