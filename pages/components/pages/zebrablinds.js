@@ -631,6 +631,16 @@ const ZebraBlinds = () => {
   };
 
   //////// /////////////////////////////////// ////////////// /////////////////////////// /////////////////
+
+  
+
+  const [activeDimensionsinsideMount, setActiveDimensionsinsideMount] = useState("insideMount");
+  const [activeDimensionsoutsideMount, setActiveDimensionsoutsideMount] = useState("outsideMount");
+
+
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+
   const [selectedRulerNumberInchWidthInsideMount, setselectedRulerNumberInchWidthInsideMount] = useState(null);
   const [selectedRulerNumberInchHeightInsideMount, setselectedRulerNumberInchHeightInsideMount] = useState(null);
 
@@ -687,6 +697,8 @@ const ZebraBlinds = () => {
     setselectedInchesWidthInsideMount(inchesWidthInsideMount);
     setselectedInchesVisibleWidthInsideMount(false);
     setselectedInchWidthInsideMount(inchesWidthInsideMount);
+    setActiveDimensionsinsideMount("insideMount");
+    setActiveDimensionsoutsideMount("");
 
     const scrollableDivWidthInsideMount = scrollableDivRefWidthInsideMount.current;
 
@@ -715,6 +727,8 @@ const ZebraBlinds = () => {
     setselectedInchesHeightInsideMount(inchesHeightInsideMount);
     setselectedInchesVisibleHeightInsideMount(false);
     setselectedInchHeightInsideMount(inchesHeightInsideMount);
+    setActiveDimensionsinsideMount("insideMount");
+    setActiveDimensionsoutsideMount("");
 
     const scrollableDivHeightInsideMount = scrollableDivRefHeightInsideMount.current;
 
@@ -779,6 +793,8 @@ const ZebraBlinds = () => {
     setselectedInchesWidthOutsideMount(inchesWidthOutsideMount);
     setselectedInchesVisibleWidthOutsideMount(false);
     setselectedInchWidthOutsideMount(inchesWidthOutsideMount);
+    setActiveDimensionsinsideMount(""); // Reset the insideMount active dimension
+    setActiveDimensionsoutsideMount("outsideMount");
 
     const scrollableDivWidthOutsideMount = scrollableDivRefWidthOutsideMount.current;
 
@@ -809,6 +825,8 @@ const ZebraBlinds = () => {
     setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
     setselectedInchesVisibleHeightOutsideMount(false);
     setselectedInchHeightOutsideMount(inchesHeightOutsideMount);
+    setActiveDimensionsinsideMount(""); // Reset the insideMount active dimension
+    setActiveDimensionsoutsideMount("outsideMount");
 
     const scrollableDivHeightOutsideMount = scrollableDivRefHeightOutsideMount.current;
 
@@ -901,6 +919,8 @@ const ZebraBlinds = () => {
     setselectedFractionsHeightInsideMount(fractionHeightInsideMount);
     setSelectedFractionVisibleHeightInsideMount(false);
     setselectedFractionHeightInsideMount(fractionHeightInsideMount);
+    setActiveDimensionsinsideMount("insideMount");
+    setActiveDimensionsoutsideMount("");
 
     const scrollableDivFractionsHeightInsideMount = scrollableDivRefFractionsHeightInsideMount.current;
 
@@ -932,6 +952,8 @@ const ZebraBlinds = () => {
     setselectedFractionsHeightOutsideMount(fractionHeightOutsideMount);
     setselectedFractionVisibleHeightOutsideMount(false);
     setselectedFractionHeightOutsideMount(fractionHeightOutsideMount);
+    setActiveDimensionsinsideMount(""); // Reset the insideMount active dimension
+    setActiveDimensionsoutsideMount("outsideMount");
 
     const scrollableDivFractionsHeightOutsideMount = scrollableDivRefFractionsHeightOutsideMount.current;
 
@@ -963,6 +985,8 @@ const ZebraBlinds = () => {
     setselectedFractionsWidthInsideMount(fractionWidthWidthInsideMount);
     setselectedFractionVisibleWidthInsideMount(false);
     setselectedFractionWidthInsideMount(fractionWidthWidthInsideMount);
+    setActiveDimensionsinsideMount("insideMount");
+    setActiveDimensionsoutsideMount("");
 
     const scrollableDivFractionsWidthInsideMount = scrollableDivRefFractionsWidthInsideMount.current;
 
@@ -994,6 +1018,8 @@ const ZebraBlinds = () => {
     setselectedFractionsWidthOutsideMount(fractionWidthOutsideMount);
     setselectedFractionVisibleWidthOutsideMount(false);
     setselectedFractionWidthOutsideMount(fractionWidthOutsideMount);
+    setActiveDimensionsinsideMount(""); // Reset the insideMount active dimension
+    setActiveDimensionsoutsideMount("outsideMount");
 
     const scrollableDivFractionsWidthOutsideMount = scrollableDivRefFractionsWidthOutsideMount.current;
 
@@ -1015,29 +1041,6 @@ const ZebraBlinds = () => {
   };
   const handleNewSpanClickFractionsWhenClickedWIDTHOUTSIDEMOUNT = () => {
     setselectedFractionVisibleWidthOutsideMount((prev) => !prev);
-  };
-
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-  const handleSelectedFractionhAndMatchToScrollerWIDTHINSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberFractionWIDTH(rulerNumberWidthAndHeightInsideMount);
-  };
-
-
-  const handleSelectedFractionhAndMatchToScrollerHEIGHTINSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
-  };
-
-  const handleSelectedFractionhAndMatchToScrollerWIDTHOUTSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberFractionWIDTH(rulerNumberWidthAndHeightInsideMount);
-  };
-
-
-  const handleSelectedFractionhAndMatchToScrollerHEIGHTOUTSIDEMOUNT = (rulerNumberWidthAndHeightInsideMount) => {
-    setselectedRulerNumberFractionHEIGHT(rulerNumberWidthAndHeightInsideMount);
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1129,6 +1132,7 @@ const ZebraBlinds = () => {
     const priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]) || 0;
     return priceHeightInsideMount + priceWidthInsideMount;
   };
+
 
 
   return (
@@ -3857,29 +3861,38 @@ const ZebraBlinds = () => {
                       <div className={styles.width2_answer}>Window Size:</div>
 
                       <div className={styles.answers_answers}>
+                        {activeDimensionsinsideMount === "insideMount" && (
+                          <>
+                            <div>
+                              Width:
+                              {selectedInchesWidthInsideMount ? ` ${selectedInchesWidthInsideMount}` : ""}
+                              {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}` : ""}
+                            </div>
+                            <div>
+                              Height:
+                              {selectedInchesHeightInsideMount ? ` ${selectedInchesHeightInsideMount}` : ""}
+                              {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}` : ""}
+                            </div>
+                          </>
+                        )}
 
-                        <div>
-                          Width: {selectedInchesWidthInsideMount} - {selectedFractionsWidthInsideMount}
-                          {selectedFractionsWidthInsideMount && " Inches Long"}
-                        </div>
-
-                        <div>
-                          Height: {selectedInchesHeightInsideMount} - {selectedFractionsHeightInsideMount}
-                          {selectedFractionsHeightInsideMount && " Inches High"}
-                        </div>
-
-
-                        <div>
-                          Width: {selectedInchesWidthOutsideMount} - {selectedFractionsWidthOutsideMount}
-                          {selectedFractionsWidthOutsideMount && " Inches Long"}
-                        </div>
-
-                        <div>
-                          Height: {selectedInchesHeightOutsideMount} - {selectedFractionsHeightOutsideMount}
-                          {selectedFractionsHeightOutsideMount && " Inches High"}
-                        </div>
-
+                        {activeDimensionsoutsideMount === "outsideMount" && (
+                          <>
+                            <div>
+                              Width:
+                              {selectedInchesWidthOutsideMount ? ` ${selectedInchesWidthOutsideMount}` : ""}
+                              {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}` : ""}
+                            </div>
+                            <div>
+                              Height:
+                              {selectedInchesHeightOutsideMount ? ` ${selectedInchesHeightOutsideMount}` : ""}
+                              {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}` : ""}
+                            </div>
+                          </>
+                        )}
                       </div>
+
+
                     </div>
 
                     <span
