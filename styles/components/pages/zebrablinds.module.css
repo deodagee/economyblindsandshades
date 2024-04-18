@@ -299,9 +299,9 @@
 }
 
 
-.select_cassette_head_rail_whole_wrapper, 
-.inside_mount_and_outside_mount_whole_wrapper, 
-.select_color_group_whole_wrapper, 
+.select_cassette_head_rail_whole_wrapper,
+.inside_mount_and_outside_mount_whole_wrapper,
+.select_color_group_whole_wrapper,
 .select_lift_type_group_whole_wrapper {
   display: flex;
   flex-direction: column;
@@ -422,7 +422,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  background-color: white;
   padding: 20px;
 }
 
@@ -1299,6 +1298,8 @@
 
 
 
+
+
 .selected_height_answer_top {
   width: 100px;
   height: 30px;
@@ -1321,7 +1322,35 @@
 }
 
 
+.sum_total_and_tag {
+  margin: 20px;
+  width: 55vw;
+  background-color: rgb(76, 76, 76);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
+}
 
+.sum_total {
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  margin: 5px;
+  font-weight: 700;
+  font-size: 45px;
+  color: green;
+  padding: 5px;
+}
+
+.sum_total_tag_1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 12px;
+
+  gap: 5px;
+  color: rgb(205, 205, 205);
+}
 
 
 .toggle_disclaimer_inches_inside_mount_width {
@@ -3117,9 +3146,9 @@
     display: none;
   }
 
-  .select_cassette_head_rail_whole_wrapper, 
-  .inside_mount_and_outside_mount_whole_wrapper, 
-  .select_color_group_whole_wrapper, 
+  .select_cassette_head_rail_whole_wrapper,
+  .inside_mount_and_outside_mount_whole_wrapper,
+  .select_color_group_whole_wrapper,
   .select_lift_type_group_whole_wrapper {
     display: flex;
     flex-direction: column;
@@ -3197,7 +3226,7 @@
     box-shadow: rgb(191, 191, 191) 1px 2px 2px;
     transition: 0.3s;
   }
-  
+
 
   .select_chain_option1_ellipse_and_options,
   .select_chain_option2_ellipse_and_options,
