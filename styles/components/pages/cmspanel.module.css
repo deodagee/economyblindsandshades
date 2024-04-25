@@ -80,6 +80,26 @@
     transition: 0.2s;
 }
 
+
+.save_button2 {
+    margin-top: 5px;
+    width: max-content;
+    height: max-content;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    font-size: 10px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.45rem;
+    border-width: 2px;
+    border-color: orange;
+    transition: 0.2s;
+}
+
 .save_button:hover {
     transform: scale(1.02);
     background-color: hsl(0, 0%, 95%);
