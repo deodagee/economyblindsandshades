@@ -1098,6 +1098,21 @@ const ZebraBlinds = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  const [isCartVisible, setIsCartVisible] = useState(false);
+
+
+
+  const cartRef = useRef(null);
+
+  const handleSeeCartClick = () => {
+    if (cartRef.current) {
+      cartRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
+
+
 
   const handleAddToCart = async () => {
     await fetchLatestData();
@@ -1819,7 +1834,7 @@ const ZebraBlinds = () => {
                                               <span className={styles.line_0}></span>
                                               <div className={styles.ruler_line_number_inches}>
                                                 {[selectedInchHeightInsideMount].map((selectedInchHeightInsideMount, index) => {
-                                                  const yourArrayOfNumbers = [ "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120"];
+                                                  const yourArrayOfNumbers = ["24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120"];
                                                   const nextNumberIndex = yourArrayOfNumbers.indexOf(selectedInchHeightInsideMount) + 1;
                                                   const nextNumber = yourArrayOfNumbers[nextNumberIndex];
 
@@ -2334,42 +2349,45 @@ const ZebraBlinds = () => {
                               </div>
                             </div>
 
+                            <div className={styles.sum_total_and_tag_wrapper}>
+                              <div className={styles.sum_total_and_tag}>
+                                <div className={styles.sum_total}>
+                                  ${calculateSumTotal().toFixed(2)}
+                                </div>
+                                <div className={styles.sum_total_tag_1}>
+                                  For size:
+                                  {activeDimensionsinsideMount === "insideMount" && (
+                                    <>
+                                      <div>
+                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                      </div>
+                                      <p>X</p>
+                                      <div>
+                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                      </div>
+                                    </>
+                                  )}
 
-                            <div className={styles.sum_total_and_tag}>
-                              <div className={styles.sum_total}>
-                                ${calculateSumTotal().toFixed(2)}
+                                  {activeDimensionsoutsideMount === "outsideMount" && (
+                                    <>
+                                      <div>
+                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                      </div>
+                                      X
+                                      <div>
+                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                      </div>
+                                    </>
+                                  )}
+                                </div>
+                                <div className={styles.see_cart} onClick={handleSeeCartClick}>
+                                  <p>See Cart</p>
+                                </div>
                               </div>
-                              <div className={styles.sum_total_tag_1}>
-                                For size:
-                                {activeDimensionsinsideMount === "insideMount" && (
-                                  <>
-                                    <div>
-                                      {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                      {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                    </div>
-                                    <p>X</p>
-                                    <div>
-                                      {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                      {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                    </div>
-                                  </>
-                                )}
-
-                                {activeDimensionsoutsideMount === "outsideMount" && (
-                                  <>
-                                    <div>
-                                      {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                      {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                    </div>
-                                    X
-                                    <div>
-                                      {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                      {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                    </div>
-                                  </>
-                                )}
-                              </div>
-
                             </div>
 
 
@@ -3371,45 +3389,57 @@ const ZebraBlinds = () => {
 
                             </div>
 
-                            <div className={styles.sum_total_and_tag}>
 
-                              <div className={styles.sum_total}>
-                                ${calculateSumTotal().toFixed(2)}
+                            <div className={styles.sum_total_and_tag_wrapper}>
+
+
+                              <div className={styles.sum_total_and_tag}>
+
+                                <div className={styles.sum_total}>
+                                  ${calculateSumTotal().toFixed(2)}
+                                </div>
+
+                                <div className={styles.sum_total_tag_1}>
+                                  For size:
+
+                                  {activeDimensionsinsideMount === "insideMount" && (
+                                    <>
+                                      <div>
+                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                      </div>
+                                      <p>X</p>
+                                      <div>
+                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                      </div>
+                                    </>
+                                  )}
+
+                                  {activeDimensionsoutsideMount === "outsideMount" && (
+                                    <>
+                                      <div>
+                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                      </div>
+                                      X
+                                      <div>
+                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                      </div>
+                                    </>
+                                  )}
+
+
+                                </div>
+                                <div className={styles.see_cart} onClick={handleSeeCartClick}>
+                                  <p>See Cart</p>
+                                </div>
+
                               </div>
-
-                              <div className={styles.sum_total_tag_1}>
-                                For size:
-
-                                {activeDimensionsinsideMount === "insideMount" && (
-                                  <>
-                                    <div>
-                                      {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                      {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                    </div>
-                                    <p>X</p>
-                                    <div>
-                                      {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                      {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                    </div>
-                                  </>
-                                )}
-
-                                {activeDimensionsoutsideMount === "outsideMount" && (
-                                  <>
-                                    <div>
-                                      {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                      {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                    </div>
-                                    X
-                                    <div>
-                                      {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                      {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                    </div>
-                                  </>
-                                )}
-                              </div>
-
                             </div>
+
+
                           </div>
 
                         </div>
@@ -3897,7 +3927,7 @@ const ZebraBlinds = () => {
 
               </div>
 
-              <div className={styles.quantity_and_add_to_cart_group}>
+              <div className={styles.quantity_and_add_to_cart_group} ref={cartRef}>
 
                 <div className={styles.review_your_order_seperator_line3}></div>
                 <div className={styles.review_your_order}>Review Your Blind Selection</div>
