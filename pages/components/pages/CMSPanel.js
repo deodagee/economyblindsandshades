@@ -623,9 +623,16 @@ const CMSPanel = () => {
                     Price Before
                   </div>
 
+
                   <div className={styles.show_price_ruler_number_green}>
                     <h1></h1>
                   </div>
+
+
+                  <button id="save_button" className={styles.save_button2} onClick={handleSaveOptions}>
+                    Save
+                  </button>
+
 
                 </div>
 
@@ -682,6 +689,10 @@ const CMSPanel = () => {
                         : ""}
                     </h1>
                   </div>
+
+                  <button id="save_button" className={styles.save_button2} onClick={handleSaveOptions}>
+                    Save
+                  </button>
 
                 </div>
               </div>
@@ -757,6 +768,10 @@ const CMSPanel = () => {
                     <h1></h1>
                   </div>
 
+                  <button id="save_button" className={styles.save_button2} onClick={handleSaveOptions}>
+                    Save
+                  </button>
+
                 </div>
 
                 <div className={`${styles.cms_panel_section_ruler_numbers} ${styles.local_root}`}>
@@ -813,6 +828,10 @@ const CMSPanel = () => {
                         : ""}
                     </h1>
                   </div>
+
+                  <button id="save_button" className={styles.save_button2} onClick={handleSaveOptions}>
+                    Save
+                  </button>
 
                 </div>
               </div>
