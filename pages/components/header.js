@@ -25,6 +25,8 @@ function HeaderPiece() {
     menu3: false,
     menu4: false,
     menu5: false,
+    menu6: false,
+
   });
 
 
@@ -56,6 +58,7 @@ function HeaderPiece() {
           menu3: false,
           menu4: false,
           menu5: false,
+          menu6: false,
         });
       }
     };
@@ -187,6 +190,12 @@ function HeaderPiece() {
                           <Link href={"/"}>
                             <p className={styles.side_menu_item}>HoneyComb Blinds</p>
                           </Link>
+
+                          
+                          <Link href={"/"}>
+                            <p className={styles.side_menu_item}>No Drill Type</p>
+                          </Link>
+
 
 
                         </div>
@@ -409,6 +418,43 @@ function HeaderPiece() {
                       )}
                     </div>
                   </button>
+
+                  
+                  <button
+                    className={styles.second_menu_bar_item}
+                    onMouseEnter={() => handleMouseEnter('menu6')}
+                    onMouseLeave={() => handleMouseLeave('menu6')}
+                  >
+                    <div className={styles.tag_and_chevron}>
+                      <li>No Drill Type</li>
+                      <Image
+                        className={styles.chevron_top_menu}
+                        width={100}
+                        height={100}
+                        src={"/chevronblack.png"}
+                        alt="chevron_top_menu"
+                      />
+                    </div>
+                    <div className={styles.drop_down_wrapper}>
+                      {openMenu.menu6 && (
+                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                          <div className={styles.drop_down_wrapper_list}>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                            <ul>
+                              <Link href={"/"}>
+                                <li className={styles.drop_down_menu_item}>Option</li>
+                              </Link>
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </button>
+
 
 
                   <div className={styles.second_menu_bar_item2}>
