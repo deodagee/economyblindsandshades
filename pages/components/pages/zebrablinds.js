@@ -1122,16 +1122,25 @@ const ZebraBlinds = () => {
 
     const apiUrl = '/api/saveData';
 
-    const data = {
-      name: session.name,
-      productName1: session.productName1,
-      productName2: session.productName2,
-      roomname: session.roomname,
-      WandPriceCMS: session.WandPriceCMS,
-      cordlesspriceCMS: session.cordlesspriceCMS,
-      motorizedpriceCMS: session.motorizedpriceCMS,
-      totalpricecalculated: newTotalPrice,
-    };
+    let data = {}; // Initialize data object
+
+    // Check if session is not null
+    if (session) {
+      data = {
+        name: session.name,
+        productName1: session.productName1,
+        productName2: session.productName2,
+        roomname: session.roomname,
+        WandPriceCMS: session.WandPriceCMS,
+        cordlesspriceCMS: session.cordlesspriceCMS,
+        motorizedpriceCMS: session.motorizedpriceCMS,
+        totalpricecalculated: newTotalPrice,
+      };
+    } else {
+      console.error("Session is null.");
+      // You might want to handle this case further, depending on your application logic
+      return;
+    }
 
     const response = await fetch(apiUrl, {
       method: 'POST',
@@ -1151,6 +1160,7 @@ const ZebraBlinds = () => {
       console.error('Error saving data:', response.statusText);
     }
   };
+
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2354,6 +2364,7 @@ const ZebraBlinds = () => {
                                 <div className={styles.sum_total}>
                                   ${calculateSumTotal().toFixed(2)}
                                 </div>
+                                <div className={styles.sum_total_tag_1_wrapper}>
                                 <div className={styles.sum_total_tag_1}>
                                   For size:
                                   {activeDimensionsinsideMount === "insideMount" && (
@@ -2381,12 +2392,31 @@ const ZebraBlinds = () => {
                                         {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
                                         {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
                                       </div>
+
+
                                     </>
                                   )}
                                 </div>
+                                
+                                <div className={styles.sum_total_tag_1}>
+                                  <div>
+                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                  </div>
+                                  <div>
+                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                  </div>
+                                  <div>
+                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                  </div>
+                                </div>
+                                </div>
+
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
                                   <p>See Cart</p>
                                 </div>
+
+
+
                               </div>
                             </div>
 
@@ -3415,6 +3445,8 @@ const ZebraBlinds = () => {
                                       </div>
                                     </>
                                   )}
+
+
 
                                   {activeDimensionsoutsideMount === "outsideMount" && (
                                     <>
