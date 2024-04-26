@@ -2,7 +2,6 @@
 
 
 import React, { useState, useEffect, useRef } from "react";
-import { useSession } from "next-auth/react";
 import styles from '../../../styles/components/pages/add_to_cart.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -57,19 +56,28 @@ const AddToCart = () => {
     };
 
 
+    const [selectedInchesWidthInsideMount, setselectedInchesWidthInsideMount] = useState(null);
+    const [selectedInchesHeightInsideMount, setselectedInchesHeightInsideMount] = useState(null);
+    const [selectedInchesWidthOutsideMount, setselectedInchesWidthOutsideMount] = useState(null);
+    const [selectedInchesHeightOutsideMount, setselectedInchesHeightOutsideMount] = useState(null);
 
+    const [selectedFractionsWidthInsideMount, setselectedFractionsWidthInsideMount] = useState(null);
+    const [selectedFractionsWidthOutsideMount, setselectedFractionsWidthOutsideMount] = useState(null);
+    const [selectedFractionsHeightInsideMount, setselectedFractionsHeightInsideMount] = useState(null);
+    const [selectedFractionsHeightOutsideMount, setselectedFractionsHeightOutsideMount] = useState(null);
 
-    const { data: session } = useSession();
-    const [selectedInchesWidth, setselectedInchesWidth] = useState(null);
-    const [selectedFractionsWidth, setselectedFractionsWidth] = useState(null);
-    const [selectedInchesHeight, setselectedInchesHeight] = useState(null);
-    const [selectedFractionsHeight, setselectedFractionsHeight] = useState(null);
     const [InsideOrOutsideRenderingContent, setInsideOrOutsideRenderingContent] = useState('Inside Mount');
+
     const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null);
+
     const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
+
     const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("Wand Side:");
+
     const [active_wand_right_choice_rendering_content, setactive_wand_right_choice_rendering_content] = useState(null);
+
     const [selectedImagesTop, setSelectedImagesTop] = useState([]);
+
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
 
     const [productName1, setProductName1] = useState("");
@@ -277,15 +285,51 @@ const AddToCart = () => {
                                         </div>
                                         <div className={styles.answers_answers}>
 
+                                            <>
+                                                <div>
+                                                    {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                                    {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                                </div>
+                                                <p>X</p>
+                                                <div>
+                                                    {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                                    {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                                </div>
+                                            </>
+
+                                            <>
+                                                <div>
+                                                    {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                                    {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                                </div>
+                                                X
+                                                <div>
+                                                    {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                                    {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                                </div>
+                                            </>
+
                                             <div>
-                                                Length: {selectedInchesWidth} - {selectedFractionsWidth}
-                                                {selectedFractionsWidth && " Inches Long"}
+                                                Width Inside Mount: {selectedInchesWidthInsideMount} - {selectedFractionsWidthInsideMount}
+                                                {selectedFractionsWidthInsideMount && " Inches Long"}
                                             </div>
 
                                             <div>
-                                                Height: {selectedInchesHeight} - {selectedFractionsHeight}
-                                                {selectedFractionsHeight && " Inches High"}
+                                                Height Inside Mount: {selectedInchesHeightInsideMount} - {selectedFractionsHeightInsideMount}
+                                                {selectedFractionsHeightInsideMount && " Inches High"}
                                             </div>
+
+
+                                            <div>
+                                                Width Outisde Mount: {selectedInchesWidthOutsideMount} - {selectedFractionsWidthOutsideMount}
+                                                {selectedFractionsWidthOutsideMount && " Inches Long"}
+                                            </div>
+
+                                            <div>
+                                                Height Outisde Mount: {selectedInchesHeightOutsideMount} - {selectedFractionsHeightOutsideMount}
+                                                {selectedFractionsHeightOutsideMount && " Inches High"}
+                                            </div>
+
 
                                         </div>
                                     </div>
@@ -322,6 +366,19 @@ const AddToCart = () => {
                                             <div>
                                                 {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Lift Type?"}
                                             </div>
+
+
+                                            <h1>
+                                                {motorizedpriceCMS}
+                                            </h1>
+                                            <h1>
+                                                {cordlesspriceCMS}
+                                            </h1>
+                                            <h1>
+                                                {WandPriceCMS}
+                                            </h1>
+
+
                                             <div>
                                                 {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
                                             </div>
