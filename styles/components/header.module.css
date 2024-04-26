@@ -339,7 +339,6 @@
   justify-content: center;
   position: absolute;
 
-
 }
 
 /* Adjusted keyframes for exposing the top first and gradually working down */
@@ -354,7 +353,6 @@
     opacity: 1;
   }
 }
-
 
 
 .drop_down_menu {
