@@ -117,7 +117,7 @@ const ZebraBlinds = () => {
   const [active_wand_cordless_motorizedRenderingContent, setactive_wand_cordless_motorizedRenderingContent] = useState('');
   const [active_wand_left_choice, setactive_wand_left_choice] = useState('');
   const [active_wand_right_choice, setactive_wand_right_choice] = useState('');
-  const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("Selected Wand Side:");
+  const [active_wand_left_choice_rendering_content, setactive_wand_left_choice_rendering_content] = useState("");
   const [active_wand_right_choice_rendering_content, setactive_wand_right_choice_rendering_content] = useState(null);
   const [showImageright, setShowImageright] = useState(false);
   const [showImageleft, setShowImageleft] = useState(true);
@@ -2400,7 +2400,7 @@ const ZebraBlinds = () => {
                                 
                                 <div className={styles.sum_total_tag_1}>
                                   <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Please Select A Lift Type"}
+                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
                                   </div>
                                   <div>
                                     {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
@@ -3429,6 +3429,8 @@ const ZebraBlinds = () => {
                                   ${calculateSumTotal().toFixed(2)}
                                 </div>
 
+
+                                <div className={styles.sum_total_tag_1_wrapper}>
                                 <div className={styles.sum_total_tag_1}>
                                   For size:
 
@@ -3462,8 +3464,20 @@ const ZebraBlinds = () => {
                                     </>
                                   )}
 
-
                                 </div>
+                                <div className={styles.sum_total_tag_1}>
+                                  <div>
+                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                  </div>
+                                  <div>
+                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                  </div>
+                                  <div>
+                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                  </div>
+                                </div>
+                                </div>
+
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
                                   <p>See Cart</p>
                                 </div>
