@@ -88,7 +88,7 @@ export default function HomePage() {
                       </span>
                     </Link>
 
-                    <Link href={"/"}>
+                    <Link href={"/zebrablindsroomdarkening"}>
                       <span className={styles.linkitem}>
                         <span>
                           Room Darkening

@@ -191,7 +191,7 @@ function HeaderPiece() {
                             <p className={styles.side_menu_item}>HoneyComb Blinds</p>
                           </Link>
 
-                          
+
                           <Link href={"/"}>
                             <p className={styles.side_menu_item}>No Drill Type</p>
                           </Link>
@@ -243,7 +243,7 @@ function HeaderPiece() {
                           <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                             <div className={styles.drop_down_wrapper_list}>
                               <ul>
-                                <Link href={"/zebrablinds"}>
+                                <Link href={"/zebrablindsroomdarkening"}>
                                   <li className={styles.drop_down_menu_item}>
                                     Room Darkening
                                   </li>
@@ -256,21 +256,6 @@ function HeaderPiece() {
                                   </li>
                                 </Link>
                               </ul>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-                              <ul>
-                                <Link href={"/"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Option
-                                  </li>
-                                </Link>
-                              </ul>
-
                             </div>
                           </div>
                         </>
@@ -299,13 +284,17 @@ function HeaderPiece() {
                         <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                           <div className={styles.drop_down_wrapper_list}>
                             <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
+                              <Link href={"/shangrilablindsroomdarkening"}>
+                                <li className={styles.drop_down_menu_item}>
+                                  Room Darkening
+                                </li>
                               </Link>
                             </ul>
                             <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
+                              <Link href={"/shangrilablindsroomlightening"}>
+                                <li className={styles.drop_down_menu_item}>
+                                  Room Lightening
+                                </li>
                               </Link>
                             </ul>
                           </div>
@@ -334,13 +323,17 @@ function HeaderPiece() {
                         <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                           <div className={styles.drop_down_wrapper_list}>
                             <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
+                              <Link href={"/romanblindsroomdarkening"}>
+                                <li className={styles.drop_down_menu_item}>
+                                  Room Darkening
+                                </li>
                               </Link>
                             </ul>
                             <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
+                              <Link href={"/romanblindsroomlightening"}>
+                                <li className={styles.drop_down_menu_item}>
+                                  Room Lightening
+                                </li>
                               </Link>
                             </ul>
                           </div>
@@ -368,16 +361,20 @@ function HeaderPiece() {
                       {openMenu.menu4 && (
                         <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                           <div className={styles.drop_down_wrapper_list}>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
+                          <ul>
+                                <Link href={"/rollerblindsroomdarkening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Darkening
+                                  </li>
+                                </Link>
+                              </ul>
+                              <ul>
+                                <Link href={"/romanblindsroomlightening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Lightening
+                                  </li>
+                                </Link>
+                              </ul>
                           </div>
                         </div>
                       )}
@@ -403,23 +400,27 @@ function HeaderPiece() {
                       {openMenu.menu5 && (
                         <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                           <div className={styles.drop_down_wrapper_list}>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
+                          <ul>
+                                <Link href={"/honeycombblindsroomdarkening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Darkening
+                                  </li>
+                                </Link>
+                              </ul>
+                              <ul>
+                                <Link href={"/honeycombblindsroomlightening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Lightening
+                                  </li>
+                                </Link>
+                              </ul>
                           </div>
                         </div>
                       )}
                     </div>
                   </button>
 
-                  
+
                   <button
                     className={styles.second_menu_bar_item}
                     onMouseEnter={() => handleMouseEnter('menu6')}
@@ -439,16 +440,20 @@ function HeaderPiece() {
                       {openMenu.menu6 && (
                         <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                           <div className={styles.drop_down_wrapper_list}>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
-                            <ul>
-                              <Link href={"/"}>
-                                <li className={styles.drop_down_menu_item}>Option</li>
-                              </Link>
-                            </ul>
+                          <ul>
+                                <Link href={"/nodrilltypeblindsroomdarkening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Darkening
+                                  </li>
+                                </Link>
+                              </ul>
+                              <ul>
+                                <Link href={"/nodrilltypeblindsroomlightening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Lightening
+                                  </li>
+                                </Link>
+                              </ul>
                           </div>
                         </div>
                       )}

@@ -462,7 +462,6 @@ const AddToCart = () => {
                             </div>
 
 
-
                             <div className={styles.column3}>
                                 <div className={styles.column_wrapper3}>
                                     <div className={styles.price_summary_wrapper}>
