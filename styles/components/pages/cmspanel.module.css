@@ -41,6 +41,7 @@
     margin: 20px;
     box-shadow: rgb(0, 0, 0) 0px 0px 5px;
     overflow: hidden;
+    background-color: #e6e6e6;
 }
 
 .save_button_wrapper {
@@ -129,12 +130,15 @@
     margin-top: 20px;
     gap: 10px;
     width: 95vw;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(59, 59, 59);
     padding-left: 20px;
     border-width: 2px;
     border-color: rgb(216, 216, 216);
     border-left: none;
     border-right: none;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .section_tag_title {
