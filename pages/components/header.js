@@ -179,8 +179,8 @@ function HeaderPiece() {
                             <p className={styles.side_menu_item}>Shangrila Blinds</p>
                           </Link>
 
-                          <Link href={"/"}>
-                            <p className={styles.side_menu_item}>Roman Blinds</p>
+                          <Link href={"/romanblindsroomlightening"}>
+                            <p className={styles.side_menu_item}>Roman Blinds Room Lightening</p>
                           </Link>
 
                           <Link href={"/"}>

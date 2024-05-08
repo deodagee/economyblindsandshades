@@ -1,15 +1,15 @@
-// C:\Users\User\economyblindsandshadesjs\pages\components\pages\zebrablinds.js
+// C:\Users\User\economyblindsandshadesjs\pages\components\pages\honeycombblindsroomdarkening.js
 
-import styles from '../../../styles/components/pages/zebrablinds.module.css';
+import styles from '../../../styles/components/pages/honeycombblinds.module.css';
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react";
-import FooterPage from "../../../pages/components/footer.js"
+import FooterPage from "../footer.js"
 import { useRouter } from 'next/router';
 
-const ZebraBlindsRoomDarkening = () => {
+const HoneycombBlindsRoomDarkening = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
@@ -35,22 +35,22 @@ const ZebraBlindsRoomDarkening = () => {
   }, []);
 
   const { data: session } = useSession();
-  const [productName1ZebrablindsRoomDarkening, setProductName1ZebrablindsRoomDarkening] = useState("");
-  const [productName2ZebrablindsRoomDarkening, setProductName2ZebrablindsRoomDarkening] = useState("");
-  const [roomnameZebrablindsRoomDarkening, setroomnameZebrablindsRoomDarkening] = useState("");
-  const [WandPriceCMSZebrablindsRoomDarkening, setWandPriceCMSZebrablindsRoomDarkening] = useState("");
-  const [cordlesspriceCMSZebrablindsRoomDarkening, setcordlesspriceCMSZebrablindsRoomDarkening] = useState("");
-  const [motorizedpriceCMSZebrablindsRoomDarkening, setmotorizedpriceCMSZebrablindsRoomDarkening] = useState("");
+  const [productName1HoneycombBlindsRoomDarkening, setProductName1HoneycombBlindsRoomDarkening] = useState("");
+  const [productName2HoneycombBlindsRoomDarkening, setProductName2HoneycombBlindsRoomDarkening] = useState("");
+  const [roomnameHoneycombBlindsRoomDarkening, setroomnameHoneycombBlindsRoomDarkening] = useState("");
+  const [WandPriceCMSHoneycombBlindsRoomDarkening, setWandPriceCMSHoneycombBlindsRoomDarkening] = useState("");
+  const [cordlesspriceCMSHoneycombBlindsRoomDarkening, setcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
+  const [motorizedpriceCMSHoneycombBlindsRoomDarkening, setmotorizedpriceCMSHoneycombBlindsRoomDarkening] = useState("");
 
-  const [inchPricesAfterWidthInsideMountZebrablindsRoomDarkening, setinchPricesAfterWidthInsideMountZebrablindsRoomDarkening] = useState({});
-  const [inchPricesAfterHeightInsideMountZebrablindsRoomDarkening, setinchPricesAfterHeightInsideMountZebrablindsRoomDarkening] = useState({});
-  const [inchPricesAfterWidthOutsideMountZebrablindsRoomDarkening, setinchPricesAfterWidthOutsideMountZebrablindsRoomDarkening] = useState({});
-  const [inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening, setinchPricesAfterHeightOutsideMountZebrablindsRoomDarkening] = useState({});
+  const [inchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening, setinchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening, setinchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening, setinchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening, setinchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening] = useState({});
 
-  const [newSetPriceInchesWidthInsideMountZebrablindsRoomDarkening, setnewSetPriceInchesWidthInsideMountZebrablindsRoomDarkening] = useState(null);
-  const [newSetPriceInchesHeightInsideMountZebrablindsRoomDarkening, setnewSetPriceInchesHeightInsideMountZebrablindsRoomDarkening] = useState(null);
-  const [newSetPriceInchesWidthOutsideMountZebrablindsRoomDarkening, setnewSetPriceInchesWidthOutsideMountZebrablindsRoomDarkening] = useState(null);
-  const [newSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening, setnewSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesWidthInsideMountHoneycombBlindsRoomDarkening, setnewSetPriceInchesWidthInsideMountHoneycombBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening, setnewSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesWidthOutsideMountHoneycombBlindsRoomDarkening, setnewSetPriceInchesWidthOutsideMountHoneycombBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening, setnewSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening] = useState(null);
 
   
   const fetchLatestData = async () => {
@@ -60,39 +60,39 @@ const ZebraBlindsRoomDarkening = () => {
       const latestData = result.data;
 
       if (latestData) {
-        setProductName1ZebrablindsRoomDarkening(latestData.productName1ZebrablindsRoomDarkening || "");
-        setProductName2ZebrablindsRoomDarkening(latestData.productName2ZebrablindsRoomDarkening || "");
-        setroomnameZebrablindsRoomDarkening(latestData.roomnameZebrablindsRoomDarkening || "");
-        setWandPriceCMSZebrablindsRoomDarkening(latestData.WandPriceCMSZebrablindsRoomDarkening || "");
-        setcordlesspriceCMSZebrablindsRoomDarkening(latestData.cordlesspriceCMSZebrablindsRoomDarkening || "");
-        setmotorizedpriceCMSZebrablindsRoomDarkening(latestData.motorizedpriceCMSZebrablindsRoomDarkening || "");
+        setProductName1HoneycombBlindsRoomDarkening(latestData.productName1HoneycombBlindsRoomDarkening || "");
+        setProductName2HoneycombBlindsRoomDarkening(latestData.productName2HoneycombBlindsRoomDarkening || "");
+        setroomnameHoneycombBlindsRoomDarkening(latestData.roomnameHoneycombBlindsRoomDarkening || "");
+        setWandPriceCMSHoneycombBlindsRoomDarkening(latestData.WandPriceCMSHoneycombBlindsRoomDarkening || "");
+        setcordlesspriceCMSHoneycombBlindsRoomDarkening(latestData.cordlesspriceCMSHoneycombBlindsRoomDarkening || "");
+        setmotorizedpriceCMSHoneycombBlindsRoomDarkening(latestData.motorizedpriceCMSHoneycombBlindsRoomDarkening || "");
 
-        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMountZebrablindsRoomDarkening || "{}");
+        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening || "{}");
 
-        setinchPricesAfterWidthInsideMountZebrablindsRoomDarkening(inchPricesWidthInsideMount);
+        setinchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening(inchPricesWidthInsideMount);
 
-        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMountZebrablindsRoomDarkening || "{}");
-        setinchPricesAfterWidthOutsideMountZebrablindsRoomDarkening(inchPricesWidthOutsideMount);
+        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening || "{}");
+        setinchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening(inchPricesWidthOutsideMount);
 
-        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMountZebrablindsRoomDarkening || "{}");
-        setinchPricesAfterHeightInsideMountZebrablindsRoomDarkening(inchPricesHeightInsideMount);
+        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening || "{}");
+        setinchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening(inchPricesHeightInsideMount);
 
-        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening || "{}");
-        setinchPricesAfterHeightOutsideMountZebrablindsZebrablindsRoomDarkening(inchPricesHeightOutsideMount);
+        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening || "{}");
+        setinchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening(inchPricesHeightOutsideMount);
 
 
 
         const lastSetPriceWidthInsideMount = inchPricesWidthInsideMount[selectedInchesWidthInsideMount];
-        setnewSetPriceInchesWidthInsideMountZebrablindsRoomDarkening(lastSetPriceWidthInsideMount);
+        setnewSetPriceInchesWidthInsideMountHoneycombBlindsRoomDarkening(lastSetPriceWidthInsideMount);
 
         const lastSetPriceWidthOutsideMount = inchPricesWidthOutsideMount[selectedInchesWidthOutsideMount];
-        setnewSetPriceInchesWidthOutsideMountZebrablindsRoomDarkening(lastSetPriceWidthOutsideMount);
+        setnewSetPriceInchesWidthOutsideMountHoneycombBlindsRoomDarkening(lastSetPriceWidthOutsideMount);
 
         const lastSetPriceHeightInsideMount = inchPricesHeightInsideMount[selectedInchesHeightInsideMount];
-        setnewSetPriceInchesHeightInsideMountZebrablindsRoomDarkening(lastSetPriceHeightInsideMount);
+        setnewSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening(lastSetPriceHeightInsideMount);
 
         const lastSetPriceHeightOutsideMount = inchPricesHeightOutsideMount[selectedInchesHeightOutsideMount];
-        setnewSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening(lastSetPriceHeightOutsideMount);
+        setnewSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening(lastSetPriceHeightOutsideMount);
 
       }
     } catch (error) {
@@ -202,15 +202,15 @@ const ZebraBlindsRoomDarkening = () => {
 
     switch (ellipseNumber) {
       case 1:
-        newTotalPrice = WandPriceCMSZebrablindsRoomDarkening;
+        newTotalPrice = WandPriceCMSHoneycombBlindsRoomDarkening;
         break;
 
       case 2:
-        newTotalPrice = cordlesspriceCMSZebrablindsRoomDarkening;
+        newTotalPrice = cordlesspriceCMSHoneycombBlindsRoomDarkening;
         break;
 
       case 3:
-        newTotalPrice = motorizedpriceCMSZebrablindsRoomDarkening;
+        newTotalPrice = motorizedpriceCMSHoneycombBlindsRoomDarkening;
         break;
 
       default:
@@ -225,7 +225,7 @@ const ZebraBlindsRoomDarkening = () => {
 
     switch (active_inside_outside_ellipse) {
       case 1:
-        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsZebrablindsRoomDarkening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsZebrablindsRoomDarkening : 0);
+        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsHoneycombBlindsRoomDarkening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsHoneycombBlindsRoomDarkening : 0);
         break;
       case 2:
         totalPrice = totalpricecalculated;
@@ -266,12 +266,12 @@ const ZebraBlindsRoomDarkening = () => {
   };
 
 
-  const [roomDarkeningContent, setRoomDarkeningContent] = useState('');
+  const [HoneycombBlindsRoomDarkeningContent, setHoneycombBlindsRoomDarkeningContent] = useState('');
 
   useEffect(() => {
-    const roomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
-    if (roomDarkeningElement) {
-      setRoomDarkeningContent(roomDarkeningElement.textContent || roomDarkeningElement.innerText);
+    const HoneycombBlindsRoomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
+    if (HoneycombBlindsRoomDarkeningElement) {
+      setHoneycombBlindsRoomDarkeningContent(HoneycombBlindsRoomDarkeningElement.textContent || HoneycombBlindsRoomDarkeningElement.innerText);
     }
   }, []);
 
@@ -694,7 +694,7 @@ const ZebraBlindsRoomDarkening = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledInchesWhenClickedWidthInsideMountZebrablindsRoomDarkening = (inchesWidthInsideMount) => {
+  const handleScrolledInchesWhenClickedWidthInsideMount = (inchesWidthInsideMount) => {
     setselectedInchesWidthInsideMount(inchesWidthInsideMount);
     setselectedInchesVisibleWidthInsideMount(false);
     setselectedInchWidthInsideMount(inchesWidthInsideMount);
@@ -724,7 +724,7 @@ const ZebraBlindsRoomDarkening = () => {
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
-  const handleScrolledInchesWhenClickedHeightInsideMountZebrablindsRoomDarkening = (inchesHeightInsideMount) => {
+  const handleScrolledInchesWhenClickedHeightInsideMount = (inchesHeightInsideMount) => {
     setselectedInchesHeightInsideMount(inchesHeightInsideMount);
     setselectedInchesVisibleHeightInsideMount(false);
     setselectedInchHeightInsideMount(inchesHeightInsideMount);
@@ -758,8 +758,8 @@ const ZebraBlindsRoomDarkening = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMountZebrablindsRoomDarkening[inchesHeightInsideMount];
-    setnewSetPriceInchesHeightInsideMountZebrablindsRoomDarkening(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
+    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening[inchesHeightInsideMount];
+    setnewSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightInsideMount === undefined && inchesHeightInsideMount % 5 !== 0) {
@@ -768,8 +768,8 @@ const ZebraBlindsRoomDarkening = () => {
         prevInchHeightInsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMountZebrablindsRoomDarkening[prevInchHeightInsideMount];
-      setnewSetPriceInchesHeightInsideMountZebrablindsRoomDarkening(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
+      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening[prevInchHeightInsideMount];
+      setnewSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightInsideMount);
       let nextInchHeightInsideMount = prevInchHeightInsideMount + 1;
@@ -779,7 +779,7 @@ const ZebraBlindsRoomDarkening = () => {
 
     } else if (inchesHeightInsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMountZebrablindsRoomDarkening[inchesHeightInsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMountHoneycombBlindsRoomDarkening[inchesHeightInsideMount]);
     }
   };
 
@@ -790,7 +790,7 @@ const ZebraBlindsRoomDarkening = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const handleScrolledInchesWhenClickedWidthOutsideMountZebrablindsRoomDarkening = (inchesWidthOutsideMount) => {
+  const handleScrolledInchesWhenClickedWidthOutsideMount = (inchesWidthOutsideMount) => {
     setselectedInchesWidthOutsideMount(inchesWidthOutsideMount);
     setselectedInchesVisibleWidthOutsideMount(false);
     setselectedInchWidthOutsideMount(inchesWidthOutsideMount);
@@ -822,7 +822,7 @@ const ZebraBlindsRoomDarkening = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const handleScrolledInchesWhenClickedHeightOutsideMountZebrablindsRoomDarkening = (inchesHeightOutsideMount) => {
+  const handleScrolledInchesWhenClickedHeightOutsideMount = (inchesHeightOutsideMount) => {
     setselectedInchesHeightOutsideMount(inchesHeightOutsideMount);
     setselectedInchesVisibleHeightOutsideMount(false);
     setselectedInchHeightOutsideMount(inchesHeightOutsideMount);
@@ -856,8 +856,8 @@ const ZebraBlindsRoomDarkening = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening[inchesHeightOutsideMount];
-    setnewSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
+    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening[inchesHeightOutsideMount];
+    setnewSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightOutsideMount === undefined && inchesHeightOutsideMount % 5 !== 0) {
@@ -866,8 +866,8 @@ const ZebraBlindsRoomDarkening = () => {
         prevInchHeightOutsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening[prevInchHeightOutsideMount];
-      setnewSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
+      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening[prevInchHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightOutsideMount);
       let nextInchHeightOutsideMount = prevInchHeightOutsideMount + 1;
@@ -877,7 +877,7 @@ const ZebraBlindsRoomDarkening = () => {
 
     } else if (inchesHeightOutsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening[inchesHeightOutsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening[inchesHeightOutsideMount]);
     }
   };
 
@@ -916,7 +916,7 @@ const ZebraBlindsRoomDarkening = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNTZebrablindsRoomDarkening = (fractionHeightInsideMount) => {
+  const handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNT = (fractionHeightInsideMount) => {
     setselectedFractionsHeightInsideMount(fractionHeightInsideMount);
     setSelectedFractionVisibleHeightInsideMount(false);
     setselectedFractionHeightInsideMount(fractionHeightInsideMount);
@@ -949,7 +949,7 @@ const ZebraBlindsRoomDarkening = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNTZebrablindsRoomDarkening = (fractionHeightOutsideMount) => {
+  const handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNT = (fractionHeightOutsideMount) => {
     setselectedFractionsHeightOutsideMount(fractionHeightOutsideMount);
     setselectedFractionVisibleHeightOutsideMount(false);
     setselectedFractionHeightOutsideMount(fractionHeightOutsideMount);
@@ -982,7 +982,7 @@ const ZebraBlindsRoomDarkening = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNTZebrablindsRoomDarkening = (fractionWidthWidthInsideMount) => {
+  const handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNT = (fractionWidthWidthInsideMount) => {
     setselectedFractionsWidthInsideMount(fractionWidthWidthInsideMount);
     setselectedFractionVisibleWidthInsideMount(false);
     setselectedFractionWidthInsideMount(fractionWidthWidthInsideMount);
@@ -1015,7 +1015,7 @@ const ZebraBlindsRoomDarkening = () => {
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-  const handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNTZebrablindsRoomDarkening = (fractionWidthOutsideMount) => {
+  const handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNT = (fractionWidthOutsideMount) => {
     setselectedFractionsWidthOutsideMount(fractionWidthOutsideMount);
     setselectedFractionVisibleWidthOutsideMount(false);
     setselectedFractionWidthOutsideMount(fractionWidthOutsideMount);
@@ -1048,22 +1048,22 @@ const ZebraBlindsRoomDarkening = () => {
 
   // Function to calculate sum of prices
   const calculateSumTotal = () => {
-    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountZebrablindsRoomDarkening) || 0;
-    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountZebrablindsRoomDarkening[selectedInchesWidthInsideMount]) || 0;
+    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening) || 0;
+    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening[selectedInchesWidthInsideMount]) || 0;
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
         case 1:
             // If "wand" option is selected
-            priceHeightInsideMount += parseFloat(WandPriceCMSZebrablindsRoomDarkening) || 0;
+            priceHeightInsideMount += parseFloat(WandPriceCMSHoneycombBlindsRoomDarkening) || 0;
             break;
         case 2:
             // If "cordless" option is selected
-            priceHeightInsideMount += parseFloat(cordlesspriceCMSZebrablindsRoomDarkening) || 0;
+            priceHeightInsideMount += parseFloat(cordlesspriceCMSHoneycombBlindsRoomDarkening) || 0;
             break;
         case 3:
             // If "motorized" option is selected
-            priceHeightInsideMount += parseFloat(motorizedpriceCMSZebrablindsRoomDarkening) || 0;
+            priceHeightInsideMount += parseFloat(motorizedpriceCMSHoneycombBlindsRoomDarkening) || 0;
             break;
         default:
             // Default case when none of the options are selected
@@ -1148,13 +1148,13 @@ const ZebraBlindsRoomDarkening = () => {
     // Check if session is not null
     if (session) {
       data = {
-        nameZebrablindsRoomDarkening: session.nameZebrablindsRoomDarkening,
-        productName1ZebrablindsRoomDarkening: session.productName1ZebrablindsRoomDarkening,
-        productName2ZebrablindsRoomDarkening: session.productName2ZebrablindsRoomDarkening,
-        roomnameZebrablindsRoomDarkening: session.roomnameZebrablindsRoomDarkening,
-        WandPriceCMSZebrablindsRoomDarkening: session.WandPriceCMSZebrablindsRoomDarkening,
-        cordlesspriceCMSZebrablindsRoomDarkening: session.cordlesspriceCMSZebrablindsRoomDarkening,
-        motorizedpriceCMSZebrablindsRoomDarkening: session.motorizedpriceCMSZebrablindsRoomDarkening,
+        nameHoneycombBlindsRoomDarkening: session.nameHoneycombBlindsRoomDarkening,
+        productName1HoneycombBlindsRoomDarkening: session.productName1HoneycombBlindsRoomDarkening,
+        productName2HoneycombBlindsRoomDarkening: session.productName2HoneycombBlindsRoomDarkening,
+        roomnameHoneycombBlindsRoomDarkening: session.roomnameHoneycombBlindsRoomDarkening,
+        WandPriceCMSHoneycombBlindsRoomDarkening: session.WandPriceCMSHoneycombBlindsRoomDarkening,
+        cordlesspriceCMSHoneycombBlindsRoomDarkening: session.cordlesspriceCMSHoneycombBlindsRoomDarkening,
+        motorizedpriceCMSHoneycombBlindsRoomDarkening: session.motorizedpriceCMSHoneycombBlindsRoomDarkening,
         totalpricecalculated: newTotalPrice,
       };
     } else {
@@ -1313,15 +1313,15 @@ const ZebraBlindsRoomDarkening = () => {
 
                   <span className={styles.product_title_styles_styles_and_product_roomname}>
                     <h1 className={styles.product_title_styles}>
-                      {productName1ZebrablindsRoomDarkening}
+                      {productName1HoneycombBlindsRoomDarkening}
                     </h1>
                     <h1 className={styles.product_roomname}>
-                      <p>Room Name:</p> <p>{roomnameZebrablindsRoomDarkening}</p>
+                      <p>Room Name:</p> <p>{roomnameHoneycombBlindsRoomDarkening}</p>
                     </h1>
                   </span>
 
                   <h1 className={styles.product_lightening_styles}>
-                    {productName2ZebrablindsRoomDarkening}
+                    {productName2HoneycombBlindsRoomDarkening}
                   </h1>
 
                 </div>
@@ -1505,8 +1505,8 @@ const ZebraBlindsRoomDarkening = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMountZebrablindsRoomDarkening[selectedInchesWidthInsideMount] !== undefined
-                                      ? inchPricesAfterWidthInsideMountZebrablindsRoomDarkening[selectedInchesWidthInsideMount]
+                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening[selectedInchesWidthInsideMount] !== undefined
+                                      ? inchPricesAfterWidthInsideMountHoneycombBlindsRoomDarkening[selectedInchesWidthInsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -1530,7 +1530,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedWidthInsideMountZebrablindsRoomDarkeningZebrablindsRoomDarkening(inchesWidthInsideMount)}
+                                                  onClick={() => handleScrolledInchesWhenClickedWidthInsideMount(inchesWidthInsideMount)}
                                                   className={selectedInchesWidthInsideMount === inchesWidthInsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesWidthInsideMount}
@@ -1562,7 +1562,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNTZebrablindsRoomDarkening(fractionWidthWidthInsideMount)}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHINSIDEMOUNT(fractionWidthWidthInsideMount)}
                                                   className={selectedFractionsWidthInsideMount === fractionWidthWidthInsideMount ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionWidthWidthInsideMount}
@@ -1912,8 +1912,8 @@ const ZebraBlindsRoomDarkening = () => {
 
                                   <h1>
                                     Price Height Inside Mount: ($)
-                                    {newSetPriceInchesHeightInsideMountZebrablindsRoomDarkening !== undefined
-                                      ? newSetPriceInchesHeightInsideMountZebrablindsRoomDarkening
+                                    {newSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening !== undefined
+                                      ? newSetPriceInchesHeightInsideMountHoneycombBlindsRoomDarkening
                                       : "no price set"}
                                   </h1>
 
@@ -1935,7 +1935,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedHeightInsideMountZebrablindsRoomDarkening(inchesHeightInsideMount)}
+                                                  onClick={() => handleScrolledInchesWhenClickedHeightInsideMount(inchesHeightInsideMount)}
                                                   className={selectedInchesHeightInsideMount === inchesHeightInsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesHeightInsideMount}
@@ -1967,7 +1967,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNTZebrablindsRoomDarkening(fractionHeight)}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTINSIDEMOUNT(fractionHeight)}
                                                   className={selectedFractionsHeightInsideMount === fractionHeight ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionHeight}
@@ -2556,9 +2556,9 @@ const ZebraBlindsRoomDarkening = () => {
 
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountZebrablindsRoomDarkening
+                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening
                                     [selectedInchesWidthOutsideMount] !== undefined
-                                      ? inchPricesAfterWidthOutsideMountZebrablindsRoomDarkening[selectedInchesWidthOutsideMount]
+                                      ? inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening[selectedInchesWidthOutsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -2582,7 +2582,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedWidthOutsideMountZebrablindsRoomDarkening(inchesWidthOutsideMount)}
+                                                  onClick={() => handleScrolledInchesWhenClickedWidthOutsideMount(inchesWidthOutsideMount)}
                                                   className={selectedInchesWidthOutsideMount === inchesWidthOutsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesWidthOutsideMount}
@@ -2615,7 +2615,7 @@ const ZebraBlindsRoomDarkening = () => {
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionWidthOutsideMount, index) => (
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNTZebrablindsRoomDarkening(fractionWidthOutsideMount)}
+                                                  onClick={() => handleScrolledFractionsWhenClickedWIDTHOUTSIDEMOUNT(fractionWidthOutsideMount)}
                                                   className={selectedFractionsWidthOutsideMount === fractionWidthOutsideMount ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionWidthOutsideMount}
@@ -2988,8 +2988,8 @@ const ZebraBlindsRoomDarkening = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening !== undefined
-                                      ? newSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening
+                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening !== undefined
+                                      ? newSetPriceInchesHeightOutsideMountHoneycombBlindsRoomDarkening
                                       : "no price set"}
                                   </h1>
                                 </div>
@@ -3013,7 +3013,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedHeightOutsideMountZebrablindsRoomDarkening(inchesHeightOutsideMount)}
+                                                  onClick={() => handleScrolledInchesWhenClickedHeightOutsideMount(inchesHeightOutsideMount)}
                                                   className={selectedInchesHeightOutsideMount === inchesHeightOutsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesHeightOutsideMount}
@@ -3052,7 +3052,7 @@ const ZebraBlindsRoomDarkening = () => {
                                               {["0", "1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"].map((fractionHeight, index) => (
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNTZebrablindsRoomDarkening(fractionHeight)}
+                                                  onClick={() => handleScrolledFractionsWhenClickedHEIGHTOUTSIDEMOUNT(fractionHeight)}
                                                   className={selectedFractionsHeightOutsideMount === fractionHeight ? styles.selectedFraction : ''}
                                                 >
                                                   {fractionHeight}
@@ -3617,7 +3617,7 @@ const ZebraBlindsRoomDarkening = () => {
                           </div>
 
                           <div className={styles.wand_subtitle}>
-                            <span className={styles.price_bar}>${WandPriceCMSZebrablindsRoomDarkening}</span>
+                            <span className={styles.price_bar}>${WandPriceCMSHoneycombBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
@@ -3703,7 +3703,7 @@ const ZebraBlindsRoomDarkening = () => {
                           </div>
 
                           <div className={styles.cord_less_subtitle}>
-                            <span className={styles.price_bar}>${cordlesspriceCMSZebrablindsRoomDarkening}</span>
+                            <span className={styles.price_bar}>${cordlesspriceCMSHoneycombBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
@@ -3747,7 +3747,7 @@ const ZebraBlindsRoomDarkening = () => {
                           </div>
 
                           <div className={styles.motorized_subtitle}>
-                            <span className={styles.price_bar}>${motorizedpriceCMSZebrablindsRoomDarkening}</span>
+                            <span className={styles.price_bar}>${motorizedpriceCMSHoneycombBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
@@ -4019,7 +4019,7 @@ const ZebraBlindsRoomDarkening = () => {
                       <div className={styles.window_name_answer}>Window Name:
                       </div>
                       <div className={styles.answers_answers}>
-                        {productName1ZebrablindsRoomDarkening.charAt(0).toUpperCase() + productName1ZebrablindsRoomDarkening.slice(1)}
+                        {productName1HoneycombBlindsRoomDarkening.charAt(0).toUpperCase() + productName1HoneycombBlindsRoomDarkening.slice(1)}
                       </div>
 
                     </div>
@@ -4032,7 +4032,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                       <div className={styles.window_type_answer}>Window Type:</div>
                       <div className={styles.answers_answers}>
-                        {productName2ZebrablindsRoomDarkening.charAt(0).toUpperCase() + productName2ZebrablindsRoomDarkening.slice(1)}
+                        {productName2HoneycombBlindsRoomDarkening.charAt(0).toUpperCase() + productName2HoneycombBlindsRoomDarkening.slice(1)}
                       </div>
 
                     </div>
@@ -4319,6 +4319,6 @@ const ZebraBlindsRoomDarkening = () => {
 }
 
 
-export default ZebraBlindsRoomDarkening;
+export default HoneycombBlindsRoomDarkening;
 
 
