@@ -269,7 +269,7 @@ const NoDrillTypeBlindsRoomDarkening = () => {
   const [NoDrillTypeBlindsRoomDarkeningContent, setNoDrillTypeBlindsRoomDarkeningContent] = useState('');
 
   useEffect(() => {
-    constNoDrillTypeBlindsRoomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
+    const NoDrillTypeBlindsRoomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
     if (NoDrillTypeBlindsRoomDarkeningElement) {
       setNoDrillTypeBlindsRoomDarkeningContent(NoDrillTypeBlindsRoomDarkeningElement.textContent || NoDrillTypeBlindsRoomDarkeningElement.innerText);
     }
