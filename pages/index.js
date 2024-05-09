@@ -104,7 +104,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_4}>
 
                   <p className={styles.router_tab}>
-                  No Drill Type Roller Blinds
+                    No Drill Type Roller Blinds
                   </p>
 
 
@@ -133,7 +133,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_3}>
                   <p className={styles.router_tab}>
                     <span>
-                    No Drill Type Roman Blinds
+                      No Drill Type Roman Blinds
                     </span>
                   </p>
 
@@ -160,7 +160,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_5}>
                   <p className={styles.router_tab}>
                     <span>
-                    No Drill Type Honeycomb Blinds
+                      No Drill Type Honeycomb Blinds
                     </span>
                   </p>
 
@@ -187,7 +187,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_2}>
                   <p className={styles.router_tab}>
                     <span>
-                    No Drill Type Shangrila Blinds
+                      No Drill Type Shangrila Blinds
                     </span>
                   </p>
 

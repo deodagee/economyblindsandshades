@@ -52,7 +52,7 @@ const RollerBlindsRoomLightening = () => {
   const [newSetPriceInchesWidthOutsideMountRollerBlindsRoomLightening, setnewSetPriceInchesWidthOutsideMountRollerBlindsRoomLightening] = useState(null);
   const [newSetPriceInchesHeightOutsideMountRollerBlindsRoomLightening, setnewSetPriceInchesHeightOutsideMountRollerBlindsRoomLightening] = useState(null);
 
-  
+
   const fetchLatestData = async () => {
     try {
       const response = await fetch("/api/getLatestData");
@@ -1053,25 +1053,25 @@ const RollerBlindsRoomLightening = () => {
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
-        case 1:
-            // If "wand" option is selected
-            priceHeightInsideMount += parseFloat(WandPriceCMSRollerBlindsRoomLightening) || 0;
-            break;
-        case 2:
-            // If "cordless" option is selected
-            priceHeightInsideMount += parseFloat(cordlesspriceCMSRollerBlindsRoomLightening) || 0;
-            break;
-        case 3:
-            // If "motorized" option is selected
-            priceHeightInsideMount += parseFloat(motorizedpriceCMSRollerBlindsRoomLightening) || 0;
-            break;
-        default:
-            // Default case when none of the options are selected
-            break;
+      case 1:
+        // If "wand" option is selected
+        priceHeightInsideMount += parseFloat(WandPriceCMSRollerBlindsRoomLightening) || 0;
+        break;
+      case 2:
+        // If "cordless" option is selected
+        priceHeightInsideMount += parseFloat(cordlesspriceCMSRollerBlindsRoomLightening) || 0;
+        break;
+      case 3:
+        // If "motorized" option is selected
+        priceHeightInsideMount += parseFloat(motorizedpriceCMSRollerBlindsRoomLightening) || 0;
+        break;
+      default:
+        // Default case when none of the options are selected
+        break;
     }
 
     return priceHeightInsideMount + priceWidthInsideMount;
-};
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -2386,50 +2386,50 @@ const RollerBlindsRoomLightening = () => {
                                   ${calculateSumTotal().toFixed(2)}
                                 </div>
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
 
 
-                                    </>
-                                  )}
-                                </div>
-                                
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                      </>
+                                    )}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
@@ -3452,51 +3452,51 @@ const RollerBlindsRoomLightening = () => {
 
 
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
 
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
 
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                </div>
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
@@ -3606,27 +3606,7 @@ const RollerBlindsRoomLightening = () => {
 
                     <div className={styles.select_chain_options___side_wrapper}>
 
-                      <div className={styles.select_chain_options___side}>
-                        <div className={styles.select_chain_option1_options}>
 
-                          <div className={styles.select_chain_option1_ellipse_wrapper}>
-                            <span
-                              className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(1)}
-                            ></span>
-                          </div>
-
-                          <div className={styles.wand_subtitle}>
-                            <span className={styles.price_bar}>${WandPriceCMSRollerBlindsRoomLightening}</span>
-                          </div>
-
-                          <div className={styles.options_price_seperator}></div>
-
-                          <span className={styles.priced_item}>Wand</span>
-
-
-                        </div>
-                      </div>
 
                       <div className={styles.select_chain_options___side}>
 
@@ -3677,6 +3657,29 @@ const RollerBlindsRoomLightening = () => {
                         </div>
 
                       </div>
+
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.select_chain_option1_options}>
+
+                          <div className={styles.wand_subtitle}>
+
+                            <span>Free</span>
+                            <span className={styles.price_bar}>${WandPriceCMSRollerBlindsRoomLightening}</span>
+                          </div>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <span className={styles.priced_item}>Wand</span>
+
+                          <div className={styles.select_chain_option1_ellipse_wrapper}>
+                            <span
+                              className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(1)}
+                            ></span>
+                          </div>
+
+                        </div>
+                      </div>
                     </div>
 
                   </div>
@@ -3689,29 +3692,6 @@ const RollerBlindsRoomLightening = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                      <div className={styles.select_chain_options___side}>
-
-
-
-                        <div className={styles.select_chain_option2_options}>
-
-                          <div className={styles.select_chain_option2_ellipse_wrapper}>
-                            <span
-                              className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(2)}
-                            ></span>
-                          </div>
-
-                          <div className={styles.cord_less_subtitle}>
-                            <span className={styles.price_bar}>${cordlesspriceCMSRollerBlindsRoomLightening}</span>
-                          </div>
-
-                          <div className={styles.options_price_seperator}></div>
-
-                          <span className={styles.priced_item}>Cord Less</span>
-
-                        </div>
-                      </div>
 
                       <div className={styles.select_chain_options___side}>
                         <div className={styles.cord_less_option_image_placeholder}>
@@ -3723,6 +3703,30 @@ const RollerBlindsRoomLightening = () => {
                           />
                         </div>
                       </div>
+
+                      <div className={styles.select_chain_options___side}>
+
+                        <div className={styles.select_chain_option2_options}>
+
+
+
+                          <div className={styles.cord_less_subtitle}>
+                            <span className={styles.price_bar}>${cordlesspriceCMSRollerBlindsRoomLightening}</span>
+                          </div>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <span className={styles.priced_item}>Cord Less</span>
+
+                          <div className={styles.select_chain_option2_ellipse_wrapper}>
+                            <span
+                              className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(2)}
+                            ></span>
+                          </div>
+
+                        </div>
+                      </div>
                     </div>
 
                   </div>
@@ -3732,19 +3736,23 @@ const RollerBlindsRoomLightening = () => {
                 <div className={styles.select_chain_option3_wrapper}>
                   <div className={styles.select_chain_option3_ellipse_and_options}>
 
-
                     <div className={styles.select_chain_options___side_wrapper}>
+
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.motorized_option_image_placeholder}>
+                          <Image
+                            width={400}
+                            height={400}
+                            alt="showrightchain"
+                            src="/motorizedlift.png"
+                          />
+
+                        </div>
+                      </div>
+
                       <div className={styles.select_chain_options___side}>
 
                         <div className={styles.select_chain_option3_options}>
-
-                          <div className={styles.select_chain_option3_ellipse_wrapper}>
-                            <span
-                              className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
-                                styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(3)}
-                            ></span>
-                          </div>
 
                           <div className={styles.motorized_subtitle}>
                             <span className={styles.price_bar}>${motorizedpriceCMSRollerBlindsRoomLightening}</span>
@@ -3755,17 +3763,14 @@ const RollerBlindsRoomLightening = () => {
 
                           <span className={styles.priced_item}>Motorized</span>
 
-                        </div>
-                      </div>
 
-                      <div className={styles.select_chain_options___side}>
-                        <div className={styles.motorized_option_image_placeholder}>
-                          <Image
-                            width={400}
-                            height={400}
-                            alt="showrightchain"
-                            src="/motorizedlift.png"
-                          />
+                          <div className={styles.select_chain_option3_ellipse_wrapper}>
+                            <span
+                              className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                                styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(3)}
+                            ></span>
+                          </div>
 
                         </div>
                       </div>
@@ -4142,7 +4147,7 @@ const RollerBlindsRoomLightening = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_top_rail}>
                       <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
 
                       <div className={styles.answers_answers2}>
@@ -4190,7 +4195,7 @@ const RollerBlindsRoomLightening = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_bottom_rail}>
                       <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                       <div className={styles.answers_answers2}>
                         {selectedImagesBottom?.length > 0 && (
