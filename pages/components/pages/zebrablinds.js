@@ -3680,6 +3680,7 @@ const ZebraBlinds = () => {
 
                         </div>
                       </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -3714,7 +3715,7 @@ const ZebraBlinds = () => {
 
                           <span className={styles.priced_item}>Cord Less</span>
 
-                          <div className={styles.select_chain_option2_ellipse_wrapper}>
+                                                    <div className={styles.select_chain_option2_ellipse_wrapper}>
                             <span
                               className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
                               onClick={() => handleLiftFeatureEllipsess(2)}
@@ -4150,7 +4151,7 @@ const ZebraBlinds = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_top_rail}>
                       <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
 
                       <div className={styles.answers_answers2}>
@@ -4198,7 +4199,7 @@ const ZebraBlinds = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_bottom_rail}>
                       <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                       <div className={styles.answers_answers2}>
                         {selectedImagesBottom?.length > 0 && (

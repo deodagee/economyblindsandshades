@@ -53,7 +53,7 @@ export default function HomePage() {
             <div className={styles.two_section_div5}>
 
               <h1>
-               Welcome
+                Welcome
                 <br />
                 <br />
               </h1>
@@ -74,7 +74,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_1}>
 
                   <p className={styles.router_tab}>
-                    Zeebra Blinds
+                    No Drill Type Zeebra Blinds
                   </p>
 
 
@@ -82,7 +82,7 @@ export default function HomePage() {
                     <Link href={"/zebrablinds"}>
                       <span className={styles.linkitem}>
                         <span>
-                          Room Lightening
+                          Light Filtering
                         </span>
                         <br />
                       </span>
@@ -104,7 +104,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_4}>
 
                   <p className={styles.router_tab}>
-                    Roller Blinds
+                  No Drill Type Roller Blinds
                   </p>
 
 
@@ -112,7 +112,7 @@ export default function HomePage() {
                     <Link href={"/zebrablinds"}>
                       <span className={styles.linkitem}>
                         <span>
-                          Room Lightening
+                          Light Filtering
                         </span>
                         <br />
                       </span>
@@ -133,7 +133,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_3}>
                   <p className={styles.router_tab}>
                     <span>
-                      Roman Blinds
+                    No Drill Type Roman Blinds
                     </span>
                   </p>
 
@@ -141,7 +141,7 @@ export default function HomePage() {
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
                         <span>
-                          Room Lightening
+                          Light Filtering
                         </span>
                         <br />
                       </span>
@@ -160,7 +160,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_5}>
                   <p className={styles.router_tab}>
                     <span>
-                      Honeycomb Blinds
+                    No Drill Type Honeycomb Blinds
                     </span>
                   </p>
 
@@ -168,7 +168,7 @@ export default function HomePage() {
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
                         <span>
-                          Room Lightening
+                          Light Filtering
                         </span>
                         <br />
                       </span>
@@ -187,7 +187,7 @@ export default function HomePage() {
                 <div className={styles.rectangle_2}>
                   <p className={styles.router_tab}>
                     <span>
-                      Shangrila Blinds
+                    No Drill Type Shangrila Blinds
                     </span>
                   </p>
 
@@ -195,7 +195,7 @@ export default function HomePage() {
                     <Link href={"/"}>
                       <span className={styles.linkitem}>
                         <span>
-                          Room Lightening
+                          Light Filtering
                         </span>
                         <br />
                       </span>
@@ -261,8 +261,8 @@ export default function HomePage() {
                 <div className={styles.box_grid_text}>
                   <div className={styles.title}>Are the options affordable and stylish?</div>
                   <div className={styles.description}>
-                  <span>
-                    We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
+                    <span>
+                      We offer a variety of styles that will make your space look incredible, while also offering affordable costs.
                     </span>
                   </div>
                 </div>
@@ -275,8 +275,8 @@ export default function HomePage() {
                 <div className={styles.box_grid_text}>
                   <div className={styles.title}>Are you priced competitively?</div>
                   <div className={styles.description}>
-                  <span>
-                    We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
+                    <span>
+                      We are proud to say that we are priced to beat most competitors. Each Job is different however we pride ourselves on quality and value.
                     </span>
                   </div>
                 </div>

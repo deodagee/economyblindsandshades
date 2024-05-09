@@ -3607,28 +3607,6 @@ const ZebraBlindsRoomDarkening = () => {
                     <div className={styles.select_chain_options___side_wrapper}>
 
                       <div className={styles.select_chain_options___side}>
-                        <div className={styles.select_chain_option1_options}>
-
-                          <div className={styles.select_chain_option1_ellipse_wrapper}>
-                            <span
-                              className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(1)}
-                            ></span>
-                          </div>
-
-                          <div className={styles.wand_subtitle}>
-                            <span className={styles.price_bar}>${WandPriceCMSZebrablindsRoomDarkening}</span>
-                          </div>
-
-                          <div className={styles.options_price_seperator}></div>
-
-                          <span className={styles.priced_item}>Wand</span>
-
-
-                        </div>
-                      </div>
-
-                      <div className={styles.select_chain_options___side}>
 
                         <div className={styles.wand_option_image_placeholder}>
                           {showImageleft && (
@@ -3677,6 +3655,32 @@ const ZebraBlindsRoomDarkening = () => {
                         </div>
 
                       </div>
+                      
+                      <div className={styles.select_chain_options___side}>
+                        <div className={styles.select_chain_option1_options}>
+
+
+
+                          <div className={styles.wand_subtitle}>
+                          <span>Free</span>
+
+                            <span className={styles.price_bar}>${WandPriceCMSZebrablindsRoomDarkening}</span>
+                          </div>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <span className={styles.priced_item}>Wand</span>
+
+                          <div className={styles.select_chain_option1_ellipse_wrapper}>
+                            <span
+                              className={`${styles.wand_ellipse} ${active_wand_cordless_motorized === 1 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(1)}
+                            ></span>
+                          </div>
+
+
+                        </div>
+                      </div>
                     </div>
 
                   </div>
@@ -3689,31 +3693,7 @@ const ZebraBlindsRoomDarkening = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                      <div className={styles.select_chain_options___side}>
-
-
-
-                        <div className={styles.select_chain_option2_options}>
-
-                          <div className={styles.select_chain_option2_ellipse_wrapper}>
-                            <span
-                              className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(2)}
-                            ></span>
-                          </div>
-
-                          <div className={styles.cord_less_subtitle}>
-                            <span className={styles.price_bar}>${cordlesspriceCMSZebrablindsRoomDarkening}</span>
-                          </div>
-
-                          <div className={styles.options_price_seperator}></div>
-
-                          <span className={styles.priced_item}>Cord Less</span>
-
-                        </div>
-                      </div>
-
-                      <div className={styles.select_chain_options___side}>
+                    <div className={styles.select_chain_options___side}>
                         <div className={styles.cord_less_option_image_placeholder}>
                           <Image
                             width={400}
@@ -3723,6 +3703,34 @@ const ZebraBlindsRoomDarkening = () => {
                           />
                         </div>
                       </div>
+
+                      <div className={styles.select_chain_options___side}>
+
+
+
+                        <div className={styles.select_chain_option2_options}>
+
+
+
+                          <div className={styles.cord_less_subtitle}>
+                            <span className={styles.price_bar}>${cordlesspriceCMSZebrablindsRoomDarkening}</span>
+                          </div>
+
+                          <div className={styles.options_price_seperator}></div>
+
+                          <span className={styles.priced_item}>Cord Less</span>
+
+                          <div className={styles.select_chain_option2_ellipse_wrapper}>
+                            <span
+                              className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(2)}
+                            ></span>
+                          </div>
+
+                        </div>
+                      </div>
+
+
                     </div>
 
                   </div>
@@ -3734,31 +3742,8 @@ const ZebraBlindsRoomDarkening = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                      <div className={styles.select_chain_options___side}>
-
-                        <div className={styles.select_chain_option3_options}>
-
-                          <div className={styles.select_chain_option3_ellipse_wrapper}>
-                            <span
-                              className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
-                                styles.active_wand_cordless_motorized : ''}`}
-                              onClick={() => handleLiftFeatureEllipsess(3)}
-                            ></span>
-                          </div>
-
-                          <div className={styles.motorized_subtitle}>
-                            <span className={styles.price_bar}>${motorizedpriceCMSZebrablindsRoomDarkening}</span>
-                          </div>
-
-                          <div className={styles.options_price_seperator}></div>
-
-
-                          <span className={styles.priced_item}>Motorized</span>
-
-                        </div>
-                      </div>
-
-                      <div className={styles.select_chain_options___side}>
+                      
+                    <div className={styles.select_chain_options___side}>
                         <div className={styles.motorized_option_image_placeholder}>
                           <Image
                             width={400}
@@ -3769,6 +3754,31 @@ const ZebraBlindsRoomDarkening = () => {
 
                         </div>
                       </div>
+                      
+                      <div className={styles.select_chain_options___side}>
+
+                        <div className={styles.select_chain_option3_options}>
+
+                          <div className={styles.motorized_subtitle}>
+                            <span className={styles.price_bar}>${motorizedpriceCMSZebrablindsRoomDarkening}</span>
+                          </div>
+
+                          <div className={styles.options_price_seperator}></div>
+
+
+                          <span className={styles.priced_item}>Motorized</span>
+
+                          <div className={styles.select_chain_option3_ellipse_wrapper}>
+                            <span
+                              className={`${styles.motorized_ellipse} ${active_wand_cordless_motorized === 3 ?
+                                styles.active_wand_cordless_motorized : ''}`}
+                              onClick={() => handleLiftFeatureEllipsess(3)}
+                            ></span>
+                          </div>
+
+                        </div>
+                      </div>
+
                     </div>
 
                   </div>
@@ -4142,7 +4152,7 @@ const ZebraBlindsRoomDarkening = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_top_rail}>
                       <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
 
                       <div className={styles.answers_answers2}>
@@ -4190,7 +4200,7 @@ const ZebraBlindsRoomDarkening = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer}>
+                    <div className={styles.description_and_answer_bottom_rail}>
                       <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                       <div className={styles.answers_answers2}>
                         {selectedImagesBottom?.length > 0 && (

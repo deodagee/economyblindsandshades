@@ -68,9 +68,13 @@
 }
 
 
+.rectangle_2, 
+.rectangle_3 { 
+  display: none;
+}
+
+
 .rectangle_1,
-.rectangle_2,
-.rectangle_3,
 .rectangle_4,
 .rectangle_5 {
 
@@ -102,7 +106,7 @@
 
 
 .router_tab {
-  width: 10vw;
+  width: 20vw;
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -122,7 +126,7 @@
   display: flex;
   position: absolute;
   width: 35vw;
-  height: 10vw;
+  height: 25vh;
   gap: 10px;
   align-items: center;
   justify-content: center;

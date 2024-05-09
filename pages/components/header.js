@@ -188,7 +188,7 @@ function HeaderPiece() {
                           </Link>
 
                           <Link href={"/"}>
-                            <p className={styles.side_menu_item}>No Drill Type HoneyComb Blinds</p>
+                            <p className={styles.side_menu_item}>No Drill Type Honey-Comb Blinds</p>
                           </Link>
 
                         </div>
@@ -218,9 +218,9 @@ function HeaderPiece() {
                     onMouseEnter={() => handleMouseEnter('menu1')}
                     onMouseLeave={() => handleMouseLeave('menu1')}>
                     <div className={styles.tag_and_chevron}>
-                      <span>
-                        <li>No Drill Type</li>
-                        <li>Zebra Blinds</li>
+                      <span className={styles.headerlink}>
+                        <li> </li>
+                        <li>No Drill Type Zebra Blinds</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}
@@ -258,89 +258,100 @@ function HeaderPiece() {
                   </button>
 
 
-                  <button
-                    className={styles.second_menu_bar_item}
-                    onMouseEnter={() => handleMouseEnter('menu2')}
-                    onMouseLeave={() => handleMouseLeave('menu2')}
-                  >
-                    <div className={styles.tag_and_chevron}>
-                      <span>
-                        <li>No Drill Type</li>
-                        <li>Shangrila Blinds</li>
-                      </span>
-                      <Image
-                        className={styles.chevron_top_menu}
-                        width={100}
-                        height={100}
-                        src={"/chevronblack.png"}
-                        alt="chevron_top_menu"
-                      />
-                    </div>
-                    <div className={styles.drop_down_wrapper}>
-                      {openMenu.menu2 && (
-                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                          <div className={styles.drop_down_wrapper_list}>
-                            <ul>
-                              <Link href={"/shangrilablindsroomdarkening"}>
-                                <li className={styles.drop_down_menu_item}>
-                                  Room Darkening
-                                </li>
-                              </Link>
-                            </ul>
-                            <ul>
-                              <Link href={"/shangrilablindsroomlightening"}>
-                                <li className={styles.drop_down_menu_item}>
-                                  Light Filtering
-                                </li>
-                              </Link>
-                            </ul>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </button>
 
-                  <button
-                    className={styles.second_menu_bar_item}
-                    onMouseEnter={() => handleMouseEnter('menu3')}
-                    onMouseLeave={() => handleMouseLeave('menu3')}
-                  >
-                    <div className={styles.tag_and_chevron}>
-                      <span>
-                        <li>No Drill Type</li>
-                        <li>Roman Blinds</li>
-                      </span>
-                      <Image
-                        className={styles.chevron_top_menu}
-                        width={100}
-                        height={100}
-                        src={"/chevronblack.png"}
-                        alt="chevron_top_menu"
-                      />
-                    </div>
-                    <div className={styles.drop_down_wrapper}>
-                      {openMenu.menu3 && (
-                        <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                          <div className={styles.drop_down_wrapper_list}>
-                            <ul>
-                              <Link href={"/romanblindsroomdarkening"}>
-                                <li className={styles.drop_down_menu_item}>
-                                  Room Darkening
-                                </li>
-                              </Link>
-                            </ul>
-                            <ul>
-                              <Link href={"/romanblindsroomlightening"}>
-                                <li className={styles.drop_down_menu_item}>
-                                  Light Filtering
-                                </li>
-                              </Link>
-                            </ul>
+                  <span className={styles.invisible}>
+                    <button
+                      className={styles.second_menu_bar_item}
+                      onMouseEnter={() => handleMouseEnter('menu2')}
+                      onMouseLeave={() => handleMouseLeave('menu2')}
+                    >
+                      <div className={styles.tag_and_chevron}>
+
+                        <span className={styles.headerlink}>
+                          <li></li>
+                          <li>No Drill Type Shangrila Blinds</li>
+                        </span>
+
+                        <Image
+                          className={styles.chevron_top_menu}
+                          width={100}
+                          height={100}
+                          src={"/chevronblack.png"}
+                          alt="chevron_top_menu"
+                        />
+                      </div>
+                      <div className={styles.drop_down_wrapper}>
+                        {openMenu.menu2 && (
+                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                            <div className={styles.drop_down_wrapper_list}>
+                              <ul>
+                                <Link href={"/shangrilablindsroomdarkening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Darkening
+                                  </li>
+                                </Link>
+                              </ul>
+                              <ul>
+                                <Link href={"/shangrilablindsroomlightening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Light Filtering
+                                  </li>
+                                </Link>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                      )}
-                    </div>
-                  </button>
+                        )}
+                      </div>
+                    </button>
+                  </span>
+
+
+
+                  <span className={styles.invisible}>
+                    <button
+                      className={styles.second_menu_bar_item}
+                      onMouseEnter={() => handleMouseEnter('menu3')}
+                      onMouseLeave={() => handleMouseLeave('menu3')}
+                    >
+                      <div className={styles.tag_and_chevron}>
+                        <span className={styles.headerlink}>
+                          <li></li>
+                          <li>No Drill Type Roman Blinds</li>
+                        </span>
+                        <Image
+                          className={styles.chevron_top_menu}
+                          width={100}
+                          height={100}
+                          src={"/chevronblack.png"}
+                          alt="chevron_top_menu"
+                        />
+                      </div>
+                      <div className={styles.drop_down_wrapper}>
+                        {openMenu.menu3 && (
+                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                            <div className={styles.drop_down_wrapper_list}>
+                              <ul>
+                                <Link href={"/romanblindsroomdarkening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Room Darkening
+                                  </li>
+                                </Link>
+                              </ul>
+                              <ul>
+                                <Link href={"/romanblindsroomlightening"}>
+                                  <li className={styles.drop_down_menu_item}>
+                                    Light Filtering
+                                  </li>
+                                </Link>
+                              </ul>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </button>
+                  </span>
+
+
 
                   <button
                     className={styles.second_menu_bar_item}
@@ -348,9 +359,9 @@ function HeaderPiece() {
                     onMouseLeave={() => handleMouseLeave('menu4')}
                   >
                     <div className={styles.tag_and_chevron}>
-                      <span>
-                        <li>No Drill Type</li>
-                        <li>Roller Blinds</li>
+                      <span className={styles.headerlink}>
+                        <li></li>
+                        <li>No Drill Type Roller Blinds</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}
@@ -390,9 +401,9 @@ function HeaderPiece() {
                     onMouseLeave={() => handleMouseLeave('menu5')}
                   >
                     <div className={styles.tag_and_chevron}>
-                      <span>
-                        <li>No Drill Type</li>
-                        <li>HoneyComb Blinds</li>
+                      <span className={styles.headerlink}>
+                        <li></li>
+                        <li>No Drill Type Honey-Comb Blinds</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}

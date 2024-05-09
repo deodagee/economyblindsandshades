@@ -2594,6 +2594,8 @@ display: none;
   flex-direction: row;
 }
 
+.casette_rail_type_answer,
+
 
 .window_name_answer,
 .window_type_answer,
@@ -2602,7 +2604,6 @@ display: none;
 .materials_answer,
 .lift_type_answer,
 .bottom_rail_type_answer,
-.casette_rail_type_answer,
 .estimated_delivery_date_title {
   width: 30.5vw;
   display: flex;
@@ -2901,6 +2902,11 @@ display: none;
   margin-bottom: 5px;
   margin-top: 5px;
   background-color: rgb(145, 145, 145);
+}
+
+.description_and_answer_top_rail, 
+.description_and_answer_bottom_rail { 
+display: none;
 }
 
 .description_and_answer {

@@ -179,7 +179,14 @@
   background: linear-gradient(to bottom, #ededed, #dcdcdc, #e1e1e1);
 
 }
+.invisible { 
+  display: none;
+}
 
+.headerlink { 
+  display: flex;
+  flex-direction: row;
+}
 
 .second_menu_bar_item {
   display: flex;
@@ -304,8 +311,6 @@
   color: #e5e5e5;
   background: linear-gradient(to right, #212121, #282828, #353535);
 }
-
-
 
 
 .tag_and_chevron {
