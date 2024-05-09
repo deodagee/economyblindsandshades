@@ -1893,8 +1893,11 @@ transform: scale(1.04);
   margin: 10px;
 }
 
+.select_chain_option2_wrapper { 
+  display: none;
+}
+
 .select_chain_option1_wrapper,
-.select_chain_option2_wrapper,
 .select_chain_option3_wrapper {
   display: flex;
   margin-left: 20px;
