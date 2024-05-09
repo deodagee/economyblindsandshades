@@ -1995,6 +1995,7 @@ transform: scale(1.04);
   justify-content: flex-start;
   gap: 30px;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 
@@ -2009,8 +2010,11 @@ transform: scale(1.04);
   border-color: black;
 }
 
+.wand_subtitle .price_bar { 
+display: none;
+}
 
-.wand_subtitle,
+
 .cord_less_subtitle,
 .motorized_subtitle {
   display: flex;
@@ -2137,7 +2141,7 @@ transform: scale(1.04);
 }
 
 .select_head_rail_group {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 60vw;
 }
