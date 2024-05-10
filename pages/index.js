@@ -169,7 +169,9 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <div className={styles.rectangle_5}>
+              </div>
+
+              <div className={styles.rectangle_5}>
                   <p className={styles.router_tab}>
                     <span>
                       Honeycomb Blinds 
@@ -198,10 +200,6 @@ export default function HomePage() {
                     </Link>
                   </span>
                 </div>
-
-
-
-              </div>
 
               <div className={styles.rectangle_2}>
                   <p className={styles.router_tab}>
