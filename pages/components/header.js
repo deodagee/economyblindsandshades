@@ -12,11 +12,26 @@ function HeaderPiece() {
   const { data: session } = useSession()
 
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const burgerMenuRef = useRef(null);
 
   const toggleSideMenu = () => {
     setSideMenuOpen(!isSideMenuOpen);
   };
 
+  const handleClickOutside = (event) => {
+    if (burgerMenuRef.current && !burgerMenuRef.current.contains(event.target)) {
+      setSideMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   /////////////////////////////////////////////////////////////////////////
 
   const [openMenu, setOpenMenu] = useState({
@@ -159,7 +174,7 @@ function HeaderPiece() {
                 <span className={styles.second_bar_wrapper}>
 
 
-                  <div className={styles.burger_and_menu}>
+                  <div className={styles.burger_and_menu} ref={burgerMenuRef}>
                     <div className={styles.hamburger_icon} onClick={toggleSideMenu}>
                       <span className={styles.hamburger_line}></span>
                       <span className={styles.hamburger_line}></span>
@@ -167,31 +182,23 @@ function HeaderPiece() {
                     </div>
 
                     {isSideMenuOpen && (
-                      <div className={styles.side_menu_container}>
+                      <div className={styles.side_menu_container} ref={menuRef}>
                         <div className={styles.side_menu}>
-
-
-                          <Link href={"/zebrablinds"}>
-                            <p className={styles.side_menu_item}>Zebra Blinds No Drill Type</p>
+                          Shop Blinds
+                          <Link className={styles.side_menu_item} href={"/zebrablinds"}>
+                            <p >Zebra Blinds</p>
+                            <p>No Drill Type</p>
                           </Link>
-
-                          <Link href={"/"}>
-                            <p className={styles.side_menu_item}>Shangrila Blinds No Drill Type</p>
+                          <Link className={styles.side_menu_item} href={"/"}>
+                            <p >Roller Blinds</p>
+                            <p>No Drill Type</p>
                           </Link>
-
-                          <Link href={"/romanblindsroomlightening"}>
-                            <p className={styles.side_menu_item}>Roman Blinds Light Filtering No Drill Type</p>
+                          <Link className={styles.side_menu_item} href={"/"}>
+                            <p >Honey-Comb Blinds</p>
+                            <p>No Drill Type</p>
                           </Link>
-
-                          <Link href={"/"}>
-                            <p className={styles.side_menu_item}>Roller Blinds No Drill Type</p>
-                          </Link>
-
-                          <Link href={"/"}>
-                            <p className={styles.side_menu_item}>Honey-Comb Blinds No Drill Type</p>
-                          </Link>
-
                         </div>
+                        Other
                       </div>
                     )}
                   </div>

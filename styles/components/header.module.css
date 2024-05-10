@@ -13,6 +13,7 @@
   background-color: #264a4e;
 }
 
+
 .logo_and_header_1st_and_2nd_bar {
   display: flex;
   flex-direction: row;
@@ -639,7 +640,7 @@
   .side_menu_container {
     display: flex;
     flex-direction: column;
-    background-color: #264a4eb7;
+    background-color: #dedede;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -647,19 +648,24 @@
     top: 170px;
     bottom: 0;
     left: 0;
-    border-top-right-radius: 0.25rem;
+border-radius: 0;
     border-bottom-right-radius: 0.25rem;
+    z-index: 100;
   }
 
   .side_menu {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 35vw;
+    width: 50vw;
     gap: 5px;
     transition: 0.6s;
   }
 
+  .side_menu Link { 
+    display: flex;
+    flex-direction: column;
+  }
   .side_menu_item {
     display: flex;
     margin-top: 10px;
@@ -668,21 +674,26 @@
     border-left: none;
     border-right: none;
     border-color: #ffffff;
-    width: 35vw;
+    width: 45vw;
     flex-grow: 1;
     height: 30px;
     align-items: center;
     justify-content: flex-start;
     margin-left: 5px;
-    color: white;
-    font-size: 12px;
+    padding-left: 5px;
+    color: rgb(70, 70, 70);
+    font-size: 11px;
+    gap: 5px;
+    font-weight: 700;
     transition: 0.4s;
+    background-color: rgb(201, 201, 201);
 
   }
 
   .side_menu_item:hover{ 
     transition: 0.4s;
     background: #264a4e;
+    color: white;
   }
 
 

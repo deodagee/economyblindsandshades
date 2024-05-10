@@ -36,7 +36,7 @@ export default function HomePage() {
 
   return (
     <>
-      <HeaderPiece></HeaderPiece>
+      <HeaderPiece className={styles.HeaderPiece}></HeaderPiece>
       <br />
       <br />
       <br />
