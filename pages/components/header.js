@@ -172,23 +172,23 @@ function HeaderPiece() {
 
 
                           <Link href={"/zebrablinds"}>
-                            <p className={styles.side_menu_item}>No Drill Type Zebra Blinds</p>
+                            <p className={styles.side_menu_item}>Zebra Blinds No Drill Type</p>
                           </Link>
 
                           <Link href={"/"}>
-                            <p className={styles.side_menu_item}>No Drill Type Shangrila Blinds</p>
+                            <p className={styles.side_menu_item}>Shangrila Blinds No Drill Type</p>
                           </Link>
 
                           <Link href={"/romanblindsroomlightening"}>
-                            <p className={styles.side_menu_item}>No Drill Type Roman Blinds Light Filtering</p>
+                            <p className={styles.side_menu_item}>Roman Blinds Light Filtering No Drill Type</p>
                           </Link>
 
                           <Link href={"/"}>
-                            <p className={styles.side_menu_item}>No Drill Type Roller Blinds</p>
+                            <p className={styles.side_menu_item}>Roller Blinds No Drill Type</p>
                           </Link>
 
                           <Link href={"/"}>
-                            <p className={styles.side_menu_item}>No Drill Type Honey-Comb Blinds</p>
+                            <p className={styles.side_menu_item}>Honey-Comb Blinds No Drill Type</p>
                           </Link>
 
                         </div>
@@ -220,7 +220,7 @@ function HeaderPiece() {
                     <div className={styles.tag_and_chevron}>
                       <span className={styles.headerlink}>
                         <li> </li>
-                        <li>No Drill Type Zebra Blinds</li>
+                        <li>Zebra Blinds No Drill Type</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}
@@ -269,7 +269,7 @@ function HeaderPiece() {
 
                         <span className={styles.headerlink}>
                           <li></li>
-                          <li>No Drill Type Shangrila Blinds</li>
+                          <li>Shangrila Blinds No Drill Type</li>
                         </span>
 
                         <Image
@@ -316,7 +316,7 @@ function HeaderPiece() {
                       <div className={styles.tag_and_chevron}>
                         <span className={styles.headerlink}>
                           <li></li>
-                          <li>No Drill Type Roman Blinds</li>
+                          <li>Roman Blinds No Drill Type</li>
                         </span>
                         <Image
                           className={styles.chevron_top_menu}
@@ -361,7 +361,7 @@ function HeaderPiece() {
                     <div className={styles.tag_and_chevron}>
                       <span className={styles.headerlink}>
                         <li></li>
-                        <li>No Drill Type Roller Blinds</li>
+                        <li>Roller Blinds No Drill Type</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}
@@ -403,7 +403,7 @@ function HeaderPiece() {
                     <div className={styles.tag_and_chevron}>
                       <span className={styles.headerlink}>
                         <li></li>
-                        <li>No Drill Type Honey-Comb Blinds</li>
+                        <li>Honey-Comb Blinds No Drill Type</li>
                       </span>
                       <Image
                         className={styles.chevron_top_menu}

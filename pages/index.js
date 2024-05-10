@@ -68,13 +68,17 @@ export default function HomePage() {
 
 
 
-
               <div className={styles.different_blinds_top}>
 
                 <div className={styles.rectangle_1}>
 
                   <p className={styles.router_tab}>
-                    No Drill Type Zeebra Blinds
+                    <span>
+                    Zeebra Blinds
+                    </span>
+                    <span>
+                    No Drill Type
+                    </span>
                   </p>
 
 
@@ -104,7 +108,12 @@ export default function HomePage() {
                 <div className={styles.rectangle_4}>
 
                   <p className={styles.router_tab}>
-                    No Drill Type Roller Blinds
+                    <span>
+                    Roller Blinds 
+                    </span>
+                    <span>
+                    No Drill Type
+                    </span>
                   </p>
 
 
@@ -133,7 +142,10 @@ export default function HomePage() {
                 <div className={styles.rectangle_3}>
                   <p className={styles.router_tab}>
                     <span>
-                      No Drill Type Roman Blinds
+                      Roman Blinds 
+                    </span>
+                    <span>
+                    No Drill Type
                     </span>
                   </p>
 
@@ -160,34 +172,10 @@ export default function HomePage() {
                 <div className={styles.rectangle_5}>
                   <p className={styles.router_tab}>
                     <span>
-                      No Drill Type Honeycomb Blinds
+                      Honeycomb Blinds 
                     </span>
-                  </p>
-
-                  <span className={styles.linkitem_wrapper}>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Light Filtering
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Room Darkening
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
-                  </span>
-                </div>
-
-                <div className={styles.rectangle_2}>
-                  <p className={styles.router_tab}>
                     <span>
-                      No Drill Type Shangrila Blinds
+                    No Drill Type
                     </span>
                   </p>
 
@@ -210,8 +198,59 @@ export default function HomePage() {
                     </Link>
                   </span>
                 </div>
+
+
 
               </div>
+
+              <div className={styles.rectangle_2}>
+                  <p className={styles.router_tab}>
+                    <span>
+                      Shangrila Blinds 
+                    </span>
+                    <span>
+                    No Drill Type
+                    </span>
+                  </p>
+
+                  <span className={styles.linkitem_wrapper}>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        <span>
+                          Light Filtering
+                        </span>
+                        <br />
+                      </span>
+                    </Link>
+                    <Link href={"/"}>
+                      <span className={styles.linkitem}>
+                        <span>
+                          Room Darkening
+                        </span>
+                        <br />
+                      </span>
+                    </Link>
+                  </span>
+                </div>
+
+              <div className={styles.rectangle_6}>
+                <p className={styles.router_tab}>
+                  <span>
+                    Economy Blinds & Shades
+                  </span>
+                  <span>
+                  Demo Video
+                  </span>
+                </p>
+
+                <span className={styles.linkitem_wrapper}>
+                  <video className={styles.demo_video} controls width="500" height="500">
+                    <source src="economyblindsandshadesdemo.MOV" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </span>
+              </div>
+
             </div>
 
 

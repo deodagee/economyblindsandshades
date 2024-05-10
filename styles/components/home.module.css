@@ -48,7 +48,7 @@
   margin-bottom: 21vh;
 }
 
-.two_section_div5 { 
+.two_section_div5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
 
 
 .different_blinds_top {
-  width: 80vw;
+  width: max-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   flex-direction: column;
@@ -68,15 +68,16 @@
 }
 
 
-.rectangle_2, 
-.rectangle_3 { 
+.rectangle_2,
+.rectangle_3 {
   display: none;
 }
 
 
 .rectangle_1,
 .rectangle_4,
-.rectangle_5 {
+.rectangle_5,
+.rectangle_6 {
 
   border-radius: 5px;
   width: 35vw;
@@ -93,11 +94,13 @@
   background-color: rgb(229, 229, 229);
 }
 
+
 .rectangle_1:hover,
 .rectangle_2:hover,
 .rectangle_3:hover,
 .rectangle_4:hover,
-.rectangle_5:hover {
+.rectangle_5:hover,
+.rectangle_6:hover {
   transform: scale(1.01);
   box-shadow: rgb(95, 95, 95) 1px 1px 5px;
   transition: 0.3s;
@@ -131,10 +134,11 @@
   align-items: center;
   justify-content: center;
   margin-left: 50px;
-  color:white;
+  color: white;
   text-decoration: underline;
   text-decoration-color: red;
 }
+
 
 .linkitem {
   position: relative;
@@ -152,7 +156,7 @@
   border-width: 2px;
   border-color: rgb(0, 128, 79);
   border-radius: 0.25rem;
-  overflow: hidden; 
+  overflow: hidden;
   box-shadow: #dbdbdb 0.5px 0.5px 3px;
 
 }
@@ -164,10 +168,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/shangrilablinds.png"); 
+  background-image: url("/shangrilablinds.png");
   background-size: cover;
-  opacity: 0.4; 
-  transition: opacity 0.5s; 
+  opacity: 0.4;
+  transition: opacity 0.5s;
 }
 
 .linkitem:hover::before {
@@ -175,14 +179,25 @@
 }
 
 .linkitem:hover span {
-color: black;
-font-size: 16px;
+  color: black;
+  font-size: 16px;
 
 }
 
 .linkitem span {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
+}
+
+.demo_video {
+  background-color: black;
+  border-color: green;
+  border-width: 2px;
+  border-radius: 0.25rem;
+  display: flex;
+  height: 17vh;
+  width: 17vw;
+  margin-top: 5vh;
 }
 
 
@@ -350,13 +365,7 @@ font-size: 16px;
 
 
 
-
-
-
 @media (min-width: 200px) and (max-width: 600px) and (orientation: portrait) {
-
-
-
 
   .EconomyBlindsAndShades {
     display: flex;
@@ -367,9 +376,10 @@ font-size: 16px;
   .rectangle_2,
   .rectangle_3,
   .rectangle_4,
-  .rectangle_5 {
+  .rectangle_5
+   {
     border-radius: 5px;
-    width: 40vw;
+    width: 42vw;
     height: 20vh;
     align-items: center;
     justify-content: center;
@@ -383,25 +393,49 @@ font-size: 16px;
     background-color: rgb(243, 243, 243);
   }
 
+  .rectangle_6  { 
+    border-radius: 5px;
+    width: 42vw;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    margin-top: 5vh;
+    gap: 5vw;
+    border-width: 2px;
+    border-color: rgb(0, 144, 127);
+    border-color: rgb(144, 70, 0);
+    box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+    transition: 0.3s;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .rectangle_6 .linkitem_wrapper { 
+    width: 35vw;
+    display: flex;
+    align-items:center;
+  }
+
   .router_tab {
-    width : calc(40vw - 3.5px);
-    height: 5vh;
+    width: calc(42vw - 3.5px);
+    height: 7vh;
     display: flex;
     align-self: flex-start;
     justify-content: center;
     background-color: #296759;
     background: linear-gradient(to top, #1e4b41, #255e51, #3f937f);
-
+font-size: 10px;
+flex-direction: column;
     position: absolute;
     padding: 5px;
     font-weight: 600;
     white-space: nowrap;
-    text-decoration: underline;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: white;
 
-    
+
   }
 
 
@@ -413,14 +447,14 @@ font-size: 16px;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-left:0;
+    margin-left: 0;
     margin-top: 40px;
-    color:white;
+    color: white;
     text-decoration: underline;
     text-decoration-color: red;
   }
 
-  
+
   .linkitem {
     position: relative;
     width: 17vw;
@@ -437,11 +471,11 @@ font-size: 16px;
     border-width: 2px;
     border-color: rgb(0, 128, 79);
     border-radius: 0.25rem;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: #dbdbdb 0.5px 0.5px 3px;
     text-align: center;
   }
-  
+
 
   .add {
     width: 90vw;
@@ -459,6 +493,17 @@ font-size: 16px;
     font-weight: 600;
     transition: 0.4s;
     text-align: left;
+  }
+
+  .demo_video {
+    background-color: black;
+    border-color: green;
+    border-width: 2px;
+    border-radius: 0.25rem;
+    display: flex;
+    height: 10vh;
+    width: 35vw;
+    margin-top: 0;
   }
 
 
@@ -574,7 +619,7 @@ font-size: 16px;
   .rectangle_5 {
     border-radius: 5px;
     width: 40vw;
-    height: 25vh;
+    height: 30vh;
     align-items: start;
     justify-content: flex-start;
     display: flex;
@@ -582,24 +627,50 @@ font-size: 16px;
     gap: 5vw;
     border-width: 2px;
     border-color: rgb(0, 144, 127);
+    border-color: rgb(144, 70, 0);
+    box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+    transition: 0.3s;
+    background-color: rgb(243, 243, 243);
+  }
+  .rectangle_6  { 
+    border-radius: 5px;
+    width: 40vw;
+    height: 30vh;
+    align-items: start;
+    justify-content: flex-start;
+    display: flex;
+    margin: 5px;
+    margin-top: 5vh;
+    gap: 5vw;
+    border-width: 2px;
+    border-color: rgb(0, 144, 127);
+    border-color: rgb(144, 70, 0);
     box-shadow: rgb(197, 197, 197) 5px 5px 10px;
     transition: 0.3s;
     background-color: rgb(243, 243, 243);
   }
 
+  .rectangle_6 .linkitem_wrapper { 
+    width: 35vw;
+    display: flex;
+    align-items:center;
+  }
+
   .router_tab {
-    width: 40vw;
-    height: 5vh;
+    width: calc(40vw - 3.5px);
+    height: 7vh;
     display: flex;
     align-self: flex-start;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
     position: absolute;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 12px;
     padding: 5px;
     font-weight: 600;
     white-space: nowrap;
-    text-decoration: underline;
-    
+
   }
 
 
@@ -607,21 +678,21 @@ font-size: 16px;
     display: flex;
     position: absolute;
     width: max-content;
-    height: 30vh;
+    height: 35vh;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-left:5px;
-    color:white;
+    margin-left: 5px;
+    color: white;
     text-decoration: underline;
     text-decoration-color: red;
   }
 
-  
+
   .linkitem {
     position: relative;
     width: 17vw;
-    height: 10vh;
+    height: 15vh;
     display: flex;
     word-wrap: break-word;
     align-items: center;
@@ -634,11 +705,11 @@ font-size: 16px;
     border-width: 2px;
     border-color: rgb(0, 128, 79);
     border-radius: 0.25rem;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: #dbdbdb 0.5px 0.5px 3px;
     text-align: center;
   }
-  
+
 
   .add {
     width: 90vw;
@@ -656,6 +727,19 @@ font-size: 16px;
     font-weight: 600;
     transition: 0.4s;
     text-align: left;
+  }
+
+
+
+
+  .demo_video {
+    background-color: black;
+    border-color: green;
+    border-width: 2px;
+    border-radius: 0.25rem;
+    display: flex;
+    height: 15vh;
+    width: 20vw;
   }
 
 
