@@ -373,8 +373,6 @@
   }
 
   .rectangle_1,
-  .rectangle_2,
-  .rectangle_3,
   .rectangle_4,
   .rectangle_5
    {
@@ -613,8 +611,6 @@ flex-direction: column;
   }
 
   .rectangle_1,
-  .rectangle_2,
-  .rectangle_3,
   .rectangle_4,
   .rectangle_5 {
     border-radius: 5px;
