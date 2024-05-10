@@ -245,7 +245,7 @@ export default function HomePage() {
 
                 <span className={styles.linkitem_wrapper}>
                   <video className={styles.demo_video} controls width="500" height="500">
-                    <source src="economyblindsandshadesdemo.MOV" type="video/mp4" />
+                    <source src="https://www.dropbox.com/scl/fi/4590voqa2eq4kq3g06gwo/economyblindsandshadesdemo.mp4?rlkey=9ofy3zd9rhu62a5yfmj9zpmbu&e=1&st=9nqv5iaw&dl=1" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </span>
