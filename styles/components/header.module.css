@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 21.25vw;
+  width: 15vw;
 }
 
 .icons_for_top {
@@ -104,11 +104,13 @@
 .icon_and_text_contact_and_privacy {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
-  width: 21.25vw;
+  width: auto;
   height: 20px;
+  margin-right: 5vw;
+
 }
 
 .top_links_item {
@@ -120,13 +122,21 @@
   justify-content: flex-end;
   width: max-content;
   transition: 0.4s;
-  margin-right: 20px;
+  background-color: rgb(230, 230, 230);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 0.25rem;
+  box-shadow: -3px 3px 3px 0px rgb(197, 197, 197);
+  border-width: 1px;
+  border-color: rgb(142, 142, 142);
 }
 
 .top_links_item:hover { 
   text-decoration: underline;
   transition: 0.4s;
   color: rgb(54, 54, 54);
+  box-shadow: -3px 3px 5px 0px rgb(80, 80, 80);
+
 }
 
 .divider_line {
@@ -210,6 +220,16 @@
   transition: 0.2s;
   color: #122628;
 }
+
+.second_bar_left { 
+display: flex;
+}
+
+
+.second_bar_right { 
+display: flex;
+}
+
 
 .hamburger_icon {
   display: none;

@@ -32,6 +32,7 @@ function HeaderPiece() {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
+
   /////////////////////////////////////////////////////////////////////////
 
   const [openMenu, setOpenMenu] = useState({
@@ -43,8 +44,6 @@ function HeaderPiece() {
     menu6: false,
 
   });
-
-
 
   const handleMouseEnter = (menu) => {
     setOpenMenu((prevOpenMenu) => ({
@@ -87,6 +86,7 @@ function HeaderPiece() {
     };
   }, []);
 
+
   return (
 
     <>
@@ -110,7 +110,6 @@ function HeaderPiece() {
               </li>
             </div>
             <div className={styles.header_1st_and_2nd_bar}>
-
 
               <div className={styles.first_bar}>
 
@@ -155,20 +154,20 @@ function HeaderPiece() {
 
                   <span className={styles.icon_and_text_contact_and_privacy} >
 
-                    <Link className={styles.top_links_item}
-                      href={"/contact"}
-                    > Contact
-                    </Link>
 
-                    <div className={styles.divider_line}
-                    ></div>
+                    <Link className={styles.top_links_item} href={"/contact"}>  Contact </Link>
+
+                    <div className={styles.divider_line}> </div>
 
                     <Link className={styles.top_links_item} href={"/privacypolicy"} > Privacy Policy </Link>
+
+                    <Link className={styles.top_links_item} href={"/crp"} > Cancellations & Refund Policy </Link>
 
                   </span>
 
                 </span>
               </div>
+
 
               <ul className={styles.second_bar}>
                 <span className={styles.second_bar_wrapper}>
@@ -189,11 +188,11 @@ function HeaderPiece() {
                             <p >Zebra Blinds</p>
                             <p>No Drill Type</p>
                           </Link>
-                          <Link className={styles.side_menu_item} href={"/"}>
+                          <Link className={styles.side_menu_item} href={"/rollerblindsroomlightening"}>
                             <p >Roller Blinds</p>
                             <p>No Drill Type</p>
                           </Link>
-                          <Link className={styles.side_menu_item} href={"/"}>
+                          <Link className={styles.side_menu_item} href={"/honeycombblindsroomlightening"}>
                             <p >Honey-Comb Blinds</p>
                             <p>No Drill Type</p>
                           </Link>
@@ -203,9 +202,13 @@ function HeaderPiece() {
                     )}
                   </div>
 
+
+                  <span className={styles.second_bar_left}>
+
                   <Link className={styles.header_link_home_button} href={"/"} >
                     <li className={styles.home_button_wrapper}>
                       <span>
+
                         <Image
                           alt="homebutton"
                           width={100}
@@ -213,13 +216,16 @@ function HeaderPiece() {
                           src={"/homebutton.png"}
                           className={styles.home_button}>
                         </Image>
+
                       </span>
                     </li>
                     <span className={styles.home_button_text}>
                       <div >Home</div>
                     </span>
                   </Link>
+                  </span>
 
+                  <span className={styles.second_bar_right}>
                   <button
                     className={styles.second_menu_bar_item}
                     onMouseEnter={() => handleMouseEnter('menu1')}
@@ -229,6 +235,7 @@ function HeaderPiece() {
                         <li> </li>
                         <li>Zebra Blinds No Drill Type</li>
                       </span>
+
                       <Image
                         className={styles.chevron_top_menu}
                         width={100}
@@ -236,6 +243,7 @@ function HeaderPiece() {
                         src={"/chevronblack.png"}
                         alt="chevron_top_menu">
                       </Image>
+
                     </div>
 
                     <div className={styles.drop_down_wrapper}>
@@ -244,18 +252,22 @@ function HeaderPiece() {
                           <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
                             <div className={styles.drop_down_wrapper_list}>
                               <ul>
+
                                 <Link href={"/zebrablindsroomdarkening"}>
                                   <li className={styles.drop_down_menu_item}>
                                     Room Darkening
                                   </li>
                                 </Link>
+
                               </ul>
                               <ul>
+
                                 <Link href={"/zebrablinds"}>
                                   <li className={styles.drop_down_menu_item}>
                                     Light Filtering
                                   </li>
                                 </Link>
+
                               </ul>
                             </div>
                           </div>
@@ -263,8 +275,7 @@ function HeaderPiece() {
                       )}
                     </div>
                   </button>
-
-
+                  </span>
 
                   <span className={styles.invisible}>
                     <button
