@@ -57,7 +57,7 @@
 
 
 .top_banner { 
-  background-color: red;
+  background-color: #d2d2d2;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -70,7 +70,6 @@
   background-repeat: no-repeat;
   margin-bottom: 5vh;
 }
-
 
 .top_banner_headers { 
   display: flex;
@@ -142,7 +141,7 @@
 
 
 .top_banner2 { 
-  background-color: red;
+  background-color: #d2d2d2;
   width: 70vw;
   display: flex;
   align-items: center;
@@ -421,6 +420,16 @@
   display: flex;
   font-size: 12px;
   color: rgb(0, 83, 73);
+}
+
+.title_for_three_icons { 
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+
 }
 
 
