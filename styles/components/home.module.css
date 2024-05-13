@@ -42,7 +42,7 @@
   width: 100vw;
   align-items: center;
   justify-content: center;
-  margin-top: -100px;
+  margin-top: -168px;
   display: flex;
   flex-direction: column;
   margin-bottom: 21vh;
@@ -51,10 +51,51 @@
 .two_section_div5 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
+
+.top_banner { 
+  background-color: red;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34vh;
+  flex-direction: row;
+  background-image: url("/blindsrf5.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh;
+}
+
+
+.top_banner_headers { 
+  display: flex;
+  background-color: black;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0.35rem;
+  box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+  gap: 15px;
+
+}
+
+
+.top_banner h1 { 
+  display: flex;
+  height: 30px;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 
 .different_blinds_top {
@@ -76,14 +117,80 @@
 
 .rectangle_1,
 .rectangle_4,
-.rectangle_5,
-.rectangle_6 {
+.rectangle_5
+{
 
   border-radius: 5px;
   width: 35vw;
   height: 13vw;
   align-items: start;
   justify-content: flex-start;
+  display: flex;
+  margin: 5px;
+  gap: 5vw;
+  border-width: 2px;
+  border-color: rgb(0, 144, 127);
+  box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+  transition: 0.3s;
+  background-color: #262626;
+  background: linear-gradient(to top, #f3f3f300, #9e9e9e, #d8d8d800);
+  box-shadow: rgb(142, 142, 142) 5px 5px 10px;
+
+
+}
+
+
+
+.top_banner2 { 
+  background-color: red;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  flex-direction: row;
+  background-image: url("/blindsrf4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 7vh;
+}
+
+
+.top_banner_headers2 { 
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0.35rem;
+  box-shadow: rgb(197, 197, 197) 5px 5px 10px;
+  gap: 15px;
+  width: 45vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_banner2 h1 { 
+  display: flex;
+  height: 30px;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 800;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.rectangle_6 { 
+  border-radius: 5px;
+  width: 70vw;
+  height: 30vw;
+  align-items: center;
+  justify-content:center;
   display: flex;
   margin: 5px;
   gap: 5vw;
@@ -109,7 +216,7 @@
 
 
 .router_tab {
-  width: 20vw;
+  width: 27vw;
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -122,6 +229,7 @@
   white-space: nowrap;
   border-top-left-radius: 3px;
   background: linear-gradient(to top, #1e4b41dc, #255e51e0, #3f937fda);
+  border-bottom-right-radius: 255px;
 
 }
 
@@ -129,11 +237,10 @@
   display: flex;
   position: absolute;
   width: 35vw;
-  height: 25vh;
+  height: 13vw;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  margin-left: 50px;
   color: white;
   text-decoration: underline;
   text-decoration-color: red;
@@ -142,8 +249,8 @@
 
 .linkitem {
   position: relative;
-  width: 9vw;
-  height: 100px;
+  width: 15vw;
+  height: 10vh;
   display: flex;
   word-wrap: break-word;
   align-items: center;
@@ -158,6 +265,7 @@
   border-radius: 0.25rem;
   overflow: hidden;
   box-shadow: #dbdbdb 0.5px 0.5px 3px;
+  margin-top: 5vh;
 
 }
 
@@ -195,9 +303,10 @@
   border-width: 2px;
   border-radius: 0.25rem;
   display: flex;
-  height: 17vh;
-  width: 17vw;
+  height: 25vw;
+  width: 50vw;
   margin-top: 5vh;
+  align-self: center;
 }
 
 
