@@ -230,6 +230,7 @@
   border-top-left-radius: 3px;
   background: linear-gradient(to top, #1e4b41dc, #255e51e0, #3f937fda);
   border-bottom-right-radius: 255px;
+  font-size: 20px;
 
 }
 
@@ -243,7 +244,7 @@
   justify-content: center;
   color: white;
   text-decoration: underline;
-  text-decoration-color: red;
+  text-decoration-color: rgb(255, 255, 255);
 }
 
 
@@ -256,7 +257,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(52, 52, 52, 0.41);
-  font-size: 14px;
+  font-size: 17px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   transition: 0.5s;
   font-weight: 700;
@@ -276,7 +277,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/shangrilablinds.png");
+  background-image: url("/blindsrf7.jpg");
   background-size: cover;
   opacity: 0.4;
   transition: opacity 0.5s;
@@ -288,7 +289,9 @@
 
 .linkitem:hover span {
   color: black;
-  font-size: 16px;
+  font-size: 20px;
+  color: #6cffdfdc;
+
 
 }
 
@@ -558,7 +561,6 @@ flex-direction: column;
     margin-top: 40px;
     color: white;
     text-decoration: underline;
-    text-decoration-color: red;
   }
 
 
@@ -790,7 +792,6 @@ flex-direction: column;
     margin-left: 5px;
     color: white;
     text-decoration: underline;
-    text-decoration-color: red;
   }
 
 
