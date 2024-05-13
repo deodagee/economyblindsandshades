@@ -52,18 +52,24 @@ export default function HomePage() {
 
             <div className={styles.two_section_div5}>
 
-              <h1>
-                Welcome
-                <br />
-                <br />
-              </h1>
-              <h1>
-                Shop And Browse
-                <br />
-                <br />
-                <br />
 
-              </h1>
+              <div className={styles.top_banner}>
+
+                <span className={styles.top_banner_headers}>
+                  <h1>
+                    Welcome,
+                    <br />
+                    <br />
+                  </h1>
+                  <h1>
+                    Shop And Browse
+                    <br />
+                    <br />
+                    <br />
+
+                  </h1>
+                </span>
+              </div>
 
 
 
@@ -74,10 +80,10 @@ export default function HomePage() {
 
                   <p className={styles.router_tab}>
                     <span>
-                    Zeebra Blinds
+                      Zeebra Blinds
                     </span>
                     <span>
-                    No Drill Type
+                      No Drill Type
                     </span>
                   </p>
 
@@ -109,10 +115,10 @@ export default function HomePage() {
 
                   <p className={styles.router_tab}>
                     <span>
-                    Roller Blinds 
+                      Roller Blinds
                     </span>
                     <span>
-                    No Drill Type
+                      No Drill Type
                     </span>
                   </p>
 
@@ -142,10 +148,10 @@ export default function HomePage() {
                 <div className={styles.rectangle_3}>
                   <p className={styles.router_tab}>
                     <span>
-                      Roman Blinds 
+                      Roman Blinds
                     </span>
                     <span>
-                    No Drill Type
+                      No Drill Type
                     </span>
                   </p>
 
@@ -172,64 +178,67 @@ export default function HomePage() {
               </div>
 
               <div className={styles.rectangle_5}>
-                  <p className={styles.router_tab}>
-                    <span>
-                      Honeycomb Blinds 
-                    </span>
-                    <span>
-                    No Drill Type
-                    </span>
-                  </p>
-
-                  <span className={styles.linkitem_wrapper}>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Light Filtering
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Room Darkening
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
+                <p className={styles.router_tab}>
+                  <span>
+                    Honeycomb Blinds
                   </span>
-                </div>
+                  <span>
+                    No Drill Type
+                  </span>
+                </p>
+
+
+
+                <span className={styles.linkitem_wrapper}>
+                  <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      <span>
+                        Light Filtering
+                      </span>
+                      <br />
+                    </span>
+                  </Link>
+                  <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      <span>
+                        Room Darkening
+                      </span>
+                      <br />
+                    </span>
+                  </Link>
+                </span>
+              </div>
 
               <div className={styles.rectangle_2}>
-                  <p className={styles.router_tab}>
-                    <span>
-                      Shangrila Blinds 
-                    </span>
-                    <span>
-                    No Drill Type
-                    </span>
-                  </p>
-
-                  <span className={styles.linkitem_wrapper}>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Light Filtering
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
-                    <Link href={"/"}>
-                      <span className={styles.linkitem}>
-                        <span>
-                          Room Darkening
-                        </span>
-                        <br />
-                      </span>
-                    </Link>
+                <p className={styles.router_tab}>
+                  <span>
+                    Shangrila Blinds
                   </span>
-                </div>
+                  <span>
+                    No Drill Type
+                  </span>
+                </p>
+
+                <span className={styles.linkitem_wrapper}>
+                  <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      <span>
+                        Light Filtering
+                      </span>
+                      <br />
+                    </span>
+                  </Link>
+                  <Link href={"/"}>
+                    <span className={styles.linkitem}>
+                      <span>
+                        Room Darkening
+                      </span>
+                      <br />
+                    </span>
+                  </Link>
+                </span>
+              </div>
+
 
               <div className={styles.rectangle_6}>
                 <p className={styles.router_tab}>
@@ -237,21 +246,36 @@ export default function HomePage() {
                     Economy Blinds & Shades
                   </span>
                   <span>
-                  Demo Video
+                    Demo Video
                   </span>
                 </p>
 
-                <span className={styles.linkitem_wrapper}>
-                  <video className={styles.demo_video} controls width="500" height="500">
-                    <source src="https://www.dropbox.com/scl/fi/4590voqa2eq4kq3g06gwo/economyblindsandshadesdemo.mp4?rlkey=9ofy3zd9rhu62a5yfmj9zpmbu&e=1&st=9nqv5iaw&dl=1" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </span>
+                <video className={styles.demo_video} controls width="500" height="500">
+                  <source src="https://www.dropbox.com/scl/fi/4590voqa2eq4kq3g06gwo/economyblindsandshadesdemo.mp4?rlkey=9ofy3zd9rhu62a5yfmj9zpmbu&e=1&st=9nqv5iaw&dl=1" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
             </div>
 
 
+            <div className={styles.top_banner2}>
+
+              <span className={styles.top_banner_headers2}>
+                <h1>
+                  Title 2 Section
+                  <br />
+                  <br />
+                </h1>
+                <h1>
+                  Title 2 Section
+                  <br />
+                  <br />
+                  <br />
+
+                </h1>
+              </span>
+            </div>
 
 
             <div className={styles.add}>
