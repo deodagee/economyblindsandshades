@@ -106,6 +106,11 @@
   width: 100vw;
 }
 
+
+
+
+
+
 .slider {
   display: flex;
   flex-direction: row;
@@ -1519,6 +1524,7 @@ transform: scale(1.04);
   justify-content: center;
 }
 
+
 .select_color_group_title_tag {
   display: flex;
   align-items: center;
@@ -1575,6 +1581,7 @@ transform: scale(1.04);
   margin-top: 20px;
 }
 
+
 .selectColorImageCollection:hover {
   transform: scale(1.005);
   transition: 0.2s;
@@ -1628,12 +1635,14 @@ transform: scale(1.04);
   height: auto;
   width: 100px;
   border-width: 2px;
-  border-color: rgb(150, 150, 150);
+  border-color: #b7b7b7;
   transition: 0.4s;
+  overflow: hidden;
 }
 
+
 .materials_image_container:hover {
-  transform: scale(3);
+  transform: scale(2);
   box-shadow: #3a3a3a 2px 3px 7px;
   border-width: 5px;
   transition: 0.4s;
@@ -1643,15 +1652,21 @@ transform: scale(1.04);
   display: flex;
 }
 
-.selectedImage {
-  display: flex;
-  border-width: 5px;
-  border-color: green;
-  transition: 0.2s;
-  box-shadow: #191919 2px 3px 7px;
 
+.selectedImage {
+  box-shadow: rgb(255, 255, 255) 1px 2px 5px;
+  background-color: #00ac93;
+  transition: 0.2s;
+  border-color: rgb(16, 16, 16);
+  border-width: 4px;
+  color: white;
+  padding: 3px;
+  margin: 0;
 }
 
+.selectedImage :nth-child(2) { 
+  display: none;
+}
 
 .images_and_subtitles_color_name {
   display: flex;
@@ -1669,6 +1684,8 @@ transform: scale(1.04);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
+  background-color: rgb(0, 213, 220);
 }
 
 
@@ -2088,7 +2105,6 @@ display: none;
 .select_chain_right_text {
   display: flex;
   background-color: #e2e2e2;
-  box-shadow: rgb(80, 80, 80) 0px 0px 3px;
   padding: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -2100,21 +2116,32 @@ display: none;
 .select_chain_right_text:hover,
 .select_chain_left_text:hover {
   transform: scale(1.05);
-  box-shadow: rgb(30, 30, 30) 0px 0px 3px;
+  box-shadow: rgb(30, 30, 30) 0px 1px 3px;
   transition: 0.3s;
+}
+
+.select_a_name { 
+  text-decoration: underline;
+}
+
+.select_a_name:hover { 
+  transform: scale(1.04);
+  
 }
 
 .active_wand_left_choice,
 .active_wand_right_choice {
   display: flex;
   background-color: #29b200;
-  box-shadow: rgb(80, 80, 80) 0px 0px 5px;
   padding: 5px;
   padding-right: 10px;
   padding-left: 10px;
   border-radius: 0.35rem;
   border-width: 2px;
-  border-color: rgb(255, 255, 255);
+  font-size: 12px;
+  border-color: rgb(0, 0, 0);
+  color: white;
+  background: linear-gradient(to right, #32d700, #1e8100, #196d00);
 }
 
 .wand_option_image_placeholder,
@@ -2461,18 +2488,6 @@ display: none;
   color: rgb(56, 56, 56);
   border-width: 1px;
   border-color: white;
-}
-
-
-.selectedImage {
-  border-color: rgb(68, 68, 68);
-  border-width: 4px;
-  background-color: rgb(0, 172, 147);
-  color: white;
-  padding: 3px;
-  margin: 0;
-  transition: 0.2s;
-  box-shadow: rgb(255, 255, 255) 1px 2px 5px;
 }
 
 .clickedImage {
@@ -3625,7 +3640,6 @@ display: none;
     height: auto;
     width: 70px;
     border-width: 2px;
-    border-color: rgb(150, 150, 150);
     transition: 0.2s;
   }
 
