@@ -181,8 +181,9 @@ const RomanBlindsRoomDarkening = () => {
       setShowImageright(false);
 
     } else if (ellipseNumber === 5) {
-      setactive_wand_left_choice(null);
+      setactive_wand_cordless_motorized(1);
       setactive_wand_right_choice(5);
+      setactive_wand_left_choice(null);
       setactive_wand_cordless_motorizedRenderingContent('wand');
       setactive_wand_left_choice_rendering_content(false);
       setactive_wand_right_choice_rendering_content('Right wand choice');

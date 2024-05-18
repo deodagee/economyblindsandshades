@@ -1,6 +1,6 @@
 // C:\Users\User\economyblindsandshadesjs\pages\components\pages\zebrablinds.js
 
-import styles from '../../../styles/components/pages/zebrablinds.module.css';
+import styles from '../../../styles/components/pages/zebrablindsroomdarkening.module.css';
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
@@ -52,7 +52,7 @@ const ZebraBlindsRoomDarkening = () => {
   const [newSetPriceInchesWidthOutsideMountZebrablindsRoomDarkening, setnewSetPriceInchesWidthOutsideMountZebrablindsRoomDarkening] = useState(null);
   const [newSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening, setnewSetPriceInchesHeightOutsideMountZebrablindsRoomDarkening] = useState(null);
 
-  
+
   const fetchLatestData = async () => {
     try {
       const response = await fetch("/api/getLatestData");
@@ -151,6 +151,7 @@ const ZebraBlindsRoomDarkening = () => {
       setactive_wand_right_choice_rendering_content(null);
       setShowImageleft(true);
       setShowImageright(false);
+      
 
     } else if (ellipseNumber === 2) {
       setactive_wand_cordless_motorized(2);
@@ -181,11 +182,12 @@ const ZebraBlindsRoomDarkening = () => {
       setShowImageright(false);
 
     } else if (ellipseNumber === 5) {
-      setactive_wand_left_choice(null);
+      setactive_wand_cordless_motorized(1);
       setactive_wand_right_choice(5);
+      setactive_wand_left_choice(null);
       setactive_wand_cordless_motorizedRenderingContent('wand');
-      setactive_wand_left_choice_rendering_content(false);
       setactive_wand_right_choice_rendering_content('Right wand choice');
+      setactive_wand_left_choice_rendering_content(false);
       setShowImageleft(false);
       setShowImageright(true);
     } else {
@@ -488,31 +490,47 @@ const ZebraBlindsRoomDarkening = () => {
   const [selectedColorImages, setSelectedColorImages] = useState([]);
   const [selectedFileNameMaterials, setselectedFileNameMaterials] = useState(null); // Add this line
 
-
   const handleSelectMaterial = (color, key, src, label) => {
     setfirstImage_div(false);
-
+  
     console.log(`Clicked on file: ${src}`);
-
+    console.log("selectedMaterial:", selectedMaterial); // Log selectedMaterial value
+    console.log("item.src:", src); // Log item.src value
+  
     // Use getColorMatcherImage to get the matched image
     const matchingSrc = getColorMatcherImage(label);
-
+  
     if (matchingSrc) {
       const updatedMaterial = {
         key,
         src: matchingSrc,
         label,
       };
-
+  
       setSelectedMaterial(updatedMaterial);
       setSelectedColorImages([{ src: matchingSrc }]);
       setselectedFileNameMaterials(`${key} - ${label}`);
+  
+      // Hide previously selected image
+      const prevSelectedImage = document.querySelector('.selectedImage');
+      if (prevSelectedImage) {
+        prevSelectedImage.classList.remove('selectedImage');
+      }
+  
+      // Show the selected image
+      const selectedImage = document.getElementById(key); // Assuming 'key' is the ID of the selected image
+      if (selectedImage) {
+        selectedImage.classList.add('selectedImage');
+      }
     } else {
       // Handle the case when no matching image is found
       console.error("No matching image found for label:", label);
     }
   };
-
+  
+  
+  
+  
   // Update getColorMatcherImage to search for the label across all colors
   const getColorMatcherImage = (label) => {
     for (const color in colorDataMatcher) {
@@ -542,6 +560,7 @@ const ZebraBlindsRoomDarkening = () => {
               handleSelectMaterial(selectedColor, item.key, item.src, item.label);
             }}
           >
+
             <h3 className={styles.images_and_subtitles_color_name}>{item.key}</h3>
             <Image className={styles.materials_image_container_image_itself} src={item.src} alt={item.label} width={300} height={300} />
             <p className={styles.selectedImageClass_label}>{item.label}</p>
@@ -567,7 +586,6 @@ const ZebraBlindsRoomDarkening = () => {
           <h3 className={styles.left_imageContainer_image_itself1_label}>{selectedMaterial.label}</h3>
         </div>
       ) : (
-        // Render default content if no material is selected
         <></>
       )}
     </>
@@ -1053,25 +1071,25 @@ const ZebraBlindsRoomDarkening = () => {
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
-        case 1:
-            // If "wand" option is selected
-            priceHeightInsideMount += parseFloat(WandPriceCMSZebrablindsRoomDarkening) || 0;
-            break;
-        case 2:
-            // If "cordless" option is selected
-            priceHeightInsideMount += parseFloat(cordlesspriceCMSZebrablindsRoomDarkening) || 0;
-            break;
-        case 3:
-            // If "motorized" option is selected
-            priceHeightInsideMount += parseFloat(motorizedpriceCMSZebrablindsRoomDarkening) || 0;
-            break;
-        default:
-            // Default case when none of the options are selected
-            break;
+      case 1:
+        // If "wand" option is selected
+        priceHeightInsideMount += parseFloat(WandPriceCMSZebrablindsRoomDarkening) || 0;
+        break;
+      case 2:
+        // If "cordless" option is selected
+        priceHeightInsideMount += parseFloat(cordlesspriceCMSZebrablindsRoomDarkening) || 0;
+        break;
+      case 3:
+        // If "motorized" option is selected
+        priceHeightInsideMount += parseFloat(motorizedpriceCMSZebrablindsRoomDarkening) || 0;
+        break;
+      default:
+        // Default case when none of the options are selected
+        break;
     }
 
     return priceHeightInsideMount + priceWidthInsideMount;
-};
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1530,7 +1548,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                                                 <div
                                                   key={index}
-                                                  onClick={() => handleScrolledInchesWhenClickedWidthInsideMountZebrablindsRoomDarkeningZebrablindsRoomDarkening(inchesWidthInsideMount)}
+                                                  onClick={() => handleScrolledInchesWhenClickedWidthInsideMountZebrablindsRoomDarkening(inchesWidthInsideMount)}
                                                   className={selectedInchesWidthInsideMount === inchesWidthInsideMount ? styles.selectedInch : ''}
                                                 >
                                                   {inchesWidthInsideMount}
@@ -2386,50 +2404,50 @@ const ZebraBlindsRoomDarkening = () => {
                                   ${calculateSumTotal().toFixed(2)}
                                 </div>
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
 
 
-                                    </>
-                                  )}
-                                </div>
-                                
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                      </>
+                                    )}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
@@ -3452,51 +3470,51 @@ const ZebraBlindsRoomDarkening = () => {
 
 
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
 
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
 
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                </div>
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
@@ -3654,15 +3672,17 @@ const ZebraBlindsRoomDarkening = () => {
                           </button>
                         </div>
 
+                        <div className={styles.select_a_name}>Select a side</div>
+
                       </div>
-                      
+
                       <div className={styles.select_chain_options___side}>
                         <div className={styles.select_chain_option1_options}>
 
 
 
                           <div className={styles.wand_subtitle}>
-                          <span>Free</span>
+                            <span>Free</span>
 
                             <span className={styles.price_bar}>${WandPriceCMSZebrablindsRoomDarkening}</span>
                           </div>
@@ -3693,7 +3713,7 @@ const ZebraBlindsRoomDarkening = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                    <div className={styles.select_chain_options___side}>
+                      <div className={styles.select_chain_options___side}>
                         <div className={styles.cord_less_option_image_placeholder}>
                           <Image
                             width={400}
@@ -3742,8 +3762,8 @@ const ZebraBlindsRoomDarkening = () => {
 
 
                     <div className={styles.select_chain_options___side_wrapper}>
-                      
-                    <div className={styles.select_chain_options___side}>
+
+                      <div className={styles.select_chain_options___side}>
                         <div className={styles.motorized_option_image_placeholder}>
                           <Image
                             width={400}
@@ -3754,7 +3774,7 @@ const ZebraBlindsRoomDarkening = () => {
 
                         </div>
                       </div>
-                      
+
                       <div className={styles.select_chain_options___side}>
 
                         <div className={styles.select_chain_option3_options}>
