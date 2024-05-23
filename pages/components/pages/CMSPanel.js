@@ -77,7 +77,6 @@ const CMSPanel = () => {
   const [motorizedpriceCMSRollerBlindsRoomLightening, setmotorizedpriceCMSRollerBlindsRoomLightening] = useState("");
 
 
-
   const [productName1RollerBlindsRoomDarkening, setproductName1RollerBlindsRoomDarkening] = useState("");
   const [productName2RollerBlindsRoomDarkening, setproductName2RollerBlindsRoomDarkening] = useState("");
   const [roomnameRollerBlindsRoomDarkening, setroomnameRollerBlindsRoomDarkening] = useState("");
@@ -94,14 +93,12 @@ const CMSPanel = () => {
   const [motorizedpriceCMSHoneycombBlindsRoomLightening, setmotorizedpriceCMSHoneycombBlindsRoomLightening] = useState("");
 
 
-
   const [productName1HoneycombBlindsRoomDarkening, setproductName1HoneycombBlindsRoomDarkening] = useState("");
   const [productName2HoneycombBlindsRoomDarkening, setproductName2HoneycombBlindsRoomDarkening] = useState("");
   const [roomnameHoneycombBlindsRoomDarkening, setroomnameHoneycombBlindsRoomDarkening] = useState("");
   const [WandPriceCMSHoneycombBlindsRoomDarkening, setWandPriceCMSHoneycombBlindsRoomDarkening] = useState("");
   const [cordlesspriceCMSHoneycombBlindsRoomDarkening, setcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
   const [motorizedpriceCMSHoneycombBlindsRoomDarkening, setmotorizedpriceCMSHoneycombBlindsRoomDarkening] = useState("");
-
 
 
   const [inchPricesAfterWidthInsideMount, setinchPricesAfterWidthInsideMount] = useState({});
@@ -140,8 +137,10 @@ const CMSPanel = () => {
   const [inchPricesAfterWidthOutsideMountRollerBlindsRoomDarkening, setinchPricesAfterWidthOutsideMountRollerBlindsRoomDarkening] = useState({});
   const [inchPricesAfterHeightOutsideMountRollerBlindsRoomDarkening, setinchPricesAfterHeightOutsideMountRollerBlindsRoomDarkening] = useState({});
 
+
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  
   const scrollableDivRefInchesWidthInsideMountZebrablindsRoomLightening = useRef();
   const scrollableDivRefInchesWidthInsideMountZebrablindsRoomDarkening = useRef();
   const scrollableDivRefInchesWidthInsideMountHoneycombBlindsRoomLightening = useRef();
@@ -1658,11 +1657,6 @@ const CMSPanel = () => {
         setmotorizedpriceCMSHoneycombBlindsRoomDarkening(latestData.motorizedpriceCMSHoneycombBlindsRoomDarkening || "");
         setmotorizedpriceCMSRollerBlindsRoomLightening(latestData.motorizedpriceCMSRollerBlindsRoomLightening || "");
         setmotorizedpriceCMSRollerBlindsRoomDarkening(latestData.motorizedpriceCMSRollerBlindsRoomDarkening || "");
-
-
-
-        setmotorizedpriceCMSRollerBlindsRoomLightening
-        motorizedpriceCMSRollerBlindsRoomLightening
 
 
         setinchPriceCMSWidthInsideMount(latestData.inchPriceCMSWidthInsideMount || "");

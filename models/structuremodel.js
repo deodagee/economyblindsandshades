@@ -49,7 +49,7 @@ const testSchema = new Schema({
     required: true,
   },
 
-  
+
 
   nameZebrablindsRoomDarkening: {
     type: String,
@@ -95,16 +95,16 @@ const testSchema = new Schema({
     type: String,
     required: true,
   },
-  
 
 
 
 
 
 
-  
 
-  
+
+
+
 
   nameHoneycombBlindsRoomLightening: {
     type: String,

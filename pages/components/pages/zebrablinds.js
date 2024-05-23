@@ -3,6 +3,7 @@
 import styles from '../../../styles/components/pages/zebrablinds.module.css';
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
+import { useData } from "../../../utils/DataContext";
 import Link from "next/link";
 import HeaderPiece from "../header.js";
 import { useSession } from "next-auth/react";
@@ -36,8 +37,9 @@ const ZebraBlinds = () => {
 
 
 
-  const { data: session } = useSession();
-  const [productName1ZebrablindsRoomLightening, setProductName1ZebrablindsRoomLightening] = useState("");
+  const [name, setname] = useState("");
+  const [nameZebrablindsRoomLightening, setnameZebrablindsRoomLightening] = useState("");
+  const [productName1ZebrablindsRoomLightening, setproductName1ZebrablindsRoomLightening] = useState("");
   const [productName2ZebrablindsRoomLightening, setProductName2ZebrablindsRoomLightening] = useState("");
   const [roomnameZebrablindsRoomLightening, setroomnameZebrablindsRoomLightening] = useState("");
   const [WandPriceCMSZebrablindsRoomLightening, setWandPriceCMSZebrablindsRoomLightening] = useState("");
@@ -54,6 +56,8 @@ const ZebraBlinds = () => {
   const [newSetPriceInchesWidthOutsideMount, setnewSetPriceInchesWidthOutsideMount] = useState(null);
   const [newSetPriceInchesHeightOutsideMount, setnewSetPriceInchesHeightOutsideMount] = useState(null);
 
+  const { data: session } = useSession();
+  const { postData } = useData();
 
   const fetchLatestData = async () => {
     try {
@@ -62,39 +66,40 @@ const ZebraBlinds = () => {
       const latestData = result.data;
 
       if (latestData) {
-        setProductName1ZebrablindsRoomLightening(latestData.productName1ZebrablindsRoomLightening || "");
+
+
+        setname(latestData.name || "");
+        setnameZebrablindsRoomLightening(latestData.nameZebrablindsRoomLightening || "");
+        setproductName1ZebrablindsRoomLightening(latestData.productName1ZebrablindsRoomLightening || "");
         setProductName2ZebrablindsRoomLightening(latestData.productName2ZebrablindsRoomLightening || "");
         setroomnameZebrablindsRoomLightening(latestData.roomnameZebrablindsRoomLightening || "");
         setWandPriceCMSZebrablindsRoomLightening(latestData.WandPriceCMSZebrablindsRoomLightening || "");
         setcordlesspriceCMSZebrablindsRoomLightening(latestData.cordlesspriceCMSZebrablindsRoomLightening || "");
         setmotorizedpriceCMSZebrablindsRoomLightening(latestData.motorizedpriceCMSZebrablindsRoomLightening || "");
 
-        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMount || "{}");
+        const inchPricesWidthInsideMountZebrablindsRoomLightening = JSON.parse(latestData.inchPricesAfterWidthInsideMountZebrablindsRoomLightening || "{}");
+        setinchPricesAfterWidthInsideMountZebrablindsRoomLightening(inchPricesWidthInsideMountZebrablindsRoomLightening);
 
-        setinchPricesAfterWidthInsideMount(inchPricesWidthInsideMount);
+        const inchPricesWidthOutsideMountZebrablindsRoomLightening = JSON.parse(latestData.inchPricesAfterWidthOutsideMountZebrablindsRoomLightening || "{}");
+        setinchPricesAfterWidthOutsideMountZebrablindsRoomLightening(inchPricesWidthOutsideMountZebrablindsRoomLightening);
 
-        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMount || "{}");
-        setinchPricesAfterWidthOutsideMount(inchPricesWidthOutsideMount);
+        const inchPricesHeightInsideMountZebrablindsRoomLightening = JSON.parse(latestData.inchPricesAfterHeightInsideMountZebrablindsRoomLightening || "{}");
+        setinchPricesAfterHeightInsideMountZebrablindsRoomLightening(inchPricesHeightInsideMountZebrablindsRoomLightening);
 
-        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMount || "{}");
-        setinchPricesAfterHeightInsideMount(inchPricesHeightInsideMount);
+        const inchPricesHeightOutsideMountZebrablindsRoomLightening = JSON.parse(latestData.inchPricesAfterHeightOutsideMountZebrablindsRoomLightening || "{}");
+        setinchPricesAfterHeightOutsideMountZebrablindsRoomLightening(inchPricesHeightOutsideMountZebrablindsRoomLightening);
 
-        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMount || "{}");
-        setinchPricesAfterHeightOutsideMount(inchPricesHeightOutsideMount);
+        const lastSetPriceWidthInsideMountZebrablindsRoomLightening = inchPricesWidthInsideMountZebrablindsRoomLightening[selectedInchesWidthInsideMountZebrablindsRoomLightening];
+        setnewSetPriceInchesWidthInsideMountZebrablindsRoomLightening(lastSetPriceWidthInsideMountZebrablindsRoomLightening);
 
+        const lastSetPriceWidthOutsideMountZebrablindsRoomLightening = inchPricesWidthOutsideMountZebrablindsRoomLightening[selectedInchesWidthOutsideMountZebrablindsRoomLightening];
+        setnewSetPriceInchesWidthOutsideMountZebrablindsRoomLightening(lastSetPriceWidthOutsideMountZebrablindsRoomLightening);
 
+        const lastSetPriceHeightInsideMountZebrablindsRoomLightening = inchPricesHeightInsideMountZebrablindsRoomLightening[selectedInchesHeightInsideMountZebrablindsRoomLightening];
+        setnewSetPriceInchesHeightInsideMountZebrablindsRoomLightening(lastSetPriceHeightInsideMountZebrablindsRoomLightening);
 
-        const lastSetPriceWidthInsideMount = inchPricesWidthInsideMount[selectedInchesWidthInsideMount];
-        setnewSetPriceInchesWidthInsideMount(lastSetPriceWidthInsideMount);
-
-        const lastSetPriceWidthOutsideMount = inchPricesWidthOutsideMount[selectedInchesWidthOutsideMount];
-        setnewSetPriceInchesWidthOutsideMount(lastSetPriceWidthOutsideMount);
-
-        const lastSetPriceHeightInsideMount = inchPricesHeightInsideMount[selectedInchesHeightInsideMount];
-        setnewSetPriceInchesHeightInsideMount(lastSetPriceHeightInsideMount);
-
-        const lastSetPriceHeightOutsideMount = inchPricesHeightOutsideMount[selectedInchesHeightOutsideMount];
-        setnewSetPriceInchesHeightOutsideMount(lastSetPriceHeightOutsideMount);
+        const lastSetPriceHeightOutsideMountZebrablindsRoomLightening = inchPricesHeightOutsideMountZebrablindsRoomLightening[selectedInchesHeightOutsideMountZebrablindsRoomLightening];
+        setnewSetPriceInchesHeightOutsideMountZebrablindsRoomLightening(lastSetPriceHeightOutsideMountZebrablindsRoomLightening);
 
       }
     } catch (error) {
@@ -1152,6 +1157,7 @@ const ZebraBlinds = () => {
     if (session) {
       data = {
         name: session.name,
+        nameZebrablindsRoomLightening: session.nameZebrablindsRoomLightening, 
         productName1ZebrablindsRoomLightening: session.productName1ZebrablindsRoomLightening,
         productName2ZebrablindsRoomLightening: session.productName2ZebrablindsRoomLightening,
         roomnameZebrablindsRoomLightening: session.roomnameZebrablindsRoomLightening,
@@ -1326,6 +1332,7 @@ const ZebraBlinds = () => {
                   <h1 className={styles.product_lightening_styles}>
                     {productName2ZebrablindsRoomLightening}
                   </h1>
+
 
                 </div>
 
@@ -3681,7 +3688,7 @@ const ZebraBlinds = () => {
 
                         </div>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -3716,7 +3723,7 @@ const ZebraBlinds = () => {
 
                           <span className={styles.priced_item}>Cord Less</span>
 
-                                                    <div className={styles.select_chain_option2_ellipse_wrapper}>
+                          <div className={styles.select_chain_option2_ellipse_wrapper}>
                             <span
                               className={`${styles.cord_less_ellipse} ${active_wand_cordless_motorized === 2 ? styles.active_wand_cordless_motorized : ''}`}
                               onClick={() => handleLiftFeatureEllipsess(2)}

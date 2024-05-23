@@ -10,7 +10,7 @@ export default async function getLatestData(req, res) {
     console.log("CONNECTED TO MONGO");
 
     // Fetch the latest data from the database
-    const datafetchbytime = await Test.findOne({}).sort({ name: -1 }).limit(1);
+    const datafetchbytime = await Test.findOne({}).sort({ _id: -1 }).limit(1);
 
     res.json({ data: datafetchbytime });
   } catch (error) {
