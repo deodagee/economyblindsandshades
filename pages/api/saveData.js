@@ -44,38 +44,7 @@ export default async function saveData(req, res) {
       inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening: data.inchPricesAfterWidthOutsideMountHoneycombBlindsRoomDarkening,
       inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening: data.inchPricesAfterHeightOutsideMountHoneycombBlindsRoomDarkening,
       totalpricecalculatedHoneycombBlindsRoomDarkening: data.totalpricecalculatedHoneycombBlindsRoomDarkening,
-
-
-
-      nameNoDrillTypeBlindsRoomLightening: data.nameNoDrillTypeBlindsRoomLightening,
-      productName1NoDrillTypeBlindsRoomLightening: data.productName1NoDrillTypeBlindsRoomLightening,
-      productName2NoDrillTypeBlindsRoomLightening: data.productName2NoDrillTypeBlindsRoomLightening,
-      WandPriceCMSNoDrillTypeBlindsRoomLightening: data.WandPriceCMSNoDrillTypeBlindsRoomLightening,
-      roomnameNoDrillTypeBlindsRoomLightening: data.roomnameNoDrillTypeBlindsRoomLightening,
-      cordlesspriceCMSNoDrillTypeBlindsRoomLightening: data.cordlesspriceCMSNoDrillTypeBlindsRoomLightening,
-      motorizedpriceCMSNoDrillTypeBlindsRoomLightening: data.motorizedpriceCMSNoDrillTypeBlindsRoomLightening,
-      inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening: data.inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening,
-      inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening: data.inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening,
-      inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening: data.inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening,
-      inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening: data.inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening,
-      totalpricecalculatedNoDrillTypeBlindsRoomLightening: data.totalpricecalculatedNoDrillTypeBlindsRoomLightening,
-
-
-
-      nameNoDrillTypeBlindsRoomDarkening: data.nameNoDrillTypeBlindsRoomDarkening,
-      productName1NoDrillTypeBlindsRoomDarkening: data.productName1NoDrillTypeBlindsRoomDarkening,
-      productName2NoDrillTypeBlindsRoomDarkening: data.productName2NoDrillTypeBlindsRoomDarkening,
-      WandPriceCMSNoDrillTypeBlindsRoomDarkening: data.WandPriceCMSNoDrillTypeBlindsRoomDarkening,
-      roomnameNoDrillTypeBlindsRoomDarkening: data.roomnameNoDrillTypeBlindsRoomDarkening,
-      cordlesspriceCMSNoDrillTypeBlindsRoomDarkening: data.cordlesspriceCMSNoDrillTypeBlindsRoomDarkening,
-      motorizedpriceCMSNoDrillTypeBlindsRoomDarkening: data.motorizedpriceCMSNoDrillTypeBlindsRoomDarkening,
-      inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening: data.inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening,
-      inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening: data.inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening,
-      inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening: data.inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening,
-      inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening: data.inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening,
-      totalpricecalculatedNoDrillTypeBlindsRoomDarkening: data.totalpricecalculatedNoDrillTypeBlindsRoomDarkening,
-
-
+      
 
       nameRollerBlindsRoomLightening: data.nameRollerBlindsRoomLightening,
       productName1RollerBlindsRoomLightening: data.productName1RollerBlindsRoomLightening,
@@ -104,65 +73,6 @@ export default async function saveData(req, res) {
       inchPricesAfterWidthOutsideMountRollerBlindsRoomDarkening: data.inchPricesAfterWidthOutsideMountRollerBlindsRoomDarkening,
       inchPricesAfterHeightOutsideMountRollerBlindsRoomDarkening: data.inchPricesAfterHeightOutsideMountRollerBlindsRoomDarkening,
       totalpricecalculatedRollerBlindsRoomDarkening: data.totalpricecalculatedRollerBlindsRoomDarkening,
-
-
-      
-
-      nameRomanBlindsRoomLightening: data.nameRomanBlindsRoomLightening,
-      productName1RomanBlindsRoomLightening: data.productName1RomanBlindsRoomLightening,
-      productName2RomanBlindsRoomLightening: data.productName2RomanBlindsRoomLightening,
-      WandPriceCMSRomanBlindsRoomLightening: data.WandPriceCMSRomanBlindsRoomLightening,
-      roomnameRomanBlindsRoomLightening: data.roomnameRomanBlindsRoomLightening,
-      cordlesspriceCMSRomanBlindsRoomLightening: data.cordlesspriceCMSRomanBlindsRoomLightening,
-      motorizedpriceCMSRomanBlindsRoomLightening: data.motorizedpriceCMSRomanBlindsRoomLightening,
-      inchPricesAfterWidthInsideMountRomanBlindsRoomLightening: data.inchPricesAfterWidthInsideMountRomanBlindsRoomLightening,
-      inchPricesAfterHeightInsideMountRomanBlindsRoomLightening: data.inchPricesAfterHeightInsideMountRomanBlindsRoomLightening,
-      inchPricesAfterWidthOutsideMountRomanBlindsRoomLightening: data.inchPricesAfterWidthOutsideMountRomanBlindsRoomLightening,
-      inchPricesAfterHeightOutsideMountRomanBlindsRoomLightening: data.inchPricesAfterHeightOutsideMountRomanBlindsRoomLightening,
-      totalpricecalculatedRomanBlindsRoomLightening: data.totalpricecalculatedRomanBlindsRoomLightening,
-
-
-
-      nameRomanBlindsRoomDarkening: data.nameRomanBlindsRoomDarkening,
-      productName1RomanBlindsRoomDarkening: data.productName1RomanBlindsRoomDarkening,
-      productName2RomanBlindsRoomDarkening: data.productName2RomanBlindsRoomDarkening,
-      WandPriceCMSRomanBlindsRoomDarkening: data.WandPriceCMSRomanBlindsRoomDarkening,
-      roomnameRomanBlindsRoomDarkening: data.roomnameRomanBlindsRoomDarkening,
-      cordlesspriceCMSRomanBlindsRoomDarkening: data.cordlesspriceCMSRomanBlindsRoomDarkening,
-      motorizedpriceCMSRomanBlindsRoomDarkening: data.motorizedpriceCMSRomanBlindsRoomDarkening,
-      inchPricesAfterWidthInsideMountRomanBlindsRoomDarkening: data.inchPricesAfterWidthInsideMountRomanBlindsRoomDarkening,
-      inchPricesAfterHeightInsideMountRomanBlindsRoomDarkening: data.inchPricesAfterHeightInsideMountRomanBlindsRoomDarkening,
-      inchPricesAfterWidthOutsideMountRomanBlindsRoomDarkening: data.inchPricesAfterWidthOutsideMountRomanBlindsRoomDarkening,
-      inchPricesAfterHeightOutsideMountRomanBlindsRoomDarkening: data.inchPricesAfterHeightOutsideMountRomanBlindsRoomDarkening,
-      totalpricecalculatedRomanBlindsRoomDarkening: data.totalpricecalculatedRomanBlindsRoomDarkening,
-
-
-      nameShangrilablindsRoomDarkening: data.nameShangrilablindsRoomDarkening,
-      productName1ShangrilablindsRoomDarkening: data.productName1ShangrilablindsRoomDarkening,
-      productName2ShangrilablindsRoomDarkening: data.productName2ShangrilablindsRoomDarkening,
-      WandPriceCMSShangrilablindsRoomDarkening: data.WandPriceCMSShangrilablindsRoomDarkening,
-      roomnameShangrilablindsRoomDarkening: data.roomnameShangrilablindsRoomDarkening,
-      cordlesspriceCMSShangrilablindsRoomDarkening: data.cordlesspriceCMSShangrilablindsRoomDarkening,
-      motorizedpriceCMSShangrilablindsRoomDarkening: data.motorizedpriceCMSShangrilablindsRoomDarkening,
-      inchPricesAfterWidthInsideMountShangrilablindsRoomDarkening: data.inchPricesAfterWidthInsideMountShangrilablindsRoomDarkening,
-      inchPricesAfterHeightInsideMountShangrilablindsRoomDarkening: data.inchPricesAfterHeightInsideMountShangrilablindsRoomDarkening,
-      inchPricesAfterWidthOutsideMountShangrilablindsRoomDarkening: data.inchPricesAfterWidthOutsideMountShangrilablindsRoomDarkening,
-      inchPricesAfterHeightOutsideMountShangrilablindsRoomDarkening: data.inchPricesAfterHeightOutsideMountShangrilablindsRoomDarkening,
-      totalpricecalculatedShangrilablindsRoomDarkening: data.totalpricecalculatedShangrilablindsRoomDarkening,
-
-
-      nameShangrilablindsRoomLightening: data.nameShangrilablindsRoomLightening,
-      productName1ShangrilablindsRoomLightening: data.productName1ShangrilablindsRoomLightening,
-      productName2ShangrilablindsRoomLightening: data.productName2ShangrilablindsRoomLightening,
-      WandPriceCMSShangrilablindsRoomLightening: data.WandPriceCMSShangrilablindsRoomLightening,
-      roomnameShangrilablindsRoomLightening: data.roomnameShangrilablindsRoomLightening,
-      cordlesspriceCMSShangrilablindsRoomLightening: data.cordlesspriceCMSShangrilablindsRoomLightening,
-      motorizedpriceCMSShangrilablindsRoomLightening: data.motorizedpriceCMSShangrilablindsRoomLightening,
-      inchPricesAfterWidthInsideMountShangrilablindsRoomLightening: data.inchPricesAfterWidthInsideMountShangrilablindsRoomLightening,
-      inchPricesAfterHeightInsideMountShangrilablindsRoomLightening: data.inchPricesAfterHeightInsideMountShangrilablindsRoomLightening,
-      inchPricesAfterWidthOutsideMountShangrilablindsRoomLightening: data.inchPricesAfterWidthOutsideMountShangrilablindsRoomLightening,
-      inchPricesAfterHeightOutsideMountShangrilablindsRoomLightening: data.inchPricesAfterHeightOutsideMountShangrilablindsRoomLightening,
-      totalpricecalculatedShangrilablindsRoomDarkening: data.totalpricecalculatedShangrilablindsRoomDarkening,
 
       
       nameZebrablindsRoomLightening: data.nameZebrablindsRoomLightening,

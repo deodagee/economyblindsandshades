@@ -56,7 +56,7 @@
 }
 
 
-.top_banner { 
+.top_banner {
   background-color: #d2d2d2;
   width: 100vw;
   display: flex;
@@ -69,9 +69,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 5vh;
+  position: relative;
+  z-index: -5;
 }
 
-.top_banner_headers { 
+
+.top_banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+
+.top_banner:hover::before {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+.top_banner_headers {
   display: flex;
   background-color: black;
   padding: 5px;
@@ -84,7 +105,8 @@
 }
 
 
-.top_banner h1 { 
+
+.top_banner h1 {
   display: flex;
   height: 30px;
   width: auto;
@@ -116,19 +138,16 @@
 
 .rectangle_1,
 .rectangle_4,
-.rectangle_5
-{
-
+.rectangle_5 {
   border-radius: 5px;
   width: 35vw;
   height: 13vw;
   align-items: start;
   justify-content: flex-start;
   display: flex;
-  margin: 5px;
+  margin: 7vh;
   gap: 5vw;
   border-width: 2px;
-  border-color: rgb(0, 144, 127);
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
   transition: 0.3s;
   background-color: #262626;
@@ -140,7 +159,7 @@
 
 
 
-.top_banner2 { 
+.top_banner2 {
   background-color: #d2d2d2;
   width: 70vw;
   display: flex;
@@ -156,7 +175,7 @@
 }
 
 
-.top_banner_headers2 { 
+.top_banner_headers2 {
   display: flex;
   background-color: rgb(255, 255, 255);
   padding: 5px;
@@ -170,7 +189,7 @@
   justify-content: center;
 }
 
-.top_banner2 h1 { 
+.top_banner2 h1 {
   display: flex;
   height: 30px;
   width: auto;
@@ -184,17 +203,16 @@
 
 
 
-.rectangle_6 { 
+.rectangle_6 {
   border-radius: 5px;
   width: 70vw;
   height: 30vw;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   display: flex;
-  margin: 5px;
+  margin: 20px;
   gap: 5vw;
   border-width: 2px;
-  border-color: rgb(0, 144, 127);
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
   transition: 0.3s;
   background-color: rgb(229, 229, 229);
@@ -210,7 +228,6 @@
   transform: scale(1.01);
   box-shadow: rgb(95, 95, 95) 1px 1px 5px;
   transition: 0.3s;
-  border-color: rgb(0, 101, 89);
 }
 
 
@@ -260,14 +277,14 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   transition: 0.5s;
   font-weight: 700;
-  border-width: 2px;
-  border-color: rgb(0, 128, 79);
+  border-width: 1px;
   border-radius: 0.25rem;
   overflow: hidden;
   box-shadow: #dbdbdb 0.5px 0.5px 3px;
   margin-top: 5vh;
-
+  transition: 0.3s;
 }
+
 
 .linkitem::before {
   content: "";
@@ -278,18 +295,21 @@
   height: 100%;
   background-image: url("/blindsrf7.jpg");
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.6;
   transition: opacity 0.5s;
+  transition: 0.3s;
 }
 
 .linkitem:hover::before {
   opacity: 0.9;
+  transition: 0.3s;
 }
 
 .linkitem:hover span {
   color: black;
   font-size: 20px;
   color: #6cffdfdc;
+  transition: 0.3s;
 
 
 }
@@ -422,7 +442,7 @@
   color: rgb(0, 83, 73);
 }
 
-.title_for_three_icons { 
+.title_for_three_icons {
   display: flex;
   align-content: center;
   align-items: center;
@@ -495,8 +515,7 @@
 
   .rectangle_1,
   .rectangle_4,
-  .rectangle_5
-   {
+  .rectangle_5 {
     border-radius: 5px;
     width: 42vw;
     height: 20vh;
@@ -512,7 +531,7 @@
     background-color: rgb(243, 243, 243);
   }
 
-  .rectangle_6  { 
+  .rectangle_6 {
     border-radius: 5px;
     width: 42vw;
     height: 20vh;
@@ -530,10 +549,10 @@
     background-color: rgb(243, 243, 243);
   }
 
-  .rectangle_6 .linkitem_wrapper { 
+  .rectangle_6 .linkitem_wrapper {
     width: 35vw;
     display: flex;
-    align-items:center;
+    align-items: center;
   }
 
   .router_tab {
@@ -544,8 +563,8 @@
     justify-content: center;
     background-color: #296759;
     background: linear-gradient(to top, #1e4b41, #255e51, #3f937f);
-font-size: 10px;
-flex-direction: column;
+    font-size: 10px;
+    flex-direction: column;
     position: absolute;
     padding: 5px;
     font-weight: 600;
@@ -748,7 +767,8 @@ flex-direction: column;
     transition: 0.3s;
     background-color: rgb(243, 243, 243);
   }
-  .rectangle_6  { 
+
+  .rectangle_6 {
     border-radius: 5px;
     width: 40vw;
     height: 30vh;
@@ -766,10 +786,10 @@ flex-direction: column;
     background-color: rgb(243, 243, 243);
   }
 
-  .rectangle_6 .linkitem_wrapper { 
+  .rectangle_6 .linkitem_wrapper {
     width: 35vw;
     display: flex;
-    align-items:center;
+    align-items: center;
   }
 
   .router_tab {

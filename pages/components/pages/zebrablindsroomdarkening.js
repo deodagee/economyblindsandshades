@@ -78,7 +78,7 @@ const ZebraBlindsRoomDarkening = () => {
         setinchPricesAfterHeightInsideMountZebrablindsRoomDarkening(inchPricesHeightInsideMount);
 
         const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMountZebrablindsRoomDarkening || "{}");
-        setinchPricesAfterHeightOutsideMountZebrablindsZebrablindsRoomDarkening(inchPricesHeightOutsideMount);
+        setinchPricesAfterHeightOutsideMountZebrablindsRoomDarkening(inchPricesHeightOutsideMount);
 
 
 
@@ -227,7 +227,7 @@ const ZebraBlindsRoomDarkening = () => {
 
     switch (active_inside_outside_ellipse) {
       case 1:
-        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsZebrablindsRoomDarkening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsZebrablindsRoomDarkening : 0);
+        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsRoomDarkening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsRoomDarkening : 0);
         break;
       case 2:
         totalPrice = totalpricecalculated;
@@ -1165,40 +1165,45 @@ const ZebraBlindsRoomDarkening = () => {
 
     // Check if session is not null
     if (session) {
-      data = {
-        nameZebrablindsRoomDarkening: session.nameZebrablindsRoomDarkening,
-        productName1ZebrablindsRoomDarkening: session.productName1ZebrablindsRoomDarkening,
-        productName2ZebrablindsRoomDarkening: session.productName2ZebrablindsRoomDarkening,
-        roomnameZebrablindsRoomDarkening: session.roomnameZebrablindsRoomDarkening,
-        WandPriceCMSZebrablindsRoomDarkening: session.WandPriceCMSZebrablindsRoomDarkening,
-        cordlesspriceCMSZebrablindsRoomDarkening: session.cordlesspriceCMSZebrablindsRoomDarkening,
-        motorizedpriceCMSZebrablindsRoomDarkening: session.motorizedpriceCMSZebrablindsRoomDarkening,
-        totalpricecalculated: newTotalPrice,
-      };
+        data = {
+            nameZebrablindsRoomDarkening: session.nameZebrablindsRoomDarkening,
+            productName1ZebrablindsRoomDarkening: session.productName1ZebrablindsRoomDarkening,
+            productName2ZebrablindsRoomDarkening: session.productName2ZebrablindsRoomDarkening,
+            roomnameZebrablindsRoomDarkening: session.roomnameZebrablindsRoomDarkening,
+            WandPriceCMSZebrablindsRoomDarkening: session.WandPriceCMSZebrablindsRoomDarkening,
+            cordlesspriceCMSZebrablindsRoomDarkening: session.cordlesspriceCMSZebrablindsRoomDarkening,
+            motorizedpriceCMSZebrablindsRoomDarkening: session.motorizedpriceCMSZebrablindsRoomDarkening,
+            totalpricecalculated: newTotalPrice,
+        };
     } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
+        return;
     }
 
     const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ data }),
     });
 
     if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
+        const result = await response.json();
+        console.log('Data saved successfully:', result);
 
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
+        // Navigate to the Add to Cart page without including data in the URL
+        router.push({
+            pathname: '/addtocart',
+            state: {
+                totalpricecalculated: newTotalPrice,
+                // Add other necessary data here
+            },
+        });
     } else {
-      console.error('Error saving data:', response.statusText);
+        console.error('Error saving data:', response.statusText);
     }
-  };
+};
+
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////

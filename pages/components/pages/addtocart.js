@@ -8,14 +8,19 @@ import Link from 'next/link';
 import HeaderPiece from "../../components/header.js"
 import FooterPage from "../../../pages/components/footer.js"
 import { useRouter } from 'next/router';
+import { useSession } from 'next-auth/react'
 
 const AddToCart = () => {
 
+
     const router = useRouter();
     const { totalpricecalculated } = router.query;
+    const { nameZebrablindsRoomDarkening } = router.query;
 
-    // Convert to a number if needed, as it might be a string from the query
+
+
     const totalPrice = parseFloat(totalpricecalculated || 0);
+    const nameZbrd = parseFloat(nameZebrablindsRoomDarkening || 0);
 
 
     const [showFooter, setShowFooter] = useState(false);
@@ -367,24 +372,18 @@ const AddToCart = () => {
                                                 {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Lift Type?"}
                                             </div>
 
-
-                                            <h1>
-                                                {motorizedpriceCMS}
-                                            </h1>
-                                            <h1>
-                                                {cordlesspriceCMS}
-                                            </h1>
-                                            <h1>
-                                                {WandPriceCMS}
-                                            </h1>
-
-
                                             <div>
                                                 {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
                                             </div>
+                                            
+                                            <div>
+                                                Lift Price: {nameZebrablindsRoomDarkening}
+                                            </div>
+
                                             <div>
                                                 {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
                                             </div>
+
                                         </div>
                                     </div>
 
@@ -486,7 +485,11 @@ const AddToCart = () => {
 
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Total</p>
-                                                <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>                                            </span>
+                                                <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>
+
+
+
+                                            </span>
 
                                         </span>
 
