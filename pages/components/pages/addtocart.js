@@ -85,12 +85,37 @@ const AddToCart = () => {
 
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
 
-    const [productName1, setProductName1] = useState("");
-    const [productName2, setProductName2] = useState("");
-    const [roomname, setroomname] = useState("");
-    const [WandPriceCMS, setWandPriceCMS] = useState("");
-    const [motorizedpriceCMS, setmotorizedpriceCMS] = useState("");
-    const [cordlesspriceCMS, setcordlesspriceCMS] = useState("");
+    //////////////////////////////////////////////////////////////////////////////////
+
+
+    const [activeDimensionsinsideMount, setActiveDimensionsinsideMount] = useState("insideMount");
+    const [activeDimensionsoutsideMount, setActiveDimensionsoutsideMount] = useState("outsideMount");
+
+    //////////////////////////////////////////////////////////////////////////////////
+
+
+    const [productName1HoneycombBlindsRoomLightening, setproductName1HoneycombBlindsRoomLightening] = useState("");
+    const [productName1HoneycombBlindsRoomDarkening, setproductName1HoneycombBlindsRoomDarkening] = useState("");
+
+    const [productName2HoneycombBlindsRoomLightening, setproductName2HoneycombBlindsRoomLightening] = useState("");
+    const [productName2HoneycombBlindsRoomDarkening, setProductName2HoneycombBlindsRoomDarkening] = useState("");
+
+
+    const [roomnameHoneycombBlindsRoomLightening, setroomnameHoneycombBlindsRoomLightening] = useState("");
+    const [roomnameHoneycombBlindsRoomDarkening, setroomnameHoneycombBlindsRoomDarkening] = useState("");
+    const [roomnameRollerBlindsRoomLightening, setroomnameRollerBlindsRoomLightening] = useState("");
+    const [roomnameRollerBlindsRoomDarkening, setroomnameRollerBlindsRoomDarkening] = useState("");
+    const [roomnameZebraBlindsRoomLightening, setroomnameZebraBlindsRoomLightening] = useState("");
+    const [roomnameZebraBlindsRoomDarkening, setroomnameZebraBlindsRoomDarkening] = useState("");
+
+
+    const [WandPriceCMSHoneycombBlindsRoomDarkening, setWandPriceCMSHoneycombBlindsRoomDarkening] = useState("");
+
+
+    const [motorizedpriceCMSHoneycombBlindsRoomDarkening, setmotorizedpriceCMSHoneycombBlindsRoomDarkening] = useState("");
+
+
+    const [cordlesspriceCMSHoneycombBlindsRoomDarkening, setcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
 
 
     const fetchLatestData = async () => {
@@ -100,13 +125,19 @@ const AddToCart = () => {
             const latestData = result.data;
 
             if (latestData) {
-                setProductName1(latestData.productName1 || "");
-                setProductName2(latestData.productName2 || "");
-                setroomname(latestData.roomname || "");
+                setproductName1HoneycombBlindsRoomLightening(latestData.productName1HoneycombBlindsRoomLightening || "");
+                setproductName1HoneycombBlindsRoomDarkening(latestData.productName1HoneycombBlindsRoomDarkening || "");
 
-                setWandPriceCMS(latestData.WandPriceCMS || "");
-                setmotorizedpriceCMS(latestData.motorizedpriceCMS || "");
-                setcordlesspriceCMS(latestData.cordlesspriceCMS || "");
+                setProductName2HoneycombBlindsRoomDarkening(latestData.productName2HoneycombBlindsRoomDarkening || "");
+                setproductName2HoneycombBlindsRoomLightening(latestData.productName2HoneycombBlindsRoomLightening || "");
+
+                setroomnameHoneycombBlindsRoomDarkening(latestData.roomnameHoneycombBlindsRoomDarkening || "");
+                setroomnameHoneycombBlindsRoomLightening(latestData.roomnameHoneycombBlindsRoomLightening || "");
+                setroomnameroomnameZebraBlindsRoomDarkening(latestData.roomnameZebraBlindsRoomDarkening || "");
+                setroomnameZebraBlindsRoomLightening(latestData.roomnameZebraBlindsRoomLightening || "");
+                setWandPriceCMSHoneycombBlindsRoomDarkening(latestData.WandPriceCMSHoneycombBlindsRoomDarkening || "");
+                setmotorizedpriceCMSHoneycombBlindsRoomDarkening(latestData.motorizedpriceCMSHoneycombBlindsRoomDarkening || "");
+                setcordlesspriceCMSHoneycombBlindsRoomDarkening(latestData.cordlesspriceCMSHoneycombBlindsRoomDarkening || "");
 
             }
         } catch (error) {
@@ -117,6 +148,101 @@ const AddToCart = () => {
     useEffect(() => {
         fetchLatestData();
     }, []);
+
+
+    const [lastSavedproductName1HoneycombBlindsRoomLightening, setLastSavedproductName1HoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedproductName1HoneycombBlindsRoomDarkening, setLastSavedproductName1HoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedproductName1RollerBlindsRoomLightening, setLastSavedproductName1RollerBlindsRoomLightening] = useState("");
+    const [lastSavedproductName1RollerBlindsRoomDarkening, setLastSavedproductName1RollerBlindsRoomDarkening] = useState("");
+    const [lastSavedproductName1ZebrablindsRoomLightening, setLastSavedproductName1ZebrablindsRoomLightening] = useState("");
+    const [lastSavedproductName1ZebrablindsRoomDarkening, setLastSavedproductName1ZebrablindsRoomDarkening] = useState("");
+
+    const [lastSavedproductName2HoneycombBlindsRoomLightening, setLastSavedproductName2HoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedproductName2HoneycombBlindsRoomDarkening, setLastSavedproductName2HoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedproductName2RollerBlindsRoomLightening, setLastSavedproductName2RollerBlindsRoomLightening] = useState("");
+    const [lastSavedproductName2RollerBlindsRoomDarkening, setLastSavedproductName2RollerBlindsRoomDarkening] = useState("");
+    const [lastSavedproductName2ZebrablindsRoomLightening, setLastSavedproductName2ZebrablindsRoomLightening] = useState("");
+    const [lastSavedproductName2ZebrablindsRoomDarkening, setLastSavedproductName2ZebrablindsRoomDarkening] = useState("");
+
+    const [lastSavedroomnameHoneycombBlindsRoomDarkening, setLastSavedroomnameHoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedroomnameHoneycombBlindsRoomLightening, setLastSavedroomnameHoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedroomnameRollerBlindsRoomLightening, setLastSavedroomnameRollerBlindsRoomLightening] = useState("");
+    const [lastSavedroomnameRollerBlindsRoomDarkening, setLastSavedroomnameRollerBlindsRoomDarkening] = useState("");
+    const [lastSavedroomnameZebrablindsRoomLightening, setLastSavedroomnameZebrablindsRoomLightening] = useState("");
+    const [lastSavedroomnameZebrablindsRoomDarkening, setLastSavedroomnameZebrablindsRoomDarkening] = useState("");
+
+    const [lastSavedWandPriceCMSHoneycombBlindsRoomLightening, setLastSavedWandPriceCMSHoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedWandPriceCMSHoneycombBlindsRoomDarkening, setLastSavedWandPriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedWandPriceCMSRollerBlindsRoomLightening, setLastSavedWandPriceCMSRollerBlindsRoomLightening] = useState("");
+    const [lastSavedWandPriceCMSRollerBlindsRoomDarkening, setLastSavedWandPriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [lastSavedWandPriceCMSZebrablindsRoomLightening, setLastSavedWandPriceCMSZebrablindsRoomLightening] = useState("");
+    const [lastSavedWandPriceCMSZebrablindsRoomDarkening, setLastSavedWandPriceCMSZebrablindsRoomDarkening] = useState("");
+    
+
+    const [lastSavedcordlesspriceCMSHoneycombBlindsRoomLightening, setLastSavedcordlesspriceCMSHoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedcordlesspriceCMSHoneycombBlindsRoomDarkening, setLastSavedcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedcordlesspriceCMSRollerBlindsRoomLightening, setLastSavedcordlesspriceCMSRollerBlindsRoomLightening] = useState("");
+    const [lastSavedcordlesspriceCMSRollerBlindsRoomDarkening, setLastSavedcordlesspriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [lastSavedcordlesspriceCMSZebrablindsRoomLightening, setLastSavedcordlesspriceCMSZebrablindsRoomLightening] = useState("");
+    const [lastSavedcordlesspriceCMSZebrablindsRoomDarkening, setLastSavedcordlesspriceCMSZebrablindsRoomDarkening] = useState("");
+
+    const [lastSavedmotorizedpriceCMSHoneycombBlindsRoomLightening, setLastSavedmotorizedpriceCMSHoneycombBlindsRoomLightening] = useState("");
+    const [lastSavedmotorizedpriceCMSHoneycombBlindsRoomDarkening, setLastSavedmotorizedpriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [lastSavedmotorizedpriceCMSRollerBlindsRoomLightening, setLastSavedmotorizedpriceCMSRollerBlindsRoomLightening] = useState("");
+    const [lastSavedmotorizedpriceCMSRollerBlindsRoomDarkening, setLastSavedmotorizedpriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [lastSavedmotorizedpriceCMSZebrablindsRoomLightening, setLastSavedmotorizedpriceCMSZebrablindsRoomLightening] = useState("");
+    const [lastSavedmotorizedpriceCMSZebrablindsRoomDarkening, setLastSavedmotorizedpriceCMSZebrablindsRoomDarkening] = useState("");
+
+
+    useEffect(() => {
+        const cartDataJSON = sessionStorage.getItem('cartData');
+
+        if (cartDataJSON) {
+            const cartData = JSON.parse(cartDataJSON);
+            setLastSavedproductName1HoneycombBlindsRoomLightening(cartData.productName1HoneycombBlindsRoomLightening);
+            setLastSavedproductName1HoneycombBlindsRoomDarkening(cartData.productName1HoneycombBlindsRoomDarkening);
+            setLastSavedproductName1RollerBlindsRoomLightening(cartData.productName1RollerBlindsRoomLightening);
+            setLastSavedproductName1RollerBlindsRoomDarkening(cartData.productName1RollerBlindsRoomDarkening);
+            setLastSavedproductName1ZebrablindsRoomLightening(cartData.productName1ZebrablindsRoomLightening);
+            setLastSavedproductName1ZebrablindsRoomDarkening(cartData.productName1ZebrablindsRoomDarkening);
+
+            setLastSavedproductName2HoneycombBlindsRoomLightening(cartData.productName2HoneycombBlindsRoomLightening);
+            setLastSavedproductName2HoneycombBlindsRoomDarkening(cartData.productName2HoneycombBlindsRoomDarkening);
+            setLastSavedproductName2RollerBlindsRoomLightening(cartData.productName2RollerBlindsRoomLightening);
+            setLastSavedproductName2RollerBlindsRoomDarkening(cartData.productName2RollerBlindsRoomDarkening);
+            setLastSavedproductName2ZebrablindsRoomLightening(cartData.productName2ZebrablindsRoomLightening);
+            setLastSavedproductName2ZebrablindsRoomDarkening(cartData.productName2ZebrablindsRoomDarkening);
+
+            setLastSavedroomnameHoneycombBlindsRoomDarkening(cartData.roomnameHoneycombBlindsRoomDarkening);
+            setLastSavedroomnameHoneycombBlindsRoomLightening(cartData.roomnameHoneycombBlindsRoomLightening);
+            setLastSavedroomnameRollerBlindsRoomLightening(cartData.roomnameRollerBlindsRoomLightening);
+            setLastSavedroomnameRollerBlindsRoomDarkening(cartData.roomnameRollerBlindsRoomDarkening);
+            setLastSavedroomnameZebrablindsRoomLightening(cartData.roomnameZebrablindsRoomLightening);
+            setLastSavedroomnameZebrablindsRoomDarkening(cartData.roomnameZebrablindsRoomDarkening);
+
+            setLastSavedWandPriceCMSHoneycombBlindsRoomLightening(cartData.WandPriceCMSHoneycombBlindsRoomLightening);
+            setLastSavedWandPriceCMSHoneycombBlindsRoomDarkening(cartData.WandPriceCMSHoneycombBlindsRoomDarkening);
+            setLastSavedWandPriceCMSRollerBlindsRoomLightening(cartData.WandPriceCMSRollerBlindsRoomLightening);
+            setLastSavedWandPriceCMSRollerBlindsRoomDarkening(cartData.WandPriceCMSRollerBlindsRoomDarkening);
+            setLastSavedWandPriceCMSZebrablindsRoomLightening(cartData.WandPriceCMSZebrablindsRoomLightening);
+            setLastSavedWandPriceCMSZebrablindsRoomDarkening(cartData.WandPriceCMSZebrablindsRoomDarkening);
+
+            setLastSavedcordlesspriceCMSHoneycombBlindsRoomLightening(cartData.cordlesspriceCMSHoneycombBlindsRoomLightening);
+            setLastSavedcordlesspriceCMSHoneycombBlindsRoomDarkening(cartData.cordlesspriceCMSHoneycombBlindsRoomDarkening);
+            setLastSavedcordlesspriceCMSRollerBlindsRoomLightening(cartData.cordlesspriceCMSRollerBlindsRoomLightening);
+            setLastSavedcordlesspriceCMSRollerBlindsRoomDarkening(cartData.cordlesspriceCMSRollerBlindsRoomDarkening);
+            setLastSavedcordlesspriceCMSZebrablindsRoomLightening(cartData.cordlesspriceCMSZebrablindsRoomLightening);
+            setLastSavedcordlesspriceCMSZebrablindsRoomDarkening(cartData.cordlesspriceCMSZebrablindsRoomDarkening);
+            
+            setLastSavedmotorizedpriceCMSHoneycombBlindsRoomLightening(cartData.motorizedpriceCMSHoneycombBlindsRoomLightening);
+            setLastSavedmotorizedpriceCMSHoneycombBlindsRoomDarkening(cartData.motorizedpriceCMSHoneycombBlindsRoomDarkening);
+            setLastSavedmotorizedpriceCMSRollerBlindsRoomLightening(cartData.motorizedpriceCMSRollerBlindsRoomLightening);
+            setLastSavedmotorizedpriceCMSRollerBlindsRoomDarkening(cartData.motorizedpriceCMSRollerBlindsRoomDarkening);
+            setLastSavedmotorizedpriceCMSZebrablindsRoomLightening(cartData.motorizedpriceCMSZebrablindsRoomLightening);
+            setLastSavedmotorizedpriceCMSZebrablindsRoomDarkening(cartData.motorizedpriceCMSZebrablindsRoomDarkening);
+        }
+    }, []);
+
 
 
     return (
@@ -240,9 +366,28 @@ const AddToCart = () => {
                                         <div className={styles.description_and_answer_seperator_wrapper}>
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
+
                                         <div className={styles.answers_answers}>
-                                            {productName1}
+                                            {lastSavedproductName1HoneycombBlindsRoomLightening && (
+                                                <span>{lastSavedproductName1HoneycombBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName1HoneycombBlindsRoomDarkening && (
+                                                <span>{lastSavedproductName1HoneycombBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedproductName1RollerBlindsRoomLightening && (
+                                                <span>{lastSavedproductName1RollerBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName1RollerBlindsRoomDarkening && (
+                                                <span>{lastSavedproductName1RollerBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedproductName1ZebrablindsRoomLightening && (
+                                                <span>{lastSavedproductName1ZebrablindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName1ZebrablindsRoomDarkening && (
+                                                <span>{lastSavedproductName1ZebrablindsRoomDarkening}</span>
+                                            )}
                                         </div>
+
                                     </div>
 
                                     <div className={styles.description_and_answer_div}>
@@ -251,7 +396,24 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {productName2}
+                                            {lastSavedproductName2HoneycombBlindsRoomLightening && (
+                                                <span>{lastSavedproductName2HoneycombBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName2HoneycombBlindsRoomDarkening && (
+                                                <span>{lastSavedproductName2HoneycombBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedproductName2RollerBlindsRoomLightening && (
+                                                <span>{lastSavedproductName2RollerBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName2RollerBlindsRoomDarkening && (
+                                                <span>{lastSavedproductName2RollerBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedproductName2ZebrablindsRoomLightening && (
+                                                <span>{lastSavedproductName2ZebrablindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedproductName2ZebrablindsRoomDarkening && (
+                                                <span>{lastSavedproductName2ZebrablindsRoomDarkening}</span>
+                                            )}
                                         </div>
                                     </div>
 
@@ -261,7 +423,24 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {roomname}
+                                            {lastSavedroomnameHoneycombBlindsRoomLightening && (
+                                                <span>{lastSavedroomnameHoneycombBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedroomnameHoneycombBlindsRoomDarkening && (
+                                                <span>{lastSavedroomnameHoneycombBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedroomnameRollerBlindsRoomLightening && (
+                                                <span>{lastSavedroomnameRollerBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedroomnameRollerBlindsRoomDarkening && (
+                                                <span>{lastSavedroomnameRollerBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedroomnameZebrablindsRoomLightening && (
+                                                <span>{lastSavedroomnameZebrablindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedroomnameZebrablindsRoomDarkening && (
+                                                <span>{lastSavedroomnameZebrablindsRoomDarkening}</span>
+                                            )}
                                         </div>
                                     </div>
 
@@ -289,54 +468,37 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
+                                            {activeDimensionsinsideMount === "insideMount" && (
+                                                <>
+                                                    <div>
+                                                        Width:
+                                                        {selectedInchesWidthInsideMount ? ` ${selectedInchesWidthInsideMount}` : ""}
+                                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}` : ""}
+                                                    </div>
+                                                    <div>
+                                                        Height:
+                                                        {selectedInchesHeightInsideMount ? ` ${selectedInchesHeightInsideMount}` : ""}
+                                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}` : ""}
+                                                    </div>
+                                                </>
+                                            )}
 
-                                            <>
-                                                <div>
-                                                    {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                                    {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                                </div>
-                                                <p>X</p>
-                                                <div>
-                                                    {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                                    {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                                </div>
-                                            </>
-
-                                            <>
-                                                <div>
-                                                    {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                                    {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                                </div>
-                                                X
-                                                <div>
-                                                    {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                                    {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                                </div>
-                                            </>
-
-                                            <div>
-                                                Width Inside Mount: {selectedInchesWidthInsideMount} - {selectedFractionsWidthInsideMount}
-                                                {selectedFractionsWidthInsideMount && " Inches Long"}
-                                            </div>
-
-                                            <div>
-                                                Height Inside Mount: {selectedInchesHeightInsideMount} - {selectedFractionsHeightInsideMount}
-                                                {selectedFractionsHeightInsideMount && " Inches High"}
-                                            </div>
-
-
-                                            <div>
-                                                Width Outisde Mount: {selectedInchesWidthOutsideMount} - {selectedFractionsWidthOutsideMount}
-                                                {selectedFractionsWidthOutsideMount && " Inches Long"}
-                                            </div>
-
-                                            <div>
-                                                Height Outisde Mount: {selectedInchesHeightOutsideMount} - {selectedFractionsHeightOutsideMount}
-                                                {selectedFractionsHeightOutsideMount && " Inches High"}
-                                            </div>
-
-
+                                            {activeDimensionsoutsideMount === "outsideMount" && (
+                                                <>
+                                                    <div>
+                                                        Width:
+                                                        {selectedInchesWidthOutsideMount ? ` ${selectedInchesWidthOutsideMount}` : ""}
+                                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}` : ""}
+                                                    </div>
+                                                    <div>
+                                                        Height:
+                                                        {selectedInchesHeightOutsideMount ? ` ${selectedInchesHeightOutsideMount}` : ""}
+                                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}` : ""}
+                                                    </div>
+                                                </>
+                                            )}
                                         </div>
+
                                     </div>
 
                                     <div className={styles.description_and_answer_div}>
@@ -347,6 +509,27 @@ const AddToCart = () => {
                                         </div>
                                         <div className={styles.answers_answers}>
                                             {InsideOrOutsideRenderingContent ? `Mount Type: ${InsideOrOutsideRenderingContent}` : "Mount Type?"}
+
+
+                                            {lastSavedroomnameHoneycombBlindsRoomLightening && (
+                                                <span>{lastSavedroomnameHoneycombBlindsRoomLightening}</span>
+                                            )}
+                                            
+                                            {lastSavedroomnameHoneycombBlindsRoomDarkening && (
+                                                <span>{lastSavedroomnameHoneycombBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedroomnameRollerBlindsRoomLightening && (
+                                                <span>{lastSavedroomnameRollerBlindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedroomnameRollerBlindsRoomDarkening && (
+                                                <span>{lastSavedroomnameRollerBlindsRoomDarkening}</span>
+                                            )}
+                                            {lastSavedroomnameZebrablindsRoomLightening && (
+                                                <span>{lastSavedroomnameZebrablindsRoomLightening}</span>
+                                            )}
+                                            {lastSavedroomnameZebrablindsRoomDarkening && (
+                                                <span>{lastSavedroomnameZebrablindsRoomDarkening}</span>
+                                            )}
                                         </div>
 
                                     </div>
@@ -375,7 +558,7 @@ const AddToCart = () => {
                                             <div>
                                                 {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
                                             </div>
-                                            
+
                                             <div>
                                                 Lift Price: {nameZebrablindsRoomDarkening}
                                             </div>

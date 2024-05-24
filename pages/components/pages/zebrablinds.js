@@ -46,16 +46,20 @@ const ZebraBlinds = () => {
   const [cordlesspriceCMSZebrablindsRoomLightening, setcordlesspriceCMSZebrablindsRoomLightening] = useState("");
   const [motorizedpriceCMSZebrablindsRoomLightening, setmotorizedpriceCMSZebrablindsRoomLightening] = useState("");
 
-  const [inchPricesAfterWidthInsideMount, setinchPricesAfterWidthInsideMount] = useState({});
-  const [inchPricesAfterHeightInsideMount, setinchPricesAfterHeightInsideMount] = useState({});
-  const [inchPricesAfterWidthOutsideMount, setinchPricesAfterWidthOutsideMount] = useState({});
-  const [inchPricesAfterHeightOutsideMount, setinchPricesAfterHeightOutsideMount] = useState({});
+  const [inchPricesAfterWidthInsideMountZebrablindsRoomLightening, setinchPricesAfterWidthInsideMountZebrablindsRoomLightening] = useState({});
+  const [inchPricesAfterHeightInsideMountZebrablindsRoomLightening, setinchPricesAfterHeightInsideMountZebrablindsRoomLightening] = useState({});
+  const [inchPricesAfterWidthOutsideMountZebrablindsRoomLightening, setinchPricesAfterWidthOutsideMountZebrablindsRoomLightening] = useState({});
+  const [inchPricesAfterHeightOutsideMountZebrablindsRoomLightening, setinchPricesAfterHeightOutsideMountZebrablindsRoomLightening] = useState({});
+  
 
-  const [newSetPriceInchesWidthInsideMount, setnewSetPriceInchesWidthInsideMount] = useState(null);
-  const [newSetPriceInchesHeightInsideMount, setnewSetPriceInchesHeightInsideMount] = useState(null);
-  const [newSetPriceInchesWidthOutsideMount, setnewSetPriceInchesWidthOutsideMount] = useState(null);
-  const [newSetPriceInchesHeightOutsideMount, setnewSetPriceInchesHeightOutsideMount] = useState(null);
+  
 
+
+  const [newSetPriceInchesWidthInsideMountZebrablindsRoomLightening, setnewSetPriceInchesWidthInsideMountZebrablindsRoomLightening] = useState(null);
+  const [newSetPriceInchesHeightInsideMountZebrablindsRoomLightening, setnewSetPriceInchesHeightInsideMountZebrablindsRoomLightening] = useState(null);
+  const [newSetPriceInchesWidthOutsideMountZebrablindsRoomLightening, setnewSetPriceInchesWidthOutsideMountZebrablindsRoomLightening] = useState(null);
+  const [newSetPriceInchesHeightOutsideMountZebrablindsRoomLightening, setnewSetPriceInchesHeightOutsideMountZebrablindsRoomLightening] = useState(null);
+  
   const { data: session } = useSession();
   const { postData } = useData();
 
@@ -766,8 +770,8 @@ const ZebraBlinds = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMount[inchesHeightInsideMount];
-    setnewSetPriceInchesHeightInsideMount(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
+    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMountZebrablindsRoomLightening[inchesHeightInsideMount];
+    setnewSetPriceInchesHeightInsideMountZebrablindsRoomLightening(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightInsideMount === undefined && inchesHeightInsideMount % 5 !== 0) {
@@ -776,8 +780,8 @@ const ZebraBlinds = () => {
         prevInchHeightInsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMount[prevInchHeightInsideMount];
-      setnewSetPriceInchesHeightInsideMount(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
+      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMountZebrablindsRoomLightening[prevInchHeightInsideMount];
+      setnewSetPriceInchesHeightInsideMountZebrablindsRoomLightening(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightInsideMount);
       let nextInchHeightInsideMount = prevInchHeightInsideMount + 1;
@@ -787,7 +791,7 @@ const ZebraBlinds = () => {
 
     } else if (inchesHeightInsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMount[inchesHeightInsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMountZebrablindsRoomLightening[inchesHeightInsideMount]);
     }
   };
 
@@ -864,8 +868,8 @@ const ZebraBlinds = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount];
-    setnewSetPriceInchesHeightOutsideMount(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
+    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMountZebrablindsRoomLightening[inchesHeightOutsideMount];
+    setnewSetPriceInchesHeightOutsideMountZebrablindsRoomLightening(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightOutsideMount === undefined && inchesHeightOutsideMount % 5 !== 0) {
@@ -874,8 +878,8 @@ const ZebraBlinds = () => {
         prevInchHeightOutsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMount[prevInchHeightOutsideMount];
-      setnewSetPriceInchesHeightOutsideMount(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
+      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMountZebrablindsRoomLightening[prevInchHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMountZebrablindsRoomLightening(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightOutsideMount);
       let nextInchHeightOutsideMount = prevInchHeightOutsideMount + 1;
@@ -885,7 +889,7 @@ const ZebraBlinds = () => {
 
     } else if (inchesHeightOutsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMount[inchesHeightOutsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMountZebrablindsRoomLightening[inchesHeightOutsideMount]);
     }
   };
 
@@ -1056,8 +1060,8 @@ const ZebraBlinds = () => {
 
   // Function to calculate sum of prices
   const calculateSumTotal = () => {
-    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMount) || 0;
-    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]) || 0;
+    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountZebrablindsRoomLightening) || 0;
+    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountZebrablindsRoomLightening[selectedInchesWidthInsideMount]) || 0;
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
@@ -1129,8 +1133,6 @@ const ZebraBlinds = () => {
 
   const [isCartVisible, setIsCartVisible] = useState(false);
 
-
-
   const cartRef = useRef(null);
 
   const handleSeeCartClick = () => {
@@ -1144,51 +1146,22 @@ const ZebraBlinds = () => {
 
 
   const handleAddToCart = async () => {
-    await fetchLatestData();
 
-    // Calculate the total price based on the state
     const newTotalPrice = getTotalPrice();
 
-    const apiUrl = '/api/saveData';
+    const cartData = {
+      productName1ZebrablindsRoomLightening: productName1ZebrablindsRoomLightening,
+      productName2ZebrablindsRoomLightening: productName2ZebrablindsRoomLightening,
+      roomnameZebrablindsRoomLightening: roomnameZebrablindsRoomLightening,
+      WandPriceCMSZebrablindsRoomLightening: WandPriceCMSZebrablindsRoomLightening,
+      cordlesspriceCMSZebrablindsRoomLightening: cordlesspriceCMSZebrablindsRoomLightening,
+      motorizedpriceCMSZebrablindsRoomLightening: motorizedpriceCMSZebrablindsRoomLightening,
+      totalpricecalculated: newTotalPrice,
+    };
 
-    let data = {}; // Initialize data object
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
 
-    // Check if session is not null
-    if (session) {
-      data = {
-        name: session.name,
-        nameZebrablindsRoomLightening: session.nameZebrablindsRoomLightening, 
-        productName1ZebrablindsRoomLightening: session.productName1ZebrablindsRoomLightening,
-        productName2ZebrablindsRoomLightening: session.productName2ZebrablindsRoomLightening,
-        roomnameZebrablindsRoomLightening: session.roomnameZebrablindsRoomLightening,
-        WandPriceCMSZebrablindsRoomLightening: session.WandPriceCMSZebrablindsRoomLightening,
-        cordlesspriceCMSZebrablindsRoomLightening: session.cordlesspriceCMSZebrablindsRoomLightening,
-        motorizedpriceCMSZebrablindsRoomLightening: session.motorizedpriceCMSZebrablindsRoomLightening,
-        totalpricecalculated: newTotalPrice,
-      };
-    } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
-    }
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
+    window.location.href = '/addtocart'; // Update the URL to match your cart page
   };
 
 
@@ -1515,8 +1488,8 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount] !== undefined
-                                      ? inchPricesAfterWidthInsideMount[selectedInchesWidthInsideMount]
+                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMountZebrablindsRoomLightening[selectedInchesWidthInsideMount] !== undefined
+                                      ? inchPricesAfterWidthInsideMountZebrablindsRoomLightening[selectedInchesWidthInsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -1922,8 +1895,8 @@ const ZebraBlinds = () => {
 
                                   <h1>
                                     Price Height Inside Mount: ($)
-                                    {newSetPriceInchesHeightInsideMount !== undefined
-                                      ? newSetPriceInchesHeightInsideMount
+                                    {newSetPriceInchesHeightInsideMountZebrablindsRoomLightening !== undefined
+                                      ? newSetPriceInchesHeightInsideMountZebrablindsRoomLightening
                                       : "no price set"}
                                   </h1>
 
@@ -2566,9 +2539,9 @@ const ZebraBlinds = () => {
 
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMount
+                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountZebrablindsRoomLightening
                                     [selectedInchesWidthOutsideMount] !== undefined
-                                      ? inchPricesAfterWidthOutsideMount[selectedInchesWidthOutsideMount]
+                                      ? inchPricesAfterWidthOutsideMountZebrablindsRoomLightening[selectedInchesWidthOutsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -2998,8 +2971,8 @@ const ZebraBlinds = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMount !== undefined
-                                      ? newSetPriceInchesHeightOutsideMount
+                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMountZebrablindsRoomLightening !== undefined
+                                      ? newSetPriceInchesHeightOutsideMountZebrablindsRoomLightening
                                       : "no price set"}
                                   </h1>
                                 </div>
@@ -4266,7 +4239,7 @@ const ZebraBlinds = () => {
                     <div className={styles.add_to_cart_rectangle_wrapper}>
                       <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
                         <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL: ${calculateSumTotal().toFixed(2)}</div>
                           <p className={styles.add_to_cart}>ADD TO CART</p>
                         </button>
                       </Link>

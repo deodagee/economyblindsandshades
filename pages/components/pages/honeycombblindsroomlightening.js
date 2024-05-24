@@ -1135,53 +1135,28 @@ const HoneycombBlindsRoomLightening = () => {
 
 
 
-
   const handleAddToCart = async () => {
-    await fetchLatestData();
-
     // Calculate the total price based on the state
     const newTotalPrice = getTotalPrice();
-
-    const apiUrl = '/api/saveData';
-
-    let data = {}; // Initialize data object
-
-    // Check if session is not null
-    if (session) {
-      data = {
-        nameHoneycombBlindsRoomLightening: session.nameHoneycombBlindsRoomLightening,
-        productName1HoneycombBlindsRoomLightening: session.productName1HoneycombBlindsRoomLightening,
-        productName2HoneycombBlindsRoomLightening: session.productName2HoneycombBlindsRoomLightening,
-        roomnameHoneycombBlindsRoomLightening: session.roomnameHoneycombBlindsRoomLightening,
-        WandPriceCMSHoneycombBlindsRoomLightening: session.WandPriceCMSHoneycombBlindsRoomLightening,
-        cordlesspriceCMSHoneycombBlindsRoomLightening: session.cordlesspriceCMSHoneycombBlindsRoomLightening,
-        motorizedpriceCMSHoneycombBlindsRoomLightening: session.motorizedpriceCMSHoneycombBlindsRoomLightening,
-        totalpricecalculated: newTotalPrice,
-      };
-    } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
-    }
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
+  
+    // Prepare the data to be stored in sessionStorage
+    const cartData = {
+      productName1HoneycombBlindsRoomLightening: productName1HoneycombBlindsRoomLightening,
+      productName2HoneycombBlindsRoomLightening: productName2HoneycombBlindsRoomLightening,
+      roomnameHoneycombBlindsRoomLightening: roomnameHoneycombBlindsRoomLightening,
+      WandPriceCMSHoneycombBlindsRoomLightening: WandPriceCMSHoneycombBlindsRoomLightening,
+      cordlesspriceCMSHoneycombBlindsRoomLightening: cordlesspriceCMSHoneycombBlindsRoomLightening,
+      motorizedpriceCMSHoneycombBlindsRoomLightening: motorizedpriceCMSHoneycombBlindsRoomLightening,
+      totalpricecalculated: newTotalPrice,
+    };
+  
+    // Store the cart data in sessionStorage
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
+  
+    // Navigate to the cart page
+    window.location.href = '/addtocart'; // Update the URL to match your cart page
   };
+  
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4259,7 +4234,7 @@ const HoneycombBlindsRoomLightening = () => {
                     <div className={styles.add_to_cart_rectangle_wrapper}>
                       <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
                         <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL:${calculateSumTotal().toFixed(2)}</div>
                           <p className={styles.add_to_cart}>ADD TO CART</p>
                         </button>
                       </Link>

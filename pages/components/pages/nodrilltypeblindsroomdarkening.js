@@ -1,4 +1,4 @@
-// C:\Users\User\economyblindsandshadesjs\pages\components\pages\nodrilltypeblindsroomlightening.js
+// C:\Users\User\economyblindsandshadesjs\pages\components\pages\nodrilltypeblindsroomdarkening.js
 
 import styles from '../../../styles/components/pages/nodrilltypeblinds.module.css';
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { useSession } from "next-auth/react";
 import FooterPage from "../footer.js"
 import { useRouter } from 'next/router';
 
-const NoDrillTypeBlindsRoomLightening = () => {
+const NoDrillTypeBlindsRoomDarkening = () => {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
@@ -35,22 +35,22 @@ const NoDrillTypeBlindsRoomLightening = () => {
   }, []);
 
   const { data: session } = useSession();
-  const [productName1NoDrillTypeBlindsRoomLightening, setProductName1NoDrillTypeBlindsRoomLightening] = useState("");
-  const [productName2NoDrillTypeBlindsRoomLightening, setProductName2NoDrillTypeBlindsRoomLightening] = useState("");
-  const [roomnameNoDrillTypeBlindsRoomLightening, setroomnameNoDrillTypeBlindsRoomLightening] = useState("");
-  const [WandPriceCMSNoDrillTypeBlindsRoomLightening, setWandPriceCMSNoDrillTypeBlindsRoomLightening] = useState("");
-  const [cordlesspriceCMSNoDrillTypeBlindsRoomLightening, setcordlesspriceCMSNoDrillTypeBlindsRoomLightening] = useState("");
-  const [motorizedpriceCMSNoDrillTypeBlindsRoomLightening, setmotorizedpriceCMSNoDrillTypeBlindsRoomLightening] = useState("");
+  const [productName1NoDrillTypeBlindsRoomDarkening, setProductName1NoDrillTypeBlindsRoomDarkening] = useState("");
+  const [productName2NoDrillTypeBlindsRoomDarkening, setProductName2NoDrillTypeBlindsRoomDarkening] = useState("");
+  const [roomnameNoDrillTypeBlindsRoomDarkening, setroomnameNoDrillTypeBlindsRoomDarkening] = useState("");
+  const [WandPriceCMSNoDrillTypeBlindsRoomDarkening, setWandPriceCMSNoDrillTypeBlindsRoomDarkening] = useState("");
+  const [cordlesspriceCMSNoDrillTypeBlindsRoomDarkening, setcordlesspriceCMSNoDrillTypeBlindsRoomDarkening] = useState("");
+  const [motorizedpriceCMSNoDrillTypeBlindsRoomDarkening, setmotorizedpriceCMSNoDrillTypeBlindsRoomDarkening] = useState("");
 
-  const [inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening, setinchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening] = useState({});
-  const [inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening, setinchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening] = useState({});
-  const [inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening, setinchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening] = useState({});
-  const [inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening, setinchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening] = useState({});
+  const [inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening, setinchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening, setinchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening, setinchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening] = useState({});
+  const [inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening, setinchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening] = useState({});
 
-  const [newSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomLightening, setnewSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomLightening] = useState(null);
-  const [newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening, setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening] = useState(null);
-  const [newSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomLightening, setnewSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomLightening] = useState(null);
-  const [newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening, setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening] = useState(null);
+  const [newSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomDarkening, setnewSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening, setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomDarkening, setnewSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomDarkening] = useState(null);
+  const [newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening, setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening] = useState(null);
 
 
   const fetchLatestData = async () => {
@@ -60,39 +60,39 @@ const NoDrillTypeBlindsRoomLightening = () => {
       const latestData = result.data;
 
       if (latestData) {
-        setProductName1NoDrillTypeBlindsRoomLightening(latestData.productName1NoDrillTypeBlindsRoomLightening || "");
-        setProductName2NoDrillTypeBlindsRoomLightening(latestData.productName2NoDrillTypeBlindsRoomLightening || "");
-        setroomnameNoDrillTypeBlindsRoomLightening(latestData.roomnameNoDrillTypeBlindsRoomLightening || "");
-        setWandPriceCMSNoDrillTypeBlindsRoomLightening(latestData.WandPriceCMSNoDrillTypeBlindsRoomLightening || "");
-        setcordlesspriceCMSNoDrillTypeBlindsRoomLightening(latestData.cordlesspriceCMSNoDrillTypeBlindsRoomLightening || "");
-        setmotorizedpriceCMSNoDrillTypeBlindsRoomLightening(latestData.motorizedpriceCMSNoDrillTypeBlindsRoomLightening || "");
+        setProductName1NoDrillTypeBlindsRoomDarkening(latestData.productName1NoDrillTypeBlindsRoomDarkening || "");
+        setProductName2NoDrillTypeBlindsRoomDarkening(latestData.productName2NoDrillTypeBlindsRoomDarkening || "");
+        setroomnameNoDrillTypeBlindsRoomDarkening(latestData.roomnameNoDrillTypeBlindsRoomDarkening || "");
+        setWandPriceCMSNoDrillTypeBlindsRoomDarkening(latestData.WandPriceCMvNoDrillTypeBlindsRoomDarkening || "");
+        setcordlesspriceCMSNoDrillTypeBlindsRoomDarkening(latestData.cordlesspriceCMSNoDrillTypeBlindsRoomDarkening || "");
+        setmotorizedpriceCMSNoDrillTypeBlindsRoomDarkening(latestData.motorizedpriceCMSNoDrillTypeBlindsRoomDarkening || "");
 
-        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening || "{}");
+        const inchPricesWidthInsideMount = JSON.parse(latestData.inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening || "{}");
 
-        setinchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening(inchPricesWidthInsideMount);
+        setinchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening(inchPricesWidthInsideMount);
 
-        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening || "{}");
-        setinchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening(inchPricesWidthOutsideMount);
+        const inchPricesWidthOutsideMount = JSON.parse(latestData.inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening || "{}");
+        setinchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening(inchPricesWidthOutsideMount);
 
-        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening || "{}");
-        setinchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening(inchPricesHeightInsideMount);
+        const inchPricesHeightInsideMount = JSON.parse(latestData.inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening || "{}");
+        setinchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening(inchPricesHeightInsideMount);
 
-        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening || "{}");
-        setinchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening(inchPricesHeightOutsideMount);
+        const inchPricesHeightOutsideMount = JSON.parse(latestData.inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening || "{}");
+        setinchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening(inchPricesHeightOutsideMount);
 
 
 
         const lastSetPriceWidthInsideMount = inchPricesWidthInsideMount[selectedInchesWidthInsideMount];
-        setnewSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomLightening(lastSetPriceWidthInsideMount);
+        setnewSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomDarkening(lastSetPriceWidthInsideMount);
 
         const lastSetPriceWidthOutsideMount = inchPricesWidthOutsideMount[selectedInchesWidthOutsideMount];
-        setnewSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomLightening(lastSetPriceWidthOutsideMount);
+        setnewSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomDarkening(lastSetPriceWidthOutsideMount);
 
         const lastSetPriceHeightInsideMount = inchPricesHeightInsideMount[selectedInchesHeightInsideMount];
-        setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening(lastSetPriceHeightInsideMount);
+        setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening(lastSetPriceHeightInsideMount);
 
         const lastSetPriceHeightOutsideMount = inchPricesHeightOutsideMount[selectedInchesHeightOutsideMount];
-        setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening(lastSetPriceHeightOutsideMount);
+        setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening(lastSetPriceHeightOutsideMount);
 
       }
     } catch (error) {
@@ -203,15 +203,15 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
     switch (ellipseNumber) {
       case 1:
-        newTotalPrice = WandPriceCMSNoDrillTypeBlindsRoomLightening;
+        newTotalPrice = WandPriceCMSNoDrillTypeBlindsRoomDarkening;
         break;
 
       case 2:
-        newTotalPrice = cordlesspriceCMSNoDrillTypeBlindsRoomLightening;
+        newTotalPrice = cordlesspriceCMSNoDrillTypeBlindsRoomDarkening;
         break;
 
       case 3:
-        newTotalPrice = motorizedpriceCMSNoDrillTypeBlindsRoomLightening;
+        newTotalPrice = motorizedpriceCMSNoDrillTypeBlindsRoomDarkening;
         break;
 
       default:
@@ -226,7 +226,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
     switch (active_inside_outside_ellipse) {
       case 1:
-        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsNoDrillTypeBlindsRoomLightening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsNoDrillTypeBlindsRoomLightening : 0);
+        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsNoDrillTypeBlindsRoomDarkening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsNoDrillTypeBlindsRoomDarkening : 0);
         break;
       case 2:
         totalPrice = totalpricecalculated;
@@ -267,12 +267,12 @@ const NoDrillTypeBlindsRoomLightening = () => {
   };
 
 
-  const [NoDrillTypeBlindsRoomLighteningContent, setNoDrillTypeBlindsRoomLighteningContent] = useState('');
+  const [NoDrillTypeBlindsRoomDarkeningContent, setNoDrillTypeBlindsRoomDarkeningContent] = useState('');
 
   useEffect(() => {
-    const NoDrillTypeBlindsRoomLighteningElement = document.querySelector(`.${styles.room_darkening_element}`);
-    if (NoDrillTypeBlindsRoomLighteningElement) {
-      setNoDrillTypeBlindsRoomLighteningContent(NoDrillTypeBlindsRoomLighteningElement.textContent || NoDrillTypeBlindsRoomLighteningElement.innerText);
+    const NoDrillTypeBlindsRoomDarkeningElement = document.querySelector(`.${styles.room_darkening_element}`);
+    if (NoDrillTypeBlindsRoomDarkeningElement) {
+      setNoDrillTypeBlindsRoomDarkeningContent(NoDrillTypeBlindsRoomDarkeningElement.textContent || NoDrillTypeBlindsRoomDarkeningElement.innerText);
     }
   }, []);
 
@@ -759,8 +759,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening[inchesHeightInsideMount];
-    setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
+    const newSetPriceHeightInsideMount = inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening[inchesHeightInsideMount];
+    setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening(newSetPriceHeightInsideMount !== undefined ? newSetPriceHeightInsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightInsideMount === undefined && inchesHeightInsideMount % 5 !== 0) {
@@ -769,8 +769,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
         prevInchHeightInsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening[prevInchHeightInsideMount];
-      setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
+      const nearestMultipleOf5PriceHeightInsideMount = inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening[prevInchHeightInsideMount];
+      setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening(nearestMultipleOf5PriceHeightInsideMount !== undefined ? nearestMultipleOf5PriceHeightInsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightInsideMount);
       let nextInchHeightInsideMount = prevInchHeightInsideMount + 1;
@@ -780,7 +780,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
     } else if (inchesHeightInsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomLightening[inchesHeightInsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightInsideMountNoDrillTypeBlindsRoomDarkening[inchesHeightInsideMount]);
     }
   };
 
@@ -857,8 +857,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
     }
 
     // Retrieve the price associated with the selected inch
-    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening[inchesHeightOutsideMount];
-    setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
+    const newSetPriceHeightOutsideMount = inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening[inchesHeightOutsideMount];
+    setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening(newSetPriceHeightOutsideMount !== undefined ? newSetPriceHeightOutsideMount : "");
 
     // If the selected inch is not a multiple of 5, find the nearest multiple of 5 and display its price
     if (newSetPriceHeightOutsideMount === undefined && inchesHeightOutsideMount % 5 !== 0) {
@@ -867,8 +867,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
         prevInchHeightOutsideMount--;
       }
 
-      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening[prevInchHeightOutsideMount];
-      setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
+      const nearestMultipleOf5PriceHeightOutsideMount = inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening[prevInchHeightOutsideMount];
+      setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening(nearestMultipleOf5PriceHeightOutsideMount !== undefined ? nearestMultipleOf5PriceHeightOutsideMount : "");
 
       console.log("Price for subsequent numbers of multiple of 5:", nearestMultipleOf5PriceHeightOutsideMount);
       let nextInchHeightOutsideMount = prevInchHeightOutsideMount + 1;
@@ -878,7 +878,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
     } else if (inchesHeightOutsideMount % 5 === 0) {
       // Log the price of the multiple of 5 when clicked
-      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomLightening[inchesHeightOutsideMount]);
+      console.log("Price for multiple of 5:", inchPricesAfterHeightOutsideMountNoDrillTypeBlindsRoomDarkening[inchesHeightOutsideMount]);
     }
   };
 
@@ -1049,22 +1049,22 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
   // Function to calculate sum of prices
   const calculateSumTotal = () => {
-    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening) || 0;
-    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthInsideMount]) || 0;
+    let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening) || 0;
+    let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening[selectedInchesWidthInsideMount]) || 0;
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
       case 1:
         // If "wand" option is selected
-        priceHeightInsideMount += parseFloat(WandPriceCMSNoDrillTypeBlindsRoomLightening) || 0;
+        priceHeightInsideMount += parseFloat(WandPriceCMSNoDrillTypeBlindsRoomDarkening) || 0;
         break;
       case 2:
         // If "cordless" option is selected
-        priceHeightInsideMount += parseFloat(cordlesspriceCMSNoDrillTypeBlindsRoomLightening) || 0;
+        priceHeightInsideMount += parseFloat(cordlesspriceCMSNoDrillTypeBlindsRoomDarkening) || 0;
         break;
       case 3:
         // If "motorized" option is selected
-        priceHeightInsideMount += parseFloat(motorizedpriceCMSNoDrillTypeBlindsRoomLightening) || 0;
+        priceHeightInsideMount += parseFloat(motorizedpriceCMSNoDrillTypeBlindsRoomDarkening) || 0;
         break;
       default:
         // Default case when none of the options are selected
@@ -1137,51 +1137,27 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
 
   const handleAddToCart = async () => {
-    await fetchLatestData();
-
     // Calculate the total price based on the state
     const newTotalPrice = getTotalPrice();
-
-    const apiUrl = '/api/saveData';
-
-    let data = {}; // Initialize data object
-
-    // Check if session is not null
-    if (session) {
-      data = {
-        nameNoDrillTypeBlindsRoomLightening: session.nameNoDrillTypeBlindsRoomLightening,
-        productName1NoDrillTypeBlindsRoomLightening: session.productName1NoDrillTypeBlindsRoomLightening,
-        productName2NoDrillTypeBlindsRoomLightening: session.productName2NoDrillTypeBlindsRoomLightening,
-        roomnameNoDrillTypeBlindsRoomLightening: session.roomnameNoDrillTypeBlindsRoomLightening,
-        WandPriceCMSNoDrillTypeBlindsRoomLightening: session.WandPriceCMSNoDrillTypeBlindsRoomLightening,
-        cordlesspriceCMSNoDrillTypeBlindsRoomLightening: session.cordlesspriceCMSNoDrillTypeBlindsRoomLightening,
-        motorizedpriceCMSNoDrillTypeBlindsRoomLightening: session.motorizedpriceCMSNoDrillTypeBlindsRoomLightening,
-        totalpricecalculated: newTotalPrice,
-      };
-    } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
-    }
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
+  
+    // Prepare the data to be stored in sessionStorage
+    const cartData = {
+      productName1NoDrillTypeBlindsRoomDarkening: productName1NoDrillTypeBlindsRoomDarkening,
+      productName2NoDrillTypeBlindsRoomDarkening: productName2NoDrillTypeBlindsRoomDarkening,
+      roomnameNoDrillTypeBlindsRoomDarkening: roomnameNoDrillTypeBlindsRoomDarkening,
+      WandPriceCMSNoDrillTypeBlindsRoomDarkening: WandPriceCMSNoDrillTypeBlindsRoomDarkening,
+      cordlesspriceCMSNoDrillTypeBlindsRoomDarkening: cordlesspriceCMSNoDrillTypeBlindsRoomDarkening,
+      motorizedpriceCMSNoDrillTypeBlindsRoomDarkening: motorizedpriceCMSNoDrillTypeBlindsRoomDarkening,
+      totalpricecalculated: newTotalPrice,
+    };
+  
+    // Store the cart data in sessionStorage
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
+  
+    // Navigate to the cart page
+    window.location.href = '/addtocart'; // Update the URL to match your cart page
   };
+  
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1314,15 +1290,15 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                   <span className={styles.product_title_styles_styles_and_product_roomname}>
                     <h1 className={styles.product_title_styles}>
-                      {productName1NoDrillTypeBlindsRoomLightening}
+                      {productName1NoDrillTypeBlindsRoomDarkening}
                     </h1>
                     <h1 className={styles.product_roomname}>
-                      <p>Room Name:</p> <p>{roomnameNoDrillTypeBlindsRoomLightening}</p>
+                      <p>Room Name:</p> <p>{roomnameNoDrillTypeBlindsRoomDarkening}</p>
                     </h1>
                   </span>
 
                   <h1 className={styles.product_lightening_styles}>
-                    {productName2NoDrillTypeBlindsRoomLightening}
+                    {productName2NoDrillTypeBlindsRoomDarkening}
                   </h1>
 
                 </div>
@@ -1506,8 +1482,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthInsideMount] !== undefined
-                                      ? inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthInsideMount]
+                                    Price Width Inside Mount: ($) {inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening[selectedInchesWidthInsideMount] !== undefined
+                                      ? inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomDarkening[selectedInchesWidthInsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -1913,8 +1889,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                                   <h1>
                                     Price Height Inside Mount: ($)
-                                    {newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening !== undefined
-                                      ? newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening
+                                    {newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening !== undefined
+                                      ? newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomDarkening
                                       : "no price set"}
                                   </h1>
 
@@ -2557,9 +2533,9 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening
+                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening
                                     [selectedInchesWidthOutsideMount] !== undefined
-                                      ? inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthOutsideMount]
+                                      ? inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomDarkening[selectedInchesWidthOutsideMount]
                                       : "no price set for this value"}
                                   </h1>
                                 </div>
@@ -2989,8 +2965,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
                                 </div>
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening !== undefined
-                                      ? newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening
+                                    Price Height Outside Mount: ($) {newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening !== undefined
+                                      ? newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomDarkening
                                       : "no price set"}
                                   </h1>
                                 </div>
@@ -3659,22 +3635,21 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                       </div>
 
-
                       <div className={styles.select_chain_options___side}>
                         <div className={styles.select_chain_option1_options}>
-
 
 
                           <div className={styles.wand_subtitle}>
 
                             <span>Free</span>
 
-                            <span className={styles.price_bar}>${WandPriceCMSNoDrillTypeBlindsRoomLightening}</span>
+                            <span className={styles.price_bar}>${WandPriceCMSNoDrillTypeBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
 
                           <span className={styles.priced_item}>Wand</span>
+
 
                           <div className={styles.select_chain_option1_ellipse_wrapper}>
                             <span
@@ -3699,6 +3674,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                     <div className={styles.select_chain_options___side_wrapper}>
 
+
                       <div className={styles.select_chain_options___side}>
                         <div className={styles.cord_less_option_image_placeholder}>
                           <Image
@@ -3714,10 +3690,8 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                         <div className={styles.select_chain_option2_options}>
 
-
-
                           <div className={styles.cord_less_subtitle}>
-                            <span className={styles.price_bar}>${cordlesspriceCMSNoDrillTypeBlindsRoomLightening}</span>
+                            <span className={styles.price_bar}>${cordlesspriceCMSNoDrillTypeBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
@@ -3733,7 +3707,6 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                         </div>
                       </div>
-
                     </div>
 
                   </div>
@@ -3764,10 +3737,11 @@ const NoDrillTypeBlindsRoomLightening = () => {
                         <div className={styles.select_chain_option3_options}>
 
                           <div className={styles.motorized_subtitle}>
-                            <span className={styles.price_bar}>${motorizedpriceCMSNoDrillTypeBlindsRoomLightening}</span>
+                            <span className={styles.price_bar}>${motorizedpriceCMSNoDrillTypeBlindsRoomDarkening}</span>
                           </div>
 
                           <div className={styles.options_price_seperator}></div>
+
 
                           <span className={styles.priced_item}>Motorized</span>
 
@@ -3786,6 +3760,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
                   </div>
                 </div>
               </div>
+
 
 
               <div>
@@ -4030,7 +4005,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
                       <div className={styles.window_name_answer}>Window Name:
                       </div>
                       <div className={styles.answers_answers}>
-                        {productName1NoDrillTypeBlindsRoomLightening.charAt(0).toUpperCase() + productName1NoDrillTypeBlindsRoomLightening.slice(1)}
+                        {productName1NoDrillTypeBlindsRoomDarkening.charAt(0).toUpperCase() + productName1NoDrillTypeBlindsRoomDarkening.slice(1)}
                       </div>
 
                     </div>
@@ -4043,7 +4018,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
                       <div className={styles.window_type_answer}>Window Type:</div>
                       <div className={styles.answers_answers}>
-                        {productName2NoDrillTypeBlindsRoomLightening.charAt(0).toUpperCase() + productName2NoDrillTypeBlindsRoomLightening.slice(1)}
+                        {productName2NoDrillTypeBlindsRoomDarkening.charAt(0).toUpperCase() + productName2NoDrillTypeBlindsRoomDarkening.slice(1)}
                       </div>
 
                     </div>
@@ -4201,7 +4176,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
                     </span>
 
 
-                    <div className={styles.description_and_answer_bottom_rail}>
+                    <div className={styles.bottom_rail_type_answer}>
                       <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
                       <div className={styles.answers_answers2}>
                         {selectedImagesBottom?.length > 0 && (
@@ -4260,7 +4235,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
                     <div className={styles.add_to_cart_rectangle_wrapper}>
                       <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
                         <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL:${calculateSumTotal().toFixed(2)}</div>
                           <p className={styles.add_to_cart}>ADD TO CART</p>
                         </button>
                       </Link>
@@ -4305,7 +4280,7 @@ const NoDrillTypeBlindsRoomLightening = () => {
             </span>
 
           </ol>
-
+          npm r
         </span >
 
       </div >
@@ -4330,6 +4305,6 @@ const NoDrillTypeBlindsRoomLightening = () => {
 }
 
 
-export default NoDrillTypeBlindsRoomLightening;
+export default NoDrillTypeBlindsRoomDarkening;
 
 

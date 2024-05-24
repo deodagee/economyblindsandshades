@@ -151,7 +151,7 @@ const ZebraBlindsRoomDarkening = () => {
       setactive_wand_right_choice_rendering_content(null);
       setShowImageleft(true);
       setShowImageright(false);
-      
+
 
     } else if (ellipseNumber === 2) {
       setactive_wand_cordless_motorized(2);
@@ -492,31 +492,31 @@ const ZebraBlindsRoomDarkening = () => {
 
   const handleSelectMaterial = (color, key, src, label) => {
     setfirstImage_div(false);
-  
+
     console.log(`Clicked on file: ${src}`);
     console.log("selectedMaterial:", selectedMaterial); // Log selectedMaterial value
     console.log("item.src:", src); // Log item.src value
-  
+
     // Use getColorMatcherImage to get the matched image
     const matchingSrc = getColorMatcherImage(label);
-  
+
     if (matchingSrc) {
       const updatedMaterial = {
         key,
         src: matchingSrc,
         label,
       };
-  
+
       setSelectedMaterial(updatedMaterial);
       setSelectedColorImages([{ src: matchingSrc }]);
       setselectedFileNameMaterials(`${key} - ${label}`);
-  
+
       // Hide previously selected image
       const prevSelectedImage = document.querySelector('.selectedImage');
       if (prevSelectedImage) {
         prevSelectedImage.classList.remove('selectedImage');
       }
-  
+
       // Show the selected image
       const selectedImage = document.getElementById(key); // Assuming 'key' is the ID of the selected image
       if (selectedImage) {
@@ -527,10 +527,10 @@ const ZebraBlindsRoomDarkening = () => {
       console.error("No matching image found for label:", label);
     }
   };
-  
-  
-  
-  
+
+
+
+
   // Update getColorMatcherImage to search for the label across all colors
   const getColorMatcherImage = (label) => {
     for (const color in colorDataMatcher) {
@@ -1139,8 +1139,6 @@ const ZebraBlindsRoomDarkening = () => {
 
   const [isCartVisible, setIsCartVisible] = useState(false);
 
-
-
   const cartRef = useRef(null);
 
   const handleSeeCartClick = () => {
@@ -1151,58 +1149,25 @@ const ZebraBlindsRoomDarkening = () => {
 
 
 
-
-
   const handleAddToCart = async () => {
-    await fetchLatestData();
 
-    // Calculate the total price based on the state
     const newTotalPrice = getTotalPrice();
-
-    const apiUrl = '/api/saveData';
-
-    let data = {}; // Initialize data object
-
-    // Check if session is not null
-    if (session) {
-        data = {
-            nameZebrablindsRoomDarkening: session.nameZebrablindsRoomDarkening,
-            productName1ZebrablindsRoomDarkening: session.productName1ZebrablindsRoomDarkening,
-            productName2ZebrablindsRoomDarkening: session.productName2ZebrablindsRoomDarkening,
-            roomnameZebrablindsRoomDarkening: session.roomnameZebrablindsRoomDarkening,
-            WandPriceCMSZebrablindsRoomDarkening: session.WandPriceCMSZebrablindsRoomDarkening,
-            cordlesspriceCMSZebrablindsRoomDarkening: session.cordlesspriceCMSZebrablindsRoomDarkening,
-            motorizedpriceCMSZebrablindsRoomDarkening: session.motorizedpriceCMSZebrablindsRoomDarkening,
-            totalpricecalculated: newTotalPrice,
-        };
-    } else {
-        return;
-    }
-
-    const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-        const result = await response.json();
-        console.log('Data saved successfully:', result);
-
-        // Navigate to the Add to Cart page without including data in the URL
-        router.push({
-            pathname: '/addtocart',
-            state: {
-                totalpricecalculated: newTotalPrice,
-                // Add other necessary data here
-            },
-        });
-    } else {
-        console.error('Error saving data:', response.statusText);
-    }
-};
+  
+    const cartData = {
+      productName1ZebrablindsRoomDarkening: productName1ZebrablindsRoomDarkening,
+      productName2ZebrablindsRoomDarkening: productName2ZebrablindsRoomDarkening,
+      roomnameZebrablindsRoomDarkening: roomnameZebrablindsRoomDarkening,
+      WandPriceCMSZebrablindsRoomDarkening: WandPriceCMSZebrablindsRoomDarkening,
+      cordlesspriceCMSZebrablindsRoomDarkening: cordlesspriceCMSZebrablindsRoomDarkening,
+      motorizedpriceCMSZebrablindsRoomDarkening: motorizedpriceCMSZebrablindsRoomDarkening,
+      totalpricecalculated: newTotalPrice,
+    };
+  
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
+  
+    window.location.href = '/addtocart'; // Update the URL to match your cart page
+  };
+  
 
 
 
@@ -4284,7 +4249,8 @@ const ZebraBlindsRoomDarkening = () => {
                     <div className={styles.add_to_cart_rectangle_wrapper}>
                       <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
                         <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL: ${calculateSumTotal().toFixed(2)}
+                          </div>
                           <p className={styles.add_to_cart}>ADD TO CART</p>
                         </button>
                       </Link>

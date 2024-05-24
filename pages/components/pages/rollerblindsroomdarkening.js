@@ -1137,52 +1137,23 @@ const RollerBlindsRoomDarkening = () => {
 
 
   const handleAddToCart = async () => {
-    await fetchLatestData();
 
-    // Calculate the total price based on the state
     const newTotalPrice = getTotalPrice();
 
-    const apiUrl = '/api/saveData';
+    const cartData = {
+      productName1RollerBlindsRoomDarkening: productName1RollerBlindsRoomDarkening,
+      productName2RollerBlindsRoomDarkening: productName2RollerBlindsRoomDarkening,
+      roomnameRollerBlindsRoomDarkening: roomnameRollerBlindsRoomDarkening,
+      WandPriceCMSRollerBlindsRoomDarkening: WandPriceCMSRollerBlindsRoomDarkening,
+      cordlesspriceCMSRollerBlindsRoomDarkening: cordlesspriceCMSRollerBlindsRoomDarkening,
+      motorizedpriceCMSRollerBlindsRoomDarkening: motorizedpriceCMSRollerBlindsRoomDarkening,
+      totalpricecalculated: newTotalPrice,
+    };
 
-    let data = {}; // Initialize data object
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
 
-    // Check if session is not null
-    if (session) {
-      data = {
-        nameRollerBlindsRoomDarkening: session.nameRollerBlindsRoomDarkening,
-        productName1RollerBlindsRoomDarkening: session.productName1RollerBlindsRoomDarkening,
-        productName2RollerBlindsRoomDarkening: session.productName2RollerBlindsRoomDarkening,
-        roomnameRollerBlindsRoomDarkening: session.roomnameRollerBlindsRoomDarkening,
-        WandPriceCMSRollerBlindsRoomDarkening: session.WandPriceCMSRollerBlindsRoomDarkening,
-        cordlesspriceCMSRollerBlindsRoomDarkening: session.cordlesspriceCMSRollerBlindsRoomDarkening,
-        motorizedpriceCMSRollerBlindsRoomDarkening: session.motorizedpriceCMSRollerBlindsRoomDarkening,
-        totalpricecalculated: newTotalPrice,
-      };
-    } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
-    }
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
+    window.location.href = '/addtocart'; // Update the URL to match your cart page
   };
-
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -4254,7 +4225,7 @@ const RollerBlindsRoomDarkening = () => {
                     <div className={styles.add_to_cart_rectangle_wrapper}>
                       <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
                         <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL: $ {totalpricecalculated}</div>
+                          <div className={styles.total_price}>TOTAL:${calculateSumTotal().toFixed(2)}</div>
                           <p className={styles.add_to_cart}>ADD TO CART</p>
                         </button>
                       </Link>
