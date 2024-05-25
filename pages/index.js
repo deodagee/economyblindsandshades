@@ -58,15 +58,9 @@ export default function HomePage() {
                 <span className={styles.top_banner_headers}>
                   <h1>
                     Welcome,
-                    <br />
-                    <br />
                   </h1>
                   <h1>
                     Shop And Browse
-                    <br />
-                    <br />
-                    <br />
-
                   </h1>
                 </span>
               </div>

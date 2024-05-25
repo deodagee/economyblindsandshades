@@ -1141,12 +1141,12 @@ const HoneycombBlindsRoomDarkening = () => {
   
     // Prepare the data to be stored in sessionStorage
     const cartData = {
-      productName1HoneycombBlindsRoomDarkening,
-      productName2HoneycombBlindsRoomDarkening,
-      roomnameHoneycombBlindsRoomDarkening,
-      WandPriceCMSHoneycombBlindsRoomDarkening,
-      cordlesspriceCMSHoneycombBlindsRoomDarkening,
-      motorizedpriceCMSHoneycombBlindsRoomDarkening,
+      productName1HoneycombBlindsRoomDarkening: productName1HoneycombBlindsRoomDarkening, 
+      productName2HoneycombBlindsRoomDarkening: productName2HoneycombBlindsRoomDarkening,
+      roomnameHoneycombBlindsRoomDarkening: roomnameHoneycombBlindsRoomDarkening,
+      WandPriceCMSHoneycombBlindsRoomDarkening:WandPriceCMSHoneycombBlindsRoomDarkening,
+      cordlesspriceCMSHoneycombBlindsRoomDarkening: cordlesspriceCMSHoneycombBlindsRoomDarkening,
+      motorizedpriceCMSHoneycombBlindsRoomDarkening: motorizedpriceCMSHoneycombBlindsRoomDarkening,
       totalpricecalculated: newTotalPrice,
     };
   
