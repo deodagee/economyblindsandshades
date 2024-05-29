@@ -126,20 +126,6 @@ const NoDrillTypeBlindsRoomLightening = () => {
   const [totalpricecalculated, setTotalPriceCalculated] = useState(0);
 
 
-  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
-    if (ellipseNumber === 1) {
-      setActiveInsideOutsideEllipse(1);
-      setInsideOrOutsideRenderingContent('Inside Mount');
-      setInsideMountGroupVisible(true);
-      setOutsideMountGroupVisible(false);
-    } else if (ellipseNumber === 2) {
-      setActiveInsideOutsideEllipse(2);
-      setInsideOrOutsideRenderingContent('Outside Mount');
-      setInsideMountGroupVisible(false);
-      setOutsideMountGroupVisible(true);
-    }
-  };
-
   const handleLiftFeatureEllipsess = (ellipseNumber) => {
     // Reset states based on the clicked ellipse number
     if (ellipseNumber === 1) {
@@ -1051,9 +1037,12 @@ const NoDrillTypeBlindsRoomLightening = () => {
   const calculateSumTotal = () => {
     let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening) || 0;
     let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthInsideMount]) || 0;
+    let priceHeightOutsideMount = parseFloat(newSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening) || 0;
+    let priceWidthOutsideMount = parseFloat(inchPricesAfterWidthOutsideMountNoDrillTypeBlindsRoomLightening[selectedInchesWidthOutsideMount]) || 0;
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
+
       case 1:
         // If "wand" option is selected
         priceHeightInsideMount += parseFloat(WandPriceCMSNoDrillTypeBlindsRoomLightening) || 0;
@@ -1069,10 +1058,16 @@ const NoDrillTypeBlindsRoomLightening = () => {
       default:
         // Default case when none of the options are selected
         break;
+        
     }
 
-    return priceHeightInsideMount + priceWidthInsideMount;
+    const sumTotal = priceHeightInsideMount + priceWidthInsideMount + priceHeightOutsideMount + priceWidthOutsideMount;
+    console.log('Sum Total:', sumTotal); // Log the sum total to the console
+    return sumTotal;
   };
+
+  // Call the function to log its value
+  calculateSumTotal();
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1200,7 +1195,90 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
 
+
+    if (ellipseNumber === 1) {
+      setActiveInsideOutsideEllipse(1);
+      setInsideOrOutsideRenderingContent('Inside Mount');
+      setInsideMountGroupVisible(true);
+      setOutsideMountGroupVisible(false);
+
+      setselectedInchesWidthOutsideMount("0");
+      setselectedFractionsWidthOutsideMount("0");
+
+      setselectedInchesHeightOutsideMount("0");
+      setselectedFractionsHeightOutsideMount("0");
+
+      setselectedInchHeightOutsideMount("0");
+      setselectedFractionHeightOutsideMount("0");
+
+      setselectedInchWidthOutsideMount("0");
+      setselectedFractionWidthOutsideMount("0");
+
+      setselectedInchesVisibleWidthOutsideMount(false);
+      setselectedInchesVisibleHeightOutsideMount(false);
+      setselectedFractionVisibleWidthOutsideMount(false);
+      setselectedFractionVisibleHeightOutsideMount(false);
+
+      setnewSetPriceInchesHeightOutsideMountNoDrillTypeBlindsRoomLightening(false);
+      setnewSetPriceInchesWidthOutsideMountNoDrillTypeBlindsRoomLightening(false);
+      setActiveDimensionsinsideMount("insideMount");
+      setActiveDimensionsoutsideMount("");
+
+      setactive_wand_cordless_motorized(false);
+      setWandPriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setcordlesspriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setmotorizedpriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setselectedFileNameMaterials(false);
+      setSelectedColorImages(false);
+      setSelectedMaterial(false);
+      setfirstImage_div("/blindsrf3.jpg");
+
+
+    } else if (ellipseNumber === 2) {
+      setActiveInsideOutsideEllipse(2);
+      setInsideOrOutsideRenderingContent('Outside Mount');
+      setInsideMountGroupVisible(false);
+      setOutsideMountGroupVisible(true);
+
+      setselectedInchesWidthInsideMount("0");
+      setselectedFractionsWidthInsideMount("0");
+
+      setselectedInchesHeightInsideMount("0");
+      setselectedFractionsHeightInsideMount("0");
+
+      setselectedInchHeightInsideMount("0");
+      setselectedFractionHeightInsideMount("0");
+
+      setselectedInchWidthInsideMount("0");
+      setselectedFractionWidthInsideMount("0");
+
+      setselectedInchesVisibleWidthInsideMount(false);
+      setselectedInchesVisibleHeightInsideMount(false);
+      setselectedFractionVisibleWidthInsideMount(false);
+      setSelectedFractionVisibleHeightInsideMount(false);
+
+      setnewSetPriceInchesHeightInsideMountNoDrillTypeBlindsRoomLightening(false);
+      setnewSetPriceInchesWidthInsideMountNoDrillTypeBlindsRoomLightening(false);
+      setActiveDimensionsoutsideMount("insideMount");
+      setActiveDimensionsinsideMount("");
+
+      setactive_wand_cordless_motorized(false);
+      setWandPriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setcordlesspriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setmotorizedpriceCMSNoDrillTypeBlindsRoomLightening(false);
+      setselectedFileNameMaterials(false);
+      setSelectedColorImages(false);
+      setSelectedMaterial(false);
+      setfirstImage_div("/blindsrf3.jpg");
+    }
+  };
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 
   return (
 

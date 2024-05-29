@@ -1038,9 +1038,12 @@ const RollerBlindsRoomLightening = () => {
   const calculateSumTotal = () => {
     let priceHeightInsideMount = parseFloat(newSetPriceInchesHeightInsideMountRollerBlindsRoomLightening) || 0;
     let priceWidthInsideMount = parseFloat(inchPricesAfterWidthInsideMountRollerBlindsRoomLightening[selectedInchesWidthInsideMount]) || 0;
+    let priceHeightOutsideMount = parseFloat(newSetPriceInchesHeightOutsideMountRollerBlindsRoomLightening) || 0;
+    let priceWidthOutsideMount = parseFloat(inchPricesAfterWidthOutsideMountRollerBlindsRoomLightening[selectedInchesWidthOutsideMount]) || 0;
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
+
       case 1:
         // If "wand" option is selected
         priceHeightInsideMount += parseFloat(WandPriceCMSRollerBlindsRoomLightening) || 0;
@@ -1056,9 +1059,10 @@ const RollerBlindsRoomLightening = () => {
       default:
         // Default case when none of the options are selected
         break;
+        
     }
 
-    const sumTotal = priceHeightInsideMount + priceWidthInsideMount;
+    const sumTotal = priceHeightInsideMount + priceWidthInsideMount + priceHeightOutsideMount + priceWidthOutsideMount;
     console.log('Sum Total:', sumTotal); // Log the sum total to the console
     return sumTotal;
   };
@@ -1226,6 +1230,9 @@ const RollerBlindsRoomLightening = () => {
       setselectedFractionVisibleWidthOutsideMount(false);
       setselectedFractionVisibleHeightOutsideMount(false);
 
+
+      setnewSetPriceInchesHeightOutsideMountRollerBlindsRoomLightening(false);
+      setnewSetPriceInchesWidthOutsideMountRollerBlindsRoomLightening(false);
       setActiveDimensionsinsideMount("insideMount");
       setActiveDimensionsoutsideMount("");
 
@@ -1237,7 +1244,6 @@ const RollerBlindsRoomLightening = () => {
       setSelectedColorImages(false);
       setSelectedMaterial(false);
       setfirstImage_div("/blindsrf3.jpg");
-      setTotalPriceCalculated(null);
 
 
     } else if (ellipseNumber === 2) {
@@ -1245,8 +1251,6 @@ const RollerBlindsRoomLightening = () => {
       setInsideOrOutsideRenderingContent('Outside Mount');
       setInsideMountGroupVisible(false);
       setOutsideMountGroupVisible(true);
-
-
 
 
       setselectedInchesWidthInsideMount("0");
@@ -1267,8 +1271,10 @@ const RollerBlindsRoomLightening = () => {
       setselectedFractionVisibleWidthInsideMount(false);
       setSelectedFractionVisibleHeightInsideMount(false);
 
-      setActiveDimensionsinsideMount("");
+      setnewSetPriceInchesHeightInsideMountRollerBlindsRoomLightening(false);
+      setnewSetPriceInchesWidthInsideMountRollerBlindsRoomLightening(false);
       setActiveDimensionsoutsideMount("insideMount");
+      setActiveDimensionsinsideMount("");
 
       setactive_wand_cordless_motorized(false);
       setWandPriceCMSRollerBlindsRoomLightening(false);
@@ -1278,9 +1284,6 @@ const RollerBlindsRoomLightening = () => {
       setSelectedColorImages(false);
       setSelectedMaterial(false);
       setfirstImage_div("/blindsrf3.jpg");
-      setTotalPriceCalculated(null);
-
-
     }
   };
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2654,8 +2657,7 @@ const RollerBlindsRoomLightening = () => {
 
                                 <div className={styles.key_locker2}>
                                   <h1>
-                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountRollerBlindsRoomLightening
-                                    [selectedInchesWidthOutsideMount] !== undefined
+                                    Price Width Outside Mount: ($) {inchPricesAfterWidthOutsideMountRollerBlindsRoomLightening[selectedInchesWidthOutsideMount] !== undefined
                                       ? inchPricesAfterWidthOutsideMountRollerBlindsRoomLightening[selectedInchesWidthOutsideMount]
                                       : "no price set for this value"}
                                   </h1>
