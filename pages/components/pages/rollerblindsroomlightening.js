@@ -126,19 +126,6 @@ const RollerBlindsRoomLightening = () => {
   const [totalpricecalculated, setTotalPriceCalculated] = useState(0);
 
 
-  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
-    if (ellipseNumber === 1) {
-      setActiveInsideOutsideEllipse(1);
-      setInsideOrOutsideRenderingContent('Inside Mount');
-      setInsideMountGroupVisible(true);
-      setOutsideMountGroupVisible(false);
-    } else if (ellipseNumber === 2) {
-      setActiveInsideOutsideEllipse(2);
-      setInsideOrOutsideRenderingContent('Outside Mount');
-      setInsideMountGroupVisible(false);
-      setOutsideMountGroupVisible(true);
-    }
-  };
 
   const handleLiftFeatureEllipsess = (ellipseNumber) => {
     // Reset states based on the clicked ellipse number
@@ -1179,9 +1166,9 @@ const RollerBlindsRoomLightening = () => {
       WandPriceCMSRollerBlindsRoomLightening: WandPriceCMSRollerBlindsRoomLightening,
       cordlesspriceCMSRollerBlindsRoomLightening: cordlesspriceCMSRollerBlindsRoomLightening,
       motorizedpriceCMSRollerBlindsRoomLightening: motorizedpriceCMSRollerBlindsRoomLightening,
-      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content, 
+      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content,
       active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
-      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent, 
+      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent,
 
       totalpricecalculated: newTotalPrice,
       selectedInchesWidthInsideMount: selectedInchesWidthInsideMount,
@@ -1197,7 +1184,7 @@ const RollerBlindsRoomLightening = () => {
       active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
       active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent,
       totalPrice: newTotalPrice,
-      sumTotal: sumTotal, 
+      sumTotal: sumTotal,
     };
 
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
@@ -1211,7 +1198,92 @@ const RollerBlindsRoomLightening = () => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
+  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
 
+
+    if (ellipseNumber === 1) {
+      setActiveInsideOutsideEllipse(1);
+      setInsideOrOutsideRenderingContent('Inside Mount');
+      setInsideMountGroupVisible(true);
+      setOutsideMountGroupVisible(false);
+
+
+
+      setselectedInchesWidthOutsideMount("0");
+      setselectedFractionsWidthOutsideMount("0");
+
+      setselectedInchesHeightOutsideMount("0");
+      setselectedFractionsHeightOutsideMount("0");
+
+      setselectedInchHeightOutsideMount("0");
+      setselectedFractionHeightOutsideMount("0");
+
+      setselectedInchWidthOutsideMount("0");
+      setselectedFractionWidthOutsideMount("0");
+
+      setselectedInchesVisibleWidthOutsideMount(false);
+      setselectedInchesVisibleHeightOutsideMount(false);
+      setselectedFractionVisibleWidthOutsideMount(false);
+      setselectedFractionVisibleHeightOutsideMount(false);
+
+      setActiveDimensionsinsideMount("insideMount");
+      setActiveDimensionsoutsideMount("");
+
+      setactive_wand_cordless_motorized(false);
+      setWandPriceCMSRollerBlindsRoomLightening(false);
+      setcordlesspriceCMSRollerBlindsRoomLightening(false);
+      setmotorizedpriceCMSRollerBlindsRoomLightening(false);
+      setselectedFileNameMaterials(false);
+      setSelectedColorImages(false);
+      setSelectedMaterial(false);
+      setfirstImage_div("/blindsrf3.jpg");
+      setTotalPriceCalculated(null);
+
+
+    } else if (ellipseNumber === 2) {
+      setActiveInsideOutsideEllipse(2);
+      setInsideOrOutsideRenderingContent('Outside Mount');
+      setInsideMountGroupVisible(false);
+      setOutsideMountGroupVisible(true);
+
+
+
+
+      setselectedInchesWidthInsideMount("0");
+      setselectedFractionsWidthInsideMount("0");
+
+      setselectedInchesHeightInsideMount("0");
+      setselectedFractionsHeightInsideMount("0");
+
+      setselectedInchHeightInsideMount("0");
+      setselectedFractionHeightInsideMount("0");
+
+      setselectedInchWidthInsideMount("0");
+      setselectedFractionWidthInsideMount("0");
+
+
+      setselectedInchesVisibleWidthInsideMount(false);
+      setselectedInchesVisibleHeightInsideMount(false);
+      setselectedFractionVisibleWidthInsideMount(false);
+      setSelectedFractionVisibleHeightInsideMount(false);
+
+      setActiveDimensionsinsideMount("");
+      setActiveDimensionsoutsideMount("insideMount");
+
+      setactive_wand_cordless_motorized(false);
+      setWandPriceCMSRollerBlindsRoomLightening(false);
+      setcordlesspriceCMSRollerBlindsRoomLightening(false);
+      setmotorizedpriceCMSRollerBlindsRoomLightening(false);
+      setselectedFileNameMaterials(false);
+      setSelectedColorImages(false);
+      setSelectedMaterial(false);
+      setfirstImage_div("/blindsrf3.jpg");
+      setTotalPriceCalculated(null);
+
+
+    }
+  };
+  ////////////////////////////////////////////////////////////////////////////////////////////////
 
   return (
 
@@ -1242,7 +1314,7 @@ const RollerBlindsRoomLightening = () => {
                           width={500}
                           height={500}
                           className={styles.left_first_image_render}
-                          src="/GREYMATCHER/ETB5004GREY.png"
+                          src="/blindsrf3.jpg"
                           alt="Default Image"
                         />
                         <h3 className={styles.left_imageContainer_image_itself1_label}>Welcome</h3>
@@ -3018,6 +3090,7 @@ const RollerBlindsRoomLightening = () => {
                                       ? newSetPriceInchesHeightOutsideMountRollerBlindsRoomLightening
                                       : "no price set"}
                                   </h1>
+                                  
                                 </div>
 
                                 <div className={styles.enter_width_inside_mount_rectangle_1}>
