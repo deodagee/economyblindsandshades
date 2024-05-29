@@ -46,7 +46,7 @@ const CheckoutPage = ({ totalPrice }) => {
     return (
         <div className={styles.container}>
             <div className={styles.price}>
-                <h1>Awesome, that&apos;s ${lastSavedsumTotal}!</h1>
+                <h1>Awesome, your total is ${lastSavedsumTotal}!</h1>
             </div>
             <div className={styles.icons}>
                 <Image className={styles.payment_cards_icons} width={100} height={100} src="/paypalcard.png" alt="paypal" />
