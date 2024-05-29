@@ -101,8 +101,13 @@
   border-radius: 0.35rem;
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
   gap: 15px;
-
+  flex-direction: row;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 
 

@@ -328,7 +328,7 @@ const AddToCart = () => {
                                             Your Order Number: {"23423424534234"}
                                         </p>
                                         <p>
-                                            Checkout
+                                            Checkout Page
                                         </p>
 
                                     </span>
@@ -647,9 +647,6 @@ const AddToCart = () => {
 
                                         </span>
 
-                                        <Link href={'/checkoutpage'}>
-                                            <p className={styles.check_out_button}>CHECKOUT</p>
-                                        </Link>
                                         <div>
 
                                             <p className={styles.taxes_title}>Taxes</p>
@@ -739,6 +736,10 @@ const AddToCart = () => {
                                             <div className={styles.selectedRegion}>
                                                 {selectedRegion && `Selected Region: ${selectedRegion}`}
                                             </div>
+
+                                            <Link href={'/checkoutpage'}>
+                                            <p className={styles.check_out_button}>PAY NOW</p>
+                                        </Link>
                                         </div>
                                     </div>
                                 </div>
