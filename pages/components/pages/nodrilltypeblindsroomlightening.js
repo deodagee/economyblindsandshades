@@ -1136,7 +1136,34 @@ const NoDrillTypeBlindsRoomLightening = () => {
 
 
   const handleAddToCart = async () => {
+    // Initialize an array to store the names of missing values
+    const missingValues = [];
 
+    // Check if at least one of the necessary values for inside or outside mount is present
+    if (!productName1NoDrillTypeBlindsRoomLightening) missingValues.push("productName1NoDrillTypeBlindsRoomLightening");
+    if (!productName2NoDrillTypeBlindsRoomLightening) missingValues.push("productName2NoDrillTypeBlindsRoomLightening");
+    if (!roomnameNoDrillTypeBlindsRoomLightening) missingValues.push("roomnameNoDrillTypeBlindsRoomLightening");
+    if (
+      !WandPriceCMSNoDrillTypeBlindsRoomLightening &&
+      !cordlesspriceCMSNoDrillTypeBlindsRoomLightening &&
+      !motorizedpriceCMSNoDrillTypeBlindsRoomLightening
+    ) missingValues.push("WandPriceCMSNoDrillTypeBlindsRoomLightening", "cordlesspriceCMSNoDrillTypeBlindsRoomLightening", "motorizedpriceCMSNoDrillTypeBlindsRoomLightening");
+    if (!selectedInchesWidthInsideMount && !selectedInchesWidthOutsideMount) missingValues.push("selectedInchesWidthInsideMount", "selectedInchesWidthOutsideMount");
+    if (!selectedFractionsWidthInsideMount && !selectedFractionsWidthOutsideMount) missingValues.push("selectedFractionsWidthInsideMount", "selectedFractionsWidthOutsideMount");
+    if (!selectedInchesHeightInsideMount && !selectedInchesHeightOutsideMount) missingValues.push("selectedInchesHeightInsideMount", "selectedInchesHeightOutsideMount");
+    if (!selectedFractionsHeightInsideMount && !selectedFractionsHeightOutsideMount) missingValues.push("selectedFractionsHeightInsideMount", "selectedFractionsHeightOutsideMount");
+    if (!selectedMaterial) missingValues.push("selectedMaterial");
+    if (!active_wand_cordless_motorizedRenderingContent) missingValues.push("active_wand_cordless_motorizedRenderingContent");
+
+    // If any necessary value is missing, display an alert with missing values
+    if (missingValues.length > 0) {
+      const missingValuesString = missingValues.join(", ");
+      alert(`Please select all necessary items for the cart. Missing values: ${missingValuesString}`);
+      return; // Exit the function
+    }
+
+    // If all necessary values are present, proceed with adding to cart
+    const sumTotal = calculateSumTotal(); // Calculate the sumTotal value
     const newTotalPrice = getTotalPrice();
 
     const cartData = {
@@ -1146,13 +1173,29 @@ const NoDrillTypeBlindsRoomLightening = () => {
       WandPriceCMSNoDrillTypeBlindsRoomLightening: WandPriceCMSNoDrillTypeBlindsRoomLightening,
       cordlesspriceCMSNoDrillTypeBlindsRoomLightening: cordlesspriceCMSNoDrillTypeBlindsRoomLightening,
       motorizedpriceCMSNoDrillTypeBlindsRoomLightening: motorizedpriceCMSNoDrillTypeBlindsRoomLightening,
+      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content, 
+      active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
+      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent, 
+
       totalpricecalculated: newTotalPrice,
+      selectedInchesWidthInsideMount:selectedInchesWidthInsideMount ,
+      selectedFractionsWidthInsideMount: selectedFractionsWidthInsideMount,
+      selectedInchesHeightInsideMount: selectedInchesHeightInsideMount,
+      selectedFractionsHeightInsideMount: selectedFractionsHeightInsideMount,
+      selectedInchesWidthOutsideMount: selectedInchesWidthOutsideMount,
+      selectedFractionsWidthOutsideMount: selectedFractionsWidthOutsideMount,
+      selectedInchesHeightOutsideMount: selectedInchesHeightOutsideMount,
+      selectedFractionsHeightOutsideMount: selectedFractionsHeightOutsideMount,
+      selectedMaterial: selectedMaterial ? selectedMaterial.label : '', 
+      totalPrice: newTotalPrice,
+      sumTotal: sumTotal, 
     };
 
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
 
-    window.location.href = '/addtocart'; // Update the URL to match your cart page
-  };
+    // Redirect to the '/addtocart'
+    window.location.href = '/addtocart';
+};
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////

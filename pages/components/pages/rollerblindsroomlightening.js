@@ -226,7 +226,7 @@ const RollerBlindsRoomLightening = () => {
 
     switch (active_inside_outside_ellipse) {
       case 1:
-        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSZebrablindsRollerBlindsRoomLightening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSZebrablindsRollerBlindsRoomLightening : 0);
+        totalPrice = totalpricecalculated + (active_wand_left_choice === 4 ? WandPriceCMSRollerBlindsRoomLightening : 0) + (active_wand_right_choice === 5 ? WandPriceCMSRollerBlindsRoomLightening : 0);
         break;
       case 2:
         totalPrice = totalpricecalculated;
@@ -1071,8 +1071,14 @@ const RollerBlindsRoomLightening = () => {
         break;
     }
 
-    return priceHeightInsideMount + priceWidthInsideMount;
+    const sumTotal = priceHeightInsideMount + priceWidthInsideMount;
+    console.log('Sum Total:', sumTotal); // Log the sum total to the console
+    return sumTotal;
   };
+
+  // Call the function to log its value
+  calculateSumTotal();
+
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1133,11 +1139,37 @@ const RollerBlindsRoomLightening = () => {
   };
 
 
-
-
-
   const handleAddToCart = async () => {
+    // Initialize an array to store the names of missing values
+    const missingValues = [];
 
+    // Check if at least one of the necessary values for inside or outside mount is present
+    if (!productName1RollerBlindsRoomLightening) missingValues.push("productName1RollerBlindsRoomLightening");
+    if (!productName2RollerBlindsRoomLightening) missingValues.push("productName2RollerBlindsRoomLightening");
+    if (!roomnameRollerBlindsRoomLightening) missingValues.push("roomnameRollerBlindsRoomLightening");
+    if (
+      !WandPriceCMSRollerBlindsRoomLightening &&
+      !cordlesspriceCMSRollerBlindsRoomLightening &&
+      !motorizedpriceCMSRollerBlindsRoomLightening &&
+      !active_wand_left_choice_rendering_content &&
+      !active_wand_right_choice_rendering_content
+    ) missingValues.push("WandPriceCMSRollerBlindsRoomLightening", "cordlesspriceCMSRollerBlindsRoomLightening", "motorizedpriceCMSRollerBlindsRoomLightening", "active_wand_left_choice_rendering_content", "active_wand_right_choice_rendering_content");
+    if (!selectedInchesWidthInsideMount && !selectedInchesWidthOutsideMount) missingValues.push("selectedInchesWidthInsideMount", "selectedInchesWidthOutsideMount");
+    if (!selectedFractionsWidthInsideMount && !selectedFractionsWidthOutsideMount) missingValues.push("selectedFractionsWidthInsideMount", "selectedFractionsWidthOutsideMount");
+    if (!selectedInchesHeightInsideMount && !selectedInchesHeightOutsideMount) missingValues.push("selectedInchesHeightInsideMount", "selectedInchesHeightOutsideMount");
+    if (!selectedFractionsHeightInsideMount && !selectedFractionsHeightOutsideMount) missingValues.push("selectedFractionsHeightInsideMount", "selectedFractionsHeightOutsideMount");
+    if (!selectedMaterial) missingValues.push("selectedMaterial");
+    if (!active_wand_cordless_motorizedRenderingContent) missingValues.push("active_wand_cordless_motorizedRenderingContent");
+
+    // If any necessary value is missing, display an alert with missing values
+    if (missingValues.length > 0) {
+      const missingValuesString = missingValues.join(", ");
+      alert(`Please select all necessary items for the cart. Missing values: ${missingValuesString}`);
+      return; // Exit the function
+    }
+
+    // If all necessary values are present, proceed with adding to cart
+    const sumTotal = calculateSumTotal(); // Calculate the sumTotal value
     const newTotalPrice = getTotalPrice();
 
     const cartData = {
@@ -1147,13 +1179,34 @@ const RollerBlindsRoomLightening = () => {
       WandPriceCMSRollerBlindsRoomLightening: WandPriceCMSRollerBlindsRoomLightening,
       cordlesspriceCMSRollerBlindsRoomLightening: cordlesspriceCMSRollerBlindsRoomLightening,
       motorizedpriceCMSRollerBlindsRoomLightening: motorizedpriceCMSRollerBlindsRoomLightening,
+      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content, 
+      active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
+      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent, 
+
       totalpricecalculated: newTotalPrice,
+      selectedInchesWidthInsideMount: selectedInchesWidthInsideMount,
+      selectedFractionsWidthInsideMount: selectedFractionsWidthInsideMount,
+      selectedInchesHeightInsideMount: selectedInchesHeightInsideMount,
+      selectedFractionsHeightInsideMount: selectedFractionsHeightInsideMount,
+      selectedInchesWidthOutsideMount: selectedInchesWidthOutsideMount,
+      selectedFractionsWidthOutsideMount: selectedFractionsWidthOutsideMount,
+      selectedInchesHeightOutsideMount: selectedInchesHeightOutsideMount,
+      selectedFractionsHeightOutsideMount: selectedFractionsHeightOutsideMount,
+      selectedMaterial: selectedMaterial ? selectedMaterial.label : '',
+      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content,
+      active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
+      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent,
+      totalPrice: newTotalPrice,
+      sumTotal: sumTotal, 
     };
 
     sessionStorage.setItem('cartData', JSON.stringify(cartData));
 
-    window.location.href = '/addtocart'; // Update the URL to match your cart page
+    // Redirect to the '/addtocart'
+    window.location.href = '/addtocart';
   };
+
+
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4225,12 +4278,10 @@ const RollerBlindsRoomLightening = () => {
 
 
                     <div className={styles.add_to_cart_rectangle_wrapper}>
-                      <Link href={`/addtocart?totalpricecalculated=${totalpricecalculated}`}>
-                        <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
-                          <div className={styles.total_price}>TOTAL:${calculateSumTotal().toFixed(2)}</div>
-                          <p className={styles.add_to_cart}>ADD TO CART</p>
-                        </button>
-                      </Link>
+                      <button onClick={handleAddToCart} className={styles.add_to_cart_rectangle}>
+                        <div className={styles.total_price}>TOTAL:${calculateSumTotal().toFixed(2)}</div>
+                        <p className={styles.add_to_cart}>ADD TO CART</p>
+                      </button>
 
 
                     </div>

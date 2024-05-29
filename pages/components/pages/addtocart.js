@@ -7,24 +7,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeaderPiece from "../../components/header.js"
 import FooterPage from "../../../pages/components/footer.js"
-import { useRouter } from 'next/router';
-import { useSession } from 'next-auth/react'
+
 
 const AddToCart = () => {
-
-
-    const router = useRouter();
-    const { totalpricecalculated } = router.query;
-    const { nameZebrablindsRoomDarkening } = router.query;
-
-
-
-    const totalPrice = parseFloat(totalpricecalculated || 0);
-    const nameZbrd = parseFloat(nameZebrablindsRoomDarkening || 0);
-
-
     const [showFooter, setShowFooter] = useState(false);
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -53,12 +39,15 @@ const AddToCart = () => {
 
     const handleCountryChange = (event) => {
         setSelectedCountry(event.target.value);
-        setSelectedRegion(''); // Reset selected region when changing the country
+        setSelectedRegion('');
     };
 
     const handleRegionChange = (event) => {
         setSelectedRegion(event.target.value);
     };
+
+
+    //////////////////////////////////////////////////////////////////////////////////
 
 
     const [selectedInchesWidthInsideMount, setselectedInchesWidthInsideMount] = useState(null);
@@ -85,6 +74,8 @@ const AddToCart = () => {
 
     const [selectedImagesBottom, setSelectedImagesBottom] = useState([]);
 
+    const [sumTotal, setsumTotal] = useState([]);
+
     //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -100,7 +91,6 @@ const AddToCart = () => {
     const [productName2HoneycombBlindsRoomLightening, setproductName2HoneycombBlindsRoomLightening] = useState("");
     const [productName2HoneycombBlindsRoomDarkening, setProductName2HoneycombBlindsRoomDarkening] = useState("");
 
-
     const [roomnameHoneycombBlindsRoomLightening, setroomnameHoneycombBlindsRoomLightening] = useState("");
     const [roomnameHoneycombBlindsRoomDarkening, setroomnameHoneycombBlindsRoomDarkening] = useState("");
     const [roomnameRollerBlindsRoomLightening, setroomnameRollerBlindsRoomLightening] = useState("");
@@ -108,14 +98,26 @@ const AddToCart = () => {
     const [roomnameZebraBlindsRoomLightening, setroomnameZebraBlindsRoomLightening] = useState("");
     const [roomnameZebraBlindsRoomDarkening, setroomnameZebraBlindsRoomDarkening] = useState("");
 
-
+    const [WandPriceCMSHoneycombBlindsRoomLightening, setWandPriceCMSHoneycombBlindsRoomLightening] = useState("");
     const [WandPriceCMSHoneycombBlindsRoomDarkening, setWandPriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [WandPriceCMSRollerBlindsRoomLightening, setWandPriceCMSRollerBlindsRoomLightening] = useState("");
+    const [WandPriceCMSRollerBlindsRoomDarkening, setWandPriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [WandPriceCMSZebraBlindsRoomLightening, setWandPriceCMSZebraBlindsRoomLightening] = useState("");
+    const [WandPriceCMSZebraBlindsRoomDarkening, setWandPriceCMSZebraBlindsRoomDarkening] = useState("");
 
-
+    const [motorizedpriceCMSHoneycombBlindsRoomLightening, setmotorizedpriceCMSHoneycombBlindsRoomLightening] = useState("");
     const [motorizedpriceCMSHoneycombBlindsRoomDarkening, setmotorizedpriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [motorizedpriceCMSRollerBlindsRoomLightening, setmotorizedpriceCMSRollerBlindsRoomLightening] = useState("");
+    const [motorizedpriceCMSRollerBlindsRoomDarkening, setmotorizedpriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [motorizedpriceCMSZebraBlindsRoomLightening, setmotorizedpriceCMSZebraBlindsRoomLightening] = useState("");
+    const [motorizedpriceCMSZebraBlindsRoomDarkening, setmotorizedpriceCMSZebraBlindsRoomDarkening] = useState("");
 
-
+    const [cordlesspriceCMHoneycombBlindsRoomLightening, setcordlesspriceCMSHoneycombBlindsRoomLightening] = useState("");
     const [cordlesspriceCMSHoneycombBlindsRoomDarkening, setcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
+    const [cordlesspriceCMSRollerBlindsRoomLightening, setcordlesspriceCMSRollerBlindsRoomLightening] = useState("");
+    const [cordlesspriceCMSRollerBlindsRoomDarkening, setcordlesspriceCMSRollerBlindsRoomDarkening] = useState("");
+    const [cordlesspriceCMSZebraBlindsRoomLightening, setcordlesspriceCMSZebraBlindsRoomLightening] = useState("");
+    const [cordlesspriceCMSZebraBlindsRoomDarkening, setcordlesspriceCMSZebraBlindsRoomDarkening] = useState("");
 
 
     const fetchLatestData = async () => {
@@ -133,7 +135,7 @@ const AddToCart = () => {
 
                 setroomnameHoneycombBlindsRoomDarkening(latestData.roomnameHoneycombBlindsRoomDarkening || "");
                 setroomnameHoneycombBlindsRoomLightening(latestData.roomnameHoneycombBlindsRoomLightening || "");
-                setroomnameroomnameZebraBlindsRoomDarkening(latestData.roomnameZebraBlindsRoomDarkening || "");
+                setroomnameZebraBlindsRoomDarkening(latestData.roomnameZebraBlindsRoomDarkening || "");
                 setroomnameZebraBlindsRoomLightening(latestData.roomnameZebraBlindsRoomLightening || "");
                 setWandPriceCMSHoneycombBlindsRoomDarkening(latestData.WandPriceCMSHoneycombBlindsRoomDarkening || "");
                 setmotorizedpriceCMSHoneycombBlindsRoomDarkening(latestData.motorizedpriceCMSHoneycombBlindsRoomDarkening || "");
@@ -177,7 +179,6 @@ const AddToCart = () => {
     const [lastSavedWandPriceCMSRollerBlindsRoomDarkening, setLastSavedWandPriceCMSRollerBlindsRoomDarkening] = useState("");
     const [lastSavedWandPriceCMSZebrablindsRoomLightening, setLastSavedWandPriceCMSZebrablindsRoomLightening] = useState("");
     const [lastSavedWandPriceCMSZebrablindsRoomDarkening, setLastSavedWandPriceCMSZebrablindsRoomDarkening] = useState("");
-    
 
     const [lastSavedcordlesspriceCMSHoneycombBlindsRoomLightening, setLastSavedcordlesspriceCMSHoneycombBlindsRoomLightening] = useState("");
     const [lastSavedcordlesspriceCMSHoneycombBlindsRoomDarkening, setLastSavedcordlesspriceCMSHoneycombBlindsRoomDarkening] = useState("");
@@ -192,6 +193,23 @@ const AddToCart = () => {
     const [lastSavedmotorizedpriceCMSRollerBlindsRoomDarkening, setLastSavedmotorizedpriceCMSRollerBlindsRoomDarkening] = useState("");
     const [lastSavedmotorizedpriceCMSZebrablindsRoomLightening, setLastSavedmotorizedpriceCMSZebrablindsRoomLightening] = useState("");
     const [lastSavedmotorizedpriceCMSZebrablindsRoomDarkening, setLastSavedmotorizedpriceCMSZebrablindsRoomDarkening] = useState("");
+
+    const [lastSavedselectedInchesWidthInsideMount, setLastSavedselectedInchesWidthInsideMount] = useState("");
+    const [lastSavedselectedInchesHeightInsideMount, setLastSavedselectedInchesHeightInsideMount] = useState("");
+    const [lastSavedselectedInchesWidthOutsideMount, setLastSavedselectedInchesWidthOutsideMount] = useState("");
+    const [lastSavedselectedInchesHeightOutsideMount, setLastSavedselectedInchesHeightOutsideMount] = useState("");
+    const [lastSavedselectedFractionsHeightInsideMount, setLastSavedselectedFractionsHeightInsideMount] = useState("");
+    const [lastSavedselectedFractionsWidthOutsideMount, setLastSavedselectedFractionsWidthOutsideMount] = useState("");
+    const [lastSavedselectedFractionsHeightOutsideMount, setLastSavedselectedFractionsHeightOutsideMount] = useState("");
+    const [lastSavedselectedFractionsWidthInsideMount, setLastSavedselectedFractionsWidthInsideMount] = useState("");
+
+
+    const [lastSavedactive_wand_right_choice_rendering_content, setLastSavedactive_wand_right_choice_rendering_content] = useState("");
+    const [lastSavedactive_wand_left_choice_rendering_content, setLastSavedactive_wand_left_choice_rendering_content] = useState("");
+    const [lastSavedactive_wand_cordless_motorizedRenderingContent, setLastSavedactive_wand_cordless_motorizedRenderingContent] = useState("");
+    const [lastSavedselectedMaterial, setLastSavedselectedMaterial] = useState("");
+    const [lastSavedsumTotal , setLastSavedsumTotal] = useState("");
+
 
 
     useEffect(() => {
@@ -233,14 +251,32 @@ const AddToCart = () => {
             setLastSavedcordlesspriceCMSRollerBlindsRoomDarkening(cartData.cordlesspriceCMSRollerBlindsRoomDarkening);
             setLastSavedcordlesspriceCMSZebrablindsRoomLightening(cartData.cordlesspriceCMSZebrablindsRoomLightening);
             setLastSavedcordlesspriceCMSZebrablindsRoomDarkening(cartData.cordlesspriceCMSZebrablindsRoomDarkening);
-            
+
             setLastSavedmotorizedpriceCMSHoneycombBlindsRoomLightening(cartData.motorizedpriceCMSHoneycombBlindsRoomLightening);
             setLastSavedmotorizedpriceCMSHoneycombBlindsRoomDarkening(cartData.motorizedpriceCMSHoneycombBlindsRoomDarkening);
             setLastSavedmotorizedpriceCMSRollerBlindsRoomLightening(cartData.motorizedpriceCMSRollerBlindsRoomLightening);
             setLastSavedmotorizedpriceCMSRollerBlindsRoomDarkening(cartData.motorizedpriceCMSRollerBlindsRoomDarkening);
             setLastSavedmotorizedpriceCMSZebrablindsRoomLightening(cartData.motorizedpriceCMSZebrablindsRoomLightening);
             setLastSavedmotorizedpriceCMSZebrablindsRoomDarkening(cartData.motorizedpriceCMSZebrablindsRoomDarkening);
-        }
+
+            setLastSavedselectedInchesWidthInsideMount(cartData.selectedInchesWidthInsideMount);
+            setLastSavedselectedInchesHeightInsideMount(cartData.selectedInchesHeightInsideMount);
+            setLastSavedselectedInchesWidthOutsideMount(cartData.selectedInchesWidthOutsideMount);
+            setLastSavedselectedInchesHeightOutsideMount(cartData.selectedInchesHeightOutsideMount);
+            setLastSavedselectedFractionsHeightInsideMount(cartData.selectedFractionsHeightInsideMount);
+            setLastSavedselectedFractionsWidthOutsideMount(cartData.selectedFractionsWidthOutsideMount);
+            setLastSavedselectedFractionsHeightOutsideMount(cartData.selectedFractionsHeightOutsideMount);
+            setLastSavedselectedFractionsWidthInsideMount(cartData.selectedFractionsWidthInsideMount);
+
+            setLastSavedactive_wand_right_choice_rendering_content(cartData.active_wand_right_choice_rendering_content);
+            setLastSavedactive_wand_left_choice_rendering_content(cartData.active_wand_left_choice_rendering_content);
+            setLastSavedactive_wand_cordless_motorizedRenderingContent(cartData.active_wand_cordless_motorizedRenderingContent);
+            setLastSavedselectedMaterial(cartData.selectedMaterial);
+
+            setLastSavedsumTotal(parseFloat(cartData.sumTotal));
+
+        } ``
+
     }, []);
 
 
@@ -470,33 +506,34 @@ const AddToCart = () => {
                                         <div className={styles.answers_answers}>
                                             {activeDimensionsinsideMount === "insideMount" && (
                                                 <>
-                                                    <div>
-                                                        Width:
-                                                        {selectedInchesWidthInsideMount ? ` ${selectedInchesWidthInsideMount}` : ""}
-                                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}` : ""}
-                                                    </div>
-                                                    <div>
-                                                        Height:
-                                                        {selectedInchesHeightInsideMount ? ` ${selectedInchesHeightInsideMount}` : ""}
-                                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}` : ""}
-                                                    </div>
+                                                    {lastSavedselectedInchesWidthInsideMount && lastSavedselectedFractionsWidthInsideMount && (
+                                                        <div>
+                                                            Width: <span>{lastSavedselectedInchesWidthInsideMount} {lastSavedselectedFractionsWidthInsideMount}</span>
+                                                        </div>
+                                                    )}
+                                                    {lastSavedselectedInchesHeightInsideMount && lastSavedselectedFractionsHeightInsideMount && (
+                                                        <div>
+                                                            Height: <span>{lastSavedselectedInchesHeightInsideMount} {lastSavedselectedFractionsHeightInsideMount}</span>
+                                                        </div>
+                                                    )}
                                                 </>
                                             )}
 
                                             {activeDimensionsoutsideMount === "outsideMount" && (
                                                 <>
-                                                    <div>
-                                                        Width:
-                                                        {selectedInchesWidthOutsideMount ? ` ${selectedInchesWidthOutsideMount}` : ""}
-                                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}` : ""}
-                                                    </div>
-                                                    <div>
-                                                        Height:
-                                                        {selectedInchesHeightOutsideMount ? ` ${selectedInchesHeightOutsideMount}` : ""}
-                                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}` : ""}
-                                                    </div>
+                                                    {lastSavedselectedInchesWidthOutsideMount && lastSavedselectedFractionsWidthOutsideMount && (
+                                                        <div>
+                                                            Width: <span>{lastSavedselectedInchesWidthOutsideMount} {lastSavedselectedFractionsWidthOutsideMount}</span>
+                                                        </div>
+                                                    )}
+                                                    {lastSavedselectedInchesHeightOutsideMount && lastSavedselectedFractionsHeightOutsideMount && (
+                                                        <div>
+                                                            Height: <span>{lastSavedselectedInchesHeightOutsideMount} {lastSavedselectedFractionsHeightOutsideMount}</span>
+                                                        </div>
+                                                    )}
                                                 </>
                                             )}
+
                                         </div>
 
                                     </div>
@@ -514,7 +551,7 @@ const AddToCart = () => {
                                             {lastSavedroomnameHoneycombBlindsRoomLightening && (
                                                 <span>{lastSavedroomnameHoneycombBlindsRoomLightening}</span>
                                             )}
-                                            
+
                                             {lastSavedroomnameHoneycombBlindsRoomDarkening && (
                                                 <span>{lastSavedroomnameHoneycombBlindsRoomDarkening}</span>
                                             )}
@@ -541,7 +578,7 @@ const AddToCart = () => {
                                             <div className={styles.description_and_answer_column_seperator}></div>
                                         </div>
                                         <div className={styles.answers_answers}>
-                                            {selectedFileNameMaterials ? `Material: ${selectedFileNameMaterials}` : "Material?"}
+                                            {lastSavedselectedMaterial ? `Material: ${lastSavedselectedMaterial}` : "Material?"}
                                         </div>
                                     </div>
 
@@ -552,90 +589,21 @@ const AddToCart = () => {
                                         </div>
                                         <div className={styles.answers_answers3}>
                                             <div>
-                                                {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : "Lift Type?"}
+                                                {lastSavedactive_wand_cordless_motorizedRenderingContent ? ` ${lastSavedactive_wand_cordless_motorizedRenderingContent}` : "Lift Type?"}
                                             </div>
 
                                             <div>
-                                                {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                                {lastSavedactive_wand_left_choice_rendering_content ? ` ${lastSavedactive_wand_left_choice_rendering_content}` : ""}
                                             </div>
 
                                             <div>
-                                                Lift Price: {nameZebrablindsRoomDarkening}
+                                                {lastSavedactive_wand_right_choice_rendering_content ? ` ${lastSavedactive_wand_right_choice_rendering_content}` : ""}
                                             </div>
 
-                                            <div>
-                                                {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                            </div>
 
                                         </div>
                                     </div>
 
-
-                                    <div className={styles.description_and_answer_div}>
-                                        <div className={styles.casette_rail_type_answer}> Top Rail Choice:</div>
-                                        <div className={styles.description_and_answer_seperator_wrapper}>
-                                            <div className={styles.description_and_answer_column_seperator}></div>
-                                        </div>
-                                        <div className={styles.answers_answers2}>
-                                            {selectedImagesTop?.length > 0 && (
-                                                <div className={styles.left_imageContainer_wrapper}>
-                                                    <div className={`${styles.casette_rail_type_answer_container} ${styles.casette_rail_type_answer_container_styled}`}>
-                                                        <p>
-                                                            {(
-                                                                Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
-                                                                Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
-                                                            )?.label}
-                                                        </p>
-                                                        <Image
-                                                            width={200}
-                                                            height={200}
-                                                            className={styles.casette_rail_type_answer_image_render}
-                                                            src={
-                                                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
-                                                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
-                                                                )?.src
-                                                            }
-                                                            alt={
-                                                                (Top_Head_Rail_Choices_Materialskey1.TopRailList1.find(item => item.key === selectedImagesTop[0]) ||
-                                                                    Top_Head_Rail_Choices_Materialskey2.TopRailList2.find(item => item.key === selectedImagesTop[0])
-                                                                )?.label
-                                                            }
-                                                        />
-                                                    </div>
-                                                </div>
-                                            )}
-
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.description_and_answer_div}>
-                                        <div className={styles.bottom_rail_type_answer}>Bottom Rail Choice:</div>
-                                        <div className={styles.description_and_answer_seperator_wrapper}>
-                                            <div className={styles.description_and_answer_column_seperator}></div>
-                                        </div>
-                                        <div className={styles.answers_answers2}>
-                                            {selectedImagesBottom?.length > 0 && (
-
-                                                <div className={styles.left_imageContainer_wrapper}>
-
-                                                    <div className={`${styles.bottom_rail_type_answer_container} ${styles.bottom_rail_type_answer_container_styled}`}>
-                                                        <p>
-                                                            {Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
-                                                        </p>
-                                                        <Image
-                                                            width={200}
-                                                            height={200}
-                                                            className={styles.bottom_rail_type_answer_image_render}
-                                                            src={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.src}
-                                                            alt={Bottom_Bottom_Rail_Choices_Materials.BottomRailList.find(item => item.key === selectedImagesBottom)?.label}
-                                                        />
-
-                                                    </div>
-                                                </div>
-
-                                            )}
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -653,22 +621,25 @@ const AddToCart = () => {
 
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Price before taxes</p>
-                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                                <p className={styles.price_summary_title2_tagger}>$ {lastSavedsumTotal}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Price after taxes</p>
-                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                                <p className={styles.price_summary_title2_tagger}>{"undefined"}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Shipping</p>
-                                                <p className={styles.price_summary_title2_tagger}>{"$0.00"}</p>
+                                                <p className={styles.price_summary_title2_tagger}>{"undefined"}</p>
                                             </span>
 
                                             <span className={styles.price_summary_title2_Spanner}>
                                                 <p className={styles.price_summary_title2}>Total</p>
-                                                <p className={styles.price_summary_title2_tagger}>${totalpricecalculated}</p>
+                                                <p className={styles.price_summary_title2_tagger}>
+                                                    Total Price: $ {lastSavedsumTotal}
+
+                                                    </p>
 
 
 

@@ -52,7 +52,7 @@ const RomanBlindsRoomDarkening = () => {
   const [newSetPriceInchesWidthOutsideMountRomanBlindsRoomDarkening, setnewSetPriceInchesWidthOutsideMountRomanBlindsRoomDarkening] = useState(null);
   const [newSetPriceInchesHeightOutsideMountRomanBlindsRoomDarkening, setnewSetPriceInchesHeightOutsideMountRomanBlindsRoomDarkening] = useState(null);
 
-  
+
   const fetchLatestData = async () => {
     try {
       const response = await fetch("/api/getLatestData");
@@ -1054,25 +1054,25 @@ const RomanBlindsRoomDarkening = () => {
 
     // Add prices based on selected options
     switch (active_wand_cordless_motorized) {
-        case 1:
-            // If "wand" option is selected
-            priceHeightInsideMount += parseFloat(WandPriceCMSRomanBlindsRoomDarkening) || 0;
-            break;
-        case 2:
-            // If "cordless" option is selected
-            priceHeightInsideMount += parseFloat(cordlesspriceCMSRomanBlindsRoomDarkening) || 0;
-            break;
-        case 3:
-            // If "motorized" option is selected
-            priceHeightInsideMount += parseFloat(motorizedpriceCMSRomanBlindsRoomDarkening) || 0;
-            break;
-        default:
-            // Default case when none of the options are selected
-            break;
+      case 1:
+        // If "wand" option is selected
+        priceHeightInsideMount += parseFloat(WandPriceCMSRomanBlindsRoomDarkening) || 0;
+        break;
+      case 2:
+        // If "cordless" option is selected
+        priceHeightInsideMount += parseFloat(cordlesspriceCMSRomanBlindsRoomDarkening) || 0;
+        break;
+      case 3:
+        // If "motorized" option is selected
+        priceHeightInsideMount += parseFloat(motorizedpriceCMSRomanBlindsRoomDarkening) || 0;
+        break;
+      default:
+        // Default case when none of the options are selected
+        break;
     }
 
     return priceHeightInsideMount + priceWidthInsideMount;
-};
+  };
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1135,53 +1135,67 @@ const RomanBlindsRoomDarkening = () => {
 
 
 
-
   const handleAddToCart = async () => {
-    await fetchLatestData();
+    // Initialize an array to store the names of missing values
+    const missingValues = [];
 
-    // Calculate the total price based on the state
+    // Check if at least one of the necessary values for inside or outside mount is present
+    if (!productName1RomanBlindsRoomDarkening) missingValues.push("productName1RomanBlindsRoomDarkening");
+    if (!productName2RomanBlindsRoomDarkening) missingValues.push("productName2RomanBlindsRoomDarkening");
+    if (!roomnameRomanBlindsRoomDarkening) missingValues.push("roomnameRomanBlindsRoomDarkening");
+    if (
+      !WandPriceCMSRomanBlindsRoomDarkening &&
+      !cordlesspriceCMSRomanBlindsRoomDarkening &&
+      !motorizedpriceCMSRomanBlindsRoomDarkening
+    ) missingValues.push("WandPriceCMSRomanBlindsRoomDarkening", "cordlesspriceCMSRomanBlindsRoomDarkening", "motorizedpriceCMSRomanBlindsRoomDarkening");
+    if (!selectedInchesWidthInsideMount && !selectedInchesWidthOutsideMount) missingValues.push("selectedInchesWidthInsideMount", "selectedInchesWidthOutsideMount");
+    if (!selectedFractionsWidthInsideMount && !selectedFractionsWidthOutsideMount) missingValues.push("selectedFractionsWidthInsideMount", "selectedFractionsWidthOutsideMount");
+    if (!selectedInchesHeightInsideMount && !selectedInchesHeightOutsideMount) missingValues.push("selectedInchesHeightInsideMount", "selectedInchesHeightOutsideMount");
+    if (!selectedFractionsHeightInsideMount && !selectedFractionsHeightOutsideMount) missingValues.push("selectedFractionsHeightInsideMount", "selectedFractionsHeightOutsideMount");
+    if (!selectedMaterial) missingValues.push("selectedMaterial");
+    if (!active_wand_cordless_motorizedRenderingContent) missingValues.push("active_wand_cordless_motorizedRenderingContent");
+
+    // If any necessary value is missing, display an alert with missing values
+    if (missingValues.length > 0) {
+      const missingValuesString = missingValues.join(", ");
+      alert(`Please select all necessary items for the cart. Missing values: ${missingValuesString}`);
+      return; // Exit the function
+    }
+
+    // If all necessary values are present, proceed with adding to cart
+    const sumTotal = calculateSumTotal(); // Calculate the sumTotal value
     const newTotalPrice = getTotalPrice();
 
-    const apiUrl = '/api/saveData';
+    const cartData = {
+      productName1RomanBlindsRoomDarkening: productName1RomanBlindsRoomDarkening,
+      productName2RomanBlindsRoomDarkening: productName2RomanBlindsRoomDarkening,
+      roomnameRomanBlindsRoomDarkening: roomnameRomanBlindsRoomDarkening,
+      WandPriceCMSRomanBlindsRoomDarkening: WandPriceCMSRomanBlindsRoomDarkening,
+      cordlesspriceCMSRomanBlindsRoomDarkening: cordlesspriceCMSRomanBlindsRoomDarkening,
+      motorizedpriceCMSRomanBlindsRoomDarkening: motorizedpriceCMSRomanBlindsRoomDarkening,
+      active_wand_right_choice_rendering_content: active_wand_right_choice_rendering_content, 
+      active_wand_left_choice_rendering_content: active_wand_left_choice_rendering_content,
+      active_wand_cordless_motorizedRenderingContent: active_wand_cordless_motorizedRenderingContent, 
 
-    let data = {}; // Initialize data object
+      totalpricecalculated: newTotalPrice,
+      selectedInchesWidthInsideMount:selectedInchesWidthInsideMount ,
+      selectedFractionsWidthInsideMount: selectedFractionsWidthInsideMount,
+      selectedInchesHeightInsideMount: selectedInchesHeightInsideMount,
+      selectedFractionsHeightInsideMount: selectedFractionsHeightInsideMount,
+      selectedInchesWidthOutsideMount: selectedInchesWidthOutsideMount,
+      selectedFractionsWidthOutsideMount: selectedFractionsWidthOutsideMount,
+      selectedInchesHeightOutsideMount: selectedInchesHeightOutsideMount,
+      selectedFractionsHeightOutsideMount: selectedFractionsHeightOutsideMount,
+      selectedMaterial: selectedMaterial ? selectedMaterial.label : '', 
+      totalPrice: newTotalPrice,
+      sumTotal: sumTotal, 
+    };
 
-    // Check if session is not null
-    if (session) {
-      data = {
-        nameRomanBlindsRoomDarkening: session.nameRomanBlindsRoomDarkening,
-        productName1RomanBlindsRoomDarkening: session.productName1RomanBlindsRoomDarkening,
-        productName2RomanBlindsRoomDarkening: session.productName2RomanBlindsRoomDarkening,
-        roomnameRomanBlindsRoomDarkening: session.roomnameRomanBlindsRoomDarkening,
-        WandPriceCMSRomanBlindsRoomDarkening: session.WandPriceCMSRomanBlindsRoomDarkening,
-        cordlesspriceCMSRomanBlindsRoomDarkening: session.cordlesspriceCMSRomanBlindsRoomDarkening,
-        motorizedpriceCMSRomanBlindsRoomDarkening: session.motorizedpriceCMSRomanBlindsRoomDarkening,
-        totalpricecalculated: newTotalPrice,
-      };
-    } else {
-      console.error("Session is null.");
-      // You might want to handle this case further, depending on your application logic
-      return;
-    }
+    sessionStorage.setItem('cartData', JSON.stringify(cartData));
 
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data }),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Data saved successfully:', result);
-
-      // Navigate to the Add to Cart page with the newTotalPrice value
-      router.push(`/addtocart?totalprice=${totalpricecalculated}`);
-    } else {
-      console.error('Error saving data:', response.statusText);
-    }
-  };
+    // Redirect to the '/addtocart'
+    window.location.href = '/addtocart';
+};
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2387,50 +2401,50 @@ const RomanBlindsRoomDarkening = () => {
                                   ${calculateSumTotal().toFixed(2)}
                                 </div>
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
 
 
-                                    </>
-                                  )}
-                                </div>
-                                
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                      </>
+                                    )}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
@@ -3453,51 +3467,51 @@ const RomanBlindsRoomDarkening = () => {
 
 
                                 <div className={styles.sum_total_tag_1_wrapper}>
-                                <div className={styles.sum_total_tag_1}>
-                                  For size:
+                                  <div className={styles.sum_total_tag_1}>
+                                    For size:
 
-                                  {activeDimensionsinsideMount === "insideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
-                                        {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
-                                      </div>
-                                      <p>X</p>
-                                      <div>
-                                        {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
-                                        {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsinsideMount === "insideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthInsideMount ? `${selectedInchesWidthInsideMount}"` : ""}
+                                          {selectedFractionsWidthInsideMount ? ` ${selectedFractionsWidthInsideMount}"` : ""}
+                                        </div>
+                                        <p>X</p>
+                                        <div>
+                                          {selectedInchesHeightInsideMount ? `${selectedInchesHeightInsideMount}"` : ""}
+                                          {selectedFractionsHeightInsideMount ? ` ${selectedFractionsHeightInsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
 
 
-                                  {activeDimensionsoutsideMount === "outsideMount" && (
-                                    <>
-                                      <div>
-                                        {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
-                                        {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
-                                      </div>
-                                      X
-                                      <div>
-                                        {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
-                                        {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
-                                      </div>
-                                    </>
-                                  )}
+                                    {activeDimensionsoutsideMount === "outsideMount" && (
+                                      <>
+                                        <div>
+                                          {selectedInchesWidthOutsideMount ? `${selectedInchesWidthOutsideMount}"` : ""}
+                                          {selectedFractionsWidthOutsideMount ? ` ${selectedFractionsWidthOutsideMount}"` : ""}
+                                        </div>
+                                        X
+                                        <div>
+                                          {selectedInchesHeightOutsideMount ? `${selectedInchesHeightOutsideMount}"` : ""}
+                                          {selectedFractionsHeightOutsideMount ? ` ${selectedFractionsHeightOutsideMount}"` : ""}
+                                        </div>
+                                      </>
+                                    )}
 
-                                </div>
-                                <div className={styles.sum_total_tag_1}>
-                                  <div>
-                                    {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
                                   </div>
-                                  <div>
-                                    {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                  <div className={styles.sum_total_tag_1}>
+                                    <div>
+                                      {active_wand_cordless_motorizedRenderingContent ? `Lift Type: ${active_wand_cordless_motorizedRenderingContent}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_left_choice_rendering_content ? ` ${active_wand_left_choice_rendering_content}` : ""}
+                                    </div>
+                                    <div>
+                                      {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
+                                    </div>
                                   </div>
-                                  <div>
-                                    {active_wand_right_choice_rendering_content ? ` ${active_wand_right_choice_rendering_content}` : ""}
-                                  </div>
-                                </div>
                                 </div>
 
                                 <div className={styles.see_cart} onClick={handleSeeCartClick}>
