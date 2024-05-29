@@ -137,19 +137,7 @@ const ZebraBlinds = () => {
   const [totalpricecalculated, setTotalPriceCalculated] = useState(0);
 
 
-  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
-    if (ellipseNumber === 1) {
-      setActiveInsideOutsideEllipse(1);
-      setInsideOrOutsideRenderingContent('Inside Mount');
-      setInsideMountGroupVisible(true);
-      setOutsideMountGroupVisible(false);
-    } else if (ellipseNumber === 2) {
-      setActiveInsideOutsideEllipse(2);
-      setInsideOrOutsideRenderingContent('Outside Mount');
-      setInsideMountGroupVisible(false);
-      setOutsideMountGroupVisible(true);
-    }
-  };
+
 
   const handleLiftFeatureEllipsess = (ellipseNumber) => {
     // Reset states based on the clicked ellipse number
@@ -1208,7 +1196,26 @@ const ZebraBlinds = () => {
 
 
   ////////////////////////////////////////////////////////////////////////////////////////////////
+  const handleClickInside_And_Outside_Ellipses = (ellipseNumber) => {
+    if (ellipseNumber === 1) {
+      setActiveInsideOutsideEllipse(1);
+      setInsideOrOutsideRenderingContent('Inside Mount');
+      setInsideMountGroupVisible(true);
+      setOutsideMountGroupVisible(false);
 
+
+
+    } else if (ellipseNumber === 2) {
+      setActiveInsideOutsideEllipse(2);
+      setInsideOrOutsideRenderingContent('Outside Mount');
+      setInsideMountGroupVisible(false);
+      setOutsideMountGroupVisible(true);
+      
+
+
+    }
+};
+  ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   return (
