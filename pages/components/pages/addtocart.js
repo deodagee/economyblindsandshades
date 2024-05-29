@@ -8,8 +8,14 @@ import Link from 'next/link';
 import HeaderPiece from "../../components/header.js"
 import FooterPage from "../../../pages/components/footer.js"
 
-
 const AddToCart = () => {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    const goBack = () => {
+        window.history.back();
+      };
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     const [showFooter, setShowFooter] = useState(false);
 
     useEffect(() => {
@@ -208,7 +214,7 @@ const AddToCart = () => {
     const [lastSavedactive_wand_left_choice_rendering_content, setLastSavedactive_wand_left_choice_rendering_content] = useState("");
     const [lastSavedactive_wand_cordless_motorizedRenderingContent, setLastSavedactive_wand_cordless_motorizedRenderingContent] = useState("");
     const [lastSavedselectedMaterial, setLastSavedselectedMaterial] = useState("");
-    const [lastSavedsumTotal , setLastSavedsumTotal] = useState("");
+    const [lastSavedsumTotal, setLastSavedsumTotal] = useState("");
 
 
 
@@ -639,7 +645,7 @@ const AddToCart = () => {
                                                 <p className={styles.price_summary_title2_tagger}>
                                                     Total Price: $ {lastSavedsumTotal}
 
-                                                    </p>
+                                                </p>
 
 
 
@@ -738,8 +744,8 @@ const AddToCart = () => {
                                             </div>
 
                                             <Link href={'/checkoutpage'}>
-                                            <p className={styles.check_out_button}>PAY NOW</p>
-                                        </Link>
+                                                <p className={styles.check_out_button}>PAY NOW</p>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -751,10 +757,7 @@ const AddToCart = () => {
 
                 <div className={styles.addtocart}>
                     <div className={styles.addtocartContainer}>
-                        <Link
-                            className={styles.addtocartButton}
-                            href={"/zebrablinds"}
-                        >Back</Link>
+                    <button onClick={goBack}>Go Back</button>
                     </div>
                 </div>
 
