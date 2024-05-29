@@ -30,7 +30,7 @@
 
 .price h1 {
     font-weight: 600;
-    color: #119c85;
+    color: #18C2C0;
     letter-spacing: 2px;
 }
 
@@ -52,11 +52,11 @@
 }
 
 .paypal, .credit {
-    background-color: #1E2148;
+    background-color: #357970;
 }
 
 .cardholder, .number, .details {
-    background-color: #242852;
+    background-color: #15695f;
 }
 
 .row .left, .row .right {
@@ -122,7 +122,7 @@ input[type=radio]:checked ~ .radio {
 .cardholder .info label, .number .info label {
     display: inline-block;
     letter-spacing: 0.5px;
-    color: #8F92C3;
+    color: white;
     width: 100px;
 }
 
@@ -226,7 +226,9 @@ input[type=radio]:checked ~ .radio {
 .button button {
     font-size: 1.2rem;
     font-weight: 400;
+    color: white;
     letter-spacing: 1px;
     width: 520px;
-    background-color: #119c85
+    background-color: #357970;
+    padding:10px;
 }
