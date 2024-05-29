@@ -1,4 +1,3 @@
-
 .container {
     display: flex;
     align-items: center;
@@ -9,7 +8,7 @@
 }
 
 
-.icons { 
+.icons {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -20,12 +19,12 @@
 
 }
 
-.payment_cards_icons { 
+.payment_cards_icons {
     display: flex;
     height: 25px;
     width: auto;
-    
-    }
+
+}
 
 
 .price h1 {
@@ -51,15 +50,33 @@
     border: none;
 }
 
-.paypal, .credit {
+.paypal,
+.credit {
+    transition: 0.3s;
     background-color: #357970;
 }
 
-.cardholder, .number, .details {
-    background-color: #15695f;
+.paypal:hover,
+.credit:hover {
+    background-color: #357970da;
+    transition: 0.3s;
 }
 
-.row .left, .row .right {
+.cardholder,
+.number,
+.details {
+    background-color: #15695f;
+    transition: 0.3s;
+}
+
+.cardholder:hover,
+.number:hover {
+    background-color: #15695fc5;
+    transition: 0.3s;
+}
+
+.row .left,
+.row .right {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -87,11 +104,11 @@
     position: absolute;
     top: -2px;
     left: -20px;
-    border: 3px solid #414365;
+    border: 3px solid #cacaca;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #292B52;
+    background-color: #ffffff;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -107,19 +124,21 @@
     transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input[type=radio]:checked ~ .radio {
-    border: 3px solid #90E1E3;
-    background-color: #18C2C0;
+input[type=radio]:checked~.radio {
+    border: 3px solid #ebebeb;
+    background-color: #1d5453;
 }
 
-.cardholder .info, .number .info {
+.cardholder .info,
+.number .info {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 40px;
 }
 
-.cardholder .info label, .number .info label {
+.cardholder .info label,
+.number .info label {
     display: inline-block;
     letter-spacing: 0.5px;
     color: white;
@@ -143,11 +162,13 @@ input[type=radio]:checked ~ .radio {
     color: #444880;
 }
 
-#cardnumber, #cardnumber::placeholder {
+#cardnumber,
+#cardnumber::placeholder {
     letter-spacing: 2px;
 }
 
-.details .left, .details .right {
+.details .left,
+.details .right {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -230,5 +251,13 @@ input[type=radio]:checked ~ .radio {
     letter-spacing: 1px;
     width: 520px;
     background-color: #357970;
-    padding:10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+    background-color: #224b46;
+
 }
