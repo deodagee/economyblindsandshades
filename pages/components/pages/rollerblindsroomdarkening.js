@@ -1207,17 +1207,17 @@ const RollerBlindsRoomDarkening = () => {
 
 
 
-      setselectedInchesWidthOutsideMount("0");
-      setselectedFractionsWidthOutsideMount("0");
+      setselectedInchesWidthOutsideMount(null);
+      setselectedFractionsWidthOutsideMount(null);
 
-      setselectedInchesHeightOutsideMount("0");
-      setselectedFractionsHeightOutsideMount("0");
+      setselectedInchesHeightOutsideMount(null);
+      setselectedFractionsHeightOutsideMount(null);
 
-      setselectedInchHeightOutsideMount("0");
-      setselectedFractionHeightOutsideMount("0");
+      setselectedInchHeightOutsideMount(null);
+      setselectedFractionHeightOutsideMount(null);
 
-      setselectedInchWidthOutsideMount("0");
-      setselectedFractionWidthOutsideMount("0");
+      setselectedInchWidthOutsideMount(null);
+      setselectedFractionWidthOutsideMount(null);
 
       setselectedInchesVisibleWidthOutsideMount(false);
       setselectedInchesVisibleHeightOutsideMount(false);
@@ -1254,17 +1254,17 @@ const RollerBlindsRoomDarkening = () => {
       setOutsideMountGroupVisible(true);
 
 
-      setselectedInchesWidthInsideMount("0");
-      setselectedFractionsWidthInsideMount("0");
+      setselectedInchesWidthInsideMount(null);
+      setselectedFractionsWidthInsideMount(null);
 
-      setselectedInchesHeightInsideMount("0");
-      setselectedFractionsHeightInsideMount("0");
+      setselectedInchesHeightInsideMount(null);
+      setselectedFractionsHeightInsideMount(null);
 
-      setselectedInchHeightInsideMount("0");
-      setselectedFractionHeightInsideMount("0");
+      setselectedInchHeightInsideMount(null);
+      setselectedFractionHeightInsideMount(null);
 
-      setselectedInchWidthInsideMount("0");
-      setselectedFractionWidthInsideMount("0");
+      setselectedInchWidthInsideMount(null);
+      setselectedFractionWidthInsideMount(null);
 
 
       setselectedInchesVisibleWidthInsideMount(false);
