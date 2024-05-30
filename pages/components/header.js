@@ -183,21 +183,56 @@ function HeaderPiece() {
                     {isSideMenuOpen && (
                       <div className={styles.side_menu_container} ref={menuRef}>
                         <div className={styles.side_menu}>
-                          Shop Blinds
+                          Menu
+                          <p className={styles.side_menu_item1}>Zebra Blinds Room Light No Drill Type
+                          <Image
+                              className={styles.chevron_top_menu}
+                              width={100}
+                              height={100}
+                              src={"/chevronwhite.png"}
+                              alt="chevron_top_menu">
+                            </Image>
+                            </p>
                           <Link className={styles.side_menu_item} href={"/zebrablinds"}>
-                            <p >Zebra Blinds</p>
-                            <p>No Drill Type</p>
+                            <p>Light Filtering</p>
                           </Link>
+                          <Link className={styles.side_menu_item} href={"/zebrablindsroomdarkening"}>
+                            <p>Room Darkening</p>
+                          </Link>
+
+                          <p className={styles.side_menu_item1}>Roller Blinds
+                          <Image
+                              className={styles.chevron_top_menu}
+                              width={100}
+                              height={100}
+                              src={"/chevronwhite.png"}
+                              alt="chevron_top_menu">
+                            </Image>
+                            </p>
                           <Link className={styles.side_menu_item} href={"/rollerblindsroomlightening"}>
-                            <p >Roller Blinds</p>
-                            <p>No Drill Type</p>
+                            <p>Light Filtering</p>
                           </Link>
+                          <Link className={styles.side_menu_item} href={"/rollerblindsroomdarkening"}>
+                            <p>Room Darkening</p>
+                          </Link>
+
+                          <p className={styles.side_menu_item1}>Honey-Comb Blinds
+                            <Image
+                              className={styles.chevron_top_menu}
+                              width={100}
+                              height={100}
+                              src={"/chevronwhite.png"}
+                              alt="chevron_top_menu">
+                            </Image>
+                          </p>
                           <Link className={styles.side_menu_item} href={"/honeycombblindsroomlightening"}>
-                            <p >Honey-Comb Blinds</p>
-                            <p>No Drill Type</p>
+                            <p>Light Filtering</p>
                           </Link>
+                          <Link className={styles.side_menu_item} href={"/honeycombblindsroomdarkening"}>
+                            <p>Room Darkening</p>
+                          </Link>
+
                         </div>
-                        Other
                       </div>
                     )}
                   </div>
@@ -205,76 +240,76 @@ function HeaderPiece() {
 
                   <span className={styles.second_bar_left}>
 
-                  <Link className={styles.header_link_home_button} href={"/"} >
-                    <li className={styles.home_button_wrapper}>
-                      <span>
+                    <Link className={styles.header_link_home_button} href={"/"} >
+                      <li className={styles.home_button_wrapper}>
+                        <span>
 
-                        <Image
-                          alt="homebutton"
-                          width={100}
-                          height={100}
-                          src={"/homebutton.png"}
-                          className={styles.home_button}>
-                        </Image>
+                          <Image
+                            alt="homebutton"
+                            width={100}
+                            height={100}
+                            src={"/homebutton.png"}
+                            className={styles.home_button}>
+                          </Image>
 
+                        </span>
+                      </li>
+                      <span className={styles.home_button_text}>
+                        <div >Home</div>
                       </span>
-                    </li>
-                    <span className={styles.home_button_text}>
-                      <div >Home</div>
-                    </span>
-                  </Link>
+                    </Link>
                   </span>
 
                   <span className={styles.second_bar_right}>
-                  <button
-                    className={styles.second_menu_bar_item}
-                    onMouseEnter={() => handleMouseEnter('menu1')}
-                    onMouseLeave={() => handleMouseLeave('menu1')}>
-                    <div className={styles.tag_and_chevron}>
-                      <span className={styles.headerlink}>
-                        <li> </li>
-                        <li>Zebra Blinds No Drill Type</li>
-                      </span>
+                    <button
+                      className={styles.second_menu_bar_item}
+                      onMouseEnter={() => handleMouseEnter('menu1')}
+                      onMouseLeave={() => handleMouseLeave('menu1')}>
+                      <div className={styles.tag_and_chevron}>
+                        <span className={styles.headerlink}>
+                          <li> </li>
+                          <li>Zebra Blinds No Drill Type</li>
+                        </span>
 
-                      <Image
-                        className={styles.chevron_top_menu}
-                        width={100}
-                        height={100}
-                        src={"/chevronblack.png"}
-                        alt="chevron_top_menu">
-                      </Image>
+                        <Image
+                          className={styles.chevron_top_menu}
+                          width={100}
+                          height={100}
+                          src={"/chevronblack.png"}
+                          alt="chevron_top_menu">
+                        </Image>
 
-                    </div>
+                      </div>
 
-                    <div className={styles.drop_down_wrapper}>
-                      {openMenu.menu1 && (
-                        <>
-                          <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
-                            <div className={styles.drop_down_wrapper_list}>
-                              <ul>
+                      <div className={styles.drop_down_wrapper}>
+                        {openMenu.menu1 && (
+                          <>
+                            <div className={`${styles.drop_down_menu} ${styles.expand_menu}`}>
+                              <div className={styles.drop_down_wrapper_list}>
+                                <ul>
 
-                                <Link href={"/zebrablindsroomdarkening"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Room Darkening
-                                  </li>
-                                </Link>
+                                  <Link href={"/zebrablindsroomdarkening"}>
+                                    <li className={styles.drop_down_menu_item}>
+                                      Room Darkening
+                                    </li>
+                                  </Link>
 
-                              </ul>
-                              <ul>
+                                </ul>
+                                <ul>
 
-                                <Link href={"/zebrablinds"}>
-                                  <li className={styles.drop_down_menu_item}>
-                                    Light Filtering
-                                  </li>
-                                </Link>
+                                  <Link href={"/zebrablinds"}>
+                                    <li className={styles.drop_down_menu_item}>
+                                      Light Filtering
+                                    </li>
+                                  </Link>
 
-                              </ul>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </button>
+                          </>
+                        )}
+                      </div>
+                    </button>
                   </span>
 
                   <span className={styles.invisible}>
