@@ -1243,6 +1243,13 @@ const ZebraBlindsRoomDarkening = () => {
       setWandPriceCMSZebrablindsRoomDarkening(false);
       setcordlesspriceCMSZebrablindsRoomDarkening(false);
       setmotorizedpriceCMSZebrablindsRoomDarkening(false);
+
+      setactive_wand_right_choice_rendering_content(null);
+      setactive_wand_left_choice_rendering_content(null);
+      setactive_wand_left_choice(null);
+      setactive_wand_right_choice(null);
+      setactive_wand_cordless_motorizedRenderingContent(false);
+
       setselectedFileNameMaterials(false);
       setSelectedColorImages(false);
       setSelectedMaterial(false);
@@ -1281,6 +1288,17 @@ const ZebraBlindsRoomDarkening = () => {
       setWandPriceCMSZebrablindsRoomDarkening(false);
       setcordlesspriceCMSZebrablindsRoomDarkening(false);
       setmotorizedpriceCMSZebrablindsRoomDarkening(false);
+
+      setactive_wand_right_choice_rendering_content(null);
+      setactive_wand_left_choice_rendering_content(null);
+      setactive_wand_left_choice(null);
+      setactive_wand_right_choice(null);
+      setactive_wand_cordless_motorizedRenderingContent(false);
+      setactive_wand_right_choice_rendering_content(null);
+      setactive_wand_left_choice_rendering_content(null);
+      setactive_wand_left_choice(null);
+      setactive_wand_right_choice(null);
+      setactive_wand_cordless_motorizedRenderingContent(false);
       setselectedFileNameMaterials(false);
       setSelectedColorImages(false);
       setSelectedMaterial(false);
