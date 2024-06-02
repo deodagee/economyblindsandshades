@@ -21,7 +21,6 @@
   border-color: #00765e;
   border-width: 5px;
   border-top-width: 30px;
-
 }
 
 .showFooter {
@@ -112,6 +111,7 @@
 
 
 .top_banner h1 {
+  white-space: nowrap;
   display: flex;
   height: 30px;
   width: auto;
@@ -177,19 +177,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 7vh;
+  overflow: none;
 }
 
 
 .top_banner_headers2 {
   display: flex;
+  flex-direction: column;
   background-color: rgb(255, 255, 255);
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   border-radius: 0.35rem;
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
   gap: 15px;
-  width: 45vw;
+  width: 60vw;
+  height: max-content;
   align-items: center;
   justify-content: center;
 }
@@ -197,12 +198,13 @@
 .top_banner2 h1 {
   display: flex;
   height: 30px;
-  width: auto;
+  max-width: 40vw;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: black;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 12px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -249,8 +251,9 @@
   background-color: #f7f7f7ae;
   white-space: nowrap;
   border-top-left-radius: 3px;
-  background: linear-gradient(to top, #1e4b41dc, #255e51e0, #3f937fda);
+  background: linear-gradient(to top, #264a4e, #264a4e, #264a4e);
   border-bottom-right-radius: 255px;
+  border-bottom-left-radius: 255px;
   font-size: 20px;
 
 }
@@ -344,11 +347,11 @@
   align-items: center;
   justify-content: center;
   margin-top: 150px;
-  color: #ffffff;
-  background-color: rgb(42, 107, 111);
+  color: #e7e7e7;
   border-radius: 0.15rem;
   box-shadow: rgb(197, 197, 197) 2px 2px 6px;
-  padding: 10px;
+  background-color: #264a4e;
+  padding: 5px;
   font-size: 16px;
   font-weight: 600;
   transition: 0.4s;
@@ -358,9 +361,7 @@
   transform: scale(1.02);
   transition: 0.4s;
   box-shadow: rgb(115, 115, 115) 2px 2px 8px;
-
 }
-
 
 .gridbox_one_and_gridbox_two {
   display: grid;
@@ -439,12 +440,13 @@
 .description {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 80vw;
   margin: 0;
   text-align: left;
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
   color: rgb(0, 83, 73);
+  color: black;
 }
 
 .title_for_three_icons {
@@ -530,16 +532,14 @@
     margin: 5px;
     gap: 5vw;
     border-width: 2px;
-    border-color: rgb(0, 144, 127);
     box-shadow: rgb(197, 197, 197) 5px 5px 10px;
     transition: 0.3s;
-    background-color: rgb(243, 243, 243);
   }
 
   .rectangle_6 {
     border-radius: 5px;
-    width: 42vw;
-    height: 20vh;
+    width: 80vw;
+    height: 30vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -547,11 +547,8 @@
     margin-top: 5vh;
     gap: 5vw;
     border-width: 2px;
-    border-color: rgb(0, 144, 127);
-    border-color: rgb(144, 70, 0);
     box-shadow: rgb(197, 197, 197) 5px 5px 10px;
     transition: 0.3s;
-    background-color: rgb(243, 243, 243);
   }
 
   .rectangle_6 .linkitem_wrapper {
@@ -566,8 +563,6 @@
     display: flex;
     align-self: flex-start;
     justify-content: center;
-    background-color: #296759;
-    background: linear-gradient(to top, #1e4b41, #255e51, #3f937f);
     font-size: 10px;
     flex-direction: column;
     position: absolute;
@@ -576,7 +571,6 @@
     white-space: nowrap;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    color: white;
 
 
   }
@@ -592,7 +586,6 @@
     justify-content: center;
     margin-left: 0;
     margin-top: 40px;
-    color: white;
     text-decoration: underline;
   }
 
@@ -605,13 +598,11 @@
     word-wrap: break-word;
     align-items: center;
     justify-content: center;
-    background-color: rgba(52, 52, 52, 0.41);
     font-size: 12px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transition: 0.5s;
     font-weight: 700;
     border-width: 2px;
-    border-color: rgb(0, 128, 79);
     border-radius: 0.25rem;
     overflow: hidden;
     box-shadow: #dbdbdb 0.5px 0.5px 3px;
@@ -626,8 +617,6 @@
     align-items: start;
     justify-content: center;
     margin-top: 75px;
-    color: #ffffff;
-    background-color: rgb(42, 107, 111);
     border-radius: 0.15rem;
     box-shadow: rgb(197, 197, 197) 2px 2px 6px;
     padding: 10px;
@@ -638,14 +627,12 @@
   }
 
   .demo_video {
-    background-color: black;
-    border-color: green;
     border-width: 2px;
     border-radius: 0.25rem;
     display: flex;
-    height: 10vh;
-    width: 35vw;
-    margin-top: 0;
+    height: 20vh;
+    width: 70vw;
+    margin-top: 6vh;
   }
 
 
@@ -663,8 +650,7 @@
   .box_grid_text {
     width: 80vw;
     height: 300px;
-    color: white;
-    border-color: rgb(228, 228, 228);
+
     border-width: 1px;
     border-radius: 0.25rem;
     display: flex;
@@ -677,7 +663,6 @@
 
   .title {
     white-space: nowrap;
-    color: black;
     font-size: 15px;
     font-weight: 600;
   }
@@ -690,13 +675,11 @@
     margin: 0;
     text-align: left;
 
-    color: rgb(49, 49, 49);
   }
 
   .description span {
     display: flex;
     font-size: 12px;
-    color: rgb(0, 83, 73);
   }
 
 
@@ -766,11 +749,9 @@
     margin: 5px;
     gap: 5vw;
     border-width: 2px;
-    border-color: rgb(0, 144, 127);
-    border-color: rgb(144, 70, 0);
+
     box-shadow: rgb(197, 197, 197) 5px 5px 10px;
     transition: 0.3s;
-    background-color: rgb(243, 243, 243);
   }
 
   .rectangle_6 {
@@ -784,11 +765,9 @@
     margin-top: 5vh;
     gap: 5vw;
     border-width: 2px;
-    border-color: rgb(0, 144, 127);
-    border-color: rgb(144, 70, 0);
+
     box-shadow: rgb(197, 197, 197) 5px 5px 10px;
     transition: 0.3s;
-    background-color: rgb(243, 243, 243);
   }
 
   .rectangle_6 .linkitem_wrapper {
@@ -803,7 +782,6 @@
     display: flex;
     align-self: flex-start;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0);
     position: absolute;
     flex-direction: row;
     gap: 5px;
@@ -824,7 +802,6 @@
     align-items: center;
     justify-content: center;
     margin-left: 5px;
-    color: white;
     text-decoration: underline;
   }
 
@@ -837,13 +814,11 @@
     word-wrap: break-word;
     align-items: center;
     justify-content: center;
-    background-color: rgba(52, 52, 52, 0.41);
     font-size: 12px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transition: 0.5s;
     font-weight: 700;
     border-width: 2px;
-    border-color: rgb(0, 128, 79);
     border-radius: 0.25rem;
     overflow: hidden;
     box-shadow: #dbdbdb 0.5px 0.5px 3px;
@@ -858,8 +833,6 @@
     align-items: start;
     justify-content: center;
     margin-top: 75px;
-    color: #ffffff;
-    background-color: rgb(42, 107, 111);
     border-radius: 0.15rem;
     box-shadow: rgb(197, 197, 197) 2px 2px 6px;
     padding: 10px;
@@ -873,8 +846,6 @@
 
 
   .demo_video {
-    background-color: black;
-    border-color: green;
     border-width: 2px;
     border-radius: 0.25rem;
     display: flex;
@@ -897,8 +868,7 @@
   .box_grid_text {
     width: 80vw;
     height: 300px;
-    color: white;
-    border-color: rgb(228, 228, 228);
+
     border-width: 1px;
     border-radius: 0.25rem;
     display: flex;
@@ -911,7 +881,6 @@
 
   .title {
     white-space: nowrap;
-    color: black;
     font-size: 15px;
     font-weight: 600;
   }
@@ -924,13 +893,11 @@
     margin: 0;
     text-align: left;
 
-    color: rgb(49, 49, 49);
   }
 
   .description span {
     display: flex;
     font-size: 12px;
-    color: rgb(0, 83, 73);
   }
 
 
