@@ -1249,7 +1249,7 @@ const ZebraBlinds = () => {
       setselectedFileNameMaterials(false);
       setSelectedColorImages(false);
       setSelectedMaterial(false);
-      setfirstImage_div("/blindsrf3.jpg");
+      setfirstImage_div("/ETB9002GREY.PNG");
 
 
     } else if (ellipseNumber === 2) {
@@ -1294,7 +1294,8 @@ const ZebraBlinds = () => {
       setselectedFileNameMaterials(false);
       setSelectedColorImages(false);
       setSelectedMaterial(false);
-      setfirstImage_div("/blindsrf3.jpg");
+      setfirstImage_div("/ETB9002GREY.PNG");
+      
     }
   };
   ////////////////////////////////////////////////////////////////////////////////////////////////
