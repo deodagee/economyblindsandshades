@@ -21,11 +21,21 @@
   border-color: #00765e;
   border-width: 5px;
   border-top-width: 30px;
+
 }
 
 .showFooter {
   opacity: 1;
   transition: opacity 0.9s ease;
+}
+
+
+.header_piece {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100vw;
 }
 
 .index_wrapper {
@@ -177,7 +187,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 7vh;
-  overflow: none;
+  overflow: hidden;
 }
 
 
@@ -392,6 +402,7 @@
   box-shadow: rgb(197, 197, 197) 5px 5px 10px;
   border-radius: 0.15rem;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .two_section_div1:hover,
@@ -426,6 +437,7 @@
   justify-content: flex-start;
   margin: 5px;
   text-align: left;
+  overflow: hidden;
 }
 
 .title {
@@ -440,13 +452,14 @@
 .description {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: auto;
   margin: 0;
   text-align: left;
   display: flex;
   font-size: 13px;
   color: rgb(0, 83, 73);
   color: black;
+  padding: 5px;
 }
 
 .title_for_three_icons {
@@ -513,7 +526,7 @@
 
 
 
-@media (min-width: 200px) and (max-width: 600px) and (orientation: portrait) {
+@media (min-width: 200px) and (max-width: 850px) and (orientation: portrait) {
 
   .EconomyBlindsAndShades {
     display: flex;
@@ -650,7 +663,6 @@
   .box_grid_text {
     width: 80vw;
     height: 300px;
-
     border-width: 1px;
     border-radius: 0.25rem;
     display: flex;
@@ -671,7 +683,6 @@
     display: flex;
     flex-direction: column;
     font-size: 10px;
-    width: 80%;
     margin: 0;
     text-align: left;
 
@@ -730,7 +741,7 @@
 }
 
 
-@media (min-width: 200px) and (max-width: 600px) and (orientation: landscape) {
+@media (min-width: 200px) and (max-width: 850px) and (orientation: landscape) {
 
   .EconomyBlindsAndShades {
     display: flex;
@@ -868,7 +879,6 @@
   .box_grid_text {
     width: 80vw;
     height: 300px;
-
     border-width: 1px;
     border-radius: 0.25rem;
     display: flex;
@@ -877,6 +887,7 @@
     justify-content: flex-start;
     margin: 5px;
     text-align: left;
+
   }
 
   .title {
@@ -889,7 +900,6 @@
     display: flex;
     flex-direction: column;
     font-size: 10px;
-    width: 80%;
     margin: 0;
     text-align: left;
 
@@ -899,7 +909,6 @@
     display: flex;
     font-size: 12px;
   }
-
 
 
   .three_icons {

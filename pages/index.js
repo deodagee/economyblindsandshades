@@ -36,7 +36,7 @@ export default function HomePage() {
 
   return (
     <>
-      <HeaderPiece className={styles.HeaderPiece}></HeaderPiece>
+      <HeaderPiece className={styles.header_piece}></HeaderPiece>
       <br />
       <br />
       <br />
@@ -246,6 +246,7 @@ export default function HomePage() {
 
                 <video className={styles.demo_video} controls width="500" height="500">
                   <source src="https://www.dropbox.com/scl/fi/4590voqa2eq4kq3g06gwo/economyblindsandshadesdemo.mp4?rlkey=9ofy3zd9rhu62a5yfmj9zpmbu&e=1&st=9nqv5iaw&dl=1" type="video/mp4" />
+
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -257,12 +258,12 @@ export default function HomePage() {
 
               <span className={styles.top_banner_headers2}>
                 <h1>
-                  Title 2 Section
+                  We Have Quality Blinds and Shades at Unbeatable Prices.
                   <br />
                   <br />
                 </h1>
                 <h1>
-                  Title 2 Section
+                  Economy Blinds And Shades!
                   <br />
                   <br />
                   <br />
@@ -275,7 +276,7 @@ export default function HomePage() {
             <div className={styles.add}>
 
               <p className={styles.add1}>
-                Best Option for beautiful and affordable blinds and shades!
+                Best Options for beautiful and affordable blinds and shades!
               </p>
               <p className={styles.add2}>
                 Please contact us if you cannot find an answer to your question(s).

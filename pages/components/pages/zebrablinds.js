@@ -3799,7 +3799,7 @@ const ZebraBlinds = () => {
                 </div>
 
 
-                <div className={styles.select_chain_option2_wrapper}>
+                <div className={styles.select_chain_option2_wrapper_cordless}>
                   <div className={styles.select_chain_option2_ellipse_and_options}>
 
                     <div className={styles.select_chain_options___side_wrapper}>

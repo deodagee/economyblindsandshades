@@ -1986,9 +1986,11 @@ transform: scale(1.04);
   order: 2;
 }
 
+.select_chain_option2_wrapper_cordless { 
+  display: none;
+}
 
 .select_chain_option1_options,
-.select_chain_option2_options,
 .select_chain_option3_options {
   display: flex;
   width: 30vw;
@@ -4026,7 +4028,7 @@ display: none;
 
   .select_chain_options___side_wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: rgb(223, 223, 223);
     padding: 10px;
   }
@@ -4087,7 +4089,7 @@ display: none;
 
   .bottom_portion_ruler_and_stuff {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;

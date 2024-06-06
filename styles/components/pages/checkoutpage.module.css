@@ -1,0 +1,283 @@
+/* checkoutpage.module.css */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Added margin-top for spacing */
+}
+
+.payment_cards_icons {
+    height: 25px;
+    width: auto;
+}
+
+.price h1 {
+    font-weight: 600;
+    color: #18C2C0;
+    letter-spacing: 2px;
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+}
+
+.card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 520px;
+    height: 400px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    width: 100%;
+    border-bottom: 1.2px solid #292C58;
+}
+
+.row:last-child {
+    border: none;
+}
+
+.paypal,
+.credit {
+    transition: 0.3s;
+    background-color: #357970;
+}
+
+.paypal:hover,
+.credit:hover {
+    background-color: #357970da;
+    transition: 0.3s;
+}
+
+.cardholder,
+.number,
+.details {
+    background-color: #15695f;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardholder:hover,
+.number:hover {
+    background-color: #15695fc5;
+    transition: 0.3s;
+}
+
+.custom_select {
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    width: 100px; /* Adjust width as needed */
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.custom_select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.custom_select select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.custom_select span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.row .left,
+.row .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row .left {
+    margin-left: 50px;
+}
+
+.row .left label {
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.row .left input[type=radio] {
+    visibility: hidden;
+}
+
+.row .left .radio {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.row .left .radio::before {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type=radio]:checked~.radio::before {
+    background-color: #fff;
+}
+
+.cardholder .info,
+.number .info {
+    margin-left: 40px;
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+
+.cardholder .info label,
+.number .info label {
+    color: white;
+    
+}
+
+.cardholder .info input {
+    max-width: 300px;
+    width: 300px;
+    background-color: transparent;
+    font-family: 'Source Code Pro';
+    border: none;
+    outline: none;
+    color: white;
+    
+}
+
+.cardholder .info input::placeholder {
+    color: #444880;
+}
+
+#cardnumber,
+#cardnumber::placeholder {
+    letter-spacing: 2px;
+}
+
+.details .left,
+.details .right {
+    display: flex;
+    align-items: center;
+}
+
+.details .left {
+    padding-left: 40px;
+    width: 50%;
+}
+
+.details .left label {
+    color: #8F92C3;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.details .left select,
+.details .right select {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #444880;
+}
+
+.details .right {
+    width: 50%;
+    padding-right: 40px; /* Adjust padding for proper alignment */
+}
+
+.details .right label {
+    margin-right: 20px;
+    color: #8F92C3;
+}
+
+.details .right input {
+    text-align: center;
+    width: 50px;
+    font-family: 'Source Code Pro';
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.details .right input::placeholder {
+    color: #444880;
+}
+
+.details .right span {
+    text-align: center;
+    font-family: 'Source Code Pro';
+    cursor: pointer;
+    margin-left: 10px; /* Adjust margin for proper spacing */
+    color: #18C2C0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #18C2C0;
+    border-radius: 50%;
+}
+
+.button button {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #357970;
+    padding: 10px;
+    transition: 0.3s;
+    width: 520px;
+    text-align: center; /* Center button text */
+    margin-top: 30px;
+}
+
+.button button:hover {
+    transform: scale(1.01);
+    background-color: #224b46;
+}
+
+
+
+.ion_locked { 
+display: flex;
+}

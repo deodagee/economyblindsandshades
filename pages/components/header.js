@@ -96,7 +96,7 @@ function HeaderPiece() {
           <div className={styles.header_logo_mobile}>
             <li className={styles.header_logo_wrapper}>
               <Link href={'/'}>
-                <Image className={styles.logo_image_mobile} src={"/logoeconomyblindsandsshades.png"} width={400} height={400} alt="economyblindsandshades_logo" />
+                <Image className={styles.logo_image_mobile} src={"/logoeconomyblindsandsshadeswithwhite.png"} width={400} height={400} alt="economyblindsandshades_logo" />
               </Link>
             </li>
           </div>
@@ -185,14 +185,14 @@ function HeaderPiece() {
                         <div className={styles.side_menu}>
                           Menu
                           <p className={styles.side_menu_item1}>Zebra Blinds Room Light No Drill Type
-                          <Image
+                            <Image
                               className={styles.chevron_top_menu}
                               width={100}
                               height={100}
                               src={"/chevronwhite.png"}
                               alt="chevron_top_menu">
                             </Image>
-                            </p>
+                          </p>
                           <Link className={styles.side_menu_item} href={"/zebrablinds"}>
                             <p>Light Filtering</p>
                           </Link>
@@ -201,14 +201,14 @@ function HeaderPiece() {
                           </Link>
 
                           <p className={styles.side_menu_item1}>Roller Blinds
-                          <Image
+                            <Image
                               className={styles.chevron_top_menu}
                               width={100}
                               height={100}
                               src={"/chevronwhite.png"}
                               alt="chevron_top_menu">
                             </Image>
-                            </p>
+                          </p>
                           <Link className={styles.side_menu_item} href={"/rollerblindsroomlightening"}>
                             <p>Light Filtering</p>
                           </Link>
@@ -241,22 +241,13 @@ function HeaderPiece() {
                   <span className={styles.second_bar_left}>
 
                     <Link className={styles.header_link_home_button} href={"/"} >
-                      <li className={styles.home_button_wrapper}>
-                        <span>
-
-                          <Image
-                            alt="homebutton"
-                            width={100}
-                            height={100}
-                            src={"/homebutton.png"}
-                            className={styles.home_button}>
-                          </Image>
-
-                        </span>
-                      </li>
-                      <span className={styles.home_button_text}>
-                        <div >Home</div>
-                      </span>
+                        <Image
+                          alt="homepage"
+                          width={100}
+                          height={100}
+                          src={"/homepage.png"}
+                          className={styles.home_button}>
+                        </Image>
                     </Link>
                   </span>
 
@@ -497,7 +488,7 @@ function HeaderPiece() {
                       <>
                         <li className={styles.sign_in_and_sign_out_buttons}>
                           <div>
-                            <button className={styles.button} onClick={() => signOut('google')()}>
+                            <button className={styles.greyarea} onClick={() => signOut('google')()}>
                               <p>Logout</p>
                             </button>
                           </div>
@@ -520,8 +511,15 @@ function HeaderPiece() {
                     ) : (
                       <>
                         <li className={styles.sign_in_and_sign_out_buttons}>
-                          <button className={styles.button} onClick={() => signIn('google')()}>
-                            <p>Sign In</p>
+                          <button className={styles.greyarea} onClick={() => signIn('google')()}>
+                            <Image
+                              className={styles.avatar}
+                              alt="avatar_image"
+                              width={100}
+                              height={100}
+                              src={"/avatar.png"}>
+
+                            </Image>
                           </button>
                         </li>
 
