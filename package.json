@@ -11,7 +11,10 @@
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@firebase/app": "^0.9.27",
+    "@prisma/client": "^5.10.2",
     "@reduxjs/toolkit": "^2.1.0",
+    "@stripe/react-stripe-js": "^2.5.0",
+    "@stripe/stripe-js": "^3.5.0",
     "better-sqlite3": "^9.4.0",
     "contentful": "^10.6.21",
     "cors": "^2.8.5",
@@ -29,7 +32,8 @@
     "react-scrollbars-custom": "^4.1.1",
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "stripe": "^15.9.0"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "9.0.1",
