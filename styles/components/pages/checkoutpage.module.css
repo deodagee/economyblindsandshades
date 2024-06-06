@@ -260,24 +260,40 @@ gap: 10px;
 
 .button button {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     color: white;
     letter-spacing: 1px;
     background-color: #357970;
     padding: 10px;
     transition: 0.3s;
-    width: 520px;
+    width: max-content;
     text-align: center; /* Center button text */
     margin-top: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-shadow: rgb(136, 136, 136) 0px 0px 4px;
+    border-radius: 0.24rem;
+    
+
 }
 
 .button button:hover {
     transform: scale(1.01);
-    background-color: #224b46;
+    color: rgb(0, 74, 10);
+    background-color: #489e93;
+    font-weight: 600;
+    box-shadow: rgb(192, 192, 192) 0px 0px 4px;
+
 }
 
 
 
 .ion_locked { 
 display: flex;
+}
+
+
+@media (min-width: 375px) and (orientation: portrait) {
+
+
 }
